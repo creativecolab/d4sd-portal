@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+import LoginCard from "./components/login-card"
+
 const App = () => {
     return (
-        <h1>Hello World</h1>
+        <div>
+            <LoginCard />
+        </div>
     )
 }
 
