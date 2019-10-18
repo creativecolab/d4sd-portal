@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
-import LoginCard from "./components/login-card"
+import Menubar from "./components/menubar"
 
 const App = () => {
     return (
         <div>
-            <LoginCard />
+            <Menubar />
         </div>
     )
 }
