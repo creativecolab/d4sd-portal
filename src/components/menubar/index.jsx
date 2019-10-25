@@ -1,14 +1,19 @@
 import React from "react";
 import "./style.less";
-import { Menu, Icon } from "antd";
+import { Menu } from "antd";
+
+import logo from "../../assets/logo.svg";
 
 const Menubar = () => {
   return (
-    <Menu>
-      <Menu.Item key="mail" mode="horizontal">
-        <Icon type="mail" />
-        Navigation One
+    <Menu className="menubar" mode="horizontal">
+      <Menu.Item>
+        <img src={logo} alt="logo" />
       </Menu.Item>
+      <Menu.Item key="mail" className="mail">Home</Menu.Item>
+      <Menu.Item>About</Menu.Item>
+      <Menu.Item>Resources</Menu.Item>
+      <Menu.Item>Workspace</Menu.Item>
     </Menu>
   );
 };
