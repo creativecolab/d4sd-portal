@@ -39,7 +39,12 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0"
+=======
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0"
+>>>>>>> 4b9145be9387b448c1e55eccfcc793fe4b274765
   }
 }
