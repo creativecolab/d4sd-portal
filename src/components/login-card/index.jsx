@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Card, Input, Button } from 'antd';
 import './style.less';
 
@@ -17,13 +16,6 @@ const LoginCard = (props) => {
         <Button id="fb-btn" icon="facebook" block>Login with Facebook</Button>
 
       </Card>
-=======
-import './style.scss';
-
-const LoginCard = (props) => {
-    return (
-        <h1>cat</h1>
->>>>>>> 4b9145be9387b448c1e55eccfcc793fe4b274765
       );
 }
  
