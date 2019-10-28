@@ -11,10 +11,8 @@ const LoginCard = (props) => {
         <Input placeholder="Password" /><br/><br/>
         <Button id="d4sd-btn" type="primary" block>Login</Button> 
         <br/><br/>
-
         <Button id="btn" type="primary" icon="google" block>Login with Google</Button>
         <Button id="fb-btn" icon="facebook" block>Login with Facebook</Button>
-
       </Card>
       );
 }
