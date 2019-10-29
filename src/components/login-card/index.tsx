@@ -4,15 +4,15 @@ import { Card, Input, Button, Form } from 'antd';
 import './style.less';
 
 
-const LoginCard = (props) => {
+const LoginCard = (props:any) => {
     const { register, handleSubmit, setValue } = useForm();
-    const onSubmit = data => {
+    const onSubmit = (data:any) => {
       console.log(data);
       // Add your axios stuff here
     }
 
     // handle changes and store to state with react hook forms
-    const handleChange = e => {
+    const handleChange = (e:any) => {
       setValue(e.target.name, e.target.value);
     };
 
