@@ -2,19 +2,17 @@ import React from 'react';
 import { Card, Input, Button } from 'antd';
 import './style.less';
 
-
 const LoginCard = (props) => {
     return (
-      <Card id="card">
-        <p id="card-header">Login</p><br/>
-        <Input id="email-input" placeholder="Email" />        
+      <Card className="card-login">
+        <p style={{fontSize: 22}}>Login</p><br/>
+        <Input style={{marginBottom: 5}} placeholder="Email" />        
         <Input placeholder="Password" /><br/><br/>
-        <Button id="d4sd-btn" type="primary" block>Login</Button> 
+        <Button className="d4sd-btn" block>Login</Button> 
         <br/><br/>
-        <Button id="btn" type="primary" icon="google" block>Login with Google</Button>
-        <Button id="fb-btn" icon="facebook" block>Login with Facebook</Button>
+        <Button className="google-btn" icon="google" block>Login with Google</Button>
+        <Button className="fb-btn" icon="facebook" block>Login with Facebook</Button>
       </Card>
       );
 }
- 
 export default LoginCard;

@@ -1,3 +1,40 @@
+@import '../../styles/vars.less';
+@import '../../styles/fonts.css';
+@import '../../styles/mixins.less';
+
+// Signup Card 
+.card-signup{
+  width: 40vw;
+  height: 70vh;
+  .flexCenter(column);
+  .cardBorder;
+  font-size: 22px;
+}
+
+/**
+ * Buttons have duplicate styling. 
+ * TODO: Remove duplicate styling into a generic button styling.
+ */
+ .google-btn{
+  background-color: #DC4E41;
+  color: white;
+  margin-bottom: 5px;
+  border:none;
+}
+
+.d4sd-btn{
+  background-color: #4497FF;
+  color: white;
+  border: none;
+}
+
+.fb-btn{
+  background-color: #4267B2;
+  color: white;
+  margin-bottom: 10px;
+  border: none;
+}
+
 #or-txt{
   text-align: center;
   font-weight: 500;
