@@ -6,7 +6,7 @@ const SignupCard = (props) => {
     return (
       <Card className="card-signup">
         <p className="signup-header">Sign Up</p>
-        <Button className="google-btn" icon="google" block>Continue with Google</Button>
+        <Button className="google-btn" type="primary" icon="google" block>Continue with Google</Button>
         <Button className="fb-btn" icon="facebook" style={{marginBottom: 10}} block>Continue with Facebook</Button>
 
         <p id="or-txt">OR</p>
