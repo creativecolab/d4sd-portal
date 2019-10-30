@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import Login from './components/login-card/index';
+import SignUp from './components/sign-up-card/index';
+import * as serviceWorker from './serviceWorker';
 
-import LoginCard from "./components/login-card"
+ReactDOM.render(<SignUp />, document.getElementById('root'));
 
-const App: React.FC = () => {
-    return (
-      <div className="App">
-        <LoginCard />
-      </div>
-    );
-  }
-  
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
