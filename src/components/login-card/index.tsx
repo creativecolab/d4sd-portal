@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Input, Button } from 'antd';
+import { Card, Input, Button} from 'antd';
 import './style.less';
 
 
-const LoginCard = (props) => {
+const LoginCard = (props: any) => {
     return (
       <Card id="card">
         <p id="card-header">Login</p><br/>
