@@ -8,10 +8,21 @@ const SignupCard = (props: any) => {
   const onSubmit = (data: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
-      //setError("firstName", "notMatch", "Missing first name");
+      message.error("Missing first name");
+    }
+    if (!data.lastName) {
+      message.error("Missing last name");
+    }
+    if (!data.email) {
+      message.error("Missing email");
+    }
+    if (!data.password) {
+      message.error("Missing password");
+    }
+    else if (data.password.length < 6) {
+      message.error("Password must be 6 charaters long");
     }
     console.log(data);
-    console.log(errors);
     // Add your axios stuff here
   }
 
@@ -31,10 +42,6 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <Card className="card-signup">
-        {errors.firstName && message.error(errors.firstName.message)}
-        {errors.lastName && message.error(errors.lastName.message)}
-        {errors.email && message.error(errors.email.message)}
-        {errors.password && message.error(errors.password.message)}
         <p className="signup-header">Sign Up</p>
         <Button className="google-btn" icon="google" block>Continue with Google</Button>
         <Button className="fb-btn" icon="facebook" block>Continue with Facebook</Button>
@@ -45,9 +52,7 @@ const SignupCard = (props: any) => {
           <Input.Group className="input-group">
             <Row gutter={30} className="row-names">
               <Col span={12}>
-              //@ts-ignore
                 <Input placeholder="First Name" name='firstName' onChange={handleChange}/>
-
               </Col>
               <Col span={12}>
                 <Input placeholder="Last Name" name="lastName" onChange={handleChange}/>

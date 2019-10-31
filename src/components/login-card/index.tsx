@@ -1,12 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Form } from 'antd';
+import { Card, Input, Button, Form, message } from 'antd';
 import './style.less';
 
 
 const LoginCard = (props: any) => {
     const { register, handleSubmit, setValue } = useForm();
     const onSubmit = (data:any) => {
+      if (!data.email) {
+        message.error("Missing email");
+      }
+      if (!data.password) {
+        message.error("Missing password");
+      }
       console.log(data);
       // Add your axios stuff here
       // data.email, data.password
