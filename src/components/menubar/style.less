@@ -3,13 +3,48 @@
 .menubar {
     border-bottom: 0px;
     color: white;
-    background-color: #4497FF;
+    width:100vw;
+    background-color:@d4sd-color;
     box-shadow: 0px 1px 3px grey;
     display: flex;
     flex-direction: row;
     font-weight: 450;
+    float:right;
+    .emptybar {
+      flex-grow: 1;
+    }
+    .menu-item {
+      background-color:@d4sd-color;
+      color: @white;
+      border-bottom-color:@white !important;
+    }
+    .menu-item:hover {
+      border-color:@white;
+    }
+    .menu-item:hover::before, .ant-menu-item-selected::before {
+      height:60px;
+      width:100%;
+      content:"";
+      display:inline-block;
+      position: absolute;
+      left:0px;
+      z-index: 1;
+      background-color: @white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .menu-item span {
+      position: relative;
+      z-index: 2;
+    }
+    .ant-menu-item-selected{
+      color:@d4sd-color;
+    }
     // justify-content: end;
     .mail {
         justify-content: end;
+    }
+    .menubar-right {
+
     }
 }
