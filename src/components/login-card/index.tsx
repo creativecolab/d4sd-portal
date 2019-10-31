@@ -3,6 +3,8 @@ import useForm from 'react-hook-form';
 import { Card, Input, Button, Form } from 'antd';
 import './style.less';
 
+import '../../actions/firebase';
+
 
 const LoginCard = (props: any) => {
     const { register, handleSubmit, setValue } = useForm();
