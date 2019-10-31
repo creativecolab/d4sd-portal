@@ -2,7 +2,7 @@
 @import '../../styles/fonts.css';
 @import '../../styles/mixins.less';
 
-// Signup Card 
+// Signup Card
 .card-signup{
   width: @large-card-width;
   height: @large-card-height;
@@ -12,7 +12,7 @@
   max-width: @large-card-max-width;
 
   /**
-   * Buttons have duplicate styling. 
+   * Buttons have duplicate styling.
    * TODO: Remove duplicate styling into a generic button styling.
    */
 
@@ -25,17 +25,24 @@
   }
   .google-btn{
     background-color: @google-color;
+    border-color: @google-color;
     .btn;
     margin-bottom: @margin-base/4;
   }
 
   .d4sd-btn{
     background-color: @d4sd-color;
-    .btn;
+    border-color: @d4sd-color;
+    color: @white;
+  }
+  .d4sd-btn:hover {
+    background-color: @d4sd-color-hover;
+    border-color:@d4sd-color-hover;
   }
 
   .fb-btn{
     background-color: @facebook-color;
+    border-color: @facebook-color;
     margin-bottom: @margin-base;
     .btn;
   }
@@ -46,4 +53,3 @@
     color: @primary-txt;
   }
 }
-
