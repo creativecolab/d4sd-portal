@@ -29,9 +29,8 @@ const LoginCard = (props: any) => {
           <Input placeholder="Email" name="email" onChange={handleChange}/>
           <Input.Password placeholder="Password" name="password" onChange={handleChange}/>
           <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
+          <p className="link-signup">Don't have an account? <a>Sign Up</a></p>
         </Form>
-        <Button className="google-btn" icon="google" block>Login with Google</Button>
-        <Button className="fb-btn" icon="facebook" block>Login with Facebook</Button>
       </Card>
       );
 }

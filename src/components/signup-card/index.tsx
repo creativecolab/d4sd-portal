@@ -44,6 +44,7 @@ const SignupCard = (props: any) => {
           </Input.Group>
           <Button className="d4sd-btn" block  type="primary" htmlType="submit">Sign Up</Button>
         </Form>
+        <p className="link-login">Already have an account? <a>Log In</a></p>
       </Card>
       );
 }
