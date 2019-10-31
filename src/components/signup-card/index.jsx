@@ -9,7 +9,7 @@ const SignupCard = (props) => {
         <Button className="google-btn" icon="google" block>Continue with Google</Button>
         <Button className="fb-btn" icon="facebook" style={{marginBottom: 10}} block>Continue with Facebook</Button>
 
-        <p id="or-txt">OR</p>
+        <p className="or-txt">OR</p>
         <Input.Group className="input-group">
           <Row gutter={30} className="row-names">
             <Col span={12}>
