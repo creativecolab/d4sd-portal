@@ -9,9 +9,11 @@ const LoginCard = (props: any) => {
     const onSubmit = (data:any) => {
       if (!data.email) {
         message.error("Missing email");
+        return;
       }
       if (!data.password) {
         message.error("Missing password");
+        return;
       }
       console.log(data);
       // Add your axios stuff here

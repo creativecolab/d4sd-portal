@@ -3,24 +3,35 @@ import useForm from 'react-hook-form';
 import { Card, Input, Button, Col, Row, Form, message } from 'antd';
 import './style.less';
 
+const emailRegExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
 const SignupCard = (props: any) => {
   const { register, handleSubmit, setValue, errors, triggerValidation, setError } = useForm();
   const onSubmit = (data: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
       message.error("Missing first name");
+      return ;
     }
     if (!data.lastName) {
       message.error("Missing last name");
+      return ;
     }
     if (!data.email) {
       message.error("Missing email");
+      return;
+    }
+    else if (!emailRegExp.test(data.email)) {
+      message.error("Please input a valid email");
+      return;
     }
     if (!data.password) {
       message.error("Missing password");
+      return ;
     }
     else if (data.password.length < 6) {
-      message.error("Password must be 6 charaters long");
+      message.error("Password must be 6 charaters long")
+      return ;
     }
     console.log(data);
     // Add your axios stuff here
