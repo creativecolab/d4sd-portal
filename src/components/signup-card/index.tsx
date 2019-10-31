@@ -54,7 +54,7 @@ const SignupCard = (props: any) => {
               </Col>
             </Row>
             <Input className="input-email" placeholder="Email" name="email" onChange={handleChange}/>
-            <Input className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
+            <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
           </Input.Group>
           <Button className="d4sd-btn" block  type="primary" htmlType="submit">Sign Up</Button>
         </Form>
