@@ -7,7 +7,7 @@ const SignupCard = (props) => {
       <Card className="card-signup">
         <p className="signup-header">Sign Up</p>
         <Button className="google-btn" icon="google" block>Continue with Google</Button>
-        <Button className="fb-btn" icon="facebook" style={{marginBottom: 10}} block>Continue with Facebook</Button>
+        <Button className="fb-btn" icon="facebook" block>Continue with Facebook</Button>
 
         <p className="or-txt">OR</p>
         <Input.Group className="input-group">

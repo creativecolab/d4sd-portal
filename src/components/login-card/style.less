@@ -8,27 +8,33 @@
   .flexCenter(column);
   .cardBorder;
   max-width: 400px;
+
   /**
    * Buttons have duplicate styling. 
    * TODO: Remove duplicate styling into a generic button styling.
    */
   .d4sd-btn{
-    background-color: #4497ff;
-    color: white;
-    margin-bottom: 20;
+    background-color: @d4sd-color;
+    color: @white;
+    margin-bottom: @margin-base*2;
   }
 
-  Input{margin-bottom: 5px}
+  Input{margin-bottom: @margin-base/2;}
 
   .fb-btn{
-    background-color: #4267B2;
-    color: white;
+    background-color: @facebook-color;
+    color: @white;
   }
 
   .google-btn{
-    background-color: #DC4E41;
-    margin-bottom: 5px;
-    color: white;
+    background-color: @google-color;
+    margin-bottom: @margin-base/2;
+    color: @white;
+  }
+
+  .login-header{
+    font-size: @font-base*2;
+    margin-bottom: @margin-base;
   }
 }
 

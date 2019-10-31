@@ -9,7 +9,6 @@ const App = () => {
     return (
         <div>
             <LoginCard />
-            <br/>
             <SignupCard />
         </div>
     )

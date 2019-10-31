@@ -8,7 +8,7 @@
   height: 70vh;
   .flexCenter(column);
   .cardBorder;
-  font-size: 22px;
+  font-size: @font-base*2;
   max-width: 400px;
 
   /**
@@ -16,38 +16,34 @@
    * TODO: Remove duplicate styling into a generic button styling.
    */
 
-  .input-group{ margin-top: 5px;}
-  .row-names{margin-bottom: 10px;}
-  .input-email{margin-bottom: 10px;}
+  .input-group{ margin-top: @margin-base;}
+  .row-names{margin-bottom: @margin-base/2;}
+  .input-email{margin-bottom: @margin-base/2;}
   .signup-header{
-    font-size: 22px; 
-    margin-bottom: 10px;
+    font-size: @font-base*2;
+    margin-bottom: @margin-base;
   }
   .google-btn{
-    background-color: #DC4E41;
-    color: white;
-    margin-bottom: 5px;
-    border:none;
+    background-color: @google-color;
+    .btn;
+    margin-bottom: @margin-base/4;
   }
 
   .d4sd-btn{
-    background-color: #4497FF;
-    color: white;
-    border: none;
+    background-color: @d4sd-color;
+    .btn;
   }
 
   .fb-btn{
-    background-color: #4267B2;
-    color: white;
-    margin-bottom: 10px;
-    border: none;
+    background-color: @facebook-color;
+    margin-bottom: @margin-base;
+    .btn;
   }
 
   .or-txt{
     text-align: center;
-    font-weight: 500;
-    font-size: 15px;
-    color: #828282;
+    .txt;
+    color: @primary-txt;
   }
 }
 

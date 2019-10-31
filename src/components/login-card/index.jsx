@@ -5,7 +5,7 @@ import './style.less';
 const LoginCard = (props) => {
     return (
       <Card className="card-login">
-        <p style={{fontSize: 22}}>Login</p><br/>
+        <p className="login-header">Login</p>
         <Input placeholder="Email" />        
         <Input placeholder="Password" />
         <Button className="d4sd-btn" block>Login</Button> 
