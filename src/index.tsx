@@ -5,8 +5,12 @@ import * as serviceWorker from './serviceWorker';
 
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
+//@ts-ignore
+//import {D4SDButton, Button} from "@d4sd/components";
+//import {Button} from './index.js';
 
 const App = () => {
+  console.log();
     return (
         <div>
             <LoginCard />
