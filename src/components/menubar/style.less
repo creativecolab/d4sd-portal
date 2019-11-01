@@ -1,56 +1,78 @@
 @import '../../styles/vars.less';
+@import '../../styles/fonts.css';
+@import '../../styles/mixins.less';
 
+// TODO: Find a way not to use the !importants?
 .menubar {
-    border-bottom: 0px;
-    color: white;
-    width:100vw;
+    border-bottom: 0px !important;
+    width: 100vw;
     background-color:@d4sd-color;
-    box-shadow: 0px 1px 3px grey;
+    box-shadow: 0px 1px 3px grey; // TODO: Ask Design team for box-shadows
     display: flex;
     flex-direction: row;
     font-weight: 450;
-    height:60px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;
+    height: @tab-height;
     .emptybar {
       flex-grow: 1;
     }
+    .menu-profile {
+      width:120px; // TODO: Design team?
+      text-align: center;
+    }
     .menu-profile img {
       border-radius: 50%;
-      width:30px;
-      height:30px;
+      width:@navbar-profile-width;
+      height:@navbar-profile-width;
     }
-    .menu-item, .menu-profile {
+    .menu-item:hover {
+      background-color: @d4sd-color-menu-hover !important;
+      color: @white !important;
+    }
+    .menu-item-no, .menu-item, .menu-profile {
       background-color:@d4sd-color;
-      font-size:16px;
-      line-height: 60px;
+      font-size: @navbar-font-size;
+      line-height: @tab-height;
       color: @white;
       border-bottom-color:@white !important;
-      border-bottom: 1px solid @white;
+      border-bottom: 0px solid @white !important;
     }
-    .menu-profile:hover {
-      background-color: @d4sd-color;
+    .menu-item-no:hover {
+      background-color: @d4sd-color !important;
+    }
+    .menu-item {
+      transition: line-height 0.4s;
+    }
+    .menu-item span {
+      position: relative;
+      z-index: 2;
+      transition: color 0.4s;
     }
     .menu-profile.ant-menu-item-selected {
       background-color: @d4sd-color;
+      transition: color 0.4s;
     }
     .menu-item.ant-menu-item-selected {
-      line-height: 70px;
-      transition: line-height 0.4s;
+      line-height: @tab-height-active;
     }
-    .ant-menu-item-selected::before {
-      height:70px;
+    .menu-item.ant-menu-item-selected:hover {
+      color: @d4sd-color !important;
+    }
+    .menu-item::before {
+      height: @tab-height;
       width:100%;
       content:"";
       display:inline-block;
       position: absolute;
       left:0px;
       z-index: 1;
-      background-color: @white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+      background-color: rgba(255,255,255,0);
+      transition: background-color 0.4s, height 0.4s, box-shadow 0.4s;
     }
-    .menu-item span {
-      position: relative;
-      z-index: 2;
-      transition: color 0.4s;
+    .menu-item.ant-menu-item-selected::before {
+      height: @tab-height-active;
+      background-color: @white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25); // TODO: Design team?
     }
     .ant-menu-item-selected{
       color:@d4sd-color;
