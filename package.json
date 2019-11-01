@@ -12,7 +12,8 @@
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",
     "react-scripts": "3.2.0",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -38,7 +39,9 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.16.0"
   }
 }
