@@ -5,6 +5,7 @@
   "dependencies": {
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
+    "eslint-config-airbnb-typescript": "^6.0.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "react": "^16.10.2",
@@ -42,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "eslint": "^6.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0"
   }
 }
