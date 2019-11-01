@@ -6,6 +6,7 @@ import logo from "../../assets/logo.svg";
 const { SubMenu } = Menu;
 
 function Menubar(props: any) {
+
   return (
     <Menu className="menubar" mode="horizontal">
 
@@ -18,6 +19,7 @@ function Menubar(props: any) {
         <Menu.Item className="menu-item"><span>About</span></Menu.Item>
         <Menu.Item className="menu-item"><span>Resources</span></Menu.Item>
         <Menu.Item className="menu-item"><span>Workspace</span></Menu.Item>
+        <Menu.Item className="menu-profile"><img src={logo} alt="avatar" /></Menu.Item>
 
     </Menu>
   );
