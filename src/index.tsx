@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import LoginCard from "./components/login-card"
+import LoginCard from "./components/login-card";
+import SignupCard from "./components/signup-card";
 
 const App = () => {
     return (
         <div>
             <LoginCard />
+            <SignupCard />
         </div>
     )
 }
