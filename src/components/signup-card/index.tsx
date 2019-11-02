@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Col, Row, Form, message } from 'antd';
+import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
 import './style.less';
 
-const emailRegExp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+const emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
 const SignupCard = (props: any) => {
-  const { register, handleSubmit, setValue, errors, triggerValidation, setError } = useForm();
+  const { register, handleSubmit, setValue, errors } = useForm();
   const onSubmit = (data: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
@@ -53,9 +53,9 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <Card className="card-signup">
-        <h2>Sign Up</h2>
-        <Button className="google-btn" icon="google" block>Continue with Google</Button>
-        <Button className="fb-btn" icon="facebook" block>Continue with Facebook</Button>
+        <p className="signup-header">Sign Up</p>
+        <Button.Google className="google-btn" icon="google" block>Continue with Google</Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>Continue with Facebook</Button.Facebook>
 
         <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -75,7 +75,7 @@ const SignupCard = (props: any) => {
           <Row type="flex" justify="center">
             <Button className="d4sd-btn" type="primary" htmlType="submit">Continue</Button>
           </Row>
-          
+
         </Form>
       </Card>
       );

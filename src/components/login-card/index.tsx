@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Form, message } from 'antd';
+import { Card, Input, Button, Form, message } from '@d4sd/components';
 import './style.less';
 
 
@@ -38,8 +38,8 @@ const LoginCard = (props: any) => {
           <Input.Password placeholder="Password" name="password" onChange={handleChange}/>
           <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
         </Form>
-        <Button className="google-btn" icon="google" block>Login with Google</Button>
-        <Button className="fb-btn" icon="facebook" block>Login with Facebook</Button>
+        <Button.Google className="google-btn" icon="google" block>Login with Google</Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>Login with Facebook</Button.Facebook>
       </Card>
       );
 }
