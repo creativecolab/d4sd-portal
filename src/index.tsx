@@ -5,12 +5,12 @@ import * as serviceWorker from './serviceWorker';
 
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
+import SignUpLayout from './components/layouts/signup-layout/index';
 
 const App = () => {
     return (
         <div>
-            <LoginCard />
-            <SignupCard />
+            <SignUpLayout />
         </div>
     )
 }

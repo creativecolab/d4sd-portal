@@ -53,7 +53,7 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <Card className="card-signup">
-        <p className="signup-header">Sign Up</p>
+        <h2>Sign Up</h2>
         <Button className="google-btn" icon="google" block>Continue with Google</Button>
         <Button className="fb-btn" icon="facebook" block>Continue with Facebook</Button>
 
@@ -72,7 +72,10 @@ const SignupCard = (props: any) => {
             <Input className="input-email" placeholder="Email" name="email" onChange={handleChange}/>
             <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
           </Input.Group>
-          <Button className="d4sd-btn" block  type="primary" htmlType="submit">Sign Up</Button>
+          <Row type="flex" justify="center">
+            <Button className="d4sd-btn" type="primary" htmlType="submit">Continue</Button>
+          </Row>
+          
         </Form>
       </Card>
       );
