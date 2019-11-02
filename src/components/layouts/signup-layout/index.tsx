@@ -6,19 +6,19 @@ import './style.less'
 const SignupLayout =(props: any)=>{
   return(
     <div className="SignupLayout">
-      <Row type="flex" justify="center" align="middle" gutter={16}>
-        <Col span={10}>
+      <Row type="flex" justify="center" align="middle" gutter={[16, 48]}>
+        <Col md={{span:10}} xs={{span: 20}}>
           <h1>
               Welcome to
               D4SD's Workspace
           </h1>
-          <p style={{marginTop: "40px"}}>
+          <p className="subText">
             Create teams, submit design solutions,
             and receive feedback on your work.
             Sign up for the workspace today.
           </p>
         </Col>
-        <Col offset={2} span={8}>
+        <Col md={{offset: 2, span: 8}} sm={{span: 16}} xs={{span: 20}} >
           <SignupCard />
         </Col>
       </Row>
