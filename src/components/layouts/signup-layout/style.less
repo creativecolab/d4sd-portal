@@ -2,3 +2,10 @@
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
 
+.SignupLayout {
+  /* Fix bug where ant row overflows container */
+  .ant-row-flex {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
