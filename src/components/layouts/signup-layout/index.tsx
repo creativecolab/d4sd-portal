@@ -1,6 +1,6 @@
 import React from 'react';
 import SignupCard from '../../signup-card/index';
-import {Row, Col} from 'antd';
+import {Row, Col} from '@d4sd/components';
 import './style.less'
 
 const SignupLayout =(props: any)=>{

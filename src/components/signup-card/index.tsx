@@ -53,7 +53,7 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <Card className="card-signup">
-        <p className="signup-header">Sign Up</p>
+        <h2 className="signup-header">Sign Up</h2>
         <Button.Google className="google-btn" icon="google" block>Continue with Google</Button.Google>
         <Button.Facebook className="fb-btn" icon="facebook" block>Continue with Facebook</Button.Facebook>
 
