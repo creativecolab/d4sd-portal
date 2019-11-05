@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./style.less";
-import { Menu } from "antd";
+import { Menu } from "@d4sd/components";
 
 import d4sdlogo from "../../assets/logo.svg";
 import d4sdlogoBlue from "../../assets/logo-blue.svg";
