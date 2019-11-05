@@ -3,11 +3,15 @@ import useForm from 'react-hook-form';
 import { Card, Input, Button, Col, Row, Form } from 'antd';
 import './style.less';
 
+import '../../actions/firebase';
+import { registerUser } from '../../actions/firebase';
+
 const SignupCard = (props: any) => {
   const { register, handleSubmit, setValue } = useForm();
   const onSubmit = (data: any) => {
-    console.log(data);
+    // console.log(data);
     // Add your axios stuff here
+    registerUser(data);
   }
 
   // handle changes and store to state with react hook forms
