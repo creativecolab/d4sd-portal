@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
 import './style.less';
+import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
 
 const emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
