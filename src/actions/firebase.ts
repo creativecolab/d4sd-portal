@@ -14,6 +14,12 @@ const firebaseConfig = firebase.initializeApp({
 
 const db = firebase.firestore();
 
+/**
+ * registerUser - adds user to firestore.
+ * TODO: validation w/ block if account already exists
+ * TODO: tighten firestore rules
+ * @param data - passed in from signup-card 'sign-up' button click.
+ */
 export const registerUser = (data: any) =>{
   // Add a new user w/ a generated id to "users" collection.
   console.log(data);
