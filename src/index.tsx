@@ -10,6 +10,7 @@ import SignUpLayout from './components/layouts/signup-layout/index';
 const App = () => {
     return (
         <div>
+            <Menubar />
             <SignUpLayout />
         </div>
     )
