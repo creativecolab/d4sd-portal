@@ -5,7 +5,6 @@ import './style.less';
 
 import '../../actions/firebase';
 
-
 const LoginCard = (props: any) => {
     const { register, handleSubmit, setValue } = useForm();
     const onSubmit = (data:any) => {

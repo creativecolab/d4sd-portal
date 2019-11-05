@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@firebase/firestore-types": "^1.6.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.11",
@@ -11,7 +10,7 @@
     "antd": "^3.24.3",
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
-    "firebase": "^7.2.2",
+    "firebase": "^7.2.3",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "react": "^16.10.2",
@@ -45,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@firebase/firestore-types": "^1.6.2",
     "@types/node": "^12.11.7"
   }
 }
