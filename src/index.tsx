@@ -7,11 +7,13 @@ import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
 import SignUpLayout from './components/layouts/signup-layout/index';
 
+import LoginLayout from './components/layouts/login-layout/index';
+
 const App = () => {
     return (
         <div>
             <Menubar />
-            <SignUpLayout />
+            <LoginLayout />
         </div>
     )
 }

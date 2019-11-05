@@ -32,7 +32,7 @@ const LoginCard = (props: any) => {
     }, []);
     return (
       <Card className="card-login">
-        <h2>Login</h2>
+        <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input placeholder="Email" name="email" onChange={handleChange}/>
           <Input.Password placeholder="Password" name="password" onChange={handleChange}/>
