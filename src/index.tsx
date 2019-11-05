@@ -5,11 +5,12 @@ import * as serviceWorker from './serviceWorker';
 import Menubar from "./components/menubar"
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
-
+import SignupChoice from "./components/signup-choice";
 const App = () => {
     return (
         <div>
           <Menubar />
+          <SignupChoice />
             <LoginCard />
             <SignupCard />
         </div>
