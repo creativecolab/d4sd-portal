@@ -9,15 +9,16 @@ const { SubMenu } = Menu;
 
 function Menubar(props: any) {
   let [scroll, setScroll] = useState("");
-  let [logo, setLogo] = useState(d4sdlogoBlue);
+  let [logo, setLogo] = useState(d4sdlogo);
   useEffect(() => {
     if (scroll == "") {
-      logo = d4sdlogo;
+      setLogo(d4sdlogo);
     }
     else {
-      logo = d4sdlogoBlue;
+      setLogo(d4sdlogoBlue);
     }
   }, [scroll]);
+
   return (
     <Menu id="menubar" mode="horizontal" className={scroll}>
 
@@ -31,7 +32,6 @@ function Menubar(props: any) {
         <Menu.Item className="menu-item"><span>Resources</span></Menu.Item>
         <Menu.Item className="menu-item"><span>Workspace</span></Menu.Item>
         <Menu.Item className="menu-profile menu-item-no"><img src={daniel} alt="avatar" /></Menu.Item>
-
     </Menu>
   );
 };
