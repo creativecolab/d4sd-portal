@@ -2,79 +2,112 @@
 @import '../../styles/fonts.css';
 @import '../../styles/mixins.less';
 
-// TODO: Find a way not to use the !importants?
-.menubar {
-    border-bottom: 0px !important;
-    width: 100vw;
+
+#menubar {
+  border-bottom: none;
+  width: 100vw;
+  background-color:@d4sd-color;
+  display: flex;
+  flex-direction: row;
+  font-weight: medium;
+  box-shadow: @navbar-boxshadow;
+  height: @tab-height;
+  .emptybar {
+    flex-grow: 1;
+  }
+  .menu-logo {
+    padding-left: 30px;
+    > img {
+      height: 28px;
+    }
+  }
+  .menu-profile {
+    width:95px; // TODO: Design team?
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    > img {
+      width: 35px;
+    }
+  }
+  .menu-profile img {
+    border-radius: 50%;
+    width:@navbar-profile-width;
+    height:@navbar-profile-width;
+  }
+  .menu-item:hover {
+    background-color: @d4sd-color-menu-hover;
+  }
+  .menu-item.scroll:hover {
+    background-color: @d4sd-color-menu-hover-scroll;
+  }
+  > .menu-item-no, .menu-item, .menu-profile {
     background-color:@d4sd-color;
-    box-shadow: 0px 1px 3px grey; // TODO: Ask Design team for box-shadows
-    display: flex;
-    flex-direction: row;
-    font-weight: 450;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;
+    font-size: @navbar-font-size;
+    line-height: @tab-height;
+    color: @white;
+    border-bottom: none;
+    top:0px; // Resets a ant design css val
+  }
+
+  .menu-item {
+    transition: line-height 0.4s;
+    padding-left: @navbar-item-padding;
+    padding-right: @navbar-item-padding;
+  }
+  .menu-item span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s;
+  }
+  .menu-profile.ant-menu-item-selected {
+    background-color: @d4sd-color;
+    transition: color 0.4s;
+  }
+  .menu-item.ant-menu-item-selected {
+    line-height: @tab-height-active;
+  }
+  .menu-item::before {
     height: @tab-height;
-    .emptybar {
-      flex-grow: 1;
-    }
-    .menu-profile {
-      width:120px; // TODO: Design team?
-      text-align: center;
-    }
-    .menu-profile img {
-      border-radius: 50%;
-      width:@navbar-profile-width;
-      height:@navbar-profile-width;
-    }
-    .menu-item:hover {
-      background-color: @d4sd-color-menu-hover !important;
-      color: @white !important;
-    }
-    .menu-item-no, .menu-item, .menu-profile {
-      background-color:@d4sd-color;
-      font-size: @navbar-font-size;
-      line-height: @tab-height;
-      color: @white;
-      border-bottom-color:@white !important;
-      border-bottom: 0px solid @white !important;
-    }
-    .menu-item-no:hover {
-      background-color: @d4sd-color !important;
-    }
-    .menu-item {
-      transition: line-height 0.4s;
-    }
-    .menu-item span {
-      position: relative;
-      z-index: 2;
-      transition: color 0.4s;
-    }
-    .menu-profile.ant-menu-item-selected {
-      background-color: @d4sd-color;
-      transition: color 0.4s;
-    }
-    .menu-item.ant-menu-item-selected {
-      line-height: @tab-height-active;
-    }
-    .menu-item.ant-menu-item-selected:hover {
-      color: @d4sd-color !important;
-    }
-    .menu-item::before {
-      height: @tab-height;
-      width:100%;
-      content:"";
-      display:inline-block;
-      position: absolute;
-      left:0px;
-      z-index: 1;
-      background-color: rgba(255,255,255,0);
-      transition: background-color 0.4s, height 0.4s, box-shadow 0.4s;
-    }
-    .menu-item.ant-menu-item-selected::before {
-      height: @tab-height-active;
-      background-color: @white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.25); // TODO: Design team?
-    }
-    .ant-menu-item-selected{
-      color:@d4sd-color;
-    }
+    width:100%;
+    content:"";
+    display:inline-block;
+    position: absolute;
+    left:0px;
+    z-index: 1;
+    background-color: rgba(255,255,255,0);
+    transition: background-color 0.4s, height 0.4s, box-shadow 0.4s;
+  }
+  .menu-item.ant-menu-item-selected::before {
+    height: @tab-height-active;
+    background-color: @white;
+    box-shadow: @navbar-boxshadow;
+  }
+  .ant-menu-item-selected{
+    color:@d4sd-color;
+    //TODO: font should be bold, but entering a minor issue with tab expanding due to bold font
+  }
+}
+#menubar.scroll {
+  background-color: @white;
+  color:@b1;
+  > .menu-item-no, .menu-item, .menu-profile {
+    background-color:@white;
+    color:@b1;
+  }
+  > .menu-item:hover {
+    background-color:@d4sd-color-menu-hover-scroll;
+  }
+  > .menu-item::before {
+
+  }
+  > .menu-item.ant-menu-item-selected::before {
+    height: @tab-height-active;
+    background-color: @d4sd-color;
+    box-shadow: @navbar-boxshadow;
+  }
+  > .ant-menu-item-selected{
+    color:@white;
+    //TODO: font should be bold, but entering a minor issue with tab expanding due to bold font
+  }
 }
