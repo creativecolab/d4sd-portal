@@ -8,7 +8,7 @@ const SignupLayout =(props: any)=>{
     <div className="SignupLayout">
       <Row type="flex" justify="center" align="middle" gutter={[16, 48]}>
         <Col md={{span:10}} xs={{span: 20}}>
-          <h1>
+          <h1 id='welcome-message'>
               Welcome to
               D4SD's Workspace
           </h1>
