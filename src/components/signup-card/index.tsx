@@ -74,7 +74,7 @@ const SignupCard = (props: any) => {
             <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
           </Input.Group>
           <Row type="flex" justify="center">
-            <Button className="d4sd-btn" type="primary-outline" htmlType="submit">Continue</Button>
+            <Button className="d4sd-btn" type="primary" htmlType="submit">Continue</Button>
           </Row>
 
         </Form>
