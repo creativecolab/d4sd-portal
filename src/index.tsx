@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
+import Menubar from "./components/menubar";
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
 
 const App = () => {
-    return (
-        <div>
-            <LoginCard />
-            <SignupCard />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Menubar />
+      <LoginCard />
+      <SignupCard />
+    </div>
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

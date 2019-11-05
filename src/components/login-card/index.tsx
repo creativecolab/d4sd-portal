@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Form, message } from '@d4sd/components';
 import './style.less';
+import { Card, Input, Button, Form, message } from '@d4sd/components';
+
 
 
 const LoginCard = (props: any) => {
@@ -32,7 +33,7 @@ const LoginCard = (props: any) => {
     }, []);
     return (
       <Card className="card-login">
-        <p className="login-header">Login</p>
+        <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input placeholder="Email" name="email" onChange={handleChange}/>
           <Input.Password placeholder="Password" name="password" onChange={handleChange}/>

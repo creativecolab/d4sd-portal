@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
 import './style.less';
+import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
 
 const emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
@@ -53,7 +53,7 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <Card className="card-signup">
-        <p className="signup-header">Sign Up</p>
+        <h2 className="signup-header">Sign Up</h2>
         <Button.Google className="google-btn" icon="google" block>Continue with Google</Button.Google>
         <Button.Facebook className="fb-btn" icon="facebook" block>Continue with Facebook</Button.Facebook>
 
