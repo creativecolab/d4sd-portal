@@ -3,40 +3,53 @@
 @import '../../styles/mixins.less';
 
 // Signup Card
-.card-signup{
-  width: 100%;
-  height: 100%;
-  .flexCenter(column);
-  .cardBorder;
-  font-size: @font-base*2;
-  min-width: @large-card-min-width;
-  padding: @card-padding;
-  
-
-
-  /**
-   * Buttons have duplicate styling.
-   * TODO: Remove duplicate styling into a generic button styling.
-   */
-
-  .input-group{ margin-top: @margin-base;}
-  .row-names{margin-bottom: @margin-base/2;}
-  .input-email{margin-bottom: @margin-base/2;}
-  .signup-header{
+.card-signup-wrapper {
+  > .card-signup{
+    width: 100%;
+    height: 100%;
+    .flexCenter(column);
+    .cardBorder;
     font-size: @font-base*2;
-    margin-bottom: @margin-base;
-  }
-  .google-btn{
-    margin-bottom: @margin-base/4;
-  }
+    min-width: @large-card-min-width;
+    padding: @card-padding;
 
-  .fb-btn{
-    margin-bottom: @margin-base;
-  }
 
-  .or-txt{
+
+    /**
+     * Buttons have duplicate styling.
+     * TODO: Remove duplicate styling into a generic button styling.
+     */
+
+    .input-group{ margin-top: @margin-base;}
+    .row-names{margin-bottom: @margin-base/2;}
+    .input-email{margin-bottom: @margin-base/2;}
+    .signup-header{
+      font-size: @font-base*2;
+      margin-bottom: @margin-base;
+    }
+    .google-btn{
+      margin-bottom: @margin-base/4;
+    }
+
+    .fb-btn{
+      margin-bottom: @margin-base;
+    }
+
+    .or-txt{
+      text-align: center;
+      .txt;
+      color: @primary-txt;
+    }
+
+  }
+  > #bottom-txt {
+
+    margin-top: @margin-base;
     text-align: center;
-    .txt;
-    color: @primary-txt;
+    font-size: 16px;
+    > #login-link {
+      font-weight:bold;
+    }
   }
+
 }

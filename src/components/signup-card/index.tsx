@@ -52,6 +52,7 @@ const SignupCard = (props: any) => {
      register({ name: "lastName" });
   }, []);
     return (
+      <div className="card-signup-wrapper">
       <Card className="card-signup">
         <h2 className="signup-header">Sign Up</h2>
         <Button.Google className="google-btn" icon="google" block>Continue with Google</Button.Google>
@@ -73,11 +74,13 @@ const SignupCard = (props: any) => {
             <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
           </Input.Group>
           <Row type="flex" justify="center">
-            <Button className="d4sd-btn" type="primary" htmlType="submit">Continue</Button>
+            <Button className="d4sd-btn" type="primary-outline" htmlType="submit">Continue</Button>
           </Row>
 
         </Form>
       </Card>
+      <p id='bottom-txt'>Already have an account? <a id='login-link'>Log in</a></p>
+      </div>
       );
 }
 
