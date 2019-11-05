@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-
+import Menubar from "./components/menubar"
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
 
 const App = () => {
     return (
         <div>
+          <Menubar />
             <LoginCard />
             <SignupCard />
         </div>
