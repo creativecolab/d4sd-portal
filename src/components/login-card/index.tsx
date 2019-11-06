@@ -42,11 +42,8 @@ const LoginCard = (props: any) => {
           <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
           <p className="link-signup">Don't have an account? <a>Sign Up</a></p>
         </Form>
-<<<<<<< HEAD
-=======
         <Button.Google className="google-btn" icon="google" block>Login with Google</Button.Google>
         <Button.Facebook className="fb-btn" icon="facebook" block>Login with Facebook</Button.Facebook>
->>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
       </Card>
       );
 }

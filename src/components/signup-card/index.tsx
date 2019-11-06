@@ -2,18 +2,14 @@ import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import { Card, Input, Button, Col, Row, Form, message } from '@d4sd/components';
+import { registerUser } from '../../actions/firebase';
 
 const emailRegExp = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
-import '../../actions/firebase';
-import { registerUser } from '../../actions/firebase';
 
 const SignupCard = (props: any) => {
   const { register, handleSubmit, setValue, errors } = useForm();
   const onSubmit = (data: any) => {
-<<<<<<< HEAD
-    // console.log(data);
-=======
     /* Checks after attempting to submit */
     if (!data.firstName) {
       message.error("Missing first name");
@@ -39,8 +35,7 @@ const SignupCard = (props: any) => {
       message.error("Password must be 6 charaters long")
       return ;
     }
-    console.log(data);
->>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
+    // console.log(data);
     // Add your axios stuff here
     registerUser(data);
   }

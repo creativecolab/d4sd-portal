@@ -3,20 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@firebase/firestore-types": "^1.6.2",
-=======
     "@d4sd/components": "^2.2.1",
->>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "antd": "^3.24.3",
-<<<<<<< HEAD
-    "axios": "^0.19.0",
-=======
->>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
     "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
     "firebase": "^7.2.3",
