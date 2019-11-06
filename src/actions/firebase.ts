@@ -23,7 +23,7 @@ const db = firebase.firestore();
 export const registerUser = (data: any) =>{
   // Add a new user w/ a generated id to "users" collection.
   console.log(data);
-  let newUser = db.collection("users").doc().set({
+  db.collection("users").doc().set({
     firstname: data.firstName,
     lastname: data.lastName,
     email: data.email,

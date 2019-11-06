@@ -1,51 +1,68 @@
 @import '../../styles/vars.less';
-@import '../../styles/fonts.css';
+@import '../../styles/fonts.less';
 @import '../../styles/mixins.less';
 
-// Signup Card 
-.card-signup{
-  width: @large-card-width;
-  height: @large-card-height;
-  .flexCenter(column);
-  .cardBorder;
-  font-size: @font-base*2;
-  max-width: @large-card-max-width;
-
-  /**
-   * Buttons have duplicate styling. 
-   * TODO: Remove duplicate styling into a generic button styling.
-   */
-
-  .input-group{ margin-top: @margin-base;}
-  .row-names{margin-bottom: @margin-base/2;}
-  .input-email{margin-bottom: @margin-base/2;}
-  .signup-header{
+// Signup Card
+.card-signup-wrapper {
+  > .card-signup{
+    width: 100%;
+    height: 100%;
+    .flexCenter(column);
+    .cardBorder;
     font-size: @font-base*2;
-    margin-bottom: @margin-base;
-  }
-  .google-btn{
-    background-color: @google-color;
-    .btn;
-    margin-bottom: @margin-base/4;
-  }
+    min-width: @large-card-min-width;
+    padding: @card-padding;
 
+<<<<<<< HEAD
   .d4sd-btn{
     background-color: @d4sd-color;
     margin-bottom: @margin-base;
     .btn;
   }
+=======
+>>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
 
-  .fb-btn{
-    background-color: @facebook-color;
-    margin-bottom: @margin-base;
-    .btn;
+
+    /**
+     * Buttons have duplicate styling.
+     * TODO: Remove duplicate styling into a generic button styling.
+     */
+
+    .input-group{ margin-top: @margin-base;}
+    .row-names{margin-bottom: @margin-base/2;}
+    .input-email{margin-bottom: @margin-base/2;}
+    .signup-header{
+      font-size: @font-base*2;
+      margin-bottom: @margin-base;
+    }
+    .google-btn{
+      margin-bottom: @margin-base/4;
+    }
+
+    .fb-btn{
+      margin-bottom: @margin-base;
+    }
+
+    .or-txt{
+      text-align: center;
+      .txt;
+      color: @primary-txt;
+    }
+
   }
+  > #bottom-txt {
 
-  .or-txt{
+    margin-top: @margin-base;
     text-align: center;
-    .txt;
-    color: @primary-txt;
+    font-size: 16px;
+    > #login-link {
+      font-weight:bold;
+    }
   }
 
+<<<<<<< HEAD
   .link-login{.or-txt;}
 }
+=======
+}
+>>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163

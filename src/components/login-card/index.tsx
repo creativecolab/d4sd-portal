@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
-import { Card, Input, Button, Form } from 'antd';
 import './style.less';
+import { Card, Input, Button, Form, message } from '@d4sd/components';
+
 
 import '../../actions/firebase';
 import { registerUser } from '../../actions/firebase';
@@ -9,6 +10,14 @@ import { registerUser } from '../../actions/firebase';
 const LoginCard = (props: any) => {
     const { register, handleSubmit, setValue } = useForm();
     const onSubmit = (data:any) => {
+      if (!data.email) {
+        message.error("Missing email");
+        return;
+      }
+      if (!data.password) {
+        message.error("Missing password");
+        return;
+      }
       console.log(data);
       // Add your axios stuff here
       // data.email, data.password
@@ -26,13 +35,18 @@ const LoginCard = (props: any) => {
     }, []);
     return (
       <Card className="card-login">
-        <p className="login-header">Login</p>
+        <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input placeholder="Email" name="email" onChange={handleChange}/>
           <Input.Password placeholder="Password" name="password" onChange={handleChange}/>
           <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
           <p className="link-signup">Don't have an account? <a>Sign Up</a></p>
         </Form>
+<<<<<<< HEAD
+=======
+        <Button.Google className="google-btn" icon="google" block>Login with Google</Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>Login with Facebook</Button.Facebook>
+>>>>>>> 59d9eaef9ee2ba51457e16d8084fb095d85c2163
       </Card>
       );
 }
