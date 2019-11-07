@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 import Menubar from "./components/menubar"
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
-<<<<<<< HEAD
 import SignUpLayout from './components/layouts/signup-layout/index';
 
 const App = () => {
@@ -13,16 +12,6 @@ const App = () => {
         <div>
             <Menubar />
             <SignUpLayout />
-=======
-import EthicsCard from "./components/ethics-card";
-const App = () => {
-    return (
-        <div>
-          <Menubar />
-          <EthicsCard />
-            <LoginCard />
-            <SignupCard />
->>>>>>> 6010e5bd5c9318bc01d322de48de0d5c3b6bb64c
         </div>
     )
 }
