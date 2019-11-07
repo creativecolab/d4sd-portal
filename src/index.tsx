@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -11,6 +12,7 @@ import LoginCard from "./components/login-card";
 import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
 import SignUpLayout from './components/layouts/signup-layout/index';
+
 
 const App = () => {
     return (
