@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-import Menubar from "./components/menubar"
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import configureStore, { history } from './store';
+
+import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
+import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
 import SignupChoice from "./components/signup-choice";
 const App = () => {
@@ -18,8 +23,3 @@ const App = () => {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
