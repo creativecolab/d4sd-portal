@@ -6,16 +6,18 @@ import { Provider } from 'react-redux';
 
 import configureStore, { history } from './store';
 
-import Menubar from "./components/menubar";
+import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
+import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
 
 // const store = configureStore();
-
+        
 const App = () => {
-  return (
+ return (
     <div>
       <Menubar />
+      <EthicsCard />
       <LoginCard />
       <SignupCard />
     </div>
