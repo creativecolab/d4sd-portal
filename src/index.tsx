@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -8,10 +9,9 @@ import configureStore, { history } from './store';
 import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
 import SignupCard from "./components/signup-card";
-import Menubar from "./components/menubar"
 import SignUpLayout from './components/layouts/signup-layout/index';
+import Menubar from './components/menubar';
 
-import LoginLayout from './components/layouts/login-layout/index';
 
 const App = () => {
     return (
@@ -24,7 +24,7 @@ const App = () => {
             <SignupCard />
         </div>
     )
-}
+};
 // const store = configureStore();
         
 ReactDOM.render(<App />, document.getElementById("root"));
