@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -10,18 +11,16 @@ import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
 import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
+import SignUpLayout from './components/layouts/signup-layout/index';
 
-// const store = configureStore();
-        
+
 const App = () => {
- return (
-    <div>
-      <Menubar />
-      <EthicsCard />
-      <LoginCard />
-      <SignupCard />
-    </div>
-  );
-};
+    return (
+        <div>
+            <Menubar />
+            <SignUpLayout />
+        </div>
+    )
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
