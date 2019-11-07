@@ -2,18 +2,24 @@
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
 
-.LoginLayout {
-  /* Fix bug where ant row overflows container */
-  margin-top: @margin-base-2;
-  .ant-row-flex {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-  }
-  #welcome-message {
-    line-height: 73px; // TODO: Design team?
-  }
+// .LoginLayout {
+//   /* Fix bug where ant row overflows container */
+//   margin-top: @margin-base-2;
+//   .ant-row-flex {
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+//   }
+//   #welcome-message {
+//     line-height: 73px; // TODO: Design team?
+//   }
 
-  .subText{
-    margin-top: @margin-base-1/2;
-  }
+//   .subText{
+//     margin-top: @margin-base-1/2;
+//   }
+// }
+
+.login-layout{
+  .flexCenter(column);
+  height: 100vh;
+  width: 100vw;
 }
