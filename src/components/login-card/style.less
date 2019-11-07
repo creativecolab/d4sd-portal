@@ -4,15 +4,15 @@
 
 .card-login{
   width: @large-card-width;
-  height: @large-card-height;
+  min-width: @large-card-min-width;
+  max-width: 500px;
   .flexCenter(column);
   .cardBorder;
-  max-width: @large-card-max-width;
-
   /**
    * Buttons have duplicate styling.
    * TODO: Remove duplicate styling into a generic button styling.
    */
+   
   .d4sd-btn{
     margin-bottom: @margin-base*2;
   }

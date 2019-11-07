@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
-import { Card, Input, Button, Form, message } from '@d4sd/components';
+import { Card, Input, Button, Form, message, Row, Col } from '@d4sd/components';
 
 
 import '../../actions/firebase';
@@ -37,13 +37,16 @@ const LoginCard = (props: any) => {
       <Card className="card-login">
         <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <Input placeholder="Email" name="email" onChange={handleChange}/>
-          <Input.Password placeholder="Password" name="password" onChange={handleChange}/>
-          <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
-          <p className="link-signup">Don't have an account? <a>Sign Up</a></p>
+          <Row gutter={[0, 8]}>
+            <Col><Input placeholder="Email" name="email" onChange={handleChange}/></Col>
+            <Col><Input.Password placeholder="Password" name="password" onChange={handleChange}/> </Col>
+            <Col>
+              <Row type="flex" align="middle" justify="center">     
+                <Button className="d4sd-btn" htmlType="submit">Login</Button>
+              </Row>
+            </Col>
+          </Row>
         </Form>
-        <Button.Google className="google-btn" icon="google" block>Login with Google</Button.Google>
-        <Button.Facebook className="fb-btn" icon="facebook" block>Login with Facebook</Button.Facebook>
       </Card>
       );
 }
