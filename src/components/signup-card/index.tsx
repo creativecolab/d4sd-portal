@@ -60,7 +60,6 @@ const SignupCard = (props: any) => {
       <Button.Facebook className="fb-btn" icon="facebook" block>
         Continue with Facebook
       </Button.Facebook>
-
       <p className="or-txt">OR</p>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input.Group className="input-group">
