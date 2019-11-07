@@ -1,17 +1,17 @@
 @import '../../styles/vars.less';
-@import '../../styles/fonts.css';
+@import '../../styles/fonts.less';
 @import '../../styles/mixins.less';
 .ethics-card {
   max-width: @large-card-max-width;
+  width: 100%;
+  height: 100%;
   .cardBorder;
   .ethics-header {
-    font-size:22px;
     font-weight: bold;
   }
   .ethics-body {
     margin-left: @margin-base * 3/4;
     p {
-      font-size:14px;
       margin-bottom: @margin-base;
       margin-top: @margin-base;
     }
@@ -27,5 +27,13 @@
   }
   .bottom-btn {
     text-align: center;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-btn > * {
+    margin: @margin-base @margin-base/2;
   }
 }
