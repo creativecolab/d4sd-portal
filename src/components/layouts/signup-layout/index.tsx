@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignupCard from '../../signup-card/index';
 import {Row, Col} from '@d4sd/components';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less'
 import LoginCard from '../../login-card';
@@ -9,6 +8,9 @@ import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
 
 const SignupLayout =(props: any)=>{
+  const [showEthics, setShowEthics]= useState(false);
+  const [showRole, setShowRole]= useState(false);
+
   return(
     <div>
       <Menubar />
@@ -26,14 +28,8 @@ const SignupLayout =(props: any)=>{
             </p>
           </Col>
           <Col md={{offset: 2, span: 8}} sm={{span: 16}} xs={{span: 20}} >
-            <BrowserRouter>
-              <Switch>
-                <Route exact path="/"><SignupCard /></Route>
-                <Route path="/signup"><SignupCard /></Route>
-                <Route path="/signup/role"><RoleCard /></Route>
-                <Route path="/signup/ethics"><EthicsCard /></Route>
-              </Switch>
-            </BrowserRouter>
+            <SignupCard />
+            {showEthics && <EthicsCard />}
           </Col>
         </Row>
       </div>

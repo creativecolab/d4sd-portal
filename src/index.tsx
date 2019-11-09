@@ -18,9 +18,6 @@ const App = () => {
     return (
         <div>
             <SignUpLayout />
-            <EthicsCard />
-            <RoleCard />
-
         </div>
     )
 }
