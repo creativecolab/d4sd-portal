@@ -3,6 +3,7 @@ import LoginCard from '../../login-card/index';
 import {Row, Col, Layout, Menu} from '@d4sd/components';
 import './style.less'
 import Menubar from '../../menubar';
+import { withRouter } from 'react-router-dom';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -14,11 +15,12 @@ const LoginLayout =(props: any)=>{
           <Menubar/>
         </Col>
         <Col span={8}>
-          <LoginCard />
+          {/* Is this right? lol */}
+          <LoginCard props={props}/>
         </Col>
       </Row>
     </div>
   );
 }
 
-export default LoginLayout;
+export default withRouter(LoginLayout);

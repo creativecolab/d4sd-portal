@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import { Card, Input, Button, Form, message, Row, Col } from '@d4sd/components';
+import firebase from '../../actions/firebase';
 
 const LoginCard = (props: any) => {
+    // ISSUE: function login is being called without props being passed. 
     const { register, handleSubmit, setValue } = useForm();
     const onSubmit = (data:any) => {
       if (!data.email) {
@@ -15,9 +17,20 @@ const LoginCard = (props: any) => {
         return;
       }
       console.log(data);
+
       // Add your axios stuff here
-      // data.email, data.password
+
+      login(data);
     }
+
+    async function login(data:any){
+      try {
+        await firebase.login(data.email, data.password);
+        props.props.history.replace('/');
+      } catch(error) {
+        alert(error.message);
+      }
+    };
 
     // handle changes and store to state with react hook forms
     const handleChange = (e:any) => {

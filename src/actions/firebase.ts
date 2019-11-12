@@ -1,7 +1,12 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+  
+import app, { firestore } from 'firebase/app'
+import 'firebase/firebase-auth'
+import 'firebase/firebase-firestore'
+import { any } from 'prop-types';
+import { resolveSoa } from 'dns';
+// import 'firebase/@firestore-types'
 
-const firebaseConfig = firebase.initializeApp({
+const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   databaseURL: process.env.REACT_APP_DATABASE_URL,
@@ -10,38 +15,76 @@ const firebaseConfig = firebase.initializeApp({
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
-});
+};
 
-const db = firebase.firestore();
+class Firebase {
+  auth: any;
+  db: any;
+  constructor() {
+    app.initializeApp(firebaseConfig);
+    this.auth = app.auth();
+    this.db = app.firestore();
+  }
 
-/**
- * registerUser - adds user to firestore.
- * TODO: validation w/ block if account already exists
- * TODO: tighten firestore rules
- * @param data - passed in from signup-card 'sign-up' button click.
- */
-export const registerUser = (data: any) =>{
-  // Add a new user w/ a generated id to "users" collection.
-  console.log(data);
-  db.collection("users").doc().set({
-    firstname: data.firstName,
-    lastname: data.lastName,
-    email: data.email,
-    password: data.password
-  }).then( () => {
-    console.log("Document successfully written!");
-  }).catch(error => {
-    console.log("Error writing document: ", error);
-  });
+  login(email:any, password:any){return this.auth.signInWithEmailAndPassword(email, password)}
+  logout() {return this.auth.signOut();}
+
+  async register(props:any, firstName: any, lastName: any, email: any, password: any){
+    await this
+      .auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((data: any) => {
+        console.log("uid", data.user.uid);
+        app.firestore().collection("users")
+          .doc(data.user.uid)
+          .set({
+            firstName,
+            lastName,
+            email
+          })
+          .then((docRef:any) => {
+            console.log("User document added!");
+            props.history.replace('/');
+            return null;
+          })
+          .catch((error:any) =>{
+            console.error("Error writing document: ", error);
+            props.history.replace('/signup')
+          });
+          return null;
+      })
+      .catch((error: any) => {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        if (errorCode === 'auth/weak-password'){
+          console.log("The password is too weak.");
+        } else {
+          //UI output account already exists
+          console.log(errorMessage);
+        }
+        console.log(error);
+      });
+  }
+
+  isInitialized() {
+		return new Promise(resolve => {
+			this.auth.onAuthStateChanged(resolve)
+		})
+  }
+  getCurrentUsername() {
+		return this.auth.currentUser && this.auth.currentUser.displayName
+  }
+  async getCurrentUserQuote() {
+		const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get()
+		return quote.get('quote')
+  }
+  
 }
 
-export const loginUser = () => {}
-export const logoutUser = () => {}
+// const signupUser = (data: any) => {};
+// const updatePassword = () => {}
+// const forgotPassword = () => {}
+// const updateProfile = () => {}
+// const submitFiles = () => {}
 
-const updatePassword = () => {}
-const forgotPassword = () => {}
-const updateProfile = () => {}
-
-const submitFiles = () => {}
-
-export default { firebaseConfig };
+export default new Firebase();
