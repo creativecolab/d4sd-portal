@@ -1,0 +1,18 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+
+.SignupLayout {
+  /* Fix bug where ant row overflows container */
+  margin-top: @margin-base-2;
+  .ant-row-flex {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .subText{
+    margin-top: @margin-base-1/2;
+    font-size: 2.8rem;
+    color: @subheading-color;
+  }
+}

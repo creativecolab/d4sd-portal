@@ -51,53 +51,39 @@ const SignupCard = (props: any) => {
     register({ name: "firstName" });
     register({ name: "lastName" });
   }, []);
-  return (
-    <Card className="card-signup">
-      <h2 className="signup-header">Sign Up</h2>
-      <Button.Google className="google-btn" icon="google" block>
-        Continue with Google
-      </Button.Google>
-      <Button.Facebook className="fb-btn" icon="facebook" block>
-        Continue with Facebook
-      </Button.Facebook>
-      <p className="or-txt">OR</p>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input.Group className="input-group">
-          <Row gutter={30} className="row-names">
-            <Col span={12}>
-              <Input
-                placeholder="First Name"
-                name="firstName"
-                onChange={handleChange}
-              />
-            </Col>
-            <Col span={12}>
-              <Input
-                placeholder="Last Name"
-                name="lastName"
-                onChange={handleChange}
-              />
-            </Col>
+    return (
+      <div className="card-signup-wrapper">
+      <Card className="card-signup">
+        <h2 className="signup-header">Sign Up</h2>
+        <Button.Google className="google-btn" icon="google" block>Continue with Google</Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>Continue with Facebook</Button.Facebook>
+
+        <p className="or-txt">OR</p>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+
+          <Input.Group className="input-group">
+            <Row gutter={30} className="row-names">
+              <Col span={12}>
+                <Input placeholder="First Name" name='firstName' onChange={handleChange}/>
+              </Col>
+              <Col span={12}>
+                <Input placeholder="Last Name" name="lastName" onChange={handleChange}/>
+              </Col>
+            </Row>
+            <Input className="input-email" placeholder="Email" name="email" onChange={handleChange}/>
+            <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
+          </Input.Group>
+          <Row type="flex" justify="center">
+            <a href="/signup/role">
+            <Button className="d4sd-btn" type="primary" htmlType="submit">CONTINUE</Button>
+            </a>
           </Row>
-          <Input
-            className="input-email"
-            placeholder="Email"
-            name="email"
-            onChange={handleChange}
-          />
-          <Input.Password
-            className="input-email"
-            placeholder="Password"
-            name="password"
-            onChange={handleChange}
-          />
-        </Input.Group>
-        <Button className="d4sd-btn" block type="primary" htmlType="submit">
-          Sign Up
-        </Button>
-      </Form>
-    </Card>
-  );
-};
+
+        </Form>
+      </Card>
+      <p id='bottom-txt'>Already have an account? <a id='login-link'>Log in</a></p>
+      </div>
+      );
+}
 
 export default SignupCard;

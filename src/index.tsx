@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -10,14 +11,13 @@ import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
 import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
-import SignupChoice from "./components/signup-choice";
+import SignUpLayout from './components/layouts/signup-layout/index';
+import RoleCard from './components/role-card';
+
 const App = () => {
     return (
         <div>
-          <Menubar />
-          <SignupChoice />
-            <LoginCard />
-            <SignupCard />
+            <SignUpLayout />
         </div>
     )
 }

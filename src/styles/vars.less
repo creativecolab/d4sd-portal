@@ -1,12 +1,25 @@
-@import './reset.css';
-
 /** Buttons **/
 @d4sd-color: #4497FF;
 @d4sd-color-hover: #88BDFF;
 @facebook-color: #4267B2;
+@heading-color: #5662E5;
 @google-color: #DC4E41;
 @white: white;
 @primary-txt: #828282;
+
+/** Screen break points **/
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+
+/** Base 4 Margin System **/
+@margin-spacer: 3rem;
+
+@margin-base-1: @margin-spacer*2;
+@margin-base-2: @margin-base-1*2;
+@margin-base-3: @margin-base-2*2;
+@margin-base-4: @margin-base-3*2;
 
 /** Margin-padding **/
 @margin-base: 12px;
@@ -25,8 +38,14 @@
 
 
 /** Max-dimensions **/
-@large-card-max-width: 400px;
+@large-card-max-width: 500px;
 
+/** Min-dimensions **/
+@large-card-min-width: 250px;
+
+/** Card-internal-padding **/
+@card-padding: 8px;
+@card-boxshadow: 0 4px 4px rgba(0,0,0,0.25);
 /** Navbar **/
 @tab-height-active: 90px;
 @tab-height: 75px;
@@ -36,3 +55,4 @@
 @navbar-item-padding: 24px;
 @d4sd-color-menu-hover: #66AAFF;
 @d4sd-color-menu-hover-scroll: #DDECFF;
+@subheading-color: #333333;
