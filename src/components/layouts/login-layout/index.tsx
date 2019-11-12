@@ -7,16 +7,16 @@ import { withRouter } from 'react-router-dom';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const LoginLayout =(props: any)=>{
+const LoginLayout = (props: any)=>{
   return(
     <div>
       <Row type="flex" justify="center" align="bottom" gutter={[0, 64]}>
-        <Col> 
+        <Col>
           <Menubar/>
         </Col>
         <Col span={8}>
           {/* Is this right? lol */}
-          <LoginCard props={props}/>
+          <LoginCard />
         </Col>
       </Row>
     </div>

@@ -6,6 +6,7 @@ import firebase from '../../actions/firebase';
 import GoogleLogin from 'react-google-login';
 import { OmitProps } from 'antd/lib/transfer/renderListBody';
 import { withRouter } from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -13,7 +14,7 @@ const emailRegExp = new RegExp(
 
 const SignupCard = (props: any) => {
   const { register, handleSubmit, setValue, errors } = useForm();
-  
+  const [signedUp, setSignedup] = useState(false);
   // const responseGoogle = (response: any) => {
   //   console.log(response);
   // }
@@ -22,33 +23,37 @@ const SignupCard = (props: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
       message.error("Missing first name");
-      return;
+      return false;
     }
     if (!data.lastName) {
       message.error("Missing last name");
-      return;
+      return false;
     }
     if (!data.email) {
       message.error("Missing email");
-      return;
+      return false;
     } else if (!emailRegExp.test(data.email)) {
       message.error("Please input a valid email");
-      return;
+      return false;
     }
     if (!data.password) {
       message.error("Missing password");
-      return;
+      return false;
     } else if (data.password.length < 6) {
       message.error("Password must be 6 charaters long");
-      return;
+      return false;
     }
+    return true;
   }
 
   // Register user into firstore
   async function signup(data:any){
     console.log("data: ", data);
-    validation(data);
-    await firebase.register(props, data.firstName, data.lastName ,data.email, data.password);
+    if (validation(data)) {
+      await firebase.register(props, data.firstName, data.lastName ,data.email, data.password);
+        setSignedup(true);
+    }
+
   };
 
   // TODO: Add a registerWithGoogle async function in firebase.ts
@@ -60,6 +65,7 @@ const SignupCard = (props: any) => {
       firstName, lastName, email, imageUrl
     });
     props.history.replace('/');
+    setSignedup(true);
   }
 
   // handle changes and store to state with react hook forms
@@ -78,6 +84,7 @@ const SignupCard = (props: any) => {
   }, []);
     return (
       <div className="card-signup-wrapper">
+      {signedUp && <Redirect to="/" />}
       <Card className="card-signup">
         <h2 className="signup-header">Sign Up</h2>
         <GoogleLogin

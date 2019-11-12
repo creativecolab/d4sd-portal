@@ -3,9 +3,12 @@ import useForm from 'react-hook-form';
 import './style.less';
 import { Card, Input, Button, Form, message, Row, Col } from '@d4sd/components';
 import firebase from '../../actions/firebase';
+import { Redirect } from 'react-router';
 
 const LoginCard = (props: any) => {
-    // ISSUE: function login is being called without props being passed. 
+
+    const [loggedIn, setLoggedIn] = useState(false); // replace with redux later
+
     const { register, handleSubmit, setValue } = useForm();
     const onSubmit = (data:any) => {
       if (!data.email) {
@@ -26,7 +29,8 @@ const LoginCard = (props: any) => {
     async function login(data:any){
       try {
         await firebase.login(data.email, data.password);
-        props.props.history.replace('/');
+        setLoggedIn(true); // add redux later
+
       } catch(error) {
         alert(error.message);
       }
@@ -43,6 +47,8 @@ const LoginCard = (props: any) => {
        register({ name: "password" });
     }, []);
     return (
+      <div>
+      {loggedIn && <Redirect to="/" />}
       <Card className="card-login">
         <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -50,13 +56,14 @@ const LoginCard = (props: any) => {
             <Col><Input placeholder="Email" name="email" onChange={handleChange}/></Col>
             <Col><Input.Password placeholder="Password" name="password" onChange={handleChange}/> </Col>
             <Col>
-              <Row type="flex" align="middle" justify="center">     
+              <Row type="flex" align="middle" justify="center">
                 <Button className="d4sd-btn" htmlType="submit">Login</Button>
               </Row>
             </Col>
           </Row>
         </Form>
       </Card>
+      </div>
       );
 }
 export default LoginCard;
