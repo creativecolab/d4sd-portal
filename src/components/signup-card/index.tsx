@@ -108,7 +108,9 @@ const SignupCard = (props: any) => {
             <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange}/>
           </Input.Group>
           <Row type="flex" justify="center">
+            <a href="/signup/role">
             <Button className="d4sd-btn" type="primary" htmlType="submit">CONTINUE</Button>
+            </a>
           </Row>
 
         </Form>

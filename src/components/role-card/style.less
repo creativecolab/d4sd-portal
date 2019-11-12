@@ -1,0 +1,34 @@
+@import '../../styles/vars.less';
+@import '../../styles/mixins.less';
+@import '../../styles/fonts.less';
+
+.role-card{
+  max-width: @large-card-max-width;
+  width: 100%;
+  height: 100%;
+  .cardBorder;
+  h4{
+    margin-top: @margin-base;
+  }
+
+  .subHeading{
+    color: black;
+    font-weight: 600;
+  }
+
+  .choices {
+    .choice {
+      display: block;
+      margin: @margin-base;
+      color:@b1;
+      font-weight: medium;
+    }
+  }
+  .bottom-btn {
+    text-align: center;
+  }
+
+  p{
+    margin-top: @margin-base;
+  }
+}
