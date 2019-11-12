@@ -1,6 +1,9 @@
-import React, {useState, useEffect} from "react";
-import "./style.less";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 import { Menu } from "@d4sd/components";
+
+import "./style.less";
 
 import d4sdlogo from "../../assets/logo.svg";
 import d4sdlogoBlue from "../../assets/logo-blue.svg";
@@ -20,7 +23,9 @@ function Menubar(props: any) {
   return (
     <Menu id="menubar" mode="horizontal" className={scroll}>
       <Menu.Item className="menu-item-no menu-logo">
-        <img src={logo} alt="logo" />
+        <NavLink to="/">
+          <img src={logo} alt="logo" />
+        </NavLink>
       </Menu.Item>
       <div className="emptybar menu-item-no" />
       <Menu.Item className="menu-item">
