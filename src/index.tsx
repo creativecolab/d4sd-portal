@@ -1,25 +1,27 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-import Menubar from "./components/menubar"
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import configureStore, { history } from './store';
+
+import EthicsCard from "./components/ethics-card";
+import LoginCard from "./components/login-card";
+import Menubar from "./components/menubar";
+import SignupCard from "./components/signup-card";
 import SignUpLayout from './components/layouts/signup-layout/index';
+import RoleCard from './components/role-card';
 
 import LoginLayout from './components/layouts/login-layout/index';
 
 const App = () => {
     return (
         <div>
-            {/* <LoginLayout /> */}
-            <Menubar/>
-            <SignUpLayout/>
+            <SignUpLayout />
         </div>
     )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
