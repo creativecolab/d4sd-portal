@@ -1,15 +1,11 @@
 import React from "react";
 
-import SignupCard from "../components/signup-card"
+import SignupLayout from "../components/layouts/signup-layout";
 
-// import layout component here
+const SignupPage = () => {
+  return (
+    <SignupLayout />
+  );
+};
 
-// const SigninPage = () => {
-//   return (
-//     <SignupLayout>
-//       <SignupContainer />
-//     </SigupnLayout>
-//   );
-// };
-
-// export default HomePageContainer;
+export default SignupPage;
