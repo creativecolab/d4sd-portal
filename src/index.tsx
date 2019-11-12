@@ -11,18 +11,6 @@ import EthicsCard from "./components/ethics-card";
 import LoginCard from "./components/login-card";
 import Menubar from "./components/menubar";
 import SignupCard from "./components/signup-card";
-<<<<<<< HEAD
-import SignUpLayout from "./components/layouts/signup-layout/index";
-
-const App = () => {
-  return (
-    <div>
-      <Menubar />
-      <SignUpLayout />
-    </div>
-  );
-};
-=======
 import SignUpLayout from './components/layouts/signup-layout/index';
 import RoleCard from './components/role-card';
 
@@ -33,7 +21,6 @@ const App = () => {
         </div>
     )
 }
->>>>>>> 032202b02522af9fd9d535bf63f4cd7b6ee173cd
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
