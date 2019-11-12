@@ -1,6 +1,6 @@
 import React from "react";
 
-import SignupContainer from "./forms/signin-form";
+import SignupCard from "../components/signup-card"
 
 // import layout component here
 
