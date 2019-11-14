@@ -4,7 +4,6 @@
 
 .SignupLayout {
   /* Fix bug where ant row overflows container */
-  margin-top: @margin-base-2;
   .ant-row-flex {
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -14,5 +13,30 @@
     margin-top: @margin-base-1/2;
     font-size: 2.8rem;
     color: @subheading-color;
+  }
+  .heading {
+    height:300px;
+    background-color: #E4F2FF; // TODO: DESIGN TEAM?
+    padding: 100px;
+    padding-top:150px;
+    .heading-message {
+
+    }
+
+  }
+  .card-container {
+    // center
+    padding: @margin-base*2;
+    .d4sdcard-wrapper {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+    }
+    .step-flow {
+      margin-top: @margin-base*2;
+      margin-bottom: @margin-base;
+      width: calc(100% - 80px);
+      margin-left: 40px;
+    }
   }
 }
