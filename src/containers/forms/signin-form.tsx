@@ -8,6 +8,6 @@ function SignupContainer(props: any) {
   return (
     <SignupCard />
   );
-};
+}
 
 export default SignupContainer;

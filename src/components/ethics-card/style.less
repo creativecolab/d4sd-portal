@@ -1,28 +1,37 @@
-@import '../../styles/vars.less';
-@import '../../styles/fonts.less';
-@import '../../styles/mixins.less';
+@import "../../styles/vars.less";
+@import "../../styles/fonts.less";
+@import "../../styles/mixins.less";
 .ethics-card {
   max-width: @large-card-max-width;
-  width: 100%;
+  margin: auto;
+  width: @card-width;
   height: 100%;
-  .cardBorder;
   .ethics-header {
     font-weight: bold;
   }
   .ethics-body {
     margin-left: @margin-base * 3/4;
-    p {
+    li {
       margin-bottom: @margin-base;
       margin-top: @margin-base;
+      color: @b1;
+
+      padding-left: @margin-base * 2;
+    }
+    .ethics-list {
+      list-style: decimal;
     }
   }
   .choices {
+    width:100%;
+    margin-left: @margin-base * 4;
     .choice {
       display: block;
+      margin: auto;
       margin-bottom: @margin-base;
       margin-top: @margin-base;
       color:@b1;
-      font-weight: medium;
+      font-weight: bold;
     }
   }
   .bottom-btn {
@@ -33,7 +42,8 @@
     align-items: center;
   }
 
-  .bottom-btn > * {
+  .d4sd-btn {
     margin: @margin-base @margin-base/2;
+    width:100%;
   }
 }
