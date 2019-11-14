@@ -1,6 +1,6 @@
-@import '../../styles/vars.less';
-@import '../../styles/fonts.less';
-@import '../../styles/mixins.less';
+@import "../../styles/vars.less";
+@import "../../styles/fonts.less";
+@import "../../styles/mixins.less";
 
 #menubar {
 	background-color: @d4sd-color;
@@ -92,21 +92,23 @@
   }
 }
 #menubar.scroll {
-	background-color: @white;
-	color: @b1;
-	> .menu-item-no, .menu-item, .menu-profile {
-		background-color: @white;
-		color: @b1;
-	}
-	> .menu-item:hover {
-		background-color: @d4sd-color-menu-hover-scroll;
-	}
-	> .menu-item.ant-menu-item-selected::before {
-		background-color: @d4sd-color;
-		box-shadow: @navbar-boxshadow;
-		height: @tab-height-active;
-	}
-	> .ant-menu-item-selected {
-		color: @white;
-	}
+  background-color: @white;
+  color: @b1;
+  > .menu-item-no,
+  .menu-item,
+  .menu-profile {
+    background-color: @white;
+    color: @b1;
+  }
+  > .menu-item:hover {
+    background-color: @d4sd-color-menu-hover-scroll;
+  }
+  > .menu-item.ant-menu-item-selected::before {
+    background-color: @d4sd-color;
+    box-shadow: @navbar-boxshadow;
+    height: @tab-height-active;
+  }
+  > .ant-menu-item-selected {
+    color: @white;
+  }
 }
