@@ -27,12 +27,16 @@
   .card-container {
     // center
     padding: @margin-base*2;
-    > div {
-      margin: auto;
+    .d4sdcard-wrapper {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
     }
     .step-flow {
       margin-top: @margin-base*2;
       margin-bottom: @margin-base;
+      width: calc(100% - 80px);
+      margin-left: 40px;
     }
   }
 }

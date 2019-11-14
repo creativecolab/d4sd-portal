@@ -45,9 +45,9 @@ const SignupLayout =(props: any)=>{
       </Row>
       <Row className="card-container">
 
-        {signupStep === "start" && <SignupCard setSignupStep={setSignupStep}/>}
+        {signupStep === "start" && <SignupCard />}
         {signupStep != "start" && signupStep != "login" &&
-        <Steps size="small" current={mapSignupStepToNum(signupStep)} style={{width: 'calc(100% - 40px)', marginLeft: '20px'}} className="step-flow">
+        <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
           <Step title="Sign Up" />
           <Step title="Email Confirmation" />
           <Step title="Choose Your Role" key='role'/>
