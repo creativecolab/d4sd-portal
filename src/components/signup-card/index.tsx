@@ -54,7 +54,6 @@ const SignupCard = (props: any) => {
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <h2 className="signup-header">Sign Up</h2>
         <Button.Google className="google-btn" icon="google" block>
           CONTINUE WITH GOOGLE
         </Button.Google>
@@ -96,7 +95,7 @@ const SignupCard = (props: any) => {
           </Input.Group>
           <Row type="flex" justify="center">
             <a href="/signup/role" className="continue-btn">
-            <Button className="d4sd-btn" type="primary" htmlType="submit">CONTINUE</Button>
+            <Button className="d4sd-btn" type="primary" htmlType="submit">SIGN UP</Button>
             </a>
           </Row>
         </Form>
