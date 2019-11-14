@@ -33,7 +33,7 @@ const EthicsCard = (props: any) => {
           </div>
         </Radio.Group>
         <div className="bottom-btn">
-          <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit">CONTINUE</Button>
+          <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit" onClick={() => props.setSignupStep("success")}>CONTINUE</Button>
         </div>
       </div>
       );
