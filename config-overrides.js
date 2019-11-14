@@ -12,5 +12,5 @@ module.exports = override(
       '@primary-color': '#FFFFFF',
       '@success-color': '#22ACEA',
     },
-  })
+  }),
 );
