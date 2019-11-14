@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@d4sd/components": "^2.4.0",
+    "@d4sd/components": "^2.6.0",
     "antd": "^3.24.3",
     "babel-plugin-import": "^1.12.2",
     "connected-react-router": "^6.5.2",
