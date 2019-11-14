@@ -12,7 +12,7 @@ const {Step} = Steps;
 const SignupLayout =(props: any)=>{
 
   // hook, must be one of "start, role, ethics, etc."
-  const [signupStep, setSignupStep] = useState("start");
+  const [signupStep, setSignupStep] = useState("role");
   const mapSignupStepToNum = function(signupStep: String) {
     switch (signupStep) {
       case "start":
@@ -41,7 +41,7 @@ const SignupLayout =(props: any)=>{
 
         {signupStep === "start" && <SignupCard />}
         {signupStep != "start" &&
-        <Steps size="small" current={mapSignupStepToNum(signupStep)} style={{width: 'calc(100% - 40px)', marginLeft: '20px'}} className="step-flow">
+        <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
           <Step title="Sign Up" />
           <Step title="Email Confirmation" />
           <Step title="Choose Your Role" key='role'/>
