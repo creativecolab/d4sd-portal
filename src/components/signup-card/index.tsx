@@ -57,15 +57,13 @@ const SignupCard = (props: any) => {
   }, []);
   return (
     <div className="card-signup-wrapper">
-      <Card className="card-signup">
-        <h2 className="signup-header">Sign Up</h2>
+      <div className="card-signup">
         <Button.Google className="google-btn" icon="google" block>
-          Continue with Google
+          CONTINUE WITH GOOGLE
         </Button.Google>
         <Button.Facebook className="fb-btn" icon="facebook" block>
-          Continue with Facebook
+          CONTINUE WITH FACEBOOK
         </Button.Facebook>
-
         <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input.Group className="input-group">
@@ -99,12 +97,12 @@ const SignupCard = (props: any) => {
             />
           </Input.Group>
           <Row type="flex" justify="center">
-            <a href="/signup/role">
-              <Button className="d4sd-btn" type="primary" htmlType="submit" onClick={() => props.setSignupStep('role')}>CONTINUE</Button>
+            <a href="/signup/role" className="continue-btn">
+            <Button className="d4sd-btn" type="primary" htmlType="submit" onClick={()=> props.setSignupStep("role")}>SIGN UP</Button>
             </a>
           </Row>
         </Form>
-      </Card>
+      </div>
       <p id="bottom-txt">
         Already have an account?
         {' '}
