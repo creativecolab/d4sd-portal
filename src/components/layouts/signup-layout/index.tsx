@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SignupCard from '../../signup-card/index';
 import {Row, Col, Steps, Button} from '@d4sd/components';
 import Menubar from '../../menubar/index';
-import './style.less'
+import './style.less';
 import LoginCard from '../../login-card';
 import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
@@ -76,6 +76,6 @@ const SignupLayout =(props: any)=>{
       </div>
     </div>
   );
-}
+};
 
 export default SignupLayout;

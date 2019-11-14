@@ -1,6 +1,8 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
-import { Card, Radio, Button, message, Row, Col } from '@d4sd/components';
+import {
+  Card, Radio, Button, message, Row, Col,
+} from '@d4sd/components';
 import './style.less';
 
 

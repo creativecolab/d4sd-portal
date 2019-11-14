@@ -1,8 +1,8 @@
-@import '../../styles/vars.less';
-@import '../../styles/fonts.less';
-@import '../../styles/mixins.less';
+@import "../../styles/vars.less";
+@import "../../styles/fonts.less";
+@import "../../styles/mixins.less";
 
-.card-login{
+.card-login {
   width: @large-card-width;
   height: @large-card-height;
   .flexCenter(column);
@@ -13,16 +13,18 @@
    * Buttons have duplicate styling.
    * TODO: Remove duplicate styling into a generic button styling.
    */
-  .d4sd-btn{
+  .d4sd-btn {
     margin-bottom: @margin-base*2;
     width: 100%;
   }
-  Input{margin-bottom: @margin-base/2;}
-  .google-btn{
-    margin-bottom: @margin-base/2;
+  input {
+    margin-bottom: @margin-base / 2;
+  }
+  .google-btn {
+    margin-bottom: @margin-base / 2;
   }
 
-  .login-header{
+  .login-header {
     font-size: @font-base*2;
     margin-bottom: @margin-base;
   }

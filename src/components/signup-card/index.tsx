@@ -1,36 +1,40 @@
-import React, { useEffect } from "react";
-import useForm from "react-hook-form";
-import "./style.less";
-import { Card, Input, Button, Col, Row, Form, message } from "@d4sd/components";
+import React, { useEffect } from 'react';
+import useForm from 'react-hook-form';
+import './style.less';
+import {
+  Card, Input, Button, Col, Row, Form, message,
+} from '@d4sd/components';
 
 const emailRegExp = new RegExp(
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 );
 
 const SignupCard = (props: any) => {
-  const { register, handleSubmit, setValue, errors } = useForm();
+  const {
+    register, handleSubmit, setValue, errors,
+  } = useForm();
   const onSubmit = (data: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
-      message.error("Missing first name");
+      message.error('Missing first name');
       return;
     }
     if (!data.lastName) {
-      message.error("Missing last name");
+      message.error('Missing last name');
       return;
     }
     if (!data.email) {
-      message.error("Missing email");
+      message.error('Missing email');
       return;
-    } else if (!emailRegExp.test(data.email)) {
-      message.error("Please input a valid email");
+    } if (!emailRegExp.test(data.email)) {
+      message.error('Please input a valid email');
       return;
     }
     if (!data.password) {
-      message.error("Missing password");
+      message.error('Missing password');
       return;
-    } else if (data.password.length < 6) {
-      message.error("Password must be 6 charaters long");
+    } if (data.password.length < 6) {
+      message.error('Password must be 6 charaters long');
       return;
     }
     console.log(data);
@@ -39,17 +43,17 @@ const SignupCard = (props: any) => {
 
   // handle changes and store to state with react hook forms
   const handleChange = (e: any) => {
-    let name = e.target.name;
+    const { name } = e.target;
     setValue(name, e.target.value);
     console.log(errors);
   };
 
   // register inputs
   useEffect(() => {
-    register({ name: "email" });
-    register({ name: "password" });
-    register({ name: "firstName" });
-    register({ name: "lastName" });
+    register({ name: 'email' });
+    register({ name: 'password' });
+    register({ name: 'firstName' });
+    register({ name: 'lastName' });
   }, []);
   return (
     <div className="card-signup-wrapper">
@@ -100,7 +104,9 @@ const SignupCard = (props: any) => {
         </Form>
       </div>
       <p id="bottom-txt">
-        Already have an account? <a id="login-link">Log in</a>
+        Already have an account?
+        {' '}
+        <a id="login-link">Log in</a>
       </p>
     </div>
   );

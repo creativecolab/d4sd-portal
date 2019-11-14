@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Menu } from '@d4sd/components';
 
-import { Menu } from "@d4sd/components";
+import './style.less';
 
-import "./style.less";
-
-import d4sdlogo from "../../assets/logo.svg";
-import d4sdlogoBlue from "../../assets/logo-blue.svg";
-import daniel from "../../assets/daniel.png";
+import d4sdlogo from '../../assets/logo.svg';
+import d4sdlogoBlue from '../../assets/logo-blue.svg';
+import daniel from '../../assets/daniel.png';
 
 function Menubar(props: any) {
-  let [scroll, setScroll] = useState("");
-  let [logo, setLogo] = useState(d4sdlogo);
+  const [scroll, setScroll] = useState('');
+  const [logo, setLogo] = useState(d4sdlogo);
   useEffect(() => {
-    if (scroll === "") {
+    if (scroll === '') {
       setLogo(d4sdlogo);
     } else {
       setLogo(d4sdlogoBlue);
