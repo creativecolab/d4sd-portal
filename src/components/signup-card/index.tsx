@@ -46,14 +46,21 @@ const SignupCard = (props: any) => {
     return true;
   }
 
-  // Register user into firstore
+  // Register user into firestore
   async function signup(data:any){
     console.log("data: ", data);
     if (validation(data)) {
-      await firebase.register(props, data.firstName, data.lastName ,data.email, data.password);
-        setSignedup(true);
+      firebase.register(data.firstName, data.lastName ,data.email, data.password)
+        .then((result: any) =>{
+          console.log("sign-up success: ", result);
+          setSignedup(result);
+        })
+        .catch((result:any) => {
+          console.log("sign-up success: ", result);
+          message.error("Email account already exists.");
+          setSignedup(result);
+        })
     }
-
   };
 
   // TODO: Add a registerWithGoogle async function in firebase.ts

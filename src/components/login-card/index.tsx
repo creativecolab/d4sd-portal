@@ -22,18 +22,20 @@ const LoginCard = (props: any) => {
       console.log(data);
 
       // Add your axios stuff here
-
       login(data);
     }
 
     async function login(data:any){
-      try {
-        await firebase.login(data.email, data.password);
-        setLoggedIn(true); // add redux later
-
-      } catch(error) {
-        alert(error.message);
-      }
+      await firebase.login(data.email, data.password)
+        .then((result:any) => {
+          console.log("logged-in success: ", result);
+          setLoggedIn(result);
+        })
+        .catch((result:any) => {
+          console.log("logged-in success: ", result);
+          // message.error("Some error message(?)");
+          setLoggedIn(result); // add redux later  
+        })
     };
 
     // handle changes and store to state with react hook forms

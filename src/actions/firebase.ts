@@ -4,6 +4,8 @@ import 'firebase/firebase-auth'
 import 'firebase/firebase-firestore'
 import { any } from 'prop-types';
 import { resolveSoa } from 'dns';
+import { booleanLiteral } from '@babel/types';
+import { message } from 'antd';
 // import 'firebase/@firestore-types'
 
 const firebaseConfig = {
@@ -26,46 +28,55 @@ class Firebase {
     this.db = app.firestore();
   }
 
-  login(email:any, password:any){return this.auth.signInWithEmailAndPassword(email, password)}
+  login = (email:any, password:any) => {
+    return new Promise(async (resolve, reject) => {
+      this
+      .auth
+      .signInWithEmailAndPassword(email, password)
+      .then (() => {resolve(true)})
+      .catch(() => {reject(false)})
+    });
+  }
   logout() {return this.auth.signOut();}
 
-  async register(props:any, firstName: any, lastName: any, email: any, password: any){
-    await this
-      .auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((data: any) => {
-        console.log("uid", data.user.uid);
-        app.firestore().collection("users")
-          .doc(data.user.uid)
-          .set({
-            firstName,
-            lastName,
-            email
+  register = (firstName: any, lastName: any, email: any, password: any) => {
+    return new Promise (async (resolve, reject) => {
+      await this
+        .auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((data:any) => {
+          console.log("uid: ", data.user.uid);
+          app.firestore().collection("users")
+            .doc(data.user.uid)
+            .set({
+              firstName,
+              lastName,
+              email
+            })
+            .then((docRef:any) => {
+              console.log("User document added!");
+              resolve(true);
+            })
+            .catch((error:any) => {
+              console.log("Error writing document: ", error);
+              error.message("OOps");
+              reject(false);
+            }) 
+            resolve(true);           
           })
-          .then((docRef:any) => {
-            console.log("User document added!");
-            props.history.replace('/');
-            return null;
-          })
-          .catch((error:any) =>{
-            console.error("Error writing document: ", error);
-            props.history.replace('/signup')
-          });
-          return null;
-      })
-      .catch((error: any) => {
-        let errorCode = error.code;
-        let errorMessage = error.message;
-        if (errorCode === 'auth/weak-password'){
-          console.log("The password is too weak.");
-        } else {
-          //UI output account already exists
-          console.log(errorMessage);
-        }
-        console.log(error);
-      });
+        .catch((error:any) => {
+          if(error.code === 'auth/weak-password'){
+            message.error("The password is too weak.");
+            console.log("The password is too weak.");
+          } else {
+            console.log(error.message);
+          }
+          console.log(error);
+          reject(false);
+        })
+    });
   }
-
+  
   isInitialized() {
 		return new Promise(resolve => {
 			this.auth.onAuthStateChanged(resolve)
