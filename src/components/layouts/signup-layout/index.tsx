@@ -45,7 +45,7 @@ const SignupLayout =(props: any)=>{
       </Row>
       <Row className="card-container">
 
-        {signupStep === "start" && <SignupCard />}
+        {signupStep === "start" && <SignupCard setSignupStep={setSignupStep}/>}
         {signupStep != "start" && signupStep != "login" &&
         <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
           <Step title="Sign Up" />
