@@ -36,7 +36,7 @@ const RoleCard= (props: any) => {
           </div>
         </Radio.Group>
         <div className="bottom-btn">
-          <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit">
+          <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit" onClick={()=> props.setSignupStep("ethics") }>
             CONTINUE
           </Button>
         </div>
