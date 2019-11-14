@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './style.less';
 import { Menu } from '@d4sd/components';
 
-import d4sdlogo from '../../assets/logo.svg';
 import d4sdlogoBlue from '../../assets/logo-blue.svg';
 import daniel from '../../assets/daniel.png';
+import d4sdlogo from '../../assets/logo.svg';
 
 function Menubar(props: any) {
   const [scroll, setScroll] = useState('');
