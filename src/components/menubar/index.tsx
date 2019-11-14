@@ -11,6 +11,7 @@ import daniel from "../../assets/daniel.png";
 
 function Menubar(props: any) {
   let [scroll, setScroll] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false); // temporary state hook until we involve redux
   let [logo, setLogo] = useState(d4sdlogo);
   useEffect(() => {
     if (scroll === "") {
@@ -34,15 +35,24 @@ function Menubar(props: any) {
       <Menu.Item className="menu-item">
         <span>About</span>
       </Menu.Item>
+      {loggedIn &&   <Menu.Item className="menu-item">
+          <span>FAQs</span>
+        </Menu.Item>
+      }
       <Menu.Item className="menu-item">
         <span>Resources</span>
       </Menu.Item>
-      <Menu.Item className="menu-item">
-        <span>Workspace</span>
-      </Menu.Item>
-      <Menu.Item className="menu-profile menu-item-no">
-        <img src={daniel} alt="avatar" />
-      </Menu.Item>
+      {loggedIn &&   <Menu.Item className="menu-item">
+          <span>Workspace</span>
+        </Menu.Item>
+      }
+      {loggedIn &&
+        <Menu.Item className="menu-profile menu-item-no">
+          <img src={daniel} alt="avatar" />
+        </Menu.Item>}
+      {!loggedIn && <Menu.Item className="menu-item login-tab">
+        <span>Login</span>
+      </Menu.Item>}
     </Menu>
   );
 }
