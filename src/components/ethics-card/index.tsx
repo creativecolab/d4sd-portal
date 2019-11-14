@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
-import './style.less';
 import {
-  Card, Radio, Button, message,
+  Card, Radio, Button, message, Row, Col,
 } from '@d4sd/components';
+import './style.less';
 
 
 const EthicsCard = (props: any) => (
@@ -11,16 +11,16 @@ const EthicsCard = (props: any) => (
     <h2 className="ethics-header">Code of Ethics</h2>
     <div className="ethics-body">
       <p>
-1. Act with integrity, competence, diligence, respect and in an ethical manner with the community partners and other participants in the competition.
+        1. Act with integrity, competence, diligence, respect and in an ethical manner with the community partners and other participants in the competition.
       </p>
       <p>
-      2. Participants must not engage in any professional conduct involving dishonesty, fraud, or deceit or commit any act that reflects adversely on their integrity or competence.
+        2. Participants must not engage in any professional conduct involving dishonesty, fraud, or deceit or commit any act that reflects adversely on their integrity or competence.
       </p>
       <p>
-      3. Participants must understand and comply with all applicable laws, rules, and regulations of any government, regulatory organization, licensing agency, or professional association governing their professional activities. In the event of conflict, participants must comply with the law, rule, or regulation. Participants must not knowingly participate or assist in and must dissociate from any violation of such laws, rules, or regulations.
+        3. Participants must understand and comply with all applicable laws, rules, and regulations of any government, regulatory organization, licensing agency, or professional association governing their professional activities. In the event of conflict, participants must comply with the law, rule, or regulation. Participants must not knowingly participate or assist in and must dissociate from any violation of such laws, rules, or regulations.
       </p>
       <p>
-      4. Participants must use reasonable care and judgment to achieve and maintain independence and objectivity in their professional activities.
+        4. Participants must use reasonable care and judgment to achieve and maintain independence and objectivity in their professional activities.
       </p>
     </div>
     <Radio.Group className="choices">
@@ -34,6 +34,7 @@ const EthicsCard = (props: any) => (
       </div>
     </Radio.Group>
     <div className="bottom-btn">
+      <Button className="d4sd-btn" block type="primary-outline" size="small" htmlType="submit">PREVIOUS</Button>
       <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit">CONTINUE</Button>
     </div>
   </Card>

@@ -12,11 +12,10 @@ import LoginCard from './components/login-card';
 import Menubar from './components/menubar';
 import SignupCard from './components/signup-card';
 import SignUpLayout from './components/layouts/signup-layout/index';
-
+import RoleCard from './components/role-card';
 
 const App = () => (
   <div>
-    <Menubar />
     <SignUpLayout />
   </div>
 );
