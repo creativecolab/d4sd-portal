@@ -56,10 +56,10 @@ const SignupCard = (props: any) => {
       <div className="card-signup">
         <h2 className="signup-header">Sign Up</h2>
         <Button.Google className="google-btn" icon="google" block>
-          Continue with Google
+          CONTINUE WITH GOOGLE
         </Button.Google>
         <Button.Facebook className="fb-btn" icon="facebook" block>
-          Continue with Facebook
+          CONTINUE WITH FACEBOOK
         </Button.Facebook>
 
         <p className="or-txt">OR</p>

@@ -4,6 +4,9 @@
 
 // Signup Card
 .card-signup-wrapper {
+  max-width: @large-card-max-width;
+  margin: auto;
+  width: @card-width;
   .card-signup{
     width: 100%;
     height: 100%;
@@ -28,7 +31,9 @@
     }
     .google-btn{
       margin-bottom: @margin-base/4;
-      height:50px;
+      height: @btn-height;
+      font-weight: bold;
+      letter-spacing: @btn-letter-spacing;
     }
     .d4sdbutton-wrapper {
 
@@ -37,13 +42,16 @@
     .d4sdbutton {
       margin-top: @margin-base * 2;
       width:100%;
+      letter-spacing: @btn-letter-spacing;
     }
     .continue-btn {
       width:100%;
     }
     .fb-btn{
       margin-bottom: @margin-base;
-      height:50px;
+      height: @btn-height;
+      font-weight: bold;
+      letter-spacing: @btn-letter-spacing;
     }
 
     .or-txt{

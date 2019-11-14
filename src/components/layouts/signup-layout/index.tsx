@@ -12,7 +12,7 @@ const {Step} = Steps;
 const SignupLayout =(props: any)=>{
 
   // hook, must be one of "start, role, ethics, etc."
-  const [signupStep, setSignupStep] = useState("role");
+  const [signupStep, setSignupStep] = useState("ethics");
   const mapSignupStepToNum = function(signupStep: String) {
     switch (signupStep) {
       case "start":
