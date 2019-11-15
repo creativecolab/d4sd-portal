@@ -10,7 +10,7 @@ import daniel from '../../assets/daniel.png';
 
 function Menubar(props: any) {
   let [scroll, setScroll] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false); // temporary state hook until we involve redux
+  const [loggedIn, setLoggedIn] = useState(true); // temporary state hook until we involve redux
   let [logo, setLogo] = useState(d4sdlogo);
   useEffect(() => {
     if (scroll === '') {
