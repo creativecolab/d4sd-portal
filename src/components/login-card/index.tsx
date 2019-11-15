@@ -4,13 +4,27 @@ import './style.less';
 import {
   Card, Input, Button, Form, message, Row, Col,
 } from '@d4sd/components';
+
 import { Redirect } from 'react-router';
 import firebase from '../../actions/firebase';
 
 const LoginCard = (props: any) => {
   const [loggedIn, setLoggedIn] = useState(false); // replace with redux later
-
   const { register, handleSubmit, setValue } = useForm();
+
+  async function login(data: any) {
+    await firebase.login(data.email, data.password)
+      .then((result: any) => {
+        console.log('logged-in success: ', result);
+        setLoggedIn(result);
+      })
+      .catch((result: any) => {
+        console.log('logged-in success: ', result);
+        // message.error("Some error message(?)");
+        setLoggedIn(result); // add redux later
+      });
+  }
+
   const onSubmit = (data: any) => {
     if (!data.email) {
       message.error('Missing email');
@@ -25,19 +39,6 @@ const LoginCard = (props: any) => {
     // Add your axios stuff here
     login(data);
   };
-
-  async function login(data: any) {
-    await firebase.login(data.email, data.password)
-      .then((result: any) => {
-        console.log('logged-in success: ', result);
-        setLoggedIn(result);
-      })
-      .catch((result: any) => {
-        console.log('logged-in success: ', result);
-        // message.error("Some error message(?)");
-        setLoggedIn(result); // add redux later
-      });
-  }
 
   // handle changes and store to state with react hook forms
   const handleChange = (e: any) => {
@@ -55,7 +56,7 @@ const LoginCard = (props: any) => {
       <Card className="card-login">
         <h2 className="login-header">Login</h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
-            <Row gutter={[0, 8]}>
+          <Row gutter={[0, 8]}>
             <Col><Input placeholder="Email" name="email" onChange={handleChange} /></Col>
             <Col>
               <Input.Password placeholder="Password" name="password" onChange={handleChange} />
@@ -67,7 +68,7 @@ const LoginCard = (props: any) => {
               </Row>
             </Col>
           </Row>
-          </Form>
+        </Form>
       </Card>
     </div>
   );

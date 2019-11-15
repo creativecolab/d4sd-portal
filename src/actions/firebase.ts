@@ -1,11 +1,10 @@
-  
-import app, { firestore } from 'firebase/app'
-import 'firebase/firebase-auth'
-import 'firebase/firebase-firestore'
-import { any } from 'prop-types';
-import { resolveSoa } from 'dns';
-import { booleanLiteral } from '@babel/types';
-import { message } from 'antd';
+import app from 'firebase/app';
+import 'firebase/firebase-auth';
+import 'firebase/firebase-firestore';
+// import { any } from 'prop-types';
+// import { resolveSoa } from 'dns';
+// import { booleanLiteral } from '@babel/types';
+import { message } from '@d4sd/components';
 // import 'firebase/@firestore-types'
 
 const firebaseConfig = {
@@ -16,80 +15,80 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 class Firebase {
   auth: any;
+
   db: any;
+
   constructor() {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
   }
 
-  login = (email:any, password:any) => {
-    return new Promise(async (resolve, reject) => {
-      this
+  login = (email: any, password: any) => new Promise((resolve, reject) => {
+    this
       .auth
       .signInWithEmailAndPassword(email, password)
-      .then (() => {resolve(true)})
-      .catch(() => {reject(false)})
-    });
-  }
-  logout() {return this.auth.signOut();}
+      .then(() => { resolve(true); })
+      .catch(() => { reject(false); });
+  })
 
-  register = (firstName: any, lastName: any, email: any, password: any) => {
-    return new Promise (async (resolve, reject) => {
-      await this
-        .auth
-        .createUserWithEmailAndPassword(email, password)
-        .then((data:any) => {
-          console.log("uid: ", data.user.uid);
-          app.firestore().collection("users")
-            .doc(data.user.uid)
-            .set({
-              firstName,
-              lastName,
-              email
-            })
-            .then((docRef:any) => {
-              console.log("User document added!");
-              resolve(true);
-            })
-            .catch((error:any) => {
-              console.log("Error writing document: ", error);
-              error.message("OOps");
-              reject(false);
-            }) 
-            resolve(true);           
+  logout() { return this.auth.signOut(); }
+
+  register = (firstName: any, lastName: any, email: any, password: any) => new Promise((resolve, reject) => {
+    this
+      .auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((data: any) => {
+        console.log('uid: ', data.user.uid);
+        app.firestore().collection('users')
+          .doc(data.user.uid)
+          .set({
+            firstName,
+            lastName,
+            email,
           })
-        .catch((error:any) => {
-          if(error.code === 'auth/weak-password'){
-            message.error("The password is too weak.");
-            console.log("The password is too weak.");
-          } else {
-            console.log(error.message);
-          }
-          console.log(error);
-          reject(false);
-        })
+          .then(() => {
+            console.log('User document added!');
+            resolve(true);
+          })
+          .catch((error: any) => {
+            console.log('Error writing document: ', error);
+            error.message('OOps');
+            reject(false);
+          });
+        resolve(true);
+      })
+      .catch((error: any) => {
+        if (error.code === 'auth/weak-password') {
+          message.error('The password is too weak.');
+          console.log('The password is too weak.');
+        } else {
+          console.log(error.message);
+        }
+        console.log(error);
+        reject(false);
+      });
+  })
+
+  isInitialized() {
+    return new Promise((resolve) => {
+      this.auth.onAuthStateChanged(resolve);
     });
   }
-  
-  isInitialized() {
-		return new Promise(resolve => {
-			this.auth.onAuthStateChanged(resolve)
-		})
-  }
+
   getCurrentUsername() {
-		return this.auth.currentUser && this.auth.currentUser.displayName
+    return this.auth.currentUser && this.auth.currentUser.displayName;
   }
+
   async getCurrentUserQuote() {
-		const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get()
-		return quote.get('quote')
+    const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get();
+    return quote.get('quote');
   }
-  
 }
 
 // const signupUser = (data: any) => {};
