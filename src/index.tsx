@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import configureStore, { history } from './store';
 
 import SignupPage from './containers/signup-page';
-
+import LoginPage from './containers/login-page';
 // @ts-ignore
 const store = configureStore();
 
@@ -17,7 +17,8 @@ const App = () => (
     <ConnectedRouter history={history}>
       <>
         <Switch>
-          <Route path="/" component={SignupPage} />
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/signup" component={SignupPage} />
         </Switch>
       </>
     </ConnectedRouter>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SignupCard from '../../signup-card/index';
 import {Row, Col, Steps, Button} from '@d4sd/components';
+import { Link } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import LoginCard from '../../login-card';
@@ -65,13 +66,14 @@ const SignupLayout =(props: any)=>{
           </Row>
           <Row type="flex" justify="center">
             <Col span={10}>
-              <Button onClick={()=> setSignupStep("login")}>
-                GO TO WORKSPACE
-              </Button>
+              <Link to="/">
+                <Button type="primary">
+                  GO TO WORKSPACE
+                </Button>
+              </Link>
             </Col>
           </Row>
         </div>}
-        {signupStep === "login" && <LoginCard />}
       </Row>
       </div>
     </div>
