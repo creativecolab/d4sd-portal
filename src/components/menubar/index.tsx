@@ -20,6 +20,30 @@ function Menubar(props: any) {
     }
   }, [scroll]);
 
+  const DesktopLoggedInItems = [
+    <Menu.Item className="menu-item">
+      <span>FAQs</span>
+    </Menu.Item>,
+    <Menu.Item className="menu-item">
+      <span>Resources</span>
+    </Menu.Item>,
+    <Menu.Item className="menu-item">
+      <span>Workspace</span>
+    </Menu.Item>,
+    <Menu.Item className="menu-profile menu-item-no">
+      <img src={daniel} alt="avatar" />
+    </Menu.Item>
+  ]
+
+  const DesktopLoggedOutItems = [
+    <Menu.Item className="menu-item">
+      <span>Resources</span>
+    </Menu.Item>,
+    <Menu.Item className="menu-item login-tab">
+      <span>Login</span>
+    </Menu.Item>
+  ]
+
   return (
     <Menu id="menubar" mode="horizontal" className={scroll}>
       <Menu.Item className="menu-item-no menu-logo">
@@ -34,24 +58,8 @@ function Menubar(props: any) {
       <Menu.Item className="menu-item">
         <span>About</span>
       </Menu.Item>
-      {loggedIn &&   <Menu.Item className="menu-item">
-          <span>FAQs</span>
-        </Menu.Item>
-      }
-      <Menu.Item className="menu-item">
-        <span>Resources</span>
-      </Menu.Item>
-      {loggedIn &&   <Menu.Item className="menu-item">
-          <span>Workspace</span>
-        </Menu.Item>
-      }
-      {loggedIn &&
-        <Menu.Item className="menu-profile menu-item-no">
-          <img src={daniel} alt="avatar" />
-        </Menu.Item>}
-      {!loggedIn && <Menu.Item className="menu-item login-tab">
-        <span>Login</span>
-      </Menu.Item>}
+      {loggedIn === true ? DesktopLoggedInItems : DesktopLoggedOutItems}
+
     </Menu>
   );
 }
