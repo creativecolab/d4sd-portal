@@ -13,68 +13,9 @@
     .d4sdcard-wrapper {
       display: inline;
     }
-    .progressBar.warning .ant-progress-bg {
-      background-color: @d4sd-secondary-color;
-    }
-    .progressBar.success .ant-progress-bg {
-      background-color: @d4sd-success;
-    }
-    .card-status {
-      text-align: right;
-      .no-submit, .submitted {
-        text-align: right;
-        margin-bottom: 0px;
-        color: @d4sd-secondary-color;
-        font-weight: 500;
-        display: inline;
-        position: relative;
-        right:0px;
-        }
-      .no-submit::before, .submitted::before {
-        content: "";
-        height: 12px;
-        width: 12px;
-        background-color: @d4sd-secondary-color;
-        position: absolute;
-        border-radius: 50%;
-        top: 3px;
-        left: -20px;
-      }
-      .submitted {
-        color: @d4sd-success;
-      }
-      .submitted::before {
-        background-color: @d4sd-success;
-      }
-    }
-    .card-dates {
-      .due-date.warning {
-        color: @d4sd-secondary-color;
-      }
-      .due-date.success {
-        color: @d4sd-success
-      }
-      .days-left {
-        float: right;
-      }
-    }
-    .progressBar {
-      transform: rotate(180deg);
-      .ant-progress-text {
-        display: none;
-      }
-      .ant-progress-outer {
-        padding-right: 0px;
-      }
-    }
     margin-left: 20%;
     margin-right: 20%;
     margin-top: @margin-base * 7;
-    .timeline-card {
-      .cardBorder;
-      width: calc(100%);
-      top: -@margin-base * 4;
-    }
     .ant-timeline-item-tail {
       height: calc(100% + 400px);
       top:-100px;
