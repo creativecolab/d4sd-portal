@@ -9,14 +9,14 @@ export const history = createBrowserHistory();
 
 export default function configureStore(preloadedState: any) {
   const store = createStore(
-    createRootReducer(history), 
+    createRootReducer(history),
     preloadedState,
     compose(
       applyMiddleware(
-        routerMiddleware(history), 
-        thunk
-      )
-    )
+        routerMiddleware(history),
+        thunk,
+      ),
+    ),
   );
   return store;
 }

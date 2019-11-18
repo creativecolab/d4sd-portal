@@ -1,6 +1,5 @@
-@import '../../../styles/vars.less';
-@import '../../../styles/mixins.less';
-@import '../../../styles/fonts.less';
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
 
 .SignupLayout {
   /* Fix bug where ant row overflows container */
@@ -9,8 +8,8 @@
     margin-left: 0 !important;
   }
 
-  .subText{
-    margin-top: @margin-base-1/2;
+  .subText {
+    margin-top: @margin-base-1 / 2;
     font-size: 2.8rem;
     color: @subheading-color;
   }
@@ -34,9 +33,9 @@
     }
     .step-flow {
       margin-top: @margin-base*2;
-      margin-bottom: @margin-base;
-      width: calc(100% - 80px);
-      margin-left: 40px;
+      margin-bottom: @margin-base*4;
+      width: calc(100% - @margin-base * 8);
+      margin-left: @margin-base * 4;
     }
   }
 }

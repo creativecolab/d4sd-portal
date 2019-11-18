@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SignupCard from '../../signup-card/index';
 import {Row, Col, Steps, Button} from '@d4sd/components';
 import Menubar from '../../menubar/index';
-import './style.less'
+import './style.less';
 import LoginCard from '../../login-card';
 import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
@@ -45,7 +45,7 @@ const SignupLayout =(props: any)=>{
       </Row>
       <Row className="card-container">
 
-        {signupStep === "start" && <SignupCard />}
+        {signupStep === "start" && <SignupCard setSignupStep={setSignupStep}/>}
         {signupStep != "start" && signupStep != "login" &&
         <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
           <Step title="Sign Up" />
@@ -59,7 +59,7 @@ const SignupLayout =(props: any)=>{
         {signupStep === "success" && <div>
           <Row type="flex" justify="center">
             <Col span="20">
-              <h2>You’ve successfully joined the D4SD 2020 Challenge! 
+              <h2>You’ve successfully joined the D4SD 2020 Challenge!
                 Go to your Workspace to register your team.</h2>
             </Col>
           </Row>
@@ -76,6 +76,6 @@ const SignupLayout =(props: any)=>{
       </div>
     </div>
   );
-}
+};
 
 export default SignupLayout;

@@ -1,19 +1,18 @@
 @import '../../styles/vars.less';
 @import '../../styles/mixins.less';
-@import '../../styles/fonts.less';
 
 .role-card{
   max-width: @large-card-max-width;
-  width: 100%;
+  width: @card-width;
+  margin: auto;
   height: 100%;
-  .cardBorder;
   h4{
     margin-top: @margin-base;
   }
 
   .subHeading{
-    color: black;
-    font-weight: 600;
+    font-weight: bold;
+    display: inline;
   }
 
   .choices {
@@ -22,13 +21,23 @@
       margin: @margin-base;
       color:@b1;
       font-weight: medium;
+      p {
+        margin-top:  @margin-base;
+        margin-bottom: @margin-base * 3;
+      }
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: @d4sd-color-two;
+
+    }
+    .ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner {
+      border-color: @d4sd-color-two;
+    }
+    .ant-radio-inner::after {
+      background-color: @d4sd-color-two;
     }
   }
-  .bottom-btn {
-    text-align: center;
-  }
-
-  p{
-    margin-top: @margin-base;
+  .d4sd-btn {
+    width:100%;
   }
 }
