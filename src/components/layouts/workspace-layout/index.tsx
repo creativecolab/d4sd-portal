@@ -17,8 +17,6 @@ const WorkspaceLayout = (props: any) => {
     {title:"View Community Voting Results", desc:"Judging will be available at the end of the competition", closed:true, dueDate: new Date("01/24/2020, 11:59:00 PM"), submitted:false}
   ]
 
-
-
   return (
     <div>
       <Menubar />
@@ -32,7 +30,7 @@ const WorkspaceLayout = (props: any) => {
         <Timeline className="timeline" type="card">
           {cards.map((card) => {
             return (
-              <Timeline.Item>
+              <Timeline.Item className={card.closed ? "closed" : ""}>
                 <WorkspaceActionCard card={card} />
               </Timeline.Item>
             )

@@ -21,7 +21,7 @@ function WorkspaceActionCard(props: any) {
     return Math.floor(daysLeft).toFixed(0);
   }
   return (
-    <Card className="timeline-card">
+    <Card className={!card.closed ? "timeline-card" : "timeline-card closed"}>
     <h2>{card.title}</h2>
     <p>{card.desc}</p>
       { !card.closed && card.dueDate && (card.submitted || !card.submitted) &&
