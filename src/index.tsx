@@ -1,4 +1,3 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -12,7 +11,7 @@ import Signup from './components/layouts/signup-layout';
 
 
 import SignupPage from './containers/signup-page';
-
+import './index.less';
 // @ts-ignore
 const store = configureStore();
 

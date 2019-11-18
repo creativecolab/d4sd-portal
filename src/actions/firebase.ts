@@ -44,6 +44,15 @@ class Firebase {
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then((data: any) => {
+        const user = this.auth.currentUser;
+        user.sendEmailVerification()
+          .then(() => {
+            console.log('Email Sent!');
+          })
+          .catch(() => {
+            console.log('Email not sent!');
+          });
+
         console.log('uid: ', data.user.uid);
         app.firestore().collection('users')
           .doc(data.user.uid)

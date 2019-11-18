@@ -137,7 +137,7 @@ const SignupCard = (props: any) => {
           </Input.Group>
           <Row type="flex" justify="center">
             <a href="/signup/role">
-              <Button className="d4sd-btn" type="primary" htmlType="submit" onClick={() => props.setSignupStep('role')}>CONTINUE</Button>
+              <Button className="d4sd-btn" type="primary" htmlType="submit">CONTINUE</Button>
             </a>
           </Row>
         </Form>
