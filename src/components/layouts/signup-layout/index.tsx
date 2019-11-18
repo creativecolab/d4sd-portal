@@ -34,14 +34,16 @@ const SignupLayout =(props: any)=>{
     <div>
       <Menubar />
       <div className="SignupLayout">
-      <Row className="heading">
-      <h1 className='heading-message'>
-        {signupStep === "start" && "Workspace Sign Up"}
-        {signupStep === "role" && "Choose Your Role"}
-        {signupStep === "ethics" && "Code of Ethics"}
-        {signupStep === "success" && "Welcome to D4SD Workspace!"}
-        {signupStep === "login" && "D4SD Workspace"}
-      </h1>
+      <Row className="heading" type="flex" justify="center" >
+        <Col span={20}>
+          <h1 className='heading-message'>
+            {signupStep === "start" && "Workspace Sign Up"}
+            {signupStep === "role" && "Choose Your Role"}
+            {signupStep === "ethics" && "Code of Ethics"}
+            {signupStep === "success" && "Welcome to D4SD Workspace!"}
+            {signupStep === "login" && "D4SD Workspace"}
+          </h1>
+        </Col>
       </Row>
       <Row className="card-container">
 
@@ -56,16 +58,17 @@ const SignupLayout =(props: any)=>{
         </Steps>}
         {signupStep === "role" && <RoleCard setSignupStep={setSignupStep}/>}
         {signupStep === "ethics" && <EthicsCard setSignupStep={setSignupStep}/>}
-        {signupStep === "success" && <div>
+        {signupStep === "success" && 
+        <div>
           <Row type="flex" justify="center">
-            <Col span="20">
+            <Col span="18" className="joint-challenge">
               <h2>You’ve successfully joined the D4SD 2020 Challenge!
                 Go to your Workspace to register your team.</h2>
             </Col>
           </Row>
           <Row type="flex" justify="center">
-            <Col span={10}>
-              <Button onClick={()=> setSignupStep("login")}>
+            <Col>
+              <Button onClick={()=> setSignupStep("login")} className="workspace-btn">
                 GO TO WORKSPACE
               </Button>
             </Col>
