@@ -97,24 +97,15 @@ const SignupCard = (props: any) => {
   }, []);
   return (
     <div className="card-signup-wrapper">
-      {signedUp && <Redirect to="/" />}
-      <Card className="card-signup">
-        <h2 className="signup-header">Sign Up</h2>
-        <GoogleLogin
-          clientId="777361277442-7o4gtp3cu5bk8igbuuj3epmkhjcltc89.apps.googleusercontent.com"
-          render={(renderProps) => (
-            <Button.Google className="google-btn" icon="google" block onClick={renderProps.onClick} disabled={renderProps.disabled}>Continue with Google</Button.Google>
-          )}
-          buttonText="Login"
-          onSuccess={signupWithGoogle}
-          onFailure={signupWithGoogle}
-          cookiePolicy="single_host_origin"
-        />
-        <Button.Facebook className="fb-btn" icon="facebook" block>Continue with Facebook</Button.Facebook>
-
+      <div className="card-signup">
+        <Button.Google className="google-btn" icon="google" block>
+          CONTINUE WITH GOOGLE
+        </Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>
+          CONTINUE WITH FACEBOOK
+        </Button.Facebook>
         <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
-
           <Input.Group className="input-group">
             <Row gutter={30} className="row-names">
               <Col span={12}>
@@ -132,16 +123,26 @@ const SignupCard = (props: any) => {
                 />
               </Col>
             </Row>
-            <Input className="input-email" placeholder="Email" name="email" onChange={handleChange} />
-            <Input.Password className="input-email" placeholder="Password" name="password" onChange={handleChange} />
+            <Input
+              className="input-email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+            />
+            <Input.Password
+              className="input-email"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+            />
           </Input.Group>
           <Row type="flex" justify="center">
-            <a href="/signup/role">
-              <Button className="d4sd-btn" type="primary" htmlType="submit">CONTINUE</Button>
+            <a href="/signup/role" className="continue-btn">
+              <Button className="d4sd-btn" type="primary" htmlType="submit">SIGN UP</Button>
             </a>
           </Row>
         </Form>
-      </Card>
+      </div>
       <p id="bottom-txt">
         Already have an account?
         {' '}
