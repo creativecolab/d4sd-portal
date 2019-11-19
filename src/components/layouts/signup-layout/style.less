@@ -2,6 +2,7 @@
 @import "../../../styles/mixins.less";
 
 .SignupLayout {
+
   /* Fix bug where ant row overflows container */
   .ant-row-flex {
     margin-right: 0 !important;
@@ -14,10 +15,9 @@
     color: @subheading-color;
   }
   .heading {
-    height:300px;
+    height: @header-height;
     background-color: #E4F2FF; // TODO: DESIGN TEAM?
-    padding: 100px;
-    padding-top:150px;
+    padding-top: @margin-base-2;
     .heading-message {
 
     }
@@ -25,7 +25,7 @@
   }
   .card-container {
     // center
-    padding: @margin-base * 2;
+    padding: @margin-base-1 @margin-base*2;
     .d4sdcard-wrapper {
       margin-left: 50%;
       transform: translateX(-50%);
@@ -36,6 +36,14 @@
       margin-bottom: @margin-base*4;
       width: calc(100% - @margin-base * 8);
       margin-left: @margin-base * 4;
+    }
+
+    .joint-challenge{
+      margin-top: @margin-base-1;
+    }
+    .workspace-btn{
+      margin-top: @margin-base-1;
+
     }
   }
 }
