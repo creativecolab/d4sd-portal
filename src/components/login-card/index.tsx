@@ -16,12 +16,12 @@ const LoginCard = (props: any) => {
     await firebase.login(data.email, data.password)
       .then((result: any) => {
         console.log('logged-in success: ', result);
-        setLoggedIn(result);
+        setLoggedIn(true);
       })
       .catch((result: any) => {
         console.log('logged-in success: ', result);
         // message.error("Some error message(?)");
-        setLoggedIn(result); // add redux later
+        setLoggedIn(false); // add redux later
       });
   }
 

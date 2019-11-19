@@ -34,18 +34,18 @@ class Firebase {
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(() => { resolve(true); })
-      .catch(() => { reject(false); });
+      .catch((error: any) => { reject(error); });
   })
 
   logout() { return this.auth.signOut(); }
 
+  // eslint-disable-next-line max-len
   register = (firstName: any, lastName: any, email: any, password: any) => new Promise((resolve, reject) => {
     this
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then((data: any) => {
-        const user = this.auth.currentUser;
-        user.sendEmailVerification()
+        data.user.sendEmailVerification()
           .then(() => {
             console.log('Email Sent!');
           })
@@ -54,12 +54,16 @@ class Firebase {
           });
 
         console.log('uid: ', data.user.uid);
+
         app.firestore().collection('users')
           .doc(data.user.uid)
           .set({
             firstName,
             lastName,
             email,
+            emailVerified: false,
+            role: null,
+            ethics: false,
           })
           .then(() => {
             console.log('User document added!');
@@ -68,7 +72,7 @@ class Firebase {
           .catch((error: any) => {
             console.log('Error writing document: ', error);
             error.message('OOps');
-            reject(false);
+            reject(error);
           });
         resolve(true);
       })

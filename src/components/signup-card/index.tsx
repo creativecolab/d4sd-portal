@@ -51,18 +51,18 @@ const SignupCard = (props: any) => {
   };
 
   // Register user into firestore
-  async function signup(data: any) {
+  async function signup(data: any): Promise<any> {
     console.log('data: ', data);
     if (validation(data)) {
       firebase.register(data.firstName, data.lastName, data.email, data.password)
         .then((result: any) => {
           console.log('sign-up success: ', result);
-          setSignedup(result);
+          setSignedup(true);
         })
         .catch((result: any) => {
-          console.log('sign-up success: ', result);
+          console.log('sign-up failure: ', result);
           message.error('Email account already exists.');
-          setSignedup(result);
+          setSignedup(false);
         });
     }
   }
