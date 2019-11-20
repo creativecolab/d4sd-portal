@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <g id="edu" transform="translate(-1154 -125.016)">
+    <path id="多边形_1" data-name="多边形 1" d="M39.222,11.176a6,6,0,0,1,10.8,0l35.06,72.536a6,6,0,0,1-5.4,8.611H9.564a6,6,0,0,1-5.4-8.611Z" transform="translate(1209.264 232.693)" fill="#5f70b9"/>
+    <rect id="矩形_5" data-name="矩形 5" width="200" height="153.399" rx="18" transform="translate(1154 125.016)" fill="#5f70b9"/>
+    <rect id="矩形_4" data-name="矩形 4" width="167.987" height="105.184" rx="13" transform="translate(1169.432 139.318)" fill="#a1caff"/>
+    <rect id="矩形_6" data-name="矩形 6" width="160.483" height="16" rx="8" transform="translate(1174 309.016)" fill="#5f70b9"/>
+    <circle id="椭圆_11" data-name="椭圆 11" cx="6.5" cy="6.5" r="6.5" transform="translate(1247.179 255.097)" fill="#fff"/>
+    <g id="组_1" data-name="组 1" transform="translate(1232.219 160.133)">
+      <path id="路径_11" data-name="路径 11" d="M23.883,0C37.678,0,45.039,11.327,45.039,25.1c.169,6.143-6.11,12.973-8.307,15.953a28.423,28.423,0,0,0-3.51,7.211,41.971,41.971,0,0,1-9.338,1.618A30.586,30.586,0,0,1,14.4,47.847S11.412,43.022,9.395,40.5,1.95,31.14,1.95,24.224C1.95,10.449,10.089,0,23.883,0Z" transform="translate(-1.95)" fill="#fffa81"/>
+      <path id="路径_12" data-name="路径 12" d="M23.109,0C9.314,0,1.954,11.327,1.954,25.1c-.169,6.143,6.11,12.973,8.307,15.953A65.725,65.725,0,0,1,14.5,47.847s4.791,2.038,8.612,2.038a30.586,30.586,0,0,0,9.482-2.038S35.58,43.022,37.6,40.5s7.444-9.362,7.444-16.277C45.042,10.449,36.9,0,23.109,0Z" transform="translate(-1.95)" fill="#fffa81"/>
+      <path id="路径_10" data-name="路径 10" d="M.475,0H19.209L20.73,18.052H-.847Z" transform="translate(12.091 47.972)" fill="#fff"/>
+      <rect id="矩形_7" data-name="矩形 7" width="28.1" height="2.934" transform="translate(7.883 52.819)" fill="#a1caff"/>
+      <rect id="矩形_8" data-name="矩形 8" width="29.661" height="2.934" transform="translate(6.322 60.155)" fill="#a1caff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="781" viewBox="0 0 1920 781">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8fc0ff"/>
+      <stop offset="1" stop-color="#eff8ff"/>
+    </linearGradient>
+    <clipPath id="clip-what_is_d4sd">
+      <rect width="1920" height="781"/>
+    </clipPath>
+  </defs>
+  <g id="what_is_d4sd" data-name="what is d4sd" clip-path="url(#clip-what_is_d4sd)">
+    <rect width="1920" height="781" fill="#fff"/>
+    <rect id="sky" width="2109" height="1284" transform="translate(-94 -452)" fill="#eff8ff"/>
+    <ellipse id="椭圆_2" data-name="椭圆 2" cx="186.947" cy="186.947" rx="186.947" ry="186.947" transform="translate(84 343.902)" fill="#e3eefc"/>
+    <ellipse id="椭圆_1" data-name="椭圆 1" cx="120.369" cy="120.369" rx="120.369" ry="120.369" transform="translate(149.909 407.567)" fill="#8fc0ff" opacity="0.454"/>
+    <path id="路径_1" data-name="路径 1" d="M0,88.88,87.494,0,171,89.959H116.324l.113,756.961H56.012V89.959Z" transform="translate(122.335 502.204) rotate(64)" opacity="0.454" fill="url(#linear-gradient)"/>
+    <path id="路径_2" data-name="路径 2" d="M0,90.951,81.05,0l83.509,89.959H109.88l.113,756.961H49.569V89.959Z" transform="matrix(-0.899, 0.438, -0.438, -0.899, 295.462, 381.512)" opacity="0.454" fill="url(#linear-gradient)"/>
+    <path id="路径_8" data-name="路径 8" d="M0,88.919,85.313,0l83.509,89.959H114.144L119.811,1340.3l-60.78-25.424L53.832,89.959Z" transform="matrix(-0.438, -0.899, 0.899, -0.438, 420.993, 559.29)" opacity="0.454" fill="url(#linear-gradient)"/>
+    <path id="Group" d="M0,121.47l105.722-.19V0ZM83.4,101.7l-36.592-.19,36.7-43.123Z" transform="matrix(0.899, -0.438, 0.438, 0.899, 180.566, 494.491)" fill="#fff"/>
+    <path id="路径_4" data-name="路径 4" d="M0,88.172,87.68,0l83.509,89.959H116.511l.113,756.961H56.2V89.959Z" transform="matrix(0.899, -0.438, 0.438, 0.899, 241.93, 680.204)" opacity="0.454" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
