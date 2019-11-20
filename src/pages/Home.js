@@ -14,6 +14,7 @@ import home0 from '../assets/img/home_landing.svg';
 //Carousel
 import { Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import './style.css';
 
 class Home extends Component {
   constructor() {
