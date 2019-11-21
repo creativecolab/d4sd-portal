@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import {Row, Col, Steps, Button, Timeline, Card, Progress} from '@d4sd/components';
+import {Timeline, Card, Progress, Header} from '@d4sd/components';
 import WorkspaceActionCard from '../../workspace-action-card';
 import Menubar from '../../menubar/index';
 import './style.less'
-
+import daniel from '../../../assets/daniel.png';
 const WorkspaceLayout = (props: any) => {
   const [title, setTitle] = useState("D4SD Workspace");
+
+  //temporary login vars
+  const [loggedIn, setLoggedin] = useState(true);
+
 
   // closed sets whether or not card is disabled or not
   const cards = [
@@ -21,11 +25,7 @@ const WorkspaceLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="WorkspaceLayout">
-        <Row className="heading">
-        <h1 className="heading-message">
-          {title}
-        </h1>
-        </Row>
+        {loggedIn ? <Header title="Team Turtles!" back="Go back to workspace" teamPictures={[daniel, daniel]} handleTeamClick={undefined}/> : <Header title="D4SD Workspace" handleTeamClick={undefined}/>}
         <div className="timelineWrapper">
         <Timeline className="timeline" type="card">
           {cards.map((card) => {

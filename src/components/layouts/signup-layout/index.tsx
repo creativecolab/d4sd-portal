@@ -59,7 +59,7 @@ const SignupLayout = (props: any) => {
         </Steps>}
         {signupStep === "role" && <RoleCard setSignupStep={setSignupStep}/>}
         {signupStep === "ethics" && <EthicsCard setSignupStep={setSignupStep}/>}
-        {signupStep === "success" && 
+        {signupStep === "success" &&
         <div>
           <Row type="flex" justify="center">
             <Col span="18" className="joint-challenge">
@@ -75,7 +75,7 @@ const SignupLayout = (props: any) => {
                 </Col>
               </Row>
             </div>
-          )}
+          }
           {signupStep === 'login' && <LoginCard />}
         </Row>
       </div>
