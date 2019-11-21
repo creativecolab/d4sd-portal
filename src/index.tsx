@@ -9,7 +9,9 @@ import configureStore, { history } from './store';
 import './styles/reset.css';
 import SignupPage from './containers/signup-page';
 import WorkspacePage from './containers/workspace-page'
+import LoginPage from './containers/login-page';
 import './index.less';
+
 // @ts-ignore
 const store = configureStore();
 
@@ -19,6 +21,7 @@ const App = () => (
       <>
         <Switch>
           <Route exact path="/" component={SignupPage} />
+          <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/workspace" component={WorkspacePage} />
         </Switch>
       </>

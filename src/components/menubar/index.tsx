@@ -13,6 +13,7 @@ function Menubar(props: any) {
   let [currentTab, setTab] = useState([""]);
   const [scroll, setScroll] = useState("");
   const [logo, setLogo] = useState(d4sdlogo);
+  const [loggedIn, setLogin] = useState(true);
   useEffect(() => {
     if (scroll === '') {
       setLogo(d4sdlogo);
@@ -20,15 +21,39 @@ function Menubar(props: any) {
       setLogo(d4sdlogoBlue);
     }
   }, [scroll]);
-  console.log(currentTab);
-  useEffect(() => {
-    if (history.location.pathname === "/workspace") {
-      setTab(["workspace"]);
-    }
-    else if (history.location.pathname === "/") {
-      setTab(["home"]);
-    }
-  }, [])
+
+useEffect(() => {
+  if (history.location.pathname === "/workspace") {
+    setTab(["workspace"]);
+  }
+  else if (history.location.pathname === "/") {
+    setTab(["home"]);
+  }
+}, [])
+  const DesktopLoggedInItems = [
+    <Menu.Item key="faq">
+      <span>FAQs</span>
+    </Menu.Item>,
+    <Menu.Item key="resources">
+      <span>Resources</span>
+    </Menu.Item>,
+    <Menu.Item key="workspace" onClick={()=>{history.replace("/workspace")}}>
+      <span>Workspace</span>
+    </Menu.Item>,
+    <Menu.Item type="profile">
+      <img src={daniel} alt="avatar" />
+    </Menu.Item>
+  ]
+
+  const DesktopLoggedOutItems = [
+    <Menu.Item key="resources">
+      <span>Resources</span>
+    </Menu.Item>,
+    <Menu.Item key="login">
+      <span>Login</span>
+    </Menu.Item>
+  ]
+
   return (
     <Menu id="menubar" mode="horizontal" className={scroll} selectedKeys={currentTab}>
       <Menu.Item type="logo" onClick={()=>{history.replace("/")}}>
@@ -41,15 +66,8 @@ function Menubar(props: any) {
       <Menu.Item key="about">
         <span>About</span>
       </Menu.Item>
-      <Menu.Item key="resources">
-        <span>Resources</span>
-      </Menu.Item>
-      <Menu.Item key="workspace" onClick={()=>{history.replace("/workspace")}}>
-        <span>Workspace</span>
-      </Menu.Item>
-      <Menu.Item type="profile">
-        <img src={daniel} alt="avatar" />
-      </Menu.Item>
+      {loggedIn === true ? DesktopLoggedInItems : DesktopLoggedOutItems}
+
     </Menu>
   );
 }
