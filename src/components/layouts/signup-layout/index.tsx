@@ -35,44 +35,41 @@ const SignupLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="SignupLayout">
-        <Row className="heading">
-          <h1 className="heading-message">
-            {signupStep === 'start' && 'Workspace Sign Up'}
-            {signupStep === 'role' && 'Choose Your Role'}
-            {signupStep === 'ethics' && 'Code of Ethics'}
-            {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
-            {signupStep === 'login' && 'D4SD Workspace'}
+      <Row className="heading" type="flex" justify="center" >
+        <Col span={20}>
+          <h1 className='heading-message'>
+            {signupStep === "start" && "Workspace Sign Up"}
+            {signupStep === "role" && "Choose Your Role"}
+            {signupStep === "ethics" && "Code of Ethics"}
+            {signupStep === "success" && "Welcome to D4SD Workspace!"}
+            {signupStep === "login" && "D4SD Workspace"}
           </h1>
-        </Row>
-        <Row className="card-container">
+        </Col>
+      </Row>
+      <Row className="card-container">
 
-          {signupStep === 'start' && <SignupCard setSignupStep={setSignupStep} />}
-          {signupStep !== 'start' && signupStep !== 'login'
-        && (
-          <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
-            <Step title="Sign Up" />
-            <Step title="Email Confirmation" />
-            <Step title="Choose Your Role" key="role" />
-            <Step title="Code of Ethics" key="ethics" />
-            <Step title="Success " key="success" />
-          </Steps>
-        )}
-          {signupStep === 'role' && <RoleCard setSignupStep={setSignupStep} />}
-          {signupStep === 'ethics' && <EthicsCard setSignupStep={setSignupStep} />}
-          {signupStep === 'success' && (
-            <div>
-              <Row type="flex" justify="center">
-                <Col span="20">
-                  <h2>
-You’ve successfully joined the D4SD 2020 Challenge!
-                Go to your Workspace to register your team.
-
-                  </h2>
-                </Col>
-              </Row>
-              <Row type="flex" justify="center">
-                <Col span={10}>
-                  <Button onClick={() => setSignupStep('login')}>
+        {signupStep === "start" && <SignupCard setSignupStep={setSignupStep}/>}
+        {signupStep != "start" && signupStep != "login" &&
+        <Steps size="small" current={mapSignupStepToNum(signupStep)} className="step-flow">
+          <Step title="Sign Up" />
+          <Step title="Email Confirmation" />
+          <Step title="Choose Your Role" key='role'/>
+          <Step title="Code of Ethics" key='ethics'/>
+          <Step title="Success " key='success'/>
+        </Steps>}
+        {signupStep === "role" && <RoleCard setSignupStep={setSignupStep}/>}
+        {signupStep === "ethics" && <EthicsCard setSignupStep={setSignupStep}/>}
+        {signupStep === "success" && 
+        <div>
+          <Row type="flex" justify="center">
+            <Col span="18" className="joint-challenge">
+              <h2>You’ve successfully joined the D4SD 2020 Challenge!
+                Go to your Workspace to register your team.</h2>
+            </Col>
+          </Row>
+          <Row type="flex" justify="center">
+            <Col>
+              <Button onClick={()=> setSignupStep("login")} className="workspace-btn">
                 GO TO WORKSPACE
                   </Button>
                 </Col>
