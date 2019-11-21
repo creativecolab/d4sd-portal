@@ -2,25 +2,37 @@
 @import "../../styles/mixins.less";
 
 .card-login {
-  width: @large-card-width;
-  height: @large-card-height;
-  .flexCenter(column);
-  .cardBorder;
   max-width: @large-card-max-width;
+  margin: auto;
 
-  /**
-   * Buttons have duplicate styling.
-   * TODO: Remove duplicate styling into a generic button styling.
-   */
-  .d4sd-btn {
-    margin-bottom: @margin-base*2;
-    width: 100%;
-  }
-  input {
+  .input-email {
     margin-bottom: @margin-base / 2;
   }
-  .google-btn {
-    margin-bottom: @margin-base / 2;
+  .google-btn{
+    margin-bottom: @margin-base;
+    height: @btn-height;
+    font-weight: @btn-boldness;
+    letter-spacing: @btn-letter-spacing;
+  }
+  .login-btn {
+    margin-top: @margin-base * 4;
+  }
+  .signup-btn-link {
+    width:100%;
+  }
+  .d4sdbutton {
+    width:100%;
+    letter-spacing: @btn-letter-spacing;
+    font-weight: @btn-boldness;
+  }
+  .continue-btn {
+    width:100%;
+  }
+  .fb-btn {
+    margin-bottom: @margin-base;
+    height: @btn-height;
+    font-weight: @btn-boldness;
+    letter-spacing: @btn-letter-spacing;
   }
 
   .login-header {

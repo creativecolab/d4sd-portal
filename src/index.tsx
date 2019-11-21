@@ -8,7 +8,9 @@ import configureStore, { history } from './store';
 
 import './styles/reset.css';
 import SignupPage from './containers/signup-page';
+import LoginPage from './containers/login-page';
 import './index.less';
+
 // @ts-ignore
 const store = configureStore();
 
@@ -17,7 +19,8 @@ const App = () => (
     <ConnectedRouter history={history}>
       <>
         <Switch>
-          <Route path="/" component={SignupPage} />
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/signup" component={SignupPage} />
         </Switch>
       </>
     </ConnectedRouter>

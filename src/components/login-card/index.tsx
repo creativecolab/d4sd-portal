@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
+import { Link } from 'react-router-dom';
 import {
-  Card, Input, Button, Form, message,
+Row, Col,  Card, Input, Button, Form, message,
 } from '@d4sd/components';
 
 
@@ -33,16 +34,38 @@ const LoginCard = (props: any) => {
     register({ name: 'password' });
   }, []);
   return (
-    <Card className="card-login">
-      <h2 className="login-header">Login</h2>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input placeholder="Email" name="email" onChange={handleChange} />
-        <Input.Password placeholder="Password" name="password" onChange={handleChange} />
-        <Button className="d4sd-btn" block type="primary" htmlType="submit">Login</Button>
-      </Form>
-      <Button.Google className="google-btn" icon="google" block>Login with Google</Button.Google>
-      <Button.Facebook className="fb-btn" icon="facebook" block>Login with Facebook</Button.Facebook>
-    </Card>
+    <div className="card-login-wrapper">
+      <div className="card-login">
+        <Button.Google className="google-btn" icon="google" block>
+          CONTINUE WITH GOOGLE
+        </Button.Google>
+        <Button.Facebook className="fb-btn" icon="facebook" block>
+          CONTINUE WITH FACEBOOK
+        </Button.Facebook>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Input.Group className="input-group">
+            <Input
+              className="input-email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+            />
+            <Input.Password
+              className="input-email"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+            />
+          </Input.Group>
+          <Row type="flex" justify="center">
+            <Button className="login-btn" type="primary" htmlType="submit" >GO TO WORKSPACE</Button>
+            <Link to="signup" className="signup-btn-link">
+              <Button className="sign-up-btn" type="primary-outline" htmlType="submit">NO ACCOUNT? SIGN UP</Button>
+            </Link>
+          </Row>
+        </Form>
+      </div>
+    </div>
   );
 };
 export default LoginCard;

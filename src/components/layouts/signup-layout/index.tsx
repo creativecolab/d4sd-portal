@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import {
   Row, Col, Steps, Button,
 } from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
 import Menubar from '../../menubar/index';
-import './style.less';
 import LoginCard from '../../login-card';
 import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
+import './style.less';
 
 const { Step } = Steps;
 
