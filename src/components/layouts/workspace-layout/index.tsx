@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Timeline, Card, Progress, Header} from '@d4sd/components';
+import {Timeline, Header} from '@d4sd/components';
 import WorkspaceActionCard from '../../workspace-action-card';
 import Menubar from '../../menubar/index';
 import './style.less'
