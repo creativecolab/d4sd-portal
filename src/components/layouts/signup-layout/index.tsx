@@ -1,36 +1,37 @@
 import React, { useState } from 'react';
+import {
+  Row, Col, Steps, Button,
+} from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
-import {Row, Col, Steps, Button} from '@d4sd/components';
 import Menubar from '../../menubar/index';
 import './style.less';
 import LoginCard from '../../login-card';
 import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
 
-const {Step} = Steps;
+const { Step } = Steps;
 
-const SignupLayout =(props: any)=>{
-
+const SignupLayout = (props: any) => {
   // hook, must be one of "start, role, ethics, etc."
-  const [signupStep, setSignupStep] = useState("start");
-  const mapSignupStepToNum = function(signupStep: String) {
+  const [signupStep, setSignupStep] = useState('start');
+  const mapSignupStepToNum = (signupStep: string) => {
     switch (signupStep) {
-      case "start":
+      case 'start':
         return 0;
-      case "role":
+      case 'role':
         return 2;
-      case "ethics":
+      case 'ethics':
         return 3;
-      case "success":
+      case 'success':
         return 4;
-    default :
+      default:
         return 0;
     }
-  }
+  };
 
 
   // signupStep
-  return(
+  return (
     <div>
       <Menubar />
       <div className="SignupLayout">
@@ -70,12 +71,13 @@ const SignupLayout =(props: any)=>{
             <Col>
               <Button onClick={()=> setSignupStep("login")} className="workspace-btn">
                 GO TO WORKSPACE
-              </Button>
-            </Col>
-          </Row>
-        </div>}
-        {signupStep === "login" && <LoginCard />}
-      </Row>
+                  </Button>
+                </Col>
+              </Row>
+            </div>
+          )}
+          {signupStep === 'login' && <LoginCard />}
+        </Row>
       </div>
     </div>
   );
