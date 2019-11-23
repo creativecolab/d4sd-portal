@@ -43,7 +43,7 @@ class Firebase {
       .createUserWithEmailAndPassword(email, password)
       .then((data: any) => {
         const actionCodeSettings = {
-          url: `http://localhost:3000/login?email=${data.user.email}`,
+          url: `https://d4sd-portal.netlify.com/?email=${data.user.email}`,
           handleCodeInApp: true,
         };
 
