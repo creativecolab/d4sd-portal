@@ -1,11 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
-// import { any } from 'prop-types';
-// import { resolveSoa } from 'dns';
-// import { booleanLiteral } from '@babel/types';
 import { message } from '@d4sd/components';
-// import 'firebase/@firestore-types'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -109,11 +105,5 @@ class Firebase {
     return quote.get('quote');
   }
 }
-
-// const signupUser = (data: any) => {};
-// const updatePassword = () => {}
-// const forgotPassword = () => {}
-// const updateProfile = () => {}
-// const submitFiles = () => {}
 
 export default new Firebase();
