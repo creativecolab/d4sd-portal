@@ -39,13 +39,20 @@ class Firebase {
 
   logout() { return this.auth.signOut(); }
 
+
   // eslint-disable-next-line max-len
   register = (firstName: any, lastName: any, email: any, password: any) => new Promise((resolve, reject) => {
     this
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then((data: any) => {
-        data.user.sendEmailVerification()
+        const actionCodeSettings = {
+          url: `http://localhost:3000/?email=${data.user.email}`,
+          handleCodeInApp: true,
+        };
+
+        // Verify Email
+        data.user.sendEmailVerification(actionCodeSettings)
           .then(() => {
             console.log('Email Sent!');
           })
@@ -53,8 +60,7 @@ class Firebase {
             console.log('Email not sent!');
           });
 
-        console.log('uid: ', data.user.uid);
-
+        // Add user to "users" firestore collection.
         app.firestore().collection('users')
           .doc(data.user.uid)
           .set({
@@ -84,7 +90,7 @@ class Firebase {
           console.log(error.message);
         }
         console.log(error);
-        reject(false);
+        reject(error);
       });
   })
 

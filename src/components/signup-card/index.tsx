@@ -58,6 +58,7 @@ const SignupCard = (props: any) => {
         .then((result: any) => {
           console.log('sign-up success: ', result);
           setSignedup(true);
+          props.setSignupStep('email');
         })
         .catch((result: any) => {
           console.log('sign-up failure: ', result);
@@ -146,7 +147,7 @@ const SignupCard = (props: any) => {
       <p id="bottom-txt">
         Already have an account?
         {' '}
-        <a id="login-link">Log in</a>
+        <Button onClick={() => props.setSignupStep('login')} />
       </p>
     </div>
   );
