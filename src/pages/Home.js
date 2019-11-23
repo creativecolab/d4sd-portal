@@ -11,6 +11,8 @@ import { OuterFlexBox, OuterContainer, InnerContainer, FlexibleWidth, StyledCaro
 //Contents
 import { sampleChallenges, roles, actionImg, logos } from '../assets/content.js';
 import home0 from '../assets/img/home_landing.svg';
+
+import Menubar from '../components/menubar/index'
 //Carousel
 import { Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -33,7 +35,7 @@ class Home extends Component {
   render() {
   return (
     <div id="home">
-      <Navbar/>
+      <Menubar />
       {/************************First card***********************/}
       <Bg image={home0}>
         <OuterContainer center full="true">
