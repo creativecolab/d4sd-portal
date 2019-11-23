@@ -147,7 +147,7 @@ const SignupCard = (props: any) => {
       <p id="bottom-txt">
         Already have an account?
         {' '}
-        <Button onClick={() => props.setSignupStep('login')} />
+        {/* <Button onClick={() => props.setSignupStep('login')} /> */}
       </p>
     </div>
   );

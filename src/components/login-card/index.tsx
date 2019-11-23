@@ -14,7 +14,7 @@ const LoginCard = (props: any) => {
 
   async function login(data: any) {
     await firebase.login(data.email, data.password)
-      .then((result: any) => {
+      .then((result) => {
         console.log('logged-in success: ', result);
         setLoggedIn(true);
       })
