@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import {
-  Row, Col, Steps, Button,
-} from '@d4sd/components';
+import {Row, Col, Steps, Button} from '@d4sd/components';
 import Menubar from '../../menubar/index';
 import './style.less';
 import LoginCard from '../../login-card';
 
-const { Step } = Steps;
+const {Step} = Steps;
 
-const SignupLayout = (props: any) =>
+const SignupLayout =(props: any) => {
   // signupStep
-  (
+  return(
     <div>
       <Menubar />
       <div className="LoginLayout">
@@ -25,4 +23,6 @@ const SignupLayout = (props: any) =>
       </div>
     </div>
   );
+};
+
 export default SignupLayout;

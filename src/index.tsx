@@ -19,8 +19,8 @@ const App = () => (
       <>
         <Switch>
           {/* {loggedin ? <Redirect to="/signup" /> : <Redirect to="/home" />} */}
-          <Route path="/login" component={LoginPage} />
-          <Route path="/" component={SignupPage} />
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/signup" component={SignupPage} />
         </Switch>
       </>
     </ConnectedRouter>

@@ -39,15 +39,17 @@ const SignupLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="SignupLayout">
-        <Row className="heading">
-          <h1 className="heading-message">
-            {signupStep === 'start' && 'Workspace Sign Up'}
-            {signupStep === 'email' && 'Please check your email!'}
-            {signupStep === 'role' && 'Choose Your Role'}
-            {signupStep === 'ethics' && 'Code of Ethics'}
-            {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
-            {signupStep === 'login' && 'D4SD Workspace'}
-          </h1>
+        <Row className="heading" type="flex" justify="center">
+          <Col span={20}>
+            <h1 className="heading-message">
+              {signupStep === 'start' && 'Workspace Sign Up'}
+              {signupStep === 'email' && 'Please check your email!'}
+              {signupStep === 'role' && 'Choose Your Role'}
+              {signupStep === 'ethics' && 'Code of Ethics'}
+              {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
+              {signupStep === 'login' && 'D4SD Workspace'}
+            </h1>
+          </Col>
         </Row>
         <Row className="card-container">
           {signupStep === 'start' && <SignupCard setSignupStep={setSignupStep} />}
