@@ -13,11 +13,10 @@ import Navbar from '../components/Navbar';
 import './style.css';
 
 class Playbook extends Component {
-
   render() {
     return (
       <div id="playbook">
-        <Navbar/>
+        <Navbar />
           This is playbook
       </div>
     );

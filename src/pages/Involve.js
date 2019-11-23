@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import { OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox } from '../assets/css/containers.js';
+import {
+  OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox,
+} from '../assets/css/containers.js';
 // import { Btn } from '../assets/css/buttons.js';
 import HeaderCard from '../components/landing/HeaderCard';
 import FooterCard from '../components/landing/FooterCard';
@@ -16,45 +18,46 @@ class Involve extends Component {
   constructor() {
     super();
     this.state = ({
-      hovered: "",
-      show: []
-    })
+      hovered: '',
+      show: [],
+    });
     this.innovators = React.createRef();
     this.experts = React.createRef();
     this.educators = React.createRef();
     this.sponsors = React.createRef();
   }
 
-  onHover = ref => {
-    this.setState({hovered: ref.current.props.id});
-    console.log("clalllll");
+  onHover = (ref) => {
+    this.setState({ hovered: ref.current.props.id });
+    console.log('clalllll');
     console.log(ref.current.props.id);
   }
 
-  onLeave = ref => {
-    this.setState({hovered: "removed"});
-    console.log("noo")
+  onLeave = (ref) => {
+    this.setState({ hovered: 'removed' });
+    console.log('noo');
   }
 
-  expand = ref => {
-    let target = ref.current.props.id;
-    if (!this.state.show.includes(target)) (
-      this.setState({show: [...this.state.show, target]})
-    )
-    else {
-      this.setState({show: this.state.show.filter(show => {
-          return show !== target
-      })});
+  expand = (ref) => {
+    const target = ref.current.props.id;
+    if (!this.state.show.includes(target)) {
+      (
+        this.setState({ show: [...this.state.show, target] })
+      );
+    } else {
+      this.setState({ show: this.state.show.filter((show) => show !== target) });
     }
   }
 
   render() {
     return (
       <div id="involve">
-        <Navbar/>
-        <br/><br/>
-        <HeaderCard title={involveContent.title1} content={involveContent.content1} bg={header} isAction="true"/>
-        <br/><br/>
+        <Navbar />
+        <br />
+        <br />
+        <HeaderCard title={involveContent.title1} content={involveContent.content1} bg={header} isAction="true" />
+        <br />
+        <br />
         <OuterContainer>
           <InnerContainer>
             <OuterFlexBox>
@@ -64,7 +67,7 @@ class Involve extends Component {
                     onClick={() => this.expand(this[content.id])}
                     ref={this[content.id]}
                     id={content.id}
-                    show = {this.state.show}
+                    show={this.state.show}
                     title={content.title}
                     txt={content.txt}
                     image={content.image}
@@ -77,8 +80,9 @@ class Involve extends Component {
             </OuterFlexBox>
           </InnerContainer>
         </OuterContainer>
-        <br/><br/>
-        <FooterCard/>
+        <br />
+        <br />
+        <FooterCard />
       </div>
     );
   }

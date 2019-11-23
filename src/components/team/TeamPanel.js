@@ -8,7 +8,7 @@ class TeamPanel extends Component {
       <div>
         <div classNameName="row align-items-center">
           <div className="col-4">
-            <img className="mobile rounded-circle w-100" src={photo} alt="profile"/>
+            <img className="mobile rounded-circle w-100" src={photo} alt="profile" />
           </div>
           <div className="col-8">Aneesh Kashalikar</div>
         </div>

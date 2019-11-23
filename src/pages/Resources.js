@@ -4,11 +4,10 @@ import Navbar from '../components/Navbar';
 import './style.css';
 
 class Resources extends Component {
-
   render() {
     return (
       <div>
-        <Navbar/>
+        <Navbar />
         <h1>Resources</h1>
       </div>
     );

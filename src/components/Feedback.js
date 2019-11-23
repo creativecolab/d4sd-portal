@@ -8,7 +8,9 @@ class Feedback extends Component {
       <div id="feedback" className="border rounded-lg border-secondary">
         <h4 className="pl-4 pt-4">Feedback</h4>
         <p className="pl-4 text-danger">Timeline: Dec.24 - Jan.24</p>
-        <br/><br/><br/>
+        <br />
+        <br />
+        <br />
       </div>
     );
   }

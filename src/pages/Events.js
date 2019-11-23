@@ -7,36 +7,42 @@ import EventCard from '../components/landing/EventCard';
 import './style.css';
 
 class Events extends Component {
-
   render() {
     return (
       <div id="about">
-        <Navbar/>
+        <Navbar />
 
-          <br/><br/><br/><br/><br/><br/><br/><br/>
-          <div className="row">
-            <div className="col">
-              <EventCard
-                title="Fireside Chat at Ideate High"
-                date="Sept. 29, 4pm-6pm"
-                location="Ideate High, San Diego, CA"
-              />
-            </div>
-            <div className="col">
-              <EventCard
-                title="Fireside Chat at Ideate High"
-                date="Sept. 29, 4pm-6pm"
-                location="Ideate High, San Diego, CA"
-              />
-            </div>
-            <div className="col">
-              <EventCard
-                title="Fireside Chat at Ideate High"
-                date="Sept. 29, 4pm-6pm"
-                location="Ideate High, San Diego, CA"
-              />
-            </div>
-          </div>      
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div className="row">
+          <div className="col">
+            <EventCard
+              title="Fireside Chat at Ideate High"
+              date="Sept. 29, 4pm-6pm"
+              location="Ideate High, San Diego, CA"
+            />
+          </div>
+          <div className="col">
+            <EventCard
+              title="Fireside Chat at Ideate High"
+              date="Sept. 29, 4pm-6pm"
+              location="Ideate High, San Diego, CA"
+            />
+          </div>
+          <div className="col">
+            <EventCard
+              title="Fireside Chat at Ideate High"
+              date="Sept. 29, 4pm-6pm"
+              location="Ideate High, San Diego, CA"
+            />
+          </div>
+        </div>
       </div>
     );
   }

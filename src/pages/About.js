@@ -1,63 +1,65 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/landing/FooterCard';
 import HeaderCard from '../components/landing/HeaderCard';
-//Contents
+// Contents
 import { aboutContent } from '../assets/content.js';
-//Styles
-import styled from 'styled-components';
+// Styles
 import { Bg, Br } from '../assets/css/others.js';
-import { OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox, ToggleFlexBox } from '../assets/css/containers.js';
+import {
+  OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox, ToggleFlexBox,
+} from '../assets/css/containers.js';
 import { H2, H5 } from '../assets/css/fonts.js';
 import { device } from '../assets/css/breakpoints.js';
 import { Btn, ToggleBtn, BtnSecondary } from '../assets/css/buttons.js';
 import { FlexibleImg } from '../assets/css/images.js';
 
 import whitepaper from '../assets/img/D4SD_2017_WhitePaper.pdf';
-import header from "../assets/img/about_header.svg";
-import ppttimeline_horizontal from "../assets/img/about_participants_horizontal.svg";
-import commtimeline_horizontal from "../assets/img/about_community_horizontal.svg";
-import ppttimeline_vertical from "../assets/img/about_participants_vertical.svg";
-import commtimeline_vertical from "../assets/img/about_community_vertical.svg";
-import diagram from "../assets/img/about_diagram.png";
+import header from '../assets/img/about_header.svg';
+import ppttimeline_horizontal from '../assets/img/about_participants_horizontal.svg';
+import commtimeline_horizontal from '../assets/img/about_community_horizontal.svg';
+import ppttimeline_vertical from '../assets/img/about_participants_vertical.svg';
+import commtimeline_vertical from '../assets/img/about_community_vertical.svg';
+import diagram from '../assets/img/about_diagram.png';
 
 import './style.css';
 
-const H5Half = styled(H5) `
+const H5Half = styled(H5)`
     width: 90%;
-`
+`;
 
-const ResponsiveImgVertical = styled.img `
+const ResponsiveImgVertical = styled.img`
     width: 100%;
     @media ${device.mobileS} {
-        display: ${props => props.isInnovator ? "inline":"none"}
+        display: ${(props) => (props.isInnovator ? 'inline' : 'none')}
     }
     @media ${device.tablet} {
         display: none;
     }
-`
+`;
 
-const ResponsiveImgHorizontal = styled.img  `
+const ResponsiveImgHorizontal = styled.img`
     width: 100%;
     @media ${device.mobileS} {
         display: none;
     }
     @media ${device.tablet} {
-        display: ${props => props.isInnovator ? "inline":"none"}
+        display: ${(props) => (props.isInnovator ? 'inline' : 'none')}
     }
-`
+`;
 
 class About extends Component {
   constructor() {
     super();
-    this.state=({
+    this.state = ({
       overview: true,
       join: false,
       value: false,
       timeline: false,
       review: false,
       isInnovator: true,
-      role: "Innovators'"
+      role: "Innovators'",
     });
     this.overview = React.createRef();
     this.join = React.createRef();
@@ -66,95 +68,97 @@ class About extends Component {
     this.review = React.createRef();
   }
 
-  scrollToRef = ref => {
-    console.log("before");
+  scrollToRef = (ref) => {
+    console.log('before');
     console.log(ref.current);
     window.scrollTo({
       left: 0,
       top: ref.current.offsetTop,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
-    let states = ["overview", "join", "value", "timeline", "review"];
-    states.forEach(state => {
+    const states = ['overview', 'join', 'value', 'timeline', 'review'];
+    states.forEach((state) => {
       if (state === ref.current.id) {
-        this.setState({[ref.current.id]: true});
+        this.setState({ [ref.current.id]: true });
+      } else {
+        this.setState({ [state]: false });
       }
-      else {
-        this.setState({[state]: false});
-      }
-    })
-    console.log("after");
+    });
+    console.log('after');
     console.log(this.state);
-
   }
 
-  toggle = e => {
-      console.log("participantcall");
-      this.setState(prevState => ({
-        isInnovator: !prevState.isInnovator
-      }));
+  toggle = (e) => {
+    console.log('participantcall');
+    this.setState((prevState) => ({
+      isInnovator: !prevState.isInnovator,
+    }));
   }
 
   innovator = () => {
-    this.setState(prevState => ({
-      isInnovator: true
+    this.setState((prevState) => ({
+      isInnovator: true,
     }));
   }
 
   community = () => {
-    this.setState(prevState => ({
-      isInnovator: false
+    this.setState((prevState) => ({
+      isInnovator: false,
     }));
   }
 
-  onHover = e => {
-    console.log("hoverr");
+  onHover = (e) => {
+    console.log('hoverr');
     console.log(e.target);
-
   }
 
 
-  unHover = e => {
+  unHover = (e) => {
 
   }
 
   render() {
     return (
       <div id="about">
-        <Navbar/>
-        <br/><br/>
-        <HeaderCard title={aboutContent.title1} content={aboutContent.content1} bg={header} isAction="false"/>
-        <Br/><Br/>
+        <Navbar />
+        <br />
+        <br />
+        <HeaderCard title={aboutContent.title1} content={aboutContent.content1} bg={header} isAction="false" />
+        <Br />
+        <Br />
         <Bg ref={this.join} id="join">
           <OuterContainer>
             <InnerContainer>
               <H2 center>{aboutContent.title2}</H2>
-              <br/>
+              <br />
               <H5>{aboutContent.content2}</H5>
-              <Br/>
-              <FlexibleImg theme={{width:"100%"}} src={diagram} alt="diagram"/>
+              <Br />
+              <FlexibleImg theme={{ width: '100%' }} src={diagram} alt="diagram" />
 
             </InnerContainer>
           </OuterContainer>
         </Bg>
 
-        <Br/><Br/>
+        <Br />
+        <Br />
 
-        <Bg theme={{color: "#EFF8FF"}} ref={this.value} id="value">
+        <Bg theme={{ color: '#EFF8FF' }} ref={this.value} id="value">
           <OuterContainer>
             <InnerContainer>
-              <Br/><Br/>
+              <Br />
+              <Br />
               <H2 center>{aboutContent.title3}</H2>
-              <br/>
+              <br />
               <OuterFlexBox>
                 {aboutContent.content3.map((value, i) => (
                   <InnerFlexBox half key={i}>
-                    <FlexibleImg theme={{width: "9%"}} src={value.img} />
+                    <FlexibleImg theme={{ width: '9%' }} src={value.img} />
                     <H5Half left>{value.txt}</H5Half>
                   </InnerFlexBox>
                 ))}
               </OuterFlexBox>
-              <Br/><Br/>
+              <Br />
+              <Br />
             </InnerContainer>
           </OuterContainer>
         </Bg>
@@ -203,8 +207,8 @@ class About extends Component {
               allowFullScreen
               frameBorder="0"
             />
-          </IframeContainer>**/}
-          <FooterCard/>
+          </IframeContainer>* */}
+        <FooterCard />
       </div>
     );
   }

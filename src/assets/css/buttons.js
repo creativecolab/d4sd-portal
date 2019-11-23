@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { device } from './breakpoints.js';
 import { ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
+import { device } from './breakpoints.js';
 
-//Basic template for all regular buttons (for home, headers etc.)
-export const Btn = styled.a `
+// Basic template for all regular buttons (for home, headers etc.)
+export const Btn = styled.a`
     cursor: pointer;
     border-radius: 10px;
     color: white;
@@ -23,8 +23,8 @@ export const Btn = styled.a `
     @media ${device.mobileS} {
         font-size: 0.85em;
         width: 80%;
-        margin-top: ${props => props.top ? "1rem":"0"};
-        margin-left: ${props => props.home ? "0rem!important":"0!important"};
+        margin-top: ${(props) => (props.top ? '1rem' : '0')};
+        margin-left: ${(props) => (props.home ? '0rem!important' : '0!important')};
     }
     @media ${device.tablet} {
         font-size: 1em!important;
@@ -35,18 +35,18 @@ export const Btn = styled.a `
         font-size: 1em!important;
         width: auto!important;
         margin-top: 0!important;
-        margin-left: ${props => props.left ? "1rem!important":"0!important"};
+        margin-left: ${(props) => (props.left ? '1rem!important' : '0!important')};
     }
     @media ${device.desktop} {
         font-size: 1.75em!important;
         width: auto!important;
         margin-top: 0!important;
-        margin-left: ${props => props.left ? "1rem!important":"0!important"};
+        margin-left: ${(props) => (props.left ? '1rem!important' : '0!important')};
     }
-`
+`;
 
-//Basic template for all regular buttons (for home, headers etc.)
-export const BtnSecondary = styled.button `
+// Basic template for all regular buttons (for home, headers etc.)
+export const BtnSecondary = styled.button`
     cursor: pointer;
     border-radius: 10px;
     border: 1.5px solid #4497FF;
@@ -73,29 +73,29 @@ export const BtnSecondary = styled.button `
     @media ${device.mobileS} {
         font-size: 0.85em;
         width: 80%;
-        margin-top: ${props => props.top ? "1rem":"0"};
+        margin-top: ${(props) => (props.top ? '1rem' : '0')};
     }
     @media ${device.tablet} {
         font-size: 1em!important;
         width: auto!important;
         margin-top: 0!important;
-        margin-left: ${props => props.left ? "1rem!important":"0!important"};
+        margin-left: ${(props) => (props.left ? '1rem!important' : '0!important')};
     }
     @media ${device.laptopL} {
         font-size: 1em!important;
         width: auto!important;
         margin-top: 0!important;
-        margin-left: ${props => props.left ? "1rem!important":"0!important"};
+        margin-left: ${(props) => (props.left ? '1rem!important' : '0!important')};
     }
     @media ${device.desktop} {
         font-size: 1.75em!important;
         width: auto!important;
         margin-top: 0!important;
-        margin-left: ${props => props.left ? "1rem!important":"0!important"};
+        margin-left: ${(props) => (props.left ? '1rem!important' : '0!important')};
     }
-`
+`;
 
-export const FAQBtn = styled.button `
+export const FAQBtn = styled.button`
     background-color: white;
     border: none;
     width: 100%;
@@ -103,17 +103,17 @@ export const FAQBtn = styled.button `
     &:focus {
         outline: none;
     }
-`
+`;
 
-//Small buttons, usually buttons inside cards
-export const SmallBtn = styled(Btn) `
-    cursor: ${props => props.state === "active" ? "":"not-allowed"};
-    display: ${props => props.isAction ? "inline":"none"};
-    box-shadow: ${props => props.state === "active" ? "":"none"};
-    background-color: ${props => props.state === "active" ? "#4497FF":"#9D9D9D"};
+// Small buttons, usually buttons inside cards
+export const SmallBtn = styled(Btn)`
+    cursor: ${(props) => (props.state === 'active' ? '' : 'not-allowed')};
+    display: ${(props) => (props.isAction ? 'inline' : 'none')};
+    box-shadow: ${(props) => (props.state === 'active' ? '' : 'none')};
+    background-color: ${(props) => (props.state === 'active' ? '#4497FF' : '#9D9D9D')};
     &:hover {
-      background-color: ${props => props.state === "active" ? "#4497FF":"#9D9D9D"};
-      box-shadow: ${props => props.state === "active" ? "":"none"};
+      background-color: ${(props) => (props.state === 'active' ? '#4497FF' : '#9D9D9D')};
+      box-shadow: ${(props) => (props.state === 'active' ? '' : 'none')};
     }
     @media ${device.mobileS} {
         font-size: 0.75em;
@@ -124,16 +124,16 @@ export const SmallBtn = styled(Btn) `
     @media ${device.desktop} {
         font-size: 1.5em!important;
     }
-`
+`;
 
-//When the display of the button is conditional
-export const BtnConditional = styled(Btn) `
-  display: ${props => props.isAction === "true" ? "inline":"none"}
+// When the display of the button is conditional
+export const BtnConditional = styled(Btn)`
+  display: ${(props) => (props.isAction === 'true' ? 'inline' : 'none')}
   margin: 30px 10px 10px 10px;
-`
+`;
 
-//Toggle button for the timeline
-export const ToggleBtn = styled.div `
+// Toggle button for the timeline
+export const ToggleBtn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,9 +142,9 @@ export const ToggleBtn = styled.div `
     border: 1.5px solid #4496FF;
     color: #4496FF;
     text-align: center;
-    margin-left: ${props => props.left ? "1rem":"0"};
-    background-color: ${props => props.active ? "#4496FF":"white"};
-    color: ${props => props.active ? "white":"#4496FF"};
+    margin-left: ${(props) => (props.left ? '1rem' : '0')};
+    background-color: ${(props) => (props.active ? '#4496FF' : 'white')};
+    color: ${(props) => (props.active ? 'white' : '#4496FF')};
     &:hover {
         text-decoration: none;
         border: 1.5px solid #8FC0FF;
@@ -165,9 +165,9 @@ export const ToggleBtn = styled.div `
         padding: 0.7em 1.35em;
         margin-top: 0!important;
     }
-`
+`;
 
-export const StyledButtonBack = styled(ButtonBack) `
+export const StyledButtonBack = styled(ButtonBack)`
     background: none;
     border: none;
     position: absolute;
@@ -196,9 +196,9 @@ export const StyledButtonBack = styled(ButtonBack) `
     @media ${device.tablet} {
         display: inline;
     }
-`
+`;
 
-export const StyledButtonNext = styled(ButtonNext) `
+export const StyledButtonNext = styled(ButtonNext)`
     background: none;
     border: none;
     position: absolute;
@@ -227,9 +227,9 @@ export const StyledButtonNext = styled(ButtonNext) `
     @media ${device.tablet} {
         display: inline;
     }
-`
+`;
 
-export const StyledDotGroup = styled(DotGroup) `
+export const StyledDotGroup = styled(DotGroup)`
     > button {
         background-color: #B7DFE6;
         font-family: 'Montserrat', sans-serif;
@@ -254,4 +254,4 @@ export const StyledDotGroup = styled(DotGroup) `
     top: 90vh;
     left: 50%;
     margin-left: -60px;
-`
+`;
