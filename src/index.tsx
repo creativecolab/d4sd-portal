@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
 import configureStore, { history } from './store';
 
 import './styles/reset.css';
@@ -19,6 +18,7 @@ const App = () => (
     <ConnectedRouter history={history}>
       <>
         <Switch>
+          {/* {loggedin ? <Redirect to="/signup" /> : <Redirect to="/home" />} */}
           <Route exact path="/" component={LoginPage} />
           <Route exact path="/signup" component={SignupPage} />
         </Switch>
