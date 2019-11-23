@@ -9,9 +9,9 @@ import d4sdlogoBlue from '../../assets/logo-blue.svg';
 import daniel from '../../assets/daniel.png';
 
 function Menubar(props: any) {
-  let [scroll, setScroll] = useState("");
+  const [scroll, setScroll] = useState('');
   const [loggedIn, setLoggedIn] = useState(true); // temporary state hook until we involve redux
-  let [logo, setLogo] = useState(d4sdlogo);
+  const [logo, setLogo] = useState(d4sdlogo);
   useEffect(() => {
     if (scroll === '') {
       setLogo(d4sdlogo);
@@ -32,8 +32,8 @@ function Menubar(props: any) {
     </Menu.Item>,
     <Menu.Item className="menu-profile menu-item-no">
       <img src={daniel} alt="avatar" />
-    </Menu.Item>
-  ]
+    </Menu.Item>,
+  ];
 
   const DesktopLoggedOutItems = [
     <Menu.Item className="menu-item">
@@ -41,8 +41,8 @@ function Menubar(props: any) {
     </Menu.Item>,
     <Menu.Item className="menu-item login-tab">
       <span>Login</span>
-    </Menu.Item>
-  ]
+    </Menu.Item>,
+  ];
 
   return (
     <Menu id="menubar" mode="horizontal" className={scroll}>
