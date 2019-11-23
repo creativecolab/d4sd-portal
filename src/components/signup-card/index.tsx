@@ -138,9 +138,7 @@ const SignupCard = (props: any) => {
             />
           </Input.Group>
           <Row type="flex" justify="center">
-            <a href="/signup/role" className="continue-btn">
-              <Button className="d4sd-btn" type="primary" htmlType="submit">SIGN UP</Button>
-            </a>
+            <Button className="d4sd-btn" type="primary" htmlType="submit">SIGN UP</Button>
           </Row>
         </Form>
       </div>
