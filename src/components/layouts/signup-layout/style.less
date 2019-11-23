@@ -1,0 +1,49 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+
+.SignupLayout {
+
+  /* Fix bug where ant row overflows container */
+  .ant-row-flex {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .subText {
+    margin-top: @margin-base-1 / 2;
+    font-size: 2.8rem;
+    color: @subheading-color;
+  }
+  .heading {
+    height: @header-height;
+    background-color: #E4F2FF; // TODO: DESIGN TEAM?
+    padding-top: @margin-base-2;
+    .heading-message {
+
+    }
+
+  }
+  .card-container {
+    // center
+    padding: @margin-base-1 @margin-base*2;
+    .d4sdcard-wrapper {
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+    }
+    .step-flow {
+      margin-top: @margin-base*2;
+      margin-bottom: @margin-base*4;
+      width: calc(100% - @margin-base * 8);
+      margin-left: @margin-base * 4;
+    }
+
+    .joint-challenge{
+      margin-top: @margin-base-1;
+    }
+    .workspace-btn{
+      margin-top: @margin-base-1;
+
+    }
+  }
+}

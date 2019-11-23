@@ -1,0 +1,60 @@
+@import "../../styles/vars.less";
+@import "../../styles/mixins.less";
+
+// Signup Card
+.card-signup-wrapper {
+  max-width: @large-card-max-width;
+  margin: auto;
+  .card-signup{
+    width: 100%;
+    height: 100%;
+    font-size: @font-base*2;
+    min-width: @large-card-min-width;
+
+    .input-group {
+      margin-top: @margin-base;
+    }
+    .row-names {
+      margin-bottom: @margin-base / 2;
+    }
+    .input-email {
+      margin-bottom: @margin-base / 2;
+    }
+    .signup-header {
+      font-size: @font-base*2;
+      margin-bottom: @margin-base;
+    }
+    .google-btn{
+      margin-bottom: @margin-base;
+      height: @btn-height;
+      font-weight: @btn-boldness;
+      letter-spacing: @btn-letter-spacing;
+    }
+    .d4sdbutton {
+      margin-top: @margin-base * 2;
+      width:100%;
+      letter-spacing: @btn-letter-spacing;
+      font-weight: @btn-boldness;
+    }
+    .continue-btn {
+      width:100%;
+    }
+    .fb-btn {
+      margin-bottom: @margin-base;
+      height: @btn-height;
+      font-weight: @btn-boldness;
+      letter-spacing: @btn-letter-spacing;
+    }
+
+    .or-txt {
+      text-align: center;
+      .txt;
+      color: @primary-txt;
+    }
+  }
+  > #bottom-txt {
+    margin-top: @margin-base;
+    text-align: center;
+    font-size: 16px;
+  }
+}

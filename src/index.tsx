@@ -1,16 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import LoginCard from "./components/login-card"
+import configureStore, { history } from './store';
 
-const App: React.FC = () => {
-    return (
-      <div className="App">
-        <LoginCard />
-      </div>
-    );
-  }
-  
+import './styles/reset.css';
+import SignupPage from './containers/signup-page';
+import LoginPage from './containers/login-page';
+import './index.less';
+
+// @ts-ignore
+const store = configureStore();
+
+const App = () => (
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <>
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/signup" component={SignupPage} />
+        </Switch>
+      </>
+    </ConnectedRouter>
+  </Provider>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
