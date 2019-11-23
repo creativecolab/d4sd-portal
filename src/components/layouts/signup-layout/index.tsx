@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import {
   Row, Col, Steps, Button,
 } from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
 import Menubar from '../../menubar/index';
-import './style.less';
 import LoginCard from '../../login-card';
 import RoleCard from '../../role-card';
 import EthicsCard from '../../ethics-card';
-import { userInfo } from 'os';
+import './style.less';
 
 const { Step } = Steps;
 
@@ -32,7 +33,6 @@ const SignupLayout = (props: any) => {
         return 0;
     }
   };
-
 
   // signupStep
   return (
@@ -83,7 +83,7 @@ const SignupLayout = (props: any) => {
               <Row type="flex" justify="center">
                 <Col span={10}>
                   <Button onClick={() => setSignupStep('login')}>
-                GO TO WORKSPACE
+                    GO TO WORKSPACE
                   </Button>
                 </Col>
               </Row>

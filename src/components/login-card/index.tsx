@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
+import { Link } from 'react-router-dom';
 import {
-  Card, Input, Button, Form, message, Row, Col,
+  Row, Col, Card, Input, Button, Form, message,
 } from '@d4sd/components';
 
 import { Redirect } from 'react-router';

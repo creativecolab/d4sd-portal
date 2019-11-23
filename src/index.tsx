@@ -5,10 +5,11 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore, { history } from './store';
 
+import './styles/reset.css';
 import SignupPage from './containers/signup-page';
 import LoginPage from './containers/login-page';
-
 import './index.less';
+
 // @ts-ignore
 const store = configureStore();
 

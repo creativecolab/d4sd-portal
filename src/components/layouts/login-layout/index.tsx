@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  Row, Col, Layout, Menu,
+  Row, Col, Steps, Button,
 } from '@d4sd/components';
-import LoginCard from '../../login-card/index';
+import Menubar from '../../menubar/index';
 import './style.less';
-import Menubar from '../../menubar';
-import { withRouter } from 'react-router-dom';
+import LoginCard from '../../login-card';
 
-const {
-  Header, Footer, Sider, Content,
-} = Layout;
+const { Step } = Steps;
 
-const LoginLayout = (props: any) => (
-  <div>
-    <Row type="flex" justify="center" align="bottom" gutter={[0, 64]}>
-      <Col>
-        <Menubar />
-      </Col>
-      <Col span={8}>
-        {/* Is this right? lol */}
-        <LoginCard />
-      </Col>
-    </Row>
-  </div>
-);
-
-export default withRouter(LoginLayout);
+const SignupLayout = (props: any) =>
+  // signupStep
+  (
+    <div>
+      <Menubar />
+      <div className="LoginLayout">
+        <Row className="heading">
+          <h1>
+          D4SD Workspace
+          </h1>
+        </Row>
+        <Row className="card-container">
+          <LoginCard />
+        </Row>
+      </div>
+    </div>
+  );
+export default SignupLayout;
