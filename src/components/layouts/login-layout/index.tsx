@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import {Row, Col, Steps, Button} from '@d4sd/components';
-import Menubar from '../../menubar/index';
-import './style.less';
-import LoginCard from '../../login-card';
+import React, { useState } from "react";
+import { Row, Col, Steps, Button } from "@d4sd/components";
+import Menubar from "../../menubar/index";
+import "./style.less";
+import LoginCard from "../../login-card";
 
-const {Step} = Steps;
+const { Step } = Steps;
 
-const SignupLayout =(props: any) => {
+const SignupLayout = (props: any) => {
   // signupStep
-  return(
+  return (
     <div>
       <Menubar />
       <div className="LoginLayout">
         <Row className="heading">
-          <h1>
-          D4SD Workspace
-          </h1>
+          <h1>D4SD Workspace</h1>
         </Row>
         <Row className="card-container">
           <LoginCard />

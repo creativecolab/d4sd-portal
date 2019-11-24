@@ -1,30 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import {
-  Row, Col, Steps, Button,
-} from '@d4sd/components';
-import SignupCard from '../../signup-card/index';
-import Menubar from '../../menubar/index';
-import LoginCard from '../../login-card';
-import RoleCard from '../../role-card';
-import EthicsCard from '../../ethics-card';
-import './style.less';
+import { Row, Col, Steps, Button } from "@d4sd/components";
+import SignupCard from "../../signup-card/index";
+import Menubar from "../../menubar/index";
+import LoginCard from "../../login-card";
+import "./style.less";
 
 const { Step } = Steps;
 
 const SignupLayout = (props: any) => {
   // hook, must be one of "start, role, ethics, etc."
-  const [signupStep, setSignupStep] = useState('start');
+  const [signupStep, setSignupStep] = useState("start");
   const mapSignupStepToNum = (signupStep: string) => {
     switch (signupStep) {
-      case 'start':
+      case "start":
         return 0;
-      case 'role':
-        return 2;
-      case 'ethics':
-        return 3;
-      case 'success':
+      case "success":
         return 4;
       default:
         return 0;
@@ -39,19 +31,17 @@ const SignupLayout = (props: any) => {
         <Row className="heading" type="flex" justify="center">
           <Col span={20}>
             <h1 className="heading-message">
-              {signupStep === 'start' && 'Workspace Sign Up'}
-              {signupStep === 'role' && 'Choose Your Role'}
-              {signupStep === 'ethics' && 'Code of Ethics'}
-              {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
-              {signupStep === 'login' && 'D4SD Workspace'}
+              {signupStep === "start" && "Workspace Sign Up"}
+              {signupStep === "success" && "Welcome to D4SD Workspace!"}
+              {signupStep === "login" && "D4SD Workspace"}
             </h1>
           </Col>
         </Row>
         <Row className="card-container">
-          {signupStep === 'start' && (
+          {signupStep === "start" && (
             <SignupCard setSignupStep={setSignupStep} />
           )}
-          {signupStep != 'start' && signupStep != 'login' && (
+          {signupStep != "start" && signupStep != "login" && (
             <Steps
               size="small"
               current={mapSignupStepToNum(signupStep)}
@@ -59,16 +49,10 @@ const SignupLayout = (props: any) => {
             >
               <Step title="Sign Up" />
               <Step title="Email Confirmation" />
-              <Step title="Choose Your Role" key="role" />
-              <Step title="Code of Ethics" key="ethics" />
               <Step title="Success " key="success" />
             </Steps>
           )}
-          {signupStep === 'role' && <RoleCard setSignupStep={setSignupStep} />}
-          {signupStep === 'ethics' && (
-            <EthicsCard setSignupStep={setSignupStep} />
-          )}
-          {signupStep === 'success' && (
+          {signupStep === "success" && (
             <div>
               <Row type="flex" justify="center">
                 <Col span="18" className="joint-challenge">
@@ -81,7 +65,7 @@ const SignupLayout = (props: any) => {
               <Row type="flex" justify="center">
                 <Col>
                   <Button
-                    onClick={() => setSignupStep('login')}
+                    onClick={() => setSignupStep("login")}
                     className="workspace-btn"
                   >
                     GO TO WORKSPACE
@@ -90,7 +74,7 @@ const SignupLayout = (props: any) => {
               </Row>
             </div>
           )}
-          {signupStep === 'login' && <LoginCard />}
+          {signupStep === "login" && <LoginCard />}
         </Row>
       </div>
     </div>

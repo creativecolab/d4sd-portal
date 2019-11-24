@@ -1,0 +1,35 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+.HomeLayout {
+  .landing-div {
+    padding: 200px;
+    height: 100vh;
+    background-image: url("../../../assets/home_landing.svg");
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .button-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .mission-statement {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100vh;
+  }
+  .involve-svg {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  figure {
+    text-align: center;
+    img {
+      height: 150px;
+    }
+  }
+}
