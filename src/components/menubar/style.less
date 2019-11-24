@@ -127,10 +127,13 @@
 }
 
 li.ant-menu-item.mobile-menu-item{ 
+  width: @mobile-navbar-width;
+  height: @mobile-navbar-height;
   background-color: @d4sd-color;
   margin: 0 !important;
   color: white;
   border-bottom: 1px solid white;
+
 }
 
 li.ant-menu-item.mobile-menu-item::before {
@@ -146,8 +149,8 @@ li.ant-menu-item.mobile-menu-item::before {
 }
 
 li.ant-menu-item.mobile-menu-item.ant-menu-item-selected{
-  height: @tab-height;
-  line-height: @tab-height;
+  height: @mobile-navbar-hover-height;
+  line-height: @mobile-navbar-hover-height;
   box-shadow: @navbar-boxshadow;
   background-color: white;
   color: @d4sd-color;
