@@ -2,6 +2,7 @@
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
 .HomeLayout {
+  // Section 1
   .landing-div {
     padding: 200px;
     height: 100vh;
@@ -13,23 +14,86 @@
     display: flex;
     flex-direction: row;
   }
+
+  // Section 2
   .mission-statement {
     padding-top: 100px;
     padding-left: 200px;
     padding-right: 200px;
     height: 100vh;
-  }
-  .involve-svg {
-    padding-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .involve-svg {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    figure {
+      text-align: center;
+      img {
+        height: 150px;
+      }
+    }
   }
 
-  figure {
-    text-align: center;
-    img {
-      height: 150px;
+  // Section 3
+  .challenges {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100vh;
+    .challenges-carousel {
+      // text-align: center;
+      background: #244c7e;
+      overflow: hidden;
+    }
+    .challenge-item {
+      height: 80vh;
+      .challenge-header {
+        padding-top: 50px;
+      }
+      .mobility-content {
+        .challenges(url("../../../assets/img/home_mobility.svg"));
+      }
+      .climate-content {
+        .challenges(url("../../../assets/img/home_climate.svg"));
+      }
+      .housing-content {
+        .challenges(url("../../../assets/img/home_housing.svg"));
+      }
+      .health-content {
+        .challenges(url("../../../assets/img/home_health.svg"));
+      }
+    }
+  }
+
+  // Section 4
+  .d4sd-in-action {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100vh;
+    .photo-carousel {
+      padding-top: 30px;
+      img {
+        height: 20vh;
+      }
+    }
+  }
+
+  // Section 5
+  .meet-community {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 80vh;
+    .logo-carousel {
+      padding-top: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+      img {
+        height: 60px;
+        width: 150px;
+      }
     }
   }
 }
