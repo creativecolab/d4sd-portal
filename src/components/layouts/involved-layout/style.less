@@ -1,0 +1,32 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+.InvolvedLayout {
+  // Section 1
+  .landing-div {
+    padding: 150px 300px 100px 200px;
+    height: 60vh;
+    background-image: url("../../../assets/img/involve_header.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  .button-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // Section 2
+  .involve-list {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .involve-card {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -10,6 +10,8 @@ import "./styles/reset.css";
 import SignupPage from "./containers/signup-page";
 import LoginPage from "./containers/login-page";
 import HomePage from "./containers/home-page";
+import InvolvedPage from "./containers/involved-page";
+import AboutPage from "./containers/about-page";
 import "./index.less";
 
 import "./styles/reset.css";
@@ -39,7 +41,9 @@ const App = () => (
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/home" component={HomePage} />
-            {/* <Route exact path='/about' component={About}/>
+            <Route exact path="/getinvolved" component={InvolvedPage} />
+            <Route exact path="/about" component={AboutPage} />
+            {/* 
             <Route exact path='/challenge' component={Challenge}/>
             <Route exact path='/process' component={Process}/>
             <Route exact path='/resources' component={Resources}/>

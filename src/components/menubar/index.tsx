@@ -4,8 +4,8 @@ import { Menu, Button, Icon, Col, Row } from "@d4sd/components";
 
 import "./style.less";
 
-import d4sdlogo from "../../assets/logo.svg";
-import d4sdlogoBlue from "../../assets/logo-blue.svg";
+import d4sdlogo from "../../assets/img/logo.svg";
+import d4sdlogoBlue from "../../assets/img/logo-blue.svg";
 import daniel from "../../assets/daniel.png";
 import { SubMenu } from "rc-menu";
 

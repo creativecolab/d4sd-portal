@@ -3,10 +3,10 @@ import { Row, Col, Steps, Button, Carousel } from "antd";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
-import InvolveInnovateSVG from "../../../assets/involve_innovate.svg";
-import InvolvePartnerSVG from "../../../assets/involve_partner.svg";
-import InvolveVolunteerSVG from "../../../assets/involve_volunteer.svg";
-import InvolveSponsorSVG from "../../../assets/involve_sponsor.svg";
+import InvolveInnovateSVG from "../../../assets/img/involve_innovate.svg";
+import InvolvePartnerSVG from "../../../assets/img/involve_partner.svg";
+import InvolveVolunteerSVG from "../../../assets/img/involve_volunteer.svg";
+import InvolveSponsorSVG from "../../../assets/img/involve_sponsor.svg";
 
 // Community logos
 import LogoDLab from "../../../assets/img/home_logo_designlab.svg";

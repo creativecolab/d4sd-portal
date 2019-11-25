@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link, NavLink } from "react-router-dom";
 // import Button from './landing/Button';
 
-import logo from '../assets/img/logo_black.png';
-import './style.less';
+import logo from "../assets/img/logo_black.png";
+import "./style.less";
 
 class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      isTop: true,
+      isTop: true
     };
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
+    document.addEventListener("scroll", () => {
       const isTop = window.scrollY < 100;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop });
@@ -25,24 +25,64 @@ class Navbar extends Component {
   render() {
     return (
       <div className="Navbar">
-        <nav className={this.state.isTop ? 'navbar navbar-expand-md navbar-light fixed-top mh-5 bg-white' : 'navbar navbar-expand-md navbar-light fixed-top mh-5 main-nav'}>
-          <Link className="navbar-brand" to="/home"><img src={logo} alt="logo" /></Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <nav
+          className={
+            this.state.isTop
+              ? "navbar navbar-expand-md navbar-light fixed-top mh-5 bg-white"
+              : "navbar navbar-expand-md navbar-light fixed-top mh-5 main-nav"
+          }
+        >
+          <Link className="navbar-brand" to="/home">
+            <img src={logo} alt="logo" />
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="collapsibleNavbar"
+          >
             <ul className="navbar-nav align-items-end">
               <li className="nav-item">
-                <NavLink className="nav-link mr-xl-4" to="/home" activeClassName="active">Home</NavLink>
+                <NavLink
+                  className="nav-link mr-xl-4"
+                  to="/home"
+                  activeClassName="active"
+                >
+                  Home
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link mr-xl-4" to="/process" activeClassName="active">Process</NavLink>
+                <NavLink
+                  className="nav-link mr-xl-4"
+                  to="/process"
+                  activeClassName="active"
+                >
+                  Process
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link mr-xl-4" to="/about" activeClassName="active">About</NavLink>
+                <NavLink
+                  className="nav-link mr-xl-4"
+                  to="/about"
+                  activeClassName="active"
+                >
+                  About
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link mr-xl-4" to="/getinvolved" activeClassName="active">Get Involved</NavLink>
+                <NavLink
+                  className="nav-link mr-xl-4"
+                  to="/getinvolved"
+                  activeClassName="active"
+                >
+                  Get Involved
+                </NavLink>
               </li>
               {/** <li className="nav-item">
                 <NavLink className="nav-link mr-xl-4" to='/challenge' activeClassName="active">Challenge</NavLink>
