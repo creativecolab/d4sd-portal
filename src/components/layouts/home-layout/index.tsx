@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel } from "antd";
+import { Row, Col, Steps, Button, Carousel } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
@@ -45,10 +45,14 @@ const logoCarouselSettings = {
 const HomeLayout = (props: any) => {
   return (
     <div>
+      
       <Menubar />
+
       <div className="HomeLayout">
         <div className="landing-div">
-          <p>DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE</p>
+        <Row gutter={[16, 16]} type="flex" justify="center">
+        <Col md={{span: 14}} xs={20}>
+        <p>DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE</p>
           <h2>How can we make San Diego a more sustainable city?</h2>
           <p>
             San Diego is an amazing place to live, work, and visit. But like
@@ -57,55 +61,73 @@ const HomeLayout = (props: any) => {
             (D4SD) is an initiative to address complex challenges through design
             thinking and crowdsourcing.
           </p>
-          <div className="button-row">
-            <Button
-              type="primary"
-              href="http://eepurl.com/c2kFon"
-              target="_blank"
-            >
-              JOIN MAILING LIST
-            </Button>
-            <div style={{ marginRight: "4px" }}></div>
-            <Button type="primary">LEARN MORE</Button>
-          </div>
+        </Col>
+        </Row>
+        <Row type="flex" justify="center" className="layout-btns">
+        <Col lg={{span: 6}} xs={{span: 24}}>
+          <Button type="primary" size="large">
+            JOIN MAILING LIST
+          </Button>
+        </Col>
+        <Col lg={{span: 6}} xs={{span: 24}}>
+          <Button type="primary-outline" size="large">
+            LEARN MORE
+          </Button>
+        </Col>
+      </Row>
         </div>
 
-        <div className="mission-statement">
+      <Row type="flex" justify="center" className="mission-statement">
+        <Col md={{span: 14}} xs={20}>
           <h2>Contribute to our mission</h2>
-          <p>
-            D4SD seeks to connect young, passionate designers to a network of
-            industry professionals and structure a process for collectively
-            addressing civic challenges related to the sustainability of our
-            region. We are exploring new models for collective innovation where
-            the community works together to discover problems, explore
-            solutions, and build prototypes to test ideas.
-          </p>
-          <p>
-            D4SD 2020 will host a series of design events including speakers,
-            studios, and design-athons, starting in January. This will culminate
-            into a summit in April where innovators can pitch their proposed
-            solutions, and build alliances to make change happen.
-          </p>
-          <Button type="primary">LEARN MORE</Button>
-          <div className="involve-svg">
-            <figure>
-              <img src={InvolveInnovateSVG}></img>
-              <figcaption>Innovate</figcaption>
-            </figure>
-            <figure>
+            <p>
+              D4SD seeks to connect young, passionate designers to a network of
+              industry professionals and structure a process for collectively
+              addressing civic challenges related to the sustainability of our
+              region. We are exploring new models for collective innovation where
+              the community works together to discover problems, explore
+              solutions, and build prototypes to test ideas.
+            </p>
+            <p>
+              D4SD 2020 will host a series of design events including speakers,
+              studios, and design-athons, starting in January. This will culminate
+              into a summit in April where innovators can pitch their proposed
+              solutions, and build alliances to make change happen.
+            </p>
+        </Col>
+      </Row>
+      <Row type="flex" justify="center">
+        <Col>
+        <Button type="primary" size="medium">LEARN MORE</Button>
+        </Col>
+      </Row>
+
+      <Row className="involve-fig" type="flex" justify="center" gutter={[48, 16]} >
+        <Col md={{span: 4}} xs={{span: 9}}>
+          <figure>
+            <img src={InvolveInnovateSVG}></img>
+            <figcaption>INNOVATE</figcaption>
+          </figure>
+        </Col>
+        <Col md={{span: 4}} xs={{span: 9}}>
+        <figure>
               <img src={InvolvePartnerSVG}></img>
-              <figcaption>Partner</figcaption>
+              <figcaption>PARTNER</figcaption>
             </figure>
-            <figure>
+        </Col>
+        <Col md={{span: 4}} xs={{span: 9}}>
+        <figure>
               <img src={InvolveVolunteerSVG}></img>
-              <figcaption>Volunteer</figcaption>
+              <figcaption>VOLUNTEER</figcaption>
             </figure>
-            <figure>
+        </Col>
+        <Col md={{span: 4}} xs={{span: 9}}>
+        <figure>
               <img src={InvolveSponsorSVG}></img>
-              <figcaption>Sponsor</figcaption>
+              <figcaption>SPONSOR</figcaption>
             </figure>
-          </div>
-        </div>
+        </Col>
+      </Row>
 
         <div className="challenges">
           <Carousel autoplay className="challenges-carousel">
