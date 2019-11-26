@@ -4,70 +4,75 @@
 .ChallengeLayout {
   // Section 1
   .landing-div {
-    padding: 150px 300px 100px 250px;
     height: 60vh;
     background-image: url("../../../assets/img/challenge_header.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-  }
-  .button-row {
-    display: flex;
-    flex-direction: row;
+    padding-top: 20vh;
+    .header-text {
+      text-align: center;
+    }
   }
 
   // 4 Icons
-  .involve-svg {
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .challenge-icons {
+    padding-top: 5vh;
   }
   figure {
     text-align: center;
     img {
-      height: 150px;
+      height: 100px;
+      max-height: 150px;
     }
   }
 
   // How do you fit in
   .fit-in {
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 50px;
     height: 50vh;
   }
 
-  .mobility {
-    padding-left: 200px;
-    padding-right: 200px;
-    height: 50vh;
-    .inner-flex {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      .card-text {
-        color: white;
-        text-align: center;
-      }
-      .ant-card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 250px;
-      }
-      // Text, black div w/ opacity 50% > mobility-card
-      .mobility-card {
-        // background-image: url("../../../assets/img/mobility_lastmile.jpg");
-        // background-size: 100%;
-        // background-repeat: no-repeat;
-        width: 100%;
-        max-width: 400px;
-        margin: auto;
-        margin-bottom: 10px;
-      }
+  // Mobility Cards
+  .mobility-header {
+    text-align: center;
+  }
+  .ant-card-body {
+    padding: 0;
+    height: 250px;
+  }
+  .card-bg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    .card-text {
+      color: white;
     }
+  }
+  .lastmile-card {
+    background-image: url("../../../assets/img/mobility_lastmile.jpg");
+    background-size: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+  }
+  .safety-card {
+    background-image: url("../../../assets/img/mobility_safety.jpg");
+    background-size: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+  }
+  .equitable-card {
+    background-image: url("../../../assets/img/mobility_equitable.jpg");
+    background-size: cover;
+    max-width: 500px;
+    border-radius: 20px;
+  }
+  .autonomous-card {
+    background-image: url("../../../assets/img/mobility_multimodal.jpg");
+    background-size: 100%;
+    max-width: 500px;
+    border-radius: 20px;
   }
 }

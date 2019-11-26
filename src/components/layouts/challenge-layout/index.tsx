@@ -15,34 +15,48 @@ const ChallengeLayout = (props: any) => {
       <Menubar />
       <div className="ChallengeLayout">
         <div className="landing-div">
-          <h2>Challenge Briefs</h2>
-          <p>
-            What does it mean to be a Sustainable City? For us, a sustainable
-            San Diego is one where all parts of our city connect and support
-            each other and the environment. Working together, we can design ways
-            to improve mobility, health, housing, and the climate for our
-            region.
-          </p>
+          <Row type="flex" justify="center">
+            <Col xs={{ span: 20 }} md={{ span: 20 }}>
+              <h2 className="header-text">Challenge Briefs</h2>
+            </Col>
+            <Col xs={{ span: 12 }} md={{ span: 12 }}>
+              <p>
+                What does it mean to be a Sustainable City? For us, a
+                sustainable San Diego is one where all parts of our city connect
+                and support each other and the environment. Working together, we
+                can design ways to improve mobility, health, housing, and the
+                climate for our region.
+              </p>
+            </Col>
+          </Row>
         </div>
 
-        <div className="involve-svg">
-          <figure>
-            <img src={ChallengeMobility}></img>
-            <figcaption>Mobility</figcaption>
-          </figure>
-          <figure>
-            <img src={ChallengeClimate}></img>
-            <figcaption>Environment</figcaption>
-          </figure>
-          <figure>
-            <img src={ChallengeHousing}></img>
-            <figcaption>Housing</figcaption>
-          </figure>
-          <figure>
-            <img src={ChallengeHealth}></img>
-            <figcaption>Health</figcaption>
-          </figure>
-        </div>
+        <Row className="challenge-icons" justify="center" type="flex">
+          <Col xs={{ span: 10 }} md={{ span: 4 }}>
+            <figure>
+              <img src={ChallengeMobility}></img>
+              <figcaption>Mobility</figcaption>
+            </figure>
+          </Col>
+          <Col xs={{ span: 10 }} md={{ span: 4 }}>
+            <figure>
+              <img src={ChallengeClimate}></img>
+              <figcaption>Environment</figcaption>
+            </figure>
+          </Col>
+          <Col xs={{ span: 10 }} md={{ span: 4 }}>
+            <figure>
+              <img src={ChallengeHousing}></img>
+              <figcaption>Housing</figcaption>
+            </figure>
+          </Col>
+          <Col xs={{ span: 10 }} md={{ span: 4 }}>
+            <figure>
+              <img src={ChallengeHealth}></img>
+              <figcaption>Health</figcaption>
+            </figure>
+          </Col>
+        </Row>
 
         <div className="fit-in">
           <h2>How do you fit in?</h2>
@@ -55,26 +69,43 @@ const ChallengeLayout = (props: any) => {
             motivate others to join you.
           </p>
         </div>
-        <div className="mobility">
-          <h2>
-            <b>MOBILITY: </b>We help people move freely in San Diego?
-          </h2>
 
-          <div className="inner-flex">
-            <Card hoverable className="mobility-card">
-              <h2 className="card-text">Last Mile</h2>
-              <div className="black-overlay">
-                <img
-                  src={require("../../../assets/img/mobility_lastmile.jpg")}
-                ></img>
+        <Row type="flex" justify="center">
+          <Col xs={{ span: 20 }} md={{ span: 20 }}>
+            <h2 className="mobility-header">
+              <b>MOBILITY: </b>We help people move freely in San Diego?
+            </h2>
+          </Col>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
+            <Card hoverable className="lastmile-card">
+              <div className="card-bg">
+                <h2 className="card-text">Last Mile</h2>
               </div>
             </Card>
+          </Col>
 
-            <Card hoverable className="mobility-card"></Card>
-            <Card hoverable className="mobility-card"></Card>
-            <Card hoverable className="mobility-card"></Card>
-          </div>
-        </div>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
+            <Card hoverable className="safety-card">
+              <div className="card-bg">
+                <h2 className="card-text">Safe Roadways</h2>
+              </div>
+            </Card>
+          </Col>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
+            <Card hoverable className="equitable-card">
+              <div className="card-bg">
+                <h2 className="card-text">Equitable Access</h2>
+              </div>
+            </Card>
+          </Col>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
+            <Card hoverable className="autonomous-card">
+              <div className="card-bg">
+                <h2 className="card-text">Autonomous Vehicles</h2>
+              </div>
+            </Card>
+          </Col>
+        </Row>
       </div>
     </div>
   );
