@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel } from "antd";
+import { Row, Col, Steps, Button, Card, Avatar } from "antd";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
 import AboutDiagram from "../../../assets/img/about_diagram.png";
+import AboutConnect from "../../../assets/img/about_connect.svg";
+import AboutDiv from "../../../assets/img/about_div.svg";
+import AboutCommunicate from "../../../assets/img/about_communicate.svg";
+import AboutCity from "../../../assets/img/about_city.svg";
+import AboutEdu from "../../../assets/img/about_edu.svg";
+import AboutFind from "../../../assets/img/about_find.svg";
 
+const { Meta } = Card;
 const AboutLayout = (props: any) => {
   return (
     <div>
@@ -32,8 +39,58 @@ const AboutLayout = (props: any) => {
           <img src={AboutDiagram}></img>
         </div>
 
-        <div className="goals-d4sd">
-          <h2>What are the goals of D4SD?</h2>
+        <div className="goals">
+          <h2 className="goals-header">What are the goals of D4SD?</h2>
+          <div className="goals-list">
+            <div className="inner-flex">
+              <Card className="goals-card" bordered={false}>
+                <Meta
+                  avatar={<Avatar src={AboutConnect} />}
+                  description="To connect innovators, experts, city officials, 
+                  professional designers, business leaders, and community members 
+                  through a combination of in-person events and online activities"
+                />
+              </Card>
+              <Card bordered={false} className="goals-card">
+                <Meta
+                  avatar={<Avatar src={AboutDiv} />}
+                  description="To increase and diversify participation, particularly 
+                  for typically underrepresented or marginalized populations, by 
+                  creating a range of specific roles while striving for diversity, 
+                  equity, and inclusion."
+                />
+              </Card>
+              <Card bordered={false} className="goals-card">
+                <Meta
+                  avatar={<Avatar src={AboutCommunicate} />}
+                  description="To increase the agency of bottom-up community initiatives 
+                  and enhance communication between the community and city."
+                />
+              </Card>
+              <Card bordered={false} className="goals-card">
+                <Meta
+                  avatar={<Avatar src={AboutCity} />}
+                  description="To contribute to the burgeoning design-driven economy in 
+                  San Diego by providing resources to help launch top proposals by bringing 
+                  together leaders from various sectors."
+                />
+              </Card>
+              <Card bordered={false} className="goals-card">
+                <Meta
+                  avatar={<Avatar src={AboutEdu} />}
+                  description="To provide an educational opportunity that serves people 
+                  from a wide range of ages, backgrounds, and motivations."
+                />
+              </Card>
+              <Card bordered={false} className="goals-card">
+                <Meta
+                  avatar={<Avatar src={AboutFind} />}
+                  description="To collaboratively explore a range of civic problems 
+                  that the San Diego region faces."
+                />
+              </Card>
+            </div>
+          </div>
         </div>
       </div>
     </div>

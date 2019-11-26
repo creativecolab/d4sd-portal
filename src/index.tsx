@@ -12,8 +12,9 @@ import LoginPage from "./containers/login-page";
 import HomePage from "./containers/home-page";
 import InvolvedPage from "./containers/involved-page";
 import AboutPage from "./containers/about-page";
-import "./index.less";
+import ChallengePage from "./containers/challenge-page";
 
+import "./index.less";
 import "./styles/reset.css";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -42,19 +43,21 @@ const App = () => (
             <Route exact path="/" component={HomePage} />
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/getinvolved" component={InvolvedPage} />
+            <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
-            {/* 
-            <Route exact path='/challenge' component={Challenge}/>
-            <Route exact path='/process' component={Process}/>
+
+            {/*            
             <Route exact path='/resources' component={Resources}/>
-            <Route exact path='/solution' component={PastSolution}/>
-            <Route exact path='/faq' component={FAQ}/>
-            <Route exact path='/forum' component={Forum}/>
-            <Route exact path='/events' component={Events}/>
-            <Route exact path='/getinvolved' component={Involve}/>
-            <Route exact path='/involve/:role' component={Playbook}/>
+            <Route exact path='/faqs' component={FAQ}/>
             <Route exact path='/workspace' component={Workspace}/>
-            <Route exact path='/stakeholder' component={Stakeholder}/> */}
+
+            <Route exact path='/events' component={Events}/>
+            <Route exact path='/solution' component={PastSolution}/>
+            <Route exact path='/forum' component={Forum}/>
+            <Route exact path='/involve/:role' component={Playbook}/>
+            <Route exact path='/stakeholder' component={Stakeholder}/>
+            <Route exact path='/process' component={Process}/>
+            */}
             <Route exact path="/signup" component={SignupPage} />
             <Route exect path="/login" component={LoginPage} />
           </Switch>

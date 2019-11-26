@@ -28,11 +28,40 @@
     }
   }
 
-  // Section 3
-  .goals-d4sd {
-    padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
-    height: 100vh;
+  // Section 2
+  .goals {
+    padding-top: 50px;
+    background-color: #eff8ff;
+    .goals-header {
+      display: flex;
+      justify-content: center;
+    }
+    .goals-list {
+      padding-top: 25px;
+      padding-left: 200px;
+      padding-right: 200px;
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: center;
+      .inner-flex {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .ant-card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 150px;
+          .ant-avatar {
+            border-radius: 0;
+          }
+        }
+        .goals-card {
+          background-color: #eff8ff;
+          max-width: 400px;
+          margin: auto;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,73 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+.ChallengeLayout {
+  // Section 1
+  .landing-div {
+    padding: 150px 300px 100px 250px;
+    height: 60vh;
+    background-image: url("../../../assets/img/challenge_header.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  .button-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // 4 Icons
+  .involve-svg {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  figure {
+    text-align: center;
+    img {
+      height: 150px;
+    }
+  }
+
+  // How do you fit in
+  .fit-in {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    height: 50vh;
+  }
+
+  .mobility {
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 50vh;
+    .inner-flex {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .card-text {
+        color: white;
+        text-align: center;
+      }
+      .ant-card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 250px;
+      }
+      // Text, black div w/ opacity 50% > mobility-card
+      .mobility-card {
+        // background-image: url("../../../assets/img/mobility_lastmile.jpg");
+        // background-size: 100%;
+        // background-repeat: no-repeat;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
