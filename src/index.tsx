@@ -51,12 +51,17 @@ const App = () => (
             <Route exact path='/faqs' component={FAQ}/>
             <Route exact path='/workspace' component={Workspace}/>
 
+            Questionable/Non-relevant routes
             <Route exact path='/events' component={Events}/>
             <Route exact path='/solution' component={PastSolution}/>
             <Route exact path='/forum' component={Forum}/>
             <Route exact path='/involve/:role' component={Playbook}/>
             <Route exact path='/stakeholder' component={Stakeholder}/>
             <Route exact path='/process' component={Process}/>
+
+            Fix to be more responsive:
+            Home, About, Get Involved
+              
             */}
             <Route exact path="/signup" component={SignupPage} />
             <Route exect path="/login" component={LoginPage} />
