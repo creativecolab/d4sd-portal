@@ -4,35 +4,49 @@
 .HomeLayout {
   // Section 1
   .landing-div {
-    padding: 200px;
+    padding-top: @margin-base-3;
     height: 100vh;
     background-image: url("../../../assets/img/home_landing.svg");
     background-size: cover;
     background-position: center bottom;
+    text-align: center;
   }
-  .button-row {
-    display: flex;
-    flex-direction: row;
+  .layout-btns{
+    margin-top: @margin-base-1;
   }
 
   // Section 2
-  .mission-statement {
-    padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
-    height: 100vh;
-    .involve-svg {
-      padding-top: 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+  // .mission-statement {
+  //   height: 100vh;
+  //   .involve-svg {
+  //     padding-top: 40px;
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: space-between;
+  //   }
+  //   figure {
+  //     text-align: center;
+  //     img {
+  //       height: 150px;
+  //     }
+  //   }
+  // }
+
+  .mission-statement{
+    margin-top: @margin-base-2;
+
+    h2{
+      margin-bottom: @margin-base-1/2;
     }
-    figure {
-      text-align: center;
-      img {
-        height: 150px;
-      }
-    }
+  }
+
+  .involve-fig{
+    margin-top: @margin-base-2;
+    text-align: center;
+
+    color: black;
+    font-weight: 600;
+    
   }
 
   // Section 3
