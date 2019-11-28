@@ -16,24 +16,25 @@ const InvolvedLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="InvolvedLayout">
-        <div className="landing-div">
-          <h2>Get Involved</h2>
-          <p>
-            You can take part in D4SD in a variety of ways! Whether it be
-            ideating solutions, giving feedback, teaching civic design in the
-            classroom, or supporting the initiative, getting involved with D4SD
-            can look a little different for each person. Below are a few ways to
-            get involved.
-          </p>
-        </div>
+        <Row type="flex" justify="center" className="landing-div">
+          <Col xs={{ span: 24 }} md={{ span: 24 }}>
+            <h2>Get Involved</h2>
+          </Col>
+          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
+          <Col xs={{ span: 20 }} md={{ span: 14 }}>
+            <p>
+              You can take part in D4SD in a variety of ways! Whether it be
+              ideating solutions, giving feedback, teaching civic design in the
+              classroom, or supporting the initiative, getting involved with
+              D4SD can look a little different for each person. Below are a few
+              ways to get involved.
+            </p>
+          </Col>
+          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
+        </Row>
 
-        <Row
-          className="involve-cards"
-          gutter={[32, 32]}
-          type="flex"
-          justify="center"
-        >
-          <Col xs={{ span: 24 }} md={{ span: 9 }}>
+        <Row className="involve-cards" type="flex" justify="center">
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
             <Card
               className="involve-card"
               actions={[<Button type="primary">JOIN THE DISCUSSION</Button>]}
@@ -50,7 +51,7 @@ const InvolvedLayout = (props: any) => {
               />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} md={{ span: 9 }}>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
             <Card
               className="involve-card"
               actions={[<Button type="primary">LEARN MORE</Button>]}
@@ -66,7 +67,7 @@ const InvolvedLayout = (props: any) => {
               />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} md={{ span: 9 }}>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
             <Card
               className="involve-card"
               actions={[<Button type="primary">CONTACT OUR TEAM</Button>]}
@@ -81,7 +82,7 @@ const InvolvedLayout = (props: any) => {
               />
             </Card>
           </Col>
-          <Col xs={{ span: 24 }} md={{ span: 9 }}>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
             <Card
               className="involve-card"
               actions={[<Button type="primary">JOIN OUR TEAM</Button>]}
@@ -96,7 +97,7 @@ const InvolvedLayout = (props: any) => {
             </Card>
           </Col>
 
-          <Col xs={{ span: 24 }} md={{ span: 9 }}>
+          <Col xs={{ span: 20 }} md={{ span: 9 }}>
             <Card
               className="involve-card"
               actions={[<Button type="primary">JOIN MAILING LIST</Button>]}

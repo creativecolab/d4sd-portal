@@ -40,7 +40,7 @@ const ChallengeLayout = (props: any) => {
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
               <h2 className="text">Challenge Briefs</h2>
             </Col>
-            <Col xs={{ span: 12 }} md={{ span: 12 }}>
+            <Col xs={{ span: 20 }} md={{ span: 15 }}>
               <p>
                 What does it mean to be a Sustainable City? For us, a
                 sustainable San Diego is one where all parts of our city connect

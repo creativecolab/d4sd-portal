@@ -60,7 +60,8 @@ const App = () => (
             <Route exact path='/process' component={Process}/>
 
             Fix to be more responsive:
-            Home, About, Get Involved
+            ~ Home, About, Get Involved
+            ~ Go through all pages to fix fonts
               
             */}
             <Route exact path="/signup" component={SignupPage} />
