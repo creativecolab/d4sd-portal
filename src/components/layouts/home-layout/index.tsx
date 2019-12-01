@@ -45,89 +45,92 @@ const logoCarouselSettings = {
 const HomeLayout = (props: any) => {
   return (
     <div>
-      
       <Menubar />
 
       <div className="HomeLayout">
         <div className="landing-div">
-        <Row gutter={[16, 16]} type="flex" justify="center">
-        <Col md={{span: 14}} xs={20}>
-        <p>DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE</p>
-          <h2>How can we make San Diego a more sustainable city?</h2>
-          <p>
-            San Diego is an amazing place to live, work, and visit. But like
-            many cities, San Diego faces a number of difficult challenges around
-            mobility, climate, housing, and public health. Design for San Diego
-            (D4SD) is an initiative to address complex challenges through design
-            thinking and crowdsourcing.
-          </p>
-        </Col>
-        </Row>
-        <Row type="flex" justify="center" className="layout-btns">
-        <Col lg={{span: 6}} xs={{span: 24}}>
-          <Button type="primary" size="large">
-            JOIN MAILING LIST
-          </Button>
-        </Col>
-        <Col lg={{span: 6}} xs={{span: 24}}>
-          <Button type="primary-outline" size="large">
-            LEARN MORE
-          </Button>
-        </Col>
-      </Row>
+          <Row gutter={[16, 16]} type="flex" justify="center">
+            <Col md={{ span: 13 }} xs={{ span: 20 }}>
+              <h3>DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE</h3>
+              <h2>How can we make San Diego a more sustainable city?</h2>
+            </Col>
+            <Col md={{ span: 14 }} xs={{ span: 20 }}>
+              <p>
+                San Diego is an amazing place to live, work, and visit. But like
+                many cities, San Diego faces a number of difficult challenges
+                around mobility, climate, housing, and public health. Design for
+                San Diego (D4SD) is an initiative to address complex challenges
+                through design thinking and crowdsourcing.
+              </p>
+            </Col>
+          </Row>
+          <Row type="flex" justify="center" className="layout-btns">
+            <Col md={{ span: 5 }} xs={{ span: 24 }}>
+              <Button type="primary" size="small">
+                JOIN MAILING LIST
+              </Button>
+            </Col>
+            <Col md={{ span: 5 }} xs={{ span: 24 }}>
+              <Button type="primary-outline" size="small">
+                LEARN MORE
+              </Button>
+            </Col>
+          </Row>
         </div>
 
-      <Row type="flex" justify="center" className="mission-statement">
-        <Col md={{span: 14}} xs={20}>
-          <h2>Contribute to our mission</h2>
+        <Row type="flex" justify="center" className="mission-statement">
+          <Col md={{ span: 14 }} xs={20}>
+            <h2>Contribute to our mission</h2>
             <p>
               D4SD seeks to connect young, passionate designers to a network of
               industry professionals and structure a process for collectively
               addressing civic challenges related to the sustainability of our
-              region. We are exploring new models for collective innovation where
-              the community works together to discover problems, explore
+              region. We are exploring new models for collective innovation
+              where the community works together to discover problems, explore
               solutions, and build prototypes to test ideas.
             </p>
             <p>
               D4SD 2020 will host a series of design events including speakers,
-              studios, and design-athons, starting in January. This will culminate
-              into a summit in April where innovators can pitch their proposed
-              solutions, and build alliances to make change happen.
+              studios, and design-athons, starting in January. This will
+              culminate into a summit in April where innovators can pitch their
+              proposed solutions, and build alliances to make change happen.
             </p>
-        </Col>
-      </Row>
-      <Row type="flex" justify="center">
-        <Col>
-        <Button type="primary" size="medium">LEARN MORE</Button>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+        <Row type="flex" justify="center">
+          <Col>
+            <Button type="primary" size="medium">
+              LEARN MORE
+            </Button>
+          </Col>
+        </Row>
 
-      <Row className="involve-fig" type="flex" justify="center" gutter={[48, 16]} >
-        <Col md={{span: 4}} xs={{span: 9}}>
-          <figure>
-            <img src={InvolveInnovateSVG}></img>
-            <figcaption>INNOVATE</figcaption>
-          </figure>
-        </Col>
-        <Col md={{span: 4}} xs={{span: 9}}>
-        <figure>
+        <Row className="involve-fig" type="flex" justify="center">
+          <Col md={{ span: 4 }} xs={{ span: 9 }}>
+            <figure>
+              <img src={InvolveInnovateSVG}></img>
+              <figcaption>INNOVATE</figcaption>
+            </figure>
+          </Col>
+          <Col md={{ span: 4 }} xs={{ span: 9 }}>
+            <figure>
               <img src={InvolvePartnerSVG}></img>
               <figcaption>PARTNER</figcaption>
             </figure>
-        </Col>
-        <Col md={{span: 4}} xs={{span: 9}}>
-        <figure>
+          </Col>
+          <Col md={{ span: 4 }} xs={{ span: 9 }}>
+            <figure>
               <img src={InvolveVolunteerSVG}></img>
               <figcaption>VOLUNTEER</figcaption>
             </figure>
-        </Col>
-        <Col md={{span: 4}} xs={{span: 9}}>
-        <figure>
+          </Col>
+          <Col md={{ span: 4 }} xs={{ span: 9 }}>
+            <figure>
               <img src={InvolveSponsorSVG}></img>
               <figcaption>SPONSOR</figcaption>
             </figure>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
 
         <div className="challenges">
           <Carousel autoplay className="challenges-carousel">

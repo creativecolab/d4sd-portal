@@ -63,7 +63,6 @@ const App = () => (
             Fix to be more responsive:
             ~ Home
             ~ Go through all pages to fix fonts
-              
             */}
             <Route exact path="/signup" component={SignupPage} />
             <Route exect path="/login" component={LoginPage} />

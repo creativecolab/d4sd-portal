@@ -3,16 +3,37 @@
 @import "../../../styles/fonts.less";
 .HomeLayout {
   // Section 1
+  h3 {
+    font-size: 12.8px;
+    color: #a7a7a7;
+    font-family: "Open Sans", sans-serif;
+  }
+  h2 {
+    font-size: 30px;
+    color: #333333;
+    line-height: 36px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    font-size: 16px;
+  }
   .landing-div {
-    padding-top: @margin-base-3;
+    padding-top: @margin-base-2;
     height: 100vh;
     background-image: url("../../../assets/img/home_landing.svg");
     background-size: cover;
     background-position: center bottom;
     text-align: center;
+    p {
+      text-align: left;
+    }
+    @media screen and (max-width: 375px) {
+      padding-top: 15vh;
+    }
   }
-  .layout-btns{
-    margin-top: @margin-base-1;
+  .layout-btns {
+    // margin-top: @margin-base-1;
+    padding-top: 5vh;
   }
 
   // Section 2
@@ -32,28 +53,25 @@
   //   }
   // }
 
-  .mission-statement{
+  .mission-statement {
     margin-top: @margin-base-2;
 
-    h2{
-      margin-bottom: @margin-base-1/2;
+    h2 {
+      margin-bottom: @margin-base-1 / 2;
     }
   }
 
-  .involve-fig{
+  .involve-fig {
     margin-top: @margin-base-2;
     text-align: center;
 
     color: black;
     font-weight: 600;
-    
   }
 
   // Section 3
   .challenges {
     padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
     height: 100vh;
     .challenges-carousel {
       // text-align: center;
@@ -83,8 +101,7 @@
   // Section 4
   .d4sd-in-action {
     padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
+
     height: 75vh;
     .photo-carousel {
       padding-top: 30px;
@@ -97,13 +114,11 @@
   // Section 5
   .meet-community {
     padding-top: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
+
     height: 80vh;
     .logo-carousel {
       padding-top: 50px;
-      padding-left: 30px;
-      padding-right: 30px;
+
       img {
         height: 60px;
         width: 150px;
