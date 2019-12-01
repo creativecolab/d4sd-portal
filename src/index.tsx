@@ -13,6 +13,7 @@ import HomePage from "./containers/home-page";
 import InvolvedPage from "./containers/involved-page";
 import AboutPage from "./containers/about-page";
 import ChallengePage from "./containers/challenge-page";
+import FAQPage from "./containers/faq-page";
 
 import "./index.less";
 import "./styles/reset.css";
@@ -45,10 +46,10 @@ const App = () => (
             <Route exact path="/getinvolved" component={InvolvedPage} />
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/faq" component={FAQPage} />
 
             {/*            
             <Route exact path='/resources' component={Resources}/>
-            <Route exact path='/faqs' component={FAQ}/>
             <Route exact path='/workspace' component={Workspace}/>
 
             Questionable/Non-relevant routes

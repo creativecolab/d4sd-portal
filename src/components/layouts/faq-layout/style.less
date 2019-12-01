@@ -1,0 +1,48 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+.FaqLayout {
+  p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 30px;
+    color: #333333;
+  }
+  .ant-collapse-header {
+    font-size: 16px;
+  }
+  // Section 1
+  .landing-div {
+    height: 45vh;
+    background-image: url("../../../assets/img/faq_header.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 20vh;
+    @media screen and (max-width: 375px) {
+      padding-top: 15vh;
+      height: 65vh;
+      background-size: 125%;
+    }
+  }
+
+  .faq-cards {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .panel-style {
+    background: "#f7f7f7";
+    border-radius: 4px;
+    border: 0;
+    overflow: "hidden";
+  }
+
+  ul {
+    list-style: disc;
+    list-style-position: inside;
+  }
+}
