@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel, Card } from "antd";
+import { Row, Col, Steps, Button, Carousel, Card } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
@@ -527,6 +527,7 @@ const ChallengeLayout = (props: any) => {
           </Row>
         </div>
       </div>
+      <br /><br />
     </div>
   );
 };

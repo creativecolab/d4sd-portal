@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel, Card, Avatar, Icon } from "antd";
+import { Row, Col, Steps, Button, Carousel, Card, Avatar, Icon } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
@@ -42,11 +42,11 @@ const InvolvedLayout = (props: any) => {
               <Meta
                 avatar={<Avatar src={IconJoinDiscussion} />}
                 title="Join the Discussion"
-                description="We have a Slack workspace set up with 
-                multiple channels that will allow participants to 
-                communicate with their team members and the greater 
-                D4SD community. When you register online, you will be 
-                connected to our network of resources based on how you 
+                description="We have a Slack workspace set up with
+                multiple channels that will allow participants to
+                communicate with their team members and the greater
+                D4SD community. When you register online, you will be
+                connected to our network of resources based on how you
                 want to participate."
               />
             </Card>
@@ -59,10 +59,10 @@ const InvolvedLayout = (props: any) => {
               <Meta
                 avatar={<Avatar src={IconFeedback} />}
                 title="Become a Feedback Provider"
-                description="You can take part in D4SD in a variety of ways! 
-                Whether by ideating solutions, giving feedback, teaching 
-                civic design in the classroom, or supporting the initiative, 
-                getting involved with D4SD will look a little different for 
+                description="You can take part in D4SD in a variety of ways!
+                Whether by ideating solutions, giving feedback, teaching
+                civic design in the classroom, or supporting the initiative,
+                getting involved with D4SD will look a little different for
                 each person. Below are a few ways to get involved."
               />
             </Card>
@@ -75,9 +75,9 @@ const InvolvedLayout = (props: any) => {
               <Meta
                 avatar={<Avatar src={IconSponsor} />}
                 title="Sponsor D4SD"
-                description="Get the chance to grow your brand within D4SD’s 
-              community by sponsoring events. This would allow either your 
-              product or service to reach new ears, while supporting a mission 
+                description="Get the chance to grow your brand within D4SD’s
+              community by sponsoring events. This would allow either your
+              product or service to reach new ears, while supporting a mission
               that matters to you."
               />
             </Card>
@@ -90,8 +90,8 @@ const InvolvedLayout = (props: any) => {
               <Meta
                 avatar={<Avatar src={IconMail} />}
                 title="Join the D4SD team"
-                description="We need, innovators, educators, volunteers, and 
-              more to help us reach our goal. If you’re interested in any 
+                description="We need, innovators, educators, volunteers, and
+              more to help us reach our goal. If you’re interested in any
               of those roles or want to forge you own role, register with us below!"
               />
             </Card>
@@ -105,9 +105,9 @@ const InvolvedLayout = (props: any) => {
               <Meta
                 avatar={<Avatar src={IconVolunteer} />}
                 title="Join the mailing list"
-                description="Keep up with D4SD updates and events with our newsletter! 
-                  Every week we highlight key takeaways from discussions, shout out 
-                  community members, and remind you of important deadlines to help you 
+                description="Keep up with D4SD updates and events with our newsletter!
+                  Every week we highlight key takeaways from discussions, shout out
+                  community members, and remind you of important deadlines to help you
                   stay on track during the challenge."
               />
             </Card>
