@@ -19,7 +19,7 @@ const AboutLayout = (props: any) => {
       <div className="AboutLayout">
         <Row justify="center" type="flex" className="landing-div">
           <Col xs={{ span: 23 }} md={{ span: 23 }}>
-            <h2>About D4SD</h2>
+            <h1>About D4SD</h1>
           </Col>
           <Col xs={{ span: 20 }} md={{ span: 16 }}>
             <p>

@@ -18,7 +18,7 @@ const InvolvedLayout = (props: any) => {
       <div className="InvolvedLayout">
         <Row type="flex" justify="center" className="landing-div">
           <Col xs={{ span: 24 }} md={{ span: 24 }}>
-            <h2>{involveContent.title1}</h2>
+            <h1>{involveContent.title1}</h1>
           </Col>
           <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
           <Col xs={{ span: 20 }} md={{ span: 14 }}>
