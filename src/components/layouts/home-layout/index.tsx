@@ -52,7 +52,7 @@ const HomeLayout = (props: any) => {
           <Row gutter={[16, 16]} type="flex" justify="center">
             <Col md={{ span: 13 }} xs={{ span: 20 }}>
               <h3>DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE</h3>
-              <h2>How can we make San Diego a more sustainable city?</h2>
+              <h1>How can we make San Diego a more sustainable city?</h1>
             </Col>
             <Col md={{ span: 14 }} xs={{ span: 20 }}>
               <p>
@@ -137,9 +137,9 @@ const HomeLayout = (props: any) => {
             {/* Mobility */}
             <div className="challenge-item">
               <div className="mobility-content">
-                <h4 className="challenge-header">
+                <h3 className="challenge-header">
                   LEARN ABOUT THE CHALLENGES: IMPROVING MOBILITY
-                </h4>
+                </h3>
                 <h2>How might we help people move freely through our city?</h2>
                 <p>
                   As people are looking for alternate ways to move around, while
@@ -159,9 +159,9 @@ const HomeLayout = (props: any) => {
             {/* Climate */}
             <div className="challenge-item">
               <div className="climate-content">
-                <h4 className="challenge-header">
+                <h3 className="challenge-header">
                   LEARN ABOUT THE CHALLENGES: ADDRESSING CLIMATE EFFECTS
-                </h4>
+                </h3>
                 <h2>
                   How can we help San Diego prepare for and mitigate climate
                   change?
@@ -182,9 +182,9 @@ const HomeLayout = (props: any) => {
             {/* Housing */}
             <div className="challenge-item">
               <div className="housing-content">
-                <h4 className="challenge-header">
+                <h3 className="challenge-header">
                   LEARN ABOUT THE CHALLENGES: CREATING ACCESSIBLE HOUSING
-                </h4>
+                </h3>
                 <h2>
                   How can we reimagine housing to meet the needs of all San
                   Diegans?
@@ -205,9 +205,9 @@ const HomeLayout = (props: any) => {
             {/* Health */}
             <div className="challenge-item">
               <div className="health-content">
-                <h4 className="challenge-header">
+                <h3 className="challenge-header">
                   LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES
-                </h4>
+                </h3>
                 <h2>
                   How can we help all San Diegans live healthy and active lives?
                 </h2>

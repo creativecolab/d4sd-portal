@@ -38,7 +38,7 @@ const ChallengeLayout = (props: any) => {
         <div className="landing-div">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">Challenge Briefs</h2>
+              <h1 className="text">Challenge Briefs</h1>
             </Col>
             <Col xs={{ span: 20 }} md={{ span: 15 }}>
               <p>
@@ -103,10 +103,10 @@ const ChallengeLayout = (props: any) => {
         <div className="challenge">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">
-                <b>MOBILITY: </b>How might we help people move freely in San
+              <h4 className="text">
+                <span>MOBILITY: </span>How might we help people move freely in San
                 Diego?
-              </h2>
+              </h4>
             </Col>
           </Row>
           <Row type="flex" justify="center">
@@ -212,10 +212,10 @@ const ChallengeLayout = (props: any) => {
         <div className="challenge">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">
-                <b>ENVIRONMENT: </b>How might we prepare San Diego for natural
+              <h4 className="text">
+                <span>ENVIRONMENT: </span>How might we prepare San Diego for natural
                 and human-influenced environmental challenges?
-              </h2>
+              </h4>
             </Col>
           </Row>
           <Row type="flex" justify="center">
@@ -315,10 +315,10 @@ const ChallengeLayout = (props: any) => {
         <div className="challenge">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">
-                <b>HOUSING: </b>How might we reimagine housing to meet the needs
+              <h4 className="text">
+                <span>HOUSING: </span>How might we reimagine housing to meet the needs
                 of all San Diegans?
-              </h2>
+              </h4>
             </Col>
           </Row>
           <Row type="flex" justify="center">
@@ -424,10 +424,10 @@ const ChallengeLayout = (props: any) => {
         <div className="challenge">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">
-                <b>HEALTH: </b>How might we help all San Diegans live healthy
+              <h4 className="text">
+                <span>HEALTH: </span>How might we help all San Diegans live healthy
                 and active lives?
-              </h2>
+              </h4>
             </Col>
           </Row>
           <Row type="flex" justify="center">

@@ -19,7 +19,7 @@ const AboutLayout = (props: any) => {
       <div className="AboutLayout">
         <Row justify="center" type="flex" className="landing-div">
           <Col xs={{ span: 23 }} md={{ span: 23 }}>
-            <h2>About D4SD</h2>
+            <h1>About D4SD</h1>
           </Col>
           <Col xs={{ span: 20 }} md={{ span: 16 }}>
             <p>
@@ -57,8 +57,8 @@ const AboutLayout = (props: any) => {
             <Card className="goals-card" bordered={false}>
               <Meta
                 avatar={<Avatar src={AboutConnect} />}
-                description="To connect innovators, experts, city officials, 
-                  professional designers, business leaders, and community members 
+                description="To connect innovators, experts, city officials,
+                  professional designers, business leaders, and community members
                   through a combination of in-person events and online activities"
               />
             </Card>
@@ -67,9 +67,9 @@ const AboutLayout = (props: any) => {
             <Card bordered={false} className="goals-card">
               <Meta
                 avatar={<Avatar src={AboutDiv} />}
-                description="To increase and diversify participation, particularly 
-                  for typically underrepresented or marginalized populations, by 
-                  creating a range of specific roles while striving for diversity, 
+                description="To increase and diversify participation, particularly
+                  for typically underrepresented or marginalized populations, by
+                  creating a range of specific roles while striving for diversity,
                   equity, and inclusion."
               />
             </Card>
@@ -78,7 +78,7 @@ const AboutLayout = (props: any) => {
             <Card bordered={false} className="goals-card">
               <Meta
                 avatar={<Avatar src={AboutCommunicate} />}
-                description="To increase the agency of bottom-up community initiatives 
+                description="To increase the agency of bottom-up community initiatives
                   and enhance communication between the community and city."
               />
             </Card>
@@ -87,8 +87,8 @@ const AboutLayout = (props: any) => {
             <Card bordered={false} className="goals-card">
               <Meta
                 avatar={<Avatar src={AboutCity} />}
-                description="To contribute to the burgeoning design-driven economy in 
-                  San Diego by providing resources to help launch top proposals by bringing 
+                description="To contribute to the burgeoning design-driven economy in
+                  San Diego by providing resources to help launch top proposals by bringing
                   together leaders from various sectors."
               />
             </Card>
@@ -97,7 +97,7 @@ const AboutLayout = (props: any) => {
             <Card bordered={false} className="goals-card">
               <Meta
                 avatar={<Avatar src={AboutEdu} />}
-                description="To provide an educational opportunity that serves people 
+                description="To provide an educational opportunity that serves people
                   from a wide range of ages, backgrounds, and motivations."
               />
             </Card>
@@ -106,7 +106,7 @@ const AboutLayout = (props: any) => {
             <Card bordered={false} className="goals-card">
               <Meta
                 avatar={<Avatar src={AboutFind} />}
-                description="To collaboratively explore a range of civic problems 
+                description="To collaboratively explore a range of civic problems
                   that the San Diego region faces."
               />
             </Card>

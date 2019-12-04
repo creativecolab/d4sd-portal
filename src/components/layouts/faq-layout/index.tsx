@@ -13,7 +13,7 @@ const FaqLayout = (props: any) => {
       <div className="FaqLayout">
         <Row className="landing-div" type="flex" justify="center">
           <Col span="20">
-            <h2>Frequently Asked Questions</h2>
+            <h1>Frequently Asked Questions</h1>
           </Col>
           <Col xs={{ span: 14 }} md={{ span: 14 }}>
             <p>
