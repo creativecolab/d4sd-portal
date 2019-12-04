@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Steps, Button, Card, Avatar } from "antd";
+import { Row, Col, Steps, Button, Card, Avatar } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
 
