@@ -101,31 +101,31 @@ function Menubar(props: any) {
         {/*NAVBAR FOR DESKTOP/PC (LARGER SCREENS)*/}
         <Col md={24} xs={0}>
           <Menu id="menubar" mode="horizontal" selectedKeys={currentTab}>
-            <Menu.Item className="menu-item-no menu-logo">
+            <Menu.Item className="menu-item-no menu-logo" type="logo">
               <NavLink to="/">
                 <img src={logo} alt="logo" />
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
-            <Menu.Item className="menu-item" key="home" onClick={()=>{history.replace("/")}}>
+            <Menu.Item className="menu-item" key="home" onClick={()=>{history.push("/")}}>
               <span>Home</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="getInvolved" onClick={()=>{history.replace("/getinvolved")}}>
+            <Menu.Item className="menu-item" key="getInvolved" onClick={()=>{history.push("/getinvolved")}}>
               <span>Get Involved</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="challenges" onClick={()=>{history.replace("/challenges")}}>
+            <Menu.Item className="menu-item" key="challenges" onClick={()=>{history.push("/challenges")}}>
               <span>Challenges</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="resources" onClick={()=>{history.replace("/resources")}}>
+            <Menu.Item className="menu-item" key="resources" onClick={()=>{history.push("/resources")}}>
               <span>Resources</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="faq" onClick={()=>{history.replace("/faq")}}>
+            <Menu.Item className="menu-item" key="faq" onClick={()=>{history.push("/faq")}}>
               <span>FAQs</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="about" onClick={()=>{history.replace("/about")}}>
+            <Menu.Item className="menu-item" key="about" onClick={()=>{history.push("/about")}}>
               <span>About</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="workspace" onClick={()=>{history.replace("/workspace")}}>
+            <Menu.Item className="menu-item" key="workspace" onClick={()=>{history.push("/workspace")}}>
               <span>Workspace</span>
             </Menu.Item>
           </Menu>
