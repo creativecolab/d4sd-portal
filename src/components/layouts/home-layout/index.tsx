@@ -3,6 +3,7 @@ import { Row, Col, Steps, Button, Carousel } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
 import { homeContent } from "../../../assets/content.js";
+import { url } from "inspector";
 
 const photoCarouselSettings = {
   dots: true,
@@ -13,6 +14,9 @@ const photoCarouselSettings = {
   autoplay: true
 };
 
+const test = {
+  height: "500vh"
+};
 const logoCarouselSettings = {
   dots: false,
   infinite: true,
@@ -31,7 +35,7 @@ const HomeLayout = (props: any) => {
         <div className="landing-div">
           <Row gutter={[16, 16]} type="flex" justify="center">
             <Col md={{ span: 13 }} xs={{ span: 20 }}>
-              <h3>{homeContent.subtitle1}</h3>
+              <p className="landing-header">{homeContent.subtitle1}</p>
               <h1>{homeContent.title1}</h1>
             </Col>
             <Col md={{ span: 14 }} xs={{ span: 20 }}>
@@ -79,16 +83,27 @@ const HomeLayout = (props: any) => {
 
         <div className="challenges">
           <Carousel autoplay className="challenges-carousel">
-            {/* Mobility */}
             {homeContent.challenges.map(challenge => (
               <div className="challenge-item">
-                <div className="mobility-content">
-                  <h3 className="challenge-header">
-                    {challenge.header}
-                  </h3>
+                <div
+                  style={{
+                    backgroundImage: `url(${challenge.src})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundPosition: "center bottom",
+                    height: "80vh"
+                  }}
+                >
+                  <p className="challenge-header">{challenge.header}</p>
                   <h2>{challenge.title}</h2>
-                  <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
-                  <Button type="primary">Learn More</Button>
+                  <Row type="flex" justify="center">
+                    <Col xs={{ span: 20 }} md={{ span: 14 }}>
+                      <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
+                    </Col>
+                    <Col md={{ span: 24 }}>
+                      <Button type="primary">Learn More</Button>
+                    </Col>
+                  </Row>
                 </div>
               </div>
             ))}
@@ -103,7 +118,7 @@ const HomeLayout = (props: any) => {
           <Carousel {...photoCarouselSettings} className="photo-carousel">
             {homeContent.actionImg.map(img => (
               <div>
-              <img src={img} />
+                <img src={img} />
               </div>
             ))}
           </Carousel>
@@ -116,7 +131,7 @@ const HomeLayout = (props: any) => {
           <Carousel {...logoCarouselSettings} className="logo-carousel">
             {homeContent.logos.map(logo => (
               <div>
-                <img src={logo}/>
+                <img src={logo} />
               </div>
             ))}
           </Carousel>

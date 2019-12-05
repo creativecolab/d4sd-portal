@@ -3,12 +3,7 @@
 @import "../../../styles/fonts.less";
 .HomeLayout {
   // Section 1
-  h3 {
-    font-size: 2rem;
-    color: #a7a7a7;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-  }
+
   .landing-div {
     padding-top: @margin-base-2;
     height: 100vh;
@@ -16,6 +11,9 @@
     background-size: cover;
     background-position: center bottom;
     text-align: center;
+    .landing-header {
+      text-align: center;
+    }
     @media screen and (max-width: 375px) {
       padding-top: 15vh;
     }
@@ -44,47 +42,54 @@
 
   .mission-statement {
     margin-top: @margin-base-2;
-
-    h2 {
-      margin-bottom: @margin-base-1 / 2;
-    }
   }
 
   .involve-fig {
-    margin-top: @margin-base-2;
+    margin-top: @margin-base-1;
     text-align: center;
-
     color: black;
     font-weight: 600;
+    figure {
+      text-align: center;
+      img {
+        margin: 5px;
+        max-height: 150px;
+      }
+    }
   }
 
   // Section 3
   .challenges {
     padding-top: 100px;
-    height: 100vh;
     .challenges-carousel {
       // text-align: center;
+      height: 90vh;
       background: #244c7e;
       overflow: hidden;
     }
     .challenge-item {
-      height: 80vh;
+      background: #eff8ff;
       .challenge-header {
         padding-top: 50px;
-      }
-      .mobility-content {
-        .challenges(url("../../../assets/img/home_mobility.svg"));
-      }
-      .climate-content {
-        .challenges(url("../../../assets/img/home_climate.svg"));
-      }
-      .housing-content {
-        .challenges(url("../../../assets/img/home_housing.svg"));
-      }
-      .health-content {
-        .challenges(url("../../../assets/img/home_health.svg"));
+        text-align: center;
       }
     }
+  }
+
+  .ant-carousel .slick-dots li.slick-active button {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+  }
+  .ant-carousel .slick-dots li button {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 30px;
+  }
+  .ant-carousel .slick-dots {
+    height: 5vh;
   }
 
   // Section 4
