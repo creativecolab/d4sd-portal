@@ -1,17 +1,26 @@
 @import "../../../styles/vars.less";
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
-.ProcessLayout {
+.StakeholderLayout {
+  .bg-img {
+    background-image: url("../../../assets/img/stakeholder_header.svg");
+    height: 45vh;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 100%;
+  }
   .landing-div {
     height: 45vh;
-    background-image: url("../../../assets/img/process_header.svg");
+
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
     //margin-top: 120px;
     padding-top: 120px;
   }
-  .process-content {
+  .stakeholder-content {
 
     min-width: 320px;
     width: 60%;
@@ -25,6 +34,10 @@
     h4 {
       padding: 14px;
       padding-bottom: 0px;
+      padding-top: @margin-base * 3;
+    }
+    h2 {
+      padding-top: @margin-base * 6;
     }
   }
 }
