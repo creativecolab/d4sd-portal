@@ -22,12 +22,17 @@
   // Section 2
   .involve-cards {
     margin-top: @margin-base * 2;
-
   }
   .involve-card .ant-card-body {
-    height: 300px;
-
-
+    @media screen and (min-width: @xs) {
+      height: auto;
+    }
+    @media screen and (min-width: @lg) {
+      height: 420px;
+    }
+    @media screen and (min-width: @xl) {
+      height: 300px;
+    }
   }
   .ant-card-meta {
     font-size: 1.2em;
@@ -39,5 +44,41 @@
   .ant-card-actions {
     border-bottom-left-radius: @margin-base;
     border-bottom-right-radius: @margin-base;
+  }
+  .max-width {
+    margin: auto;
+    @media screen and (min-width: @xs) {
+      width: 98%;
+    }
+    @media screen and (min-width: @sm) {
+      width: 80%;
+    }
+    @media screen and (min-width: @md) {
+      width: 70%;
+    }
+    @media screen and (min-width: @lg) {
+      width: 85%;
+    }
+    @media screen and (min-width: @xl) {
+      width: 70%;
+    }
+  }
+  .avatar {
+    @media screen and (min-width: @xs) {
+      width: 30px;
+      height: 30px;
+    }
+    @media screen and (min-width: @sm) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @md) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @lg) {
+      width: 70px;
+      height: 70px;
+    }
   }
 }
