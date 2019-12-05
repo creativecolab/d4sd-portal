@@ -15,6 +15,9 @@ import AboutPage from "./containers/about-page";
 import ChallengePage from "./containers/challenge-page";
 import FAQPage from "./containers/faq-page";
 
+import ProcessPage from "./components/layouts/process-layout";
+import StakeholderPage from "./components/layouts/stakeholder-layout";
+
 import "./index.less";
 import "./styles/reset.css";
 // import Home from "./pages/Home";
@@ -47,7 +50,8 @@ const App = () => (
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/faq" component={FAQPage} />
-
+            <Route exact path='/resources/process' component={ProcessPage}/>
+            <Route exact path='/resources/stakeholder' component={StakeholderPage}/>
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>

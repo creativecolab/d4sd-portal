@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Row, Col, Steps, Button, Carousel, Card } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
-
+import { challengeContent } from "../../../assets/content.js";
 import ChallengeMobility from "../../../assets/img/challenge_mobility.svg";
 import ChallengeClimate from "../../../assets/img/challenge_climate.svg";
 import ChallengeHousing from "../../../assets/img/challenge_housing.svg";
@@ -31,6 +31,24 @@ const ChallengeLayout = (props: any) => {
   const [dataAgency, setDataAgency] = useState(false);
   const [foodInsecurity, setFoodInsecurity] = useState(false);
 
+  let Mobility = React.createRef();
+  let Housing = React.createRef();
+  let Climate = React.createRef();
+  let Health = React.createRef();
+  let refsArray = {
+    "Mobility": Mobility,
+    "Housing": Housing,
+    "Climate": Climate,
+    "Health": Health
+  }
+  const scrollToRef = (ref: any) => {
+    window.scrollTo({
+      left: 0,
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <div>
       <Menubar />
@@ -38,68 +56,40 @@ const ChallengeLayout = (props: any) => {
         <div className="landing-div">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h1 className="text">Challenge Briefs</h1>
+              <h1 className="text">{challengeContent.title}</h1>
             </Col>
             <Col xs={{ span: 20 }} md={{ span: 15 }}>
-              <p>
-                What does it mean to be a Sustainable City? For us, a
-                sustainable San Diego is one where all parts of our city connect
-                and support each other and the environment. Working together, we
-                can design ways to improve mobility, health, housing, and the
-                climate for our region.
-              </p>
+              <p dangerouslySetInnerHTML={{__html:challengeContent.content}} />
             </Col>
           </Row>
         </div>
 
         <div className="challenge-icons">
           <Row justify="center" type="flex">
-            <Col xs={{ span: 10 }} md={{ span: 4 }}>
-              <figure>
-                <img src={ChallengeMobility}></img>
-                <figcaption>Mobility</figcaption>
-              </figure>
-            </Col>
-            <Col xs={{ span: 10 }} md={{ span: 4 }}>
-              <figure>
-                <img src={ChallengeClimate}></img>
-                <figcaption>Environment</figcaption>
-              </figure>
-            </Col>
-            <Col xs={{ span: 10 }} md={{ span: 4 }}>
-              <figure>
-                <img src={ChallengeHousing}></img>
-                <figcaption>Housing</figcaption>
-              </figure>
-            </Col>
-            <Col xs={{ span: 10 }} md={{ span: 4 }}>
-              <figure>
-                <img src={ChallengeHealth}></img>
-                <figcaption>Health</figcaption>
-              </figure>
-            </Col>
+          {challengeContent.nav.map((nav) => {
+            return (
+              <Col xs={{ span: 10 }} sm={{span:10}}md={{ span: 4 }}>
+                <figure>
+                  <img src={nav.img} className="challenge-icon"></img>
+                  <figcaption className="challenge-icon-caption">{nav.title}</figcaption>
+                </figure>
+              </Col>
+              );
+            })}
           </Row>
         </div>
 
         <div className="fit-in">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h2 className="text">How do you fit in?</h2>
+              <h2 className="text">{challengeContent.title2}</h2>
             </Col>
             <Col xs={{ span: 20 }} md={{ span: 15 }}>
-              <p>
-                Everyone is important in advancing a more sustainable San Diego,
-                including you! Below are several examples of challenges that we
-                can address, together. This is just the start of our collective
-                effort. If you see a problem not listed here, go investigate it
-                and share back to the D4SD discussion forum, or come to an event
-                where you can motivate others to join you.
-              </p>
+              <p dangerouslySetInnerHTML={{__html:challengeContent.content2}} />
             </Col>
           </Row>
         </div>
 
-        {/* Mobility */}
         <div className="challenge">
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 20 }}>
@@ -109,7 +99,7 @@ const ChallengeLayout = (props: any) => {
               </h4>
             </Col>
           </Row>
-          <Row type="flex" justify="center">
+          <Row type="flex" justify="center" >
             <Col xs={{ span: 4 }} sm={{ span: 4 }} md={{ span: 4 }}></Col>
             <Col
               xs={{ span: 16 }}
