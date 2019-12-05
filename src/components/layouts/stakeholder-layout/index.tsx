@@ -8,11 +8,12 @@ const StakeholderLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="StakeholderLayout">
-        <div className="bg-img"/>
         <Row type="flex" justify="center" className="landing-div">
-          <Col xs={{ span: 24 }} md={{ span: 24 }}>
+        <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
+          <Col xs={{ span: 20 }} md={{ span: 14 }}>
             <h1>{stakeholderContent.title1}</h1>
           </Col>
+            <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
           <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
             <Col xs={{ span: 20 }} md={{ span: 14 }}>
           <p dangerouslySetInnerHTML={{__html:stakeholderContent.content1}}/>
