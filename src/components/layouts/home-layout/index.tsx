@@ -29,7 +29,7 @@ const HomeLayout = (props: any) => {
 
       <div className="HomeLayout">
         <div className="landing-div">
-          <Row gutter={[16, 16]} type="flex" justify="center">
+          <Row gutter={[16, 16]} type="flex" justify="center" style={{"margin":"0"}}>
             <Col md={{ span: 13 }} xs={{ span: 20 }}>
               <h3>{homeContent.subtitle1}</h3>
               <h1>{homeContent.title1}</h1>

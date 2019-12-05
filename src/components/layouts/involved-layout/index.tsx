@@ -28,17 +28,17 @@ const InvolvedLayout = (props: any) => {
           </Col>
           <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
         </Row>
-
-        <Row className="involve-cards" type="flex" justify="center">
+        <div className="max-width">
+        <Row className="involve-cards" type="flex" justify="start">
           {involveContent.roles.map((content, i)=> {
             return (
-              <Col xs={{ span: 20 }} md={{ span: 9 }}>
+              <Col xs={{ span: 24 }} lg={{ span: 12 }}>
                 <Card
                   className="involve-card"
                   actions={[<a href={content.link} target={content.new}><Button type="primary">{content.action}</Button></a>]}
                 >
                   <Meta
-                    avatar={<Avatar src={content.image} />}
+                    avatar={<Avatar src={content.image} className="avatar" />}
                     title={content.title}
                     description={content.txt}
                   />
@@ -47,6 +47,7 @@ const InvolvedLayout = (props: any) => {
             )
           })}
         </Row>
+        </div>
       </div>
     </div>
   );
