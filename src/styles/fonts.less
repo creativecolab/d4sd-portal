@@ -2,7 +2,9 @@
 @import "./vars.less";
 
 html {
-  font-size: 16px;
+  @media screen and (min-width: @xs) {
+    font-size: 7px;
+  }
   @media screen and (min-width: @sm) {
     font-size: 8px;
   }
