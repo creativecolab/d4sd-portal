@@ -16,7 +16,7 @@ const InvolvedLayout = (props: any) => {
           {involveContent.roles.map((content, i)=> {
             return (
               <Col xs={24} lg={12}>
-              <Card actions={[<a href={content.link} target={content.new}>
+              <Card className="involvecard" actions={[<a href={content.link} target={content.new}>
                   <Button type="primary">{content.action}</Button></a>]}>
                   <Meta
                     avatar={<Avatar src={content.image} className="avatar" />}
