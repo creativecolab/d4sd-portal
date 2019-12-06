@@ -6,11 +6,12 @@ import "../../../styles/containers.less";
 import { homeContent } from "../../../assets/content.js";
 import { url } from "inspector";
 
+
 const photoCarouselSettings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  // slidesToShow: `${window.innerWidth < '768' ? 1:3}`,
   slidesToScroll: 0,
   autoplay: true
 };
@@ -30,11 +31,10 @@ const HomeLayout = (props: any) => {
   const ref = useRef<HTMLHeadingElement>(null);
   const scrollToRef = () => {
     if (ref && ref.current) {
-      console.log("ref");
-      console.log(ref)
+      const position = ref.current.offsetTop - 90;
       window.scrollTo({
         left: 0,
-        top: ref.current.offsetHeight,
+        top: position,
         behavior: 'smooth'
       });
     }
@@ -88,7 +88,7 @@ const HomeLayout = (props: any) => {
         </Row>
       </div>
 
-        <div className="paragraph challenges">
+        <div className="section challenges">
           <Carousel autoplay className="challenges-carousel">
             {homeContent.challenges.map(challenge => (
               <div className="challenge-item">
@@ -143,7 +143,8 @@ const HomeLayout = (props: any) => {
           </a>
           </div>
           </div>
-          <Carousel {...logoCarouselSettings} className="logo-carousel">
+
+          <Carousel {...logoCarouselSettings} slidesToShow={window.innerWidth < 768 ? 1:3} className="logo-carousel">
             {homeContent.logos.map(logo => (
               <div>
                 <img src={logo} style={{"width":"100%"}} />

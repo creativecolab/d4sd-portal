@@ -98,6 +98,14 @@ export const homeContent = {
         "As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>"
     },
     {
+      id: 3,
+      src: home4,
+      header: "LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES",
+      title: "How might we help all San Diegans live healthy and active lives?",
+      txt:
+        "Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>"
+    },
+    {
       id: 1,
       src: home2,
       header: "LEARN ABOUT THE CHALLENGES: ADDRESSING ENVIRONMENT EFFECTS",
@@ -114,14 +122,6 @@ export const homeContent = {
         "How might we reimagine housing to meet the needs of all San Diegans?",
       txt:
         "Shelter is a fundamental human need; however people have limited choices for safe, affordable, and long-term housing in San Diego. The issue of housing is more than the physical structures. It also includes homelessness, land development, smart home technology, and mixed-use housing, all of which needs to be addressed with San Diego’s growing population. <b>Help shape this problem by joining our discussion!</b>"
-    },
-    {
-      id: 3,
-      src: home4,
-      header: "LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES",
-      title: "How might we help all San Diegans live healthy and active lives?",
-      txt:
-        "Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>"
     }
   ],
   title3: "D4SD In Action",
@@ -341,16 +341,16 @@ export const challengeContent = {
       img: challenge_mobility
     },
     {
+      title: "Health",
+      img: challenge_health
+    },
+    {
       title: "Environment",
       img: challenge_climate
     },
     {
       title: "Housing",
       img: challenge_housing
-    },
-    {
-      title: "Health",
-      img: challenge_health
     }
   ],
   contents: [
@@ -364,6 +364,7 @@ export const challengeContent = {
         {
           img: mobility1,
           problem: "Last Mile",
+          hover: "setLastMile",
           detail:
             "How might we improve the last-mile experience where traffic is congested, parking is scarce, and public transportation is limited?"
         },
@@ -384,6 +385,39 @@ export const challengeContent = {
           problem: "Autonomous Vehicles",
           detail:
             "With the potential of self-driving cars on the horizon, how might we prepare our city for major changes to transportation infrastructure? "
+        }
+      ]
+    },
+    {
+      id: "Health",
+      subtitle: "HEALTH",
+      title: "How might we help all San Diegans live healthy and active lives?",
+      texts:
+        "Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being.",
+      problems: [
+        {
+          img: health1,
+          problem: "Senior Health",
+          detail:
+            "How might we create new opportunities for seniors to stay active, feel appreciated, and remain socially integrated within the community?"
+        },
+        {
+          img: health2,
+          problem: "Community Well-Being ",
+          detail:
+            "How might we offer community support to those experiencing social isolation, depression or who are seeking support from others?"
+        },
+        {
+          img: health3,
+          problem: "Personal Data and Agency",
+          detail:
+            "How might data, wearable technology, and appropriate support help people take control of their journey to better health? "
+        },
+        {
+          img: health4,
+          problem: "Food Insecurity",
+          detail:
+            "How might we ensure that everyone in San Diego has reliable access to nutritious and affordable food?"
         }
       ]
     },
@@ -452,39 +486,6 @@ export const challengeContent = {
           problem: "Internet of Things (IoT)",
           detail:
             "How might we design services and internet-connected products for the home to make everyday life easier, more fun, and more secure?"
-        }
-      ]
-    },
-    {
-      id: "Health",
-      subtitle: "HEALTH",
-      title: "How might we help all San Diegans live healthy and active lives?",
-      texts:
-        "Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being.",
-      problems: [
-        {
-          img: health1,
-          problem: "Senior Health",
-          detail:
-            "How might we create new opportunities for seniors to stay active, feel appreciated, and remain socially integrated within the community?"
-        },
-        {
-          img: health2,
-          problem: "Community Well-Being ",
-          detail:
-            "How might we offer community support to those experiencing social isolation, depression or who are seeking support from others?"
-        },
-        {
-          img: health3,
-          problem: "Personal Data and Agency",
-          detail:
-            "How might data, wearable technology, and appropriate support help people take control of their journey to better health? "
-        },
-        {
-          img: health4,
-          problem: "Food Insecurity",
-          detail:
-            "How might we ensure that everyone in San Diego has reliable access to nutritious and affordable food?"
         }
       ]
     }
