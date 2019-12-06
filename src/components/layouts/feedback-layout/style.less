@@ -1,17 +1,22 @@
 @import "../../../styles/vars.less";
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
-.ProcessLayout {
+.FeedbackLayout {
+  padding-top: 48px;
   .landing-div {
+    padding-top: 64px;
     height: 45vh;
-    background-image: url("../../../assets/img/resource_header.svg");
-    background-size: 100%;
+    background-image: url("../../../assets/img/involve_header.svg");
+    background-size:contain;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
     //margin-top: 120px;
-    padding-top: 120px;
+    h1 {
+    }
+
   }
-  .process-content {
+  .stakeholder-content {
 
     min-width: 320px;
     width: 60%;
@@ -25,6 +30,10 @@
     h4 {
       padding: 14px;
       padding-bottom: 0px;
+      padding-top: @margin-base * 3;
+    }
+    h2 {
+      padding-top: @margin-base * 6;
     }
   }
 }
