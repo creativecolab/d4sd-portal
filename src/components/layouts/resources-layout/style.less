@@ -1,25 +1,25 @@
 @import "../../../styles/vars.less";
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
-.InvolvedLayout {
+
+.ResourcesLayout {
+  .ant-collapse-header {
+    font-size: 16px;
+  }
   // Section 1
   .landing-div {
-    height: auto;
-    min-height: 45vh;
-    background-image: url("../../../assets/img/involve_header.svg");
+    height: 45vh;
+    background-image: url("../../../assets/img/resource_header.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    padding-top: 15vh;
+    padding-top: 20vh;
+    @media screen and (max-width: 375px) {
+      padding-top: 15vh;
+      height: 65vh;
+      background-size: 125%;
+    }
   }
-  .button-row {
-    display: flex;
-    flex-direction: row;
-  }
-  .d4sdcard {
-    margin: @margin-base * 2;
-  }
-  // Section 2
   .involve-cards {
     margin-top: @margin-base * 2;
   }
@@ -61,24 +61,6 @@
     }
     @media screen and (min-width: @xl) {
       width: 70%;
-    }
-  }
-  .avatar {
-    @media screen and (max-width: @sm) {
-      width: 30px;
-      height: 30px;
-    }
-    @media screen and (min-width: @sm) {
-      width: 80px;
-      height: 80px;
-    }
-    @media screen and (min-width: @md) {
-      width: 80px;
-      height: 80px;
-    }
-    @media screen and (min-width: @lg) {
-      width: 70px;
-      height: 70px;
     }
   }
 }

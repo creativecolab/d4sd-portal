@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Steps, Button, Carousel, Card } from "@d4sd/components";
-import Menubar from "../../menubar/index";
+import Header from "../../Header/index";
+import "../../../styles/containers.less";
 import "./style.less";
 import { challengeContent } from "../../../assets/content.js";
 import ChallengeMobility from "../../../assets/img/challenge_mobility.svg";
@@ -51,18 +52,8 @@ const ChallengeLayout = (props: any) => {
 
   return (
     <div>
-      <Menubar />
+      <Header title={challengeContent.title} content={challengeContent.content} image={challengeContent.image}/>
       <div className="ChallengeLayout">
-        <div className="landing-div">
-          <Row type="flex" justify="center">
-            <Col xs={{ span: 20 }} md={{ span: 20 }}>
-              <h1 className="text">{challengeContent.title}</h1>
-            </Col>
-            <Col xs={{ span: 20 }} md={{ span: 15 }}>
-              <p dangerouslySetInnerHTML={{__html:challengeContent.content}} />
-            </Col>
-          </Row>
-        </div>
 
         <div className="challenge-icons">
           <Row justify="center" type="flex">

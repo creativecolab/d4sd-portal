@@ -16,6 +16,9 @@ import logo5 from "./img/home_logo5.png";
 import logo6 from "./img/home_logo6.png";
 import logo7 from "./img/home_logo7.png";
 
+import involve_header from "./img/involve_header.svg";
+
+
 import city from "./img/about_city.svg";
 import connect from "./img/about_connect.svg";
 import div from "./img/about_div.svg";
@@ -65,8 +68,8 @@ export const homeContent = {
   content1:
     "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
   title2: "Contribute to our mission",
-  content2:
-    "D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas. <br/><br/>D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.",
+  content2_1: "D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas.",
+  content2_2: "D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.",
   roles: [
     {
       image: innovator,
@@ -133,6 +136,7 @@ export const homeContent = {
 
 /*************************************About content***************************************/
 export const aboutContent = {
+  image: "about_header",
   title1: "About D4SD",
   content1:
     "Design for San Diego (D4SD) is a civic design challenge that provides a space for all of us to address the region's most challenging issues. D4SD offers a series of public workshops to bring together a wide range of stakeholders and to scaffold a process of framing human-centered design problems, prototyping solutions, and building alliances to bring good ideas to life.",
@@ -182,6 +186,7 @@ export const aboutContent = {
 
 /*************************************Involve content***************************************/
 export const involveContent = {
+  image: "involve_header",
   title1: "Get Involved",
   content1:
     "You can take part in D4SD in a variety of ways! Whether it be ideating solutions, giving feedback, teaching civic design in the classroom, or supporting the initiative, getting involved with D4SD can look a little different for each person. Below are a few ways to get involved.",
@@ -245,6 +250,7 @@ export const involveContent = {
 
 /********************************************FAQ*****************************************/
 export const faqContent = {
+  image: "faq_header",
   title: "Frequently Asked Questions",
   content:
     "Find answers to some of your questions below. If you still have a question that we did not address, please reach out by email at <a href='mailto:team@d4sd.org'> team@d4sd.org</a> and we will do our best to respond quickly.",
@@ -320,6 +326,7 @@ export const faqContent = {
 };
 
 export const challengeContent = {
+  image: "challenge_header",
   title: "Challenge Briefs",
   content:
     "What does it mean to be a Sustainable City?  For us, a sustainable San Diego is one where all parts of our city connect and support each other and the environment.  Working together, we can design ways to improve mobility, health, housing, and the climate for our region.",
@@ -486,6 +493,7 @@ export const challengeContent = {
 };
 
 export const timelineContent = {
+  image: "workspace_header",
   title1: "Workspace",
   content1:
     "D4SD provides support for our community to follow a human-centered design process where we collectively discover and understand civic issues, ideate and prototype potential solutions, pitch proposals to civic and business leaders, and activate the local community to address key civic challenges in our region.",
@@ -578,6 +586,7 @@ export const timelineContent = {
 };
 
 export const resourcesContent = {
+  image: "resource_header",
   title1: "Resources",
   content1:
     "This page provides a wealth of resources to help you learn methods for human-centered design, find out about the latest technology related to the challenges, and get answers to your frequently asked questions.",
@@ -600,6 +609,7 @@ export const resourcesContent = {
 };
 
 export const processContent = {
+  image: "resource_header",
   title1: "Process",
   content1:
     "D4SD participants will work together on teams to <b>discover</b> civic issues, to <b>ideate</b> novel solutions for those issues, to <b>prototype</b> and get feedback on proposed solutions, to pitch your refined concept, and to <b>activate</b> your community to help bring good ideas to life.  The following resources are meant to help you and your team get started at each phase of the D4SD civic design process.",
@@ -639,6 +649,7 @@ export const processContent = {
 };
 
 export const stakeholderContent = {
+  image: "resource_header",
   title1: "How to cultivate stakeholder relationships",
   content1:
     "Addressing civic challenges often involves understanding diverse perspectives from many stakeholders, including people who are directly and indirectly impacted by a particular problem.  Towards the goal of supporting community-driven design, we developed a guide to help participants and mentors establish and build relationships with community stakeholders.  Always remember that stakeholders are people.",
@@ -692,6 +703,7 @@ export const stakeholderContent = {
 };
 
 export const feedbackContent = {
+  image: "involve_header",
   title1: "Sign up to be a feedback provider",
   content1:
     "Innovators in D4SD would love to hear community members’ perspectives on their proposals. All San Diego community members are welcome to sign up here and to share their knowledge and experience with D4SD teams.",

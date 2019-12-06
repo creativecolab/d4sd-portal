@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Row, Col, Steps, Button, Carousel } from "@d4sd/components";
 import Menubar from "../../menubar/index";
 import "./style.less";
+import "../../../styles/containers.less";
 import { homeContent } from "../../../assets/content.js";
 import { url } from "inspector";
 
@@ -14,9 +15,6 @@ const photoCarouselSettings = {
   autoplay: true
 };
 
-const test = {
-  height: "500vh"
-};
 const logoCarouselSettings = {
   dots: false,
   infinite: true,
@@ -26,62 +24,71 @@ const logoCarouselSettings = {
   draggable: true,
   autoplay: true
 };
+
+
 const HomeLayout = (props: any) => {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const scrollToRef = () => {
+    if (ref && ref.current) {
+      console.log("ref");
+      console.log(ref)
+      window.scrollTo({
+        left: 0,
+        top: ref.current.offsetHeight,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   return (
     <div>
       <Menubar />
-
-      <div className="HomeLayout">
-        <div className="landing-div">
-          <Row gutter={[16, 16]} type="flex" justify="center" style={{"margin":"0"}}>
-            <Col md={{ span: 13 }} xs={{ span: 20 }}>
-              <p className="landing-header">{homeContent.subtitle1}</p>
-              <h1>{homeContent.title1}</h1>
-            </Col>
-            <Col md={{ span: 14 }} xs={{ span: 20 }}>
-              <p>{homeContent.content1}</p>
-            </Col>
-          </Row>
-          <Row type="flex" justify="center" className="layout-btns">
-            <Col md={{ span: 4 }} xs={{ span: 24 }}>
-              <Button type="primary" size="small">
+      <div className="landing">
+        <div className="container">
+          <h3>{homeContent.subtitle1}</h3>
+          <h1>{homeContent.title1}</h1>
+          <p>{homeContent.content1}</p>
+          <br/><br/>
+          <Row type="flex" justify="center">
+            <Col xs={24} md={9} lg={5}>
+            <a href="http://eepurl.com/c2kFon" target="_blank">
+              <Button type="primary" size="medium">
                 JOIN MAILING LIST
               </Button>
+            </a>
             </Col>
-            <Col md={{ span: 4 }} xs={{ span: 24 }}>
-              <Button type="primary-outline" size="small">
+            <Col xs={24} md={9} lg={5}>
+              <Button type="primary-outline" size="medium" onClick={scrollToRef}>
                 LEARN MORE
               </Button>
             </Col>
           </Row>
         </div>
-
-        <Row type="flex" justify="center" className="mission-statement">
-          <Col md={{ span: 14 }} xs={20}>
-            <h2>{homeContent.title2}</h2>
-            <p dangerouslySetInnerHTML={{ __html: homeContent.content2 }} />
-          </Col>
-        </Row>
-        <Row type="flex" justify="center">
-          <Col>
+      </div>
+      <div className="container">
+        <div className="paragraph">
+          <h2 ref={ref}>{homeContent.title2}</h2>
+          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_1 }} />
+          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_2 }} />
+          <a href="/getinvolved">
             <Button type="primary" size="medium">
-              LEARN MORE
+              GET INVOLVED
             </Button>
-          </Col>
-        </Row>
-
-        <Row className="involve-fig" type="flex" justify="center">
+          </a>
+        </div>
+        <Row type="flex" justify="center">
           {homeContent.roles.map(role => (
-            <Col md={{ span: 4 }} xs={{ span: 9 }}>
+            <Col md={{ span: 6 }} xs={{ span: 9 }}>
               <figure>
-                <img src={role.image}></img>
-                <figcaption>{role.contents}</figcaption>
+                <img src={role.image} style={{"width":"75%"}}/>
+                <h5>{role.contents}</h5>
               </figure>
             </Col>
           ))}
         </Row>
+      </div>
 
-        <div className="challenges">
+        <div className="paragraph challenges">
           <Carousel autoplay className="challenges-carousel">
             {homeContent.challenges.map(challenge => (
               <div className="challenge-item">
@@ -94,49 +101,55 @@ const HomeLayout = (props: any) => {
                     height: "80vh"
                   }}
                 >
-                  <p className="challenge-header">{challenge.header}</p>
+                <div className="container">
+                <div className="paragraph">
+                  <h3>{challenge.header}</h3>
                   <h2>{challenge.title}</h2>
-                  <Row type="flex" justify="center">
-                    <Col xs={{ span: 20 }} md={{ span: 14 }}>
-                      <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
-                    </Col>
-                    <Col md={{ span: 24 }}>
-                      <Button type="primary">Learn More</Button>
-                    </Col>
-                  </Row>
+                  <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
+                  <a href="/challenges">
+                    <Button type="primary">Learn More</Button>
+                  </a>
+                  </div>
+                </div>
                 </div>
               </div>
             ))}
           </Carousel>
         </div>
 
-        <div className="d4sd-in-action">
+        <div className="container">
+        <div className="paragraph">
           <h2>{homeContent.title3}</h2>
           <p dangerouslySetInnerHTML={{ __html: homeContent.content3 }} />
-          <Button>SEE WHAT HAPPENED IN 2017</Button>
-          {/* Carousel of multiple images if we have 4 more images(?) */}
-          <Carousel {...photoCarouselSettings} className="photo-carousel">
+          <a href="https://d4sd2017.ucsd.edu/" target="_blank">
+            <Button>SEE WHAT HAPPENED IN 2017</Button>
+          </a>
+          </div>
+          </div>
+          <Row type="flex" justify="center">
             {homeContent.actionImg.map(img => (
-              <div>
-                <img src={img} />
-              </div>
+              <Col md={6} xs={9}>
+                <img src={img} style={{"width":"98%"}}/>
+              </Col>
             ))}
-          </Carousel>
-        </div>
+          </Row>
 
-        <div className="meet-community">
+        <div className="container">
+        <div className="paragraph">
           <h2>{homeContent.title4}</h2>
           <p dangerouslySetInnerHTML={{ __html: homeContent.content4 }} />
+          <a href="/getinvolved">
           <Button>GET INVOLVED</Button>
+          </a>
+          </div>
+          </div>
           <Carousel {...logoCarouselSettings} className="logo-carousel">
             {homeContent.logos.map(logo => (
               <div>
-                <img src={logo} />
+                <img src={logo} style={{"width":"100%"}} />
               </div>
             ))}
           </Carousel>
-        </div>
-      </div>
     </div>
   );
 };

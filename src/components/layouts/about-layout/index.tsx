@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Row, Col, Steps, Button, Card, Avatar } from "@d4sd/components";
-import Menubar from "../../menubar/index";
+import Header from "../../Header/index";
+import "../../../styles/containers.less";
 import "./style.less";
-
+import { aboutContent } from "../../../assets/content.js";
 import AboutDiagram from "../../../assets/img/about_diagram.png";
 import AboutConnect from "../../../assets/img/about_connect.svg";
 import AboutDiv from "../../../assets/img/about_div.svg";
@@ -15,23 +16,8 @@ const { Meta } = Card;
 const AboutLayout = (props: any) => {
   return (
     <div>
-      <Menubar />
+      <Header title={aboutContent.title1} content={aboutContent.content1} image={aboutContent.image}/>
       <div className="AboutLayout">
-        <Row justify="center" type="flex" className="landing-div">
-          <Col xs={{ span: 23 }} md={{ span: 23 }}>
-            <h1>About D4SD</h1>
-          </Col>
-          <Col xs={{ span: 20 }} md={{ span: 16 }}>
-            <p>
-              Design for San Diego (D4SD) is a civic design challenge that
-              provides a space for all of us to address the region's most
-              challenging issues. D4SD offers a series of public workshops to
-              bring together a wide range of stakeholders and to scaffold a
-              process of framing human-centered design problems, prototyping
-              solutions, and building alliances to bring good ideas to life.
-            </p>
-          </Col>
-        </Row>
 
         <Row type="flex" justify="center" className="participate-content">
           <Col xs={{ span: 24 }} md={{ span: 24 }}>

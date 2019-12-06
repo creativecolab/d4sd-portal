@@ -1,66 +1,15 @@
 @import "../../../styles/vars.less";
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
-.HomeLayout {
-  // Section 1
+@import "../../../styles/containers.less";
 
-  .landing-div {
-    padding-top: @margin-base-2;
-    height: 100vh;
-    background-image: url("../../../assets/img/home_landing.svg");
-    background-size: cover;
-    background-position: center bottom;
-    text-align: center;
-    .landing-header {
-      text-align: center;
-    }
-    @media screen and (max-width: 375px) {
-      padding-top: 15vh;
-    }    
-  }
-  .layout-btns {
-    // margin-top: @margin-base-1;
-    padding-top: 5vh;
-  }
-
-  // Section 2
-  // .mission-statement {
-  //   height: 100vh;
-  //   .involve-svg {
-  //     padding-top: 40px;
-  //     display: flex;
-  //     flex-direction: row;
-  //     justify-content: space-between;
-  //   }
-  //   figure {
-  //     text-align: center;
-  //     img {
-  //       height: 150px;
-  //     }
-  //   }
-  // }
-
-  .mission-statement {
-    margin-top: @margin-base-2;
-  }
-
-  .involve-fig {
-    margin-top: @margin-base-1;
-    text-align: center;
-    color: black;
-    font-weight: 600;
-    figure {
-      text-align: center;
-      img {
-        margin: 5px;
-        max-height: 150px;
-      }
-    }
+  .landing {
+    .homebackground("home_landing");
   }
 
   // Section 3
   .challenges {
-    padding-top: 100px;
+
     .challenges-carousel {
       // text-align: center;
       height: 90vh;
@@ -74,7 +23,6 @@
         text-align: center;
       }
     }
-  }
 
   .ant-carousel .slick-dots li.slick-active button {
     border-radius: 50%;
@@ -92,31 +40,4 @@
     height: 5vh;
   }
 
-  // Section 4
-  .d4sd-in-action {
-    padding-top: 100px;
-
-    height: 75vh;
-    .photo-carousel {
-      padding-top: 30px;
-      img {
-        height: 20vh;
-      }
-    }
-  }
-
-  // Section 5
-  .meet-community {
-    padding-top: 100px;
-
-    height: 80vh;
-    .logo-carousel {
-      padding-top: 50px;
-
-      img {
-        height: 60px;
-        width: 150px;
-      }
-    }
-  }
 }
