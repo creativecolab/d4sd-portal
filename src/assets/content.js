@@ -32,12 +32,12 @@ import expert from "./img/involve_volunteer.svg";
 import innovator from "./img/involve_innovate.svg";
 import mail from "./img/involve_mail.svg";
 import feedback from "./img/involve_feedback.svg";
-
-import discover from "./img/timeline_discover.svg";
-import ideate from "./img/timeline_ideate.svg";
-import prototype from "./img/timeline_prototype.svg";
-import pitch from "./img/timeline_pitch.svg";
-import activate from "./img/timeline_activate.svg";
+//
+// import discover from "./img/timeline_discover.svg";
+// import ideate from "./img/timeline_ideate.svg";
+// import prototype from "./img/timeline_prototype.svg";
+// import pitch from "./img/timeline_pitch.svg";
+// import activate from "./img/timeline_activate.svg";
 
 import challenge_mobility from "./img/challenge_mobility.svg";
 import challenge_health from "./img/challenge_health.svg";
@@ -141,8 +141,7 @@ export const aboutContent = {
   content1:
     "Design for San Diego (D4SD) is a civic design challenge that provides a space for all of us to address the region's most challenging issues. D4SD offers a series of public workshops to bring together a wide range of stakeholders and to scaffold a process of framing human-centered design problems, prototyping solutions, and building alliances to bring good ideas to life.",
   title2: "Who can participate?",
-  content2:
-    "Anyone! If you care about the city and want to have a chance to have your voice included in the conversation, then we welcome you! Find below some potential ways groups that can participate.",
+  content2: "Anyone! If you care about the city and want to have a chance to have your voice included in the conversation, then we welcome you! Find below some potential ways groups that can participate.",
   title3: "What are the goals of D4SD?",
   title4: "What and when are the key events?",
   content4:
@@ -492,7 +491,7 @@ export const challengeContent = {
   ]
 };
 
-export const timelineContent = {
+export const workspaceContent = {
   image: "workspace_header",
   title1: "Workspace",
   content1:
@@ -522,7 +521,7 @@ export const timelineContent = {
         "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
       link2: "/challenges",
       target: "_blank",
-      img: discover
+      img: "timeline_discover"
     },
     {
       stage: "Share your Ideas and Find a Team",
@@ -538,7 +537,7 @@ export const timelineContent = {
         "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
       isAction1: true,
       isAction2: true,
-      img: ideate
+      img: "timeline_ideate"
     },
     {
       stage: "Propose Initial Concepts and Get Community Feedback",
@@ -552,7 +551,7 @@ export const timelineContent = {
       note: "Registration will open on JAN 6",
       isAction1: true,
       isAction2: false,
-      img: prototype
+      img: "timeline_prototype"
     },
     {
       stage: "Submit Final Proposals for the D4SD Summit  ",
@@ -566,7 +565,7 @@ export const timelineContent = {
       note: "Registration will open on JAN 6",
       isAction1: true,
       isAction2: false,
-      img: pitch
+      img: "timeline_pitch"
     },
     {
       stage: "Create Community Alliances to Support your Proposal ",
@@ -580,7 +579,7 @@ export const timelineContent = {
       note: "Registration will open on JAN 6",
       isAction1: true,
       isAction2: false,
-      img: activate
+      img: "timeline_activate"
     }
   ]
 };

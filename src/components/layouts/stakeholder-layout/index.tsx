@@ -1,46 +1,38 @@
 import React from 'react';
-import { Row, Col, Button, Card} from "@d4sd/components";
-import Menubar from "../../menubar/index";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
 import { stakeholderContent } from "../../../assets/content.js";
-import "./style.less";
+
 const StakeholderLayout = (props: any) => {
   return (
     <div>
-      <Menubar />
-      <div className="StakeholderLayout">
-        <Row type="flex" justify="center" className="landing-div">
-        <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-          <Col xs={{ span: 20 }} md={{ span: 14 }}>
-            <h1>{stakeholderContent.title1}</h1>
-          </Col>
-            <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-            <Col xs={{ span: 20 }} md={{ span: 14 }}>
-          <p dangerouslySetInnerHTML={{__html:stakeholderContent.content1}}/>
-          </Col>
-          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-        </Row>
-        <Row className="stakeholder-content">
+      <Header title={stakeholderContent.title1} content={stakeholderContent.content1} image={stakeholderContent.image}/>
+      <div className="container">
+        <div className="section">
           <h2>{stakeholderContent.title2}</h2>
           {stakeholderContent.content2.map((content) => {
             return (
               <div>
-                <h4 dangerouslySetInnerHTML={{__html:content.title}}></h4>
+                <h4 style={{"textAlign":"left"}} dangerouslySetInnerHTML={{__html:content.title}}></h4>
                 <p dangerouslySetInnerHTML={{__html:content.txt}}/>
               </div>
             )
           })}
+          </div>
+          <div className="section">
           <h2>{stakeholderContent.title3}</h2>
           {stakeholderContent.content3.map((content) => {
             return (
               <div>
-                <h4 dangerouslySetInnerHTML={{__html:content.title}}></h4>
+                <h4 style={{"textAlign":"left"}} dangerouslySetInnerHTML={{__html:content.title}}></h4>
                 <p dangerouslySetInnerHTML={{__html:content.txt}}/>
               </div>
             )
           })}
-        </Row>
       </div>
+      </div>
+      <br/><br/>
+      <Footer/>
     </div>
   )
 }

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel, Card, Avatar, Icon } from "@d4sd/components";
+import React from "react";
+import { Row, Col, Card, Avatar, Button } from "@d4sd/components";
 import Header from "../../Header/index";
+import Footer from "../../Footer/index";
 import "../../../styles/containers.less";
 import "./style.less";
-
-//  Involved Icons
 import { involveContent } from "../../../assets/content.js";
 const { Meta } = Card;
+
 const InvolvedLayout = (props: any) => {
   return (
     <div>
@@ -16,7 +16,7 @@ const InvolvedLayout = (props: any) => {
           {involveContent.roles.map((content, i)=> {
             return (
               <Col xs={24} lg={12}>
-                <Card actions={[<a href={content.link} target={content.new}>
+              <Card actions={[<a href={content.link} target={content.new}>
                   <Button type="primary">{content.action}</Button></a>]}>
                   <Meta
                     avatar={<Avatar src={content.image} className="avatar" />}
@@ -29,6 +29,8 @@ const InvolvedLayout = (props: any) => {
           })}
         </Row>
       </div>
+      <br/><br/>
+      <Footer/>
     </div>
   );
 };
