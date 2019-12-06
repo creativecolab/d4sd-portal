@@ -11,7 +11,7 @@
   flex-direction: row;
   font-weight: medium;
   height: @tab-height;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -120,7 +120,8 @@
 
 #mobileNav{
   background-color: @d4sd-color;
-  width: 100vw;
+  width: 100%;
+  height: @tab-height;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -133,7 +134,7 @@
 
 }
 
-li.ant-menu-item.mobile-menu-item{ 
+li.ant-menu-item.mobile-menu-item{
   width: @mobile-navbar-width;
   height: @mobile-navbar-height;
   background-color: @d4sd-color;
