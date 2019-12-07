@@ -37,10 +37,9 @@ const ChallengeLayout = (props: any) => {
   const health = useRef<HTMLHeadingElement>(null);
   const housing = useRef<HTMLHeadingElement>(null);
   const environment = useRef<HTMLHeadingElement>(null);
+
   const scrollToMobility = () => {
-    console.log("click")
     if (mobility && mobility.current) {
-      console.log("click2")
       const position = mobility.current.offsetTop - 90;
       window.scrollTo({
         left: 0,
@@ -88,26 +87,26 @@ const ChallengeLayout = (props: any) => {
         <div className="section">
           <Row justify="center" type="flex">
           <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToMobility}>
-              <img src={challengeContent.nav[0].img} style={{"width":"75%"}}/>
+            <figure onClick={scrollToMobility} className="challengeicons">
+              <img src={challengeContent.nav[0].img}/>
               <h5 className="challenge-icon-caption">{challengeContent.nav[0].title}</h5>
             </figure>
           </Col>
           <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHealth}>
-              <img src={challengeContent.nav[1].img} style={{"width":"75%"}}/>
+            <figure onClick={scrollToHealth} className="challengeicons">
+              <img src={challengeContent.nav[1].img}/>
               <h5 className="challenge-icon-caption">{challengeContent.nav[1].title}</h5>
             </figure>
           </Col>
           <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToEnvironment}>
-              <img src={challengeContent.nav[2].img} style={{"width":"75%"}}/>
+            <figure onClick={scrollToEnvironment} className="challengeicons">
+              <img src={challengeContent.nav[2].img}/>
               <h5 className="challenge-icon-caption">{challengeContent.nav[2].title}</h5>
             </figure>
           </Col>
           <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHousing}>
-              <img src={challengeContent.nav[3].img} style={{"width":"75%"}}/>
+            <figure onClick={scrollToHousing} className="challengeicons">
+              <img src={challengeContent.nav[3].img}/>
               <h5 className="challenge-icon-caption">{challengeContent.nav[3].title}</h5>
             </figure>
           </Col>
@@ -121,14 +120,10 @@ const ChallengeLayout = (props: any) => {
         </div>
 
         <div className="section">
-          <Row type="flex" justify="center">
-            <Col xs={{ span: 20 }} md={{ span: 20 }}>
               <h4 className="text" ref={mobility}>
                 <span>MOBILITY: </span>How might we help people move freely in San
                 Diego?
               </h4>
-            </Col>
-          </Row>
           <Row type="flex" justify="center" >
             <Col
               xs={24}
