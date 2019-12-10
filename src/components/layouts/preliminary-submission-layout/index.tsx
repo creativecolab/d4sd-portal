@@ -5,6 +5,7 @@ import { Row, Col, Steps, Button } from "@d4sd/components";
 import HowItWorksCard from "../../preliminarysubmission-cards/how-it-works/";
 import ProjectInfoCard from "../../preliminarysubmission-cards/project-info/";
 import UploadCard from "../../preliminarysubmission-cards/upload/";
+import FeedbackCard from "../../preliminarysubmission-cards/feedback/";
 import Menubar from "../../menubar/index";
 import LoginCard from "../../login-card";
 import "./style.less";
@@ -68,7 +69,7 @@ const PrelimSubmitLayout = (props: any) => {
             <UploadCard setSubmitStep={setSubmitStep} />
           )}
           {submitStep === "feedback" && (
-            <UploadCard setSubmitStep={setSubmitStep} />
+            <FeedbackCard setSubmitStep={setSubmitStep} />
           )}
           {submitStep === "review" && (
             <UploadCard setSubmitStep={setSubmitStep} />

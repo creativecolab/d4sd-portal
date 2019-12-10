@@ -81,7 +81,7 @@ const ProjectInfoCard = (props: any) => {
         <Row className="project-info-details" gutter={16}>
           <h4>1. Provide Details about the Team</h4>
           <p>Please provide a unique name for your project (up to 50 characters)</p>
-          <Input placeholder="Safe Roads for San Diego" name="name" onChange={handleChange} />
+          <Input placeholder="Safe Roads for San Diego" name="name" onChange={handleChange} className="project-name-input"/>
           <h4>2. Team member names and emails</h4>
           <p>If you have any other team members, please click on “Add another teammate” and give their full name and email address. </p>
         </Row>
