@@ -12,11 +12,18 @@ const { Step } = Steps;
 const SignupLayout = (props: any) => {
   // hook, must be one of "start, role, ethics, etc."
   const [signupStep, setSignupStep] = useState("start");
+  const [emailVerified, setEmailVerified] = useState(false);
   const mapSignupStepToNum = (signupStep: string) => {
     switch (signupStep) {
-      case "start":
+      case 'start':
         return 0;
-      case "success":
+      case 'email':
+        return 1;
+      case 'role':
+        return 2;
+      case 'ethics':
+        return 3;
+      case 'success':
         return 4;
       default:
         return 0;
@@ -55,10 +62,10 @@ const SignupLayout = (props: any) => {
           {signupStep === "success" && (
             <div>
               <Row type="flex" justify="center">
-                <Col span="18" className="joint-challenge">
+                <Col span="20">
                   <h2>
-                    You’ve successfully joined the D4SD 2020 Challenge! Go to
-                    your Workspace to register your team.
+                    You’ve successfully joined the D4SD 2020 Challenge!
+                    Go to your Workspace to register your team.
                   </h2>
                 </Col>
               </Row>

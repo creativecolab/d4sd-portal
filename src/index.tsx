@@ -3,9 +3,7 @@ import ReactDOM from "react-dom";
 import { ConnectedRouter } from "connected-react-router";
 import { Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
-
 import configureStore, { history } from "./store";
-
 import "./styles/reset.css";
 import SignupPage from "./containers/signup-page";
 import LoginPage from "./containers/login-page";
@@ -16,7 +14,6 @@ import ChallengePage from "./containers/challenge-page";
 import ResourcesPage from "./containers/resources-page";
 import FAQPage from "./containers/faq-page";
 import WorkspacePage from "./containers/workspace-page";
-
 import ProcessPage from "./components/layouts/process-layout";
 import StakeholderPage from "./components/layouts/stakeholder-layout";
 import FeedbackPage from "./components/layouts/feedback-layout";
@@ -25,20 +22,6 @@ import PreliminarySubmissionPage from "./components/layouts/preliminary-submissi
 
 import "./index.less";
 import "./styles/reset.css";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Challenge from "./pages/Challenge";
-// import Resources from "./pages/Resources";
-// import FAQ from "./pages/FAQ";
-// import Forum from "./pages/Forum";
-// import Events from "./pages/Events";
-// import Involve from "./pages/Involve";
-// import Playbook from "./pages/Playbook";
-// import PastSolution from "./pages/PastSolution";
-// import Process from "./pages/Process";
-// import Stakeholder from "./pages/Stakeholder";
-// import Workspace from "./pages/workspace/Workspace";
-// import SignupPage from './containers/signup-page';
 
 // @ts-ignore
 const store = configureStore();
