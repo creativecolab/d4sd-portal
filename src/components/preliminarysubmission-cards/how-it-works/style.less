@@ -1,0 +1,26 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+.HowItWorksCard {
+  max-width: 90%;
+  margin: auto;
+  height: 100%;
+  .howitworks-header {
+    font-weight: bold;
+  }
+  h4 {
+    color: @d4sd-color;
+  }
+  .howitworks-body {
+    margin-left: @margin-base * 3/4;
+    li {
+      margin-bottom: @margin-base;
+      margin-top: @margin-base;
+      color: @b1;
+
+      padding-left: @margin-base * 2;
+    }
+    .howitworks-list {
+      list-style: decimal;
+    }
+  }
+}

@@ -21,6 +21,8 @@ import ProcessPage from "./components/layouts/process-layout";
 import StakeholderPage from "./components/layouts/stakeholder-layout";
 import FeedbackPage from "./components/layouts/feedback-layout";
 
+import PreliminarySubmissionPage from "./components/layouts/preliminary-submission-layout";
+
 import "./index.less";
 import "./styles/reset.css";
 // import Home from "./pages/Home";
@@ -58,6 +60,8 @@ const App = () => (
             <Route exact path='/resources' component={ResourcesPage}/>
             <Route exact path='/resources/process' component={ProcessPage}/>
             <Route exact path='/resources/stakeholder' component={StakeholderPage}/>
+
+            <Route exact path='/workspace/prelim' component={PreliminarySubmissionPage}/>
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
