@@ -1,0 +1,96 @@
+@import "../../../styles/fonts.less";
+@img = timeline_pitch;
+.d4sdtimeline-wrapper  {
+  .d4sdtimeline {
+    #timeline_discover {
+      .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
+        width: 50px;
+        height: 50px;
+        left: 0;
+        border: 0;
+        background-image: url("../../../assets/img/timeline_discover.svg");
+      }
+    }
+    #timeline_ideate {
+      .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
+        width: 50px;
+        height: 50px;
+        left: 0;
+        border: 0;
+        background-image: url("../../../assets/img/timeline_ideate.svg");
+      }
+    }
+    #timeline_pitch {
+      .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
+        width: 50px;
+        height: 50px;
+        left: 0;
+        border: 0;
+        background-image: url("../../../assets/img/timeline_pitch.svg");
+      }
+    }
+    #timeline_activate {
+      .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
+        width: 50px;
+        height: 50px;
+        left: 0;
+        border: 0;
+        background-image: url("../../../assets/img/timeline_activate.svg");
+      }
+    }
+    #timeline_prototype {
+      .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
+        width: 50px;
+        height: 50px;
+        left: 0;
+        border: 0;
+        background-image: url("../../../assets/img/timeline_prototype.svg");
+      }
+    }
+  }
+}
+
+
+
+
+.d4sdtimeline-wrapper .d4sdtimeline .ant-timeline-item-head::before {
+    display: none;
+}
+
+.d4sdtimeline-wrapper .d4sdtimeline .ant-timeline-item-tail {
+    border-left: 5px solid #4497FF;
+    left: 22.5px;
+    height: calc(100% + 0px);
+}
+
+.ant-timeline-item {
+  padding: 0!important;
+}
+
+.d4sdtimeline-wrapper .d4sdtimeline .ant-timeline-item-content {
+    margin-left: 8rem;
+    padding-bottom: 25px;
+}
+
+.timelinecard {
+    box-sizing: border-box;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.45);
+    background: white;
+    border-radius: 10px!important;
+    .ant-collapse {
+        border-radius: 10px!important;
+    }
+    .ant-collapse-header {
+      font-size: 2.6rem;
+      font-weight: 600;
+      font-family: 'Montserrat', 'Open Sans', sans-serif;
+      color: #4497FF!important;
+      text-align: left;
+      padding: 2.5rem!important;
+    }
+
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+  left: 96%!important;
+}
