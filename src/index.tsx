@@ -1,25 +1,27 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { ConnectedRouter } from "connected-react-router";
-import { Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import configureStore, { history } from "./store";
+import configureStore, { history } from './store';
 
-import "./styles/reset.css";
-import SignupPage from "./containers/signup-page";
-import LoginPage from "./containers/login-page";
-import HomePage from "./containers/home-page";
-import InvolvedPage from "./containers/involved-page";
-import AboutPage from "./containers/about-page";
-import ChallengePage from "./containers/challenge-page";
-import FAQPage from "./containers/faq-page";
+import './styles/reset.css';
+import SignupPage from './containers/signup-page';
+import LoginPage from './containers/login-page';
+import HomePage from './containers/home-page';
+import InvolvedPage from './containers/involved-page';
+import AboutPage from './containers/about-page';
+import ChallengePage from './containers/challenge-page';
+import FAQPage from './containers/faq-page';
+import SubmissionPage from './containers/submission-page';
+import FeedbackPage from './containers/feedback-page';
 
-import ProcessPage from "./components/layouts/process-layout";
-import StakeholderPage from "./components/layouts/stakeholder-layout";
+import ProcessPage from './components/layouts/process-layout';
+import StakeholderPage from './components/layouts/stakeholder-layout';
 
-import "./index.less";
-import "./styles/reset.css";
+import './index.less';
+
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Challenge from "./pages/Challenge";
@@ -35,23 +37,28 @@ import "./styles/reset.css";
 // import Workspace from "./pages/workspace/Workspace";
 // import SignupPage from './containers/signup-page';
 
+// eslint-disable-next-line
 // @ts-ignore
 const store = configureStore();
 
-const App = () => (
+const App = (): JSX.Element => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <>
         <main>
           <Switch>
+            {/* eslint-disable */}
             <Route exact path="/" component={HomePage} />
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/getinvolved" component={InvolvedPage} />
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/faq" component={FAQPage} />
-            <Route exact path='/resources/process' component={ProcessPage}/>
-            <Route exact path='/resources/stakeholder' component={StakeholderPage}/>
+            <Route exact path="/resources/process" component={ProcessPage} />
+            <Route exact path="/resources/stakeholder" component={StakeholderPage} />
+
+            <Route exact path="/submission" component={SubmissionPage} />
+            <Route exact path="/feedback" component={FeedbackPage} />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -70,6 +77,7 @@ const App = () => (
             */}
             <Route exact path="/signup" component={SignupPage} />
             <Route exect path="/login" component={LoginPage} />
+            {/* eslint-enable */}
           </Switch>
         </main>
       </>
@@ -77,4 +85,4 @@ const App = () => (
   </Provider>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root')); // eslint-disable-line
