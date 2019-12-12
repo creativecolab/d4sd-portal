@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Row, Col, Steps, Button,
+  Row, Col, Steps, Button
 } from '@d4sd/components';
 import Menubar from '../../menubar/index';
 import './style.less';
