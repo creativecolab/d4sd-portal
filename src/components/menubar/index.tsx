@@ -26,6 +26,7 @@ function Menubar(props: any) {
   useEffect(() => {
     console.log(history.location.pathname);
     switch (history.location.pathname) {
+      case "/workspace/prelim":
       case "/workspace":
         setTab(["workspace"]);
         break;

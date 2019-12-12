@@ -64,3 +64,8 @@ p {
   letter-spacing: 0.02rem;
   text-align: left;
 }
+
+// specific fix for ant-d icons on steps not vertically aligned because reset.css messes it up
+.ant-steps-item-finish .ant-steps-icon {
+  vertical-align: text-top;
+}

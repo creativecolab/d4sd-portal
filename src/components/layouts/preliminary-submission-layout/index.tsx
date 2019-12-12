@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Row, Col, Steps, Button } from "@d4sd/components";
+import { Row, Col, Steps, Button, Header } from "@d4sd/components";
 import HowItWorksCard from "../../preliminarysubmission-cards/how-it-works/";
 import ProjectInfoCard from "../../preliminarysubmission-cards/project-info/";
 import UploadCard from "../../preliminarysubmission-cards/upload/";
 import FeedbackCard from "../../preliminarysubmission-cards/feedback/";
+import PrelimFinishCard from "../../preliminarysubmission-cards/prelim-finish";
 import Menubar from "../../menubar/index";
 import LoginCard from "../../login-card";
 import "./style.less";
@@ -14,7 +15,7 @@ const { Step } = Steps;
 
 const PrelimSubmitLayout = (props: any) => {
   // hook, must be one of "start, role, ethics, etc."
-  const [submitStep, setSubmitStep] = useState("upload");
+  const [submitStep, setSubmitStep] = useState("start");
   const mapSubmitStepToNum = (submitStep: string) => {
     switch (submitStep) {
       case "start":
@@ -27,6 +28,8 @@ const PrelimSubmitLayout = (props: any) => {
         return 3;
       case "review":
         return 4;
+      case "done":
+        return 5;
       default:
         return 0;
     }
@@ -36,16 +39,8 @@ const PrelimSubmitLayout = (props: any) => {
   return (
     <div>
       <Menubar />
-      <div className="SignupLayout">
-        <Row className="heading" type="flex" justify="center">
-          <Col span={20}>
-            <h1 className="heading-message">
-              {submitStep === "start" && "Workspace Sign Up"}
-              {submitStep === "success" && "Welcome to D4SD Workspace!"}
-              {submitStep === "login" && "D4SD Workspace"}
-            </h1>
-          </Col>
-        </Row>
+      <div className="PrelimSubmitLayout">
+        <Header title="Preliminary Submission" back="Back to workspace" handleBackClick={undefined}/>
 
         <Row className="card-container">
         <Steps
@@ -57,7 +52,7 @@ const PrelimSubmitLayout = (props: any) => {
         <Step title="Project Info" />
         <Step title="Upload" />
         <Step title="Feedback" />
-        <Step title="Review" />
+        <Step title="Review & Submit" />
         </Steps>
           {submitStep === "start" && (
             <HowItWorksCard setSubmitStep={setSubmitStep} />
@@ -73,6 +68,9 @@ const PrelimSubmitLayout = (props: any) => {
           )}
           {submitStep === "review" && (
             <UploadCard setSubmitStep={setSubmitStep} />
+          )}
+          {submitStep === "done" && (
+            <PrelimFinishCard setSubmitStep={setSubmitStep} />
           )}
         </Row>
       </div>

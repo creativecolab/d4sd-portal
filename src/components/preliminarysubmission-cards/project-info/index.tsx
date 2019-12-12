@@ -8,7 +8,13 @@ import './style.less';
 
 const ProjectInfoCard = (props: any) => {
   const { register, handleSubmit, setValue } = useForm();
+  const saveWork = () => {
+    localStorage.setItem("teammateNames-d4sd-prelim-submit", JSON.stringify(teammateNames));
+    localStorage.setItem("teammateEmails-d4sd-prelim-submit", JSON.stringify(teammateEmails));
+  }
   const onSubmit = (data: any) => {
+    saveWork();
+      console.log(data);
     if (teammateNames.length == 0) {
       message.error("Missing teammates names!");
       return;
@@ -29,15 +35,16 @@ const ProjectInfoCard = (props: any) => {
         return;
       }
     }
-    console.log(data);
+
     // Add your axios stuff here
     // data.email, data.password
+
+    // store in localstroage metadata
+
+
+    props.setSubmitStep("upload"); // run this after data is stored properly
   };
-  // register inputs
-  useEffect(() => {
-    register({ name: 'teammate0-name' });
-    register({ name: 'teammate0-email' });
-  }, []);
+
   const handleChange = (e: any) => {
     setValue(e.target.name, e.target.value);
   };
@@ -46,10 +53,22 @@ const ProjectInfoCard = (props: any) => {
     //const temp : Array<any> = [];
     //temp.push(e.target.value);
     //setTeammateNames(temp);
+    let i = parseInt(e.target.name[8]);
+    console.log(e.target.name, i, "nameChange")
+    const temp = JSON.parse(JSON.stringify(teammateNames));
+    temp[i] = e.target.value;
+    setTeammateNames(temp);
+    console.log(teammateNames);
   };
   const handleChangeTeammateEmail = (e: any) => {
     setValue(e.target.name, e.target.value);
     //const temp : Array<any> = [];
+    let i = parseInt(e.target.name[8]);
+    console.log(e.target.name, i, "emailChange")
+    const temp = JSON.parse(JSON.stringify(teammateEmails));
+    temp[i] = e.target.value;
+    setTeammateEmails(temp);
+    console.log(teammateEmails);
     //temp.push(e.target.value);
     //setTeammateEmails(temp);
   };
@@ -73,6 +92,39 @@ const ProjectInfoCard = (props: any) => {
     setTeammateNames(temp);
     setTeammateEmails(temp2);
   }
+  // register inputs
+  useEffect(() => {
+
+    // retreive from localstorage if possible
+    let locemails : string | null = localStorage.getItem("teammateEmails-d4sd-prelim-submit");
+    let emails;
+    if (locemails) {
+      emails = JSON.parse(locemails);
+      setTeammateEmails(emails);
+    } else {
+      emails = [];
+    }
+    let locnames : string | null = localStorage.getItem("teammateNames-d4sd-prelim-submit");
+    let names;
+    if (locnames) {
+      names = JSON.parse(locnames);
+      setTeammateNames(names);
+    }
+    else {
+      names = [];
+    }
+    for (let i = 0; i < names.length; i++) {
+      register({ name: 'teammate'+i+'-name' });
+      register({ name: 'teammate'+i+'-email' });
+      setValue("teammate" + i + "-name", names[i]);
+      setValue("teammate" + i + "-email",emails[i]);
+    }
+    if (names.length == 0) {
+      register({ name: 'teammate0-name' });
+      register({ name: 'teammate0-email' });
+    }
+
+  }, []);
   return (
   <div className="ProjectInfoCard">
     <div className="ProjectInfo-body">
@@ -98,10 +150,10 @@ const ProjectInfoCard = (props: any) => {
           return (
             <Row className="team-input-part" gutter={16} key={"teammate-" + i}>
             <Col span={8}>
-              <Input name={"teammate" + i + "-name"} className="nameInput" onChange={handleChangeTeammateName} />
+              <Input name={"teammate" + i + "-name"} className="nameInput" onChange={handleChangeTeammateName} value={teammateName} />
             </Col>
             <Col span={10}>
-              <Input name={"teammate" + i + "-email"} className="emailInput" onChange={handleChangeTeammateEmail} />
+              <Input name={"teammate" + i + "-email"} className="emailInput" onChange={handleChangeTeammateEmail} value={teammateEmails[i]}/>
             </Col>
             <Col span={6}>
               <Button type="secondary-outline" size="medium" onClick={()=>{removeMember(i)}}>REMOVE</Button>
@@ -112,8 +164,8 @@ const ProjectInfoCard = (props: any) => {
         <Button type="primary-outline" size="medium" onClick={handleClickAddMember}>ADD A MEMBER</Button>
         </Row>
         <Row className="bottom-btns">
-          <Button className="bottom-btn" type="primary" onClick={() => {props.setSubmitStep("start")}}>BACK</Button>
-          <Button className="bottom-btn" type="primary" htmlType="submit" onClick={() => {props.setSubmitStep("upload")}}>NEXT</Button>
+          <Button className="bottom-btn" type="primary" onClick={() => {saveWork();props.setSubmitStep("start")}}>BACK</Button>
+          <Button className="bottom-btn" type="primary" htmlType="submit">NEXT</Button>
         </Row>
     </Form>
     </div>
