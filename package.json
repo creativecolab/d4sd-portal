@@ -20,11 +20,8 @@
     "react-app-rewired": "^2.1.3",
     "react-browser-router": "^2.1.2",
     "react-dom": "^16.10.2",
-<<<<<<< HEAD
     "react-dropzone": "^10.2.1",
-=======
     "react-google-login": "^5.0.7",
->>>>>>> 5da3085cd20a1da060d89dd62d5291c9c963d495
     "react-hook-form": "^3.26.4",
     "react-intersection-observer": "^8.25.1",
     "react-mailchimp-form": "^1.0.2",
@@ -32,7 +29,7 @@
     "react-reveal": "^1.2.2",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "react-spring": "^8.0.27",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
