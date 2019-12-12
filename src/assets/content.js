@@ -18,7 +18,6 @@ import logo7 from "./img/home_logo7.png";
 
 import involve_header from "./img/involve_header.svg";
 
-
 import city from "./img/about_city.svg";
 import connect from "./img/about_connect.svg";
 import div from "./img/about_div.svg";
@@ -68,8 +67,10 @@ export const homeContent = {
   content1:
     "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
   title2: "Contribute to our mission",
-  content2_1: "D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas.",
-  content2_2: "D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.",
+  content2_1:
+    "D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas.",
+  content2_2:
+    "D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.",
   roles: [
     {
       image: innovator,
@@ -141,7 +142,8 @@ export const aboutContent = {
   content1:
     "Design for San Diego (D4SD) is a civic design challenge that provides a space for all of us to address the region's most challenging issues. D4SD offers a series of public workshops to bring together a wide range of stakeholders and to scaffold a process of framing human-centered design problems, prototyping solutions, and building alliances to bring good ideas to life.",
   title2: "Who can participate?",
-  content2: "Anyone! If you care about the city and want to have a chance to have your voice included in the conversation, then we welcome you! Find below some potential ways groups that can participate.",
+  content2:
+    "Anyone! If you care about the city and want to have a chance to have your voice included in the conversation, then we welcome you! Find below some potential ways groups that can participate.",
   title3: "What are the goals of D4SD?",
   title4: "What and when are the key events?",
   content4:
@@ -506,6 +508,8 @@ export const workspaceContent = {
   title4: "Deliverables",
   content4:
     "A valid submission for D4SD 2020 includes a written summary of a specific problem you aim to solve, a written summary of your solution, a link to a prototype of your solution, and a visual poster that can be printed and displayed at a design summit.",
+  link: "/signup",
+  action: "Join D4SD",
   timeline: [
     {
       stage: "Explore Challenges Impacting our Community ",
