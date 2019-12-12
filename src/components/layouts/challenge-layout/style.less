@@ -2,14 +2,16 @@
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
 .ChallengeLayout {
-  // Section 1
-  .landing-div {
-    height: 60vh;
-    background-image: url("../../../assets/img/challenge_header.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    padding-top: 20vh;
+  .challengeicons {
+    &:hover {
+      cursor: pointer;
+      h5 {
+        color: #4496FF;
+      }
+    }
+    img {
+      width: 75%;
+    }
   }
 
   .text {
@@ -25,10 +27,7 @@
   }
   figure {
     text-align: center;
-    img {
-      height: 100px;
-      max-height: 150px;
-    }
+
   }
 
   // How do you fit in

@@ -1,27 +1,18 @@
-import React, { useState } from "react";
-import { Row, Col, Card, Collapse } from "@d4sd/components";
-import Menubar from "../../menubar/index";
+import React from "react";
+import { Collapse } from "@d4sd/components";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
 import "./style.less";
 import { faqContent } from "../../../assets/content.js";
-const { Meta } = Card;
 const { Panel } = Collapse;
 
 const FaqLayout = (props: any) => {
   return (
     <div>
-      <Menubar />
-      <div className="FaqLayout">
-        <Row className="landing-div" type="flex" justify="center">
-          <Col span="20">
-            <h1>{faqContent.title}</h1>
-          </Col>
-          <Col xs={{ span: 14 }} md={{ span: 14 }}>
-            <p dangerouslySetInnerHTML={{__html: faqContent.content }}>
-            </p>
-          </Col>
-        </Row>
-
-        <div className="faq-cards">
+      <Header title={faqContent.title} content={faqContent.content} image={faqContent.image}/>
+      <div className="container paragraph">
+        <div className="faqcard">
           <Collapse accordion>
             {faqContent.faqs.map((faqContent: any) => (
               <Panel
@@ -34,6 +25,8 @@ const FaqLayout = (props: any) => {
           </Collapse>
         </div>
       </div>
+      <br/><br/>
+      <Footer/>
     </div>
   );
 };

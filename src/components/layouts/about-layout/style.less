@@ -1,44 +1,21 @@
 @import "../../../styles/vars.less";
 @import "../../../styles/mixins.less";
 @import "../../../styles/fonts.less";
-.AboutLayout {
-  // Section 1
-  .landing-div {
-    height: 60vh;
-    background-image: url("../../../assets/img/about_header.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    padding-top: 20vh;
-    @media screen and (max-width: 375px) {
-      padding-top: 15vh;
-      height: 70vh;
-    }
+.aboutavatar {
+  @media screen and (max-width: @sm) {
+    width: 30px;
+    height: 30px;
   }
-  .button-row {
-    display: flex;
-    flex-direction: row;
+  @media screen and (min-width: @sm) {
+    width: 80px;
+    height: 80px;
   }
-
-  // Section 2
-  .participate-content {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    img {
-      width: 100%;
-    }
+  @media screen and (min-width: @md) {
+    width: 80px;
+    height: 80px;
   }
-
-  // Section 3
-  .goals {
-    padding-top: 5vh;
-    height: auto;
-    background-color: #eff8ff;
-    .ant-card-body {
-      background-color: #eff8ff;
-    }
-    .ant-avatar {
-      border-radius: 0px;
-    }
+  @media screen and (min-width: @lg) {
+    width: 70px;
+    height: 70px;
   }
 }

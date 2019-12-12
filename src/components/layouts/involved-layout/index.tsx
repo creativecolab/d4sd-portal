@@ -1,42 +1,23 @@
-import React, { useState } from "react";
-import { Row, Col, Steps, Button, Carousel, Card, Avatar, Icon } from "@d4sd/components";
-import Menubar from "../../menubar/index";
+import React from "react";
+import { Row, Col, Card, Avatar, Button } from "@d4sd/components";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
 import "./style.less";
-
-//  Involved Icons
-import IconJoinDiscussion from "../../../assets/img/involve_innovate.svg";
-import IconFeedback from "../../../assets/img/involve_feedback.svg";
-import IconSponsor from "../../../assets/img/involve_sponsor.svg";
-import IconMail from "../../../assets/img/involve_mail.svg";
-import IconVolunteer from "../../../assets/img/involve_volunteer.svg";
 import { involveContent } from "../../../assets/content.js";
 const { Meta } = Card;
+
 const InvolvedLayout = (props: any) => {
   return (
     <div>
-      <Menubar />
-      <div className="InvolvedLayout">
-        <Row type="flex" justify="center" className="landing-div">
-          <Col xs={{ span: 24 }} md={{ span: 24 }}>
-            <h1>{involveContent.title1}</h1>
-          </Col>
-          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-          <Col xs={{ span: 20 }} md={{ span: 14 }}>
-            <p>
-              {involveContent.content1}
-            </p>
-          </Col>
-          <Col xs={{ span: 2 }} md={{ span: 5 }}></Col>
-        </Row>
-        <div className="max-width">
-        <Row className="involve-cards" type="flex" justify="start">
+      <Header title={involveContent.title1} content={involveContent.content1} image={involveContent.image}/>
+      <div className="container paragraph">
+        <Row gutter={[16,16]} type="flex" justify="start">
           {involveContent.roles.map((content, i)=> {
             return (
-              <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                <Card
-                  className="involve-card"
-                  actions={[<a href={content.link} target={content.new}><Button type="primary">{content.action}</Button></a>]}
-                >
+              <Col xs={24} lg={12}>
+              <Card className="involvecard" actions={[<a href={content.link} target={content.new}>
+                  <Button type="primary">{content.action}</Button></a>]}>
                   <Meta
                     avatar={<Avatar src={content.image} className="avatar" />}
                     title={content.title}
@@ -47,8 +28,9 @@ const InvolvedLayout = (props: any) => {
             )
           })}
         </Row>
-        </div>
       </div>
+      <br/><br/>
+      <Footer/>
     </div>
   );
 };
