@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
 import {
-  Card, Radio, Button, message, Row, Col,
+  Card, Radio, Button, message, Row, Col
 } from '@d4sd/components';
 import './style.less';
 
@@ -35,7 +35,16 @@ const EthicsCard = (props: any) => (
       </div>
     </Radio.Group>
     <div className="bottom-btn">
-      <Button className="d4sd-btn" block type="primary" size="small" htmlType="submit" onClick={() => props.setSignupStep('success')}>CONTINUE</Button>
+      <Button
+        className="d4sd-btn"
+        block
+        type="primary"
+        size="small"
+        htmlType="submit"
+        onClick={() => props.setSignupStep('success')}
+      >
+CONTINUE
+      </Button>
     </div>
   </div>
 );

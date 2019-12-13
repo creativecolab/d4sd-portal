@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 class Firebase {
@@ -44,7 +44,7 @@ class Firebase {
       .then((data: any) => {
         const actionCodeSettings = {
           url: 'https://d4sd-portal.netlify.com/',
-          handleCodeInApp: true,
+          handleCodeInApp: true
         };
 
         // Verify Email
@@ -65,7 +65,7 @@ class Firebase {
             email,
             emailVerified: false,
             role: null,
-            ethics: false,
+            ethics: false
           })
           .then(() => {
             console.log('User document added!');

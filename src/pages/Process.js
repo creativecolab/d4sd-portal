@@ -5,19 +5,19 @@ import HeaderCard from '../components/landing/HeaderCard';
 // CSS styles
 import { Br, Bg } from '../assets/css/others.js';
 import {
-  Btn, BtnSecondary, StyledButtonBack, StyledButtonNext, StyledDotGroup,
+  Btn, BtnSecondary, StyledButtonBack, StyledButtonNext, StyledDotGroup
 } from '../assets/css/buttons.js';
 import { FlexibleImg } from '../assets/css/images.js';
 import {
-  H2, H3, H4, H5, H6, Styledh5,
+  H2, H3, H4, H5, H6, Styledh5
 } from '../assets/css/fonts.js';
 import { Vl, Hl } from '../assets/css/others.js';
 import {
-  Left, Grid, Card, OuterFlexBox, OuterContainer, InnerContainer, FlexibleWidth, StyledCarouselProvider,
+  Left, Grid, Card, OuterFlexBox, OuterContainer, InnerContainer, FlexibleWidth, StyledCarouselProvider
 } from '../assets/css/containers.js';
 // Contents
 import {
-  sampleChallenges, roles, actionImg, logos,
+  sampleChallenges, roles, actionImg, logos
 } from '../assets/content.js';
 import header from '../assets/img/process_header.svg';
 import { timelineContent } from '../assets/content.js';
@@ -31,7 +31,7 @@ class Process extends Component {
       hover: '',
       hoveredContent: '',
       click: '',
-      clickedContent: '',
+      clickedContent: ''
     };
   }
 
@@ -64,7 +64,12 @@ class Process extends Component {
       <div>
         <Navbar />
         <Br />
-        <HeaderCard title={timelineContent.title1} content={timelineContent.content1} bg={header} isAction="false" />
+        <HeaderCard
+          title={timelineContent.title1}
+          content={timelineContent.content1}
+          bg={header}
+          isAction="false"
+        />
         <OuterContainer>
           <InnerContainer>
             <Grid>

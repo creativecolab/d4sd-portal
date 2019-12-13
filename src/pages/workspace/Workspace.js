@@ -24,10 +24,16 @@ class Workspace extends Component {
               <br />
               <div className="row">
                 <div className="col-lg-6">
-                  <SubmissionPanel title="Preliminary Submission" timeline="Sept. 24 - Oct. 24" />
+                  <SubmissionPanel
+                    title="Preliminary Submission"
+                    timeline="Sept. 24 - Oct. 24"
+                  />
                 </div>
                 <div className="col-lg-6">
-                  <SubmissionPanel title="Final Submission" timeline="Oct. 24 - Dec. 24" />
+                  <SubmissionPanel
+                    title="Final Submission"
+                    timeline="Oct. 24 - Dec. 24"
+                  />
                 </div>
               </div>
               <div className="row mt-4">

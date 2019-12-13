@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Steps, Button } from "@d4sd/components";
-import SignupCard from "../../signup-card/index";
-import Menubar from "../../menubar/index";
-import LoginCard from "../../login-card";
-import "./style.less";
+import {
+  Row, Col, Steps, Button
+} from '@d4sd/components';
+import SignupCard from '../../signup-card/index';
+import Menubar from '../../menubar/index';
+import LoginCard from '../../login-card';
+import './style.less';
 
 const { Step } = Steps;
 
 const SignupLayout = (props: any) => {
   // hook, must be one of "start, role, ethics, etc."
-  const [signupStep, setSignupStep] = useState("start");
+  const [signupStep, setSignupStep] = useState('start');
   const [emailVerified, setEmailVerified] = useState(false);
   const mapSignupStepToNum = (signupStep: string) => {
     switch (signupStep) {
@@ -35,20 +37,24 @@ const SignupLayout = (props: any) => {
     <div>
       <Menubar />
       <div className="SignupLayout">
-        <Row className="heading" type="flex" justify="center">
+        <Row
+          className="heading"
+          type="flex"
+          justify="center"
+        >
           <Col span={20}>
             <h1 className="heading-message">
-              {signupStep === "start" && "Workspace Sign Up"}
-              {signupStep === "success" && "Welcome to D4SD Workspace!"}
-              {signupStep === "login" && "D4SD Workspace"}
+              {signupStep === 'start' && 'Workspace Sign Up'}
+              {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
+              {signupStep === 'login' && 'D4SD Workspace'}
             </h1>
           </Col>
         </Row>
         <Row className="card-container">
-          {signupStep === "start" && (
+          {signupStep === 'start' && (
             <SignupCard setSignupStep={setSignupStep} />
           )}
-          {signupStep != "start" && signupStep != "login" && (
+          {signupStep != 'start' && signupStep != 'login' && (
             <Steps
               size="small"
               current={mapSignupStepToNum(signupStep)}
@@ -56,12 +62,18 @@ const SignupLayout = (props: any) => {
             >
               <Step title="Sign Up" />
               <Step title="Email Confirmation" />
-              <Step title="Success " key="success" />
+              <Step
+                title="Success "
+                key="success"
+              />
             </Steps>
           )}
-          {signupStep === "success" && (
+          {signupStep === 'success' && (
             <div>
-              <Row type="flex" justify="center">
+              <Row
+                type="flex"
+                justify="center"
+              >
                 <Col span="20">
                   <h2>
                     You’ve successfully joined the D4SD 2020 Challenge!
@@ -69,10 +81,13 @@ const SignupLayout = (props: any) => {
                   </h2>
                 </Col>
               </Row>
-              <Row type="flex" justify="center">
+              <Row
+                type="flex"
+                justify="center"
+              >
                 <Col>
                   <Button
-                    onClick={() => setSignupStep("login")}
+                    onClick={() => setSignupStep('login')}
                     className="workspace-btn"
                   >
                     GO TO WORKSPACE
@@ -81,7 +96,7 @@ const SignupLayout = (props: any) => {
               </Row>
             </div>
           )}
-          {signupStep === "login" && <LoginCard />}
+          {signupStep === 'login' && <LoginCard />}
         </Row>
       </div>
     </div>

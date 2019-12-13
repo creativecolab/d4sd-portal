@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import ResourcesLayout from "../components/layouts/resources-layout";
+import ResourcesLayout from '../components/layouts/resources-layout';
 
-const ResourcesPage = () => {
-  return <ResourcesLayout />;
-};
+const ResourcesPage = () => <ResourcesLayout />;
 
 export default ResourcesPage;

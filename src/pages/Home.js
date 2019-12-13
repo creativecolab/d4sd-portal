@@ -1,39 +1,41 @@
-import React, { Component } from "react";
-import { Button } from "@d4sd/components";
-import { Slider, Slide } from "pure-react-carousel";
-import Navbar from "../components/Navbar";
-import FooterCard from "../components/landing/FooterCard";
+import React, { Component } from 'react';
+import { Button } from '@d4sd/components';
+import { Slider, Slide } from 'pure-react-carousel';
+import Navbar from '../components/Navbar';
+import FooterCard from '../components/landing/FooterCard';
 // CSS styles
-import { Br, Bg } from "../assets/css/others.js";
+import { Br, Bg } from '../assets/css/others.js';
 import {
   Btn,
   BtnSecondary,
   StyledButtonBack,
   StyledButtonNext,
   StyledDotGroup
-} from "../assets/css/buttons.js";
-import { FlexibleImg } from "../assets/css/images.js";
-import { H1, H2, H3, H5, IconTitle } from "../assets/css/fonts.js";
+} from '../assets/css/buttons.js';
+import { FlexibleImg } from '../assets/css/images.js';
+import {
+  H1, H2, H3, H5, IconTitle
+} from '../assets/css/fonts.js';
 import {
   OuterFlexBox,
   OuterContainer,
   InnerContainer,
   FlexibleWidth,
   StyledCarouselProvider
-} from "../assets/css/containers.js";
+} from '../assets/css/containers.js';
 // Contents
 import {
   sampleChallenges,
   roles,
   actionImg,
   logos
-} from "../assets/content.js";
-import home0 from "../assets/img/home_landing.svg";
+} from '../assets/content.js';
+import home0 from '../assets/img/home_landing.svg';
 
-import Menubar from "../components/menubar/index";
+import Menubar from '../components/menubar/index';
 // Carousel
-import "pure-react-carousel/dist/react-carousel.es.css";
-import "./style.css";
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import './style.css';
 
 class Home extends Component {
   constructor() {
@@ -41,11 +43,11 @@ class Home extends Component {
     this.mission = React.createRef();
   }
 
-  scrollToRef = ref => {
+  scrollToRef = (ref) => {
     window.scrollTo({
       left: 0,
       top: ref.current.offsetTop,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   };
 
@@ -55,7 +57,10 @@ class Home extends Component {
         <Menubar />
         {/** **********************First card********************** */}
         <Bg image={home0}>
-          <OuterContainer center full="true">
+          <OuterContainer
+            center
+            full="true"
+          >
             <InnerContainer>
               <Br />
               <Br />
@@ -120,18 +125,24 @@ class Home extends Component {
               </H5>
               <Br />
               <OuterFlexBox center>
-                <Button href="/involve" size="large">
+                <Button
+                  href="/involve"
+                  size="large"
+                >
                   GET INVOLVED
                 </Button>
               </OuterFlexBox>
               <Br />
               <OuterFlexBox>
-                {roles.map(role => (
+                {roles.map((role) => (
                   <FlexibleWidth
-                    theme={{ widthS: "50%", widthM: "25%" }}
+                    theme={{ widthS: '50%', widthM: '25%' }}
                     key={role.image}
                   >
-                    <FlexibleImg theme={{ width: "70%" }} src={role.image} />
+                    <FlexibleImg
+                      theme={{ width: '70%' }}
+                      src={role.image}
+                    />
                     <IconTitle center>{role.contents}</IconTitle>
                   </FlexibleWidth>
                 ))}
@@ -151,9 +162,18 @@ class Home extends Component {
         >
           <Slider>
             {sampleChallenges.map((sampleChallenge, i) => (
-              <Slide index={i} key={i}>
-                <Bg image={sampleChallenge.src} theme={{ color: "#EFF8FF" }}>
-                  <OuterContainer center full>
+              <Slide
+                index={i}
+                key={i}
+              >
+                <Bg
+                  image={sampleChallenge.src}
+                  theme={{ color: '#EFF8FF' }}
+                >
+                  <OuterContainer
+                    center
+                    full
+                  >
                     <InnerContainer>
                       <Br />
                       <Br />
@@ -223,13 +243,13 @@ class Home extends Component {
             <Br />
             <Br />
             <OuterFlexBox>
-              {actionImg.map(img => (
+              {actionImg.map((img) => (
                 <FlexibleWidth
-                  theme={{ widthS: "50%", widthM: "25%" }}
+                  theme={{ widthS: '50%', widthM: '25%' }}
                   key={img}
                 >
                   <FlexibleImg
-                    theme={{ width: "98%", height: "auto" }}
+                    theme={{ width: '98%', height: 'auto' }}
                     src={img}
                   />
                 </FlexibleWidth>
@@ -254,7 +274,10 @@ class Home extends Component {
               </H5>
               <Br />
               <OuterFlexBox center>
-                <Button href="/involve" size="large">
+                <Button
+                  href="/involve"
+                  size="large"
+                >
                   GET INVOLVED
                 </Button>
               </OuterFlexBox>
@@ -272,12 +295,18 @@ class Home extends Component {
               isPlaying
               interval={3000}
               totalSlides={7}
-              visibleSlides={window.innerWidth < "768" ? 1 : 3}
+              visibleSlides={window.innerWidth < '768' ? 1 : 3}
             >
               <Slider>
                 {logos.map((logo, i) => (
-                  <Slide index={i} key={i}>
-                    <FlexibleImg src={logo} theme={{ width: "100%" }} />
+                  <Slide
+                    index={i}
+                    key={i}
+                  >
+                    <FlexibleImg
+                      src={logo}
+                      theme={{ width: '100%' }}
+                    />
                   </Slide>
                 ))}
               </Slider>

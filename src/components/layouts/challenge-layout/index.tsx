@@ -1,14 +1,16 @@
-import React, { useState, useRef } from "react";
-import { Row, Col, Steps, Button, Carousel, Card } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { challengeContent } from "../../../assets/content.js";
-import ChallengeMobility from "../../../assets/img/challenge_mobility.svg";
-import ChallengeClimate from "../../../assets/img/challenge_climate.svg";
-import ChallengeHousing from "../../../assets/img/challenge_housing.svg";
-import ChallengeHealth from "../../../assets/img/challenge_health.svg";
+import React, { useState, useRef } from 'react';
+import {
+  Row, Col, Steps, Button, Carousel, Card
+} from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { challengeContent } from '../../../assets/content.js';
+import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
+import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
+import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
+import ChallengeHealth from '../../../assets/img/challenge_health.svg';
 
 const ChallengeLayout = (props: any) => {
   const { Meta } = Card;
@@ -47,7 +49,7 @@ const ChallengeLayout = (props: any) => {
         behavior: 'smooth'
       });
     }
-  }
+  };
   const scrollToHealth = () => {
     if (health && health.current) {
       const position = health.current.offsetTop - 90;
@@ -57,7 +59,7 @@ const ChallengeLayout = (props: any) => {
         behavior: 'smooth'
       });
     }
-  }
+  };
   const scrollToHousing = () => {
     if (housing && housing.current) {
       const position = housing.current.offsetTop - 90;
@@ -67,7 +69,7 @@ const ChallengeLayout = (props: any) => {
         behavior: 'smooth'
       });
     }
-  }
+  };
   const scrollToEnvironment = () => {
     if (environment && environment.current) {
       const position = environment.current.offsetTop - 90;
@@ -77,61 +79,106 @@ const ChallengeLayout = (props: any) => {
         behavior: 'smooth'
       });
     }
-  }
+  };
 
   return (
     <div>
-      <Header title={challengeContent.title} content={challengeContent.content} image={challengeContent.image}/>
+      <Header
+        title={challengeContent.title}
+        content={challengeContent.content}
+        image={challengeContent.image}
+      />
       <div className="ChallengeLayout container">
 
         <div className="section">
-          <Row justify="center" type="flex">
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToMobility} className="challengeicons">
-              <img src={challengeContent.nav[0].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[0].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHealth} className="challengeicons">
-              <img src={challengeContent.nav[1].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[1].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToEnvironment} className="challengeicons">
-              <img src={challengeContent.nav[2].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[2].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHousing} className="challengeicons">
-              <img src={challengeContent.nav[3].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[3].title}</h5>
-            </figure>
-          </Col>
+          <Row
+            justify="center"
+            type="flex"
+          >
+            <Col
+              xs={10}
+              sm={10}
+              md={6}
+            >
+              <figure
+                onClick={scrollToMobility}
+                className="challengeicons"
+              >
+                <img src={challengeContent.nav[0].img} />
+                <h5 className="challenge-icon-caption">{challengeContent.nav[0].title}</h5>
+              </figure>
+            </Col>
+            <Col
+              xs={10}
+              sm={10}
+              md={6}
+            >
+              <figure
+                onClick={scrollToHealth}
+                className="challengeicons"
+              >
+                <img src={challengeContent.nav[1].img} />
+                <h5 className="challenge-icon-caption">{challengeContent.nav[1].title}</h5>
+              </figure>
+            </Col>
+            <Col
+              xs={10}
+              sm={10}
+              md={6}
+            >
+              <figure
+                onClick={scrollToEnvironment}
+                className="challengeicons"
+              >
+                <img src={challengeContent.nav[2].img} />
+                <h5 className="challenge-icon-caption">{challengeContent.nav[2].title}</h5>
+              </figure>
+            </Col>
+            <Col
+              xs={10}
+              sm={10}
+              md={6}
+            >
+              <figure
+                onClick={scrollToHousing}
+                className="challengeicons"
+              >
+                <img src={challengeContent.nav[3].img} />
+                <h5 className="challenge-icon-caption">{challengeContent.nav[3].title}</h5>
+              </figure>
+            </Col>
           </Row>
 
         </div>
 
         <div className="section">
           <h2 className="text">{challengeContent.title2}</h2>
-          <p dangerouslySetInnerHTML={{__html:challengeContent.content2}} />
+          <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
         </div>
 
         <div className="section">
-              <h4 className="text" ref={mobility}>
-                <span>MOBILITY: </span>How might we help people move freely in San
+          <h4
+            className="text"
+            ref={mobility}
+          >
+            <span>MOBILITY: </span>
+How might we help people move freely in San
                 Diego?
-              </h4>
-          <Row type="flex" justify="center" >
+          </h4>
+          <Row
+            type="flex"
+            justify="center"
+          >
             <Col
               xs={24}
               lg={12}
               onMouseEnter={() => setLastMile(true)}
               onMouseLeave={() => setLastMile(false)}
             >
-              <Card hoverable className="lastmile-card">
+              <Card
+                hoverable
+                className="lastmile-card"
+              >
                 <div className="card-bg">
                   {lastMile && (
                     <p className="card-text">
@@ -151,7 +198,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setSafety(true)}
               onMouseLeave={() => setSafety(false)}
             >
-              <Card hoverable className="safety-card">
+              <Card
+                hoverable
+                className="safety-card"
+              >
                 <div className="card-bg">
                   {safety && (
                     <p className="card-text">
@@ -171,7 +221,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setEquitable(true)}
               onMouseLeave={() => setEquitable(false)}
             >
-              <Card hoverable className="equitable-card">
+              <Card
+                hoverable
+                className="equitable-card"
+              >
                 <div className="card-bg">
                   {equitable && (
                     <p className="card-text">
@@ -192,7 +245,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setAutonomous(true)}
               onMouseLeave={() => setAutonomous(false)}
             >
-              <Card hoverable className="autonomous-card">
+              <Card
+                hoverable
+                className="autonomous-card"
+              >
                 <div className="card-bg">
                   {autonomous && (
                     <p className="card-text">
@@ -212,19 +268,29 @@ const ChallengeLayout = (props: any) => {
         {/* Health */}
         <div className="challenge">
 
-              <h4 className="text" ref={health}>
-                <span>HEALTH: </span>How might we help all San Diegans live healthy
+          <h4
+            className="text"
+            ref={health}
+          >
+            <span>HEALTH: </span>
+How might we help all San Diegans live healthy
                 and active lives?
-              </h4>
-          <Row type="flex" justify="center">
+          </h4>
+          <Row
+            type="flex"
+            justify="center"
+          >
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setSenior(true)}
               onMouseLeave={() => setSenior(false)}
             >
-              <Card hoverable className="senior-card">
+              <Card
+                hoverable
+                className="senior-card"
+              >
                 <div className="card-bg">
                   {senior && (
                     <p className="card-text">
@@ -239,12 +305,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setWellBeing(true)}
               onMouseLeave={() => setWellBeing(false)}
             >
-              <Card hoverable className="wellbeing-card">
+              <Card
+                hoverable
+                className="wellbeing-card"
+              >
                 <div className="card-bg">
                   {wellBeing && (
                     <p className="card-text">
@@ -261,12 +330,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setDataAgency(true)}
               onMouseLeave={() => setDataAgency(false)}
             >
-              <Card hoverable className="dataAgency-card">
+              <Card
+                hoverable
+                className="dataAgency-card"
+              >
                 <div className="card-bg">
                   {dataAgency && (
                     <p className="card-text">
@@ -283,12 +355,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setFoodInsecurity(true)}
               onMouseLeave={() => setFoodInsecurity(false)}
             >
-              <Card hoverable className="foodInsecurity-card">
+              <Card
+                hoverable
+                className="foodInsecurity-card"
+              >
                 <div className="card-bg">
                   {foodInsecurity && (
                     <p className="card-text">
@@ -307,18 +382,28 @@ const ChallengeLayout = (props: any) => {
         </div>
         {/* Environment */}
         <div className="challenge">
-            <h4 className="text" ref={environment}>
-                <span>ENVIRONMENT: </span>How might we prepare San Diego for natural
+          <h4
+            className="text"
+            ref={environment}
+          >
+            <span>ENVIRONMENT: </span>
+How might we prepare San Diego for natural
                 and human-influenced environmental challenges?
-              </h4>
-          <Row type="flex" justify="center">
+          </h4>
+          <Row
+            type="flex"
+            justify="center"
+          >
             <Col
               xs={24}
               lg={12}
               onMouseEnter={() => setEducation(true)}
               onMouseLeave={() => setEducation(false)}
             >
-              <Card hoverable className="education-card">
+              <Card
+                hoverable
+                className="education-card"
+              >
                 <div className="card-bg">
                   {education && (
                     <p className="card-text">
@@ -334,12 +419,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setWaste(true)}
               onMouseLeave={() => setWaste(false)}
             >
-              <Card hoverable className="waste-card">
+              <Card
+                hoverable
+                className="waste-card"
+              >
                 <div className="card-bg">
                   {waste && (
                     <p className="card-text">
@@ -358,7 +446,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setGrid(true)}
               onMouseLeave={() => setGrid(false)}
             >
-              <Card hoverable className="grid-card">
+              <Card
+                hoverable
+                className="grid-card"
+              >
                 <div className="card-bg">
                   {grid && (
                     <p className="card-text">
@@ -378,7 +469,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setClimateInfra(true)}
               onMouseLeave={() => setClimateInfra(false)}
             >
-              <Card hoverable className="climateInfra-card">
+              <Card
+                hoverable
+                className="climateInfra-card"
+              >
                 <div className="card-bg">
                   {climateInfra && (
                     <p className="card-text">
@@ -399,11 +493,18 @@ const ChallengeLayout = (props: any) => {
         {/* Housing */}
         <div className="challenge">
 
-              <h4 className="text" ref={housing}>
-                <span>HOUSING: </span>How might we reimagine housing to meet the needs
+          <h4
+            className="text"
+            ref={housing}
+          >
+            <span>HOUSING: </span>
+How might we reimagine housing to meet the needs
                 of all San Diegans?
-              </h4>
-          <Row type="flex" justify="center">
+          </h4>
+          <Row
+            type="flex"
+            justify="center"
+          >
 
             <Col
               xs={24}
@@ -411,7 +512,10 @@ const ChallengeLayout = (props: any) => {
               onMouseEnter={() => setMixuse(true)}
               onMouseLeave={() => setMixuse(false)}
             >
-              <Card hoverable className="mixuse-card">
+              <Card
+                hoverable
+                className="mixuse-card"
+              >
                 <div className="card-bg">
                   {mixuse && (
                     <p className="card-text">
@@ -430,12 +534,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setResilient(true)}
               onMouseLeave={() => setResilient(false)}
             >
-              <Card hoverable className="resilient-card">
+              <Card
+                hoverable
+                className="resilient-card"
+              >
                 <div className="card-bg">
                   {resilient && (
                     <p className="card-text">
@@ -451,12 +558,15 @@ const ChallengeLayout = (props: any) => {
 
             {/* TODO: Issue with background image not covering entire page */}
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setHomelessness(true)}
               onMouseLeave={() => setHomelessness(false)}
             >
-              <Card hoverable className="homelessness-card">
+              <Card
+                hoverable
+                className="homelessness-card"
+              >
                 <div className="card-bg">
                   {homelessness && (
                     <p className="card-text">
@@ -471,12 +581,15 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
+              xs={24}
+              lg={12}
               onMouseEnter={() => setIot(true)}
               onMouseLeave={() => setIot(false)}
             >
-              <Card hoverable className="iot-card">
+              <Card
+                hoverable
+                className="iot-card"
+              >
                 <div className="card-bg">
                   {iot && (
                     <p className="card-text">
@@ -497,8 +610,9 @@ const ChallengeLayout = (props: any) => {
 
 
       </div>
-      <br /><br />
-      <Footer/>
+      <br />
+      <br />
+      <Footer />
     </div>
   );
 };

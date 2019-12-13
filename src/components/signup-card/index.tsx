@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import {
-  Card, Input, Button, Col, Row, Form, message,
+  Card, Input, Button, Col, Row, Form, message
 } from '@d4sd/components';
 import GoogleLogin from 'react-google-login';
 import { OmitProps } from 'antd/lib/transfer/renderListBody';
@@ -16,7 +16,7 @@ const emailRegExp = new RegExp(
 
 const SignupCard = (props: any) => {
   const {
-    register, handleSubmit, setValue, errors,
+    register, handleSubmit, setValue, errors
   } = useForm();
   const [signedUp, setSignedup] = useState(false);
   const validation = (data: any) => {
@@ -67,12 +67,12 @@ const SignupCard = (props: any) => {
   // TODO: Add a registerWithGoogle async function in firebase.ts
   async function signupWithGoogle(data: any) {
     const {
-      email, familyName, givenName, imageUrl,
+      email, familyName, givenName, imageUrl
     } = data.profileObj;
     const firstName = givenName;
     const lastName = familyName;
     console.log({
-      firstName, lastName, email, imageUrl,
+      firstName, lastName, email, imageUrl
     });
     props.history.replace('/');
     setSignedup(true);
@@ -87,24 +87,35 @@ const SignupCard = (props: any) => {
 
   // register inputs
   useEffect(() => {
-    register({ name: "email" });
-    register({ name: "password" });
-    register({ name: "firstName" });
-    register({ name: "lastName" });
+    register({ name: 'email' });
+    register({ name: 'password' });
+    register({ name: 'firstName' });
+    register({ name: 'lastName' });
   }, []);
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <Button.Google className="google-btn" icon="google" block>
+        <Button.Google
+          className="google-btn"
+          icon="google"
+          block
+        >
           CONTINUE WITH GOOGLE
         </Button.Google>
-        <Button.Facebook className="fb-btn" icon="facebook" block>
+        <Button.Facebook
+          className="fb-btn"
+          icon="facebook"
+          block
+        >
           CONTINUE WITH FACEBOOK
         </Button.Facebook>
         <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
           <Input.Group className="input-group">
-            <Row gutter={30} className="row-names">
+            <Row
+              gutter={30}
+              className="row-names"
+            >
               <Col span={12}>
                 <Input
                   placeholder="First Name"
@@ -133,13 +144,19 @@ const SignupCard = (props: any) => {
               onChange={handleChange}
             />
           </Input.Group>
-          <Row type="flex" justify="center">
-            <a href="/signup/role" className="continue-btn">
+          <Row
+            type="flex"
+            justify="center"
+          >
+            <a
+              href="/signup/role"
+              className="continue-btn"
+            >
               <Button
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={() => props.setSignupStep("role")}
+                onClick={() => props.setSignupStep('role')}
               >
                 SIGN UP
               </Button>
@@ -148,7 +165,9 @@ const SignupCard = (props: any) => {
         </Form>
       </div>
       <p id="bottom-txt">
-        Already have an account? <a id="login-link">Log in</a>
+        Already have an account?
+        {' '}
+        <a id="login-link">Log in</a>
       </p>
     </div>
   );

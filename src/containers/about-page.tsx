@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import AboutLayout from "../components/layouts/about-layout";
+import AboutLayout from '../components/layouts/about-layout';
 
-const AboutPage = () => {
-  return <AboutLayout />;
-};
+const AboutPage = () => <AboutLayout />;
 
 export default AboutPage;

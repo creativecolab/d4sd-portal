@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import {
-  OuterContainer, FlexibleWidth, InnerContainer, OuterFlexBox, InnerFlexBox, Card,
+  OuterContainer, FlexibleWidth, InnerContainer, OuterFlexBox, InnerFlexBox, Card
 } from '../assets/css/containers.js';
 import {
-  H2, H3, H4, IconTitle,
+  H2, H3, H4, IconTitle
 } from '../assets/css/fonts.js';
 import { Bg, Br } from '../assets/css/others.js';
 import { FlexibleImg } from '../assets/css/images.js';
@@ -30,7 +30,7 @@ class Challenge extends Component {
     window.scrollTo({
       left: 0,
       top: ref.current.offsetTop,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   }
 
@@ -40,7 +40,12 @@ class Challenge extends Component {
         <Navbar />
         <br />
         <br />
-        <HeaderCard title={challengeContent.title} content={challengeContent.content} bg={header} isAction="true" />
+        <HeaderCard
+          title={challengeContent.title}
+          content={challengeContent.content}
+          bg={header}
+          isAction="true"
+        />
         <br />
         <br />
         <OuterContainer center>
@@ -49,8 +54,15 @@ class Challenge extends Component {
               {challengeContent.nav.map((nav) => {
                 console.log(nav.title);
                 return (
-                  <FlexibleWidth theme={{ widthS: '50%', widthM: '25%' }} onClick={() => this.scrollToRef(this[nav.title])} key={nav.title}>
-                    <FlexibleImg theme={{ width: '70%' }} src={nav.img} />
+                  <FlexibleWidth
+                    theme={{ widthS: '50%', widthM: '25%' }}
+                    onClick={() => this.scrollToRef(this[nav.title])}
+                    key={nav.title}
+                  >
+                    <FlexibleImg
+                      theme={{ width: '70%' }}
+                      src={nav.img}
+                    />
                     <IconTitle center>{nav.title}</IconTitle>
                   </FlexibleWidth>
                 );
@@ -62,8 +74,14 @@ class Challenge extends Component {
                   <H3 ref={this[content.id]}>{content.subtitle}</H3>
                   <H2>{content.title}</H2>
                   {content.problems.map((problem, i) => (
-                    <InnerFlexBox half key={i}>
-                      <Bg image={problem.img} style={{ width: '400px', height: '150px' }}>
+                    <InnerFlexBox
+                      half
+                      key={i}
+                    >
+                      <Bg
+                        image={problem.img}
+                        style={{ width: '400px', height: '150px' }}
+                      >
                         <H4>{problem.problem}</H4>
                       </Bg>
                     </InnerFlexBox>
