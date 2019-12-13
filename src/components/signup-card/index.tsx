@@ -11,7 +11,7 @@ import { Redirect } from 'react-router';
 import firebase from '../../actions/firebase';
 
 const emailRegExp = new RegExp(
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
 const SignupCard = (props: any) => {
@@ -19,10 +19,6 @@ const SignupCard = (props: any) => {
     register, handleSubmit, setValue, errors,
   } = useForm();
   const [signedUp, setSignedup] = useState(false);
-  // const responseGoogle = (response: any) => {
-  //   console.log(response);
-  // }
-
   const validation = (data: any) => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
@@ -91,10 +87,10 @@ const SignupCard = (props: any) => {
 
   // register inputs
   useEffect(() => {
-    register({ name: 'email' });
-    register({ name: 'password' });
-    register({ name: 'firstName' });
-    register({ name: 'lastName' });
+    register({ name: "email" });
+    register({ name: "password" });
+    register({ name: "firstName" });
+    register({ name: "lastName" });
   }, []);
   return (
     <div className="card-signup-wrapper">
@@ -139,15 +135,20 @@ const SignupCard = (props: any) => {
           </Input.Group>
           <Row type="flex" justify="center">
             <a href="/signup/role" className="continue-btn">
-              <Button className="d4sd-btn" type="primary" htmlType="submit">SIGN UP</Button>
+              <Button
+                className="d4sd-btn"
+                type="primary"
+                htmlType="submit"
+                onClick={() => props.setSignupStep("role")}
+              >
+                SIGN UP
+              </Button>
             </a>
           </Row>
         </Form>
       </div>
       <p id="bottom-txt">
-        Already have an account?
-        {' '}
-        {/* <Button onClick={() => props.setSignupStep('login')} /> */}
+        Already have an account? <a id="login-link">Log in</a>
       </p>
     </div>
   );

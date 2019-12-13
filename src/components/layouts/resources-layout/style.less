@@ -1,0 +1,66 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+
+.ResourcesLayout {
+  .ant-collapse-header {
+    font-size: 16px;
+  }
+  // Section 1
+  .landing-div {
+    height: 45vh;
+    background-image: url("../../../assets/img/resource_header.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 20vh;
+    @media screen and (max-width: 375px) {
+      padding-top: 15vh;
+      height: 65vh;
+      background-size: 125%;
+    }
+  }
+  .involve-cards {
+    margin-top: @margin-base * 2;
+  }
+  .involve-card .ant-card-body {
+    @media screen and (max-width: @sm) {
+      height: auto;
+    }
+    @media screen and (min-width: @lg) {
+      height: 420px;
+    }
+    @media screen and (min-width: @xl) {
+      height: 300px;
+    }
+  }
+  .ant-card-meta {
+    font-size: 1.2em;
+  }
+  .ant-card-bordered {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .ant-card-actions {
+    border-bottom-left-radius: @margin-base;
+    border-bottom-right-radius: @margin-base;
+  }
+  .max-width {
+    margin: auto;
+    @media screen and (max-width: @sm) {
+      width: 98%;
+    }
+    @media screen and (min-width: @sm) {
+      width: 80%;
+    }
+    @media screen and (min-width: @md) {
+      width: 70%;
+    }
+    @media screen and (min-width: @lg) {
+      width: 85%;
+    }
+    @media screen and (min-width: @xl) {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+.ChallengeLayout {
+  // Section 1
+  .landing-div {
+    height: 60vh;
+    background-image: url("../../../assets/img/challenge_header.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 20vh;
+  }
+  .text {
+    text-align: center;
+  }
+
+  // 4 Icons
+  .challenge-icons {
+    padding-top: 5vh;
+  }
+  figure {
+    text-align: center;
+    img {
+      height: 100px;
+      max-height: 150px;
+    }
+  }
+
+  // How do you fit in
+  .fit-in {
+    padding-top: 10vh;
+  }
+
+  // Mobility Cards
+
+  .ant-card-body {
+    padding: 0;
+    height: 250px;
+    // width: 400px;
+  }
+  .challenge {
+    padding-top: 10vh;
+  }
+  .card-bg {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    .card-text {
+      padding: 20px;
+      color: white;
+    }
+  }
+
+  // Mobility Cards
+  .lastmile-card {
+    background: url("../../../assets/img/mobility_lastmile.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .safety-card {
+    background: url("../../../assets/img/mobility_safety.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .equitable-card {
+    background: url("../../../assets/img/mobility_equitable.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .autonomous-card {
+    background-image: url("../../../assets/img/mobility_multimodal.jpg");
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  // Environment Cards
+  .education-card {
+    background: url("../../../assets/img/climate_education.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .waste-card {
+    background: url("../../../assets/img/climate_waste.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .grid-card {
+    background: url("../../../assets/img/climate_coastal.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .climateInfra-card {
+    background-image: url("../../../assets/img/climate_community.jpg");
+    background-size: cover;
+    border-radius: 20px;
+  }
+}

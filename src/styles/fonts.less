@@ -2,7 +2,9 @@
 @import "./vars.less";
 
 html {
-  font-size: 6px;
+  @media screen and (max-width: @sm) {
+    font-size: 7px;
+  }
   @media screen and (min-width: @sm) {
     font-size: 8px;
   }
@@ -15,30 +17,50 @@ div {
   font-family: "Montserrat", "Open Sans", sans-serif;
 }
 h1 {
-  color: @d4sd-color;
-  font-size: 6.2rem;
+  color: @b1;
+  line-height: 5rem;
+  font-size: 4.4rem;
   font-weight: bold;
+  text-align: center;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 h2 {
-  color: @heading-color;
-  font-size: 2.8rem;
+  color: @b1;
+  font-size: 3.6rem;
   font-weight: bold;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 4.5rem;
+}
+
+h3 {
+  color: #A7A7A7;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.02rem;
+  margin-bottom: 0;
 }
 
 h4{
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+h5{
+  font-size: 2.3rem;
+  font-weight: 600;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 
 p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
-  letter-spacing: 0.5px;
-  color: #757575;
-  font-family: "Montserrat", sans-serif;
+  color: @b1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  letter-spacing: 0.02rem;
+  text-align: left;
 }

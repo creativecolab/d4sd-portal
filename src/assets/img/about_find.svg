@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200.002" height="200" viewBox="0 0 200.002 200">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="椭圆_2" data-name="椭圆 2" cx="62.024" cy="62.105" rx="62.024" ry="62.105" fill="#dbe9eb"/>
+    </clipPath>
+  </defs>
+  <g id="find" transform="translate(-75.758 -95.48)">
+    <ellipse id="椭圆_1" data-name="椭圆 1" cx="74.616" cy="74.712" rx="74.616" ry="74.712" transform="translate(75.758 95.48)" fill="#5f70b9"/>
+    <path id="路径_18" data-name="路径 18" d="M.072.008,13.139,0l-.076,116.662L0,116.67Z" transform="translate(183.972 212.979) rotate(-45)" fill="#5f70b9"/>
+    <ellipse id="椭圆_3" data-name="椭圆 3" cx="62.024" cy="62.105" rx="62.024" ry="62.105" transform="translate(89.005 108.157)" fill="#fff"/>
+    <g id="蒙版组_1" data-name="蒙版组 1" transform="translate(89.005 108.157)" clip-path="url(#clip-path)">
+      <path id="路径_19" data-name="路径 19" d="M0,0,23.33.015l.081,126.943-23.33-.015Z" transform="matrix(0.766, 0.643, -0.643, 0.766, 77.694, -8.285)" fill="#dbe9eb"/>
+      <path id="路径_20" data-name="路径 20" d="M0,0,11.2.007l.08,126.01L.08,126.01Z" transform="matrix(0.766, 0.643, -0.643, 0.766, 112.99, 23.92)" fill="#dbe9eb"/>
+    </g>
+  </g>
+</svg>

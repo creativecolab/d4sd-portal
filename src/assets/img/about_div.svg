@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="椭圆_14" data-name="椭圆 14" cx="37" cy="36.12" rx="37" ry="36.12" fill="#fcd094"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <ellipse id="椭圆_12" data-name="椭圆 12" cx="37" cy="36.115" rx="37" ry="36.115" fill="#835e4e"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <ellipse id="椭圆_13" data-name="椭圆 13" cx="37" cy="36.12" rx="37" ry="36.12" fill="#ffd95c"/>
+    </clipPath>
+  </defs>
+  <g id="div" transform="translate(-764.546 -147)">
+    <g id="组_18" data-name="组 18" transform="translate(880.195 147)">
+      <ellipse id="椭圆_10" data-name="椭圆 10" cx="37" cy="36.12" rx="37" ry="36.12" transform="translate(5.454)" fill="#fcd094"/>
+      <path id="路径_5" data-name="路径 5" d="M37,0C82.649-.337,79.864,100.879,79.864,100.879H-4.345S-8.649.338,37,0Z" transform="translate(4.454 79.124)" fill="#ff6e6d"/>
+      <g id="蒙版组_4" data-name="蒙版组 4" transform="translate(5.454)" clip-path="url(#clip-path)">
+        <path id="路径_9" data-name="路径 9" d="M960.716,164.533c20.894,8.834,37.728,8.331,37.728,8.331l-9.121-8.331s9.751,5.257,13.5,5.905,8.518,1.038,8.518,1.038l-26.6-38.707-55.484,6.515v40.721s10.235-2.835,16.73-7.141A153.207,153.207,0,0,1,960.716,164.533Z" transform="translate(-935 -146.661)" fill="#323337"/>
+      </g>
+    </g>
+    <g id="组_17" data-name="组 17" transform="translate(764.546 147)">
+      <ellipse id="椭圆_9" data-name="椭圆 9" cx="37" cy="36.115" rx="37" ry="36.115" transform="translate(5.454)" fill="#835e4e"/>
+      <path id="路径_4" data-name="路径 4" d="M37,0C82.649-.33,79.864,98.64,79.864,98.64H-4.345S-8.649.33,37,0Z" transform="translate(4.454 80.34)" fill="#566ed2"/>
+      <g id="蒙版组_2" data-name="蒙版组 2" transform="translate(5.454)" clip-path="url(#clip-path-2)">
+        <path id="路径_6" data-name="路径 6" d="M831,165.042c11.28,0,11.936-.053,21.062-2.3A50.466,50.466,0,0,0,867.5,156.07a43.7,43.7,0,0,0,15.59,6.676c9.8,2.243,23.6,2.3,23.6,2.3l-17.07-47.687L842.2,124.112Z" transform="translate(-831 -137.506)" fill="#323337"/>
+      </g>
+    </g>
+    <g id="组_16" data-name="组 16" transform="translate(794.221 167)">
+      <path id="路径_8" data-name="路径 8" d="M727,175c-4.23,28.849-6.457,21.434-11.226,31.325S715.638,218.962,719.5,226s-3.882,11.212-15.349,23.095-6.912,15.15-5.867,17.647S686.8,278.911,686.8,278.911s47.964-1.077,40.2-16.968,45.329-3.21,44.464-29.188S727,175,727,175Z" transform="translate(-686.797 -147.666)" fill="#ffd95c"/>
+      <ellipse id="椭圆_8" data-name="椭圆 8" cx="37" cy="36.12" rx="37" ry="36.12" transform="translate(39.203)" fill="#ffeace"/>
+      <path id="路径_3" data-name="路径 3" d="M37,0C82.649-.337,79.864,100.71,79.864,100.71H-4.345S-8.649.337,37,0Z" transform="translate(38.203 79.29)" fill="#4497ff"/>
+      <g id="蒙版组_3" data-name="蒙版组 3" transform="translate(39.203)" clip-path="url(#clip-path-3)">
+        <path id="路径_7" data-name="路径 7" d="M764.722,152.758s-11.682,11.277-21.27,15.452a121.347,121.347,0,0,1-21.547,6.5l6.871-38.467,62.817-2.009,14.8,56.6S789.2,185.884,781,176.936,764.722,152.758,764.722,152.758Z" transform="translate(-727 -137.91)" fill="#ffd95c"/>
+      </g>
+    </g>
+  </g>
+</svg>

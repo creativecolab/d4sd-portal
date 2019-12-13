@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_100" data-name="矩形 100" width="200" height="200" transform="translate(1496 103)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="CITY" transform="translate(-1476 -112)">
+    <g id="蒙版组_5" data-name="蒙版组 5" transform="translate(-20 9)" clip-path="url(#clip-path)">
+      <g id="city-2" data-name="city" transform="translate(6 -10)">
+        <g id="组_15" data-name="组 15" transform="translate(1466.995 112.961)">
+          <rect id="矩形_85" data-name="矩形 85" width="63.551" height="50.04" transform="translate(28.533 104.03)" fill="#4497ff"/>
+          <rect id="矩形_87" data-name="矩形 87" width="67.442" height="30.287" transform="translate(1.297 115.881)" fill="#4497ff"/>
+          <rect id="矩形_88" data-name="矩形 88" width="29.83" height="26.337" transform="translate(0 119.832)" fill="#4497ff"/>
+          <rect id="矩形_89" data-name="矩形 89" width="55.77" height="76.376" transform="translate(32.424 69.792)" fill="#4497ff"/>
+          <rect id="矩形_90" data-name="矩形 90" width="36.315" height="44.772" transform="translate(42.8 59.258)" fill="#4497ff"/>
+          <path id="多边形_2" data-name="多边形 2" d="M5.836,0l5.836,6.584H0Z" transform="translate(54.473 53.99)" fill="#4497ff"/>
+          <rect id="矩形_91" data-name="矩形 91" width="134.885" height="72.426" transform="translate(90.788 107.98)" fill="#4497ff"/>
+          <rect id="矩形_92" data-name="矩形 92" width="20.751" height="147.485" transform="translate(125.806)" fill="#4497ff"/>
+          <path id="路径_15" data-name="路径 15" d="M1736.605,160.161,1715.85,138.3l-10.7,138.575h31.455Z" transform="translate(-1570.071 -137.904)" fill="#4497ff"/>
+          <rect id="矩形_93" data-name="矩形 93" width="33.721" height="44.772" transform="translate(93.382 88.228)" fill="#4497ff"/>
+          <rect id="矩形_94" data-name="矩形 94" width="28.533" height="28.97" transform="translate(95.976 68.475)" fill="#4497ff"/>
+          <rect id="矩形_95" data-name="矩形 95" width="23.345" height="32.921" transform="translate(98.569 44.772)" fill="#4497ff"/>
+          <rect id="矩形_96" data-name="矩形 96" width="18.158" height="27.654" transform="translate(101.163 27.654)" fill="#4497ff"/>
+          <path id="路径_16" data-name="路径 16" d="M1681.7,160.3s-.12-13.753,5.531-13.7,5.561,14.338,5.561,14.338l-10.373,1.819Z" transform="translate(-1577.035 -132.449)" fill="#4497ff"/>
+          <path id="路径_17" data-name="路径 17" d="M1726.871,211.528l7.727-18.64h47.521l6.581,20.053h-2.179V233.56h-59.65Z" transform="translate(-1563.621 -120.61)" fill="#4497ff"/>
+          <rect id="矩形_99" data-name="矩形 99" width="225.163" height="54.555" transform="translate(0 144.852)" fill="#4497ff"/>
+          <line id="直线_1" data-name="直线 1" y1="11.852" transform="translate(109.948 3.86)" fill="none" stroke="#4497ff" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+    <g id="组_21" data-name="组 21" transform="translate(51 29.747)">
+      <circle id="椭圆_15" data-name="椭圆 15" cx="8.216" cy="8.216" r="8.216" transform="translate(1491.031 236)" fill="#90c0ff"/>
+      <path id="路径_22" data-name="路径 22" d="M6.785,0C19.161-.092,18.406,27.3,18.406,27.3H-4.424S-5.591.091,6.785,0Z" transform="translate(1492.424 254.951)" fill="#90c0ff"/>
+    </g>
+    <g id="组_19" data-name="组 19" transform="translate(17 -0.859)">
+      <circle id="椭圆_15-2" data-name="椭圆 15" cx="13.653" cy="13.653" r="13.653" transform="translate(1493.057 236)" fill="#e3efff"/>
+      <path id="路径_22-2" data-name="路径 22" d="M14.221,0c20.565-.152,19.31,45.37,19.31,45.37H-4.4S-6.344.152,14.221,0Z" transform="translate(1492.424 267.49)" fill="#e3efff"/>
+    </g>
+    <g id="组_22" data-name="组 22" transform="translate(138 14.997)">
+      <circle id="椭圆_15-3" data-name="椭圆 15" cx="10.836" cy="10.836" r="10.836" transform="translate(1492.007 236)" fill="#b9d8ff"/>
+      <path id="路径_22-3" data-name="路径 22" d="M10.368,0C26.691-.121,25.7,36.009,25.7,36.009H-4.415S-5.954.12,10.368,0Z" transform="translate(1492.424 260.993)" fill="#b9d8ff"/>
+    </g>
+  </g>
+</svg>
