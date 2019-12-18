@@ -14,13 +14,6 @@ const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
-type SignupDataType = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
-
 // eslint-disable-next-line
 const SignupCard = (props: any): JSX.Element => {
   const { setSignupStep } = props;
