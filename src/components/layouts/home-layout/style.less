@@ -1,28 +1,27 @@
-@import "../../../styles/vars.less";
-@import "../../../styles/mixins.less";
-@import "../../../styles/fonts.less";
-@import "../../../styles/containers.less";
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+@import '../../../styles/containers.less';
 
-  .landing {
-    .homebackground("home_landing");
+.landing {
+  .homebackground('home_landing');
+}
+
+// Section 3
+.challenges {
+  .challenges-carousel {
+    // text-align: center;
+    height: 90vh;
+    background: #244c7e;
+    overflow: hidden;
   }
-
-  // Section 3
-  .challenges {
-
-    .challenges-carousel {
-      // text-align: center;
-      height: 90vh;
-      background: #244c7e;
-      overflow: hidden;
+  .challenge-item {
+    background: #eff8ff;
+    .challenge-header {
+      padding-top: 50px;
+      text-align: center;
     }
-    .challenge-item {
-      background: #eff8ff;
-      .challenge-header {
-        padding-top: 50px;
-        text-align: center;
-      }
-    }
+  }
 
   .ant-carousel .slick-dots li.slick-active button {
     border-radius: 50%;
@@ -39,5 +38,4 @@
   .ant-carousel .slick-dots {
     height: 5vh;
   }
-
 }

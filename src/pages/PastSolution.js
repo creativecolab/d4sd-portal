@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/landing/FooterCard';
@@ -22,7 +24,7 @@ class PastSolution extends Component {
         memberList: 'Stephen Cerruti, D.J. Nelson, Savera Soin, James Maron',
         teamImg: cycleDetection,
         projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
-        link: '',
+        link: ''
       },
       {
         teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
@@ -30,7 +32,7 @@ class PastSolution extends Component {
         memberList: 'Marissa Hing, Alex Tunchez, Jacob Browne, Josh Duhay, Claire Pham',
         teamImg: remoteService,
         projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',
-        link: 'http://joshduhay.herokuapp.com/av.html',
+        link: 'http://joshduhay.herokuapp.com/av.html'
       },
       {
         teamName: 'Spot: Your Guide to Safe and Walkable Cities',
@@ -38,43 +40,43 @@ class PastSolution extends Component {
         memberList: 'Sayamon Riddang, Natalie Terenzi',
         teamImg: spot,
         projectDesc: 'Spot is an app that provides the blind and visually impaired with accessibility-focused walking directions, using data from GE streetlamps.',
-        link: 'http://naterenzi.portfoliobox.net/spot',
+        link: 'http://naterenzi.portfoliobox.net/spot'
       },
       {
         teamName: 'GATE Center: Immersive AV Learning Center',
         memberList: 'Garret Hoover, Selene Hoover, Jessica Yeung',
         teamImg: gate,
         projectDesc: 'An education center where the public directly engages with AVs, accesses learning resources, and provides feedback for stakeholder insights.',
-        link: 'https://astrotransits.wixsite.com/gate1/about-1',
+        link: 'https://astrotransits.wixsite.com/gate1/about-1'
       },
       {
         teamName: 'Beach Access For All',
         memberList: 'Andrea Flagiello, Matt Abbondanzio, Tomas Robinson, Daniel Lenzen',
         teamImg: beachAccess,
         projectDesc: 'We wish to redefine the beach experience for those with limited mobility. Our solution is an automated, shared-use, mobility aid service designed for the beach environment.',
-        link: '',
+        link: ''
       },
       {
         teamName: 'Road Map',
         memberList: 'Anna Chen, Marie McNamara',
         teamImg: roadMap,
         projectDesc: 'An app focused on the iterative design process, bringing professionals and the public together to share designs, expertise, and feedback.',
-        link: '',
+        link: ''
       },
       {
         teamName: 'San Diego Parking App',
         memberList: 'Tyler Reinecke, Thomas Twomey,  Jangwoo Lee, Adrian Derderian, Dave Dunn',
         teamImg: sdParking,
         projectDesc: 'An app that shows available parking within downtown San Diego.',
-        link: '',
+        link: ''
       },
       {
         teamName: 'Audio Movement',
         memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
         teamImg: audioMovement,
         projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
-        link: 'https://www.amwebportfolio.com/',
-      },
+        link: 'https://www.amwebportfolio.com/'
+      }
     ];
 
     return (
@@ -85,7 +87,10 @@ class PastSolution extends Component {
         <div className="d-flex flex-wrap justify-content-around">
           {data.map((data) => (
             <div>
-              <img src={data.teamImg} alt="team" />
+              <img
+                src={data.teamImg}
+                alt="team"
+              />
             </div>
           ))}
         </div>
