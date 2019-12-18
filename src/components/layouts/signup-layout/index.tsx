@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import {
   Row, Col, Steps, Button
@@ -11,12 +10,11 @@ import './style.less';
 
 const { Step } = Steps;
 
-const SignupLayout = (props: any) => {
+const SignupLayout = (): JSX.Element => {
   // hook, must be one of "start, role, ethics, etc."
   const [signupStep, setSignupStep] = useState('start');
-  const [emailVerified, setEmailVerified] = useState(false);
-  const mapSignupStepToNum = (signupStep: string) => {
-    switch (signupStep) {
+  const mapSignupStepToNum = (step: string): number => {
+    switch (step) {
       case 'start':
         return 0;
       case 'email':
@@ -54,7 +52,7 @@ const SignupLayout = (props: any) => {
           {signupStep === 'start' && (
             <SignupCard setSignupStep={setSignupStep} />
           )}
-          {signupStep != 'start' && signupStep != 'login' && (
+          {signupStep !== 'start' && signupStep !== 'login' && (
             <Steps
               size="small"
               current={mapSignupStepToNum(signupStep)}
@@ -87,7 +85,7 @@ const SignupLayout = (props: any) => {
               >
                 <Col>
                   <Button
-                    onClick={() => setSignupStep('login')}
+                    onClick={(): void => setSignupStep('login')}
                     className="workspace-btn"
                   >
                     GO TO WORKSPACE

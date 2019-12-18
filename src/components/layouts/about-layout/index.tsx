@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Row, Col, Card, Avatar
 } from '@d4sd/components';
@@ -6,11 +6,11 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { aboutContent } from '../../../assets/content.js';
+import { aboutContent } from '../../../assets/content';
 import AboutDiagram from '../../../assets/img/about_diagram.png';
 
 const { Meta } = Card;
-const AboutLayout = (props: any) => (
+const AboutLayout = (): JSX.Element => (
   <div>
     <Header
       title={aboutContent.title1}
@@ -20,11 +20,13 @@ const AboutLayout = (props: any) => (
     <div className="container">
       <div className="paragraph">
         <h2>{aboutContent.title2}</h2>
+        {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: aboutContent.content2 }} />
       </div>
       <img
         src={AboutDiagram}
         style={{ width: '100%' }}
+        alt="about-diagram"
       />
       <div className="paragraph">
         <h2>{aboutContent.title3}</h2>

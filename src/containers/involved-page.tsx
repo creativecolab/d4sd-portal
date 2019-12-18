@@ -2,6 +2,6 @@ import React from 'react';
 
 import InvolvedLayout from '../components/layouts/involved-layout';
 
-const InvolvedPage = () => <InvolvedLayout />;
+const InvolvedPage = (): JSX.Element => <InvolvedLayout />;
 
 export default InvolvedPage;

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import photo from '../../assets/img/kashdog.jpg';
 import '../style.less';

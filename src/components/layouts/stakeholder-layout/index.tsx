@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
-import { stakeholderContent } from '../../../assets/content.js';
+import { stakeholderContent } from '../../../assets/content';
 
-const StakeholderLayout = (props: any) => (
+const StakeholderLayout = (): JSX.Element => (
   <div>
     <Header
       title={stakeholderContent.title1}
@@ -15,11 +15,13 @@ const StakeholderLayout = (props: any) => (
         <h2>{stakeholderContent.title2}</h2>
         {stakeholderContent.content2.map((content) => (
           <div>
+            {/* eslint-disable */}
             <h4
               style={{ textAlign: 'left' }}
               dangerouslySetInnerHTML={{ __html: content.title }}
             />
             <p dangerouslySetInnerHTML={{ __html: content.txt }} />
+            {/* eslint-enable */}
           </div>
         ))}
       </div>
@@ -27,11 +29,13 @@ const StakeholderLayout = (props: any) => (
         <h2>{stakeholderContent.title3}</h2>
         {stakeholderContent.content3.map((content) => (
           <div>
+            {/* eslint-disable */}
             <h4
               style={{ textAlign: 'left' }}
               dangerouslySetInnerHTML={{ __html: content.title }}
             />
             <p dangerouslySetInnerHTML={{ __html: content.txt }} />
+            {/* eslint-enable */}
           </div>
         ))}
       </div>

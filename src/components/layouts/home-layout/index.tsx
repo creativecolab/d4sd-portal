@@ -1,22 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import {
-  Row, Col, Steps, Button, Carousel
+  Row, Col, Button, Carousel
 } from '@d4sd/components';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent } from '../../../assets/content.js';
-import { url } from 'inspector';
+import { homeContent } from '../../../assets/content';
 
 
-const photoCarouselSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  // slidesToShow: `${window.innerWidth < '768' ? 1:3}`,
-  slidesToScroll: 0,
-  autoplay: true
-};
+// const photoCarouselSettings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   // slidesToShow: `${window.innerWidth < '768' ? 1:3}`,
+//   slidesToScroll: 0,
+//   autoplay: true
+// };
 
 const logoCarouselSettings = {
   dots: false,
@@ -29,11 +28,12 @@ const logoCarouselSettings = {
 };
 
 
-const HomeLayout = (props: any) => {
+const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const scrollToRef = () => {
+  const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
+      // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
@@ -64,6 +64,7 @@ const HomeLayout = (props: any) => {
               <a
                 href="http://eepurl.com/c2kFon"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   type="primary"
@@ -92,8 +93,10 @@ const HomeLayout = (props: any) => {
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
+          {/* eslint-disable */}
           <p dangerouslySetInnerHTML={{ __html: homeContent.content2_1 }} />
           <p dangerouslySetInnerHTML={{ __html: homeContent.content2_2 }} />
+          {/* eslint-enable */}
           <a href="/getinvolved">
             <Button
               type="primary"
@@ -113,10 +116,7 @@ const HomeLayout = (props: any) => {
               xs={{ span: 9 }}
             >
               <figure>
-                <img
-                  src={role.image}
-                  style={{ width: '75%' }}
-                />
+                <img src={role.image} style={{ width: '75%' }} alt="" />
                 <h5>{role.contents}</h5>
               </figure>
             </Col>
@@ -144,6 +144,7 @@ const HomeLayout = (props: any) => {
                   <div className="paragraph">
                     <h3>{challenge.header}</h3>
                     <h2>{challenge.title}</h2>
+                    {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
                     <a href="/challenges">
                       <Button type="primary">Learn More</Button>
@@ -159,10 +160,12 @@ const HomeLayout = (props: any) => {
       <div className="container">
         <div className="paragraph">
           <h2>{homeContent.title3}</h2>
+          {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: homeContent.content3 }} />
           <a
             href="https://d4sd2017.ucsd.edu/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Button>SEE WHAT HAPPENED IN 2017</Button>
           </a>
@@ -177,10 +180,7 @@ const HomeLayout = (props: any) => {
             md={6}
             xs={9}
           >
-            <img
-              src={img}
-              style={{ width: '98%' }}
-            />
+            <img src={img} style={{ width: '98%' }} alt="" />
           </Col>
         ))}
       </Row>
@@ -188,6 +188,7 @@ const HomeLayout = (props: any) => {
       <div className="container">
         <div className="paragraph">
           <h2>{homeContent.title4}</h2>
+          {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: homeContent.content4 }} />
           <a href="/getinvolved">
             <Button>GET INVOLVED</Button>
@@ -195,17 +196,16 @@ const HomeLayout = (props: any) => {
         </div>
       </div>
 
+      { /* eslint-disable */ }
       <Carousel
         {...logoCarouselSettings}
         slidesToShow={window.innerWidth < 768 ? 1 : 3}
         className="logo-carousel"
       >
+        { /* eslint-enable */ }
         {homeContent.logos.map((logo) => (
           <div>
-            <img
-              src={logo}
-              style={{ width: '100%' }}
-            />
+            <img src={logo} style={{ width: '100%' }} alt="" />
           </div>
         ))}
       </Carousel>

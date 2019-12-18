@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import { Button } from '@d4sd/components';
 import { Slider, Slide } from 'pure-react-carousel';

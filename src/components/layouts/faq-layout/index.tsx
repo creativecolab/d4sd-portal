@@ -4,11 +4,16 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { faqContent } from '../../../assets/content.js';
+import { faqContent } from '../../../assets/content';
 
 const { Panel } = Collapse;
 
-const FaqLayout = (props: any) => (
+type FaqContentType = {
+  question: string;
+  answer: string;
+}
+
+const FaqLayout = (): JSX.Element => (
   <div>
     <Header
       title={faqContent.title}
@@ -18,12 +23,13 @@ const FaqLayout = (props: any) => (
     <div className="container paragraph">
       <div className="faqcard">
         <Collapse accordion>
-          {faqContent.faqs.map((faqContent: any) => (
+          {faqContent.faqs.map((faqCont: FaqContentType) => (
             <Panel
-              key={faqContent.question}
-              header={faqContent.question}
+              key={faqCont.question}
+              header={faqCont.question}
             >
-              <p dangerouslySetInnerHTML={{ __html: faqContent.answer }} />
+              {/* eslint-disable-next-line */}
+              <p dangerouslySetInnerHTML={{ __html: faqCont.answer }} />
             </Panel>
           ))}
         </Collapse>

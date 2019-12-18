@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import home1 from './img/home_mobility.svg';
 import home2 from './img/home_climate.svg';
 import home3 from './img/home_housing.svg';
@@ -17,7 +19,6 @@ import logo6 from './img/home_logo6.png';
 import logo7 from './img/home_logo7.png';
 
 import involve_header from './img/involve_header.svg';
-
 
 import city from './img/about_city.svg';
 import connect from './img/about_connect.svg';

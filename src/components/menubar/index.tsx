@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
-  Menu, Button, Icon, Col, Row
+  Menu, Icon, Col, Row
 } from '@d4sd/components';
 
 import './style.less';
@@ -9,14 +9,15 @@ import './style.less';
 import { SubMenu } from 'rc-menu';
 import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
-import daniel from '../../assets/daniel.png';
 
-function Menubar(props: any) {
+const Menubar = (): JSX.Element => {
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
+  // eslint-disable-next-line
   const [scroll, setScroll] = useState('');
   const [logo, setLogo] = useState(d4sdlogo);
   const [collapse, setCollapse] = useState(true);
+
   useEffect(() => {
     if (scroll === '') {
       setLogo(d4sdlogo);
@@ -26,7 +27,7 @@ function Menubar(props: any) {
   }, [scroll]);
 
   useEffect(() => {
-    console.log(history.location.pathname);
+    // console.log(history.location.pathname);
     switch (history.location.pathname) {
       case '/workspace':
         setTab(['workspace']);
@@ -49,7 +50,10 @@ function Menubar(props: any) {
       case '/about':
         setTab(['about']);
         break;
+      default:
+        setTab(['']);
     }
+  // eslint-disable-next-line
   }, []);
 
   return (
@@ -61,17 +65,12 @@ function Menubar(props: any) {
         >
           <Menu
             mode="horizontal"
-            onClick={() => {
-              setCollapse(!collapse);
-            }}
+            onClick={(): void => setCollapse(!collapse)}
             id="mobileNav"
           >
             <Menu.Item>
               <NavLink to="/">
-                <img
-                  src={logo}
-                  alt="logo"
-                />
+                <img src={logo} alt="logo" />
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
@@ -131,49 +130,49 @@ function Menubar(props: any) {
             <Menu.Item
               className="menu-item"
               key="home"
-              onClick={() => { history.push('/'); }}
+              onClick={(): void => history.push('/')}
             >
               <span>Home</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="getInvolved"
-              onClick={() => { history.push('/getinvolved'); }}
+              onClick={(): void => history.push('/getinvolved')}
             >
               <span>Get Involved</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="challenges"
-              onClick={() => { history.push('/challenges'); }}
+              onClick={(): void => history.push('/challenges')}
             >
               <span>Challenges</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="resources"
-              onClick={() => { history.push('/resources'); }}
+              onClick={(): void => history.push('/resources')}
             >
               <span>Resources</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="faq"
-              onClick={() => { history.push('/faq'); }}
+              onClick={(): void => history.push('/faq')}
             >
               <span>FAQs</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="about"
-              onClick={() => { history.push('/about'); }}
+              onClick={(): void => history.push('/about')}
             >
               <span>About</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
               key="workspace"
-              onClick={() => { history.push('/workspace'); }}
+              onClick={(): void => history.push('/workspace')}
             >
               <span>Workspace</span>
             </Menu.Item>
@@ -182,6 +181,6 @@ function Menubar(props: any) {
       </Row>
     </div>
   );
-}
+};
 
 export default Menubar;

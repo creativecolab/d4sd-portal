@@ -3,28 +3,26 @@ import useForm from 'react-hook-form';
 import './style.less';
 import { Link } from 'react-router-dom';
 import {
-  Row, Col, Card, Input, Button, Form, message
+  Row, Input, Button, Form, message
 } from '@d4sd/components';
 
-
-const LoginCard = (props: any) => {
+const LoginCard = (): JSX.Element => {
   const { register, handleSubmit, setValue } = useForm();
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: Record<string, string>): void => {
     if (!data.email) {
       message.error('Missing email');
       return;
     }
     if (!data.password) {
       message.error('Missing password');
-      return;
     }
-    console.log(data);
+    // console.log(data);
     // Add your axios stuff here
     // data.email, data.password
   };
 
   // handle changes and store to state with react hook forms
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
   };
 
@@ -32,7 +30,9 @@ const LoginCard = (props: any) => {
   useEffect(() => {
     register({ name: 'email' });
     register({ name: 'password' });
+  // eslint-disable-next-line
   }, []);
+
   return (
     <div className="card-login-wrapper">
       <div className="card-login">
@@ -74,7 +74,7 @@ const LoginCard = (props: any) => {
               type="primary"
               htmlType="submit"
             >
-GO TO WORKSPACE
+              GO TO WORKSPACE
             </Button>
             <Link
               to="signup"
@@ -85,7 +85,7 @@ GO TO WORKSPACE
                 type="primary-outline"
                 htmlType="submit"
               >
-NO ACCOUNT? SIGN UP
+                NO ACCOUNT? SIGN UP
               </Button>
             </Link>
           </Row>

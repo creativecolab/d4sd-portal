@@ -20,11 +20,11 @@ import FeedbackPage from './components/layouts/feedback-layout';
 
 import './index.less';
 
-
+// eslint-disable-next-line
 // @ts-ignore
 const store = configureStore();
 
-const App = () => (
+const App = (): JSX.Element => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <>
@@ -118,4 +118,5 @@ const App = () => (
   </Provider>
 );
 
+// eslint-disable-next-line no-undef
 ReactDOM.render(<App />, document.getElementById('root'));

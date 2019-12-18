@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/landing/FooterCard';

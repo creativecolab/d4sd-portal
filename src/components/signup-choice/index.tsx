@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import {
-  Form, Input, Card, Button, Radio
+  Card, Button, Radio
 } from '@d4sd/components';
-import './style.less';
-import useForm from 'react-hook-form';
+import { RadioChangeEvent } from 'antd/lib/radio';
 
-function SignupChoice(props: any) {
+const SignupChoice = (): JSX.Element => {
   const [value, setValue] = useState('');
-  const onChange = (e: any) => {
+  const onChange = (e: RadioChangeEvent): void => {
     // console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
@@ -23,15 +22,19 @@ function SignupChoice(props: any) {
         >
           <div className="choice">
             <Radio value="participant" />
+            {/* eslint-disable-next-line */}
             <label className="choice-label">Participant</label>
             <p>
-            As an innovator, you are able to meet new people and tackle SD’s problems with a team of like-minded individuals.
+              {/* eslint-disable-next-line */}
+              As an innovator, you are able to meet new people and tackle SD’s problems with a team of like-minded individuals.
             </p>
           </div>
           <div className="choice">
             <Radio value="feedback" />
+            {/* eslint-disable-next-line */}
             <label className="choice-label">Feedback provider</label>
             <p>
+              {/* eslint-disable-next-line */}
               As a feedback provider, you are able to give teams valuable input for their design projects after the feedback window opens
             </p>
           </div>
@@ -45,11 +48,11 @@ function SignupChoice(props: any) {
           size="small"
           htmlType="submit"
         >
-CONTINUE
+          CONTINUE
         </Button>
       </div>
     </Card>
   );
-}
+};
 
 export default SignupChoice;
