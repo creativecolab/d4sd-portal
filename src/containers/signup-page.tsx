@@ -2,8 +2,6 @@ import React from 'react';
 
 import SignupLayout from '../components/layouts/signup-layout';
 
-const SignupPage = () => (
-  <SignupLayout />
-);
+const SignupPage = (): JSX.Element => <SignupLayout />;
 
 export default SignupPage;

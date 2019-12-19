@@ -2,8 +2,6 @@ import React from 'react';
 
 import LoginLayout from '../components/layouts/login-layout';
 
-const LoginPage = () => (
-  <LoginLayout />
-);
+const LoginPage = (): JSX.Element => <LoginLayout />;
 
 export default LoginPage;

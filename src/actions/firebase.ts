@@ -11,12 +11,14 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 class Firebase {
+  // eslint-disable-next-line
   auth: any;
 
+  // eslint-disable-next-line
   db: any;
 
   constructor() {
@@ -25,34 +27,37 @@ class Firebase {
     this.db = app.firestore();
   }
 
-  login = (email: any, password: any) => new Promise((resolve, reject) => {
+  login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
     this
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(() => { resolve(true); })
-      .catch((error: any) => { reject(error); });
+      .catch((error: string) => { reject(error); });
   })
 
-  logout() { return this.auth.signOut(); }
-
+  // eslint-disable-next-line
+  logout = (): any => this.auth.signOut()
 
   // eslint-disable-next-line max-len
-  register = (firstName: any, lastName: any, email: any, password: any) => new Promise((resolve, reject) => {
+  register = (firstName: string, lastName: string, email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
     this
       .auth
       .createUserWithEmailAndPassword(email, password)
+      // eslint-disable-next-line
       .then((data: any) => {
         const actionCodeSettings = {
           url: 'https://d4sd-portal.netlify.com/',
-          handleCodeInApp: true,
+          handleCodeInApp: true
         };
 
         // Verify Email
         data.user.sendEmailVerification(actionCodeSettings)
           .then(() => {
+            // eslint-disable-next-line
             console.log('Email Sent!');
           })
           .catch(() => {
+            // eslint-disable-next-line
             console.log('Email not sent!');
           });
 
@@ -65,41 +70,51 @@ class Firebase {
             email,
             emailVerified: false,
             role: null,
-            ethics: false,
+            ethics: false
           })
           .then(() => {
+            // eslint-disable-next-line
             console.log('User document added!');
             resolve(true);
           })
+        // eslint-disable-next-line
           .catch((error: any) => {
+            // eslint-disable-next-line
             console.log('Error writing document: ', error);
             error.message('OOps');
             reject(error);
           });
         resolve(true);
       })
+    // eslint-disable-next-line
       .catch((error: any) => {
         if (error.code === 'auth/weak-password') {
           message.error('The password is too weak.');
+          // eslint-disable-next-line
           console.log('The password is too weak.');
         } else {
+          // eslint-disable-next-line
           console.log(error.message);
         }
+        // eslint-disable-next-line
         console.log(error);
         reject(error);
       });
   })
 
-  isInitialized() {
+  // eslint-disable-next-line
+  isInitialized = () => {
     return new Promise((resolve) => {
       this.auth.onAuthStateChanged(resolve);
     });
   }
 
-  getCurrentUsername() {
+  // eslint-disable-next-line
+  getCurrentUsername = () => {
     return this.auth.currentUser && this.auth.currentUser.displayName;
   }
 
+  // eslint-disable-next-line
   async getCurrentUserQuote() {
     const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get();
     return quote.get('quote');
