@@ -18,9 +18,8 @@ import StakeholderPage from './components/layouts/stakeholder-layout';
 import FeedbackPage from './components/layouts/feedback-layout';
 
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-
-import './index.less';
 import './styles/reset.css';
+import './index.less';
 
 // eslint-disable-next-line
 // @ts-ignore

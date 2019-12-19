@@ -17,6 +17,9 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
   const [viewURL, setViewURL] = useState('');
   const [fileUploaded, setFileUploaded] = useState<{file?: File}>({});
   const { register, handleSubmit, setValue } = useForm();
+  const [disabledUpload, setUploadDisabled] = useState(false);
+  // eslint-disable-next-line
+  const [fileList, setFileList] = useState<Array<any>>([]);
 
   const uploadInput = React.createRef();
 
@@ -36,12 +39,12 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
     // fileUploaded is the file uploaded
     setSubmitStep('done');
   };
+
   useEffect(() => {
     register({ name: 'problemStatement' });
-  }, []);
-  const [disabledUpload, setUploadDisabled] = useState(false);
   // eslint-disable-next-line
-  const [fileList, setFileList] = useState<Array<any>>([]);
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
     saveWork();

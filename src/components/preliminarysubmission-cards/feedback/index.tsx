@@ -22,6 +22,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
   // register inputs
   useEffect(() => {
     register({ name: 'stuff' });
+  // eslint-disable-next-line
   }, []);
 
   // eslint-disable-next-line

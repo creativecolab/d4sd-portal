@@ -138,6 +138,7 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
       register({ name: 'teammate0-name' });
       register({ name: 'teammate0-email' });
     }
+  // eslint-disable-next-line
   }, []);
 
   return (

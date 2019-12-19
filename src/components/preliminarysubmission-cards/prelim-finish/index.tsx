@@ -34,6 +34,7 @@ const PrelimFinishCard = (props: PrelimFinishCardIF): JSX.Element => {
 
   useEffect(() => {
     setURL();
+  // eslint-disable-next-line
   }, []);
   const history = useHistory();
   // call setLinkToFeedback("NEW LINK") and setURL() to update links.
