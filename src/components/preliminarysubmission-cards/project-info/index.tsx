@@ -12,10 +12,12 @@ interface ProjectInfoCardIF {
 const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
   const { setSubmitStep } = props;
   const { register, handleSubmit, setValue } = useForm();
+  const [teamName, setTeamName] = useState<string>('');
   const [teammateNames, setTeammateNames] = useState<Array<string>>(['']);
   const [teammateEmails, setTeammateEmails] = useState<Array<string>>(['']);
 
   const saveWork = (): void => {
+    localStorage.setItem('teamName-d4sd-prelim-submit', teamName);
     localStorage.setItem('teammateNames-d4sd-prelim-submit', JSON.stringify(teammateNames));
     localStorage.setItem('teammateEmails-d4sd-prelim-submit', JSON.stringify(teammateEmails));
   };
@@ -55,8 +57,9 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
     props.setSubmitStep('upload'); // run this after data is stored properly
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeTeamName = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
+    setTeamName(e.target.value);
   };
 
   const handleChangeTeammateName = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -111,6 +114,10 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
 
   // register inputs
   useEffect(() => {
+    const locteamname: string | null = localStorage.getItem('teamName-d4sd-prelim-submit');
+    if (locteamname) {
+      setTeamName(locteamname);
+    }
     // retreive from localstorage if possible
     const locemails: string | null = localStorage.getItem('teammateEmails-d4sd-prelim-submit');
     let emails;
@@ -151,7 +158,8 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
             <h4>1. Provide Details about the Team</h4>
             <p>Please provide a unique name for your project (up to 50 characters)</p>
             <Input
-              placeholder="Safe Roads for San Diego" name="name" onChange={handleChange}
+              placeholder="Safe Roads for San Diego" name="name" onChange={handleChangeTeamName}
+              value={teamName}
               className="project-name-input"
             />
             <h4>2. Team member names and emails</h4>
@@ -183,11 +191,11 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
                   />
                 </Col>
                 <Col span={6}>
-                  <Button type="secondary-outline" size="medium" onClick={(): void => { removeMember(i); }}>REMOVE</Button>
+                  <Button type="secondary-outline" size="default" onClick={(): void => { removeMember(i); }}>REMOVE</Button>
                 </Col>
               </Row>
             ))}
-            <Button type="primary-outline" size="medium" onClick={handleClickAddMember}>ADD A MEMBER</Button>
+            <Button type="primary-outline" size="default" onClick={handleClickAddMember}>ADD A MEMBER</Button>
           </Row>
           <Row className="bottom-btns">
             <Button className="bottom-btn" type="primary" onClick={(): void => { saveWork(); setSubmitStep('start'); }}>BACK</Button>
