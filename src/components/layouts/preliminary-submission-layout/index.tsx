@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Steps, Header } from '@d4sd/components';
 import HowItWorksCard from '../../preliminarysubmission-cards/how-it-works';
 import ProjectInfoCard from '../../preliminarysubmission-cards/project-info';
@@ -31,6 +31,17 @@ const PrelimSubmitLayout = (): JSX.Element => {
         return 0;
     }
   };
+
+  useEffect(() => {
+    const step: string | null = localStorage.getItem('prelimStep-d4sd-prelim-submit');
+    if (step) {
+      setSubmitStep(step);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('prelimStep-d4sd-prelim-submit', submitStep);
+  }, [submitStep]);
 
   // signupStep
   return (
