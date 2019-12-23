@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Row, Col, Collapse, Button, Timeline, Icon, message, WorkspaceActionCard } from "@d4sd/components";
-import { useLocation } from 'react-router-dom';
+import { Row, Col, Button, Timeline, WorkspaceActionCard } from "@d4sd/components";
 import Header from "../../Header/index";
 import Footer from "../../Footer/index";
 import "../../../styles/containers.less";
 import "./style.less";
 import { workspaceContent } from "../../../assets/content.js";
-const { Panel } = Collapse;
 
 const WorkspaceLayout = (props: any) => {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn] = useState(true);
   const loggedInHeaderText = "Welcome, username.  Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation."
   return (
     <div>
@@ -18,7 +16,7 @@ const WorkspaceLayout = (props: any) => {
         <div className="section">
           <h2>{workspaceContent.title2}</h2>
           <p dangerouslySetInnerHTML={{__html: workspaceContent.content2 }}/>
-          <a href=""><Button>Join D4SD</Button></a>
+          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU"><Button>Join D4SD</Button></a>
         </div>
         <div className="paragraph">
           <h2>{workspaceContent.title3}</h2>
@@ -61,7 +59,7 @@ const WorkspaceLayout = (props: any) => {
     <br />
     <Footer />
   </div>
-);
+)};
 
 
 export default WorkspaceLayout;
