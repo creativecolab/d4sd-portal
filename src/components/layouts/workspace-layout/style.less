@@ -1,7 +1,24 @@
 @import "../../../styles/fonts.less";
 @img = timeline_pitch;
+.WorkspaceActionCardWrapper .WorkspaceActionCard {
+  .card-title {
+    text-align: left;
+    font-weight: 600;
+  }
+  .card-short-desc {
+    font-size: 14px;
+  }
+
+}
 .d4sdtimeline-wrapper  {
   .d4sdtimeline {
+    .ant-collapse {
+      border: none;
+      .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+        left: auto !important;
+        right: 15px;
+      }
+    }
     #timeline_discover {
       .ant-timeline-item-head:not(.ant-timeline-item-head-custom){
         width: 50px;

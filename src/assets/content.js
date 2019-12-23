@@ -522,7 +522,8 @@ export const workspaceContent = {
         "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
       link2: "/challenges",
       target: "_blank",
-      img: "timeline_discover"
+      img: "timeline_discover",
+      shortDesc: "Problem discovery is perhaps the most important part of the..."
     },
     {
       stage: "Share your Ideas and Find a Team",
@@ -538,7 +539,8 @@ export const workspaceContent = {
         "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
       isAction1: true,
       isAction2: true,
-      img: "timeline_ideate"
+      img: "timeline_ideate",
+      shortDesc: "Collaboration is essential for truly innovative design work..."
     },
     {
       stage: "Propose Initial Concepts and Get Community Feedback",
@@ -550,9 +552,12 @@ export const workspaceContent = {
       action2: "Register your team",
       state2: "inactive",
       note: "Registration will open on JAN 6",
+      start: new Date("12/23/2019, 11:59:00 PM"),
+      due: new Date("02/03/2020, 11:59:00 PM"),
       isAction1: true,
       isAction2: false,
-      img: "timeline_prototype"
+      img: "timeline_prototype",
+      shortDesc: "Your team will have the opportunity to get feedback from..."
     },
     {
       stage: "Submit Final Proposals for the D4SD Summit  ",
@@ -566,7 +571,8 @@ export const workspaceContent = {
       note: "Registration will open on JAN 6",
       isAction1: true,
       isAction2: false,
-      img: "timeline_pitch"
+      img: "timeline_pitch",
+      shortDesc: "How will the public react to your proposal? ..."
     },
     {
       stage: "Create Community Alliances to Support your Proposal ",
@@ -580,7 +586,8 @@ export const workspaceContent = {
       note: "Registration will open on JAN 6",
       isAction1: true,
       isAction2: false,
-      img: "timeline_activate"
+      img: "timeline_activate",
+      shortDesc: "Attend the D4SD Summit and create an alliance to advance..."
     }
   ]
 };
