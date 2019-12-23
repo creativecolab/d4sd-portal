@@ -39,7 +39,8 @@ const WorkspaceLayout = (props: any) => {
                       shortDesc:item.shortDesc,
                       buttonTitle:item.action1,
                       active:item.state1 === "active",
-                      dueDate: item.due,
+                      dueDate: item.dueDate,
+                      startDate: item.startDate,
                       buttonHandleClick: ()=> {
                         // @ts-ignore;
                         var win = window.open(item.link1, '_blank');
