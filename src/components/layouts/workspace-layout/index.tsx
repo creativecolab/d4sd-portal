@@ -53,14 +53,15 @@ const WorkspaceLayout = (props: any) => {
           ))}
         </Timeline>
         </Col>
-        <Col lg={2}/>
-        </Row>
-      </div>
-      <br/><br/><br/>
-      <Footer/>
+        <Col lg={2} />
+      </Row>
     </div>
-  );
-};
+    <br />
+    <br />
+    <br />
+    <Footer />
+  </div>
+);
 
 
 export default WorkspaceLayout;

@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import FaqLayout from "../components/layouts/faq-layout";
+import FaqLayout from '../components/layouts/faq-layout';
 
-const FAQPage = () => {
-  return <FaqLayout />;
-};
+const FAQPage = (): JSX.Element => <FaqLayout />;
 
 export default FAQPage;

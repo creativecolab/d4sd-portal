@@ -1,5 +1,5 @@
-@import "../../styles/vars.less";
-@import "../../styles/mixins.less";
+@import '../../styles/vars.less';
+@import '../../styles/mixins.less';
 
 #menubar {
   z-index: 1000;
@@ -75,7 +75,7 @@
   }
   > .menu-item::before {
     background-color: transparent;
-    content: "";
+    content: '';
     display: inline-block;
     height: @tab-height;
     left: 0px;
@@ -118,7 +118,7 @@
   }
 }
 
-#mobileNav{
+#mobileNav {
   background-color: @d4sd-color;
   width: 100%;
   height: @tab-height;
@@ -131,24 +131,20 @@
   > .emptybar {
     flex-grow: 1;
   }
-
 }
 
-li.ant-menu-item.mobile-menu-item{
+li.ant-menu-item.mobile-menu-item {
   width: @mobile-navbar-width;
   height: @mobile-navbar-height;
   background-color: @d4sd-color;
   margin: 0 !important;
   color: white;
   border-bottom: 1px solid white;
-
 }
-
-
 
 li.ant-menu-item.mobile-menu-item::before {
   background-color: transparent;
-  content: "";
+  content: '';
   display: inline-block;
   height: @tab-height;
   left: 0px;
@@ -158,7 +154,7 @@ li.ant-menu-item.mobile-menu-item::before {
   z-index: 1;
 }
 
-li.ant-menu-item.mobile-menu-item.ant-menu-item-selected{
+li.ant-menu-item.mobile-menu-item.ant-menu-item-selected {
   height: @mobile-navbar-hover-height;
   line-height: @mobile-navbar-hover-height;
   box-shadow: @navbar-boxshadow;
@@ -170,10 +166,11 @@ li.ant-menu-item.mobile-menu-item.ant-menu-item-selected{
   color: white;
 }
 
-.ant-menu-submenu-horizontal > .ant-menu-submenu-title .ant-menu-submenu-arrow{
+.ant-menu-submenu-horizontal > .ant-menu-submenu-title .ant-menu-submenu-arrow {
   display: none;
 }
 
-.ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-submenu-active{
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-submenu-active {
   border: none !important;
 }

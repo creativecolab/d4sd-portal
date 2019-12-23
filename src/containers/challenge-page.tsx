@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import ChallengeLayout from "../components/layouts/challenge-layout";
+import ChallengeLayout from '../components/layouts/challenge-layout';
 
-const ChallengePage = () => {
-  return <ChallengeLayout />;
-};
+const ChallengePage = (): JSX.Element => <ChallengeLayout />;
 
 export default ChallengePage;
