@@ -29,5 +29,7 @@ export default function configureStore(preloadedState: any): StoreType {
       )
     )
   );
+  // eslint-disable-next-line
+  // @ts-ignore
   return store;
 }
