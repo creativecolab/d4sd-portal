@@ -6,17 +6,17 @@ import './style.less';
 const printTest = () => {
 };
 
-const due = new Date(2020, 1, 10);
-const start = new Date(2020, 1, 5);
+const due = new Date(2020, 0, 3);
+const start = new Date(2020, 0, 1);
 
 const cardElems = {
-  submitState: 'saved',
+  submitState: 'none',
   closed: false,
   title: 'Assignment Title',
   shortDesc: 'This is the description',
   dueDate: due,
   startDate: start,
-  active: true,
+  active: false,
   buttonTitle: 'Button title',
   buttonHandleClick: printTest,
   descHTML: 'descHtml',
