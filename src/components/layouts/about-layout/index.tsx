@@ -1,14 +1,15 @@
 import React from 'react';
 import {
-  Row, Col, Card, Avatar
+  Row, Col, Card, Avatar, Timeline, Collapse
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { aboutContent } from '../../../assets/content';
+import { aboutContent, workspaceContent } from '../../../assets/content';
 import AboutDiagram from '../../../assets/img/about_diagram.png';
 
+const { Panel } = Collapse;
 const { Meta } = Card;
 const AboutLayout = (): JSX.Element => (
   <div>
@@ -57,6 +58,34 @@ const AboutLayout = (): JSX.Element => (
             </Card>
           </Col>
         ))}
+      </Row>
+      <div className="paragraph">
+        <h2>{workspaceContent.title3}</h2>
+      </div>
+      <Row>
+        <Col lg={2} />
+        <Col lg={20}>
+          <Timeline type="card">
+            {workspaceContent.timeline.map((item) => (
+              <Timeline.Item
+                id={item.img}
+                key={item.img}
+              >
+                <Collapse accordion>
+                  <Panel
+                    key={item.date}
+                    header={item.stage}
+                    className="timelinecard"
+                  >
+                    {/* eslint-disable-next-line */}
+                    <p dangerouslySetInnerHTML={{ __html: item.detail }} />
+                  </Panel>
+                </Collapse>
+              </Timeline.Item>
+            ))}
+          </Timeline>
+        </Col>
+        <Col lg={2} />
       </Row>
     </div>
 

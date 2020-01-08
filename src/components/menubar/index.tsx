@@ -51,6 +51,9 @@ const Menubar = (): JSX.Element => {
       case '/about':
         setTab(['about']);
         break;
+      case '/sponsors':
+        setTab(['sponsors']);
+        break;
       default:
         setTab(['']);
     }
@@ -101,8 +104,11 @@ const Menubar = (): JSX.Element => {
                 <span>About</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item">
-                <span>Workspace</span>
+                <span>Sponsors</span>
               </Menu.Item>
+              {/**<Menu.Item className="mobile-menu-item">
+                <span>Workspace</span>
+              </Menu.Item>**/}
             </SubMenu>
           </Menu>
         </Col>
@@ -136,9 +142,12 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="about" onClick={(): void => history.push('/about')}>
               <span>About</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="workspace" onClick={(): void => history.push('/workspace')}>
-              <span>Workspace</span>
+            <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
+              <span>Sponsors</span>
             </Menu.Item>
+            {/**<Menu.Item className="menu-item" key="workspace" onClick={(): void => history.push('/workspace')}>
+              <span>Workspace</span>
+            </Menu.Item>**/}
           </Menu>
         </Col>
       </Row>
