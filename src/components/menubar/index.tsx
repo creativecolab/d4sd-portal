@@ -106,9 +106,9 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item">
                 <span>Sponsors</span>
               </Menu.Item>
-              {/**<Menu.Item className="mobile-menu-item">
+              {/** <Menu.Item className="mobile-menu-item">
                 <span>Workspace</span>
-              </Menu.Item>**/}
+              </Menu.Item>* */}
             </SubMenu>
           </Menu>
         </Col>
@@ -145,9 +145,10 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
               <span>Sponsors</span>
             </Menu.Item>
-            {/**<Menu.Item className="menu-item" key="workspace" onClick={(): void => history.push('/workspace')}>
+            {/**
+            <Menu.Item className="menu-item" key="workspace" onClick={(): void => history.push('/workspace')}>
               <span>Workspace</span>
-            </Menu.Item>**/}
+            </Menu.Item>* */}
           </Menu>
         </Col>
       </Row>
