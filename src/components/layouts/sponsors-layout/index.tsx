@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Row, Col, Card
+  Row, Col
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';

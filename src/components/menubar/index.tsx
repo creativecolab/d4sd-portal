@@ -146,7 +146,10 @@ const Menubar = (): JSX.Element => {
               <span>Sponsors</span>
             </Menu.Item>
             {/**
-            <Menu.Item className="menu-item" key="workspace" onClick={(): void => history.push('/workspace')}>
+            <Menu.Item
+              className="menu-item" key="workspace"
+              onClick={(): void => history.push('/workspace')}
+            >
               <span>Workspace</span>
             </Menu.Item>* */}
           </Menu>
