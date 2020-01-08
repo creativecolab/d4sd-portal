@@ -52,25 +52,25 @@ const HomeLayout = (): JSX.Element => {
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
-            <a
-              href="http://eepurl.com/c2kFon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                type="primary"
-                size="medium"
-              >
-              JOIN MAILING LIST
-              </Button>
-            </a>
+          <a
+            href="http://eepurl.com/c2kFon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
-              type="primary-outline"
+              type="primary"
               size="medium"
-              onClick={scrollToRef}
             >
-              LEARN MORE
+              JOIN MAILING LIST
             </Button>
+          </a>
+          <Button
+            type="primary-outline"
+            size="medium"
+            onClick={scrollToRef}
+          >
+              LEARN MORE
+          </Button>
         </div>
       </div>
       <div className="container">
