@@ -43,51 +43,34 @@ const HomeLayout = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className="Home">
       <Menubar />
       <div className="landing">
         <div className="container">
-          <h3>{homeContent.subtitle1}</h3>
-          <h1>{homeContent.title1}</h1>
-          <p>{homeContent.content1}</p>
+          <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>
+          <h1 className="d4sdmaintitle">{homeContent.title1}</h1>
+          <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
-          <Row
-            type="flex"
-            justify="center"
-          >
-            <Col
-              xs={24}
-              md={9}
-              lg={5}
-            >
-              <a
-                href="http://eepurl.com/c2kFon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  type="primary"
-                  size="medium"
-                >
-                JOIN MAILING LIST
-                </Button>
-              </a>
-            </Col>
-            <Col
-              xs={24}
-              md={9}
-              lg={5}
+            <a
+              href="http://eepurl.com/c2kFon"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Button
-                type="primary-outline"
+                type="primary"
                 size="medium"
-                onClick={scrollToRef}
               >
-                LEARN MORE
+              JOIN MAILING LIST
               </Button>
-            </Col>
-          </Row>
+            </a>
+            <Button
+              type="primary-outline"
+              size="medium"
+              onClick={scrollToRef}
+            >
+              LEARN MORE
+            </Button>
         </div>
       </div>
       <div className="container">
