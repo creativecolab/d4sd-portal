@@ -227,17 +227,17 @@ export const involveContent = {
       isAction: 'true',
       action: 'CONTACT OUR TEAM'
     },
-    {
-      title: 'Join the D4SD team',
-      txt:
-        'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
-      image: mail,
-      id: 'mail',
-      link: 'http://eepurl.com/c2kFon',
-      isAction: 'true',
-      action: 'JOIN OUR TEAM',
-      new: '_blank'
-    },
+    // {
+    //   title: 'Join the D4SD team',
+    //   txt:
+    //     'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
+    //   image: mail,
+    //   id: 'mail',
+    //   link: 'http://eepurl.com/c2kFon',
+    //   isAction: 'true',
+    //   action: 'JOIN OUR TEAM',
+    //   new: '_blank'
+    // },
     {
       title: 'Join the mailing list',
       txt:
