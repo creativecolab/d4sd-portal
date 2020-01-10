@@ -68,7 +68,7 @@ const HomeLayout = (): JSX.Element => {
               >
                 <Button
                   type="primary"
-                  size="medium"
+                  size="default"
                 >
                 JOIN MAILING LIST
                 </Button>
@@ -81,7 +81,7 @@ const HomeLayout = (): JSX.Element => {
             >
               <Button
                 type="primary-outline"
-                size="medium"
+                size="default"
                 onClick={scrollToRef}
               >
                 LEARN MORE
@@ -100,7 +100,7 @@ const HomeLayout = (): JSX.Element => {
           <a href="/getinvolved">
             <Button
               type="primary"
-              size="medium"
+              size="default"
             >
               GET INVOLVED
             </Button>
@@ -110,8 +110,10 @@ const HomeLayout = (): JSX.Element => {
           type="flex"
           justify="center"
         >
-          {homeContent.roles.map((role) => (
+          {homeContent.roles.map((role, i) => (
             <Col
+              // eslint-disable-next-line
+              key={`content${i}`}
               md={{ span: 6 }}
               xs={{ span: 9 }}
             >
@@ -129,8 +131,9 @@ const HomeLayout = (): JSX.Element => {
           autoplay
           className="challenges-carousel"
         >
-          {homeContent.challenges.map((challenge) => (
-            <div className="challenge-item">
+          {homeContent.challenges.map((challenge, i) => (
+            // eslint-disable-next-line
+            <div className="challenge-item" key={`challenge${i}`}>
               <div
                 style={{
                   backgroundImage: `url(${challenge.src})`,
@@ -175,8 +178,10 @@ const HomeLayout = (): JSX.Element => {
         type="flex"
         justify="center"
       >
-        {homeContent.actionImg.map((img) => (
+        {homeContent.actionImg.map((img, i) => (
           <Col
+            // eslint-disable-next-line
+            key={`actionImg${i}`}
             md={6}
             xs={9}
           >
@@ -203,8 +208,9 @@ const HomeLayout = (): JSX.Element => {
         className="logo-carousel"
       >
         { /* eslint-enable */ }
-        {homeContent.logos.map((logo) => (
-          <div>
+        {homeContent.logos.map((logo, i) => (
+          // eslint-disable-next-line
+          <div key={`logo${i}`}>
             <img src={logo} style={{ width: '100%' }} alt="" />
           </div>
         ))}
