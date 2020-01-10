@@ -30,22 +30,25 @@ const AboutLayout = (): JSX.Element => (
         alt="about-diagram"
       />
     </div>
-    <br/><br/><br/><br/>
-    <div style={{"backgroundColor":"#F0F8FF"}}>
-    <div className="container">
-      <div className="paragraph">
-        <h2>{aboutContent.title3}</h2>
-      </div>
-      <Row
-        type="flex"
-        gutter={[16, 16]}
-        justify="center"
-      >
-        {aboutContent.content3.map((content) => (
-          <Col
-            xs={{ span: 20 }}
-            lg={{ span: 11 }}
-          >
+    <br />
+    <br />
+    <br />
+    <br />
+    <div style={{ backgroundColor: '#F0F8FF' }}>
+      <div className="container">
+        <div className="paragraph">
+          <h2>{aboutContent.title3}</h2>
+        </div>
+        <Row
+          type="flex"
+          gutter={[16, 16]}
+          justify="center"
+        >
+          {aboutContent.content3.map((content) => (
+            <Col
+              xs={{ span: 20 }}
+              lg={{ span: 11 }}
+            >
               <Meta
                 avatar={(
                   <Avatar
@@ -55,13 +58,16 @@ const AboutLayout = (): JSX.Element => (
                 )}
                 description={content.txt}
               />
-          </Col>
-        ))}
-      </Row>
+            </Col>
+          ))}
+        </Row>
       </div>
-      <br/><br/><br/><br/>
-      </div>
-      <div className="container">
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+    <div className="container">
       <div className="paragraph">
         <h2>{workspaceContent.title3}</h2>
       </div>

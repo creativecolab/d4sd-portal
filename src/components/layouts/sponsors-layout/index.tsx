@@ -21,6 +21,7 @@ const SponsorsLayout = (): JSX.Element => (
         <h4 style={{ textAlign: 'left' }}>{sponsorsContent.subtitle1}</h4>
         {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content2_1 }} />
+        <br />
         <h4 style={{ textAlign: 'left' }}>{sponsorsContent.subtitle2}</h4>
         {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content2_2 }} />
