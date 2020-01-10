@@ -718,7 +718,7 @@ export const feedbackContent = {
 };
 
 export const sponsorsContent = {
-    image: 'about_header',
+    image: 'sponsors_header',
     title1: "Sponsors",
     content1: "D4SD sponsors are committed to advancing innovative concepts aimed to make San Diego a more sustainable city. Sponsorship may come in many forms: find out how you can take part in this civic challenge.",
     title2: "Sponsor Benefits",

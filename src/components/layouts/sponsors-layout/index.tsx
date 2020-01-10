@@ -24,25 +24,28 @@ const SponsorsLayout = (): JSX.Element => (
         {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content2_2 }} />
       </div>
+      </div>
+      <br/><br/><br/><br/>
+      <div style={{"backgroundColor":"#F0F8FF"}}>
+      <div className="container">
       <div className="section">
         <h2>{sponsorsContent.title3}</h2>
         <br />
-        <Row type="flex" justify="space-between">
-          <Col md={7} xs={{ span: 9 }}>
+        <Row type="flex" justify="center" gutter={[48, 24]}>
+          <Col md={8} xs={18}>
             <img src={sponsorsContent.img1} style={{ width: '100%' }} alt="designlab" />
           </Col>
-          <Col md={7} xs={{ span: 9 }}>
+          <Col md={8} xs={18}>
             <img src={sponsorsContent.img2} style={{ width: '100%' }} alt="yankelovich" />
           </Col>
-          <Col md={7} xs={{ span: 9 }}>
+          <Col md={8} xs={18}>
             <img src={sponsorsContent.img3} style={{ width: '100%' }} alt="ibm" />
           </Col>
         </Row>
       </div>
+      <br/><br/><br/><br/>
+      </div>
     </div>
-
-    <br />
-    <br />
     <Footer />
   </div>
 );

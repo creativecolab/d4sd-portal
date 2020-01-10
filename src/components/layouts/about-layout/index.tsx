@@ -29,6 +29,10 @@ const AboutLayout = (): JSX.Element => (
         style={{ width: '100%' }}
         alt="about-diagram"
       />
+    </div>
+    <br/><br/><br/><br/>
+    <div style={{"backgroundColor":"#F0F8FF"}}>
+    <div className="container">
       <div className="paragraph">
         <h2>{aboutContent.title3}</h2>
       </div>
@@ -42,10 +46,6 @@ const AboutLayout = (): JSX.Element => (
             xs={{ span: 20 }}
             lg={{ span: 11 }}
           >
-            <Card
-              bordered={false}
-              className="aboutcard"
-            >
               <Meta
                 avatar={(
                   <Avatar
@@ -55,10 +55,13 @@ const AboutLayout = (): JSX.Element => (
                 )}
                 description={content.txt}
               />
-            </Card>
           </Col>
         ))}
       </Row>
+      </div>
+      <br/><br/><br/><br/>
+      </div>
+      <div className="container">
       <div className="paragraph">
         <h2>{workspaceContent.title3}</h2>
       </div>
