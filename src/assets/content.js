@@ -505,7 +505,7 @@ export const workspaceContent = {
   title2: 'How to get started?',
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and register on the platform (opens Jan 6th, 2020).",
-  title3: 'D4SD 2020 Timeline',
+  title3: 'Key D4SD 2020 Activities',
   content3:
     "We are still working to settle on exact event dates and deadlines for D4SD 2020, but we anticipate a submission deadline of March 20, 2020. D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for participants who want to innovate.  If you want to get involved as a mentor, feedback provider or speaker, please <a href='/getinvolved'>learn more about these roles</a>.",
   title4: 'Deliverables',
@@ -546,7 +546,7 @@ export const workspaceContent = {
       img: 'timeline_ideate'
     },
     {
-      stage: 'Propose Initial Concepts and Get Community Feedback',
+      stage: 'Propose Concepts for Community Feedback',
       date: 'BY FEB 14',
       detail:
         'Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts here in the D4SD Workspace by Feb 15th. The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.',
@@ -574,7 +574,7 @@ export const workspaceContent = {
       img: 'timeline_pitch'
     },
     {
-      stage: 'Create Community Alliances to Support your Proposal ',
+      stage: 'Create Alliances to Support your Proposal',
       date: 'APR 4',
       detail:
         'Many good concepts fail to gain traction at this point.  The D4SD summit offers a platform from which you can personally introduce your concept to civic leaders, entrepreneurs, and community members.  The best submissions will draw on evidence to demonstrate the viability of their solutions, while critically discussing the opportunity, barriers to deployment, and potential risks associated with the prototype.  While your presentation may be just a few minutes, the conversation about your prototype might lead to meaningful change.',
