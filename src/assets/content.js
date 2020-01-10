@@ -63,7 +63,7 @@ import climate3 from './img/climate_coastal.jpg';
 import climate4 from './img/climate_community.jpg';
 
 import sponsors_designlab from './img/sponsors_designlab.svg';
-import sponsors_yankelovich from './img/sponsors_yankelovich.jpg';
+import sponsors_yankelovich from './img/sponsors_yankelovich.png';
 import sponsors_ibm from './img/sponsors_ibm.svg';
 
 /** ***********************************Home content************************************** */

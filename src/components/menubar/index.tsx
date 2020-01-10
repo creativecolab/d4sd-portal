@@ -85,25 +85,25 @@ const Menubar = (): JSX.Element => {
                 </span>
               )}
             >
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
                 <span>Home</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/getinvolved')}>
                 <span>Get Involved</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/challenges')}>
                 <span>Challenges</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
                 <span>Resources</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/faq')}>
                 <span>FAQs</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/about')}>
                 <span>About</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item">
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsors')}>
                 <span>Sponsors</span>
               </Menu.Item>
               {/** <Menu.Item className="mobile-menu-item">
