@@ -7,6 +7,8 @@ import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
 
+import landingImage from '../../../assets/img/home_landing.svg';
+
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -88,6 +90,9 @@ const HomeLayout = (): JSX.Element => {
               </Button>
             </Col>
           </Row>
+        </div>
+        <div className="landing-image">
+          <img alt="landing_image" src={landingImage} />
         </div>
       </div>
       <div className="container">

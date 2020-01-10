@@ -24,18 +24,18 @@
 
 .homebackground(@img) {
   background-image: url('../assets/img/@{img}.svg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-width: 100%;
   height: 100vh;
   padding-top: @margin-base-25;
-  @media screen and (max-width: @sm) {
-    background-size: contain;
-  }
-  @media screen and (min-width: @md) {
-    background-size: cover;
-  }
+  // @media screen and (max-width: @sm) {
+  //   background-size: contain;
+  // }
+  // @media screen and (min-width: @md) {
+  //   background-size: cover;
+  // }
 }
 
 .headerbackground(@img) {
