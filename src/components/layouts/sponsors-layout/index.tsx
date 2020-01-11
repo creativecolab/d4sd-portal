@@ -20,8 +20,8 @@ const SponsorsLayout = (): JSX.Element => (
         <h2>{sponsorsContent.title2}</h2>
         {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a
           href="mailto:team@d4sd.org"
           target="_blank"
