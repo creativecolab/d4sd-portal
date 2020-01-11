@@ -720,12 +720,16 @@ export const feedbackContent = {
 export const sponsorsContent = {
     image: 'sponsors_header',
     title1: "Sponsors",
-    content1: "D4SD sponsors are committed to advancing innovative concepts aimed to make San Diego a more sustainable city. Sponsorship may come in many forms: find out how you can take part in this civic challenge.",
+    content1: "D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.",
     title2: "Sponsor Benefits",
-    subtitle1: "Tier 1 Partner Sponsors",
-    content2_1: '<li>Exclusive opportunities to interact with world-renowned designer, Don Norman, Director of the Design Lab.</li><li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li><li>Meetings with D4SD organizers before and during the Civic Design Challenge on Mobility to provide opinions and ideas on matters of challenge design and implementation.</li><li>Benefits from Tier 2 sponsors are included at this level.</li>',
-    subtitle2: "Tier 2 VIP Sponsors",
-    content2_2: "<li>Opportunity to sponsor, mentor, and work directly with a design team that enters this year’s Civic Design Challenge on Mobility.</li><li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
+    content_2: "Design for San Diego is a non-profit dedicated to motivating and coordinating design thinking to improve our great City.  As such, we rely on sponsorship from all sectors to make it happen. Contact us below to learn more." +
+               "<br/><br/>" +
+               "Sponsor benefits may include:" +
+               "<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>" +
+               "<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>" +
+               "<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>" +
+               "<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>" +
+               "<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
     title3: "2020 Sponsors",
     img1: sponsors_designlab,
     img2: sponsors_yankelovich,
