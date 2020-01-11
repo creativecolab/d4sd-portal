@@ -130,7 +130,7 @@ const HomeLayout = (): JSX.Element => {
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
                     <a href="/challenges">
-                      <Button type="primary">Learn More</Button>
+                      <Button type="primary">LEARN MORE</Button>
                     </a>
                   </div>
                 </div>
