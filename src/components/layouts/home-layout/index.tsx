@@ -6,6 +6,7 @@ import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
+import Footer from "../../Footer";
 
 
 // const photoCarouselSettings = {
@@ -192,6 +193,7 @@ const HomeLayout = (): JSX.Element => {
           </div>
         ))}
       </Carousel>
+      <Footer />
     </div>
   );
 };
