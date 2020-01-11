@@ -6,6 +6,7 @@ import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
+import Footer from '../../Footer';
 
 
 // const photoCarouselSettings = {
@@ -130,7 +131,7 @@ const HomeLayout = (): JSX.Element => {
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
                     <a href="/challenges">
-                      <Button type="primary">Learn More</Button>
+                      <Button type="primary">LEARN MORE</Button>
                     </a>
                   </div>
                 </div>
@@ -192,6 +193,7 @@ const HomeLayout = (): JSX.Element => {
           </div>
         ))}
       </Carousel>
+      <Footer />
     </div>
   );
 };

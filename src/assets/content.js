@@ -227,17 +227,17 @@ export const involveContent = {
       isAction: 'true',
       action: 'CONTACT OUR TEAM'
     },
-    {
-      title: 'Join the D4SD team',
-      txt:
-        'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
-      image: mail,
-      id: 'mail',
-      link: 'http://eepurl.com/c2kFon',
-      isAction: 'true',
-      action: 'JOIN OUR TEAM',
-      new: '_blank'
-    },
+    // {
+    //   title: 'Join the D4SD team',
+    //   txt:
+    //     'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
+    //   image: mail,
+    //   id: 'mail',
+    //   link: 'http://eepurl.com/c2kFon',
+    //   isAction: 'true',
+    //   action: 'JOIN OUR TEAM',
+    //   new: '_blank'
+    // },
     {
       title: 'Join the mailing list',
       txt:
@@ -505,7 +505,7 @@ export const workspaceContent = {
   title2: 'How to get started?',
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and register on the platform (opens Jan 6th, 2020).",
-  title3: 'D4SD 2020 Timeline',
+  title3: 'Key D4SD 2020 Activities',
   content3:
     "We are still working to settle on exact event dates and deadlines for D4SD 2020, but we anticipate a submission deadline of March 20, 2020. D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for participants who want to innovate.  If you want to get involved as a mentor, feedback provider or speaker, please <a href='/getinvolved'>learn more about these roles</a>.",
   title4: 'Deliverables',
@@ -546,7 +546,7 @@ export const workspaceContent = {
       img: 'timeline_ideate'
     },
     {
-      stage: 'Propose Initial Concepts and Get Community Feedback',
+      stage: 'Propose Concepts for Community Feedback',
       date: 'BY FEB 14',
       detail:
         'Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts here in the D4SD Workspace by Feb 15th. The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.',
@@ -574,7 +574,7 @@ export const workspaceContent = {
       img: 'timeline_pitch'
     },
     {
-      stage: 'Create Community Alliances to Support your Proposal ',
+      stage: 'Create Alliances to Support your Proposal',
       date: 'APR 4',
       detail:
         'Many good concepts fail to gain traction at this point.  The D4SD summit offers a platform from which you can personally introduce your concept to civic leaders, entrepreneurs, and community members.  The best submissions will draw on evidence to demonstrate the viability of their solutions, while critically discussing the opportunity, barriers to deployment, and potential risks associated with the prototype.  While your presentation may be just a few minutes, the conversation about your prototype might lead to meaningful change.',
@@ -720,12 +720,16 @@ export const feedbackContent = {
 export const sponsorsContent = {
     image: 'sponsors_header',
     title1: "Sponsors",
-    content1: "D4SD sponsors are committed to advancing innovative concepts aimed to make San Diego a more sustainable city. Sponsorship may come in many forms: find out how you can take part in this civic challenge.",
+    content1: "D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.",
     title2: "Sponsor Benefits",
-    subtitle1: "Tier 1 Partner Sponsors",
-    content2_1: '<li>Exclusive opportunities to interact with world-renowned designer, Don Norman, Director of the Design Lab.</li><li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li><li>Meetings with D4SD organizers before and during the Civic Design Challenge on Mobility to provide opinions and ideas on matters of challenge design and implementation.</li><li>Benefits from Tier 2 sponsors are included at this level.</li>',
-    subtitle2: "Tier 2 VIP Sponsors",
-    content2_2: "<li>Opportunity to sponsor, mentor, and work directly with a design team that enters this year’s Civic Design Challenge on Mobility.</li><li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
+    content_2: "Design for San Diego is a non-profit dedicated to motivating and coordinating design thinking to improve our great City.  As such, we rely on sponsorship from all sectors to make it happen. Contact us below to learn more." +
+               "<br/><br/>" +
+               "Sponsor benefits may include:" +
+               "<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>" +
+               "<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>" +
+               "<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>" +
+               "<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>" +
+               "<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
     title3: "2020 Sponsors",
     img1: sponsors_designlab,
     img2: sponsors_yankelovich,

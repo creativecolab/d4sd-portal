@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Row, Col
+  Row, Col, Button
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
@@ -18,19 +18,24 @@ const SponsorsLayout = (): JSX.Element => (
     <div className="container">
       <div className="section">
         <h2>{sponsorsContent.title2}</h2>
-        <h4 style={{ textAlign: 'left' }}>{sponsorsContent.subtitle1}</h4>
         {/* eslint-disable-next-line */}
-        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content2_1 }} />
+        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
         <br />
-        <h4 style={{ textAlign: 'left' }}>{sponsorsContent.subtitle2}</h4>
-        {/* eslint-disable-next-line */}
-        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content2_2 }} />
+        <br />
+        <a
+          href="mailto:team@d4sd.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            type="primary"
+            size="medium"
+          >
+            REACH OUT TO SPONSOR US
+          </Button>
+        </a>
       </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
     <div style={{ backgroundColor: '#F0F8FF' }}>
       <div className="container">
         <div className="section">
