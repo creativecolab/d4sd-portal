@@ -49,7 +49,7 @@ const SponsorsLayout = (): JSX.Element => (
               <img src={sponsorsContent.img2} style={{ width: '100%' }} alt="yankelovich" />
             </Col>
             <Col md={8} xs={18}>
-              <img src={sponsorsContent.img3} style={{ width: '100%' }} alt="ibm" />
+              <img src={sponsorsContent.img3} style={{ width: '70%' }} alt="ibm" />
             </Col>
           </Row>
         </div>
