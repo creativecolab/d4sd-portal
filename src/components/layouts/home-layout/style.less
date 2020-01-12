@@ -30,11 +30,14 @@
 .challenges {
   .challenges-carousel {
     // text-align: center;
+    @media screen and (min-width: 320px) {
+      min-height: 780px;
+    }
     @media screen and (min-width: 415px) {
       min-height: 840px;
     }
-    @media screen and (min-width: 320px) {
-      min-height: 780px;
+    @media screen and (min-width: 1275px) {
+      min-height: 950px;
     }
 
     height: 90vh;
@@ -49,11 +52,14 @@
       background-position: center bottom;
       height: 80vh;
 
+      @media screen and (min-width: 320px) {
+        min-height: 690px;
+      }
       @media screen and (min-width: 415px) {
         min-height: 750px;
       }
-      @media screen and (min-width: 320px) {
-        min-height: 690px;
+      @media screen and (min-width: 1275px) {
+        min-height: 850px;
       }
     }
     .challenge-header {
