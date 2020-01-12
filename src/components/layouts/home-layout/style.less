@@ -30,12 +30,32 @@
 .challenges {
   .challenges-carousel {
     // text-align: center;
+    @media screen and (min-width: 415px) {
+      min-height: 840px;
+    }
+    @media screen and (min-width: 320px) {
+      min-height: 780px;
+    }
+
     height: 90vh;
     background: #244c7e;
     overflow: hidden;
   }
   .challenge-item {
     background: #eff8ff;
+    .challenge-card {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center bottom;
+      height: 80vh;
+
+      @media screen and (min-width: 415px) {
+        min-height: 750px;
+      }
+      @media screen and (min-width: 320px) {
+        min-height: 690px;
+      }
+    }
     .challenge-header {
       padding-top: 50px;
       text-align: center;

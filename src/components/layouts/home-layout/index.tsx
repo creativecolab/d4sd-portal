@@ -128,12 +128,9 @@ const HomeLayout = (): JSX.Element => {
             // eslint-disable-next-line
             <div className="challenge-item" key={`challenge${i}`}>
               <div
+                className="challenge-card"
                 style={{
-                  backgroundImage: `url(${challenge.src})`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: '100%',
-                  backgroundPosition: 'center bottom',
-                  height: '80vh'
+                  backgroundImage: `url(${challenge.src})`
                 }}
               >
                 <div className="container">

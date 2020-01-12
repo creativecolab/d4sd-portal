@@ -105,17 +105,14 @@ export const homeContent = {
       src: home4,
       header: 'LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES',
       title: 'How might we help all San Diegans live healthy and active lives?',
-      txt:
-        'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
+      txt: 'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 1,
       src: home2,
       header: 'LEARN ABOUT THE CHALLENGES: ADDRESSING ENVIRONMENT EFFECTS',
-      title:
-        'How might we prepare San Diego for natural and human-influenced environmental challenges?',
-      txt:
-        'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
+      title: 'How might we prepare San Diego for natural and human-influenced environmental challenges?',
+      txt: 'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 2,
