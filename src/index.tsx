@@ -15,13 +15,13 @@ import AboutPage from './containers/about-page';
 import ChallengePage from './containers/challenge-page';
 import ResourcesPage from './containers/resources-page';
 import FAQPage from './containers/faq-page';
+import SponsorsPage from './containers/sponsors-page';
 import WorkspacePage from './containers/workspace-page';
 import ProcessPage from './components/layouts/process-layout';
 import StakeholderPage from './components/layouts/stakeholder-layout';
 import FeedbackPage from './components/layouts/feedback-layout';
 
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-import './styles/reset.css';
 import './index.less';
 
 // eslint-disable-next-line
@@ -40,6 +40,7 @@ const App = (): JSX.Element => (
             <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/sponsors" component={SponsorsPage} />
             <Route exact path="/faq" component={FAQPage} />
             <Route exact path="/workspace" component={WorkspacePage} />
             <Route exact path="/resources" component={ResourcesPage} />

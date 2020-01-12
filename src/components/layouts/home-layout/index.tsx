@@ -6,6 +6,7 @@ import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
+import Footer from '../../Footer';
 
 import landingImage from '../../../assets/img/home_landing.svg';
 
@@ -44,63 +45,50 @@ const HomeLayout = (): JSX.Element => {
     }
   };
 
+  // eslint-disable-next-line
+  const contentHTML = (data: any): any => ({ __html: data });
+
   return (
-    <div>
+    <div className="Home">
       <Menubar />
       <div className="landing">
         <div className="container">
-          <h3>{homeContent.subtitle1}</h3>
-          <h1>{homeContent.title1}</h1>
-          <p>{homeContent.content1}</p>
+          <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>
+          <h1 className="d4sdmaintitle">{homeContent.title1}</h1>
+          <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
-          <Row
-            type="flex"
-            justify="center"
+          <a
+            href="http://eepurl.com/c2kFon"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Col
-              xs={24}
-              md={9}
-              lg={5}
+            <Button
+              type="primary"
+              size="medium"
             >
-              <a
-                href="http://eepurl.com/c2kFon"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  type="primary"
-                  size="default"
-                >
-                JOIN MAILING LIST
-                </Button>
-              </a>
-            </Col>
-            <Col
-              xs={24}
-              md={9}
-              lg={5}
-            >
-              <Button
-                type="primary-outline"
-                size="default"
-                onClick={scrollToRef}
-              >
-                LEARN MORE
-              </Button>
-            </Col>
-          </Row>
+              JOIN MAILING LIST
+            </Button>
+          </a>
+          <Button
+            type="primary-outline"
+            size="medium"
+            onClick={scrollToRef}
+          >
+              LEARN MORE
+          </Button>
         </div>
         <div className="landing-image">
           <img alt="landing_image" src={landingImage} />
         </div>
       </div>
+
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_1 }} />
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_2 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
           {/* eslint-enable */}
           <a href="/getinvolved">
             <Button
@@ -153,9 +141,9 @@ const HomeLayout = (): JSX.Element => {
                     <h3>{challenge.header}</h3>
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
-                    <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
+                    <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
                     <a href="/challenges">
-                      <Button type="primary">Learn More</Button>
+                      <Button type="primary">LEARN MORE</Button>
                     </a>
                   </div>
                 </div>
@@ -169,7 +157,7 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2>{homeContent.title3}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content3 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content3)} />
           <a
             href="https://d4sd2017.ucsd.edu/"
             target="_blank"
@@ -199,7 +187,7 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2>{homeContent.title4}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content4 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content4)} />
           <a href="/getinvolved">
             <Button>GET INVOLVED</Button>
           </a>
@@ -220,6 +208,7 @@ const HomeLayout = (): JSX.Element => {
           </div>
         ))}
       </Carousel>
+      <Footer />
     </div>
   );
 };
