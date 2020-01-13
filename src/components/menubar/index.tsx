@@ -72,7 +72,7 @@ const Menubar = (): JSX.Element => {
             onClick={(): void => setCollapse(!collapse)}
             id="mobileNav"
           >
-            <Menu.Item>
+            <Menu.Item className="menu-item-no menu-logo" type="logo">
               <NavLink to="/">
                 <img src={logo} alt="logo" />
               </NavLink>
