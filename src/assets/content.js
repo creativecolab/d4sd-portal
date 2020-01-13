@@ -528,7 +528,7 @@ export const workspaceContent = {
       stage: 'Share your Ideas and Find a Team',
       date: 'BY FEB 3',
       detail:
-        'Collaboration is essential for truly innovative design work. If you have ideas or are passionate about a problem, D4SD provides you an opportunity to share with others and build a team around your concepts. Great teams tap into the diversity of skills and perspectives of their members as they collaborate. Visit the D4SD Slack channel to meet other participants and form teams around the D4SD challenges. Register to get updates about what’s happening with D4SD.',
+        "Collaboration is essential for truly innovative design work. If you have ideas or are passionate about a problem, D4SD provides you an opportunity to share with others and build a team around your concepts. Great teams tap into the diversity of skills and perspectives of their members as they collaborate. Visit the <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack Channel</a> to meet other participants and form teams around the D4SD challenges. Register to get updates about what’s happening with D4SD.",
       action1: 'Search for teammates on Slack',
       state1: 'active',
       action2: 'Register your team',
@@ -544,7 +544,7 @@ export const workspaceContent = {
       stage: 'Propose Concepts for Community Feedback',
       date: 'BY FEB 14',
       detail:
-        'Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts here in the D4SD Workspace by Feb 15th. The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.',
+        'Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts (details coming soon). The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.',
       action1: 'Sign up for D4SD',
       state1: 'inactive',
       action2: 'Register your team',
