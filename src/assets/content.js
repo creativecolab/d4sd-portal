@@ -70,8 +70,7 @@ import sponsors_ibm from './img/sponsors_ibm.svg';
 export const homeContent = {
   subtitle1: "DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE",
   title1: 'How can we make San Diego a more sustainable city?',
-  content1:
-    'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
+  content1: 'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
   title2: 'Contribute to our mission',
   content2_1: 'D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas.',
   content2_2: 'D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.',
@@ -99,25 +98,21 @@ export const homeContent = {
       src: home1,
       header: 'LEARN ABOUT THE CHALLENGES: IMPROVING MOBILITY',
       title: 'How might we help people move freely in San Diego?',
-      txt:
-        'As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>'
+      txt: 'As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 3,
       src: home4,
       header: 'LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES',
       title: 'How might we help all San Diegans live healthy and active lives?',
-      txt:
-        'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
+      txt: 'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 1,
       src: home2,
       header: 'LEARN ABOUT THE CHALLENGES: ADDRESSING ENVIRONMENT EFFECTS',
-      title:
-        'How might we prepare San Diego for natural and human-influenced environmental challenges?',
-      txt:
-        'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
+      title: 'How might we prepare San Diego for natural and human-influenced environmental challenges?',
+      txt: 'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 2,

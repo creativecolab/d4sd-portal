@@ -7,6 +7,9 @@ import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
 import Footer from '../../Footer';
+import { contentHTML } from '../../../actions';
+
+import landingImage from '../../../assets/img/home_landing.svg';
 
 
 // const photoCarouselSettings = {
@@ -73,18 +76,22 @@ const HomeLayout = (): JSX.Element => {
               LEARN MORE
           </Button>
         </div>
+        <div className="landing-image">
+          <img alt="landing_image" src={landingImage} />
+        </div>
       </div>
+
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_1 }} />
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content2_2 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
           {/* eslint-enable */}
           <a href="/getinvolved">
             <Button
               type="primary"
-              size="medium"
+              size="default"
             >
               GET INVOLVED
             </Button>
@@ -94,8 +101,10 @@ const HomeLayout = (): JSX.Element => {
           type="flex"
           justify="center"
         >
-          {homeContent.roles.map((role) => (
+          {homeContent.roles.map((role, i) => (
             <Col
+              // eslint-disable-next-line
+              key={`content${i}`}
               md={{ span: 6 }}
               xs={{ span: 9 }}
             >
@@ -113,15 +122,13 @@ const HomeLayout = (): JSX.Element => {
           autoplay
           className="challenges-carousel"
         >
-          {homeContent.challenges.map((challenge) => (
-            <div className="challenge-item">
+          {homeContent.challenges.map((challenge, i) => (
+            // eslint-disable-next-line
+            <div className="challenge-item" key={`challenge${i}`}>
               <div
+                className="challenge-card"
                 style={{
-                  backgroundImage: `url(${challenge.src})`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: '100%',
-                  backgroundPosition: 'center bottom',
-                  height: '80vh'
+                  backgroundImage: `url(${challenge.src})`
                 }}
               >
                 <div className="container">
@@ -129,7 +136,7 @@ const HomeLayout = (): JSX.Element => {
                     <h3>{challenge.header}</h3>
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
-                    <p dangerouslySetInnerHTML={{ __html: challenge.txt }} />
+                    <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
                     <a href="/challenges">
                       <Button type="primary">LEARN MORE</Button>
                     </a>
@@ -145,7 +152,7 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2>{homeContent.title3}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content3 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content3)} />
           <a
             href="https://d4sd2017.ucsd.edu/"
             target="_blank"
@@ -159,8 +166,10 @@ const HomeLayout = (): JSX.Element => {
         type="flex"
         justify="center"
       >
-        {homeContent.actionImg.map((img) => (
+        {homeContent.actionImg.map((img, i) => (
           <Col
+            // eslint-disable-next-line
+            key={`actionImg${i}`}
             md={6}
             xs={9}
           >
@@ -173,7 +182,7 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2>{homeContent.title4}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: homeContent.content4 }} />
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content4)} />
           <a href="/getinvolved">
             <Button>GET INVOLVED</Button>
           </a>
@@ -187,8 +196,9 @@ const HomeLayout = (): JSX.Element => {
         className="logo-carousel"
       >
         { /* eslint-enable */ }
-        {homeContent.logos.map((logo) => (
-          <div>
+        {homeContent.logos.map((logo, i) => (
+          // eslint-disable-next-line
+          <div key={`logo${i}`}>
             <img src={logo} style={{ width: '100%' }} alt="" />
           </div>
         ))}
