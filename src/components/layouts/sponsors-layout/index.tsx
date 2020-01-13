@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Row, Col, Button
-} from '@d4sd/components';
+import { Row, Col, Button } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -27,10 +25,7 @@ const SponsorsLayout = (): JSX.Element => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button
-            type="primary"
-            size="medium"
-          >
+          <Button className="button" type="primary" size="medium">
             REACH OUT TO SPONSOR US
           </Button>
         </a>
@@ -43,13 +38,25 @@ const SponsorsLayout = (): JSX.Element => (
           <br />
           <Row type="flex" justify="center" gutter={[48, 24]}>
             <Col md={8} xs={18}>
-              <img src={sponsorsContent.img1} style={{ width: '100%' }} alt="designlab" />
+              <img
+                src={sponsorsContent.img1}
+                style={{ width: '100%' }}
+                alt="designlab"
+              />
             </Col>
             <Col md={8} xs={18}>
-              <img src={sponsorsContent.img2} style={{ width: '100%' }} alt="yankelovich" />
+              <img
+                src={sponsorsContent.img2}
+                style={{ width: '100%' }}
+                alt="yankelovich"
+              />
             </Col>
             <Col md={8} xs={18}>
-              <img src={sponsorsContent.img3} style={{ width: '70%' }} alt="ibm" />
+              <img
+                src={sponsorsContent.img3}
+                style={{ width: '70%' }}
+                alt="ibm"
+              />
             </Col>
           </Row>
         </div>
