@@ -69,7 +69,6 @@ const Menubar = (): JSX.Element => {
         >
           <Menu
             mode="horizontal"
-            onClick={(): void => setCollapse(!collapse)}
             id="mobileNav"
           >
             <Menu.Item className="menu-item-no menu-logo" type="logo">
@@ -81,7 +80,10 @@ const Menubar = (): JSX.Element => {
             <SubMenu
               title={(
                 <span>
-                  <Icon type={collapse ? 'menu-fold' : 'menu-unfold'} />
+                  <Icon
+                    type={collapse ? 'menu-fold' : 'menu-unfold'} style={{ fontSize: '20px', marginTop: '20px' }}
+                    onClick={(): void => setCollapse(!collapse)}
+                  />
                 </span>
               )}
             >
