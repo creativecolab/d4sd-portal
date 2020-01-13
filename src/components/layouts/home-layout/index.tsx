@@ -7,6 +7,7 @@ import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
 import Footer from '../../Footer';
+import { contentHTML } from '../../../actions';
 
 import landingImage from '../../../assets/img/home_landing.svg';
 
@@ -44,9 +45,6 @@ const HomeLayout = (): JSX.Element => {
       });
     }
   };
-
-  // eslint-disable-next-line
-  const contentHTML = (data: any): any => ({ __html: data });
 
   return (
     <div className="Home">

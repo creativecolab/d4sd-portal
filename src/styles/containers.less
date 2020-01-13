@@ -11,6 +11,9 @@
   @media screen and (min-width: @lg) {
     max-width: 65%;
   }
+  @media screen and (min-width: 2140px) {
+    max-width: 1361px;
+  }
 }
 
 .paragraph {
@@ -46,7 +49,14 @@
   background-width: 100%;
   padding-top: @margin-base-25;
   background-size: contain;
-  height: 350px;
+  height: 400px;
+
+  .container {
+    @media screen and (max-width: 845px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .ant-card-body {
@@ -57,6 +67,9 @@
     height: 460px;
   }
   @media screen and (min-width: @xl) {
+    height: 390px;
+  }
+  @media screen and (min-width: 1495px) {
     height: 320px;
   }
 }
