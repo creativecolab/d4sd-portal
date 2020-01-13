@@ -20,6 +20,7 @@ import FeedbackPage from "./components/layouts/feedback-layout";
 
 import "./index.less";
 import "./styles/reset.css";
+import FeedbackProviderLayout from "./components/layouts/feedback-provider-layout";
 
 // @ts-ignore
 const store = configureStore();
@@ -66,4 +67,4 @@ const App = () => (
   </Provider>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<FeedbackProviderLayout />, document.getElementById("root"));
