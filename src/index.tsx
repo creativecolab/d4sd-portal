@@ -24,6 +24,9 @@ import CommunityFeedbackLayout from './components/layouts/community-feedback-lay
 import FeedbackPage from './components/layouts/feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 
+import './index.less';
+import './styles/reset.css';
+import FeedbackProviderLayout from "./components/layouts/feedback-provider-layout";
 
 // eslint-disable-next-line
 // @ts-ignore
