@@ -59,9 +59,6 @@ const App = (): JSX.Element => (
             <Route exact path="/resources/stakeholder" component={StakeholderPage} />
             <Route exact path="/provide_feedback" component={FeedbackProviderLayout} />
             {/*
-            <Route exact path='/resources' component={Resources}/>
-            <Route exact path='/workspace' component={Workspace}/>
-
             Questionable/Non-relevant routes
             <Route exact path='/events' component={Events}/>
             <Route exact path='/solution' component={PastSolution}/>
