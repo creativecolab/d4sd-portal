@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import {
-  Row, Col, Steps, Button
+  Row, Col, Steps, Button, Header
 } from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
 import Menubar from '../../menubar/index';
@@ -35,19 +35,7 @@ const SignupLayout = (): JSX.Element => {
     <div>
       <Menubar />
       <div className="SignupLayout">
-        <Row
-          className="heading"
-          type="flex"
-          justify="center"
-        >
-          <Col span={20}>
-            <h1 className="heading-message">
-              {signupStep === 'start' && 'Workspace Sign Up'}
-              {signupStep === 'success' && 'Welcome to D4SD Workspace!'}
-              {signupStep === 'login' && 'D4SD Workspace'}
-            </h1>
-          </Col>
-        </Row>
+        <Header title="Workspace Registration"/>
         <Row className="card-container">
           {signupStep === 'start' && (
             <SignupCard setSignupStep={setSignupStep} />
