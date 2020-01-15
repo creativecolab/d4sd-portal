@@ -2,7 +2,7 @@ name: Publish Docker Staging Image
 on:
   push:
     branches:
-      - ud/devops
+      - staging
 jobs:
   build:
     runs-on: ubuntu-latest
