@@ -1,11 +1,15 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
+
+import { UserProvider } from './UserContext'
+import { getCookie, setCookie } from './utils';
+
 import configureStore, { history } from './store';
 import SignupPage from './containers/signup-page';
 import LoginPage from './containers/login-page';
@@ -22,16 +26,43 @@ import StakeholderPage from './components/layouts/stakeholder-layout';
 import FeedbackPage from './components/layouts/feedback-layout';
 
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
+
+import { message } from "@d4sd/components"
+
 import './index.less';
 
 // eslint-disable-next-line
 // @ts-ignore
 const store = configureStore();
 
-const App = (): JSX.Element => (
+const App = (): JSX.Element => {
+  const [user, setUser] = useState({loggedIn: false, token:"", username:""});
+
+  useEffect(() => {
+    // temp
+    setCookie("d4sdLoginToken", "randomtoken", 7); // 7 day expiration date
+    const loginToken = getCookie('d4sdLoginToken');
+    const verified = true;
+    // verify token
+    if (verified) {
+      setUser({loggedIn: true, username: "Daniel", token: loginToken});
+    }
+  }, []);
+  function LoginRequire(component: any) {
+    if (user.loggedIn) {
+      return component;
+    }
+    else {
+      message.info("You need to login first!");
+      return <Redirect to="/" />
+    }
+  }
+  return (
+
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <>
+      <UserProvider value={{user: user, setUser: setUser}}>
         <main>
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -47,7 +78,7 @@ const App = (): JSX.Element => (
             <Route exact path="/resources/process" component={ProcessPage} />
             <Route exact path="/resources/stakeholder" component={StakeholderPage} />
 
-            <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
+            <Route exact path="/workspace/prelim" component={() => LoginRequire(PreliminarySubmissionPage)} />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -68,10 +99,11 @@ const App = (): JSX.Element => (
             <Route exect path="/login" component={LoginPage} />
           </Switch>
         </main>
+        </UserProvider>
       </>
     </ConnectedRouter>
   </Provider>
-);
+)};
 
 // eslint-disable-next-line no-undef
 ReactDOM.render(<App />, document.getElementById('root'));
