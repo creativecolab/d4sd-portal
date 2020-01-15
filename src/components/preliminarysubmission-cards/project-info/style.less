@@ -1,0 +1,45 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+.ProjectInfoCard {
+  max-width: 90%;
+  margin: auto;
+  height: 100%;
+  .projectinfo-header {
+    font-weight: bold;
+  }
+  h4 {
+    color: @d4sd-color;
+  }
+  .project-info-details {
+    h4 {
+      margin-top: @margin-base * 2;
+    }
+  }
+  .bottom-btns {
+    text-align: center;
+    .d4sdbutton-wrapper {
+      margin-top: @margin-base * 6;
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+  .team-input-part {
+    margin-bottom: @margin-base * 2;
+  }
+  .team-container {
+    margin-bottom: @margin-base * 8;
+  }
+  .final-input-row {
+    margin-bottom: @margin-base * 2;
+  }
+  .project-name-input {
+    height: 50px;
+  }
+  .nameInput {
+    height: 50px;
+  }
+  .emailInput {
+    height: 50px;
+  }
+}

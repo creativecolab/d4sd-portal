@@ -62,12 +62,15 @@ import climate2 from './img/climate_waste.jpg';
 import climate3 from './img/climate_coastal.jpg';
 import climate4 from './img/climate_community.jpg';
 
+import sponsors_designlab from './img/sponsors_designlab.svg';
+import sponsors_yankelovich from './img/sponsors_yankelovich.png';
+import sponsors_ibm from './img/sponsors_ibm.svg';
+
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1: "DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE",
   title1: 'How can we make San Diego a more sustainable city?',
-  content1:
-    'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
+  content1: 'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
   title2: 'Contribute to our mission',
   content2_1: 'D4SD seeks to connect young, passionate designers to a network of industry professionals and structure a process for collectively addressing civic challenges related to the sustainability of our region. We are exploring new models for collective innovation where the community works together to discover problems, explore solutions, and build prototypes to test ideas.',
   content2_2: 'D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.',
@@ -95,25 +98,21 @@ export const homeContent = {
       src: home1,
       header: 'LEARN ABOUT THE CHALLENGES: IMPROVING MOBILITY',
       title: 'How might we help people move freely in San Diego?',
-      txt:
-        'As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>'
+      txt: 'As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 3,
       src: home4,
       header: 'LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES',
       title: 'How might we help all San Diegans live healthy and active lives?',
-      txt:
-        'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
+      txt: 'Many San Diego residents have limited access to preventative and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 1,
       src: home2,
       header: 'LEARN ABOUT THE CHALLENGES: ADDRESSING ENVIRONMENT EFFECTS',
-      title:
-        'How might we prepare San Diego for natural and human-influenced environmental challenges?',
-      txt:
-        'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
+      title: 'How might we prepare San Diego for natural and human-influenced environmental challenges?',
+      txt: 'Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
       id: 2,
@@ -223,17 +222,17 @@ export const involveContent = {
       isAction: 'true',
       action: 'CONTACT OUR TEAM'
     },
-    {
-      title: 'Join the D4SD team',
-      txt:
-        'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
-      image: mail,
-      id: 'mail',
-      link: 'http://eepurl.com/c2kFon',
-      isAction: 'true',
-      action: 'JOIN OUR TEAM',
-      new: '_blank'
-    },
+    // {
+    //   title: 'Join the D4SD team',
+    //   txt:
+    //     'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
+    //   image: mail,
+    //   id: 'mail',
+    //   link: 'http://eepurl.com/c2kFon',
+    //   isAction: 'true',
+    //   action: 'JOIN OUR TEAM',
+    //   new: '_blank'
+    // },
     {
       title: 'Join the mailing list',
       txt:
@@ -258,7 +257,7 @@ export const faqContent = {
     {
       question: 'What is D4SD?',
       answer:
-        'Design for San Diego (D4SD) is a civic design initiative that brings together innovators, mentors, experts, and citizens to address San Diego’s most challenging issues through human-centered design. Our aim is to provide a space that allows for the community to discover key civic issues, to ideate and prototype solutions to the problems they see, to pitch their proposals in a public forum, and to activate others to help bring them to life.<br/><br/>This year’s theme— How can we make San Diego a more sustainable city— is rooted in the United Nations’ 2030 vision to transform our world by making cities inclusive, safe, resilient and sustainable. D4SD has organized the challenges around four main topics, but you are welcome to explore anything related to sustainability:<li>Housing</li><li>Mobility</li> <li>Health</li> <li>Climate</li>'
+        'Design for San Diego (D4SD) is a civic design initiative that brings together innovators, mentors, experts, and citizens to address San Diego’s most challenging issues through human-centered design. Our aim is to provide a space that allows for the community to discover key civic issues, to ideate and prototype solutions to the problems they see, to pitch their proposals in a public forum, and to activate others to help bring them to life.<br/><br/>This year’s theme— How can we make San Diego a more sustainable city— is rooted in the United Nations’ 2030 vision to transform our world by making cities inclusive, safe, resilient and sustainable. D4SD has organized the challenges around four main topics, but you are welcome to explore anything related to sustainability:<li>Housing</li><li>Mobility</li><li>Health</li> <li>Climate</li>'
     },
     {
       question: 'Why should I participate in D4SD?',
@@ -501,7 +500,7 @@ export const workspaceContent = {
   title2: 'How to get started?',
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and register on the platform (opens Jan 6th, 2020).",
-  title3: 'D4SD 2020 Timeline',
+  title3: 'Key D4SD 2020 Activities',
   content3:
     "We are still working to settle on exact event dates and deadlines for D4SD 2020, but we anticipate a submission deadline of March 20, 2020. D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for participants who want to innovate.  If you want to get involved as a mentor, feedback provider or speaker, please <a href='/getinvolved'>learn more about these roles</a>.",
   title4: 'Deliverables',
@@ -530,7 +529,7 @@ export const workspaceContent = {
       stage: 'Share your Ideas and Find a Team',
       date: 'BY FEB 3',
       detail:
-        'Collaboration is essential for truly innovative design work. If you have ideas or are passionate about a problem, D4SD provides you an opportunity to share with others and build a team around your concepts. Great teams tap into the diversity of skills and perspectives of their members as they collaborate. Visit the D4SD Slack channel to meet other participants and form teams around the D4SD challenges. Register to get updates about what’s happening with D4SD.',
+        "Collaboration is essential for truly innovative design work. If you have ideas or are passionate about a problem, D4SD provides you an opportunity to share with others and build a team around your concepts. Great teams tap into the diversity of skills and perspectives of their members as they collaborate. Visit the <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack Channel</a> to meet other participants and form teams around the D4SD challenges. Register to get updates about what’s happening with D4SD.",
       action1: 'Search for teammates on Slack',
       state1: 'active',
       action2: 'Register your team',
@@ -544,7 +543,7 @@ export const workspaceContent = {
       shortDesc: "Collaboration is essential for truly innovative design work..."
     },
     {
-      stage: 'Propose Initial Concepts and Get Community Feedback',
+      stage: 'Propose Concepts for Community Feedback',
       date: 'BY FEB 14',
       detail:
         "Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts here in the D4SD Workspace by Feb 15th. The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.",
@@ -576,7 +575,7 @@ export const workspaceContent = {
       shortDesc: "How will the public react to your proposal? ..."
     },
     {
-      stage: 'Create Community Alliances to Support your Proposal ',
+      stage: 'Create Alliances to Support your Proposal',
       date: 'APR 4',
       detail:
         'Many good concepts fail to gain traction at this point.  The D4SD summit offers a platform from which you can personally introduce your concept to civic leaders, entrepreneurs, and community members.  The best submissions will draw on evidence to demonstrate the viability of their solutions, while critically discussing the opportunity, barriers to deployment, and potential risks associated with the prototype.  While your presentation may be just a few minutes, the conversation about your prototype might lead to meaningful change.',
@@ -719,3 +718,23 @@ export const feedbackContent = {
   content2:
     '<li>Sign up below.  Feedback providers will register on our system and will receive an email with instructions and next steps.</li> <li>In February 2020, we will email you a request to review design concepts by different teams. D4SD participants will submit their preliminary design concepts, including details about their design proposals and questions for you to answer.</li> <li>Through the D4SD feedback exchange, you can learn more about the team’s problem framing, design proposal, and goals. Pick questions to answer and provide open-ended feedback. If you finish reviewing one team, and you have time, provide feedback for another!</li> <li>Stay in touch with your teams. Your feedback will be sent directly to the D4SD teams to help them refine their concepts for the final submission. You have the option to leave your contact information so the team ask follow-up questions.</li> <br/>If this sounds like a fun way to contribute to this initiative, sign up here:'
 };
+
+export const sponsorsContent = {
+    image: 'sponsors_header',
+    title1: "Sponsors",
+    content1: "D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.",
+    title2: "Sponsor Benefits",
+    content_2: "Design for San Diego is a non-profit dedicated to motivating and coordinating design thinking to improve our great City.  As such, we rely on sponsorship from all sectors to make it happen. Contact us below to learn more." +
+               "<br/><br/>" +
+               "Sponsor benefits may include:" +
+               "<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>" +
+               "<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>" +
+               "<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>" +
+               "<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>" +
+               "<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
+    title3: "2020 Sponsors",
+    img1: sponsors_designlab,
+    img2: sponsors_yankelovich,
+    img3: sponsors_ibm,
+
+}

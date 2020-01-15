@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/containers.less';
 import Menubar from '../menubar/index';
 import './style.less';
+import { contentHTML } from '../../actions';
 
 interface HeaderIF {
   image: string;
@@ -18,7 +19,7 @@ const Header = (props: HeaderIF): JSX.Element => {
         <div className="container">
           <h1>{title}</h1>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: content }} />
+          <p dangerouslySetInnerHTML={contentHTML(content)} />
         </div>
       </div>
     </div>
