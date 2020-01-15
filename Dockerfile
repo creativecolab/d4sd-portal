@@ -1,12 +1,12 @@
-ARG build_type
 # Stage 1 - Build Process
 FROM node:12.2.0-alpine as build-deps
+ARG BUILD_TYPE
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package*.json /app/
-COPY ./config/${build_type}/* /app/
+COPY ./config/${BUILD_TYPE}/* /app/
 
 RUN npm install
 
