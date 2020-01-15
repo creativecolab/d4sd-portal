@@ -7,7 +7,8 @@ import { ConnectedRouter } from 'connected-react-router';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { UserProvider } from './UserContext'
+import { message } from '@d4sd/components';
+import { UserProvider } from './UserContext';
 import { getCookie, setCookie } from './utils';
 
 import configureStore, { history } from './store';
@@ -27,7 +28,6 @@ import FeedbackPage from './components/layouts/feedback-layout';
 
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 
-import { message } from "@d4sd/components"
 
 import './index.less';
 
@@ -36,50 +36,51 @@ import './index.less';
 const store = configureStore();
 
 const App = (): JSX.Element => {
-  const [user, setUser] = useState({loggedIn: false, token:"", username:""});
+  const [user, setUser] = useState({ loggedIn: false, token: '', username: '' });
 
   useEffect(() => {
     // temp
-    setCookie("d4sdLoginToken", "randomtoken", 7); // 7 day expiration date
+    setCookie('d4sdLoginToken', 'randomtoken', 7); // 7 day expiration date
     const loginToken = getCookie('d4sdLoginToken');
     const verified = true;
     // verify token
     if (verified) {
-      setUser({loggedIn: true, username: "Daniel", token: loginToken});
+      setUser({ loggedIn: true, username: 'Daniel', token: loginToken });
     }
   }, []);
+
   function LoginRequire(component: any) {
+
     if (user.loggedIn) {
       return component;
     }
-    else {
-      message.info("You need to login first!");
-      return <Redirect to="/" />
-    }
+
+    message.info('You need to login first!');
+    return <Redirect to="/" />;
   }
   return (
 
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <>
-      <UserProvider value={{user: user, setUser: setUser}}>
-        <main>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/home" component={HomePage} />
-            <Route exact path="/getinvolved" component={InvolvedPage} />
-            <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
-            <Route exact path="/challenges" component={ChallengePage} />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/sponsors" component={SponsorsPage} />
-            <Route exact path="/faq" component={FAQPage} />
-            <Route exact path="/workspace" component={WorkspacePage} />
-            <Route exact path="/resources" component={ResourcesPage} />
-            <Route exact path="/resources/process" component={ProcessPage} />
-            <Route exact path="/resources/stakeholder" component={StakeholderPage} />
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <>
+          <UserProvider value={{ user, setUser }}>
+            <main>
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/home" component={HomePage} />
+                <Route exact path="/getinvolved" component={InvolvedPage} />
+                <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
+                <Route exact path="/challenges" component={ChallengePage} />
+                <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/sponsors" component={SponsorsPage} />
+                <Route exact path="/faq" component={FAQPage} />
+                <Route exact path="/workspace" component={WorkspacePage} />
+                <Route exact path="/resources" component={ResourcesPage} />
+                <Route exact path="/resources/process" component={ProcessPage} />
+                <Route exact path="/resources/stakeholder" component={StakeholderPage} />
 
-            <Route exact path="/workspace/prelim" component={() => LoginRequire(PreliminarySubmissionPage)} />
-            {/*
+                <Route exact path="/workspace/prelim" component={() => LoginRequire(PreliminarySubmissionPage)} />
+                {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
 
@@ -95,15 +96,16 @@ const App = (): JSX.Element => {
             ~ Home
             ~ Go through all pages to fix fonts
             */}
-            <Route exact path="/signup" component={SignupPage} />
-            <Route exect path="/login" component={LoginPage} />
-          </Switch>
-        </main>
-        </UserProvider>
-      </>
-    </ConnectedRouter>
-  </Provider>
-)};
+                <Route exact path="/signup" component={SignupPage} />
+                <Route exect path="/login" component={LoginPage} />
+              </Switch>
+            </main>
+          </UserProvider>
+        </>
+      </ConnectedRouter>
+    </Provider>
+  );
+};
 
 // eslint-disable-next-line no-undef
 ReactDOM.render(<App />, document.getElementById('root'));
