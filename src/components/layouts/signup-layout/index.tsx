@@ -35,7 +35,7 @@ const SignupLayout = (): JSX.Element => {
     <div>
       <Menubar />
       <div className="SignupLayout">
-        <Header title="Workspace Registration"/>
+        <Header teamTitle="Workspace Registration" className="header"/>
         <Row className="card-container">
           {signupStep === 'start' && (
             <SignupCard setSignupStep={setSignupStep} />

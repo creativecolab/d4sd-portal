@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import {
-  Input, Button, Col, Row, Form, message
+  Input, Button, Col, Row, Form, message, Radio
 } from '@d4sd/components';
 // import GoogleLogin from 'react-google-login';
 // import { OmitProps } from 'antd/lib/transfer/renderListBody';
@@ -104,25 +104,10 @@ const SignupCard = (props: any): JSX.Element => {
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <Button.Google
-          className="google-btn"
-          icon="google"
-          block
-        >
-          CONTINUE WITH GOOGLE
-        </Button.Google>
-        <Button.Facebook
-          className="fb-btn"
-          icon="facebook"
-          block
-        >
-          CONTINUE WITH FACEBOOK
-        </Button.Facebook>
-        <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
           <Input.Group className="input-group">
             <Row
-              gutter={30}
+              gutter={16}
               className="row-names"
             >
               <Col span={12}>
@@ -147,12 +132,15 @@ const SignupCard = (props: any): JSX.Element => {
               onChange={handleChange}
             />
             <Input.Password
-              className="input-email"
+              className="input-password"
               placeholder="Password"
               name="password"
               onChange={handleChange}
             />
           </Input.Group>
+          <Radio className="terms">
+          I agree to the <a href="#">Terms of Service</a>
+          </Radio>
           <Row
             type="flex"
             justify="center"
@@ -178,7 +166,7 @@ const SignupCard = (props: any): JSX.Element => {
         {' '}
         {/* TODO */}
         {/* eslint-disable-next-line */}
-        <a id="login-link">Log in</a>
+        <a id="login-link" href="#">Log in</a>
       </p>
     </div>
   );
