@@ -7,6 +7,13 @@ import { withRouter } from 'react-router'
 const ProviderInformation = (props: any) => {
   const {register, handleSubmit, setValue} = useForm();
 
+  //get values from local storage
+  const name= localStorage.getItem("name") || '';
+  const email= localStorage.getItem("email") || '';
+  const institution = localStorage.getItem("institution") || '';
+  const expertise = localStorage.getItem("expertise") || '';
+  
+
   const onSubmit = (data: any) => {
     console.log(data)
     //store information to Firebase
@@ -15,6 +22,7 @@ const ProviderInformation = (props: any) => {
   //store to state
   const handleChange = (e: any) => {
     setValue(e.target.name, e.target.value);
+    localStorage.setItem(e.target.name, e.target.value)
     console.log(e.target.value);
   }
 
@@ -28,54 +36,46 @@ const ProviderInformation = (props: any) => {
   return (
     <div>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <p>HENLO</p>
-        
         <Input.Group>
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h4>1. Your full name:</h4>
+            <h5>1. Your full name:</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
-            <Input onChange={handleChange} name="name" />
+            <Input onChange={handleChange} name="name" defaultValue={name}/>
           </Col>
         </Row>
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h4>2. Your email:</h4>
+            <h5>2. Your email:</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
-            <Input onChange={handleChange} name="email" />
+            <Input onChange={handleChange} name="email" defaultValue={email}/>
           </Col>
         </Row>
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h4>3. Your institution and <title></title>:</h4>
+            <h5>3. Your institution and <title></title>:</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
-            <Input onChange={handleChange} name="institution" />
+            <Input onChange={handleChange} name="institution" defaultValue={institution}/>
           </Col>
         </Row>
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h4>4. Your area of expertise:</h4>
+            <h5>4. Your area of expertise:</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
-            <Input onChange={handleChange} name="expertise" />
+            <Input onChange={handleChange} name="expertise" defaultValue={expertise}/>
           </Col>
         </Row>
 
           
 
         </Input.Group>
-
-        <Row type="flex" justify="center">
-          <Col span="10">
-          <Button type="primary" htmlType="submit">SAVE</Button>
-          </Col>
-        </Row>
         
       </Form>
 

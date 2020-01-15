@@ -3,6 +3,8 @@ import { render } from 'react-dom'
 import Menubar from '../../menubar';
 import {Row, Col, Form, Input} from '@d4sd/components'
 import ProviderInformation from './provider-information'
+import QuestionList from './question-list'
+import SubmissionPreview from './submission-preview';
 
 const FeedbackProviderLayout = (props: any) => {
 
@@ -21,6 +23,19 @@ const FeedbackProviderLayout = (props: any) => {
      
       </Row>
       <ProviderInformation />
+
+      <Row>
+        <h1>Review and Provide Input</h1>
+      </Row>
+
+      <Row type="flex" justify="center">
+        <Col xs={{span: 20}} md={{span: 10}}>
+          <SubmissionPreview />
+        </Col>
+        <Col xs={{span: 20}} md={{span: 10}}>
+          <QuestionList />
+        </Col>
+      </Row>
     </div> 
   );
 }
