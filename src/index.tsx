@@ -50,7 +50,6 @@ const App = (): JSX.Element => {
   }, []);
 
   function LoginRequire(component: any) {
-
     if (user.loggedIn) {
       return component;
     }
