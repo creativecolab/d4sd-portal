@@ -4,10 +4,9 @@ import 'react-app-polyfill/stable';
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { message } from '@d4sd/components';
 import { UserProvider } from './UserContext';
 import { getCookie, setCookie } from './utils';
 
@@ -49,14 +48,6 @@ const App = (): JSX.Element => {
     }
   }, []);
 
-  function LoginRequire(component: any) {
-    if (user.loggedIn) {
-      return component;
-    }
-
-    message.info('You need to login first!');
-    return <Redirect to="/" />;
-  }
   return (
 
     <Provider store={store}>
@@ -78,7 +69,7 @@ const App = (): JSX.Element => {
                 <Route exact path="/resources/process" component={ProcessPage} />
                 <Route exact path="/resources/stakeholder" component={StakeholderPage} />
 
-                <Route exact path="/workspace/prelim" component={() => LoginRequire(PreliminarySubmissionPage)} />
+                <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
                 {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
