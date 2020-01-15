@@ -6,7 +6,7 @@ import {
 } from '@d4sd/components';
 // import GoogleLogin from 'react-google-login';
 // import { OmitProps } from 'antd/lib/transfer/renderListBody';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 // import { Redirect } from 'react-router';
 import firebase from '../../actions/firebase';
 
@@ -59,7 +59,7 @@ const SignupCard = (props: any): JSX.Element => {
           // eslint-disable-next-line
           console.log('sign-up success: ', result);
           setSignedup(true);
-          setSignupStep('email');
+          setSignupStep('verifyEmailPage');
         })
         .catch((error: string) => {
           // eslint-disable-next-line
@@ -139,7 +139,9 @@ const SignupCard = (props: any): JSX.Element => {
             />
           </Input.Group>
           <Radio className="terms">
-          I agree to the <a href="#">Terms of Service</a>
+          I agree to the
+            {' '}
+            <Link to="/">Terms of Service</Link>
           </Radio>
           <Row
             type="flex"
@@ -153,7 +155,7 @@ const SignupCard = (props: any): JSX.Element => {
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={(): void => setSignupStep('role')}
+                onClick={(): void => setSignupStep('verifyEmailPage')}
               >
                 SIGN UP
               </Button>
@@ -166,7 +168,11 @@ const SignupCard = (props: any): JSX.Element => {
         {' '}
         {/* TODO */}
         {/* eslint-disable-next-line */}
-        <a id="login-link" href="#">Log in</a>
+        <Link
+          to="login"
+        >
+Log in
+        </Link>
       </p>
     </div>
   );

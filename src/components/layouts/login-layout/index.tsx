@@ -8,7 +8,7 @@ const SignupLayout = (): JSX.Element => (
   <div>
     <Menubar />
     <div className="LoginLayout">
-      <Header teamTitle="D4SD Workspace" className="heading"/>
+      <Header teamTitle="D4SD Workspace" className="heading" />
       <Row className="card-container">
         <LoginCard />
       </Row>
