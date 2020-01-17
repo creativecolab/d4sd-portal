@@ -36,20 +36,6 @@ const LoginCard = (): JSX.Element => {
   return (
     <div className="card-login-wrapper">
       <div className="card-login">
-        <Button.Google
-          className="google-btn"
-          icon="google"
-          block
-        >
-          CONTINUE WITH GOOGLE
-        </Button.Google>
-        <Button.Facebook
-          className="fb-btn"
-          icon="facebook"
-          block
-        >
-          CONTINUE WITH FACEBOOK
-        </Button.Facebook>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input.Group className="input-group">
             <Input
@@ -59,7 +45,7 @@ const LoginCard = (): JSX.Element => {
               onChange={handleChange}
             />
             <Input.Password
-              className="input-email"
+              className="input-password"
               placeholder="Password"
               name="password"
               onChange={handleChange}
