@@ -1,14 +1,27 @@
 @import "../../../styles/fonts.less";
 @img = timeline_pitch;
-.WorkspaceActionCardWrapper .WorkspaceActionCard {
-  .card-title {
-    text-align: left;
-    font-weight: 600;
+.WorkspaceActionCardWrapper {
+  .WorkspaceActionCard {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+    .card-title {
+      text-align: left;
+      font-weight: 600;
+    }
+    .card-short-desc, .card-full-desc {
+      font-size: 14px;
+    }
+    .arrow {
+      font-size: 20px;
+    }
+    width: 100%;
+    .card-status .submitted::before {
+      top: 3px;
+    }
   }
-  .card-short-desc {
-    font-size: 14px;
+  .ant-progress-show-info .ant-progress-outer {
+    margin-right: 0px;
   }
-
+  width: 100%;
 }
 .d4sdtimeline-wrapper  {
   .d4sdtimeline {

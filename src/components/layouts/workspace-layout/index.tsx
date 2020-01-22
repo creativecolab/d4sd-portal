@@ -7,7 +7,7 @@ import "./style.less";
 import { workspaceContent } from "../../../assets/content.js";
 
 const WorkspaceLayout = (props: any) => {
-  const [loggedIn] = useState(true);
+  const [loggedIn] = useState(false);
   const loggedInHeaderText = "Welcome, username.  Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation."
   return (
     <div>
@@ -39,6 +39,7 @@ const WorkspaceLayout = (props: any) => {
                       active:item.state1 === "active",
                       dueDate: item.dueDate,
                       startDate: item.startDate,
+                      submitState: "none",
                       buttonHandleClick: ()=> {
                         // @ts-ignore;
                         var win = window.open(item.link1, '_blank');
