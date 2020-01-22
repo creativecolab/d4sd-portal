@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   Row, Input, Button, Form, message
 } from '@d4sd/components';
+import { loginWithEmail } from '../../actions/auth';
 
 const LoginCard = (): JSX.Element => {
   const { register, handleSubmit, setValue } = useForm();
+  const history = useHistory();
   const onSubmit = (data: Record<string, string>): void => {
     if (!data.email) {
       message.error('Missing email');
@@ -16,9 +18,13 @@ const LoginCard = (): JSX.Element => {
     if (!data.password) {
       message.error('Missing password');
     }
-    // console.log(data);
-    // Add your axios stuff here
-    // data.email, data.password
+
+    loginWithEmail(data.email, data.password).then((success) => {
+      console.log('Logged in');
+      history.push('/workspace');
+    }).catch((err) => {
+      console.log('Error with firebase login');
+    });
   };
 
   // handle changes and store to state with react hook forms
@@ -36,20 +42,6 @@ const LoginCard = (): JSX.Element => {
   return (
     <div className="card-login-wrapper">
       <div className="card-login">
-        <Button.Google
-          className="google-btn"
-          icon="google"
-          block
-        >
-          CONTINUE WITH GOOGLE
-        </Button.Google>
-        <Button.Facebook
-          className="fb-btn"
-          icon="facebook"
-          block
-        >
-          CONTINUE WITH FACEBOOK
-        </Button.Facebook>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Input.Group className="input-group">
             <Input
@@ -59,7 +51,7 @@ const LoginCard = (): JSX.Element => {
               onChange={handleChange}
             />
             <Input.Password
-              className="input-email"
+              className="input-password"
               placeholder="Password"
               name="password"
               onChange={handleChange}

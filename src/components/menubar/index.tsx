@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
 } from '@d4sd/components';
+import { SubMenu } from 'rc-menu';
+
+import { useSession } from '../../actions/auth';
 
 import './style.less';
-
-import { SubMenu } from 'rc-menu';
 import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
+  const { loggedIn, user } = useSession();
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
   // eslint-disable-next-line
@@ -108,6 +110,16 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsors')}>
                 <span>Sponsors</span>
               </Menu.Item>
+              {loggedIn
+              && (
+                <Menu.Item className="menu-item">
+                  <div className="profile-picture">
+                    <span className="profile-pic-letter">
+                      {user?.displayName ? user.displayName.toUpperCase()[0] : 'A'}
+                    </span>
+                  </div>
+                </Menu.Item>
+              )}
               {/** <Menu.Item className="mobile-menu-item">
                 <span>Workspace</span>
               </Menu.Item>* */}
