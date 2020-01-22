@@ -6,14 +6,19 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { workspaceContent } from '../../../assets/content.js';
+import { workspaceContent } from '../../../assets/content.ts';
 
-const WorkspaceLayout = (props: any) => {
+const WorkspaceLayout = (): JSX.Element => {
   const [loggedIn] = useState(false);
-  const loggedInHeaderText = 'Welcome, username.  Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
+  const loggedInHeaderText = 'Welcome, username.  Thank you for signing up to participate in this year’s'
+  + 'Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
   return (
     <div>
-      <Header title={workspaceContent.title1} content={loggedIn ? loggedInHeaderText : workspaceContent.content1} image={workspaceContent.image} />
+      <Header
+        title={workspaceContent.title1}
+        content={loggedIn ? loggedInHeaderText : workspaceContent.content1}
+        image={workspaceContent.image}
+      />
       <div className="container">
         <div className="section">
           <h2>{workspaceContent.title2}</h2>
@@ -44,8 +49,7 @@ const WorkspaceLayout = (props: any) => {
                             dueDate: item.dueDate,
                             startDate: item.startDate,
                             submitState: 'none',
-                            buttonHandleClick: () => {
-                            // @ts-ignore;
+                            buttonHandleClick: (): void => {
                               const win = window.open(item.link1, '_blank');
                               win!.focus();
                             }
@@ -55,7 +59,10 @@ const WorkspaceLayout = (props: any) => {
                     )
                     : (
                       <WorkspaceActionCard card={{
-                        title: item.stage, descHTML: item.detail, closed: false, shortDesc: item.shortDesc
+                        title: item.stage,
+                        descHTML: item.detail,
+                        closed: false,
+                        shortDesc: item.shortDesc
                       }}
                       />
                     )}
