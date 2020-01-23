@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import {
   Row, Input, Button, Form, message
 } from '@d4sd/components';
-import { loginWithEmail } from '../../actions/auth';
+import auth from '../../actions/auth';
 
 const LoginCard = (): JSX.Element => {
   const { register, handleSubmit, setValue } = useForm();
@@ -19,7 +19,7 @@ const LoginCard = (): JSX.Element => {
       message.error('Missing password');
     }
 
-    loginWithEmail(data.email, data.password).then((success) => {
+    auth.loginWithEmail(data.email, data.password).then((success) => {
       console.log('Logged in');
       history.push('/workspace');
     }).catch((err) => {

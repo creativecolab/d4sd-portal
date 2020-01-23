@@ -5,14 +5,14 @@ import {
 } from '@d4sd/components';
 import { SubMenu } from 'rc-menu';
 
-import { useSession } from '../../actions/auth';
+import auth from '../../actions/auth';
 
 import './style.less';
 import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
-  const { loggedIn, user } = useSession();
+  const { loggedIn, user } = auth.useSession();
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
   // eslint-disable-next-line

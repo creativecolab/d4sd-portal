@@ -8,7 +8,8 @@ import {
 // import { OmitProps } from 'antd/lib/transfer/renderListBody';
 import { withRouter, Link } from 'react-router-dom';
 // import { Redirect } from 'react-router';
-import firebase from '../../actions/firebase';
+// import firebase from '../../actions/firebase';
+import auth from '../../actions/auth';
 
 const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -54,7 +55,7 @@ const SignupCard = (props: any): JSX.Element => {
     // eslint-disable-next-line
     console.log('data: ', data);
     if (validation(data)) {
-      firebase.register(data.firstName, data.lastName, data.email, data.password)
+      auth.register(data.firstName, data.lastName, data.email, data.password)
         .then((result: unknown) => {
           // eslint-disable-next-line
           console.log('sign-up success: ', result);
@@ -156,7 +157,7 @@ const SignupCard = (props: any): JSX.Element => {
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={(): void => setSignupStep('verifyEmailPage')}
+                // onClick={(): void => setSignupStep('verifyEmailPage')}
               >
                 SIGN UP
               </Button>

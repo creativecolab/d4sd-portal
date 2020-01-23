@@ -24,14 +24,14 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 
 import './index.less';
-import { useAuth } from './actions/auth';
+import auth from './actions/auth';
 
 // eslint-disable-next-line
 // @ts-ignore
 const store = configureStore();
 
 const App = (): JSX.Element => {
-  const { loggedIn, user } = useAuth();
+  const { loggedIn, user } = auth.useAuth();
 
   return (
     <Provider store={store}>
