@@ -158,7 +158,6 @@ const SignupCard = (props: any): JSX.Element => {
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={(): void => setSignupStep('verifyEmailPage')}
               >
                 SIGN UP
               </Button>

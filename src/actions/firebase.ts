@@ -13,6 +13,8 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
+const verifyURL = process.env.REACT_APP_D4SD_URL;
+
 class Firebase {
   // eslint-disable-next-line
   auth: any;
@@ -45,7 +47,7 @@ class Firebase {
       // eslint-disable-next-line
       .then((data: any) => {
         const actionCodeSettings = {
-          url: 'http://staging-d4sd.ucsd.edu:8080/',
+          url: verifyURL,
           handleCodeInApp: true
         };
 
@@ -55,9 +57,11 @@ class Firebase {
             // eslint-disable-next-line
             console.log('Email Sent!');
           })
-          .catch(() => {
+          .catch((err: any) => {
             // eslint-disable-next-line
             console.log('Email not sent!');
+            console.log(actionCodeSettings);
+            console.log(err);
           });
 
         // Add user to "users" firestore collection.
@@ -66,6 +70,7 @@ class Firebase {
           .set({
             firstName,
             lastName,
+            displayName: `${firstName} ${lastName}`,
             email,
             emailVerified: false,
             role: null,
@@ -99,19 +104,19 @@ class Firebase {
         console.log(error);
         reject(error);
       });
-  })
+  });
 
   // eslint-disable-next-line
   isInitialized = () => {
     return new Promise((resolve) => {
       this.auth.onAuthStateChanged(resolve);
     });
-  }
+  };
 
   // eslint-disable-next-line
   getCurrentUsername = () => {
     return this.auth.currentUser && this.auth.currentUser.displayName;
-  }
+  };
 
   // eslint-disable-next-line
   async getCurrentUserQuote() {
