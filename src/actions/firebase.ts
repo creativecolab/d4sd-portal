@@ -10,8 +10,7 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+  appId: process.env.REACT_APP_APP_ID
 };
 
 class Firebase {
@@ -33,10 +32,10 @@ class Firebase {
       .signInWithEmailAndPassword(email, password)
       .then(() => { resolve(true); })
       .catch((error: string) => { reject(error); });
-  })
+  });
 
   // eslint-disable-next-line
-  logout = (): any => this.auth.signOut()
+  logout = (): any => this.auth.signOut();
 
   // eslint-disable-next-line max-len
   register = (firstName: string, lastName: string, email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {

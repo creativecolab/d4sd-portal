@@ -1,8 +1,9 @@
 import * as React from 'react';
+import firebase from 'firebase';
 
 // set UserContext and add type
 const UserContext = React.createContext({} as
-  {user: {token: string; username: string; loggedIn: boolean}; setUser: Function});
+  { user: firebase.User | null });
 
 export const UserProvider = UserContext.Provider;
 export const UserConsumer = UserContext.Consumer;
