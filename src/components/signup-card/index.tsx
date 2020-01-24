@@ -15,6 +15,8 @@ const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
+const passRegExp = new RegExp(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})$/);
+
 // eslint-disable-next-line
 const SignupCard = (props: any): JSX.Element => {
   const { setSignupStep } = props;
@@ -43,8 +45,8 @@ const SignupCard = (props: any): JSX.Element => {
     if (!data.password) {
       message.error('Missing password');
       return false;
-    } if (data.password.length < 6) {
-      message.error('Password must be 6 charaters long');
+    } if (!passRegExp.test(data.password)) {
+      message.error('Password must be 6 charaters, one uppercase, and one lowercase character');
       return false;
     }
     return true;
@@ -105,7 +107,6 @@ const SignupCard = (props: any): JSX.Element => {
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
           <Input.Group className="input-group">
             <Row
@@ -131,6 +132,7 @@ const SignupCard = (props: any): JSX.Element => {
               className="input-email"
               placeholder="Email"
               name="email"
+              type="email"
               onChange={handleChange}
             />
             <Input.Password
