@@ -32,7 +32,9 @@ class Firebase {
     this
       .auth
       .signInWithEmailAndPassword(email, password)
-      .then(() => { resolve(true); })
+      .then(() => {
+        console.log(this.auth.currentUser);
+        resolve(true); })
       .catch((error: string) => { reject(error); });
   });
 
@@ -65,7 +67,7 @@ class Firebase {
           });
 
         // Add user to "users" firestore collection.
-        app.firestore().collection('users')
+        this.db.collection('users')
           .doc(data.user.uid)
           .set({
             firstName,
@@ -123,6 +125,7 @@ class Firebase {
     const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get();
     return quote.get('quote');
   }
+
 }
 
 export default new Firebase();

@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import firebase from 'firebase';
+import { useDocument } from 'react-firebase-hooks/firestore';
 import {
   Menu, Icon, Col, Row
 } from '@d4sd/components';
 import { SubMenu } from 'rc-menu';
+import firebase from '../../actions/firebase';
 import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 import './style.less';
 
 const Menubar = (): JSX.Element => {
-  const [user, initialising, error] = useAuthState(firebase.auth());
+  const user = useAuthState(firebase.auth)[0];
+  const [customUser, loading, error] = useDocument(
+    firebase.db.doc(`users/${user?.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: true }
+    }
+  );
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
   // eslint-disable-next-line
@@ -149,12 +156,12 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
               <span>Sponsors</span>
             </Menu.Item>
-            {!!user
+            {!loading && !error
               && (
                 <Menu.Item className="menu-item">
                   <div className="profile-picture">
                     <span className="profile-pic-letter">
-                      {user?.displayName ? user.displayName.toUpperCase()[0] : 'A'}
+                      {customUser?.get('displayName') ? customUser?.get('displayName').toUpperCase()[0] : 'A'}
                     </span>
                   </div>
                 </Menu.Item>
