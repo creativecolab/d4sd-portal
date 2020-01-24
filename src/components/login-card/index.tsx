@@ -19,10 +19,14 @@ const LoginCard = (): JSX.Element => {
       message.error('Missing password');
     }
 
-    auth.loginWithEmail(data.email, data.password).then((success) => {
+    // eslint-disable-next-line
+    auth.loginWithEmail(data.email, data.password).then((success: any) => {
+      // eslint-disable-next-line
       console.log('Logged in');
       history.push('/workspace');
-    }).catch((err) => {
+    // eslint-disable-next-line
+    }).catch((err: any) => {
+      // eslint-disable-next-line
       console.log('Error with firebase login');
     });
   };

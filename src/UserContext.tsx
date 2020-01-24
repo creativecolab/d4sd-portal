@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface UserContext {
+export interface UserContext {
   loggedIn?: boolean;
   user: firebase.User | null;
 }

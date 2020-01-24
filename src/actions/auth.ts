@@ -4,7 +4,8 @@ import 'firebase/firebase-firestore';
 // import 'firebase/auth';
 import { useContext, useState, useEffect } from 'react';
 import { message } from '@d4sd/components';
-import userContext from '../UserContext';
+import userContext, { UserContext } from '../UserContext';
+
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -18,9 +19,9 @@ const firebaseConfig = {
 };
 
 class Firebase {
-  auth: any;
+  auth: firebase.auth.Auth;
 
-  db: any;
+  db: firebase.firestore.Firestore;
 
   constructor() {
     app.initializeApp(firebaseConfig);
@@ -28,20 +29,22 @@ class Firebase {
     this.db = app.firestore();
   }
 
-  useSession = () => {
+  useSession = (): UserContext => {
     const { loggedIn, user } = useContext(userContext);
     return { loggedIn, user };
   };
 
-  useAuth = () => {
+  useAuth = (): UserContext => {
     const [state, setState] = useState(() => {
-      const user = app.auth().currentUser;
-      return { loggedIn: user == null, user };
+      const user = this.auth.currentUser;
+      return { loggedIn: !!user, user };
     });
 
-    const onChange = (user: any) => {
+    const onChange = (user: app.User | null): void => {
+      // eslint-disable-next-line
       console.log('auth state changed');
-      console.log(user.displayName);
+      // eslint-disable-next-line
+      console.log(user ? user.displayName : null);
       setState({ loggedIn: !!user, user });
     };
 
@@ -49,7 +52,7 @@ class Firebase {
       // listen for auth state changes
       const unsubscribe = app.auth().onAuthStateChanged(onChange);
       // unsubscribe to the listener when unmounting
-      return () => unsubscribe();
+      return (): void => unsubscribe();
     }, []);
 
     return state;
@@ -59,11 +62,13 @@ class Firebase {
     firstName: string, lastName: string, email: string, password: string
   ): Promise<boolean> => new Promise((resolve, reject) => {
     this.auth.createUserWithEmailAndPassword(email, password)
+      // eslint-disable-next-line
       .then((data: any) => {
         const actionCodeSettings = {
           url: 'https://d4sd.org/',
           handleCodeInApp: true
         };
+        // eslint-disable-next-line
         console.log(data.user);
         data.user.sendEmailVerification(actionCodeSettings)
           .then(() => {
@@ -71,6 +76,7 @@ class Firebase {
             console.log('Email Sent!');
             resolve(true);
           })
+          // eslint-disable-next-line
           .catch((error: any) => {
             // eslint-disable-next-line
             console.log(error);
@@ -78,6 +84,7 @@ class Firebase {
             console.log('Email not sent!');
             resolve(false);
           });
+      // eslint-disable-next-line
       }).catch((error: any) => {
         if (error.code === 'auth/weak-password') {
           message.error('The password is too weak.');
@@ -115,12 +122,17 @@ class Firebase {
   //   }
   // };
 
+  // eslint-disable-next-line
   loginWithEmail = async (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
     this.auth.signInWithEmailAndPassword(email, password)
+      // eslint-disable-next-line
       .then((data: any) => {
+        // eslint-disable-next-line
         console.log('Successfully logged in!');
         resolve(true);
+      // eslint-disable-next-line
       }).catch((error: any) => {
+        // eslint-disable-next-line
         console.error(error);
         resolve(false);
       });
@@ -135,6 +147,6 @@ class Firebase {
   //   }
   // };
 
-  signOut = () => this.auth.signOut();
+  signOut = (): Promise<void> => this.auth.signOut();
 }
 export default new Firebase();
