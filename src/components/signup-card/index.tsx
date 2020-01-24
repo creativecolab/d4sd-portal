@@ -2,17 +2,19 @@ import React, { useEffect, useState } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import {
-  Input, Button, Col, Row, Form, message
+  Input, Button, Col, Row, Form, message, Radio
 } from '@d4sd/components';
 // import GoogleLogin from 'react-google-login';
 // import { OmitProps } from 'antd/lib/transfer/renderListBody';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 // import { Redirect } from 'react-router';
 import firebase from '../../actions/firebase';
 
 const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
+
+const passRegExp = new RegExp(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})$/);
 
 // eslint-disable-next-line
 const SignupCard = (props: any): JSX.Element => {
@@ -42,8 +44,8 @@ const SignupCard = (props: any): JSX.Element => {
     if (!data.password) {
       message.error('Missing password');
       return false;
-    } if (data.password.length < 6) {
-      message.error('Password must be 6 charaters long');
+    } if (!passRegExp.test(data.password)) {
+      message.error('Password must be 6 charaters, one uppercase, and one lowercase character');
       return false;
     }
     return true;
@@ -59,7 +61,7 @@ const SignupCard = (props: any): JSX.Element => {
           // eslint-disable-next-line
           console.log('sign-up success: ', result);
           setSignedup(true);
-          setSignupStep('email');
+          setSignupStep('verifyEmailPage');
         })
         .catch((error: string) => {
           // eslint-disable-next-line
@@ -104,25 +106,10 @@ const SignupCard = (props: any): JSX.Element => {
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <Button.Google
-          className="google-btn"
-          icon="google"
-          block
-        >
-          CONTINUE WITH GOOGLE
-        </Button.Google>
-        <Button.Facebook
-          className="fb-btn"
-          icon="facebook"
-          block
-        >
-          CONTINUE WITH FACEBOOK
-        </Button.Facebook>
-        <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
           <Input.Group className="input-group">
             <Row
-              gutter={30}
+              gutter={16}
               className="row-names"
             >
               <Col span={12}>
@@ -144,15 +131,21 @@ const SignupCard = (props: any): JSX.Element => {
               className="input-email"
               placeholder="Email"
               name="email"
+              type="email"
               onChange={handleChange}
             />
             <Input.Password
-              className="input-email"
+              className="input-password"
               placeholder="Password"
               name="password"
               onChange={handleChange}
             />
           </Input.Group>
+          <Radio className="terms">
+          I agree to the
+            {' '}
+            <Link to="/">Terms of Service</Link>
+          </Radio>
           <Row
             type="flex"
             justify="center"
@@ -165,7 +158,7 @@ const SignupCard = (props: any): JSX.Element => {
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={(): void => setSignupStep('role')}
+                onClick={(): void => setSignupStep('verifyEmailPage')}
               >
                 SIGN UP
               </Button>
@@ -178,7 +171,11 @@ const SignupCard = (props: any): JSX.Element => {
         {' '}
         {/* TODO */}
         {/* eslint-disable-next-line */}
-        <a id="login-link">Log in</a>
+        <Link
+          to="login"
+        >
+Log in
+        </Link>
       </p>
     </div>
   );
