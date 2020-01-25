@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
+import 'firebase/storage';
 import { message } from '@d4sd/components';
 
 const firebaseConfig = {
@@ -22,10 +23,13 @@ class Firebase {
   // eslint-disable-next-line
   db: any;
 
+  store: any;
+
   constructor() {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
+    this.store = app.storage().ref();
   }
 
   login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
