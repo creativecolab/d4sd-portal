@@ -1,15 +1,22 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
-import './style.less';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useHistory } from 'react-router-dom';
+
 import {
   Row, Input, Button, Form, message
 } from '@d4sd/components';
 import firebase from '../../actions/firebase';
+import './style.less';
 
 const LoginCard = (): JSX.Element => {
+  const user = useAuthState(firebase.auth)[0];
   const { register, handleSubmit, setValue } = useForm();
   const history = useHistory();
+  if (user) {
+    history.push('/workspace');
+  }
+
   const onSubmit = (data: Record<string, string>): void => {
     if (!data.email) {
       message.error('Missing email');
