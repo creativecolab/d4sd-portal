@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useForm from 'react-hook-form';
 import {
   Button, message, Row, Upload, Icon, Form, Input
@@ -6,6 +6,7 @@ import {
 import './style.less';
 import { Progress } from 'antd';
 import useFirebaseUpload from '../../../actions/useFirebaseUpload';
+import SubmissionContext from '../../../contexts/SubmissionContext';
 
 const { TextArea } = Input;
 
@@ -14,6 +15,7 @@ interface UploadCardIF {
 }
 
 const UploadCard = (props: UploadCardIF): JSX.Element => {
+  const { submission, setSubmission } = useContext(SubmissionContext);
   const { setSubmitStep } = props;
   const [
     {
@@ -23,24 +25,26 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
   ] = useFirebaseUpload('submission');
   const { register, handleSubmit, setValue } = useForm();
   const [disabledUpload, setUploadDisabled] = useState(false);
+  const [problemInfo, setProblemInfo] = useState('');
   // eslint-disable-next-line
   const [fileList, setFileList] = useState<Array<any>>([]);
 
-  /* eslint-disable */
-  const saveWork = () => {
-    let text: any = document.getElementsByClassName('problem-statement-input')[0];
-    // @ts-ignore
-    text = text.value; // the text input for problem statement
-    localStorage.setItem('problemstatement-d4sd-prelim-submit', text);
-  };
-  /* eslint-enable */
-
   const onSubmit = (): void => {
+<<<<<<< HEAD
     saveWork();
     // text input is
     // const problemStatement = localStorage.getItem('problemstatement-d4sd-prelim-submit');
     // fileUploaded is the file uploaded
     setSubmitStep('feedback');
+=======
+    if (submission) {
+      submission.problemDescription = problemInfo;
+      submission.solutionPDF = data?.downloadUrl;
+      setSubmission(submission);
+    }
+    console.log(submission);
+    setSubmitStep('done');
+>>>>>>> SubmissionContext: Add submit to firebase firestore
   };
 
   useEffect(() => {
@@ -50,7 +54,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
-    saveWork();
+    setProblemInfo(e.target.value);
   };
 
   /* eslint-disable */
@@ -67,14 +71,6 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
     }
   }, [isError, data]);
 
-  useEffect(() => {
-    const problemStatementStored = localStorage.getItem('problemstatement-d4sd-prelim-submit');
-    if (problemStatementStored) {
-      const text = document.getElementsByClassName('problem-statement-input')[0];
-      // @ts-ignore
-      text.value = problemStatementStored; // the text input for problem statement
-    }
-  }, []);
   /* eslint-enable */
 
   const uploadButton = (
@@ -108,7 +104,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
           <p>
             <b>Team members:</b>
             {' '}
-Daniel James, Steven James
+            {submission?.teamMembers.map((teamMember) => teamMember.name).join(', ')}
           </p>
         </Row>
         <Form layout="vertical" onSubmit={handleSubmit(onSubmit)}>
@@ -118,7 +114,10 @@ Daniel James, Steven James
               {/* eslint-disable-next-line */}
               Your team can work on any problem related to this year’s theme: How to make San Diego a more sustainable city. It’s the job of you and your team to discover and motivate an important problem to solve.  Your problem definition should be a product of your own research and analysis of the problem space, not simply a replication of the potential themes provided by D4SD. A good problem statement will be grounded by user research (interviews, surveys, and observations) and motivated by statistics.
             </p>
-            <TextArea className="problem-statement-input" name="problemStatement" onChange={handleChange} />
+            <TextArea
+              className="problem-statement-input" name="problemStatement" onChange={handleChange}
+              value={problemInfo}
+            />
           </Row>
           <Row className="">
             <h4>2. Propose Initial Concepts (PDF upload)</h4>
@@ -143,8 +142,13 @@ Daniel James, Steven James
             </Upload>
           </Row>
           <Row className="bottom-btns">
-            <Button className="bottom-btn" type="primary" onClick={(): void => { saveWork(); setSubmitStep('projectInfo'); }}>BACK</Button>
-            <Button className="bottom-btn" type="primary" htmlType="submit">NEXT</Button>
+            <Button className="bottom-btn" type="primary" onClick={(): void => { setSubmitStep('projectInfo'); }}>BACK</Button>
+            <Button
+              className="bottom-btn" type="primary" htmlType="submit"
+              disabled={!data?.downloadUrl}
+            >
+NEXT
+            </Button>
           </Row>
         </Form>
       </div>

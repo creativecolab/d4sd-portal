@@ -6,6 +6,7 @@
     "@d4sd/components": "^3.1.4",
     "@react-pdf/renderer": "^1.6.8",
     "@types/dompurify": "^2.0.1",
+    "@firebase/firestore-types": "^1.6.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.11",
@@ -73,7 +74,6 @@
     ]
   },
   "devDependencies": {
-    "@firebase/firestore-types": "^1.6.2",
     "@types/jest": "^24.0.20",
     "@types/node": "^12.11.7",
     "@types/react": "^16.9.11",

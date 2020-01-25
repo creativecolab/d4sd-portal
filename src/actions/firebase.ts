@@ -2,7 +2,10 @@ import app from 'firebase/app';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
 import 'firebase/storage';
+import { DocumentReference } from '@firebase/firestore-types';
 import { message } from '@d4sd/components';
+import {Submission} from '../contexts/SubmissionContext';
+
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -13,8 +16,6 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID
 };
-
-const verifyURL = process.env.REACT_APP_D4SD_URL;
 
 class Firebase {
   // eslint-disable-next-line
@@ -53,7 +54,7 @@ class Firebase {
       // eslint-disable-next-line
       .then((data: any) => {
         const actionCodeSettings = {
-          url: verifyURL,
+          url: `${process.env.REACT_APP_BASE_URL}${process.env.REACT_APP_VERIFICATION_REDIRECT_PATH}`,
           handleCodeInApp: true
         };
 
@@ -129,6 +130,18 @@ class Firebase {
     const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get();
     return quote.get('quote');
   }
+
+  saveSubmission = (submission: Submission): Promise<boolean> => new Promise((resolve, reject) => {
+    this.db.collection('submissions').add(submission)
+      .then((docRef: DocumentReference) => {
+        console.log('Submission written with ID: ', docRef.id);
+        resolve(true);
+      })
+      .catch((error: any) => {
+        console.log(error);
+        reject(error);
+      });
+  });
 
 }
 
