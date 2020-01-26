@@ -34,12 +34,19 @@ const ProviderInformation = (props: any) => {
   }, []);
 
   return (
-    <div>
+    <div className="AboutYou">
+      <h1>Information About You</h1>
+      <Row type="flex" justify="center">
+        <Col xs={{span: 10}} sm={{span: 6}}>
+        <p>First tell us a little bit about yourself</p>
+        </Col>
+      </Row>
+      
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input.Group>
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h5>1. Your full name:</h5>
+            <h5>1. Your full name</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
             <Input onChange={handleChange} name="name" defaultValue={name}/>
@@ -48,7 +55,7 @@ const ProviderInformation = (props: any) => {
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h5>2. Your email:</h5>
+            <h5>2. Your email</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
             <Input onChange={handleChange} name="email" defaultValue={email}/>
@@ -57,7 +64,7 @@ const ProviderInformation = (props: any) => {
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h5>3. Your institution and <title></title>:</h5>
+            <h5>3. Your institution and title</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
             <Input onChange={handleChange} name="institution" defaultValue={institution}/>
@@ -66,7 +73,7 @@ const ProviderInformation = (props: any) => {
 
         <Row type="flex" justify="center">
           <Col xs={{span: 10}} sm={{span: 6}}>
-            <h5>4. Your area of expertise:</h5>
+            <h5>4. Your area of expertise</h5>
           </Col>
           <Col xs={{span: 20}} sm={{span: 12}} lg={{span: 8}}>
             <Input onChange={handleChange} name="expertise" defaultValue={expertise}/>

@@ -1,17 +1,45 @@
-import React, { useState } from 'react'
-import {Row, Col} from '@d4sd/components'
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import React, { Component, useState } from 'react';
+import { Document, Page } from 'react-pdf';
 
-const solutionViewer = (props: any) => {
+class DisplaySolution extends Component {
+//   state = {
+//     numPages: null,
+//     pageNumber: 1,
+//   }
 
-  const [numPages, setNumPages] = useState(null)
-  const [pageNumber, setPageNumber] = useState(1)
-  const PATH_NAME= "random.pdf"
+//   onDocumentLoadSuccess = ({ numPages }) => {
+//     this.setState({ numPages });
+//   }
 
-  return(
-    <div>
-      
-    </div>
-  );
+//   render() {
+//     const { pageNumber, numPages } = this.state;
+
+//     return (
+//       <div>
+//         <Document
+//           file="random.pdf"
+//           onLoadSuccess={this.onDocumentLoadSuccess}
+//         >
+//           <Page pageNumber={pageNumber} />
+//         </Document>
+//         <p>Page {pageNumber} of {numPages}</p>
+//       </div>
+//     );
+//   }
+// }
+
+// const DisplaySolution = (props: any) => {
+//   const [numPages, set]
+// }
+
+  render(){
+    return(
+      <div>
+        Display PDF Here
+      </div>
+    );
+  }
+
 }
 
+export default DisplaySolution;
