@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Row, Steps, Header } from '@d4sd/components';
 import SubmissionContext from '../../../contexts/SubmissionContext';
 
