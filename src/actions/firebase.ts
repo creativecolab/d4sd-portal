@@ -4,7 +4,7 @@ import 'firebase/firebase-firestore';
 import 'firebase/storage';
 import { DocumentReference } from '@firebase/firestore-types';
 import { message } from '@d4sd/components';
-import {Submission} from '../contexts/SubmissionContext';
+import { Submission } from '../contexts/SubmissionContext';
 
 
 const firebaseConfig = {
@@ -36,10 +36,16 @@ class Firebase {
   login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
     this
       .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log(this.auth.currentUser);
-        resolve(true); })
+      .setPersistence(app.auth.Auth.Persistence.SESSION).then(() => {
+        this.auth.signInWithEmailAndPassword(email, password)
+          .then(() => {
+            console.log(this.auth.currentUser);
+            resolve(true);
+          })
+          .catch((error: string) => {
+            reject(error);
+          });
+      })
       .catch((error: string) => { reject(error); });
   });
 
@@ -142,7 +148,6 @@ class Firebase {
         reject(error);
       });
   });
-
 }
 
 export default new Firebase();

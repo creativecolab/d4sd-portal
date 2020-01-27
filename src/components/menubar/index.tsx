@@ -156,9 +156,9 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
               <span>Sponsors</span>
             </Menu.Item>
-            {!loading && !error
+            {!!customUser && !loading && !error
               && (
-                <Menu.Item className="menu-item">
+                <Menu.Item className="menu-item" onClick={(): void => firebase.logout()}>
                   <div className="profile-picture">
                     <span className="profile-pic-letter">
                       {customUser?.get('displayName') ? customUser?.get('displayName').toUpperCase()[0] : 'A'}

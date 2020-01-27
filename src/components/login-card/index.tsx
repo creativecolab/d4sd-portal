@@ -13,9 +13,11 @@ const LoginCard = (): JSX.Element => {
   const user = useAuthState(firebase.auth)[0];
   const { register, handleSubmit, setValue } = useForm();
   const history = useHistory();
-  if (user) {
-    history.push('/workspace');
-  }
+  useEffect(() => {
+    if (user) {
+      history.push('/workspace');
+    }
+  }, [user, history]);
 
   const onSubmit = (data: Record<string, string>): void => {
     if (!data.email) {
