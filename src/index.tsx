@@ -51,9 +51,12 @@ const App = (): JSX.Element => (
             <Route exact path="/resources" component={ResourcesPage} />
             <Route exact path="/resources/process" component={ProcessPage} />
             <Route exact path="/resources/stakeholder" component={StakeholderPage} />
-
             <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
             <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
+            <Route exact path='/resources' component={ResourcesPage}/>
+            <Route exact path='/resources/process' component={ProcessPage}/>
+            <Route exact path='/resources/stakeholder' component={StakeholderPage}/>
+            <Route exact path='/provide_feedback' component={FeedbackProviderLayout}/>
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -80,4 +83,4 @@ const App = (): JSX.Element => (
 );
 
 // eslint-disable-next-line no-undef
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
