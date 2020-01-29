@@ -6,7 +6,7 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { workspaceContent } from '../../../assets/content.ts';
+import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (): JSX.Element => {
   const [loggedIn] = useState(false);
