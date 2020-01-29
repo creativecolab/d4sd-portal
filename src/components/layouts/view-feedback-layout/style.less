@@ -1,0 +1,72 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+.ViewFeedbackLayout {
+  .mainContent {
+    margin-top: @margin-base * 2;
+    margin-bottom: @margin-base * 8;
+  }
+  margin-top: @tab-height;
+  .feedback-meta {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-size: 2rem;
+  }
+  b {
+    font-weight: 700;
+  }
+  .feedback-container {
+    border: 1px solid @b3;
+    padding: @margin-base * 3;
+    padding-top: @margin-base * 2;
+  }
+  .feedback-heading {
+    color: @d4sd-color;
+    font-size: 3rem;
+  }
+  .feedback-controls, .feedback-controls-bottom {
+    .control-wrapper {
+      color: @d4sd-color;
+      font-size: 24px;
+      display: inline;
+      .disabled {
+        color: @b2;
+      }
+    }
+
+    position: absolute;
+
+    vertical-align: text-bottom;
+    span {
+      margin-left: @margin-base;
+      margin-right: @margin-base;
+      vertical-align: bottom;
+      font-size: 16px;
+      color: @b2;
+    }
+
+  }
+  .feedback-controls {
+    top: 18px;
+    right: 24px;
+  }
+  .feedback-controls-bottom {
+    position: relative;
+    text-align: center;
+  }
+  .response-list {
+    margin-top: @margin-base * 4;
+    .response-row {
+      margin-top: @margin-base * 4;
+      .response {
+        min-height: 96px;
+      }
+      .rate-feedback-heading {
+        margin-top: @margin-base;
+        margin-bottom: 0px;
+      }
+      .rate-feedback {
+        margin-top: 0px;
+      }
+    }
+  }
+}
