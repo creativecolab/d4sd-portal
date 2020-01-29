@@ -42,6 +42,7 @@ const App = () => (
             <Route exact path='/resources' component={ResourcesPage}/>
             <Route exact path='/resources/process' component={ProcessPage}/>
             <Route exact path='/resources/stakeholder' component={StakeholderPage}/>
+            <Route exact path='/provide_feedback' component={FeedbackProviderLayout}/>
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -67,4 +68,4 @@ const App = () => (
   </Provider>
 );
 
-ReactDOM.render(<FeedbackProviderLayout />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,5 +1,4 @@
 import React, { Component, useState } from 'react';
-import { Document, Page } from 'react-pdf';
 
 class DisplaySolution extends Component {
 //   state = {
