@@ -1,0 +1,30 @@
+name: Publish Docker Staging Image
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: udayantandon/d4sd-staging
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          buildargs: BUILD_TYPE=staging
+          tags: "latest"
+      - name: Run Image on Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST_STAGING }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker stop d4sd-staging
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker rm d4sd-staging
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker image rm udayantandon/d4sd-staging:latest
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker pull udayantandon/d4sd-staging:latest
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker run -d -p 5000:80 --name d4sd-staging udayantandon/d4sd-staging:latest
