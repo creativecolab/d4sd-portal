@@ -46,7 +46,6 @@ const PrelimSubmitLayout = (): JSX.Element => {
   return (
     <SubmissionContext.Provider value={{ submission, setSubmission }}>
       <div>
-        <Menubar />
         <div className="PrelimSubmitLayout">
           <Header title="Preliminary Submission" back="Back to workspace" handleBackClick={undefined} />
           <Row className="card-container">

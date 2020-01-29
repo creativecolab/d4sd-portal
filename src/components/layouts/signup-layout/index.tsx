@@ -24,7 +24,6 @@ const SignupLayout = (): JSX.Element => {
   // signupStep
   return (
     <div>
-      <Menubar />
       <div className="SignupLayout">
         <Header teamTitle="Workspace Registration" className="header" />
         <Row className="card-container">

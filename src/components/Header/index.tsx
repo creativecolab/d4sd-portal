@@ -14,7 +14,6 @@ const Header = (props: HeaderIF): JSX.Element => {
   const { image, title, content } = props;
   return (
     <div>
-      <Menubar />
       <div className={image}>
         <div className="container">
           <h1>{title}</h1>

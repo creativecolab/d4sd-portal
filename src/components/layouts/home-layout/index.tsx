@@ -48,7 +48,6 @@ const HomeLayout = (): JSX.Element => {
 
   return (
     <div className="Home">
-      <Menubar />
       <div className="landing">
         <div className="container">
           <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>

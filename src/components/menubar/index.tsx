@@ -67,7 +67,7 @@ const Menubar = (): JSX.Element => {
         setTab(['']);
     }
   // eslint-disable-next-line
-  }, []);
+  }, [history]);
 
   return (
     <div>
