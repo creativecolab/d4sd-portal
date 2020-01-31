@@ -46,10 +46,13 @@ const WorkspaceLayout = (props: any) => {
                         title: item.stage,
                         descHTML: item.detail,
                         closed: false,
+                        // @ts-ignore
                         shortDesc: item.shortDesc,
                         buttonTitle: item.action1,
                         active: item.state1 === 'active',
+                        // @ts-ignore
                         dueDate: item.dueDate,
+                        // @ts-ignore
                         startDate: item.startDate,
                         buttonHandleClick: () => {
                           // @ts-ignore;
@@ -64,6 +67,7 @@ const WorkspaceLayout = (props: any) => {
                         title: item.stage,
                         descHTML: item.detail,
                         closed: false,
+                        // @ts-ignore
                         shortDesc: item.shortDesc
                       }}
                     />
