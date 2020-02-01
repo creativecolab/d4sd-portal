@@ -202,7 +202,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
           <Button
             type="primary"
             onClick={(): void => {
-              console.log("back");
+setSubmitStep("upload");
             }}
           >
             BACK
