@@ -33,7 +33,7 @@ const PrelimSubmitLayout = (): JSX.Element => {
   };
 
   useEffect(() => {
-    const step: string | null = 'feedback'//localStorage.getItem('prelimStep-d4sd-prelim-submit');
+    const step: string | null = localStorage.getItem('prelimStep-d4sd-prelim-submit');
     if (step) {
       setSubmitStep(step);
     }

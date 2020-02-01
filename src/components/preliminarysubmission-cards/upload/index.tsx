@@ -37,7 +37,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
     // text input is
     // const problemStatement = localStorage.getItem('problemstatement-d4sd-prelim-submit');
     // fileUploaded is the file uploaded
-    setSubmitStep('done');
+    setSubmitStep('feedback');
   };
 
   useEffect(() => {
