@@ -1,0 +1,20 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+.CommunityFeedbackLayout {
+  margin-top: @tab-height;
+  overflow: hidden;
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+
+  .content {
+    padding: @margin-base-1 @margin-base*6;
+    .row {
+      margin-top: @margin-base * 2;
+    }
+  }
+}
