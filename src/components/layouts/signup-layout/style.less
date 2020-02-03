@@ -2,6 +2,13 @@
 @import '../../../styles/mixins.less';
 
 .SignupLayout {
+  .verifyEmailText {
+    color: @d4sd-color-two;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: @margin-base * 4;
+  }
   /* Fix bug where ant row overflows container */
   .ant-row-flex {
     margin-right: 0 !important;
@@ -13,10 +20,13 @@
     font-size: 2.8rem;
     color: @subheading-color;
   }
-  .heading {
+  .header {
     height: @header-height;
     background-color: #e4f2ff; // TODO: DESIGN TEAM?
     padding-top: @margin-base-2;
+    .header-team-title {
+      color: @d4sd-color;
+    }
   }
   .card-container {
     // center
