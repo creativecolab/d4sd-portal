@@ -65,6 +65,8 @@ import climate4 from './img/climate_community.jpg';
 import sponsors_designlab from './img/sponsors_designlab.svg';
 import sponsors_yankelovich from './img/sponsors_yankelovich.png';
 import sponsors_ibm from './img/sponsors_ibm.svg';
+import sponsors_nsf from './img/sponsors_nsf.png';
+
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -729,5 +731,6 @@ export const sponsorsContent = {
     img1: sponsors_designlab,
     img2: sponsors_yankelovich,
     img3: sponsors_ibm,
+    img4: sponsors_nsf,
 
 }
