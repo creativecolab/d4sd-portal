@@ -65,6 +65,8 @@ import climate4 from './img/climate_community.jpg';
 import sponsors_designlab from './img/sponsors_designlab.svg';
 import sponsors_yankelovich from './img/sponsors_yankelovich.png';
 import sponsors_ibm from './img/sponsors_ibm.svg';
+import sponsors_nsf from './img/sponsors_nsf.png';
+
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -519,11 +521,10 @@ export const workspaceContent = {
       isAction1: true,
       isAction2: true,
       link1:
-        "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
-      link2: "/challenges",
-      target: "_blank",
-      img: "timeline_discover",
-      shortDesc: "Problem discovery is perhaps the most important part of the..."
+        'https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU',
+      link2: '/challenges',
+      target: '_blank',
+      img: 'timeline_discover'
     },
     {
       stage: 'Share your Ideas and Find a Team',
@@ -539,25 +540,21 @@ export const workspaceContent = {
         'https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU',
       isAction1: true,
       isAction2: true,
-      img: "timeline_ideate",
-      shortDesc: "Collaboration is essential for truly innovative design work..."
+      img: 'timeline_ideate'
     },
     {
       stage: 'Propose Concepts for Community Feedback',
       date: 'BY FEB 14',
       detail:
-        "Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts here in the D4SD Workspace by Feb 15th. The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.",
-      action1: "Start",
-      state1: "inactive",
-      action2: "Register your team",
-      state2: "inactive",
-      note: "Registration will open on JAN 6",
-      startDate: new Date("12/20/2019, 11:59:00 PM"),
-      dueDate: new Date("02/03/2020, 11:59:00 PM"),
+        'Your team will have the opportunity to get early feedback from members of the San Diego community on your initial concepts. Community feedback can be particularly valuable as these stakeholders will likely have a sense of what’s feasible and desirable in solutions to address key civic issues. To participate in community feedback, register and submit your team’s preliminary concepts (details coming soon). The preliminary submission must include a description of the problem and proposal, details about your team, and questions for feedback providers to answer about your concept.',
+      action1: 'Sign up for D4SD',
+      state1: 'inactive',
+      action2: 'Register your team',
+      state2: 'inactive',
+      note: 'Registration will open on JAN 6',
       isAction1: true,
       isAction2: false,
-      img: "timeline_prototype",
-      shortDesc: "Your team will have the opportunity to get feedback from..."
+      img: 'timeline_prototype'
     },
     {
       stage: 'Submit Final Proposals for the D4SD Summit  ',
@@ -571,8 +568,7 @@ export const workspaceContent = {
       note: 'Registration will open on JAN 6',
       isAction1: true,
       isAction2: false,
-      img: "timeline_pitch",
-      shortDesc: "How will the public react to your proposal? ..."
+      img: 'timeline_pitch'
     },
     {
       stage: 'Create Alliances to Support your Proposal',
@@ -586,8 +582,7 @@ export const workspaceContent = {
       note: 'Registration will open on JAN 6',
       isAction1: true,
       isAction2: false,
-      img: "timeline_activate",
-      shortDesc: "Attend the D4SD Summit and create an alliance to advance..."
+      img: 'timeline_activate'
     }
   ]
 };
@@ -736,5 +731,6 @@ export const sponsorsContent = {
     img1: sponsors_designlab,
     img2: sponsors_yankelovich,
     img3: sponsors_ibm,
+    img4: sponsors_nsf,
 
 }
