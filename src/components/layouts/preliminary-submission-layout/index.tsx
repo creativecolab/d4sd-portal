@@ -7,7 +7,6 @@ import ProjectInfoCard from '../../preliminarysubmission-cards/project-info';
 import UploadCard from '../../preliminarysubmission-cards/upload';
 import FeedbackCard from '../../preliminarysubmission-cards/feedback';
 import PrelimFinishCard from '../../preliminarysubmission-cards/prelim-finish';
-import Menubar from '../../menubar/index';
 import './style.less';
 
 const { Step } = Steps;
