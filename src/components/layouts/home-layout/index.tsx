@@ -79,6 +79,7 @@ const HomeLayout = (): JSX.Element => {
           <div className="line" />
           <h1>{summitContent.subtitle1}</h1>
           <h1>{summitContent.subtitle2}</h1>
+          <br />
           <h3>{summitContent.title1}</h3>
           <h3>{summitContent.title2}</h3>
           <h3>{summitContent.title3}</h3>
