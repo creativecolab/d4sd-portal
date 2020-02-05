@@ -85,10 +85,10 @@ const HomeLayout = (): JSX.Element => {
           <h3>{summitContent.title3}</h3>
           <div className="buttons">
             <Button type="primary" size="default">
-              REGISTER FOR THE SUMMIT
+                REGISTER FOR THE SUMMIT
             </Button>
             <Button className="learn" size="default">
-              LEARN MORE
+                LEARN MORE
             </Button>
           </div>
         </div>
