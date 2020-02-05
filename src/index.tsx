@@ -19,10 +19,9 @@ import SponsorsPage from './containers/sponsors-page';
 import WorkspacePage from './containers/workspace-page';
 import ProcessPage from './components/layouts/process-layout';
 import StakeholderPage from './components/layouts/stakeholder-layout';
-import FeedbackPage from './components/layouts/feedback-layout';
-
+import FeedbackPage from './components/layouts/feedback-layout'
+import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
-
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 import './index.less';
 
@@ -51,6 +50,7 @@ const App = (): JSX.Element => (
             <Route exact path="/resources/stakeholder" component={StakeholderPage} />
 
             <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
+            <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
