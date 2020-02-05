@@ -130,11 +130,9 @@ const ViewFeedbackLayout = (): JSX.Element => {
                   <Icon type="left" onClick={goLeft} className={leftControlClass} />
                 </div>
                 <span>
-                  {
-                    feedbackIndex + 1
-                  }
-                    of
-                  {feedback.length}
+                  { feedbackIndex + 1 + ' '}
+                  of
+                  { ' ' + feedback.length }
                 </span>
                 <div className="control-wrapper">
                   <Icon type="right" onClick={goRight} className={rightControlClass} />
