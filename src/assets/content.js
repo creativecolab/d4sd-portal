@@ -41,6 +41,10 @@ import feedback from './img/involve_feedback.svg';
 // import activate from "./img/timeline_activate.svg";
 
 import summit_pics from './img/summit_pics.png';
+import summit_1 from './img/summit_1.png';
+import summit_2 from './img/summit_2.png';
+import summit_3 from './img/summit_3.png';
+import summit_4 from './img/summit_4.png';
 import d4sd_horizontal from './img/d4sd_horizontal.svg';
 
 import challenge_mobility from './img/challenge_mobility.svg';
@@ -141,13 +145,17 @@ export const homeContent = {
 
 /** ***********************************Summit content************************************** */
 export const summitContent = {
-  subtitle1: "REGISTER HERE for the ",
+  subtitle1: "REGISTER HERE for the",
   subtitle2: "Design for San Diego Summit!",
   title1: 'Urban Discovery Academy',
   title2: 'May 20, 2020',
   title3: "4pm - 9pm",
-  image1: summit_pics,
-  image2: d4sd_horizontal,
+  image_col: summit_pics,
+  image1: summit_1,
+  image2: summit_2,
+  image3: summit_3,
+  image4: summit_4,
+  logo: d4sd_horizontal,
  
 };
 

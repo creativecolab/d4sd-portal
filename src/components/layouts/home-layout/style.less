@@ -16,32 +16,72 @@
 }
 
 .summit {
-  background: url('../../../assets/img/d4sd_triangle.svg') bottom right, #25497A;
+  background: url('../../../assets/img/d4sd_triangle.svg') bottom right, #25497a;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   // justify-content: space-around;
-  height: 80vh;
+  height: 70vh;
+  overflow: hidden;
 
-  .pics {
-    margin-left: 15vw;
-    margin-right: 5vw;
-    width: auto;
-    height: 100%;
+  flex-direction: column-reverse;
+
+  @media screen and (min-width: 1090px) {
+    flex-direction: row;
+    padding-right: 50px;
+  }
+  @media screen and (min-width: 1201px) {
+    height: 80vh;
   }
 
+  .pics {
+    align-self: center;
+    margin-left: 13vw;
+    margin-right: 3vw;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    opacity: 75%;
+
+    flex-direction: row;
+
+    @media screen and (min-width: 1090px) {
+      flex-direction: column;
+      height: 110%;
+    }
+
+    .pic {
+      height: 18.45vw;
+      width: 30vw;
+      margin-right: 15px;
+
+      @media screen and (min-width: 1090px) {
+        flex-direction: column;
+        height: 240px;
+        width: 30vh;
+        margin-bottom: 7.5px;
+        margin-top: 7.5px;
+      }
+
+      @media screen and (min-width: 1201px) {
+        width: 35vh;
+      }
+    }
+  }
 
   .content {
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
+    // height: 100%;
     justify-content: center;
     // margin-top: 9vh;
 
+    padding: 50px;
+
     .logo {
-      width: 75%;
+      width: 80%;
       height: auto;
     }
 
@@ -57,22 +97,90 @@
       color: white;
       text-align: left;
       font-weight: 600;
+
+      @media screen and (min-width: 1090px) {
+        font-size: 3rem;
+        margin-bottom: -0.3rem;
+      }
+
+      @media screen and (min-width: 1201px) {
+        font-size: 3.3rem;
+        margin-bottom: 0.1rem;
+      }
+
+      @media screen and (min-width: 1281px) {
+        font-size: 3.8rem;
+        margin-bottom: 0.3rem;
+      }
+
+      @media screen and (min-width: 1381px) {
+        font-size: 4.4rem;
+        margin-bottom: 0.5em;
+      }
     }
 
     h3 {
       color: white;
+
+      @media screen and (min-width: 1090px) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+      }
+
+      @media screen and (min-width: 1201px) {
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+
+      @media screen and (min-width: 1281px) {
+        font-size: 2.1rem;
+        line-height: 3rem;
+      }
+
+      @media screen and (min-width: 1381px) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+      }
     }
   }
 
   .buttons {
     margin-top: 5vh;
+    .register,
+    .learn {
+      width: 270px;
+      font-size: 14px;
+      @media screen and (min-width: 1090px) {
+        padding: 0 15px;
+        height: 40px;
+        width: 200px;
+        font-size: 11px;
+      }
+
+      @media screen and (min-width: 1201px) {
+        padding: 0 20px;
+        height: 45px;
+        width: 220px;
+        font-size: 12px;
+      }
+
+      @media screen and (min-width: 1281px) {
+        padding: 0 25px;
+        height: 50px;
+        width: 250px;
+        font-size: 13px;
+      }
+
+      @media screen and (min-width: 1381px) {
+        width: 270px;
+        font-size: 14px;
+      }
+    }
 
     .learn {
       background-color: transparent;
-      width: 270px;
     }
   }
-
 }
 
 .Home {
@@ -92,7 +200,6 @@
 // Section 3
 .challenges {
   .challenges-carousel {
-
     // text-align: center;
     @media screen and (min-width: 320px) {
       min-height: 820px;
