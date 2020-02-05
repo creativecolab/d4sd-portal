@@ -10,7 +10,11 @@ import { aboutContent } from '../assets/content.js';
 // Styles
 import { Bg, Br } from '../assets/css/others.js';
 import {
-  OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox, ToggleFlexBox
+  OuterContainer,
+  InnerContainer,
+  OuterFlexBox,
+  InnerFlexBox,
+  ToggleFlexBox
 } from '../assets/css/containers.js';
 import { H2, H5 } from '../assets/css/fonts.js';
 import { device } from '../assets/css/breakpoints.js';
@@ -28,33 +32,33 @@ import diagram from '../assets/img/about_diagram.png';
 import './style.css';
 
 const H5Half = styled(H5)`
-    width: 90%;
+  width: 90%;
 `;
 
 const ResponsiveImgVertical = styled.img`
-    width: 100%;
-    @media ${device.mobileS} {
-        display: ${(props) => (props.isInnovator ? 'inline' : 'none')}
-    }
-    @media ${device.tablet} {
-        display: none;
-    }
+  width: 100%;
+  @media ${device.mobileS} {
+    display: ${props => (props.isInnovator ? 'inline' : 'none')};
+  }
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 const ResponsiveImgHorizontal = styled.img`
-    width: 100%;
-    @media ${device.mobileS} {
-        display: none;
-    }
-    @media ${device.tablet} {
-        display: ${(props) => (props.isInnovator ? 'inline' : 'none')}
-    }
+  width: 100%;
+  @media ${device.mobileS} {
+    display: none;
+  }
+  @media ${device.tablet} {
+    display: ${props => (props.isInnovator ? 'inline' : 'none')};
+  }
 `;
 
 class About extends Component {
   constructor() {
     super();
-    this.state = ({
+    this.state = {
       overview: true,
       join: false,
       value: false,
@@ -62,7 +66,7 @@ class About extends Component {
       review: false,
       isInnovator: true,
       role: "Innovators'"
-    });
+    };
     this.overview = React.createRef();
     this.join = React.createRef();
     this.value = React.createRef();
@@ -70,7 +74,7 @@ class About extends Component {
     this.review = React.createRef();
   }
 
-  scrollToRef = (ref) => {
+  scrollToRef = ref => {
     console.log('before');
     console.log(ref.current);
     window.scrollTo({
@@ -79,7 +83,7 @@ class About extends Component {
       behavior: 'smooth'
     });
     const states = ['overview', 'join', 'value', 'timeline', 'review'];
-    states.forEach((state) => {
+    states.forEach(state => {
       if (state === ref.current.id) {
         this.setState({ [ref.current.id]: true });
       } else {
@@ -88,36 +92,33 @@ class About extends Component {
     });
     console.log('after');
     console.log(this.state);
-  }
+  };
 
-  toggle = (e) => {
+  toggle = e => {
     console.log('participantcall');
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       isInnovator: !prevState.isInnovator
     }));
-  }
+  };
 
   innovator = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       isInnovator: true
     }));
-  }
+  };
 
   community = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       isInnovator: false
     }));
-  }
+  };
 
-  onHover = (e) => {
+  onHover = e => {
     console.log('hoverr');
     console.log(e.target);
-  }
+  };
 
-
-  unHover = (e) => {
-
-  }
+  unHover = e => {};
 
   render() {
     return (
@@ -133,10 +134,7 @@ class About extends Component {
         />
         <Br />
         <Br />
-        <Bg
-          ref={this.join}
-          id="join"
-        >
+        <Bg ref={this.join} id="join">
           <OuterContainer>
             <InnerContainer>
               <H2 center>{aboutContent.title2}</H2>
@@ -148,7 +146,6 @@ class About extends Component {
                 src={diagram}
                 alt="diagram"
               />
-
             </InnerContainer>
           </OuterContainer>
         </Bg>
@@ -156,11 +153,7 @@ class About extends Component {
         <Br />
         <Br />
 
-        <Bg
-          theme={{ color: '#EFF8FF' }}
-          ref={this.value}
-          id="value"
-        >
+        <Bg theme={{ color: '#EFF8FF' }} ref={this.value} id="value">
           <OuterContainer>
             <InnerContainer>
               <Br />
@@ -169,14 +162,8 @@ class About extends Component {
               <br />
               <OuterFlexBox>
                 {aboutContent.content3.map((value, i) => (
-                  <InnerFlexBox
-                    half
-                    key={i}
-                  >
-                    <FlexibleImg
-                      theme={{ width: '9%' }}
-                      src={value.img}
-                    />
+                  <InnerFlexBox half key={i}>
+                    <FlexibleImg theme={{ width: '9%' }} src={value.img} />
                     <H5Half left>{value.txt}</H5Half>
                   </InnerFlexBox>
                 ))}

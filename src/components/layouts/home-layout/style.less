@@ -14,13 +14,69 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.summit {
+  background: url('../../../assets/img/d4sd_triangle.svg') bottom right, #25497A;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  // justify-content: space-around;
+  height: 75vh;
+
+  .pics {
+    margin-left: 15vw;
+    margin-right: 5vw;
+    height: 100%;
+  }
+
+
+  .content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10vh;
+
+    .line {
+      width: 100%;
+      height: 5px;
+      background-color: white;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    h1 {
+      color: white;
+      text-align: left;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    h3 {
+      color: white;
+    }
+  }
+
+  .buttons {
+    margin-top: 5vh;
+
+    .learn {
+      background-color: transparent;
+      width: 250px;
+    }
+  }
+
+}
+
 .Home {
   .d4sdsubtitle {
     margin-top: @margin-base;
   }
+
   .d4sdmaintitle {
     margin-top: @margin-base * 2;
   }
+
   .d4sd-content {
     margin-top: @margin-base * 2;
   }
@@ -29,13 +85,16 @@
 // Section 3
 .challenges {
   .challenges-carousel {
+
     // text-align: center;
     @media screen and (min-width: 320px) {
       min-height: 820px;
     }
+
     @media screen and (min-width: 415px) {
       min-height: 840px;
     }
+
     @media screen and (min-width: 1275px) {
       min-height: 950px;
     }
@@ -44,8 +103,10 @@
     background: #244c7e;
     overflow: hidden;
   }
+
   .challenge-item {
     background: #eff8ff;
+
     .challenge-card {
       background-repeat: no-repeat;
       background-size: 100%;
@@ -55,13 +116,16 @@
       @media screen and (min-width: 320px) {
         min-height: 730px;
       }
+
       @media screen and (min-width: 415px) {
         min-height: 750px;
       }
+
       @media screen and (min-width: 1275px) {
         min-height: 850px;
       }
     }
+
     .challenge-header {
       padding-top: 50px;
       text-align: center;
@@ -74,12 +138,14 @@
     width: 20px;
     margin-left: 30px;
   }
+
   .ant-carousel .slick-dots li button {
     border-radius: 50%;
     height: 20px;
     width: 20px;
     margin-left: 30px;
   }
+
   .ant-carousel .slick-dots {
     height: 5vh;
   }

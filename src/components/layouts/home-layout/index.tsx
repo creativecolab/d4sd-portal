@@ -5,12 +5,11 @@ import {
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent } from '../../../assets/content';
+import { homeContent, summitContent } from '../../../assets/content';
 import Footer from '../../Footer';
 import { contentHTML } from '../../../actions';
 
 import landingImage from '../../../assets/img/home_landing.svg';
-
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -30,7 +29,6 @@ const logoCarouselSettings = {
   draggable: true,
   autoplay: true
 };
-
 
 const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -61,23 +59,37 @@ const HomeLayout = (): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button
-              type="primary"
-              size="medium"
-            >
+            <Button type="primary" size="medium">
               JOIN MAILING LIST
             </Button>
           </a>
-          <Button
-            type="primary-outline"
-            size="medium"
-            onClick={scrollToRef}
-          >
-              LEARN MORE
+          <Button type="primary-outline" size="medium" onClick={scrollToRef}>
+            LEARN MORE
           </Button>
         </div>
         <div className="landing-image">
           <img alt="landing_image" src={landingImage} />
+        </div>
+      </div>
+
+      <div className="summit">
+        <img className="pics" src={summitContent.image1} />
+        <div className="content">
+          <img className="logo" src={summitContent.image2} />
+          <div className="line" />
+          <h1>{summitContent.subtitle1}</h1>
+          <h1>{summitContent.subtitle2}</h1>
+          <h3>{summitContent.title1}</h3>
+          <h3>{summitContent.title2}</h3>
+          <h3>{summitContent.title3}</h3>
+          <div className="buttons">
+            <Button type="primary" size="default">
+              REGISTER FOR THE SUMMIT
+            </Button>
+            <Button className="learn" size="default">
+              LEARN MORE
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -89,18 +101,12 @@ const HomeLayout = (): JSX.Element => {
           <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
           {/* eslint-enable */}
           <a href="/getinvolved">
-            <Button
-              type="primary"
-              size="default"
-            >
+            <Button type="primary" size="default">
               GET INVOLVED
             </Button>
           </a>
         </div>
-        <Row
-          type="flex"
-          justify="center"
-        >
+        <Row type="flex" justify="center">
           {homeContent.roles.map((role, i) => (
             <Col
               // eslint-disable-next-line
@@ -118,10 +124,7 @@ const HomeLayout = (): JSX.Element => {
       </div>
 
       <div className="section challenges">
-        <Carousel
-          autoplay
-          className="challenges-carousel"
-        >
+        <Carousel autoplay className="challenges-carousel">
           {homeContent.challenges.map((challenge, i) => (
             // eslint-disable-next-line
             <div className="challenge-item" key={`challenge${i}`}>
@@ -162,10 +165,7 @@ const HomeLayout = (): JSX.Element => {
           </a>
         </div>
       </div>
-      <Row
-        type="flex"
-        justify="center"
-      >
+      <Row type="flex" justify="center">
         {homeContent.actionImg.map((img, i) => (
           <Col
             // eslint-disable-next-line
@@ -189,13 +189,13 @@ const HomeLayout = (): JSX.Element => {
         </div>
       </div>
 
-      { /* eslint-disable */ }
+      {/* eslint-disable */}
       <Carousel
         {...logoCarouselSettings}
         slidesToShow={window.innerWidth < 768 ? 1 : 3}
         className="logo-carousel"
       >
-        { /* eslint-enable */ }
+        {/* eslint-enable */}
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>
