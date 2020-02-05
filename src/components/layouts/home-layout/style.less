@@ -21,7 +21,6 @@
   background-repeat: no-repeat;
   display: flex;
   // justify-content: space-around;
-  height: 70vh;
   overflow: hidden;
 
   flex-direction: column-reverse;
@@ -29,6 +28,7 @@
   @media screen and (min-width: 1090px) {
     flex-direction: row;
     padding-right: 50px;
+    height: 70vh;
   }
   @media screen and (min-width: 1201px) {
     height: 80vh;
@@ -38,16 +38,17 @@
     align-self: center;
     margin-left: 13vw;
     margin-right: 3vw;
+    margin-bottom: 50px;
     width: auto;
     display: flex;
     justify-content: space-between;
     opacity: 75%;
-
     flex-direction: row;
 
     @media screen and (min-width: 1090px) {
       flex-direction: column;
       height: 110%;
+      margin-bottom: 0;
     }
 
     .pic {
@@ -78,7 +79,11 @@
     justify-content: center;
     // margin-top: 9vh;
 
-    padding: 50px;
+    padding: 50px 150px;
+
+    @media screen and (min-width: 1090px) {
+      padding: 50px;
+    }
 
     .logo {
       width: 80%;
