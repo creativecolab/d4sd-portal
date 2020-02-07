@@ -10,7 +10,7 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { workspaceContent } from '../../../assets/content.js';
+import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
   const [loggedIn] = useState(true);
