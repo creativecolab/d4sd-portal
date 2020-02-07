@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-
+import './index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -23,7 +23,7 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-import './index.less';
+
 
 // eslint-disable-next-line
 // @ts-ignore
