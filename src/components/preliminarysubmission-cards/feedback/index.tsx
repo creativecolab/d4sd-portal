@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
-import useForm from "react-hook-form";
-import { Form, Row, Col } from "@d4sd/components";
-import "./style.less";
-import DOMPurify from "dompurify";
-import { Input, Button } from "@d4sd/components";
-import TextArea from "antd/lib/input/TextArea";
-import PDFPreview from "./pdf-preview";
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import React, { useEffect } from 'react';
+import useForm from 'react-hook-form';
+import {
+  Form, Row, Col, Input, Button
+} from '@d4sd/components';
+import './style.less';
+import DOMPurify from 'dompurify';
+
+import TextArea from 'antd/lib/input/TextArea';
+import {
+  Page, Text, View, Document, StyleSheet
+} from '@react-pdf/renderer';
+import PDFPreview from './pdf-preview';
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
-    flexDirection: "row",
-    backgroundColor: "#FFFFFF"
+    flexDirection: 'row',
+    backgroundColor: '#FFFFFF'
   },
   section: {
     margin: 10,
@@ -29,7 +33,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
   // Create Document Component
   const MyDocument = () => (
 
-    //Document has an onRender prop that can receive the Blob from Web
+    // Document has an onRender prop that can receive the Blob from Web
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
@@ -49,22 +53,17 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
 
   const { setSubmitStep } = props;
   const { register, handleSubmit, setValue } = useForm();
-  const projectName = localStorage.getItem("teamName-d4sd-prelim-submit");
+  const projectName = localStorage.getItem('teamName-d4sd-prelim-submit');
   const problemStatement = localStorage.getItem(
-    "problemstatement-d4sd-prelim-submit"
+    'problemstatement-d4sd-prelim-submit'
   );
 
-  const prelimQuestion1 =
-    localStorage.getItem("prelim-submission-question1") || "";
-  const prelimQuestion2 =
-    localStorage.getItem("prelim-submission-question2") || "";
-  const prelimQuestion3 =
-    localStorage.getItem("prelim-submission-question3") || "";
-  const questionList =
-    "<p>Here’s your opportunity to get input on your ideas. Your team can pose up to three questions to ask the community about your proposed solutions. Asking questions is optional but can really help facilitate feedback exchange. Advice for writing effective questions:</p>";
+  const prelimQuestion1 = localStorage.getItem('prelim-submission-question1') || '';
+  const prelimQuestion2 = localStorage.getItem('prelim-submission-question2') || '';
+  const prelimQuestion3 = localStorage.getItem('prelim-submission-question3') || '';
+  const questionList = '<p>Here’s your opportunity to get input on your ideas. Your team can pose up to three questions to ask the community about your proposed solutions. Asking questions is optional but can really help facilitate feedback exchange. Advice for writing effective questions:</p>';
 
-  const expertiseRequired =
-    localStorage.getItem("prelim-submission-expertise") || "";
+  const expertiseRequired = localStorage.getItem('prelim-submission-expertise') || '';
   /* eslint-disable */
   const onSubmit = (data: any): void => {
     console.log(data);
@@ -75,7 +74,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
 
   // register inputs
   useEffect(() => {
-    register({ name: "stuff" });
+    register({ name: 'stuff' });
     // eslint-disable-next-line
   }, []);
 
@@ -84,7 +83,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
     console.log(e.target.name);
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
-    //setSubmitStep("");
+    // setSubmitStep("");
   };
 
   return (
@@ -93,7 +92,10 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
         <Row type="flex" justify="center">
           <Col xs={{ span: 20 }} sm={{ span: 11 }}>
             <Row>
-              <h4>Project: {projectName}</h4>
+              <h4>
+Project:
+                {projectName}
+              </h4>
               <p>
                 <b>Team members: </b>
               </p>
@@ -114,7 +116,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
               </div>
             </Row>
           </Col>
-          <Col sm={{ span: 2 }}></Col>
+          <Col sm={{ span: 2 }} />
 
           <Col xs={{ span: 20 }} sm={{ span: 11 }}>
             <h4>Question List</h4>
@@ -122,11 +124,12 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(questionList)
               }}
-            ></div>
+            />
             <ul>
               <li>
                 <p>
-                  <b>Specific: </b>Call attention to specific aspects of your
+                  <b>Specific: </b>
+Call attention to specific aspects of your
                   proposals.
                 </p>
               </li>
@@ -159,7 +162,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
                   onChange={handleChange}
                   name="prelim-submission-question1"
                   value={prelimQuestion2}
-                ></TextArea>
+                />
               </div>
               <br />
               <div>
@@ -169,7 +172,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
                   onChange={handleChange}
                   name="prelim-submission-question2"
                   value={prelimQuestion2}
-                ></TextArea>
+                />
               </div>
               <br />
               <div>
@@ -179,7 +182,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
                   onChange={handleChange}
                   name="prelim-submission-question3"
                   value={prelimQuestion3}
-                ></TextArea>
+                />
               </div>
               <br />
               <div>
@@ -192,7 +195,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
                   onChange={handleChange}
                   name="prelim-submission-expertise"
                   value={expertiseRequired}
-                ></TextArea>
+                />
               </div>
             </Form>
           </Col>
@@ -202,7 +205,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
           <Button
             type="primary"
             onClick={(): void => {
-setSubmitStep("upload");
+              setSubmitStep('upload');
             }}
           >
             BACK
@@ -213,7 +216,7 @@ setSubmitStep("upload");
           <Button
             type="primary"
             onClick={(): void => {
-              setSubmitStep("done");
+              setSubmitStep('done');
             }}
           >
             NEXT

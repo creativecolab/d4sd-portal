@@ -30,13 +30,6 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
   const [fileList, setFileList] = useState<Array<any>>([]);
 
   const onSubmit = (): void => {
-<<<<<<< HEAD
-    saveWork();
-    // text input is
-    // const problemStatement = localStorage.getItem('problemstatement-d4sd-prelim-submit');
-    // fileUploaded is the file uploaded
-    setSubmitStep('feedback');
-=======
     if (submission) {
       submission.problemDescription = problemInfo;
       submission.solutionPDF = data?.downloadUrl;
@@ -44,7 +37,6 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
     }
     console.log(submission);
     setSubmitStep('done');
->>>>>>> SubmissionContext: Add submit to firebase firestore
   };
 
   useEffect(() => {
