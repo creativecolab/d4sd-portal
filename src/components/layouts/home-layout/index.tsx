@@ -74,13 +74,13 @@ const HomeLayout = (): JSX.Element => {
 
       <div className="summit">
         <div className="pics">
-          <img className="pic" src={summitContent.image1} />
-          <img className="pic" src={summitContent.image2} />
-          <img className="pic" src={summitContent.image3} />
-          <img className="pic" src={summitContent.image4} />
+          <img className="pic" alt="summit-img-1" src={summitContent.image1} />
+          <img className="pic" alt="summit-img-2" src={summitContent.image2} />
+          <img className="pic" alt="summit-img-3" src={summitContent.image3} />
+          <img className="pic" alt="summit-img-4" src={summitContent.image4} />
         </div>
         <div className="content">
-          <img className="logo" src={summitContent.logo} />
+          <img className="logo" alt="summit-img-logo" src={summitContent.logo} />
           <div className="line" />
           <h1 className="subtitle">{summitContent.subtitle1}</h1>
           <h1 className="subtitle">{summitContent.subtitle2}</h1>
