@@ -36,7 +36,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
       setSubmission(submission);
     }
     console.log(submission);
-    setSubmitStep('done');
+    setSubmitStep('feedback');
   };
 
   useEffect(() => {

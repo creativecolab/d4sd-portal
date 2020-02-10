@@ -13,7 +13,7 @@ const { Step } = Steps;
 
 const PrelimSubmitLayout = (): JSX.Element => {
   // hook, must be one of "start, role, ethics, etc."
-  const [submitStep, setSubmitStep] = useState('start');
+  const [submitStep, setSubmitStep] = useState('feedback');
   const [submission, setSubmission] = useState({
     projectName: '',
     problemDescription: '',

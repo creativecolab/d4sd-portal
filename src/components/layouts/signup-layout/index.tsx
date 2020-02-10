@@ -7,7 +7,6 @@ import {
   Row, Header
 } from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
-import Menubar from '../../menubar/index';
 import LoginCard from '../../login-card';
 import firebase from '../../../actions/firebase';
 import './style.less';

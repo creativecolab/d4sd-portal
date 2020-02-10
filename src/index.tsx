@@ -26,8 +26,6 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 
 import Menubar from './components/menubar/index';
-import './index.less';
-import './styles/reset.css';
 import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
 
 // eslint-disable-next-line

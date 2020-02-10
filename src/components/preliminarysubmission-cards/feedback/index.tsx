@@ -1,62 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useForm from 'react-hook-form';
 import {
-  Form, Row, Col, Input, Button
+  Form, Row, Col, Button
 } from '@d4sd/components';
 import './style.less';
 import DOMPurify from 'dompurify';
 
 import TextArea from 'antd/lib/input/TextArea';
-import {
-  Page, Text, View, Document, StyleSheet
-} from '@react-pdf/renderer';
-import PDFPreview from './pdf-preview';
+import { Document, Page } from 'react-pdf';
+import SubmissionContext from '../../../contexts/SubmissionContext';
 
-// Create styles
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#FFFFFF'
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
-  }
-});
+// // Create styles
+// const styles = StyleSheet.create({
+//   page: {
+//     flexDirection: 'row',
+//     backgroundColor: '#FFFFFF'
+//   },
+//   section: {
+//     margin: 10,
+//     padding: 10,
+//     flexGrow: 1
+//   }
+// });
 
 interface FeedbackCardIF {
   setSubmitStep(step: string): void;
 }
 
 const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
-  // Create Document Component
-  const MyDocument = () => (
-
-    // Document has an onRender prop that can receive the Blob from Web
-    <Document>
-      <Page size="A4" style={styles.page}>
-        <View style={styles.section}>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
-        </View>
-      </Page>
-    </Document>
-  );
-
+  const { submission, setSubmission } = useContext(SubmissionContext);
   const { setSubmitStep } = props;
+
   const { register, handleSubmit, setValue } = useForm();
-  const projectName = localStorage.getItem('teamName-d4sd-prelim-submit');
-  const problemStatement = localStorage.getItem(
-    'problemstatement-d4sd-prelim-submit'
-  );
+  const projectName = submission?.projectName;
+  const problemStatement = submission?.problemDescription;
 
   const prelimQuestion1 = localStorage.getItem('prelim-submission-question1') || '';
   const prelimQuestion2 = localStorage.getItem('prelim-submission-question2') || '';
@@ -112,7 +89,11 @@ Project:
                 <b>2. Propose Initial Concepts</b>
               </p>
               <div className="pdf-display">
-                <MyDocument />
+                <Document
+                  file={submission?.solutionPDF}
+                >
+                  <Page pageNumber={1} />
+                </Document>
               </div>
             </Row>
           </Col>
