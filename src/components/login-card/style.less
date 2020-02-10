@@ -1,5 +1,5 @@
-@import "../../styles/vars.less";
-@import "../../styles/mixins.less";
+@import '../../styles/vars.less';
+@import '../../styles/mixins.less';
 
 .card-login {
   max-width: @large-card-max-width;
@@ -8,7 +8,14 @@
   .input-email {
     margin-bottom: @margin-base / 2;
   }
-  .google-btn{
+  .input-group {
+    margin-top: @margin-base;
+    input {
+      height: 42px;
+      margin-top: @margin-base;
+    }
+  }
+  .google-btn {
     margin-bottom: @margin-base;
     height: @btn-height;
     font-weight: @btn-boldness;
@@ -16,17 +23,18 @@
   }
   .login-btn {
     margin-top: @margin-base * 4;
+    margin-right: 0px;
   }
   .signup-btn-link {
-    width:100%;
+    width: 100%;
   }
   .d4sdbutton {
-    width:100%;
+    width: 100%;
     letter-spacing: @btn-letter-spacing;
     font-weight: @btn-boldness;
   }
   .continue-btn {
-    width:100%;
+    width: 100%;
   }
   .fb-btn {
     margin-bottom: @margin-base;

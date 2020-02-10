@@ -1,26 +1,18 @@
-import React, { useState } from "react";
-import { Row, Col, Steps, Button } from "@d4sd/components";
-import Menubar from "../../menubar/index";
-import "./style.less";
-import LoginCard from "../../login-card";
+import React from 'react';
+import { Row, Header } from '@d4sd/components';
+import Menubar from '../../menubar/index';
+import './style.less';
+import LoginCard from '../../login-card';
 
-const { Step } = Steps;
-
-const SignupLayout = (props: any) => {
-  // signupStep
-  return (
-    <div>
-      <Menubar />
-      <div className="LoginLayout">
-        <Row className="heading">
-          <h1>D4SD Workspace</h1>
-        </Row>
-        <Row className="card-container">
-          <LoginCard />
-        </Row>
-      </div>
+const SignupLayout = (): JSX.Element => (
+  <div>
+    <Menubar />
+    <div className="LoginLayout">
+      <Header teamTitle="D4SD Workspace" className="heading" />
+      <Row className="card-container">
+        <LoginCard />
+      </Row>
     </div>
-  );
-};
-
+  </div>
+);
 export default SignupLayout;

@@ -1,16 +1,25 @@
-import React from "react";
-import "../../styles/containers.less";
-import Menubar from "../menubar/index";
-import "./style.less";
+import React from 'react';
+import '../../styles/containers.less';
+import Menubar from '../menubar/index';
+import './style.less';
+import { contentHTML } from '../../actions';
 
-const Header = (props: any) => {
+interface HeaderIF {
+  image: string;
+  title: string;
+  content: string;
+}
+
+const Header = (props: HeaderIF): JSX.Element => {
+  const { image, title, content } = props;
   return (
     <div>
-    <Menubar/>
-      <div className={props.image}>
+      <Menubar />
+      <div className={image}>
         <div className="container">
-          <h1>{props.title}</h1>
-          <p dangerouslySetInnerHTML={{ __html: props.content }} />          
+          <h1>{title}</h1>
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={contentHTML(content)} />
         </div>
       </div>
     </div>

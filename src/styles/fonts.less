@@ -1,5 +1,5 @@
 /** D4SD PORTAL **/
-@import "./vars.less";
+@import './vars.less';
 
 html {
   @media screen and (max-width: @sm) {
@@ -11,10 +11,9 @@ html {
   @media screen and (min-width: @md) {
     font-size: 9px;
   }
-
 }
 div {
-  font-family: "Montserrat", "Open Sans", sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
 h1 {
   color: @b1;
@@ -35,7 +34,7 @@ h2 {
 }
 
 h3 {
-  color: #A7A7A7;
+  color: #a7a7a7;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   font-size: 2.2rem;
@@ -44,7 +43,7 @@ h3 {
   margin-bottom: 0;
 }
 
-h4{
+h4 {
   font-size: 2.6rem;
   font-weight: 600;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
@@ -52,8 +51,8 @@ h4{
   color: @blue-1;
 }
 
-h5{
-  font-size: 2.2rem;
+h5 {
+  font-size: 2.3rem;
   font-weight: 600;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
 }
@@ -71,4 +70,9 @@ p {
   line-height: 3.3rem;
   letter-spacing: 0.02rem;
   text-align: left;
+}
+
+// specific fix for ant-d icons on steps not vertically aligned because reset.css messes it up
+.ant-steps-item-finish .ant-steps-icon {
+  vertical-align: text-top;
 }

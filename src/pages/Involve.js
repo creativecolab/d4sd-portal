@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import {
-  OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox,
+  OuterContainer, InnerContainer, OuterFlexBox, InnerFlexBox
 } from '../assets/css/containers.js';
 // import { Btn } from '../assets/css/buttons.js';
 import HeaderCard from '../components/landing/HeaderCard';
@@ -19,7 +21,7 @@ class Involve extends Component {
     super();
     this.state = ({
       hovered: '',
-      show: [],
+      show: []
     });
     this.innovators = React.createRef();
     this.experts = React.createRef();
@@ -55,14 +57,22 @@ class Involve extends Component {
         <Navbar />
         <br />
         <br />
-        <HeaderCard title={involveContent.title1} content={involveContent.content1} bg={header} isAction="true" />
+        <HeaderCard
+          title={involveContent.title1}
+          content={involveContent.content1}
+          bg={header}
+          isAction="true"
+        />
         <br />
         <br />
         <OuterContainer>
           <InnerContainer>
             <OuterFlexBox>
               {involveContent.roles.map((content, i) => (
-                <InnerFlexBox half key={i}>
+                <InnerFlexBox
+                  half
+                  key={i}
+                >
                   <RoleCard
                     onClick={() => this.expand(this[content.id])}
                     ref={this[content.id]}

@@ -1,17 +1,17 @@
-import React, { useState, useRef } from "react";
-import { Row, Col, Steps, Button, Carousel, Card } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { challengeContent } from "../../../assets/content.js";
-import ChallengeMobility from "../../../assets/img/challenge_mobility.svg";
-import ChallengeClimate from "../../../assets/img/challenge_climate.svg";
-import ChallengeHousing from "../../../assets/img/challenge_housing.svg";
-import ChallengeHealth from "../../../assets/img/challenge_health.svg";
+import React, { useState, useRef } from 'react';
+import { Row, Col, Card } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { challengeContent } from '../../../assets/content';
+// import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
+// import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
+// import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
+// import ChallengeHealth from '../../../assets/img/challenge_health.svg';
 
-const ChallengeLayout = (props: any) => {
-  const { Meta } = Card;
+const ChallengeLayout = (): JSX.Element => {
+  // const { Meta } = Card;
 
   const [lastMile, setLastMile] = useState(false);
   const [safety, setSafety] = useState(false);
@@ -38,98 +38,117 @@ const ChallengeLayout = (props: any) => {
   const housing = useRef<HTMLHeadingElement>(null);
   const environment = useRef<HTMLHeadingElement>(null);
 
-  const scrollToMobility = () => {
+  const scrollToMobility = (): void => {
     if (mobility && mobility.current) {
       const position = mobility.current.offsetTop - 90;
+      // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
         behavior: 'smooth'
       });
     }
-  }
-  const scrollToHealth = () => {
+  };
+  const scrollToHealth = (): void => {
     if (health && health.current) {
       const position = health.current.offsetTop - 90;
+      // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
         behavior: 'smooth'
       });
     }
-  }
-  const scrollToHousing = () => {
+  };
+  const scrollToHousing = (): void => {
     if (housing && housing.current) {
       const position = housing.current.offsetTop - 90;
+      // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
         behavior: 'smooth'
       });
     }
-  }
-  const scrollToEnvironment = () => {
+  };
+  const scrollToEnvironment = (): void => {
     if (environment && environment.current) {
       const position = environment.current.offsetTop - 90;
+      // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
         behavior: 'smooth'
       });
     }
-  }
+  };
 
   return (
     <div>
-      <Header title={challengeContent.title} content={challengeContent.content} image={challengeContent.image}/>
+      <Header
+        title={challengeContent.title}
+        content={challengeContent.content}
+        image={challengeContent.image}
+      />
       <div className="ChallengeLayout container">
-
         <div className="section">
           <Row justify="center" type="flex">
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToMobility} className="challengeicons">
-              <img src={challengeContent.nav[0].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[0].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHealth} className="challengeicons">
-              <img src={challengeContent.nav[1].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[1].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToEnvironment} className="challengeicons">
-              <img src={challengeContent.nav[2].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[2].title}</h5>
-            </figure>
-          </Col>
-          <Col xs={10} sm={10} md={6}>
-            <figure onClick={scrollToHousing} className="challengeicons">
-              <img src={challengeContent.nav[3].img}/>
-              <h5 className="challenge-icon-caption">{challengeContent.nav[3].title}</h5>
-            </figure>
-          </Col>
+            <Col xs={10} sm={10} md={6}>
+              {/* eslint-disable-next-line */}
+              <figure onClick={scrollToMobility} className="challengeicons">
+                <img src={challengeContent.nav[0].img} alt="challenge-content0" />
+                <h5 className="challenge-icon-caption">
+                  {challengeContent.nav[0].title}
+                </h5>
+              </figure>
+            </Col>
+            <Col xs={10} sm={10} md={6}>
+              {/* eslint-disable-next-line */}
+              <figure onClick={scrollToHealth} className="challengeicons">
+                <img src={challengeContent.nav[1].img} alt="challenge-content1" />
+                <h5 className="challenge-icon-caption">
+                  {challengeContent.nav[1].title}
+                </h5>
+              </figure>
+            </Col>
+            <Col xs={10} sm={10} md={6}>
+              {/* eslint-disable-next-line */}
+              <figure onClick={scrollToEnvironment} className="challengeicons">
+                <img src={challengeContent.nav[2].img} alt="challenge-content2" />
+                <h5 className="challenge-icon-caption">
+                  {challengeContent.nav[2].title}
+                </h5>
+              </figure>
+            </Col>
+            <Col xs={10} sm={10} md={6}>
+              {/* eslint-disable-next-line */}
+              <figure onClick={scrollToHousing} className="challengeicons">
+                <img src={challengeContent.nav[3].img} alt="challenge-content3" />
+                <h5 className="challenge-icon-caption">
+                  {challengeContent.nav[3].title}
+                </h5>
+              </figure>
+            </Col>
           </Row>
-
         </div>
 
         <div className="section">
           <h2 className="text">{challengeContent.title2}</h2>
-          <p dangerouslySetInnerHTML={{__html:challengeContent.content2}} />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
         </div>
 
         <div className="section">
-              <h4 className="text" ref={mobility}>
-                <span>MOBILITY: </span>How might we help people move freely in San
-                Diego?
-              </h4>
-          <Row type="flex" justify="center" >
+          <h4 className="text" ref={mobility}>
+            <span>MOBILITY: </span>
+            How might we help people move freely in San Diego?
+          </h4>
+          <Row type="flex" justify="center">
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setLastMile(true)}
-              onMouseLeave={() => setLastMile(false)}
+              onMouseEnter={(): void => setLastMile(true)}
+              onMouseLeave={(): void => setLastMile(false)}
             >
               <Card hoverable className="lastmile-card">
                 <div className="card-bg">
@@ -148,8 +167,8 @@ const ChallengeLayout = (props: any) => {
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setSafety(true)}
-              onMouseLeave={() => setSafety(false)}
+              onMouseEnter={(): void => setSafety(true)}
+              onMouseLeave={(): void => setSafety(false)}
             >
               <Card hoverable className="safety-card">
                 <div className="card-bg">
@@ -168,8 +187,8 @@ const ChallengeLayout = (props: any) => {
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setEquitable(true)}
-              onMouseLeave={() => setEquitable(false)}
+              onMouseEnter={(): void => setEquitable(true)}
+              onMouseLeave={(): void => setEquitable(false)}
             >
               <Card hoverable className="equitable-card">
                 <div className="card-bg">
@@ -180,17 +199,16 @@ const ChallengeLayout = (props: any) => {
                       Diego?
                     </p>
                   )}
-                  {!equitable && <h2 className="card-text">Safe Roadways</h2>}
+                  {!equitable && <h2 className="card-text">Equitable Access</h2>}
                 </div>
               </Card>
             </Col>
 
-
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setAutonomous(true)}
-              onMouseLeave={() => setAutonomous(false)}
+              onMouseEnter={(): void => setAutonomous(true)}
+              onMouseLeave={(): void => setAutonomous(false)}
             >
               <Card hoverable className="autonomous-card">
                 <div className="card-bg">
@@ -211,18 +229,16 @@ const ChallengeLayout = (props: any) => {
         </div>
         {/* Health */}
         <div className="challenge">
-
-              <h4 className="text" ref={health}>
-                <span>HEALTH: </span>How might we help all San Diegans live healthy
-                and active lives?
-              </h4>
+          <h4 className="text" ref={health}>
+            <span>HEALTH: </span>
+            How might we help all San Diegans live healthy and active lives?
+          </h4>
           <Row type="flex" justify="center">
-
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setSenior(true)}
-              onMouseLeave={() => setSenior(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setSenior(true)}
+              onMouseLeave={(): void => setSenior(false)}
             >
               <Card hoverable className="senior-card">
                 <div className="card-bg">
@@ -239,10 +255,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setWellBeing(true)}
-              onMouseLeave={() => setWellBeing(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setWellBeing(true)}
+              onMouseLeave={(): void => setWellBeing(false)}
             >
               <Card hoverable className="wellbeing-card">
                 <div className="card-bg">
@@ -261,10 +277,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setDataAgency(true)}
-              onMouseLeave={() => setDataAgency(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setDataAgency(true)}
+              onMouseLeave={(): void => setDataAgency(false)}
             >
               <Card hoverable className="dataAgency-card">
                 <div className="card-bg">
@@ -283,10 +299,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setFoodInsecurity(true)}
-              onMouseLeave={() => setFoodInsecurity(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setFoodInsecurity(true)}
+              onMouseLeave={(): void => setFoodInsecurity(false)}
             >
               <Card hoverable className="foodInsecurity-card">
                 <div className="card-bg">
@@ -302,21 +318,21 @@ const ChallengeLayout = (props: any) => {
                 </div>
               </Card>
             </Col>
-
           </Row>
         </div>
         {/* Environment */}
         <div className="challenge">
-            <h4 className="text" ref={environment}>
-                <span>ENVIRONMENT: </span>How might we prepare San Diego for natural
-                and human-influenced environmental challenges?
-              </h4>
+          <h4 className="text" ref={environment}>
+            <span>ENVIRONMENT: </span>
+            How might we prepare San Diego for natural and human-influenced
+            environmental challenges?
+          </h4>
           <Row type="flex" justify="center">
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setEducation(true)}
-              onMouseLeave={() => setEducation(false)}
+              onMouseEnter={(): void => setEducation(true)}
+              onMouseLeave={(): void => setEducation(false)}
             >
               <Card hoverable className="education-card">
                 <div className="card-bg">
@@ -334,10 +350,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setWaste(true)}
-              onMouseLeave={() => setWaste(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setWaste(true)}
+              onMouseLeave={(): void => setWaste(false)}
             >
               <Card hoverable className="waste-card">
                 <div className="card-bg">
@@ -355,8 +371,8 @@ const ChallengeLayout = (props: any) => {
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setGrid(true)}
-              onMouseLeave={() => setGrid(false)}
+              onMouseEnter={(): void => setGrid(true)}
+              onMouseLeave={(): void => setGrid(false)}
             >
               <Card hoverable className="grid-card">
                 <div className="card-bg">
@@ -375,8 +391,8 @@ const ChallengeLayout = (props: any) => {
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setClimateInfra(true)}
-              onMouseLeave={() => setClimateInfra(false)}
+              onMouseEnter={(): void => setClimateInfra(true)}
+              onMouseLeave={(): void => setClimateInfra(false)}
             >
               <Card hoverable className="climateInfra-card">
                 <div className="card-bg">
@@ -392,24 +408,21 @@ const ChallengeLayout = (props: any) => {
                 </div>
               </Card>
             </Col>
-
           </Row>
         </div>
 
         {/* Housing */}
         <div className="challenge">
-
-              <h4 className="text" ref={housing}>
-                <span>HOUSING: </span>How might we reimagine housing to meet the needs
-                of all San Diegans?
-              </h4>
+          <h4 className="text" ref={housing}>
+            <span>HOUSING: </span>
+            How might we reimagine housing to meet the needs of all San Diegans?
+          </h4>
           <Row type="flex" justify="center">
-
             <Col
               xs={24}
               lg={12}
-              onMouseEnter={() => setMixuse(true)}
-              onMouseLeave={() => setMixuse(false)}
+              onMouseEnter={(): void => setMixuse(true)}
+              onMouseLeave={(): void => setMixuse(false)}
             >
               <Card hoverable className="mixuse-card">
                 <div className="card-bg">
@@ -430,10 +443,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setResilient(true)}
-              onMouseLeave={() => setResilient(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setResilient(true)}
+              onMouseLeave={(): void => setResilient(false)}
             >
               <Card hoverable className="resilient-card">
                 <div className="card-bg">
@@ -451,10 +464,10 @@ const ChallengeLayout = (props: any) => {
 
             {/* TODO: Issue with background image not covering entire page */}
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setHomelessness(true)}
-              onMouseLeave={() => setHomelessness(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setHomelessness(true)}
+              onMouseLeave={(): void => setHomelessness(false)}
             >
               <Card hoverable className="homelessness-card">
                 <div className="card-bg">
@@ -471,10 +484,10 @@ const ChallengeLayout = (props: any) => {
             </Col>
 
             <Col
-            xs={24}
-            lg={12}
-              onMouseEnter={() => setIot(true)}
-              onMouseLeave={() => setIot(false)}
+              xs={24}
+              lg={12}
+              onMouseEnter={(): void => setIot(true)}
+              onMouseLeave={(): void => setIot(false)}
             >
               <Card hoverable className="iot-card">
                 <div className="card-bg">
@@ -491,14 +504,12 @@ const ChallengeLayout = (props: any) => {
                 </div>
               </Card>
             </Col>
-
           </Row>
         </div>
-
-
       </div>
-      <br /><br />
-      <Footer/>
+      <br />
+      <br />
+      <Footer />
     </div>
   );
 };

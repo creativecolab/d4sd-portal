@@ -1,28 +1,72 @@
-@import "../../../styles/vars.less";
-@import "../../../styles/mixins.less";
-@import "../../../styles/fonts.less";
-@import "../../../styles/containers.less";
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+@import '../../../styles/containers.less';
 
-  .landing {
-    .homebackground("home_landing");
+// .landing {
+//   .homebackground('home_landing');
+// }
+
+.landing {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Home {
+  .d4sdsubtitle {
+    margin-top: @margin-base;
   }
+  .d4sdmaintitle {
+    margin-top: @margin-base * 2;
+  }
+  .d4sd-content {
+    margin-top: @margin-base * 2;
+  }
+}
 
-  // Section 3
-  .challenges {
-
-    .challenges-carousel {
-      // text-align: center;
-      height: 90vh;
-      background: #244c7e;
-      overflow: hidden;
+// Section 3
+.challenges {
+  .challenges-carousel {
+    // text-align: center;
+    @media screen and (min-width: 320px) {
+      min-height: 820px;
     }
-    .challenge-item {
-      background: #eff8ff;
-      .challenge-header {
-        padding-top: 50px;
-        text-align: center;
+    @media screen and (min-width: 415px) {
+      min-height: 840px;
+    }
+    @media screen and (min-width: 1275px) {
+      min-height: 950px;
+    }
+
+    height: 90vh;
+    background: #244c7e;
+    overflow: hidden;
+  }
+  .challenge-item {
+    background: #eff8ff;
+    .challenge-card {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center bottom;
+      height: 80vh;
+
+      @media screen and (min-width: 320px) {
+        min-height: 730px;
+      }
+      @media screen and (min-width: 415px) {
+        min-height: 750px;
+      }
+      @media screen and (min-width: 1275px) {
+        min-height: 850px;
       }
     }
+    .challenge-header {
+      padding-top: 50px;
+      text-align: center;
+    }
+  }
 
   .ant-carousel .slick-dots li.slick-active button {
     border-radius: 50%;
@@ -39,5 +83,4 @@
   .ant-carousel .slick-dots {
     height: 5vh;
   }
-
 }

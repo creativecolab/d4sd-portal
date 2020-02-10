@@ -1,25 +1,30 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useForm from 'react-hook-form';
 import './style.less';
 import {
-  Card, Input, Button, Col, Row, Form, message,
+  Input, Button, Col, Row, Form, message, Radio
 } from '@d4sd/components';
-import GoogleLogin from 'react-google-login';
-import { OmitProps } from 'antd/lib/transfer/renderListBody';
-import { withRouter } from 'react-router-dom';
-import { Redirect } from 'react-router';
+// import GoogleLogin from 'react-google-login';
+// import { OmitProps } from 'antd/lib/transfer/renderListBody';
+import { withRouter, Link } from 'react-router-dom';
+// import { Redirect } from 'react-router';
 import firebase from '../../actions/firebase';
 
 const emailRegExp = new RegExp(
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
-const SignupCard = (props: any) => {
+const passRegExp = new RegExp(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})$/);
+
+// eslint-disable-next-line
+const SignupCard = (props: any): JSX.Element => {
+  const { setSignupStep } = props;
   const {
-    register, handleSubmit, setValue, errors,
+    register, handleSubmit, setValue, errors
   } = useForm();
+  // eslint-disable-next-line
   const [signedUp, setSignedup] = useState(false);
-  const validation = (data: any) => {
+  const validation = (data: Record<string, string>): boolean => {
     /* Checks after attempting to submit */
     if (!data.firstName) {
       message.error('Missing first name');
@@ -39,25 +44,28 @@ const SignupCard = (props: any) => {
     if (!data.password) {
       message.error('Missing password');
       return false;
-    } if (data.password.length < 6) {
-      message.error('Password must be 6 charaters long');
+    } if (!passRegExp.test(data.password)) {
+      message.error('Password must be 6 charaters, one uppercase, and one lowercase character');
       return false;
     }
     return true;
   };
 
   // Register user into firestore
-  async function signup(data: any): Promise<any> {
+  async function signup(data: Record<string, string>): Promise<void> {
+    // eslint-disable-next-line
     console.log('data: ', data);
     if (validation(data)) {
       firebase.register(data.firstName, data.lastName, data.email, data.password)
-        .then((result: any) => {
+        .then((result: unknown) => {
+          // eslint-disable-next-line
           console.log('sign-up success: ', result);
           setSignedup(true);
-          props.setSignupStep('email');
+          setSignupStep('verifyEmailPage');
         })
-        .catch((result: any) => {
-          console.log('sign-up failure: ', result);
+        .catch((error: string) => {
+          // eslint-disable-next-line
+          console.log('sign-up failure: ', error);
           message.error('Email account already exists.');
           setSignedup(false);
         });
@@ -65,46 +73,45 @@ const SignupCard = (props: any) => {
   }
 
   // TODO: Add a registerWithGoogle async function in firebase.ts
-  async function signupWithGoogle(data: any) {
-    const {
-      email, familyName, givenName, imageUrl,
-    } = data.profileObj;
-    const firstName = givenName;
-    const lastName = familyName;
-    console.log({
-      firstName, lastName, email, imageUrl,
-    });
-    props.history.replace('/');
-    setSignedup(true);
-  }
+  // async function signupWithGoogle(data: any) {
+  //   const {
+  //     email, familyName, givenName, imageUrl
+  //   } = data.profileObj;
+  //   const firstName = givenName;
+  //   const lastName = familyName;
+  //   console.log({
+  //     firstName, lastName, email, imageUrl
+  //   });
+  //   history.replace('/');
+  //   setSignedup(true);
+  // }
 
   // handle changes and store to state with react hook forms
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name } = e.target;
     setValue(name, e.target.value);
+    // eslint-disable-next-line
     console.log(errors);
   };
 
   // register inputs
   useEffect(() => {
-    register({ name: "email" });
-    register({ name: "password" });
-    register({ name: "firstName" });
-    register({ name: "lastName" });
+    register({ name: 'email' });
+    register({ name: 'password' });
+    register({ name: 'firstName' });
+    register({ name: 'lastName' });
+  // eslint-disable-next-line
   }, []);
+
   return (
     <div className="card-signup-wrapper">
       <div className="card-signup">
-        <Button.Google className="google-btn" icon="google" block>
-          CONTINUE WITH GOOGLE
-        </Button.Google>
-        <Button.Facebook className="fb-btn" icon="facebook" block>
-          CONTINUE WITH FACEBOOK
-        </Button.Facebook>
-        <p className="or-txt">OR</p>
         <Form onSubmit={handleSubmit(signup)}>
           <Input.Group className="input-group">
-            <Row gutter={30} className="row-names">
+            <Row
+              gutter={16}
+              className="row-names"
+            >
               <Col span={12}>
                 <Input
                   placeholder="First Name"
@@ -124,22 +131,34 @@ const SignupCard = (props: any) => {
               className="input-email"
               placeholder="Email"
               name="email"
+              type="email"
               onChange={handleChange}
             />
             <Input.Password
-              className="input-email"
+              className="input-password"
               placeholder="Password"
               name="password"
               onChange={handleChange}
             />
           </Input.Group>
-          <Row type="flex" justify="center">
-            <a href="/signup/role" className="continue-btn">
+          <Radio className="terms">
+          I agree to the
+            {' '}
+            <Link to="/">Terms of Service</Link>
+          </Radio>
+          <Row
+            type="flex"
+            justify="center"
+          >
+            <a
+              href="/signup/role"
+              className="continue-btn"
+            >
               <Button
                 className="d4sd-btn"
                 type="primary"
                 htmlType="submit"
-                onClick={() => props.setSignupStep("role")}
+                onClick={(): void => setSignupStep('verifyEmailPage')}
               >
                 SIGN UP
               </Button>
@@ -148,7 +167,15 @@ const SignupCard = (props: any) => {
         </Form>
       </div>
       <p id="bottom-txt">
-        Already have an account? <a id="login-link">Log in</a>
+        Already have an account?
+        {' '}
+        {/* TODO */}
+        {/* eslint-disable-next-line */}
+        <Link
+          to="login"
+        >
+Log in
+        </Link>
       </p>
     </div>
   );

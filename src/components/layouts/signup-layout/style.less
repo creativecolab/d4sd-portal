@@ -1,8 +1,14 @@
-@import "../../../styles/vars.less";
-@import "../../../styles/mixins.less";
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
 
 .SignupLayout {
-
+  .verifyEmailText {
+    color: @d4sd-color-two;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: @margin-base * 4;
+  }
   /* Fix bug where ant row overflows container */
   .ant-row-flex {
     margin-right: 0 !important;
@@ -14,14 +20,13 @@
     font-size: 2.8rem;
     color: @subheading-color;
   }
-  .heading {
+  .header {
     height: @header-height;
-    background-color: #E4F2FF; // TODO: DESIGN TEAM?
+    background-color: #e4f2ff; // TODO: DESIGN TEAM?
     padding-top: @margin-base-2;
-    .heading-message {
-
+    .header-team-title {
+      color: @d4sd-color;
     }
-
   }
   .card-container {
     // center
@@ -38,12 +43,11 @@
       margin-left: @margin-base * 4;
     }
 
-    .joint-challenge{
+    .joint-challenge {
       margin-top: @margin-base-1;
     }
-    .workspace-btn{
+    .workspace-btn {
       margin-top: @margin-base-1;
-
     }
   }
 }

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 
@@ -11,7 +13,6 @@ class Events extends Component {
     return (
       <div id="about">
         <Navbar />
-
         <br />
         <br />
         <br />
