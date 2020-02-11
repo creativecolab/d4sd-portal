@@ -147,8 +147,8 @@ export const homeContent = {
 export const summitContent = {
   subtitle1: "REGISTER HERE for the",
   subtitle2: "Design for San Diego Summit!",
-  title1: 'Urban Discovery Academy',
-  title2: 'May 20, 2020',
+  title1: 'San Diego Central Library',
+  title2: 'May 12, 2020',
   title3: "4pm - 9pm",
   image_col: summit_pics,
   image1: summit_1,
