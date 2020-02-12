@@ -41,10 +41,10 @@ import feedback from './img/involve_feedback.svg';
 // import activate from "./img/timeline_activate.svg";
 
 import summit_pics from './img/summit_pics.png';
-import summit_1 from './img/summit_1.png';
-import summit_2 from './img/summit_2.png';
-import summit_3 from './img/summit_3.png';
-import summit_4 from './img/summit_4.png';
+import summit_1 from './img/summit_1.jpg';
+import summit_2 from './img/summit_2.jpg';
+import summit_3 from './img/summit_3.jpg';
+import summit_4 from './img/summit_4.jpg';
 import d4sd_horizontal from './img/d4sd_horizontal.svg';
 
 import challenge_mobility from './img/challenge_mobility.svg';
