@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
 } from '@d4sd/components';
 
 import './style.less';
-
 import { SubMenu } from 'rc-menu';
+import UserContext from '../../UserContext';
 import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
+  const userHooks = useContext(UserContext);
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
   // eslint-disable-next-line
@@ -147,6 +148,14 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
               <span>Sponsors</span>
             </Menu.Item>
+            {userHooks.user.loggedIn
+              && (
+                <Menu.Item className="menu-item">
+                  <div className="profile-picture">
+                    <span className="profile-pic-letter">{userHooks.user.username[0].toUpperCase()}</span>
+                  </div>
+                </Menu.Item>
+              )}
             {/**
             <Menu.Item
               className="menu-item" key="workspace"
