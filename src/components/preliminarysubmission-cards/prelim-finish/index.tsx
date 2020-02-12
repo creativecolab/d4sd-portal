@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import {
   Button, Row, Icon
 } from '@d4sd/components';
-import CopyURL from "../../copy-url";
+import CopyURL from '../../copy-url';
 import './style.less';
 
 interface PrelimFinishCardIF {

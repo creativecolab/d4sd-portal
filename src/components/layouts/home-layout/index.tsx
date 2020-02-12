@@ -91,9 +91,7 @@ const HomeLayout = (): JSX.Element => {
             {/* <Button className="register" type="primary" size="default">
               REGISTER FOR THE SUMMIT
             </Button> */}
-            <Button className="learn" size="default">
-              LEARN MORE
-            </Button>
+            <Button className="learn" size="default" onClick={scrollToRef}>LEARN MORE</Button>
           </div>
         </div>
       </div>
