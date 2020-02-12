@@ -40,6 +40,13 @@ import feedback from './img/involve_feedback.svg';
 // import pitch from "./img/timeline_pitch.svg";
 // import activate from "./img/timeline_activate.svg";
 
+import summit_pics from './img/summit_pics.png';
+import summit_1 from './img/summit_1.jpg';
+import summit_2 from './img/summit_2.jpg';
+import summit_3 from './img/summit_3.jpg';
+import summit_4 from './img/summit_4.jpg';
+import d4sd_horizontal from './img/d4sd_horizontal.svg';
+
 import challenge_mobility from './img/challenge_mobility.svg';
 import challenge_health from './img/challenge_health.svg';
 import challenge_climate from './img/challenge_climate.svg';
@@ -134,6 +141,23 @@ export const homeContent = {
   content4:
     'The D4SD community includes talented and energetic people from across our region.  Through the online and in-person events, we help to foster collaboration and interaction among innovators, civic leaders, industry experts, and other community members.',
   logos: [logo1, logo2, logo3, logo4, logo5, logo6, logo7]
+};
+
+/** ***********************************Summit content************************************** */
+export const summitContent = {
+  subtitle1: "REGISTER HERE for the",
+  subtitle2: "Design for San Diego Summit!",
+  title1: 'San Diego Central Library',
+  title2: '330 Park Blvd, San Diego, CA 92101',
+  title3: 'May 12, 2020',
+  title4: "4pm - 8pm",
+  image_col: summit_pics,
+  image1: summit_1,
+  image2: summit_2,
+  image3: summit_3,
+  image4: summit_4,
+  logo: d4sd_horizontal,
+ 
 };
 
 /** ***********************************About content************************************** */
