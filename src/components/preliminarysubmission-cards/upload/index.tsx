@@ -35,8 +35,17 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
   const onSubmit = (): void => {
     saveWork();
     // text input is
-    // const problemStatement = localStorage.getItem('problemstatement-d4sd-prelim-submit');
+    const problemStatement = localStorage.getItem('problemstatement-d4sd-prelim-submit');
     // fileUploaded is the file uploaded
+    console.log(fileUploaded);
+    console.log(problemStatement);
+    if (!fileUploaded.file) {
+      message.error("No file uploaded!");
+      return;
+    }
+
+    // TODO: Add submit stage through firebase and wait for response
+
     setSubmitStep('done');
   };
 
@@ -52,7 +61,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
 
   /* eslint-disable */
   const handleFileChange = (info: any): void => {
-    console.log(info);
+
     if (info.fileList.length > 1) {
       // @ts-ignore
       uploadInput.current.state.fileList.shift();
@@ -61,7 +70,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
       setLoading('loading');
     }
     if (info.file.status !== 'uploading') {
-      console.log(info.file, info.fileList);
+
     }
     if (info.file.status === 'done') {
       message.success(`${info.file.name} file uploaded successfully`);
@@ -75,7 +84,7 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
     }
   };
   const dummyRequest = ({ file, onSuccess }: any) => {
-    console.log(file, onSuccess);
+
     setTimeout(() => {
       onSuccess('ok');
     }, 0);
@@ -107,8 +116,17 @@ const UploadCard = (props: UploadCardIF): JSX.Element => {
             <p className="filename">{fileUploaded.file && fileUploaded.file.name}</p>
             <div className="file-btns">
               {/* eslint-disable-next-line */}
-              <Button className="file-btn" type="primary" onClick={(): void => { const win = window.open(viewURL, '_blank'); win!.focus(); }}>VIEW FILE</Button>
-              <Button className="file-btn" type="secondary-outline" onClick={(): void => { setFileList([]); setLoading('plus'); setUploadDisabled(false); }}>REMOVE</Button>
+              <Button
+                className="file-btn"
+                type="primary"
+                onClick={(e: Event): void => {
+                  e.preventDefault();
+                  const win = window.open(viewURL, '_blank'); win!.focus();
+                }}
+              >
+                VIEW FILE
+              </Button>
+              <Button className="file-btn" type="secondary-outline" onClick={(): void => { setFileList([]); setFileUploaded({}); setLoading('plus'); setUploadDisabled(false); }}>REMOVE</Button>
             </div>
           </div>
         )}
