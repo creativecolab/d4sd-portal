@@ -25,7 +25,6 @@ import CommunityFeedbackLayout from './components/layouts/community-feedback-lay
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
 
 import "./index.less";
-import "./styles/reset.css";
 import FeedbackProviderLayout from "./components/layouts/feedback-provider-layout";
 
 
