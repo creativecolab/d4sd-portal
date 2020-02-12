@@ -46,7 +46,7 @@ class Firebase {
       // eslint-disable-next-line
       .then((data: any) => {
         const actionCodeSettings = {
-          url: 'https://d4sd-portal.netlify.com/',
+          url: 'http://staging-d4sd.ucsd.edu:8080/',
           handleCodeInApp: true
         };
 

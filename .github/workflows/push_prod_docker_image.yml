@@ -1,0 +1,30 @@
+name: Publish Docker Production Image
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: udayantandon/d4sd-prod
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          buildargs: BUILD_TYPE=prod
+          tags: "latest"
+      - name: Run Image on Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST_PROD }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker stop d4sd-prod
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker rm d4sd-prod
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker image rm udayantandon/d4sd-prod:latest
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker pull udayantandon/d4sd-prod:latest
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker run -d -p 3000:80 --name d4sd-prod udayantandon/d4sd-prod:latest
