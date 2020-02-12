@@ -41,19 +41,19 @@ const App = (): JSX.Element => (
             <Route exact path="/" component={HomePage} />
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/getinvolved" component={InvolvedPage} />
-            <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
+            // <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/sponsors" component={SponsorsPage} />
             <Route exact path="/faq" component={FAQPage} />
             <Route exact path="/workspace" component={WorkspacePage} />
-            <Route exact path="/workspace/community-feedback" component={CommunityFeedbackLayout} />
+            // <Route exact path="/workspace/community-feedback" component={CommunityFeedbackLayout} />
             <Route exact path="/resources" component={ResourcesPage} />
             <Route exact path="/resources/process" component={ProcessPage} />
             <Route exact path="/resources/stakeholder" component={StakeholderPage} />
 
-            <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
-            <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
+            // <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
+            // <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
