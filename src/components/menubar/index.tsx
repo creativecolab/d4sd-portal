@@ -87,9 +87,9 @@ const Menubar = (): JSX.Element => {
                 </span>
               )}
             >
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
+              {/* <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
                 <span>Home</span>
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/getinvolved')}>
                 <span>Get Involved</span>
               </Menu.Item>
@@ -126,9 +126,9 @@ const Menubar = (): JSX.Element => {
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
-            <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
+            {/* <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
               <span>Home</span>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item className="menu-item" key="getInvolved" onClick={(): void => history.push('/getinvolved')}>
               <span>Get Involved</span>
             </Menu.Item>
