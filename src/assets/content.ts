@@ -758,3 +758,37 @@ export const sponsorsContent = {
     img4: sponsors_nsf,
 
 }
+
+export const attendContent = {
+  image: 'attend_header',
+  title: 'Attend',
+  content: 'The D4SD Summit provides a platform for innovators and experts to come together and tackle San Diego’s problems. Attend the summit to make an impact on making our city a more sustainable city.',
+  title_1_1: 'DESIGN FOR SAN DIEGO',
+  title_1_2: '2020 SUMMIT',
+  subtitle_1: 'San Diego Central Library | May 12, 2020',
+  content_1_1: 'The 2020 Design for San Diego Summit will be a platform for all San Diegans to come together and tackle San Diego’s biggest issues surrounding mobility, health, environment, and housing.',
+  content_1_2: 'Attend the summit to get inspired by innovative, human-centered solutions that make San Diego a more sustainable city.',
+  title_2: 'Event Details',
+  details: [
+    {
+      label: 'When?',
+      detail: 'May 12, 2020, 4:00 PM to 8:00 PM'
+    },
+    {
+      label: 'Where?',
+      detail: 'San Diego Central library, 330 Park Blvd, San Diego, CA'
+    },
+    {
+      label: 'Who?',
+      detail: 'Whether you’re an innovator or expert, anyone is welcome to attend the D4SD 2020 Summit.'
+    },
+    {
+      label: 'What?',
+      detail: 'A city’s inhabitants coming together to tackle its biggest challenges'
+    },
+    {
+      label: 'How much is it?',
+      detail: 'We will be charging a fee of $20 to cover the amount for food, speakers, and the space. However, if you participate in the challenge as an innovator and submit a solution proposal, the cost will be waived.'
+    }
+  ]
+}
