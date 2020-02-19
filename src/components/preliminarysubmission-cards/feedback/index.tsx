@@ -7,7 +7,7 @@ import './style.less';
 import DOMPurify from 'dompurify';
 
 import TextArea from 'antd/lib/input/TextArea';
-import { Document, Page } from 'react-pdf';
+
 import SubmissionContext from '../../../contexts/SubmissionContext';
 
 // // Create styles
@@ -89,11 +89,7 @@ Project:
                 <b>2. Propose Initial Concepts</b>
               </p>
               <div className="pdf-display">
-                <Document
-                  file={submission?.solutionPDF}
-                >
-                  <Page pageNumber={1} />
-                </Document>
+
               </div>
             </Row>
           </Col>
