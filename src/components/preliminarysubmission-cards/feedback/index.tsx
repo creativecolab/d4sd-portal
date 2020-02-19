@@ -1,30 +1,46 @@
-import React, { useEffect } from "react";
-import useForm from "react-hook-form";
-import { Form, Row, Col } from "@d4sd/components";
-import "./style.less";
-import DOMPurify from "dompurify";
-import { Input } from "antd";
-import TextArea from "antd/lib/input/TextArea";
+import React, { useContext, useEffect } from 'react';
+import useForm from 'react-hook-form';
+import {
+  Form, Row, Col, Button
+} from '@d4sd/components';
+import './style.less';
+import DOMPurify from 'dompurify';
+
+import TextArea from 'antd/lib/input/TextArea';
+
+import SubmissionContext from '../../../contexts/SubmissionContext';
+
+// // Create styles
+// const styles = StyleSheet.create({
+//   page: {
+//     flexDirection: 'row',
+//     backgroundColor: '#FFFFFF'
+//   },
+//   section: {
+//     margin: 10,
+//     padding: 10,
+//     flexGrow: 1
+//   }
+// });
 
 interface FeedbackCardIF {
   setSubmitStep(step: string): void;
 }
 
 const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
+  const { submission, setSubmission } = useContext(SubmissionContext);
   const { setSubmitStep } = props;
+
   const { register, handleSubmit, setValue } = useForm();
-  const projectName = localStorage.getItem("teamName-d4sd-prelim-submit");
-  const problemStatement = localStorage.getItem(
-    "problemstatement-d4sd-prelim-submit"
-  );
+  const projectName = submission?.projectName;
+  const problemStatement = submission?.problemDescription;
 
-  const prelimQuestion1 = localStorage.getItem("prelim-submission-question1") || "";
-  const prelimQuestion2 = localStorage.getItem("prelim-submission-question2") || "";
-  const prelimQuestion3 = localStorage.getItem("prelim-submission-question3") || "";
+  const prelimQuestion1 = localStorage.getItem('prelim-submission-question1') || '';
+  const prelimQuestion2 = localStorage.getItem('prelim-submission-question2') || '';
+  const prelimQuestion3 = localStorage.getItem('prelim-submission-question3') || '';
+  const questionList = '<p>Here’s your opportunity to get input on your ideas. Your team can pose up to three questions to ask the community about your proposed solutions. Asking questions is optional but can really help facilitate feedback exchange. Advice for writing effective questions:</p>';
 
-  const questionList =
-    "<p>Here’s your opportunity to get input on your ideas. Your team can pose up to three questions to ask the community about your proposed solutions. Asking questions is optional but can really help facilitate feedback exchange. Advice for writing effective questions:</p>";
-
+  const expertiseRequired = localStorage.getItem('prelim-submission-expertise') || '';
   /* eslint-disable */
   const onSubmit = (data: any): void => {
     console.log(data);
@@ -35,7 +51,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
 
   // register inputs
   useEffect(() => {
-    register({ name: "stuff" });
+    register({ name: 'stuff' });
     // eslint-disable-next-line
   }, []);
 
@@ -44,7 +60,7 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
     console.log(e.target.name);
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
-    //setSubmitStep("");
+    // setSubmitStep("");
   };
 
   return (
@@ -53,7 +69,10 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
         <Row type="flex" justify="center">
           <Col xs={{ span: 20 }} sm={{ span: 11 }}>
             <Row>
-              <h4>Project: {projectName}</h4>
+              <h4>
+Project:
+                {projectName}
+              </h4>
               <p>
                 <b>Team members: </b>
               </p>
@@ -63,16 +82,18 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
               <p>
                 <b>1. Problem Statement</b>
               </p>
-              <div>
+              <div className="problem-statement">
                 <p>{problemStatement}</p>
               </div>
               <p>
                 <b>2. Propose Initial Concepts</b>
-                <div>Show PDF</div>
               </p>
+              <div className="pdf-display">
+
+              </div>
             </Row>
           </Col>
-          <Col sm={{ span: 2 }}></Col>
+          <Col sm={{ span: 2 }} />
 
           <Col xs={{ span: 20 }} sm={{ span: 11 }}>
             <h4>Question List</h4>
@@ -80,11 +101,12 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(questionList)
               }}
-            ></div>
+            />
             <ul>
               <li>
                 <p>
-                  <b>Specific: </b>Call attention to specific aspects of your
+                  <b>Specific: </b>
+Call attention to specific aspects of your
                   proposals.
                 </p>
               </li>
@@ -110,21 +132,72 @@ const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
             </ul>
 
             <Form layout="vertical" onSubmit={handleSubmit(onSubmit)}>
-              <Input.Group>
+              <div>
                 <h4 className="questions">Question 1</h4>
-                <TextArea autoSize={{minRows: 3, maxRows: 5}} onChange={handleChange} name="prelim-submission-question1">
-                </TextArea>
-                <br />
+                <TextArea
+                  autoSize={{ minRows: 4, maxRows: 5 }}
+                  onChange={handleChange}
+                  name="prelim-submission-question1"
+                  value={prelimQuestion2}
+                />
+              </div>
+              <br />
+              <div>
                 <h4 className="questions">Question 2</h4>
-                <TextArea autoSize={{minRows: 3, maxRows: 5}} onChange={handleChange} name="prelim-submission-question2" value={prelimQuestion2}>
-                </TextArea>
-
+                <TextArea
+                  autoSize={{ minRows: 4, maxRows: 5 }}
+                  onChange={handleChange}
+                  name="prelim-submission-question2"
+                  value={prelimQuestion2}
+                />
+              </div>
+              <br />
+              <div>
                 <h4 className="questions">Question 3</h4>
-                <TextArea autoSize={{minRows: 3, maxRows: 5}} onChange={handleChange} name="prelim-submission-question3" value={prelimQuestion3}>
-                </TextArea>
-              </Input.Group>
+                <TextArea
+                  autoSize={{ minRows: 4, maxRows: 5 }}
+                  onChange={handleChange}
+                  name="prelim-submission-question3"
+                  value={prelimQuestion3}
+                />
+              </div>
+              <br />
+              <div>
+                <p>
+                  D4SD will try to recruit feedback providers from our community
+                  network. What areas of expertise are you looking for?
+                </p>
+                <TextArea
+                  autoSize={{ minRows: 4, maxRows: 5 }}
+                  onChange={handleChange}
+                  name="prelim-submission-expertise"
+                  value={expertiseRequired}
+                />
+              </div>
             </Form>
           </Col>
+        </Row>
+
+        <Row type="flex" justify="center" className="bottom-btns">
+          <Button
+            type="primary"
+            onClick={(): void => {
+              setSubmitStep('upload');
+            }}
+          >
+            BACK
+          </Button>
+          <Button type="primary-outline" size="large">
+            SAVE WORK
+          </Button>
+          <Button
+            type="primary"
+            onClick={(): void => {
+              setSubmitStep('done');
+            }}
+          >
+            NEXT
+          </Button>
         </Row>
       </div>
     </div>

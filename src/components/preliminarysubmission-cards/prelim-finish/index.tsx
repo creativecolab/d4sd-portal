@@ -1,21 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
-  Button, Row, Icon
+  Button, Row, Icon, message
 } from '@d4sd/components';
 import CopyURL from "../../copy-url";
 import './style.less';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import firebase from '../../../actions/firebase';
+import SubmissionContext from '../../../contexts/SubmissionContext';
 
 interface PrelimFinishCardIF {
   setSubmitStep(step: string): void;
 }
 
 const PrelimFinishCard = (props: PrelimFinishCardIF): JSX.Element => {
+  const user = useAuthState(firebase.auth)[0];
+  const { submission, setSubmission } = useContext(SubmissionContext);
   // eslint-disable-next-line
   const { setSubmitStep } = props;
   // eslint-disable-next-line
   const [linkToFeedback, setLinkToFeedback] = useState('LINK GOES HERE');
 
+  /* eslint-disable */
+  const setURL = (): void => {
+    const inputField = document.getElementById('copyLink');
+    if (submission && user) {
+      submission.owner = user.uid;
+      setSubmission(submission);
+      firebase.saveSubmission(submission)
+      .then(() => {
+        message.success('Submission submitted successfully');
+        setLinkToFeedback(`${process.env.REACT_APP_BASE_URL}/feedback?projectId=${user.uid}`);
+        // @ts-ignore
+        inputField.value = linkToFeedback;
+      })
+      .catch(() => {
+        message.error('Failed to submit submission');
+      })
+    }
+  };
+
+  const copyURL = (): void => {
+    const copyText = document.getElementById('copyLink');
+    // @ts-ignore
+    copyText.select();
+    // @ts-ignore
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+  };
+  /* eslint-enable */
+
+  useEffect(() => {
+    setURL();
+  // eslint-disable-next-line
+  }, []);
   const history = useHistory();
 
   return (

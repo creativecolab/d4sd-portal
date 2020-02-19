@@ -1,13 +1,24 @@
 import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
-import './style.less';
-import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useHistory } from 'react-router-dom';
+
 import {
   Row, Input, Button, Form, message
 } from '@d4sd/components';
+import firebase from '../../actions/firebase';
+import './style.less';
 
 const LoginCard = (): JSX.Element => {
+  const user = useAuthState(firebase.auth)[0];
   const { register, handleSubmit, setValue } = useForm();
+  const history = useHistory();
+  useEffect(() => {
+    if (user) {
+      history.push('/workspace');
+    }
+  }, [user, history]);
+
   const onSubmit = (data: Record<string, string>): void => {
     if (!data.email) {
       message.error('Missing email');
@@ -16,9 +27,12 @@ const LoginCard = (): JSX.Element => {
     if (!data.password) {
       message.error('Missing password');
     }
-    // console.log(data);
-    // Add your axios stuff here
-    // data.email, data.password
+    firebase.login(data.email, data.password).then((success) => {
+      console.log('Logged in');
+      history.push('/workspace');
+    }).catch((err) => {
+      console.log('Error with firebase login');
+    });
   };
 
   // handle changes and store to state with react hook forms

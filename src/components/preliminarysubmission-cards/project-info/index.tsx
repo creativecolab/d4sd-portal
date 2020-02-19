@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import useForm from 'react-hook-form';
 import {
   Button, message, Row, Col, Input, Form
 } from '@d4sd/components';
 import './style.less';
+import SubmissionContext, { TeamMember } from '../../../contexts/SubmissionContext';
+
+const emailRegExp = new RegExp(
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+);
 
 interface ProjectInfoCardIF {
   setSubmitStep(step: string): void;
 }
 
 const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
+  const { submission, setSubmission } = useContext(SubmissionContext);
   const { setSubmitStep } = props;
   const { register, handleSubmit, setValue } = useForm();
   const [teamName, setTeamName] = useState<string>('');
   const [teammateNames, setTeammateNames] = useState<Array<string>>(['']);
   const [teammateEmails, setTeammateEmails] = useState<Array<string>>(['']);
 
-  const saveWork = (): void => {
-    localStorage.setItem('teamName-d4sd-prelim-submit', teamName);
-    localStorage.setItem('teammateNames-d4sd-prelim-submit', JSON.stringify(teammateNames));
-    localStorage.setItem('teammateEmails-d4sd-prelim-submit', JSON.stringify(teammateEmails));
-  };
-
   // eslint-disable-next-line
   const onSubmit = (data: any): void => {
-    saveWork();
     // eslint-disable-next-line
-    console.log(data);
+    console.log(teammateNames);
+    console.log(teammateEmails);
     if (teammateNames.length === 0) {
       message.error('Missing teammates names!');
       return;
@@ -35,31 +35,33 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
       message.error('Missing teammates emails!');
       return;
     }
-    for (let i = 0; i < teammateNames.length; i += 1) {
-      if (!data[`teammate${i}-name`]) {
-        message.error(`Missing name on row ${i + 1}`);
-        return;
-      }
+    if (teammateNames.length !== teammateEmails.length) {
+      message.error('Missing teammates details!');
+      return;
     }
     for (let i = 0; i < teammateEmails.length; i += 1) {
-      if (!data[`teammate${i}-email`]) {
-        message.error(`Missing email on row ${i + 1}`);
+      if (!emailRegExp.test(teammateEmails[i])) {
+        message.error(`Email in Row ${i + 1} is not formatted correctly`);
         return;
       }
     }
-
-    // Add your axios stuff here
-    // data.email, data.password
-
-    // store in localstroage metadata
-
-
+    if (submission) {
+      submission.projectName = teamName;
+      const teamMembers: Array<TeamMember> = [];
+      for (let i = 0; i < teammateNames.length; i += 1) {
+        teamMembers.push({ name: teammateNames[i], email: teammateEmails[i] });
+      }
+      submission.teamMembers = teamMembers;
+      setSubmission(submission);
+    }
+    console.log(submission);
     props.setSubmitStep('upload'); // run this after data is stored properly
   };
 
   const handleChangeTeamName = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
     setTeamName(e.target.value);
+    console.log(teamName);
   };
 
   const handleChangeTeammateName = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -112,42 +114,6 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
     setTeammateEmails(temp2);
   };
 
-  // register inputs
-  useEffect(() => {
-    const locteamname: string | null = localStorage.getItem('teamName-d4sd-prelim-submit');
-    if (locteamname) {
-      setTeamName(locteamname);
-    }
-    // retreive from localstorage if possible
-    const locemails: string | null = localStorage.getItem('teammateEmails-d4sd-prelim-submit');
-    let emails;
-    if (locemails) {
-      emails = JSON.parse(locemails);
-      setTeammateEmails(emails);
-    } else {
-      emails = [];
-    }
-    const locnames: string | null = localStorage.getItem('teammateNames-d4sd-prelim-submit');
-    let names;
-    if (locnames) {
-      names = JSON.parse(locnames);
-      setTeammateNames(names);
-    } else {
-      names = [];
-    }
-    for (let i = 0; i < names.length; i += 1) {
-      register({ name: `teammate${i}-name` });
-      register({ name: `teammate${i}-email` });
-      setValue(`teammate${i}-name`, names[i]);
-      setValue(`teammate${i}-email`, emails[i]);
-    }
-    if (names.length === 0) {
-      register({ name: 'teammate0-name' });
-      register({ name: 'teammate0-email' });
-    }
-  // eslint-disable-next-line
-  }, []);
-
   return (
     <div className="ProjectInfoCard">
       <div className="ProjectInfo-body">
@@ -159,7 +125,6 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
             <p>Please provide a unique name for your project (up to 50 characters)</p>
             <Input
               placeholder="Safe Roads for San Diego" name="name" onChange={handleChangeTeamName}
-              value={teamName}
               className="project-name-input"
             />
             <h4>2. Team member names and emails</h4>
@@ -198,7 +163,7 @@ const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
             <Button type="primary-outline" size="default" onClick={handleClickAddMember}>ADD A MEMBER</Button>
           </Row>
           <Row className="bottom-btns">
-            <Button className="bottom-btn" type="primary" onClick={(): void => { saveWork(); setSubmitStep('start'); }}>BACK</Button>
+            <Button className="bottom-btn" type="primary" onClick={(): void => { setSubmitStep('start'); }}>BACK</Button>
             <Button className="bottom-btn" type="primary" htmlType="submit">NEXT</Button>
           </Row>
         </Form>
