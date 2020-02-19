@@ -88,19 +88,24 @@ export const homeContent = {
   roles: [
     {
       image: innovator,
-      contents: 'Submit your Idea'
+      contents: 'Submit your Idea',
+      link: 'submit'
     },
     {
       image: educator,
-      contents: 'Attend the Summit'
+      contents: 'Attend the Summit',
+      link: 'summit'
+
     },
     {
       image: expert,
-      contents: 'Volunteer with D4SD'
+      contents: 'Volunteer with D4SD',
+      link: 'volunteer'
     },
     {
       image: sponsor,
-      contents: 'Sponsor the Challenge'
+      contents: 'Sponsor the Challenge',
+      link: 'sponsor'
     }
   ],
   challenges: [
@@ -218,14 +223,34 @@ export const aboutContent = {
 /** ***********************************Involve content************************************** */
 export const involveContent = {
   image: 'involve_header',
-  title1: 'Get Involved',
+  title1: 'Volunteer',
   content1:
-    'You can take part in D4SD in a variety of ways! Whether it be ideating solutions, giving feedback, teaching civic design in the classroom, or supporting the initiative, getting involved with D4SD can look a little different for each person. Below are a few ways to get involved.',
+    'You can take part in D4SD in a variety of ways! Whether by ideating solutions, giving feedback, teaching civic design in the classroom, or supporting the initiative, getting involved with D4SD will  look a little different for each person. Below are a few ways to get involved.',
   roles: [
+    {
+      title: 'Volunteer as a feedback provider',
+      txt:
+        'Contribute to D4SD as a feedback provider! Innovators in D4SD need diverse community members’ perspectives to improve their proposals on civic issues. Learn more about how you can provide critique on ideas to help teams iterate upon their concepts.',
+      image: feedback,
+      id: 'experts',
+      link: '/getinvolved/feedback_provider',
+      isAction: 'true',
+      action: 'LEARN MORE'
+    },
+    {
+      title: 'Become a student volunteer for the D4SD Summit',
+      txt:
+        'Volunteer to help us create a successful summit! We’ll need your help to set up the space and ensure that the event is running smoothly. Sign up now to get free attendance and make an impact.',
+      image: sponsor,
+      id: 'sponsors',
+      link: 'https://docs.google.com/forms/u/4/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform?usp=send_form',
+      isAction: 'true',
+      action: 'SIGN UP TO VOLUNTEER'
+    },
     {
       title: 'Join the discussion',
       txt:
-        'We have a Slack workspace set up with multiple channels that will allow participants to communicate with their team members and the greater D4SD community. When you register online, you will be connected to our network of resources  based on how you want to participate.',
+        'We have a Slack workspace set up with multiple channels that will allow innovators to communicate with their team members and the greater D4SD community. When you register online, you will be connected to our network of resources based on how you want to participate.',
       image: innovator,
       id: 'innovators',
       link:
@@ -234,37 +259,6 @@ export const involveContent = {
       action: 'JOIN DISCUSSION',
       new: '_blank'
     },
-    {
-      title: 'Become a feedback provider',
-      txt:
-        'Contribute to D4SD as a feedback provider! Innovators in D4SD need diverse community members’ perspectives to improve their proposals  on civic issues. Please sign up to provide constructive suggestions for our network of participants.',
-      image: feedback,
-      id: 'experts',
-      link: '/getinvolved/feedback_provider',
-      isAction: 'true',
-      action: 'LEARN MORE'
-    },
-    {
-      title: 'Sponsor D4SD',
-      txt:
-        'Get the chance to grow your brand within D4SD’s community by sponsoring events. This would allow either your product or service to reach new ears, while supporting a mission that matters to you.',
-      image: sponsor,
-      id: 'sponsors',
-      link: 'mailto:team@d4sd.org',
-      isAction: 'true',
-      action: 'CONTACT OUR TEAM'
-    },
-    // {
-    //   title: 'Join the D4SD team',
-    //   txt:
-    //     'We need, innovators, educators, volunteers, and more to help us reach our goal. If you’re interested in any of those roles or want to forge you own role, register with us below!',
-    //   image: mail,
-    //   id: 'mail',
-    //   link: 'http://eepurl.com/c2kFon',
-    //   isAction: 'true',
-    //   action: 'JOIN OUR TEAM',
-    //   new: '_blank'
-    // },
     {
       title: 'Join the mailing list',
       txt:
@@ -746,7 +740,7 @@ export const feedbackContent = {
 
 export const sponsorsContent = {
   image: 'sponsors_header',
-  title1: 'Sponsors',
+  title1: 'Sponsor',
   content1:
     'D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.',
   title2: 'Sponsor Benefits',

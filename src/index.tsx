@@ -7,6 +7,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore, { history } from './store';
+import ScrollToTop from './components/ScrollToTop';
 import SignupPage from './containers/signup-page';
 import LoginPage from './containers/login-page';
 import HomePage from './containers/home-page';
@@ -23,10 +24,7 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-
-
 import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
-
 
 // eslint-disable-next-line
 // @ts-ignore
@@ -35,33 +33,45 @@ const store = configureStore();
 const App = (): JSX.Element => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
+      <ScrollToTop />
       <>
         <main>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/home" component={HomePage} />
-            <Route exact path="/getinvolved" component={InvolvedPage} />
-            //
-            {' '}
-            <Route exact path="/getinvolved/feedback_provider" component={FeedbackPage} />
+            <Route exact path="/volunteer" component={InvolvedPage} />
+            <Route
+              exact
+              path="/volunteer/feedback_provider"
+              component={FeedbackPage}
+            />
             <Route exact path="/challenges" component={ChallengePage} />
             <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/sponsors" component={SponsorsPage} />
+            <Route exact path="/sponsor" component={SponsorsPage} />
             <Route exact path="/faq" component={FAQPage} />
             <Route exact path="/workspace" component={WorkspacePage} />
-            //
-            {' '}
-            <Route exact path="/workspace/community-feedback" component={CommunityFeedbackLayout} />
+            <Route
+              exact
+              path="/workspace/community-feedback"
+              component={CommunityFeedbackLayout}
+            />
             <Route exact path="/resources" component={ResourcesPage} />
             <Route exact path="/resources/process" component={ProcessPage} />
-            <Route exact path="/resources/stakeholder" component={StakeholderPage} />
-
-            //
-            {' '}
-            <Route exact path="/workspace/prelim" component={PreliminarySubmissionPage} />
-            //
-            {' '}
-            <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
+            <Route
+              exact
+              path="/resources/stakeholder"
+              component={StakeholderPage}
+            />
+            <Route
+              exact
+              path="/workspace/prelim"
+              component={PreliminarySubmissionPage}
+            />
+            <Route
+              exact
+              path="/workspace/view-feedback"
+              component={ViewFeedbackLayout}
+            />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -87,5 +97,4 @@ const App = (): JSX.Element => (
   </Provider>
 );
 
-// eslint-disable-next-line no-undef
 ReactDOM.render(<App />, document.getElementById('root'));
