@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-import './index.less';
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { Route, Switch } from 'react-router-dom';
@@ -24,6 +24,7 @@ import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import FeedbackPage from './components/layouts/feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
+import "./index.less";
 
 import Menubar from './components/menubar/index';
 import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
@@ -67,17 +68,17 @@ const App = (): JSX.Element => (
             <Route exact path='/stakeholder' component={Stakeholder}/>
             <Route exact path='/process' component={Process}/>
 
-            Fix to be more responsive:
-            ~ Home
-            ~ Go through all pages to fix fonts
-            */}
-            <Route exact path="/signup" component={SignupPage} />
-            <Route exect path="/login" component={LoginPage} />
-          </Switch>
-        </main>
-      </>
-    </ConnectedRouter>
-  </Provider>
+                Fix to be more responsive:
+                ~ Home
+                ~ Go through all pages to fix fonts
+                */}
+                <Route exact path="/signup" component={SignupPage} />
+                <Route exect path="/login" component={LoginPage} />
+              </Switch>
+            </main>
+        </>
+      </ConnectedRouter>
+    </Provider>
 );
 
 // eslint-disable-next-line no-undef
