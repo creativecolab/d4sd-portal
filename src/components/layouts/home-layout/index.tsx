@@ -80,19 +80,29 @@ const HomeLayout = (): JSX.Element => {
           <img className="pic" alt="summit-img-4" src={summitContent.image4} />
         </div>
         <div className="content">
-          <img className="logo" alt="summit-img-logo" src={summitContent.logo} />
+          <img
+            className="logo"
+            alt="summit-img-logo"
+            src={summitContent.logo}
+          />
           <div className="line" />
           <h1 className="subtitle">{summitContent.subtitle1}</h1>
-          <h1 className="subtitle">{summitContent.subtitle2}</h1>
           <br />
           <h3>{summitContent.title1}</h3>
+          <br />
           <h3>{summitContent.title2}</h3>
-          <h3>{summitContent.title3}</h3>
           <div className="buttons">
             {/* <Button className="register" type="primary" size="default">
               REGISTER FOR THE SUMMIT
             </Button> */}
-            <Button className="learn" size="default" onClick={scrollToRef}>LEARN MORE</Button>
+            <Button
+              className="learn"
+              size="default"
+              type="primary"
+              onClick={scrollToRef}
+            >
+              LEARN MORE
+            </Button>
           </div>
         </div>
       </div>
@@ -101,14 +111,9 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
-          {/* eslint-enable */}
-          <a href="/getinvolved">
-            <Button type="primary" size="default">
-              GET INVOLVED
-            </Button>
-          </a>
+          <div className="text">
+            <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
+          </div>
         </div>
         <Row type="flex" justify="center">
           {homeContent.roles.map((role, i) => (
