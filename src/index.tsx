@@ -23,6 +23,7 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
+import SubmitStaticPage from './components/layouts/static-submit-layout';
 
 
 import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
@@ -62,6 +63,7 @@ const App = (): JSX.Element => (
             //
             {' '}
             <Route exact path="/workspace/view-feedback" component={ViewFeedbackLayout} />
+            <Route exact path="/submit" component={SubmitStaticPage} />
             {/*
             <Route exact path='/resources' component={Resources}/>
             <Route exact path='/workspace' component={Workspace}/>
@@ -80,6 +82,7 @@ const App = (): JSX.Element => (
             */}
             <Route exact path="/signup" component={SignupPage} />
             <Route exect path="/login" component={LoginPage} />
+
           </Switch>
         </main>
       </>
