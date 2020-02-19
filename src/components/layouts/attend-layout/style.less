@@ -11,6 +11,18 @@
       line-height: 16pt;
     }
 
+    h1 {
+      @media screen and (max-width: @sm) {
+        font-size: 25px;
+      }
+    }
+
+    h2 {
+      @media screen and (max-width: @sm) {
+        font-size: 22px;
+      }
+    }
+
     h3 {
       color: #25497a;
     }
@@ -25,7 +37,26 @@
     padding: 50px 0;
 
     .detail {
+      width: 100%;
       display: flex;
+      justify-content: center;
+
+      h3 {
+        color: #333333;
+        text-align: right;
+        width: 160px;
+      }
+
+      p {
+        width: 750px;
+      }
+
+      .divider {
+        margin-right: 50px;
+        @media screen and (max-width: @sm) {
+          margin-right: 15px;
+        }
+      }
     }
   }
 }

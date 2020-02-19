@@ -24,6 +24,7 @@ const AttendLayout = (): JSX.Element => (
         <br />
         <p>{attendContent.content_1_1}</p>
         <p>{attendContent.content_1_2}</p>
+        <br />
         <Button>REGISTER ON EVENTBRITE</Button>
       </div>
     </div>
@@ -34,6 +35,7 @@ const AttendLayout = (): JSX.Element => (
           {attendContent.details.map((detail) => (
             <div className="detail">
               <h3>{detail.label}</h3>
+              <div className="divider" />
               <p>{detail.detail}</p>
             </div>
           ))}

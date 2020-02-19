@@ -100,7 +100,7 @@ const Menubar = (): JSX.Element => {
                 <span>Challenges</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
-                <span>Attends</span>
+                <span>Attend</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
                 <span>Resources</span>
