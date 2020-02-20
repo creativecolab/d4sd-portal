@@ -1,0 +1,53 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+
+.involvecard {
+  .ant-card-meta-detail {
+    overflow: visible !important;
+  }
+  .ant-card-meta-title {
+    text-align: left;
+    white-space: pre-line;
+    text-overflow: initial;
+    @media screen and (max-width: @sm) {
+      padding-bottom: 0;
+    }
+    @media screen and (min-width: @sm) {
+      padding-bottom: 2.2rem !important;
+    }
+    @media screen and (min-width: @md) {
+      padding-bottom: 2.2rem !important;
+    }
+    @media screen and (min-width: @lg) {
+      padding-bottom: 2rem !important;
+    }
+  }
+  .ant-avatar {
+    @media screen and (max-width: @sm) {
+      width: 30px;
+      height: 30px;
+    }
+    @media screen and (min-width: @sm) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @md) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @lg) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .ant-card-actions {
+    background: white;
+    border: none;
+    margin: 10px;
+  } // Lu added action style
+}
+
+.d4sdcard-wrapper {
+  max-width: 100%;
+}

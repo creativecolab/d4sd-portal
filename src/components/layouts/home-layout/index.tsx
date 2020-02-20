@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
+import { NavLink } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
@@ -80,19 +81,29 @@ const HomeLayout = (): JSX.Element => {
           <img className="pic" alt="summit-img-4" src={summitContent.image4} />
         </div>
         <div className="content">
-          <img className="logo" alt="summit-img-logo" src={summitContent.logo} />
+          <img
+            className="logo"
+            alt="summit-img-logo"
+            src={summitContent.logo}
+          />
           <div className="line" />
           <h1 className="subtitle">{summitContent.subtitle1}</h1>
-          <h1 className="subtitle">{summitContent.subtitle2}</h1>
           <br />
           <h3>{summitContent.title1}</h3>
+          <br />
           <h3>{summitContent.title2}</h3>
-          <h3>{summitContent.title3}</h3>
           <div className="buttons">
             {/* <Button className="register" type="primary" size="default">
               REGISTER FOR THE SUMMIT
             </Button> */}
-            <Button className="learn" size="default" onClick={scrollToRef}>LEARN MORE</Button>
+            <Button
+              className="learn"
+              size="default"
+              type="primary"
+              onClick={scrollToRef}
+            >
+              LEARN MORE
+            </Button>
           </div>
         </div>
       </div>
@@ -101,16 +112,11 @@ const HomeLayout = (): JSX.Element => {
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
-          {/* eslint-enable */}
-          <a href="/getinvolved">
-            <Button type="primary" size="default">
-              GET INVOLVED
-            </Button>
-          </a>
+          <div className="text">
+            <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
+          </div>
         </div>
-        <Row type="flex" justify="center">
+        <Row className="rowpics" type="flex" justify="center">
           {homeContent.roles.map((role, i) => (
             <Col
               // eslint-disable-next-line
@@ -119,8 +125,15 @@ const HomeLayout = (): JSX.Element => {
               xs={{ span: 9 }}
             >
               <figure>
-                <img src={role.image} style={{ width: '75%' }} alt="" />
-                <h5>{role.contents}</h5>
+                <NavLink to={role.link}>
+                  <img
+                    className="picitems"
+                    src={role.image}
+                    style={{ width: '75%' }}
+                    alt=""
+                  />
+                </NavLink>
+                <h5 className="piccontents">{role.contents}</h5>
               </figure>
             </Col>
           ))}
@@ -144,9 +157,9 @@ const HomeLayout = (): JSX.Element => {
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
-                    <a href="/challenges">
+                    <NavLink to="/challenges">
                       <Button type="primary">LEARN MORE</Button>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -187,9 +200,9 @@ const HomeLayout = (): JSX.Element => {
           <h2>{homeContent.title4}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={contentHTML(homeContent.content4)} />
-          <a href="/getinvolved">
-            <Button>GET INVOLVED</Button>
-          </a>
+          <NavLink to="volunteer">
+            <Button>VOLUNTEER</Button>
+          </NavLink>
         </div>
       </div>
 
