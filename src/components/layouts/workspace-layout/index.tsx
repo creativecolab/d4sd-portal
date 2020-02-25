@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Row,
   Col,
@@ -13,8 +13,21 @@ import './style.less';
 import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const scrollToRef = (): void => {
+    if (ref && ref.current) {
+      const position = ref.current.offsetTop - 90;
+      // eslint-disable-next-line
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const [loggedIn] = useState(true);
-  const loggedInHeaderText = 'Welcome! Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
+  const loggedInHeaderText = 'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.';
   return (
     <div>
       <Header
@@ -26,12 +39,11 @@ const WorkspaceLayout = (props: any) => {
         <div className="section">
           <h2>{workspaceContent.title2}</h2>
           <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
-          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU">
-            <Button>Join D4SD</Button>
-          </a>
+          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" />
+          <Button onClick={scrollToRef}>LEARN MORE</Button>
         </div>
         <div className="paragraph">
-          <h2>{workspaceContent.title3}</h2>
+          <h2 ref={ref}>{workspaceContent.title3}</h2>
           <p dangerouslySetInnerHTML={{ __html: workspaceContent.content3 }} />
         </div>
         <Row>
