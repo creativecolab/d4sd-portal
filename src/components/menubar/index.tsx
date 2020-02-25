@@ -45,6 +45,9 @@ const Menubar = (): JSX.Element => {
       case '/attend':
         setTab(['attend']);
         break;
+      case '/submit':
+        setTab(['submit']);
+        break;
       case '/resources':
         setTab(['resources']);
         break;
@@ -138,11 +141,14 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="challenges" onClick={(): void => history.push('/challenges')}>
               <span>Challenges</span>
             </Menu.Item>
+            <Menu.Item className="menu-item" key="resources" onClick={(): void => history.push('/resources')}>
+              <span>Resources</span>
+            </Menu.Item>
             <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
               <span>Attend</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="resources" onClick={(): void => history.push('/resources')}>
-              <span>Resources</span>
+            <Menu.Item className="menu-item" key="submit" onClick={(): void => history.push('/submit')}>
+              <span>Submit</span>
             </Menu.Item>
             <Menu.Item className="menu-item" key="getInvolved" onClick={(): void => history.push('/volunteer')}>
               <span>Volunteer</span>

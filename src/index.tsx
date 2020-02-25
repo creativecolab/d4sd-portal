@@ -64,6 +64,7 @@ const App = (): JSX.Element => (
               path="/resources/stakeholder"
               component={StakeholderPage}
             />
+            <Route exact path="/submit" component={WorkspacePage} />
             <Route
               exact
               path="/workspace/prelim"

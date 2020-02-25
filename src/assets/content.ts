@@ -520,7 +520,7 @@ export const challengeContent = {
 
 export const workspaceContent = {
   image: 'workspace_header',
-  title1: 'Workspace',
+  title1: 'Submit',
   content1:
     'D4SD provides support for our community to follow a human-centered design process where we collectively discover and understand civic issues, ideate and prototype potential solutions, pitch proposals to civic and business leaders, and activate the local community to address key civic challenges in our region.',
   title2: 'How to get started?',

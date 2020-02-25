@@ -14,7 +14,7 @@ import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
   const [loggedIn] = useState(true);
-  const loggedInHeaderText = 'Welcome, username.  Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
+  const loggedInHeaderText = 'Welcome! Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
   return (
     <div>
       <Header
