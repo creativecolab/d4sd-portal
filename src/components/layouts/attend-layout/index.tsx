@@ -1,11 +1,12 @@
 import React, { useState, useRef } from 'react';
 import {
-  Button, Row, Col, Card
+  Row, Col, Card, Avatar, Button
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
+
 import { attendContent } from '../../../assets/content';
 
 const AttendLayout = (): JSX.Element => (
