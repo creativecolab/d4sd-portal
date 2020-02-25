@@ -14,6 +14,7 @@ import HomePage from './containers/home-page';
 import InvolvedPage from './containers/involved-page';
 import AboutPage from './containers/about-page';
 import ChallengePage from './containers/challenge-page';
+import AttendPage from './containers/attend-page';
 import ResourcesPage from './containers/resources-page';
 import FAQPage from './containers/faq-page';
 import SponsorsPage from './containers/sponsors-page';
@@ -46,6 +47,7 @@ const App = (): JSX.Element => (
               component={FeedbackPage}
             />
             <Route exact path="/challenges" component={ChallengePage} />
+            <Route exact path="/attend" component={AttendPage} />
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/sponsor" component={SponsorsPage} />
             <Route exact path="/faq" component={FAQPage} />
@@ -62,6 +64,7 @@ const App = (): JSX.Element => (
               path="/resources/stakeholder"
               component={StakeholderPage}
             />
+            <Route exact path="/submit" component={WorkspacePage} />
             <Route
               exact
               path="/workspace/prelim"

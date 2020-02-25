@@ -2,52 +2,63 @@
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
 
-.involvecard {
-  .ant-card-meta-detail {
-    overflow: visible !important;
-  }
-  .ant-card-meta-title {
-    text-align: left;
-    white-space: pre-line;
-    text-overflow: initial;
-    @media screen and (max-width: @sm) {
-      padding-bottom: 0;
+.AttendLayout {
+  .event-info {
+    padding: 75px 0;
+
+    h1,
+    h2 {
+      color: #4496ff;
+      line-height: 16pt;
     }
-    @media screen and (min-width: @sm) {
-      padding-bottom: 2.2rem !important;
+
+    h1 {
+      @media screen and (max-width: @sm) {
+        font-size: 25px;
+      }
     }
-    @media screen and (min-width: @md) {
-      padding-bottom: 2.2rem !important;
+
+    h2 {
+      @media screen and (max-width: @sm) {
+        font-size: 22px;
+      }
     }
-    @media screen and (min-width: @lg) {
-      padding-bottom: 2rem !important;
-    }
-  }
-  .ant-avatar {
-    @media screen and (max-width: @sm) {
-      width: 30px;
-      height: 30px;
-    }
-    @media screen and (min-width: @sm) {
-      width: 80px;
-      height: 80px;
-    }
-    @media screen and (min-width: @md) {
-      width: 80px;
-      height: 80px;
-    }
-    @media screen and (min-width: @lg) {
-      width: 60px;
-      height: 60px;
+
+    h3 {
+      color: #25497a;
     }
   }
-  .ant-card-actions {
-    background: white;
-    border: none;
-    margin: 10px;
-  } // Lu added action style
 }
 
-.d4sdcard-wrapper {
-  max-width: 100%;
+.event-details {
+  padding: 75px 0;
+  background-color: #edf6ff;
+
+  .details {
+    padding: 50px 0;
+
+    .detail {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      h3 {
+        color: #333333;
+        text-align: right;
+        width: 160px;
+      }
+
+      p {
+        width: 750px;
+      }
+
+      .divider {
+        margin-right: 50px;
+
+        @media screen and (max-width: @sm) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
 }

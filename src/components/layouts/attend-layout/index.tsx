@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Row, Col, Card, Avatar, Button
 } from '@d4sd/components';
@@ -6,55 +6,47 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { involveContent } from '../../../assets/content';
 
-const { Meta } = Card;
+import { attendContent } from '../../../assets/content';
 
-const InvolvedLayout = (): JSX.Element => (
+const AttendLayout = (): JSX.Element => (
   <div>
     <Header
-      title={involveContent.title1}
-      content={involveContent.content1}
-      image={involveContent.image}
+      title={attendContent.title}
+      content={attendContent.content}
+      image={attendContent.image}
     />
-    <div className="container paragraph">
-      <Row
-        gutter={[16, 16]}
-        type="flex"
-        justify="start"
-      >
-        {involveContent.roles.map((content) => (
-          <Col
-            xs={24}
-            lg={12}
-          >
-            <Card
-              className="involvecard"
-              actions={[
-                <a href={content.link} target={content.new}>
-                  <Button type="primary">{content.action}</Button>
-                </a>
-              ]}
-            >
-              <Meta
-                avatar={(
-                  <Avatar
-                    src={content.image}
-                    className="avatar"
-                  />
-                )}
-                title={content.title}
-                description={content.txt}
-              />
-            </Card>
-          </Col>
-        ))}
-      </Row>
+    <div className="AttendLayout container">
+      <div className="event-info">
+        <h1>{attendContent.title_1_1}</h1>
+        <h2>{attendContent.title_1_2}</h2>
+        <br />
+        <h3>{attendContent.subtitle_1}</h3>
+        <br />
+        <p>{attendContent.content_1_1}</p>
+        <p>{attendContent.content_1_2}</p>
+        <br />
+        <Button>REGISTER ON EVENTBRITE</Button>
+      </div>
     </div>
-    <br />
-    <br />
+    <div className="event-details">
+      <div className="container">
+        <h2>{attendContent.title_2}</h2>
+        <div className="details">
+          {attendContent.details.map((detail) => (
+            <div className="detail">
+              <h3>{detail.label}</h3>
+              <div className="divider" />
+              <p>{detail.detail}</p>
+            </div>
+          ))}
+        </div>
+        <Button>REGISTER ON EVENTBRITE</Button>
+
+      </div>
+    </div>
     <Footer />
   </div>
 );
 
-export default InvolvedLayout;
+export default AttendLayout;
