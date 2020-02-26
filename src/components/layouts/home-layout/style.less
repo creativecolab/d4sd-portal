@@ -15,10 +15,120 @@
   justify-content: space-between;
 }
 
+.summit-banner {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
+
+  background-color: #214278;
+  height: 200px;
+  width: 100%;
+  max-width: 870px;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .information {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .info-tile {
+      width: 50%;
+    }
+
+    .summit-event {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+          font-size: 3rem;
+        }
+
+        h1 {
+          font-size: 7rem;
+          margin-bottom: 0.2em;
+        }
+      }
+
+      .title {
+        padding-top: 10px;
+
+        h1 {
+          margin-bottom: 0.2em;
+        }
+
+        h5 {
+          color: #fd9798;
+        }
+      }
+    }
+
+    .key-dates {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      padding-top: 10px;
+
+      .date {
+        color: #fd9798;
+      }
+
+      p {
+        margin-bottom: 0.5em;
+      }
+
+      .date-1,
+      .date-2 {
+        display: flex;
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .button-container {
+      width: 48%;
+    }
+
+    .button {
+      margin: 0px;
+    }
+
+    .outline {
+      color: white;
+      border-color: white;
+      background: transparent;
+    }
+  }
+}
+
 .picitems {
   margin-bottom: 25px;
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -28,7 +138,7 @@
   }
 }
 .piccontents {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 .Home {
@@ -48,7 +158,6 @@
 // Section 3
 .challenges {
   .challenges-carousel {
-
     // text-align: center;
     @media screen and (min-width: 320px) {
       min-height: 820px;

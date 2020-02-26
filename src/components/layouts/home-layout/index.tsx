@@ -45,6 +45,57 @@ const HomeLayout = (): JSX.Element => {
     }
   };
 
+  const SummitBanner = (): JSX.Element => (
+    <div className="summit-banner">
+      <div className="information">
+        <div className="summit-event info-tile">
+          <div className="date">
+            <p>May</p>
+            <h1>12</h1>
+          </div>
+          <div className="title">
+            <h1>D4SD Summit</h1>
+            <h5>San Diego Central Library</h5>
+          </div>
+          <div />
+        </div>
+        <div className="key-dates info-tile">
+          <div className="date-1">
+            <p className="date">March 20</p>
+            <div style={{ marginRight: '8px' }} />
+            <p>Feedback Exchange</p>
+          </div>
+          <div className="date-2">
+            <p className="date">April 22</p>
+            <div style={{ marginRight: '8px' }} />
+            <p>Final Submission</p>
+          </div>
+        </div>
+      </div>
+      <div className="action-buttons">
+        <Button
+          type="primary" size="medium" onClick={scrollToRef}
+          className="button-container button"
+        >
+          LEARN MORE
+        </Button>
+        <a
+          href="http://eepurl.com/c2kFon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-container"
+        >
+          <Button
+            type="primary-outline" size="medium" style={{ width: '100%' }}
+            className="button outline"
+          >
+            JOIN MAILING LIST
+          </Button>
+        </a>
+      </div>
+    </div>
+  );
+
   return (
     <div className="Home">
       <Menubar />
@@ -55,18 +106,7 @@ const HomeLayout = (): JSX.Element => {
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
-          <a
-            href="http://eepurl.com/c2kFon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button type="primary" size="medium">
-              JOIN MAILING LIST
-            </Button>
-          </a>
-          <Button type="primary-outline" size="medium" onClick={scrollToRef}>
-            LEARN MORE
-          </Button>
+          <SummitBanner />
         </div>
         <div className="landing-image">
           <img alt="landing_image" src={landingImage} />
