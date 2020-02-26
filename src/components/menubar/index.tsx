@@ -36,9 +36,6 @@ const Menubar = (): JSX.Element => {
       case '/':
         setTab(['']);
         break;
-      case '/getinvolved':
-        setTab(['getInvolved']);
-        break;
       case '/challenges':
         setTab(['challenges']);
         break;
