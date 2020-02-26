@@ -13,11 +13,12 @@ import './style.less';
 import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
-  const ref = useRef<HTMLHeadingElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
       // eslint-disable-next-line
+      console.log(ref.current, position);
       window.scrollTo({
         left: 0,
         top: position,
@@ -39,12 +40,16 @@ const WorkspaceLayout = (props: any) => {
           <div className="container">
             <h2 className="title">{workspaceContent.title2}</h2>
             <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
-            <a href="#section-2">
-              <Button>LEARN MORE</Button>
-            </a>
+            <Button
+              onClick={scrollToRef}
+              size="default"
+              type="primary"
+            >
+              LEARN MORE
+            </Button>
           </div>
         </div>
-        <div className="section" id='section-2'>
+        <div className="section" id='section-2' ref={ref}>
           <div className="container">
             <h2 className="title">Important Dates for the D4SD 2020 Challenge</h2>
             {workspaceContent.importantDates.map((details ) => {
