@@ -40,18 +40,12 @@ const WorkspaceLayout = (props: any) => {
           <div className="container">
             <h2 className="title">{workspaceContent.title2}</h2>
             <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
-            <Button
-              onClick={scrollToRef}
-              size="default"
-              type="primary"
-            >
-              LEARN MORE
-            </Button>
+
           </div>
         </div>
         <div className="section" id='section-2' ref={ref}>
           <div className="container">
-            <h2 className="title">Important Dates for the D4SD 2020 Challenge</h2>
+
             {workspaceContent.importantDates.map((details ) => {
               return (
                 <div className="date-box">
