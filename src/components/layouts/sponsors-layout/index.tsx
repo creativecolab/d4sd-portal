@@ -13,24 +13,6 @@ const SponsorsLayout = (): JSX.Element => (
       content={sponsorsContent.content1}
       image={sponsorsContent.image}
     />
-    <div className="container">
-      <div className="section">
-        <h2>{sponsorsContent.title2}</h2>
-        {/* eslint-disable-next-line */}
-        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
-        <br />
-        <br />
-        <a
-          href="mailto:team@d4sd.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button className="spon" type="primary" size="medium">
-            REACH OUT TO SPONSOR US
-          </Button>
-        </a>
-      </div>
-    </div>
     <div style={{ backgroundColor: '#F0F8FF' }}>
       <div className="container">
         <div className="section">
@@ -71,6 +53,24 @@ const SponsorsLayout = (): JSX.Element => (
         <br />
         <br />
         <br />
+      </div>
+    </div>
+    <div className="container">
+      <div className="section">
+        <h2>{sponsorsContent.title2}</h2>
+        {/* eslint-disable-next-line */}
+        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
+        <br />
+        <br />
+        <a
+          href="mailto:team@d4sd.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="spon" type="primary" size="medium">
+            REACH OUT TO SPONSOR US
+          </Button>
+        </a>
       </div>
     </div>
     <Footer />

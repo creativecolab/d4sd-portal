@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Row,
   Col,
@@ -13,8 +13,21 @@ import './style.less';
 import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
+  const ref = useRef<HTMLHeadingElement>(null);
+  const scrollToRef = (): void => {
+    if (ref && ref.current) {
+      const position = ref.current.offsetTop - 90;
+      // eslint-disable-next-line
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const [loggedIn] = useState(true);
-  const loggedInHeaderText = 'Welcome! Thank you for signing up to participate in this year’s Design for San Diego challenge! See below for key activities related to Discovery, Ideation, Prototyping, Pitching, and Activation.';
+  const loggedInHeaderText = 'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.';
   return (
     <div className="SubmitPage">
       <Header
@@ -22,7 +35,6 @@ const WorkspaceLayout = (props: any) => {
         content={workspaceContent.content1}
         image={workspaceContent.image}
       />
-
         <div className="section" id='section-1'>
           <div className="container">
             <h2 className="title">{workspaceContent.title2}</h2>

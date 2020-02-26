@@ -72,42 +72,6 @@ const HomeLayout = (): JSX.Element => {
           <img alt="landing_image" src={landingImage} />
         </div>
       </div>
-
-      <div className="summit">
-        <div className="pics">
-          <img className="pic" alt="summit-img-1" src={summitContent.image1} />
-          <img className="pic" alt="summit-img-2" src={summitContent.image2} />
-          <img className="pic" alt="summit-img-3" src={summitContent.image3} />
-          <img className="pic" alt="summit-img-4" src={summitContent.image4} />
-        </div>
-        <div className="content">
-          <img
-            className="logo"
-            alt="summit-img-logo"
-            src={summitContent.logo}
-          />
-          <div className="line" />
-          <h1 className="subtitle">{summitContent.subtitle1}</h1>
-          <br />
-          <h3>{summitContent.title1}</h3>
-          <br />
-          <h3>{summitContent.title2}</h3>
-          <div className="buttons">
-            {/* <Button className="register" type="primary" size="default">
-              REGISTER FOR THE SUMMIT
-            </Button> */}
-            <Button
-              className="learn"
-              size="default"
-              type="primary"
-              onClick={scrollToRef}
-            >
-              LEARN MORE
-            </Button>
-          </div>
-        </div>
-      </div>
-
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>

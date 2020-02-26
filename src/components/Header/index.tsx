@@ -5,9 +5,9 @@ import './style.less';
 import { contentHTML } from '../../actions';
 
 interface HeaderIF {
-  image: string;
-  title: string;
-  content: string;
+  image?: string;
+  title?: string;
+  content?: string;
 }
 
 const Header = (props: HeaderIF): JSX.Element => {

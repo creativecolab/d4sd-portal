@@ -94,8 +94,7 @@ export const homeContent = {
     {
       image: educator,
       contents: 'Attend the Summit',
-      link: 'summit'
-
+      link: 'attend'
     },
     {
       image: expert,
@@ -233,7 +232,7 @@ export const involveContent = {
         'Contribute to D4SD as a feedback provider! Innovators in D4SD need diverse community members’ perspectives to improve their proposals on civic issues. Learn more about how you can provide critique on ideas to help teams iterate upon their concepts.',
       image: feedback,
       id: 'experts',
-      link: '/getinvolved/feedback_provider',
+      link: '/volunteer/feedback_provider',
       isAction: 'true',
       action: 'LEARN MORE'
     },
@@ -243,7 +242,8 @@ export const involveContent = {
         'Volunteer to help us create a successful summit! We’ll need your help to set up the space and ensure that the event is running smoothly. Sign up now to get free attendance and make an impact.',
       image: sponsor,
       id: 'sponsors',
-      link: 'https://docs.google.com/forms/u/4/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform?usp=send_form',
+      link:
+        'https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform',
       isAction: 'true',
       action: 'SIGN UP TO VOLUNTEER'
     },
@@ -759,35 +759,39 @@ export const feedbackContent = {
 };
 
 export const sponsorsContent = {
-    image: 'sponsors_header',
-    title1: "Sponsors",
-    content1: "D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.",
-    title2: "Sponsor Benefits",
-    content_2: "Design for San Diego is a non-profit dedicated to motivating and coordinating design thinking to improve our great City.  As such, we rely on sponsorship from all sectors to make it happen. Contact us below to learn more." +
-               "<br/><br/>" +
-               "Sponsor benefits may include:" +
-               "<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>" +
-               "<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>" +
-               "<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>" +
-               "<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>" +
-               "<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>",
-    title3: "2020 Sponsors",
-    img1: sponsors_designlab,
-    img2: sponsors_yankelovich,
-    img3: sponsors_ibm,
-    img4: sponsors_nsf,
-
-}
+  image: 'sponsors_header',
+  title1: 'Sponsors',
+  content1:
+    'D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.',
+  title2: 'Sponsor Benefits',
+  content_2:
+    'Design for San Diego is a non-profit dedicated to motivating and coordinating design thinking to improve our great City.  As such, we rely on sponsorship from all sectors to make it happen. Contact us below to learn more.' +
+    '<br/><br/>' +
+    'Sponsor benefits may include:' +
+    '<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>' +
+    '<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>' +
+    '<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>' +
+    '<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>' +
+    '<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>',
+  title3: '2020 Sponsors',
+  img1: sponsors_designlab,
+  img2: sponsors_yankelovich,
+  img3: sponsors_ibm,
+  img4: sponsors_nsf
+};
 
 export const attendContent = {
   image: 'attend_header',
   title: 'Attend',
-  content: 'The D4SD Summit provides a platform for innovators and experts to come together and tackle San Diego’s problems. Attend the summit to make an impact on making our city a more sustainable city.',
+  content:
+    'The D4SD Summit provides a platform for innovators and experts to come together and tackle San Diego’s problems. Attend the summit to make an impact on making our city a more sustainable city.',
   title_1_1: 'DESIGN FOR SAN DIEGO',
   title_1_2: '2020 SUMMIT',
   subtitle_1: 'San Diego Central Library | May 12, 2020',
-  content_1_1: 'The 2020 Design for San Diego Summit will be a platform for all San Diegans to come together and tackle San Diego’s biggest issues surrounding mobility, health, environment, and housing.',
-  content_1_2: 'Attend the summit to get inspired by innovative, human-centered solutions that make San Diego a more sustainable city.',
+  content_1_1:
+    'The 2020 Design for San Diego Summit will be a platform for all San Diegans to come together and tackle San Diego’s biggest issues surrounding mobility, health, environment, and housing.',
+  content_1_2:
+    'Attend the summit to get inspired by innovative, human-centered solutions that make San Diego a more sustainable city.',
   title_2: 'Event Details',
   // labels: ['When?', 'Where?', 'Who?', 'What?', 'How much is it?'],
   // details: [
@@ -808,15 +812,18 @@ export const attendContent = {
     },
     {
       label: 'Who?',
-      detail: 'Whether you’re an innovator or expert, anyone is welcome to attend the D4SD 2020 Summit.'
+      detail:
+        'Whether you’re an innovator or expert, anyone is welcome to attend the D4SD 2020 Summit.'
     },
     {
       label: 'What?',
-      detail: 'A city’s inhabitants coming together to tackle its biggest challenges'
+      detail:
+        'A city’s inhabitants coming together to tackle its biggest challenges'
     },
     {
       label: 'How much is it?',
-      detail: 'We will be charging a fee of $20 to cover the amount for food, speakers, and the space. However, if you participate in the challenge as an innovator and submit a solution proposal, the cost will be waived.'
+      detail:
+        'We will be charging a fee of $20 to cover the amount for food, speakers, and the space. However, if you participate in the challenge as an innovator and submit a solution proposal, the cost will be waived.'
     }
   ]
-}
+};
