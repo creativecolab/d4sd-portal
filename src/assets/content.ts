@@ -772,28 +772,43 @@ export const submitStaticContent = {
   content1:
     "D4SD is a design challenge oriented around a human-centered process where the community collectively discovers and understands civic issues, ideates and prototypes potential solutions, pitches proposals to civic and business leaders, and activates networks to address key civic challenges.",
   subtitle1: "How to get started?",
-  content2: "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm in addressing complex challenges in San Diego, we welcome you to participate!  To get started, read the challenge briefs about making a more sustainable San Diego, read our advice on methods for human-centered design, and join the D4SD Slack workspace to discuss the civic issues and find teammates. ",
-  content3: "If you want to get involved in other ways, check out our volunteer opportunities or register to attend the D4SD Summit on May 12. ",
-  
+  content2:
+    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm in addressing complex challenges in San Diego, we welcome you to participate!  To get started, read the challenge briefs about making a more sustainable San Diego, read our advice on methods for human-centered design, and join the D4SD Slack workspace to discuss the civic issues and find teammates. ",
+  content3:
+    "If you want to get involved in other ways, check out our volunteer opportunities or register to attend the D4SD Summit on May 12. ",
+
   timeline1: "D4SD 2020 Timeline",
-  timelinetext1: "D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for D4SD participants.",
+  timelinetext1:
+    "D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for D4SD participants.",
   timehead1: "March 13:  Information Session ",
-  timetext1: "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  ",
+  timetext1:
+    "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  ",
   timehead2: "March 20: Community Feedback ",
-  timetext2: "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives. ",
+  timetext2:
+    "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives. ",
   timehead3: "April 22 (Earth Day): Final submission deadline",
-  timetext3: " Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
+  timetext3:
+    " Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
   timehead4: "May 12: D4SD Summit 2020",
-  timetext4: "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
-  timetext5: "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables.",
+  timetext4:
+    "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+  timetext5:
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables.",
 
   challenge1: "D4SD Challenge Details",
-  challenge2: "The D4SD challenge is not a competition, but an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city. ",
+  challenge2:
+    "The D4SD challenge is not a competition, but an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city. ",
 
   faq1: "Why participate?",
+  answer1:
+    "Join D4SD for this unique opportunity to collaborate and compete with other city innovators to help solve transportation-related issues facing San Diego and cities around the world. The best solutions will earn cash prizes and private one-on-one meetings with city leaders and startup investors.",
+
   faq2: "What do you need to submit and when?",
+  answer2: "You can refer to the timeline that is available at ",
   faq3: "What are the rules?",
+  answer3:
+    "You do not need to work as part of a team. Individuals can create submissions on their own. If you do have a team, it can have at most five team members.",
 
-  details1: "For more details about the challenge rules and deliverables, see the  "
-
-  };
+  details1:
+    "For more details about the challenge rules and deliverables, see the  "
+};

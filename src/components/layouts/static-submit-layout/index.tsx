@@ -59,8 +59,11 @@ const SubmitStaticLayout = (): any => {
             <h2>{submitStaticContent.challenge1}</h2>
             <p>{submitStaticContent.challenge2}</p>
             <h3>{submitStaticContent.faq1}</h3>
+            <p>{submitStaticContent.answer1}</p>
             <h3>{submitStaticContent.faq2}</h3>
+            <p>{submitStaticContent.answer2} <a href="/about">About Page</a></p>
             <h3>{submitStaticContent.faq3}</h3>
+            <p>{submitStaticContent.answer3}</p>
             <p className="involve this">{submitStaticContent.details1}<a href="/faq">FAQs Page.</a></p>
           </Col>
         </Row>
