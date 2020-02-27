@@ -522,16 +522,36 @@ export const workspaceContent = {
   image: 'workspace_header',
   title1: 'Submit',
   content1:
-    'D4SD provides support for our community to follow a human-centered design process where we collectively discover and understand civic issues, ideate and prototype potential solutions, pitch proposals to civic and business leaders, and activate the local community to address key civic challenges in our region.',
-  title2: 'How to get started?',
+    'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.',
+  title2: 'How can you participate?',
   content2:
-    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate! To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and join the <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.", 
-  title3: 'Key D4SD 2020 Activities',
+    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
+  title3: 'n/a',
   content3:
-    "We are still working to settle on exact event dates and deadlines for D4SD 2020, but we anticipate a submission deadline of March 20, 2020. D4SD is structured to help people collaborate through a process of Discovery, Ideation, Prototyping, Pitching, and Activation. The timeline below offers a schedule of activities for participants who want to innovate.  If you want to get involved as a mentor, feedback provider or speaker, please <a href='/volunteer'>learn more about these roles</a>.",
-  title4: 'Deliverables',
-  content4:
-    'A valid submission for D4SD 2020 includes a written summary of a specific problem you aim to solve, a written summary of your solution, a link to a prototype of your solution, and a visual poster that can be printed and displayed at a design summit.',
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our volunteer opportunities or register to attend the D4SD Summit on May 12. ",
+  importantDates: [
+    {
+      date: new Date("03/13/2020"),
+      override_date: "Mid March",
+      title: 'Introductory Workshops',
+      body: 'Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!',
+    },
+    {
+      date:  new Date("03/20/2020"),
+      title: 'Community Feedback',
+      body: 'Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.',
+    },
+    {
+      date:  new Date("04/22/2020"),
+      title: 'Final submission deadline (Earth Day!)',
+      body: 'Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.'
+    },
+    {
+      date:  new Date("05/12/2020"),
+      title: 'D4SD Summit 2020',
+      body: 'Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!'
+    }
+  ],
   timeline: [
     {
       stage: 'Explore Challenges Impacting our Community ',

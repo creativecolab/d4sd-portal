@@ -13,11 +13,12 @@ import './style.less';
 import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (props: any) => {
-  const ref = useRef<HTMLHeadingElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
       // eslint-disable-next-line
+      console.log(ref.current, position);
       window.scrollTo({
         left: 0,
         top: position,
@@ -29,71 +30,51 @@ const WorkspaceLayout = (props: any) => {
   const [loggedIn] = useState(true);
   const loggedInHeaderText = 'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.';
   return (
-    <div>
+    <div className="SubmitPage">
       <Header
         title={workspaceContent.title1}
-        content={loggedIn ? loggedInHeaderText : workspaceContent.content1}
+        content={workspaceContent.content1}
         image={workspaceContent.image}
       />
-      <div className="container">
-        <div className="section">
-          <h2>{workspaceContent.title2}</h2>
-          <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
-          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" />
-          <Button onClick={scrollToRef}>LEARN MORE</Button>
+        <div className="section" id='section-1'>
+          <div className="container">
+            <h2 className="title">{workspaceContent.title2}</h2>
+            <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
+
+          </div>
         </div>
-        <div className="paragraph">
-          <h2 ref={ref}>{workspaceContent.title3}</h2>
-          <p dangerouslySetInnerHTML={{ __html: workspaceContent.content3 }} />
+        <div className="section" id='section-2' ref={ref}>
+          <div className="container">
+
+            {workspaceContent.importantDates.map((details ) => {
+              return (
+                <div className="date-box">
+                  <div className="date-info">
+                    {
+                      details.override_date ? <div className="date-month temp">{details.override_date}</div> :
+                      [<div className="date-month">{details.date.toDateString().substring(4,7).toUpperCase()}</div>,
+                      <div className="date-num">{details.date.getDate()}</div>]
+                    }
+
+                  </div>
+                  <div className="date-desc">
+                    <h2 className="desc-title">{details.title}</h2>
+                    <p className="desc">{details.body}</p>
+                  </div>
+                </div>
+              )
+            })}
+            <p className="bottomContent">{workspaceContent.content3}</p>
+            <a href="http://eepurl.com/c2kFon" target="_blank">
+              <Button>JOIN MAILING LIST</Button>
+            </a>
+          </div>
         </div>
-        <Row>
-          <Col lg={2} />
-          <Col lg={20}>
-            <Timeline type="card">
-              {workspaceContent.timeline.map((item) => (
-                <Timeline.Item id={item.img} key={item.img}>
-                  {loggedIn ? (
-                    <WorkspaceActionCard
-                      card={{
-                        title: item.stage,
-                        descHTML: item.detail,
-                        closed: false,
-                        // @ts-ignore
-                        shortDesc: item.shortDesc,
-                        buttonTitle: item.action1,
-                        active: item.state1 === 'active',
-                        // @ts-ignore
-                        dueDate: item.dueDate,
-                        // @ts-ignore
-                        startDate: item.startDate,
-                        buttonHandleClick: () => {
-                          // @ts-ignore;
-                          const win = window.open(item.link1, '_blank');
-                          win!.focus();
-                        }
-                      }}
-                    />
-                  ) : (
-                    <WorkspaceActionCard
-                      card={{
-                        title: item.stage,
-                        descHTML: item.detail,
-                        closed: false,
-                        // @ts-ignore
-                        shortDesc: item.shortDesc
-                      }}
-                    />
-                  )}
-                </Timeline.Item>
-              ))}
-            </Timeline>
-          </Col>
-          <Col lg={2} />
-        </Row>
-      </div>
-      <br />
-      <br />
-      <br />
+        <div className="section" id='section-3'>
+          <div className="container">
+
+          </div>
+        </div>
       <Footer />
     </div>
   );
