@@ -1,12 +1,33 @@
-.section {
-  .spon {
-    margin-bottom: 5vh;
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+.SponsorsLayout {
+  .sponsors-section {
+    overflow: hidden;
   }
-  h4 {
-    color: #4497ff;
-    font-weight: 650;
+  .section {
+
+    .spon {
+      margin-bottom: 5vh;
+    }
+    h4 {
+      color: #4497ff;
+      font-weight: 650;
+    }
+    li {
+      margin: 10px 20px;
+    }
   }
-  li {
-    margin: 10px 0;
+  .sponsor-benefits {
+    li {
+      color: @b1;
+    }
+  }
+  .logo {
+    width: 100%;
+    max-width: 240px;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
   }
 }

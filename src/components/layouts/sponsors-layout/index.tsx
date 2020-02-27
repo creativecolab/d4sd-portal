@@ -7,7 +7,7 @@ import './style.less';
 import { sponsorsContent } from '../../../assets/content';
 
 const SponsorsLayout = (): JSX.Element => (
-  <div>
+  <div className="SponsorsLayout">
     <Header
       title={sponsorsContent.title1}
       content={sponsorsContent.content1}
@@ -15,35 +15,35 @@ const SponsorsLayout = (): JSX.Element => (
     />
     <div style={{ backgroundColor: '#F0F8FF' }}>
       <div className="container">
-        <div className="section">
+        <div className="section sponsors-section">
           <h2>{sponsorsContent.title3}</h2>
           <br />
           <Row type="flex" justify="center" gutter={[48, 24]}>
-            <Col md={8} xs={18}>
+            <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img1}
-                style={{ width: '100%' }}
                 alt="designlab"
+                className="logo"
               />
             </Col>
-            <Col md={8} xs={18}>
+            <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img2}
-                style={{ width: '100%' }}
                 alt="yankelovich"
+                className="logo"
               />
             </Col>
-            <Col md={8} xs={18}>
+            <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img3}
-                style={{ width: '70%' }}
                 alt="ibm"
+                className="logo"
               />
             </Col>
-            <Col md={8} xs={18}>
+            <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img4}
-                style={{ width: '70%' }}
+                className="logo"
                 alt="nsf"
               />
             </Col>
@@ -59,7 +59,7 @@ const SponsorsLayout = (): JSX.Element => (
       <div className="section">
         <h2>{sponsorsContent.title2}</h2>
         {/* eslint-disable-next-line */}
-        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
+        <p className="sponsor-benefits" dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
         <br />
         <br />
         <a

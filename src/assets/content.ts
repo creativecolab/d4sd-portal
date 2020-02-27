@@ -248,9 +248,10 @@ export const involveContent = {
       image: sponsor,
       id: "sponsors",
       link:
-        "https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform",
-      isAction: "true",
-      action: "SIGN UP TO VOLUNTEER"
+        'https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform',
+      isAction: 'true',
+      action: 'SIGN UP TO VOLUNTEER',
+      new: '_blank'
     },
     {
       title: "Join the discussion",
@@ -531,9 +532,12 @@ export const workspaceContent = {
   title2: "How can you participate?",
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
-  title3: "n/a",
+
+  title3: '',
   content3:
-    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our volunteer opportunities or register to attend the D4SD Summit on May 12. ",
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. " +
+    "Keep reading below for details about the challenge rules and deliverables. " +
+    "If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
       date: new Date("03/13/2020"),
@@ -768,8 +772,9 @@ export const feedbackContent = {
 };
 
 export const sponsorsContent = {
-  image: "sponsors_header",
-  title1: "Sponsors",
+
+  image: 'sponsors_header',
+  title1: 'Sponsor',
   content1:
     "D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.",
   title2: "Sponsor Benefits",
