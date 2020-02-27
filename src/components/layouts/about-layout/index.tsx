@@ -67,39 +67,7 @@ const AboutLayout = (): JSX.Element => (
       <br />
       <br />
     </div>
-    <div className="container">
-      <div className="paragraph">
-        <h2>{workspaceContent.title3}</h2>
-      </div>
-      <Row>
-        <Col lg={2} />
-        <Col lg={20}>
-          <Timeline type="card">
-            {workspaceContent.timeline.map((item) => (
-              <Timeline.Item
-                id={item.img}
-                key={item.img}
-              >
-                <Collapse accordion>
-                  <Panel
-                    key={item.date}
-                    header={item.stage}
-                    className="timelinecard"
-                  >
-                    {/* eslint-disable-next-line */}
-                    <p dangerouslySetInnerHTML={{ __html: item.detail }} />
-                  </Panel>
-                </Collapse>
-              </Timeline.Item>
-            ))}
-          </Timeline>
-        </Col>
-        <Col lg={2} />
-      </Row>
-    </div>
-
-    <br />
-    <br />
+  
     <Footer />
   </div>
 );

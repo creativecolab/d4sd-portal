@@ -526,7 +526,7 @@ export const workspaceContent = {
   title2: 'How can you participate?',
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
-  title3: 'n/a',
+  title3: '',
   content3:
     "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our volunteer opportunities or register to attend the D4SD Summit on May 12. ",
   importantDates: [
