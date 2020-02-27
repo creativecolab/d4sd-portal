@@ -18,7 +18,7 @@ const SponsorsLayout = (): JSX.Element => (
         <div className="section sponsors-section">
           <h2>{sponsorsContent.title3}</h2>
           <br />
-          <Row type="flex" justify="center" gutter={[48, 0]}>
+          <Row type="flex" justify="center" gutter={[48, 24]}>
             <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img1}
