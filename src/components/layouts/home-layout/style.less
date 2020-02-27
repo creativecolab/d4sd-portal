@@ -15,10 +15,425 @@
   justify-content: space-between;
 }
 
+.summit-banner {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
+
+  background-color: #214278;
+  height: 200px;
+  width: 100%;
+  max-width: 870px;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .information {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .info-tile {
+      width: 50%;
+    }
+
+    .summit-event {
+      display: flex;
+      justify-content: space-around;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          margin-bottom: 10px;
+          font-size: 2.5rem;
+        }
+
+        h1 {
+          font-size: 7rem;
+          margin-bottom: 0.2em;
+        }
+      }
+
+      .title {
+        padding-top: 10px;
+
+        h1 {
+          margin-bottom: 0.2em;
+        }
+
+        h5 {
+          color: #fd9798;
+        }
+      }
+    }
+
+    .key-dates {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      padding-top: 10px;
+
+      .date {
+        color: #fd9798;
+      }
+
+      p {
+        margin-bottom: 0.5em;
+      }
+
+      .date-1,
+      .date-2 {
+        display: flex;
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .button-container {
+      width: 48%;
+    }
+
+    .button {
+      margin: 0px;
+    }
+
+    .outline {
+      color: white;
+      border-color: white;
+      background: transparent;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+          }
+          h1 {
+            font-size: 6.7rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 4rem;
+          }
+          h5 {
+            font-size: 2rem;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1180px) {
+    height: 180px;
+
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2rem;
+            margin-bottom: 4px;
+          }
+          h1 {
+            font-size: 6.5rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 3.7rem;
+          }
+          h5 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2rem;
+            margin-bottom: 4px;
+          }
+          h1 {
+            font-size: 5.4rem;
+          }
+        }
+        .title {
+          padding-top: 0;
+          h1 {
+            font-size: 3.2rem;
+            margin-bottom: 3px;
+          }
+          h5 {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      .key-dates {
+        margin-bottom: 5px;
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 815px) {
+    .information .summit-event {
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: @md) {
+    height: auto;
+    padding: 25px;
+    .information {
+      flex-direction: column;
+      .info-tile {
+        width: 100%;
+      }
+      .summit-event {
+        .title {
+          h1 {
+            font-size: 6rem;
+            margin-bottom: 10px;
+          }
+          h5 {
+            font-size: 3rem;
+          }
+        }
+        .date {
+          p {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+          }
+          h1 {
+            font-size: 7rem;
+          }
+        }
+      }
+      .key-dates {
+        margin-bottom: 20px;
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .action-buttons {
+      flex-direction: column;
+      .button-container {
+        width: 100%;
+      }
+      .learn-more {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: @sm) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 3.2rem;
+          }
+          h1 {
+            font-size: 8rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 7rem;
+          }
+          h5 {
+            font-size: 3.5rem;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 523px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2.8rem;
+          }
+          h1 {
+            font-size: 6.5rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 6rem;
+          }
+          h5 {
+            font-size: 3rem;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 465px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2.5rem;
+          }
+          h1 {
+            font-size: 6rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 5.5rem;
+          }
+          h5 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2.2rem;
+            margin-bottom: 0;
+          }
+          h1 {
+            font-size: 4.9rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 4.4rem;
+            margin-bottom: 0;
+          }
+          h5 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .key-dates {
+        padding-top: 0;
+        p {
+          font-size: 1.7rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 2rem;
+          }
+          h1 {
+            font-size: 4.5rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 4rem;
+          }
+          h5 {
+            font-size: 2rem;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 335px) {
+    .information {
+      .summit-event {
+        .date {
+          p {
+            font-size: 1.8rem;
+          }
+          h1 {
+            font-size: 4.2rem;
+          }
+        }
+        .title {
+          h1 {
+            font-size: 3.8rem;
+          }
+          h5 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      .key-dates p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
 .picitems {
   margin-bottom: 25px;
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -28,7 +443,7 @@
   }
 }
 .piccontents {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 .Home {
@@ -48,7 +463,6 @@
 // Section 3
 .challenges {
   .challenges-carousel {
-
     // text-align: center;
     @media screen and (min-width: 320px) {
       min-height: 820px;
