@@ -66,6 +66,7 @@ const AttendLayout = (): JSX.Element => {
           <p>{attendContent.content_1_1}</p>
           <p>{attendContent.content_1_2}</p>
           <br />
+          <p>Details coming soon about the event and how to register.</p>
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
         </div>
       </div>
