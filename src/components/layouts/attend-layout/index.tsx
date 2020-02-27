@@ -72,7 +72,6 @@ const AttendLayout = (): JSX.Element => {
           <br />
           <h3 className="comingSoon">{summitContent.comingSoon}</h3>
           <br />
-          <p>Details coming soon about the event and how to register.</p>
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
 
         </div>
