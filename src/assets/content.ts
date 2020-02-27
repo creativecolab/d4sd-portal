@@ -760,7 +760,7 @@ export const feedbackContent = {
 
 export const sponsorsContent = {
   image: 'sponsors_header',
-  title1: 'Sponsors',
+  title1: 'Sponsor',
   content1:
     'D4SD sponsorship goes towards supporting events and the people committed to advancing proposals aimed to make San Diego a more sustainable city. Sponsorship may come in many forms, so reach out to find out how your organization can play a part in D4SD 2020.',
   title2: 'Sponsor Benefits',
