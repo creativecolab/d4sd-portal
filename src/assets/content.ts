@@ -82,7 +82,7 @@ export const homeContent = {
     'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
   title2: 'How to Participate',
   content2_1:
-    'Everyone is welcome to participate in the D4SD 2020 challenge and summit. There are multiple ways to get involved, sucsh as submitting a proposal, attending the summit, volunteering with us, or sponsoring the challenge! Click on one of the roles below to explore different ways to get involved with this year’s D4SD challenge and summit.',
+    'Everyone is welcome to participate in the D4SD 2020 challenge and summit. There are multiple ways to get involved, such as submitting a proposal, attending the summit, volunteering with us, or sponsoring the challenge! Click on one of the roles below to explore different ways to get involved with this year’s D4SD challenge and summit.',
   content2_2:
     'D4SD 2020 will host a series of design events including speakers, studios, and design-athons, starting in January. This will culminate into a summit in April where innovators can pitch their proposed solutions, and build alliances to make change happen.',
   roles: [

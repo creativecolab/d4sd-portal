@@ -62,12 +62,12 @@ const HomeLayout = (): JSX.Element => {
           <div className="date-1">
             <p className="date">March 20</p>
             <div style={{ marginRight: '8px' }} />
-            <p>Feedback Exchange</p>
+            <p>Request Feedback</p>
           </div>
           <div className="date-2">
             <p className="date">April 22</p>
-            <div style={{ marginRight: '8px' }} />
-            <p>Final Submission</p>
+            <div style={{ marginRight: '14px' }} />
+            <p>Submit Proposals</p>
           </div>
         </div>
       </div>
