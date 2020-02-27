@@ -7,7 +7,7 @@ import './style.less';
 import { sponsorsContent } from '../../../assets/content';
 
 const SponsorsLayout = (): JSX.Element => (
-  <div>
+  <div className="SponsorsLayout">
     <Header
       title={sponsorsContent.title1}
       content={sponsorsContent.content1}
@@ -59,7 +59,7 @@ const SponsorsLayout = (): JSX.Element => (
       <div className="section">
         <h2>{sponsorsContent.title2}</h2>
         {/* eslint-disable-next-line */}
-        <p dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
+        <p className="sponsor-benefits" dangerouslySetInnerHTML={{ __html: sponsorsContent.content_2 }} />
         <br />
         <br />
         <a
