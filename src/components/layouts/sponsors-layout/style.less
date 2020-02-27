@@ -2,7 +2,11 @@
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
 .SponsorsLayout {
+  .sponsors-section {
+    overflow: hidden;
+  }
   .section {
+
     .spon {
       margin-bottom: 5vh;
     }
@@ -11,12 +15,19 @@
       font-weight: 650;
     }
     li {
-      margin: 10px 0;
+      margin: 10px 20px;
     }
   }
   .sponsor-benefits {
     li {
       color: @b1;
     }
+  }
+  .logo {
+    width: 100%;
+    max-width: 240px;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
   }
 }
