@@ -1,13 +1,11 @@
-import React, { useState, useRef } from 'react';
-import {
-  Row, Col, Card, Avatar, Button
-} from '@d4sd/components';
-import Footer from '../../Footer/index';
-import Menubar from '../../menubar';
-import '../../../styles/containers.less';
-import './style.less';
+import React, { useState, useRef } from "react";
+import { Row, Col, Card, Avatar, Button } from "@d4sd/components";
+import Footer from "../../Footer/index";
+import Menubar from "../../menubar";
+import "../../../styles/containers.less";
+import "./style.less";
 
-import { attendContent, summitContent } from '../../../assets/content';
+import { attendContent, summitContent } from "../../../assets/content";
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -18,7 +16,7 @@ const AttendLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -43,6 +41,7 @@ const AttendLayout = (): JSX.Element => {
           <br />
           <h3>{summitContent.title1}</h3>
           <br />
+          <br />
           <h3>{summitContent.title2}</h3>
           <div className="buttons">
             <Button
@@ -60,13 +59,20 @@ const AttendLayout = (): JSX.Element => {
         <div className="event-info">
           <h1 ref={ref}>{attendContent.title_1_1}</h1>
           <h2>{attendContent.title_1_2}</h2>
+
           <br />
           <h3>{attendContent.subtitle_1}</h3>
           <br />
-          <p>{attendContent.content_1_1}</p>
-          <p>{attendContent.content_1_2}</p>
+          <h3>
+            <a href={summitContent.addressLink} className="sum-add">{summitContent.address}</a>
+          </h3>
+          <h3>{summitContent.addressLine2}</h3>
           <br />
-          <Button>REGISTER ON EVENTBRITE</Button>
+          <p>{attendContent.content_1_1}{" "}{attendContent.content_1_2}</p>
+          <br />
+          <h3 className="comingSoon">{summitContent.comingSoon}</h3>
+          <br />
+          <Button className="register">REGISTER ON EVENTBRITE</Button>
         </div>
       </div>
       {/* <div className="event-details">
