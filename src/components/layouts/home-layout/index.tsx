@@ -57,7 +57,6 @@ const HomeLayout = (): JSX.Element => {
             <h1>D4SD Summit</h1>
             <h5>San Diego Central Library</h5>
           </div>
-          <div />
         </div>
         <div className="key-dates info-tile">
           <div className="date-1">
@@ -75,7 +74,7 @@ const HomeLayout = (): JSX.Element => {
       <div className="action-buttons">
         <Button
           type="primary" size="medium" onClick={scrollToRef}
-          className="button-container button"
+          className="button-container button learn-more"
         >
           LEARN MORE
         </Button>
