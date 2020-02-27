@@ -12,7 +12,7 @@ import AboutDiagram from '../../../assets/img/about_diagram.png';
 const { Panel } = Collapse;
 const { Meta } = Card;
 const AboutLayout = (): JSX.Element => (
-  <div>
+  <div className="AboutLayout">
     <Header
       title={aboutContent.title1}
       content={aboutContent.content1}
@@ -67,7 +67,7 @@ const AboutLayout = (): JSX.Element => (
       <br />
       <br />
     </div>
-  
+
     <Footer />
   </div>
 );

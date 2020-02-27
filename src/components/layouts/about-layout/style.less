@@ -1,30 +1,33 @@
 @import '../../../styles/vars.less';
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
-.aboutavatar {
-  @media screen and (max-width: @sm) {
-    width: 30px;
-    height: 30px;
+.AboutLayout {
+  .aboutavatar {
+    @media screen and (max-width: @sm) {
+      width: 30px;
+      height: 30px;
+    }
+    @media screen and (min-width: @sm) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @md) {
+      width: 80px;
+      height: 80px;
+    }
+    @media screen and (min-width: @lg) {
+      width: 70px;
+      height: 70px;
+    }
   }
-  @media screen and (min-width: @sm) {
-    width: 80px;
-    height: 80px;
-  }
-  @media screen and (min-width: @md) {
-    width: 80px;
-    height: 80px;
-  }
-  @media screen and (min-width: @lg) {
-    width: 70px;
-    height: 70px;
-  }
-}
 
-.ant-card-meta-description {
-  color: #333!important;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.2rem;
-  line-height: 3.3rem;
-  letter-spacing: 0.02rem;
-  text-align: left;
+  .ant-card-meta-description {
+    color: #333!important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    letter-spacing: 0.02rem;
+    text-align: left;
+  }
+
 }
