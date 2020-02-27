@@ -234,7 +234,8 @@ export const involveContent = {
       id: 'experts',
       link: '/volunteer/feedback_provider',
       isAction: 'true',
-      action: 'LEARN MORE'
+      action: 'LEARN MORE',
+      new: '_blank'
     },
     {
       title: 'Become a student volunteer for the D4SD Summit',
@@ -245,7 +246,8 @@ export const involveContent = {
       link:
         'https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform',
       isAction: 'true',
-      action: 'SIGN UP TO VOLUNTEER'
+      action: 'SIGN UP TO VOLUNTEER',
+      new: '_blank'
     },
     {
       title: 'Join the discussion',
