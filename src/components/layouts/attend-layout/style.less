@@ -1,6 +1,6 @@
-@import '../../../styles/vars.less';
-@import '../../../styles/mixins.less';
-@import '../../../styles/fonts.less';
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
 
 .AttendLayout {
   .event-info {
@@ -26,6 +26,24 @@
 
     h3 {
       color: #25497a;
+    }
+
+    .sum-add {
+      color: @d4sd-color-two;
+    }
+
+    .sum-add:hover{
+      text-decoration: underline;
+    }
+
+    .register{
+      background: @primary-txt;
+      border: none;
+    }
+
+    .comingSoon{
+      font-size: 1.8rem;
+      color: @d4sd-color;
     }
   }
 }
@@ -64,7 +82,7 @@
 }
 
 .summit {
-  background: url('../../../assets/img/d4sd_triangle.svg') bottom right, #25497a;
+  background: url("../../../assets/img/d4sd_triangle.svg") bottom right, #25497a;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -76,7 +94,7 @@
   @media screen and (min-width: 1090px) {
     flex-direction: row;
     padding: 0 100px;
-    height: 80vh;
+    height: 90vh;
     justify-content: center;
   }
 
@@ -120,6 +138,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: @margin-base-1;
     // height: 100%;
     justify-content: center;
     // margin-top: 9vh;
