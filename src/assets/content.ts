@@ -234,8 +234,7 @@ export const involveContent = {
       id: 'experts',
       link: '/volunteer/feedback_provider',
       isAction: 'true',
-      action: 'LEARN MORE',
-      new: '_blank'
+      action: 'LEARN MORE'
     },
     {
       title: 'Become a student volunteer for the D4SD Summit',
