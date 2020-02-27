@@ -64,7 +64,7 @@ const WorkspaceLayout = (props: any) => {
                 </div>
               )
             })}
-            <p className="bottomContent">{workspaceContent.content3}</p>
+            <p className="bottomContent" dangerouslySetInnerHTML={{__html: workspaceContent.content3}}></p>
             <a href="http://eepurl.com/c2kFon" target="_blank">
               <Button>JOIN MAILING LIST</Button>
             </a>
