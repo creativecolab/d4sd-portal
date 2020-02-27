@@ -15,10 +15,10 @@ const SponsorsLayout = (): JSX.Element => (
     />
     <div style={{ backgroundColor: '#F0F8FF' }}>
       <div className="container">
-        <div className="section">
+        <div className="section sponsors-section">
           <h2>{sponsorsContent.title3}</h2>
           <br />
-          <Row type="flex" justify="center" gutter={[48, 24]}>
+          <Row type="flex" justify="center" gutter={[48, 0]}>
             <Col md={6} xs={18}>
               <img
                 src={sponsorsContent.img1}
