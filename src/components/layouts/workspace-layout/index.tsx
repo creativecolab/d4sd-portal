@@ -59,7 +59,7 @@ const WorkspaceLayout = (props: any) => {
                   </div>
                   <div className="date-desc">
                     <h2 className="desc-title">{details.title}</h2>
-                    <p className="desc">{details.body}</p>
+                    <p className="desc" dangerouslySetInnerHTML={{ __html:details.body}}></p>
                   </div>
                 </div>
               )

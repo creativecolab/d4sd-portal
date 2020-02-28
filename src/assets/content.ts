@@ -544,7 +544,7 @@ export const workspaceContent = {
       override_date: "Mid March",
       title: "Introductory Workshops",
       body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!"
+        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>."
     },
     {
       date: new Date("03/20/2020"),

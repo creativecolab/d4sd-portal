@@ -19,11 +19,12 @@ const SponsorsLayout = (): JSX.Element => (
           <h2>{sponsorsContent.title3}</h2>
           <br />
           <Row type="flex" justify="center" gutter={[48, 24]}>
-            <Col md={6} xs={18}>
+            <Col md={7} xs={18}>
               <img
                 src={sponsorsContent.img1}
                 alt="designlab"
                 className="logo"
+                id="lab-logo"
               />
             </Col>
             <Col md={6} xs={18}>
@@ -31,6 +32,7 @@ const SponsorsLayout = (): JSX.Element => (
                 src={sponsorsContent.img2}
                 alt="yankelovich"
                 className="logo"
+                id="y-logo"
               />
             </Col>
             <Col md={6} xs={18}>
@@ -38,14 +40,15 @@ const SponsorsLayout = (): JSX.Element => (
                 src={sponsorsContent.img3}
                 alt="ibm"
                 className="logo"
+                id="IBM-logo"
               />
             </Col>
-            <Col md={6} xs={18}>
+            <Col md={4} xs={18}>
               <img
                 src={sponsorsContent.img4}
                 className="logo"
                 alt="nsf"
-                id="nsg-logo"
+                id="nsf-logo"
               />
             </Col>
           </Row>
