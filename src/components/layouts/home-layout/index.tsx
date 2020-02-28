@@ -106,10 +106,7 @@ const HomeLayout = (): JSX.Element => {
           <br />
           <br />
           <SummitBanner />
-        </div>
-        <div className="landing-image">
-          <img alt="landing_image" src={landingImage} />
-        </div>
+          </div>
       </div>
       <div className="container">
         <div className="paragraph">
