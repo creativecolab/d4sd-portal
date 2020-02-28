@@ -47,12 +47,20 @@ h4 {
   font-size: 2.6rem;
   font-weight: 600;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
+  margin: 0;
+  color: @blue-1;
 }
 
 h5 {
   font-size: 2.3rem;
   font-weight: 600;
   font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
+
+h6{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
 }
 
 p {
@@ -63,7 +71,12 @@ p {
   letter-spacing: 0.02rem;
   text-align: left;
 }
-
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  color: @d4sd-color-two;
+}
 // specific fix for ant-d icons on steps not vertically aligned because reset.css messes it up
 .ant-steps-item-finish .ant-steps-icon {
   vertical-align: text-top;

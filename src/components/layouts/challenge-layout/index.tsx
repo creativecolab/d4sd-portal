@@ -199,7 +199,7 @@ const ChallengeLayout = (): JSX.Element => {
                       Diego?
                     </p>
                   )}
-                  {!equitable && <h2 className="card-text">Safe Roadways</h2>}
+                  {!equitable && <h2 className="card-text">Equitable Access</h2>}
                 </div>
               </Card>
             </Col>

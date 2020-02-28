@@ -2,15 +2,15 @@ import React, { useRef } from 'react';
 import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
+import { NavLink } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent } from '../../../assets/content';
+import { homeContent, summitContent } from '../../../assets/content';
 import Footer from '../../Footer';
 import { contentHTML } from '../../../actions';
 
 import landingImage from '../../../assets/img/home_landing.svg';
-
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -31,7 +31,6 @@ const logoCarouselSettings = {
   autoplay: true
 };
 
-
 const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
   const scrollToRef = (): void => {
@@ -46,6 +45,56 @@ const HomeLayout = (): JSX.Element => {
     }
   };
 
+  const SummitBanner = (): JSX.Element => (
+    <div className="summit-banner">
+      <div className="information">
+        <div className="summit-event info-tile">
+          <div className="date">
+            <p>May</p>
+            <h1>12</h1>
+          </div>
+          <div className="title">
+            <h1>D4SD Summit</h1>
+            <h5>San Diego Central Library</h5>
+          </div>
+        </div>
+        <div className="key-dates info-tile">
+          <div className="date-1">
+            <p className="date">March 20</p>
+            <div style={{ marginRight: '8px' }} />
+            <p>Request Feedback</p>
+          </div>
+          <div className="date-2">
+            <p className="date">April 22</p>
+            <div style={{ marginRight: '14px' }} />
+            <p>Submit Proposals</p>
+          </div>
+        </div>
+      </div>
+      <div className="action-buttons">
+        <Button
+          type="primary" size="medium" onClick={scrollToRef}
+          className="button-container button learn-more"
+        >
+          LEARN MORE
+        </Button>
+        <a
+          href="http://eepurl.com/c2kFon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-container"
+        >
+          <Button
+            type="primary-outline" size="medium" style={{ width: '100%' }}
+            className="button outline"
+          >
+            JOIN MAILING LIST
+          </Button>
+        </a>
+      </div>
+    </div>
+  );
+
   return (
     <div className="Home">
       <Menubar />
@@ -56,51 +105,18 @@ const HomeLayout = (): JSX.Element => {
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
-          <a
-            href="http://eepurl.com/c2kFon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              type="primary"
-              size="medium"
-            >
-              JOIN MAILING LIST
-            </Button>
-          </a>
-          <Button
-            type="primary-outline"
-            size="medium"
-            onClick={scrollToRef}
-          >
-              LEARN MORE
-          </Button>
-        </div>
-        <div className="landing-image">
-          <img alt="landing_image" src={landingImage} />
-        </div>
+          <SummitBanner />
+          </div>
       </div>
-
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_2)} />
-          {/* eslint-enable */}
-          <a href="/getinvolved">
-            <Button
-              type="primary"
-              size="default"
-            >
-              GET INVOLVED
-            </Button>
-          </a>
+          <div className="text">
+            <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
+          </div>
         </div>
-        <Row
-          type="flex"
-          justify="center"
-        >
+        <Row className="rowpics" type="flex" justify="center">
           {homeContent.roles.map((role, i) => (
             <Col
               // eslint-disable-next-line
@@ -109,8 +125,15 @@ const HomeLayout = (): JSX.Element => {
               xs={{ span: 9 }}
             >
               <figure>
-                <img src={role.image} style={{ width: '75%' }} alt="" />
-                <h5>{role.contents}</h5>
+                <NavLink to={role.link}>
+                  <img
+                    className="picitems"
+                    src={role.image}
+                    style={{ width: '75%' }}
+                    alt=""
+                  />
+                </NavLink>
+                <h5 className="piccontents">{role.contents}</h5>
               </figure>
             </Col>
           ))}
@@ -118,10 +141,7 @@ const HomeLayout = (): JSX.Element => {
       </div>
 
       <div className="section challenges">
-        <Carousel
-          autoplay
-          className="challenges-carousel"
-        >
+        <Carousel autoplay className="challenges-carousel">
           {homeContent.challenges.map((challenge, i) => (
             // eslint-disable-next-line
             <div className="challenge-item" key={`challenge${i}`}>
@@ -137,9 +157,9 @@ const HomeLayout = (): JSX.Element => {
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
-                    <a href="/challenges">
+                    <NavLink to="/challenges">
                       <Button type="primary">LEARN MORE</Button>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -162,10 +182,7 @@ const HomeLayout = (): JSX.Element => {
           </a>
         </div>
       </div>
-      <Row
-        type="flex"
-        justify="center"
-      >
+      <Row type="flex" justify="center">
         {homeContent.actionImg.map((img, i) => (
           <Col
             // eslint-disable-next-line
@@ -183,19 +200,19 @@ const HomeLayout = (): JSX.Element => {
           <h2>{homeContent.title4}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={contentHTML(homeContent.content4)} />
-          <a href="/getinvolved">
-            <Button>GET INVOLVED</Button>
-          </a>
+          <NavLink to="volunteer">
+            <Button>VOLUNTEER</Button>
+          </NavLink>
         </div>
       </div>
 
-      { /* eslint-disable */ }
+      {/* eslint-disable */}
       <Carousel
         {...logoCarouselSettings}
         slidesToShow={window.innerWidth < 768 ? 1 : 3}
         className="logo-carousel"
       >
-        { /* eslint-enable */ }
+        {/* eslint-enable */}
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>

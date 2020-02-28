@@ -1,9 +1,51 @@
-.section {
-  h4 {
-    color: #4497ff;
-    font-weight: 650;
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+.SponsorsLayout {
+  .sponsors-wrapper {
+    background-color: @white;
   }
-  li {
-    margin: 10px 0;
+  .sponsor-benefits-wrapper {
+    background-color:#F0F8FF;
+  }
+  .sponsors-section {
+    overflow: hidden;
+  }
+  .section {
+
+    .spon {
+      margin-bottom: 5vh;
+    }
+    h4 {
+      color: #4497ff;
+      font-weight: 650;
+    }
+    li {
+      margin: 10px 20px;
+    }
+  }
+  .sponsor-benefits {
+    li {
+      color: @b1;
+    }
+  }
+  .logo {
+    width: 100%;
+    max-width: 240px;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  #lab-logo {
+    width: 100%;
+  }
+  #y-logo {
+    width: 100%;
+  }
+  #IBM-logo {
+    width: 90%;
+  }
+  #nsf-logo {
+    width:100%;
   }
 }

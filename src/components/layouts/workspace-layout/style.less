@@ -1,6 +1,118 @@
-@import '../../../styles/fonts.less';
-.d4sdtimeline-wrapper {
+@import "../../../styles/fonts.less";
+@img = timeline_pitch;
+
+.SubmitPage {
+  >.section {
+    padding-top: 6rem;
+    > .container {
+      padding-bottom: 4rem;
+    }
+  }
+  #section-1 {
+    .container {
+      .title {
+        margin-bottom: 4rem;
+      }
+    }
+    background-color: #EDF6FF;
+  }
+  #section-2 {
+    padding-top:0rem;
+    background-color: #EDF6FF;
+    .container {
+
+      .title {
+        margin-bottom: 8rem;
+      }
+      .date-box {
+        background-color: @white;
+        margin-bottom: 2rem;
+        border: 1px solid @d4sd-color;
+        border-radius: 4px;
+        padding: 12px;
+        .date-info {
+          display: inline-block;
+          width: 60px;
+          margin-right: 18px;
+          height: 100%;
+          margin-left: 6px;
+          vertical-align: top;
+          height: 100%;
+          margin: 8px;
+          .date-month {
+            font-weight: 500;
+            font-size: 1.75rem;
+            color: @b1;
+          }
+          .date-month.temp {
+            font-size: 2rem;
+          }
+          .date-num {
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: @d4sd-color;
+          }
+        }
+        .date-desc {
+          border-left: 1px solid @d4sd-color;
+          padding-left: 24px;
+          display: inline-block;
+          margin: 8px;
+          width: calc(100% - 60px - 30px - 12px);
+          .desc {
+            font-size: 1.75rem;
+          }
+          .desc-title {
+            text-align: left;
+            color: @d4sd-color;
+            font-weight: 600;
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      .bottomContent {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+}
+
+
+.WorkspaceActionCardWrapper {
+  .WorkspaceActionCard {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+    .card-title {
+      text-align: left;
+      font-weight: 600;
+    }
+    .card-short-desc, .card-full-desc {
+      font-size: 14px;
+    }
+    .arrow {
+      font-size: 20px;
+    }
+    width: 100%;
+    .card-status .submitted::before {
+      top: 3px;
+    }
+  }
+  .ant-progress-show-info .ant-progress-outer {
+    margin-right: 0px;
+  }
+  width: 100%;
+}
+.d4sdtimeline-wrapper  {
   .d4sdtimeline {
+    .ant-collapse {
+      border: none;
+      .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+        left: auto !important;
+        right: 15px;
+      }
+    }
     #timeline_discover {
       .ant-timeline-item-head:not(.ant-timeline-item-head-custom) {
         width: 50px;

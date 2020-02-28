@@ -15,9 +15,7 @@ import {
   StyledDotGroup
 } from '../assets/css/buttons.js';
 import { FlexibleImg } from '../assets/css/images.js';
-import {
-  H1, H2, H3, H5, IconTitle
-} from '../assets/css/fonts.js';
+import { H1, H2, H3, H5, IconTitle } from '../assets/css/fonts.js';
 import {
   OuterFlexBox,
   OuterContainer,
@@ -33,7 +31,6 @@ import {
   logos
 } from '../assets/content.js';
 import home0 from '../assets/img/home_landing.svg';
-
 import Menubar from '../components/menubar/index';
 // Carousel
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -45,7 +42,7 @@ class Home extends Component {
     this.mission = React.createRef();
   }
 
-  scrollToRef = (ref) => {
+  scrollToRef = ref => {
     window.scrollTo({
       left: 0,
       top: ref.current.offsetTop,
@@ -59,10 +56,7 @@ class Home extends Component {
         <Menubar />
         {/** **********************First card********************** */}
         <Bg image={home0}>
-          <OuterContainer
-            center
-            full="true"
-          >
+          <OuterContainer center full="true">
             <InnerContainer>
               <Br />
               <Br />
@@ -127,24 +121,18 @@ class Home extends Component {
               </H5>
               <Br />
               <OuterFlexBox center>
-                <Button
-                  href="/involve"
-                  size="large"
-                >
+                <Button href="/involve" size="large">
                   GET INVOLVED
                 </Button>
               </OuterFlexBox>
               <Br />
               <OuterFlexBox>
-                {roles.map((role) => (
+                {roles.map(role => (
                   <FlexibleWidth
                     theme={{ widthS: '50%', widthM: '25%' }}
                     key={role.image}
                   >
-                    <FlexibleImg
-                      theme={{ width: '70%' }}
-                      src={role.image}
-                    />
+                    <FlexibleImg theme={{ width: '70%' }} src={role.image} />
                     <IconTitle center>{role.contents}</IconTitle>
                   </FlexibleWidth>
                 ))}
@@ -164,18 +152,9 @@ class Home extends Component {
         >
           <Slider>
             {sampleChallenges.map((sampleChallenge, i) => (
-              <Slide
-                index={i}
-                key={i}
-              >
-                <Bg
-                  image={sampleChallenge.src}
-                  theme={{ color: '#EFF8FF' }}
-                >
-                  <OuterContainer
-                    center
-                    full
-                  >
+              <Slide index={i} key={i}>
+                <Bg image={sampleChallenge.src} theme={{ color: '#EFF8FF' }}>
+                  <OuterContainer center full>
                     <InnerContainer>
                       <Br />
                       <Br />
@@ -245,7 +224,7 @@ class Home extends Component {
             <Br />
             <Br />
             <OuterFlexBox>
-              {actionImg.map((img) => (
+              {actionImg.map(img => (
                 <FlexibleWidth
                   theme={{ widthS: '50%', widthM: '25%' }}
                   key={img}
@@ -276,10 +255,7 @@ class Home extends Component {
               </H5>
               <Br />
               <OuterFlexBox center>
-                <Button
-                  href="/involve"
-                  size="large"
-                >
+                <Button href="/involve" size="large">
                   GET INVOLVED
                 </Button>
               </OuterFlexBox>
@@ -301,14 +277,8 @@ class Home extends Component {
             >
               <Slider>
                 {logos.map((logo, i) => (
-                  <Slide
-                    index={i}
-                    key={i}
-                  >
-                    <FlexibleImg
-                      src={logo}
-                      theme={{ width: '100%' }}
-                    />
+                  <Slide index={i} key={i}>
+                    <FlexibleImg src={logo} theme={{ width: '100%' }} />
                   </Slide>
                 ))}
               </Slider>

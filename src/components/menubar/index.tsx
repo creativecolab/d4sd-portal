@@ -34,13 +34,19 @@ const Menubar = (): JSX.Element => {
         setTab(['workspace']);
         break;
       case '/':
-        setTab(['home']);
-        break;
-      case '/getinvolved':
-        setTab(['getInvolved']);
+        setTab(['']);
         break;
       case '/challenges':
         setTab(['challenges']);
+        break;
+      case '/attend':
+        setTab(['attend']);
+        break;
+      case '/submit':
+        setTab(['submit']);
+        break;
+      case '/volunteer':
+        setTab(['volunteer']);
         break;
       case '/resources':
         setTab(['resources']);
@@ -51,8 +57,8 @@ const Menubar = (): JSX.Element => {
       case '/about':
         setTab(['about']);
         break;
-      case '/sponsors':
-        setTab(['sponsors']);
+      case '/sponsor':
+        setTab(['sponsor']);
         break;
       default:
         setTab(['']);
@@ -87,14 +93,17 @@ const Menubar = (): JSX.Element => {
                 </span>
               )}
             >
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
+              {/* <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
                 <span>Home</span>
-              </Menu.Item>
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/getinvolved')}>
-                <span>Get Involved</span>
+              </Menu.Item> */}
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/volunteer')}>
+                <span>Volunteer</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/challenges')}>
                 <span>Challenges</span>
+              </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
+                <span>Attend</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
                 <span>Resources</span>
@@ -105,8 +114,8 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/about')}>
                 <span>About</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsors')}>
-                <span>Sponsors</span>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsor')}>
+                <span>Sponsor</span>
               </Menu.Item>
               {/** <Menu.Item className="mobile-menu-item">
                 <span>Workspace</span>
@@ -126,26 +135,32 @@ const Menubar = (): JSX.Element => {
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
-            <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
+            {/* <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
               <span>Home</span>
-            </Menu.Item>
-            <Menu.Item className="menu-item" key="getInvolved" onClick={(): void => history.push('/getinvolved')}>
-              <span>Get Involved</span>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item className="menu-item" key="challenges" onClick={(): void => history.push('/challenges')}>
               <span>Challenges</span>
             </Menu.Item>
             <Menu.Item className="menu-item" key="resources" onClick={(): void => history.push('/resources')}>
               <span>Resources</span>
             </Menu.Item>
+            <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
+              <span>Attend</span>
+            </Menu.Item>
+            <Menu.Item className="menu-item" key="submit" onClick={(): void => history.push('/submit')}>
+              <span>Submit</span>
+            </Menu.Item>
+            <Menu.Item className="menu-item" key="volunteer" onClick={(): void => history.push('/volunteer')}>
+              <span>Volunteer</span>
+            </Menu.Item>
+            <Menu.Item className="menu-item" key="sponsor" onClick={(): void => history.push('/sponsor')}>
+              <span>Sponsor</span>
+            </Menu.Item>
             <Menu.Item className="menu-item" key="faq" onClick={(): void => history.push('/faq')}>
               <span>FAQs</span>
             </Menu.Item>
             <Menu.Item className="menu-item" key="about" onClick={(): void => history.push('/about')}>
               <span>About</span>
-            </Menu.Item>
-            <Menu.Item className="menu-item" key="sponsors" onClick={(): void => history.push('/sponsors')}>
-              <span>Sponsors</span>
             </Menu.Item>
             {/**
             <Menu.Item

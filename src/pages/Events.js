@@ -13,7 +13,6 @@ class Events extends Component {
     return (
       <div id="about">
         <Navbar />
-
         <br />
         <br />
         <br />

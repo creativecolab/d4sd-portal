@@ -11,7 +11,7 @@ import { involveContent } from '../../../assets/content';
 const { Meta } = Card;
 
 const InvolvedLayout = (): JSX.Element => (
-  <div>
+  <div className="involveLayout">
     <Header
       title={involveContent.title1}
       content={involveContent.content1}
