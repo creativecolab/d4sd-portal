@@ -65,7 +65,6 @@ const AttendLayout = (): JSX.Element => {
           <h3>
             <a href={summitContent.addressLink} className="sum-add" target="_blank">{summitContent.address}</a>
           </h3>
-
           <br />
           <p>{attendContent.content_1_1}{" "}{attendContent.content_1_2}</p>
           <br />
