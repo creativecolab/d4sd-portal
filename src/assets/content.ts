@@ -799,9 +799,9 @@ export const attendContent = {
   title: "Attend",
   content:
     "The D4SD Summit provides a platform for innovators and experts to come together and tackle San Diego’s problems. Attend the summit to make an impact on making our city a more sustainable city.",
-  title_1_1: "DESIGN FOR SAN DIEGO",
+  title_1_1: "Summit Details",
   title_1_2: "2020 SUMMIT",
-  subtitle_1: "San Diego Central Library | May 12, 2020",
+  subtitle_1: "San Diego Central Library",
   content_1_1:
     "The 2020 Design for San Diego Summit will be a platform for all San Diegans to come together and tackle San Diego’s biggest issues surrounding mobility, health, environment, and housing.",
   content_1_2:
