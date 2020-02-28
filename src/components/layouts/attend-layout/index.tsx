@@ -58,15 +58,14 @@ const AttendLayout = (): JSX.Element => {
       <div className="AttendLayout container">
         <div className="event-info">
           <h1 ref={ref}>{attendContent.title_1_1}</h1>
-          <h2>{attendContent.title_1_2}</h2>
-
+          <h3>{summitContent.title3}</h3>
           <br />
           <h3>{attendContent.subtitle_1}</h3>
-          <br />
+          <h3>{summitContent.addressLine2}</h3>
           <h3>
             <a href={summitContent.addressLink} className="sum-add" target="_blank">{summitContent.address}</a>
           </h3>
-          <h3>{summitContent.addressLine2}</h3>
+
           <br />
           <p>{attendContent.content_1_1}{" "}{attendContent.content_1_2}</p>
           <br />
