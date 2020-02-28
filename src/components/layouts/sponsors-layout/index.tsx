@@ -45,6 +45,7 @@ const SponsorsLayout = (): JSX.Element => (
                 src={sponsorsContent.img4}
                 className="logo"
                 alt="nsf"
+                id="nsf-logo"
               />
             </Col>
           </Row>
