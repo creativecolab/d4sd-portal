@@ -1,18 +1,18 @@
 import React from 'react';
-import { render } from 'react-dom';
 import {
-  Row, Col, Form, Input, Button
+  Row, Col, Button
 } from '@d4sd/components';
 import ProviderInformation from './provider-information';
 import QuestionList from './question-list';
 import SubmissionPreview from './submission-preview';
-import Header from '../../Header/index';
 
-const FeedbackProviderLayout = (props: any) => {
+const FeedbackProviderLayout = (): JSX.Element => {
+  /* eslint-disable */
   const onSubmit = (data: any) => {
     console.log(data);
     // Write to firebase
   };
+  /* eslint-enable */
 
   return (
     <div>
@@ -22,11 +22,11 @@ const FeedbackProviderLayout = (props: any) => {
             <h1>Provide Feedback</h1>
             <p>
               {' '}
-Welcome and thank you for agreeing to provide feedback!
-          Start by saying a little bit about yourself.  Then please
-          review the team’s concept below on the left and provide
-          feedback on the right. Feedback makes the most impact
-          when it is positive, constructive, well-justified, and actionable.
+              Welcome and thank you for agreeing to provide feedback!
+              Start by saying a little bit about yourself.  Then please
+              review the team’s concept below on the left and provide
+              feedback on the right. Feedback makes the most impact
+              when it is positive, constructive, well-justified, and actionable.
             </p>
           </Col>
 

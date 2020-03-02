@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import { Row, Col, Card, Avatar, Button } from "@d4sd/components";
-import Footer from "../../Footer/index";
-import Menubar from "../../menubar";
-import "../../../styles/containers.less";
-import "./style.less";
+import React, { useRef } from 'react';
+import { Button } from '@d4sd/components';
+import Footer from '../../Footer/index';
+import Menubar from '../../menubar';
+import '../../../styles/containers.less';
+import './style.less';
 
-import { attendContent, summitContent } from "../../../assets/content";
+import { attendContent, summitContent } from '../../../assets/content';
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -16,7 +16,7 @@ const AttendLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -63,10 +63,19 @@ const AttendLayout = (): JSX.Element => {
           <h3>{attendContent.subtitle_1}</h3>
           <h3>{summitContent.addressLine2}</h3>
           <h3>
-            <a href={summitContent.addressLink} className="sum-add" target="_blank">{summitContent.address}</a>
+            <a
+              href={summitContent.addressLink} className="sum-add" target="_blank"
+              rel="noopener noreferrer"
+            >
+              {summitContent.address}
+            </a>
           </h3>
           <br />
-          <p>{attendContent.content_1_1}{" "}{attendContent.content_1_2}</p>
+          <p>
+            {attendContent.content_1_1}
+            {' '}
+            {attendContent.content_1_2}
+          </p>
           <br />
           <h3 className="comingSoon">{summitContent.comingSoon}</h3>
           <br />

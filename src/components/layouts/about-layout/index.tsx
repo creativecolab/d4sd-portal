@@ -1,15 +1,14 @@
 import React from 'react';
 import {
-  Row, Col, Card, Avatar, Timeline, Collapse
+  Row, Col, Card, Avatar
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { aboutContent, workspaceContent } from '../../../assets/content';
+import { aboutContent } from '../../../assets/content';
 import AboutDiagram from '../../../assets/img/about_diagram.png';
 
-const { Panel } = Collapse;
 const { Meta } = Card;
 const AboutLayout = (): JSX.Element => (
   <div className="AboutLayout">

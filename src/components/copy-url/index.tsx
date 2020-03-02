@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {
-  Button, Row, Icon
-} from '@d4sd/components';
+import { Button } from '@d4sd/components';
 import './style.less';
 
 interface PrelimFinishCardIF {
@@ -10,7 +8,6 @@ interface PrelimFinishCardIF {
 }
 
 const CopyURL = (props: {link: string}): JSX.Element => {
-  // eslint-disable-next-line
   // eslint-disable-next-line
   const [linkToFeedback, setLinkToFeedback] = useState(props.link);
   /* eslint-disable */
@@ -34,6 +31,8 @@ const CopyURL = (props: {link: string}): JSX.Element => {
     setURL();
   // eslint-disable-next-line
   }, []);
+
+  // eslint-disable-next-line
   const history = useHistory();
   // call setLinkToFeedback("NEW LINK") and setURL() to update links.
 
