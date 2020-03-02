@@ -54,9 +54,11 @@ const ViewFeedbackLayout = (): JSX.Element => {
 
   useEffect(() => {
     // first update feedback from firebase
+    // eslint-disable-next-line
     const emptyRatings: any = [];
     // store relation between user feedback (ID? or username?) to responses and ratings for each
     for (let i = 0; i < feedback.length; i += 1) {
+      // eslint-disable-next-line
       const responsesWithRatings: any = feedback[i].responses;
       for (let j = 0; j < responsesWithRatings.length; j += 1) {
         responsesWithRatings[j].rating = undefined;
@@ -68,6 +70,7 @@ const ViewFeedbackLayout = (): JSX.Element => {
     }
     // console.log()
     setFeedbackRatings(emptyRatings);
+  // eslint-disable-next-line
   }, []);
 
   const [feedbackIndex, setFeedbackIndex] = useState(0);
