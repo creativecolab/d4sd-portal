@@ -22,6 +22,7 @@ import ResourcesPage from './containers/resources-page';
 import FAQPage from './containers/faq-page';
 import SponsorsPage from './containers/sponsors-page';
 import WorkspacePage from './containers/workspace-page';
+import RequestFeedbackPage from './containers/request-feedback-page';
 import ProcessPage from './components/layouts/process-layout';
 import StakeholderPage from './components/layouts/stakeholder-layout';
 import FeedbackPage from './components/layouts/feedback-layout';
@@ -86,6 +87,7 @@ const App = (): JSX.Element => {
                 component={StakeholderPage}
               />
               <Route exact path="/submit" component={WorkspacePage} />
+              <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
               <Route
                 exact
                 path="/workspace/prelim"

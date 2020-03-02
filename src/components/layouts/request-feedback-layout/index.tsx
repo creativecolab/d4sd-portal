@@ -1,0 +1,98 @@
+import React, { useRef } from 'react';
+import { Button } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { requestFeedbackContent } from '../../../assets/content';
+import { contentHTML } from '../../../actions';
+
+const RequestFeedbackLayout = (): JSX.Element => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  // eslint-disable-next-line
+  const scrollToRef = (): void => {
+    if (ref && ref.current) {
+      const position = ref.current.offsetTop - 90;
+      // eslint-disable-next-line
+      console.log(ref.current, position);
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <div className="RequestFeedbackPage">
+      <Header
+        title={requestFeedbackContent.title}
+        content={requestFeedbackContent.content}
+        image={requestFeedbackContent.image}
+      />
+      <div className="section" id="section-1">
+        <div className="container">
+          <h2 className="title">{requestFeedbackContent.title_1}</h2>
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={contentHTML(requestFeedbackContent.content_1)} />
+        </div>
+      </div>
+      <div className="section" id="section-2" ref={ref}>
+        <div className="container">
+          <h2 className="title">{requestFeedbackContent.title_2}</h2>
+          <div className="date-box">
+            <div className="date">
+              {requestFeedbackContent.importantDates.map((details) => (
+                <React.Fragment key={`${details.key}_fragment`}>
+                  {details.start_date ? [
+                    <h2 key={`${details.key}_date`}>
+                      {details.start_date.toDateString().substring(4, 7).toUpperCase()}
+                      {' '}
+                      {details.start_date.getDate()}
+                      {' '}
+                    –
+                      {' '}
+                      {details.end_date.getDate()}
+                    </h2>
+                  ] : [
+                    <h2 key={`${details.key}_date`}>
+                      {details.date.toDateString().substring(4, 7).toUpperCase()}
+                      {' '}
+                      {details.date.getDate()}
+                    </h2>
+                  ]}
+                </React.Fragment>
+              ))}
+            </div>
+            <div className="title">
+              {requestFeedbackContent.importantDates.map((details) => (
+                <h3 key={`${details.key}_title`}>{details.title}</h3>
+              ))}
+            </div>
+          </div>
+          <Button disabled>Request Feedback</Button>
+        </div>
+      </div>
+      <div className="section" id="section-3">
+        <div className="container">
+          <h2 className="title">{requestFeedbackContent.title_3}</h2>
+          <p>{requestFeedbackContent.content_3_1}</p>
+          <p>{requestFeedbackContent.content_3_2}</p>
+          <p>{requestFeedbackContent.content_3_3}</p>
+        </div>
+      </div>
+      <div className="section" id="section-4">
+        <div className="container">
+          <h2 className="title">{requestFeedbackContent.title_4}</h2>
+        </div>
+      </div>
+      <div className="section" id="section-5">
+        <div className="container" />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default RequestFeedbackLayout;
