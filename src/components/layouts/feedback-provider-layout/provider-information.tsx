@@ -1,12 +1,10 @@
-import React, { useEffect, Provider } from 'react';
-import { render } from 'react-dom';
+import React, { useEffect } from 'react';
 import {
-  Row, Col, Form, Icon, Input, Button
+  Row, Col, Form, Input
 } from '@d4sd/components';
 import useForm from 'react-hook-form';
-import { withRouter } from 'react-router';
 
-const ProviderInformation = (props: any) => {
+const ProviderInformation = (): JSX.Element => {
   const { register, handleSubmit, setValue } = useForm();
 
   // get values from local storage
@@ -15,16 +13,18 @@ const ProviderInformation = (props: any) => {
   const institution = localStorage.getItem('institution') || '';
   const expertise = localStorage.getItem('expertise') || '';
 
-
+  /* eslint-disable */
   const onSubmit = (data: any) => {
     console.log(data);
     // store information to Firebase
   };
+  /* eslint-enable */
 
   // store to state
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
+    // eslint-disable-next-line
     console.log(e.target.value);
   };
 

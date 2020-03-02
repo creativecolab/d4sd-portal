@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component, useState } from 'react';
 
 class DisplaySolution extends Component {

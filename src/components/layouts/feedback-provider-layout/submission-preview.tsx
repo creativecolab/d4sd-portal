@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col, Card } from '@d4sd/components';
+import { Row, Col } from '@d4sd/components';
 import DisplaySolution from './solution-view';
 
-const SubmissionPreview = (props: any) => {
+const SubmissionPreview = (): JSX.Element => {
   // get these details from firebase via axios!
   const projectName = 'Lorem Ipsum';
   const teamMembers = ['Person1', 'Person2', 'Person3', 'Person4'];
@@ -14,7 +14,7 @@ const SubmissionPreview = (props: any) => {
 
       <p>
         <b>
-Project:
+          Project:
           {projectName}
         </b>
       </p>

@@ -4,11 +4,11 @@ import './index.less';
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import ReactGA from 'react-ga';
 import configureStore, { history } from './store';
 
-import ReactGA from 'react-ga';
 
 import ScrollToTop from './components/ScrollToTop';
 import SignupPage from './containers/signup-page';
@@ -28,27 +28,29 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
+// import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
 
 // eslint-disable-next-line
 // @ts-ignore
 const store = configureStore();
 
 const App = (): JSX.Element => {
-
-  const logPageView = (location: any) => {
+  // eslint-disable-next-line
+  const logPageView = (location: any): void => {
     const page = location.pathname || window.location.pathname;
-    ReactGA.set({ page: page });
+    ReactGA.set({ page });
     ReactGA.pageview(page);
-  }
+  };
 
   useEffect(() => {
-    //@ts-ignore
-      ReactGA.initialize('UA-90860713-2');
-      history.listen((location: any) => {
-        logPageView(location)
-      });
-      logPageView(history.location);
+    // eslint-disable-next-line
+    // @ts-ignore
+    ReactGA.initialize('UA-90860713-2');
+    // eslint-disable-next-line
+    history.listen((location: any) => {
+      logPageView(location);
+    });
+    logPageView(history.location);
   }, []);
   return (
     <Provider store={store}>
@@ -117,6 +119,7 @@ const App = (): JSX.Element => {
         </>
       </ConnectedRouter>
     </Provider>
-)};
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));

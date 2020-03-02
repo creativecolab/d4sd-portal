@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import {
-  Row, Steps, Header, FeedbackActionCard
+  Row, Header, FeedbackActionCard
 } from '@d4sd/components';
 import Menubar from '../../menubar/index';
 import CopyURL from '../../copy-url';
 import './style.less';
-import FeedbackCard from '../../preliminarysubmission-cards/feedback';
-
-const { Step } = Steps;
 
 const cardJson = {
   cards: [
@@ -25,6 +22,7 @@ const cardJson = {
 };
 
 const CommunityFeedbackLayout = (): JSX.Element => {
+  // eslint-disable-next-line
   const [linkToFeedback, setLinkToFeedback] = useState('LINK TO FEEDBACK');
   // signupStep
   return (

@@ -6,11 +6,9 @@ import { NavLink } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent, summitContent } from '../../../assets/content';
+import { homeContent } from '../../../assets/content';
 import Footer from '../../Footer';
 import { contentHTML } from '../../../actions';
-
-import landingImage from '../../../assets/img/home_landing.svg';
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -106,7 +104,7 @@ const HomeLayout = (): JSX.Element => {
           <br />
           <br />
           <SummitBanner />
-          </div>
+        </div>
       </div>
       <div className="container">
         <div className="paragraph">
