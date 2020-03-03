@@ -96,26 +96,29 @@ const Menubar = (): JSX.Element => {
               {/* <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
                 <span>Home</span>
               </Menu.Item> */}
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/volunteer')}>
-                <span>Volunteer</span>
-              </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/challenges')}>
                 <span>Challenges</span>
+              </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
+                <span>Resources</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
                 <span>Attend</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
-                <span>Resources</span>
+              <Menu.Item className="mobile-menu-item" key="submit" onClick={(): void => history.push('/submit')}>
+                <span>Submit</span>
+              </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/volunteer')}>
+                <span>Volunteer</span>
+              </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsor')}>
+                <span>Sponsor</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/faq')}>
                 <span>FAQs</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/about')}>
                 <span>About</span>
-              </Menu.Item>
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/sponsor')}>
-                <span>Sponsor</span>
               </Menu.Item>
               {/** <Menu.Item className="mobile-menu-item">
                 <span>Workspace</span>
