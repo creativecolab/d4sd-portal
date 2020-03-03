@@ -110,8 +110,8 @@ const HomeLayout = (): JSX.Element => {
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
-          {/* eslint-disable */}
           <div className="text">
+            {/* eslint-disable-next-line */}
             <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
           </div>
         </div>
@@ -205,13 +205,12 @@ const HomeLayout = (): JSX.Element => {
         </div>
       </div>
 
-      {/* eslint-disable */}
       <Carousel
+        // eslint-disable-next-line
         {...logoCarouselSettings}
         slidesToShow={window.innerWidth < 768 ? 1 : 3}
         className="logo-carousel"
       >
-        {/* eslint-enable */}
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>

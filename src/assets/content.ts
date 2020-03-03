@@ -74,6 +74,10 @@ import sponsors_yankelovich from "./img/sponsors_yankelovich.png";
 import sponsors_ibm from "./img/sponsors_ibm.svg";
 import sponsors_nsf from "./img/sponsors_nsf.png";
 
+import example_storyboard_1 from "./img/example_storyboard_1.png"
+import example_storyboard_2 from "./img/example_storyboard_2.png"
+import example_storyboard_3 from "./img/example_storyboard_3.png"
+
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1: "DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE",
@@ -894,3 +898,62 @@ export const attendContent = {
     }
   ]
 };
+
+export const requestFeedbackContent = {
+  image: "workspace_header",
+  title: "Request Feedback",
+  content:
+    "Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.",
+  title_1: "How does the community feedback exchange work?",
+  content_1:
+    "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see.",
+  title_2: 'Timeline for Community Feedback for D4SD:',
+  content3: '',
+  importantDates: [
+    {
+      start_date: new Date("03/15/2020"),
+      end_date: new Date("03/22/2020"),
+      title: "Open period for requesting early feedback on an idea",
+      key: "early_feedback"
+    },
+    {
+      start_date: new Date("03/23/2020"),
+      end_date: new Date("03/29/2020"),
+      title: "D4SD will recruit feedback providers from the community",
+      key: "feedback_providers"
+    },
+    {
+      date: new Date("03/3/2020"),
+      title: "Participants will receive an email with feedback",
+      key: "email_feedback"
+    },
+    {
+      date: new Date("04/22/2020"),
+      title: "Final deadline for submitting full proposals",
+      key: "final_deadline"
+    }
+  ],
+  title_3: "How should I format my idea?",
+  content_3_1: "This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!",
+  content_3_2: "Your early-stage idea/sketch should be submitted as a one-page PDF or image file (PNG, JPG, etc.) through the form above. Make sure your idea is visually legible and understandable. You will also fill out a Google Form that will ask for text descriptions of the problem, potential stakeholders, and the questions you want feedback on.",
+  content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
+  title_4: "Example storyboards:",
+  content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
+  storyboards: [
+    {
+      description: "Mark is tired of touristy sites and wants an authentic experience.",
+      image: example_storyboard_1,
+      key: "example_scenario2"
+    },
+    {
+      description: "Mark wants to make the most of his business trip.",
+      image: example_storyboard_2,
+      key: "example_scenario3"
+    },
+    {
+      description: "Going out for a date at your travel destination.",
+      image: example_storyboard_3,
+      key: "example_scenario5"
+    },   
+  ]
+}
