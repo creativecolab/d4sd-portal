@@ -98,14 +98,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <p>{requestFeedbackContent.content_4}</p>
           {requestFeedbackContent.storyboards.map((scenario) => (
             <React.Fragment key={scenario.key}>
-              <p>
-                <b>
-                  {scenario.title}
-                  :
-                </b>
-                {' '}
-                {scenario.description}
-              </p>
+              <p>{scenario.description}</p>
               <img src={scenario.image} alt={scenario.key} className="scenario-img" />
             </React.Fragment>
           ))}

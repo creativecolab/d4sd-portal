@@ -74,9 +74,9 @@ import sponsors_yankelovich from "./img/sponsors_yankelovich.png";
 import sponsors_ibm from "./img/sponsors_ibm.svg";
 import sponsors_nsf from "./img/sponsors_nsf.png";
 
-import example_storyboard_scenario2 from "./img/example_storyboard_scenario2.png"
-import example_storyboard_scenario3 from "./img/example_storyboard_scenario3.png"
-import example_storyboard_scenario5 from "./img/example_storyboard_scenario5.png"
+import example_storyboard_1 from "./img/example_storyboard_1.png"
+import example_storyboard_2 from "./img/example_storyboard_2.png"
+import example_storyboard_3 from "./img/example_storyboard_3.png"
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -888,21 +888,18 @@ export const requestFeedbackContent = {
   content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
   storyboards: [
     {
-      title: "Scenario 2",
       description: "Mark is tired of touristy sites and wants an authentic experience.",
-      image: example_storyboard_scenario2,
+      image: example_storyboard_1,
       key: "example_scenario2"
     },
     {
-      title: "Scenario 3",
       description: "Mark wants to make the most of his business trip.",
-      image: example_storyboard_scenario3,
+      image: example_storyboard_2,
       key: "example_scenario3"
     },
     {
-      title: "Scenario 5",
       description: "Going out for a date at your travel destination.",
-      image: example_storyboard_scenario5,
+      image: example_storyboard_3,
       key: "example_scenario5"
     },   
   ]
