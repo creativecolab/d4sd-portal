@@ -110,9 +110,6 @@ const RequestFeedbackLayout = (): JSX.Element => {
           ))}
         </div>
       </div>
-      <div className="section" id="section-5">
-        <div className="container" />
-      </div>
       <Footer />
     </div>
   );
