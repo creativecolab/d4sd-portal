@@ -6,11 +6,9 @@ import { NavLink } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent, summitContent } from '../../../assets/content';
+import { homeContent } from '../../../assets/content';
 import Footer from '../../Footer';
 import { contentHTML } from '../../../actions';
-
-import landingImage from '../../../assets/img/home_landing.svg';
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -48,27 +46,28 @@ const HomeLayout = (): JSX.Element => {
   const SummitBanner = (): JSX.Element => (
     <div className="summit-banner">
       <div className="information">
-        <div className="summit-event info-tile">
+        <div className="summit-event">
           <div className="date">
-            <p>May</p>
-            <h1>12</h1>
+            <p>{homeContent.summit_banner.date.toDateString().substring(4, 7)}</p>
+            <h1>{homeContent.summit_banner.date.getDate()}</h1>
           </div>
           <div className="title">
-            <h1>D4SD Summit</h1>
-            <h5>San Diego Central Library</h5>
+            <h1>{homeContent.summit_banner.title}</h1>
+            <h5>{homeContent.summit_banner.location}</h5>
           </div>
         </div>
-        <div className="key-dates info-tile">
-          <div className="date-1">
-            <p className="date">March 20</p>
-            <div style={{ marginRight: '8px' }} />
-            <p>Request Feedback</p>
-          </div>
-          <div className="date-2">
-            <p className="date">April 22</p>
-            <div style={{ marginRight: '14px' }} />
-            <p>Submit Proposals</p>
-          </div>
+        <div className="key-dates">
+          {homeContent.summit_banner.key_dates.map((date, i) => (
+            <div className={`date-${i + 1}`}>
+              <p className="date">
+                {date.date.toDateString().substring(4, 7)}
+                {' '}
+                {date.date.getDate()}
+              </p>
+              <div style={{ marginRight: '10px' }} />
+              <p>{date.label}</p>
+            </div>
+          ))}
         </div>
       </div>
       <div className="action-buttons">
@@ -106,7 +105,7 @@ const HomeLayout = (): JSX.Element => {
           <br />
           <br />
           <SummitBanner />
-          </div>
+        </div>
       </div>
       <div className="container">
         <div className="paragraph">

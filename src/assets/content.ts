@@ -80,6 +80,25 @@ export const homeContent = {
   title1: "How can we make San Diego a more sustainable city?",
   content1:
     "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
+  summit_banner: {
+    date: new Date("05/12/2020"),
+    title: "D4SD Summit",
+    location: "San Diego Central Library",
+    key_dates: [
+      {
+        date: new Date("03/19/2020"),
+        label: "Introductory Workshop"
+      },
+      {
+        date: new Date("03/22/2020"),
+        label: "Request Feedback"
+      },
+      {
+        date: new Date("04/22/2020"),
+        label: "Submit Proposals"
+      }
+    ]
+  },
   title2: "How to Participate",
   content2_1:
     "Everyone is welcome to participate in the D4SD 2020 challenge and summit. There are multiple ways to get involved, such as submitting a proposal, attending the summit, volunteering with us, or sponsoring the challenge! Click on one of the roles below to explore different ways to get involved with this year’s D4SD challenge and summit.",

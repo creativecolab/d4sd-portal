@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import useForm from 'react-hook-form';
-import { render } from 'react-dom';
 import { Row, Input } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
 import './styles.less';
 
-const QuestionList = (props: any) => {
-  const { register, handleSubmit, setValue } = useForm();
+const QuestionList = (): JSX.Element => {
+  const { register, setValue } = useForm();
 
   // Need to get these questions from Firebase
   const question1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
@@ -18,12 +17,14 @@ const QuestionList = (props: any) => {
   const answer1 = localStorage.getItem('question1') || '';
   const answer2 = localStorage.getItem('question2') || '';
   const answer3 = localStorage.getItem('question3') || '';
+
+  // eslint-disable-next-line
   const comments = localStorage.getItem('comments') || '';
 
 
   // Set the three questions from firebase
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
   };
