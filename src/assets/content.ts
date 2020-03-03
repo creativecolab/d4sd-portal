@@ -83,6 +83,25 @@ export const homeContent = {
   title1: "How can we make San Diego a more sustainable city?",
   content1:
     "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
+  summit_banner: {
+    date: new Date("05/12/2020"),
+    title: "D4SD Summit",
+    location: "San Diego Central Library",
+    key_dates: [
+      {
+        date: new Date("03/19/2020"),
+        label: "Introductory Workshop"
+      },
+      {
+        date: new Date("03/22/2020"),
+        label: "Request Feedback"
+      },
+      {
+        date: new Date("04/22/2020"),
+        label: "Submit Proposals"
+      }
+    ]
+  },
   title2: "How to Participate",
   content2_1:
     "Everyone is welcome to participate in the D4SD 2020 challenge and summit. There are multiple ways to get involved, such as submitting a proposal, attending the summit, volunteering with us, or sponsoring the challenge! Click on one of the roles below to explore different ways to get involved with this year’s D4SD challenge and summit.",
@@ -543,29 +562,63 @@ export const workspaceContent = {
     "If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("03/13/2020"),
+      date: new Date("03/19/2020"),
       override_date: "Mid March",
       title: "Introductory Workshops",
       body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>."
+        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
+      subbody: {
+        date: new Date("03/19/2020"),
+        time: "5:30 – 8pm",
+        content: "in partnership with ScaleSD and DowntownWorks",
+        key: "workshop"
+      },
+      action_button: {
+        label: "SIGN UP FOR MAR 19TH WORKSHOP",
+        url: "",
+        className: "long-label",
+        disabled: true
+      },
+      key: "intro_workshops"
     },
     {
-      date: new Date("03/20/2020"),
+      date: new Date("03/22/2020"),
       title: "Community Feedback",
       body:
-        "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives."
+        "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+      action_button: {
+        label: "REQUEST FEEDBACK",
+        url: "/submit/request-feedback",
+        className: "",
+        disabled: false
+      },
+      key: "community_feedback"
     },
     {
       date: new Date("04/22/2020"),
       title: "Final submission deadline (Earth Day!)",
       body:
-        "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit."
+        "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
+      action_button: {
+        label: "SUBMIT A PROPOSAL",
+        url: "/submit/submit-proposal",
+        className: "",
+        disabled: false
+      },
+      key: "final_submission"
     },
     {
       date: new Date("05/12/2020"),
       title: "D4SD Summit 2020",
       body:
-        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!"
+        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+      action_button: {
+        label: "REGISTER FOR MAY 12TH SUMMIT",
+        url: "",
+        className: "long-label",
+        disabled: true
+      },
+      key: "d4sd_summit"
     }
   ],
   timeline: [
