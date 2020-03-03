@@ -162,6 +162,9 @@ const SubmitProposalLayout = (): JSX.Element => {
             ))}
           </ul>
           <p>{submitProposalContent.content_5_3}</p>
+          {submitProposalContent.poster_examples.map((example, i) => (
+            <img src={example} alt={`${example}_${i}`} className="example-poster" />
+          ))}
         </div>
       </div>
       <div className="section" id="section-6">
