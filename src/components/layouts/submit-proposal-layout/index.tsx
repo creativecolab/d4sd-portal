@@ -54,7 +54,7 @@ const SubmitProposalLayout = (): JSX.Element => {
                 <React.Fragment key={`${details.key}_fragment`}>
                   {/* eslint-disable-next-line */}
                   {details.date_overlap ? [
-                    <li>
+                    <li key={`${details.key}_li`}>
                       <p>
                         <b>
                           {details.start_date.toDateString().substring(4, 7).toUpperCase()}
@@ -74,7 +74,7 @@ const SubmitProposalLayout = (): JSX.Element => {
                     </li>
                   ]
                     : details.start_date ? [
-                      <li>
+                      <li key={`${details.key}_li`}>
                         <p>
                           <b>
                             {details.start_date.toDateString().substring(4, 7).toUpperCase()}
@@ -91,7 +91,7 @@ const SubmitProposalLayout = (): JSX.Element => {
                         </p>
                       </li>
                     ] : [
-                      <li>
+                      <li key={`${details.key}_li`}>
                         <p>
                           <b>
                             {details.date.toDateString().substring(4, 7).toUpperCase()}
@@ -155,20 +155,22 @@ const SubmitProposalLayout = (): JSX.Element => {
           <p>{submitProposalContent.content_5_1}</p>
           <p style={{ marginBottom: 5 }}>{submitProposalContent.content_5_2}</p>
           <ul style={{ marginBottom: '1.5em' }}>
-            {submitProposalContent.poster_items.map((item) => (
-              <li>
+            {submitProposalContent.poster_items.map((item, i) => (
+              // eslint-disable-next-line
+              <li key={`poster_item_${i}_fragment`}>
                 {item}
               </li>
             ))}
           </ul>
           <p>{submitProposalContent.content_5_3}</p>
           {submitProposalContent.poster_examples.map((example, i) => (
-            <img src={example} alt={`${example}_${i}`} className="example-poster" />
+            <img
+              src={example} alt={`${example}_${i}`} className="example-poster"
+              key={`${example}_img`}
+              // fix this key with unique image id
+            />
           ))}
         </div>
-      </div>
-      <div className="section" id="section-6">
-        <div className="container" />
       </div>
       <Footer />
     </div>
