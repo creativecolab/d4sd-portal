@@ -95,6 +95,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
       <div className="section" id="section-4">
         <div className="container">
           <h5 className="title">{requestFeedbackContent.title_4}</h5>
+          <p>{requestFeedbackContent.content_4}</p>
           {requestFeedbackContent.storyboards.map((scenario) => (
             <React.Fragment key={scenario.key}>
               <p>
