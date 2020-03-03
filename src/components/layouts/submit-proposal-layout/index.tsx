@@ -108,7 +108,7 @@ const SubmitProposalLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <Button disabled>Submit Team Proposal</Button>
+          <Button disabled>SUBMIT TEAM PROPOSAL</Button>
         </div>
       </div>
       <div className="section" id="section-3">
