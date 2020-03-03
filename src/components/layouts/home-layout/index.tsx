@@ -46,7 +46,7 @@ const HomeLayout = (): JSX.Element => {
   const SummitBanner = (): JSX.Element => (
     <div className="summit-banner">
       <div className="information">
-        <div className="summit-event info-tile">
+        <div className="summit-event">
           <div className="date">
             <p>{homeContent.summit_banner.date.toDateString().substring(4, 7)}</p>
             <h1>{homeContent.summit_banner.date.getDate()}</h1>
@@ -56,7 +56,7 @@ const HomeLayout = (): JSX.Element => {
             <h5>{homeContent.summit_banner.location}</h5>
           </div>
         </div>
-        <div className="key-dates info-tile">
+        <div className="key-dates">
           {homeContent.summit_banner.key_dates.map((date, i) => (
             <div className={`date-${i + 1}`}>
               <p className="date">
