@@ -76,7 +76,7 @@ const WorkspaceLayout = (): JSX.Element => {
                     </li>
                   </ul>
                 ] : []}
-                <Button className="action-button" onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
+                <Button className={`action-button ${details.action_button.className}`} onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
               </div>
             </div>
           ))}

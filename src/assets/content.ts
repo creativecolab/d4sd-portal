@@ -540,7 +540,7 @@ export const workspaceContent = {
     "If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("03/13/2020"),
+      date: new Date("03/19/2020"),
       override_date: "Mid March",
       title: "Introductory Workshops",
       body:
@@ -554,6 +554,7 @@ export const workspaceContent = {
       action_button: {
         label: "SIGN UP FOR MAR 19TH WORKSHOP",
         url: "",
+        className: "long-label",
         disabled: true
       },
       key: "intro_workshops"
@@ -566,6 +567,7 @@ export const workspaceContent = {
       action_button: {
         label: "REQUEST FEEDBACK",
         url: "/submit/request-feedback",
+        className: "",
         disabled: false
       },
       key: "community_feedback"
@@ -578,6 +580,7 @@ export const workspaceContent = {
       action_button: {
         label: "SUBMIT A PROPOSAL",
         url: "/submit/submit-proposal",
+        className: "",
         disabled: false
       },
       key: "final_submission"
@@ -590,6 +593,7 @@ export const workspaceContent = {
       action_button: {
         label: "REGISTER FOR MAY 12TH SUMMIT",
         url: "",
+        className: "long-label",
         disabled: true
       },
       key: "d4sd_summit"
