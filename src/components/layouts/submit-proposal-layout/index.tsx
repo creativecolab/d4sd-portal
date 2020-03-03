@@ -163,13 +163,15 @@ const SubmitProposalLayout = (): JSX.Element => {
             ))}
           </ul>
           <p>{submitProposalContent.content_5_3}</p>
-          {submitProposalContent.poster_examples.map((example, i) => (
-            <img
-              src={example} alt={`${example}_${i}`} className="example-poster"
-              key={`${example}_img`}
+          <div className="poster-examples">
+            {submitProposalContent.poster_examples.map((example, i) => (
+              <img
+                src={example} alt={`${example}_${i}`} className="example-poster"
+                key={`${example}_img`}
               // fix this key with unique image id
-            />
-          ))}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

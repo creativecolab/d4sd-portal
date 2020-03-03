@@ -99,9 +99,28 @@
       }
     }
 
-    .example-poster {
-      margin: 0.5rem;
-      width: 30%;
+    .poster-examples {
+      display: flex;
+      justify-content: space-between;
+      margin: 2em 0;
+
+      .example-poster {
+        width: 32%;
+      }
+    }
+
+    @media screen and (max-width: @md) {
+      .poster-examples {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em 0;
+
+        .example-poster {
+          width: 80%;
+          margin-bottom: 1em;
+        }
+      }
     }
   }
 }
