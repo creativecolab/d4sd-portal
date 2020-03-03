@@ -40,36 +40,46 @@ const RequestFeedbackLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          <h2 className="title">{requestFeedbackContent.title_2}</h2>
+          <h5 className="title">{requestFeedbackContent.title_2}</h5>
           <div className="date-box">
-            <div className="date">
+            <ul>
               {requestFeedbackContent.importantDates.map((details) => (
                 <React.Fragment key={`${details.key}_fragment`}>
+                  {/* eslint-disable-next-line */}
                   {details.start_date ? [
-                    <h2 key={`${details.key}_date`}>
-                      {details.start_date.toDateString().substring(4, 7).toUpperCase()}
-                      {' '}
-                      {details.start_date.getDate()}
-                      {' '}
-                    –
-                      {' '}
-                      {details.end_date.getDate()}
-                    </h2>
+                    <li>
+                      <p>
+                        <b>
+                          {details.start_date.toDateString().substring(4, 7).toUpperCase()}
+                          {' '}
+                          {details.start_date.getDate()}
+                          {' '}
+                          –
+                          {' '}
+                          {details.end_date.getDate()}
+                          :
+                        </b>
+                        {' '}
+                        {details.title}
+                      </p>
+                    </li>
                   ] : [
-                    <h2 key={`${details.key}_date`}>
-                      {details.date.toDateString().substring(4, 7).toUpperCase()}
-                      {' '}
-                      {details.date.getDate()}
-                    </h2>
+                    <li>
+                      <p>
+                        <b>
+                          {details.date.toDateString().substring(4, 7).toUpperCase()}
+                          {' '}
+                          {details.date.getDate()}
+                          :
+                        </b>
+                        {' '}
+                        {details.title}
+                      </p>
+                    </li>
                   ]}
                 </React.Fragment>
               ))}
-            </div>
-            <div className="title">
-              {requestFeedbackContent.importantDates.map((details) => (
-                <h3 key={`${details.key}_title`}>{details.title}</h3>
-              ))}
-            </div>
+            </ul>
           </div>
           <Button disabled>Request Feedback</Button>
         </div>
@@ -84,7 +94,20 @@ const RequestFeedbackLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-4">
         <div className="container">
-          <h2 className="title">{requestFeedbackContent.title_4}</h2>
+          <h5 className="title">{requestFeedbackContent.title_4}</h5>
+          {requestFeedbackContent.storyboards.map((scenario) => (
+            <React.Fragment key={scenario.key}>
+              <p>
+                <b>
+                  {scenario.title}
+                  :
+                </b>
+                {' '}
+                {scenario.description}
+              </p>
+              <img src={scenario.image} alt={scenario.key} className="scenario-img" />
+            </React.Fragment>
+          ))}
         </div>
       </div>
       <div className="section" id="section-5">
