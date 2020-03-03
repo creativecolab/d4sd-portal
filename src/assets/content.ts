@@ -86,7 +86,7 @@ export const homeContent = {
     location: "San Diego Central Library",
     key_dates: [
       {
-        date: new Date("03/17/2020"),
+        date: new Date("03/19/2020"),
         label: "Introductory Workshop"
       },
       {
