@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
@@ -8,6 +9,7 @@ import { workspaceContent } from '../../../assets/content';
 
 const WorkspaceLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
+  const history = useHistory();
 
   // eslint-disable-next-line
   const scrollToRef = (): void => {
@@ -45,25 +47,43 @@ const WorkspaceLayout = (): JSX.Element => {
         <div className="container">
 
           {workspaceContent.importantDates.map((details) => (
-            <div className="date-box">
+            <div className="date-box" key={`${details.key}_box`}>
               <div className="date-info">
                 {
-                  details.override_date ? <div className="date-month temp">{details.override_date}</div>
-                    : [<div className="date-month">{details.date.toDateString().substring(4, 7).toUpperCase()}</div>,
-                      <div className="date-num">{details.date.getDate()}</div>]
+                  details.override_date ? <div className="date-month temp" key={`${details.key}_month`}>{details.override_date}</div>
+                    : [<div className="date-month" key={`${details.key}_month`}>{details.date.toDateString().substring(4, 7).toUpperCase()}</div>,
+                      <div className="date-num" key={`${details.key}_num`}>{details.date.getDate()}</div>]
                 }
               </div>
               <div className="date-desc">
                 <h2 className="desc-title">{details.title}</h2>
                 {/* eslint-disable-next-line */}
                 <p className="desc" dangerouslySetInnerHTML={{ __html: details.body }} />
+                {details.subbody ? [
+                  <ul key={details.subbody.key}>
+                    <li>
+                      <p className="desc">
+                        <b>
+                          {details.date.toDateString().substring(4, 7).toUpperCase()}
+                          {' '}
+                          {details.date.getDate()}
+                          {' '}
+                          {details.subbody.time}
+                        </b>
+                        {' '}
+                        {details.subbody.content}
+                      </p>
+                    </li>
+                  </ul>
+                ] : []}
+                <Button className={`action-button ${details.action_button.className}`} onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
               </div>
             </div>
           ))}
           {/* eslint-disable-next-line */}
           <p className="bottomContent" dangerouslySetInnerHTML={{ __html: workspaceContent.content3 }} />
           <a href="http://eepurl.com/c2kFon" target="_blank" rel="noopener noreferrer">
-            <Button>JOIN MAILING LIST</Button>
+            <Button>JOIN THE NEWSLETTER!</Button>
           </a>
         </div>
       </div>
