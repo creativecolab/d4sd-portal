@@ -552,7 +552,7 @@ export const workspaceContent = {
         key: "workshop"
       },
       action_button: {
-        label: "Sign up for May 19th Workshop",
+        label: "SIGN UP FOR MAR 19TH WORKSHOP",
         url: "",
         disabled: true
       },
@@ -564,7 +564,7 @@ export const workspaceContent = {
       body:
         "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
       action_button: {
-        label: "Request Feedback",
+        label: "REQUEST FEEDBACK",
         url: "/submit/request-feedback",
         disabled: false
       },
@@ -576,7 +576,7 @@ export const workspaceContent = {
       body:
         "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
       action_button: {
-        label: "Submit a Proposal",
+        label: "SUBMIT A PROPOSAL",
         url: "/submit/submit-proposal",
         disabled: false
       },
@@ -588,7 +588,7 @@ export const workspaceContent = {
       body:
         "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
       action_button: {
-        label: "Register for Summit",
+        label: "REGISTER FOR MAY 12TH SUMMIT",
         url: "",
         disabled: true
       },
