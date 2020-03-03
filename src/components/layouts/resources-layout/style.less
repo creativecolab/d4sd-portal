@@ -20,6 +20,7 @@
       background-size: 125%;
     }
   }
+
   .involve-cards {
     margin-top: @margin-base * 2;
   }
@@ -61,6 +62,85 @@
     }
     @media screen and (min-width: @xl) {
       width: 70%;
+    }
+  }
+}
+
+.extra {
+  h1 {
+    margin-top: 5vh;
+    font-size: 3rem;
+    text-align: left;
+    color: #4496FF;
+    line-height: 15px;
+  }
+  h3 {
+    text-align: left;
+    line-height: 50px;
+
+  }
+}
+
+.paragraph {
+  padding-top: 2vh;
+
+  .cardtitle {
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 3.5vh;
+  }
+  .cardphoto {
+    border-radius: 10px 10px 0px 0px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .involve-card {
+    height: 650px;
+    .title {
+      text-align: left;
+      font-size: 2.75rem;
+      line-height: 40px;
+    }
+    .source {
+      text-align: left;
+    }
+
+    p {
+      margin-top: 3vh;
+    }
+
+    .buttoncontainer {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      right: 2px;
+      width: 100%;
+    }
+  }
+}
+
+.tabcontainer {
+  display: flex;
+  justify-content: center;
+  .resourcetabs {
+    display: flex;
+    width: 65%;
+    margin-top: 5vh;
+    margin-left: 4vh;
+
+    h1 {
+      color: #A7A7A7;
+      font-size: 3rem;
+      &:hover {
+        cursor: pointer;
+      }
+      margin-right: 5vw;
+    }
+    .selected {
+      color: #4496FF;
+      border-bottom: 4px solid #4496FF;
     }
   }
 }
