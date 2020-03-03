@@ -882,3 +882,96 @@ export const requestFeedbackContent = {
   content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
   title_4: "Example storyboards:"
 }
+
+export const submitProposalContent = {
+  image: "workspace_header",
+  title: "Submit a Proposal",
+  content:
+    "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region.  Read below to find out how to enter.",
+  title_1: "D4SD Challenge Details",
+  content_1_1: "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will get free registration (for up to 6 team members) for the D4SD Summit on May 12th and a chance to win great prizes.",
+  content_1_2_1: "A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the",
+  content_1_2_2: "D4SD poster templates",
+  content_1_2_3: "below. Your team poster should also describe the problem and solution, and visually represent a prototype of your idea. If teams use the poster template, and send at least one member to the Summit, D4SD will cover printing and shipping costs and will have your poster ready to display on May 12!",
+  content_1_3: "Teams may optionally submit a 2-minute video and a PDF document with additional details that judges can use to assess your idea.",
+  title_2: "Timeline for D4SD Submissions:",
+  importantDates: [
+    {
+      start_date: new Date("04/15/2020"),
+      end_date: new Date("04/22/2020"),
+      title: "Open period for submitting your proposal to D4SD 2020",
+      key: "submit_proposal"
+    },
+    {
+      date_overlap: true,
+      start_date: new Date("04/23/2020"),
+      end_date: new Date("05/04/2020"),
+      title: "Judging period for D4SD submissions",
+      key: "judging_period"
+    },
+    {
+      date: new Date("05/05/2020"),
+      title: "Notifications sent for proposals to give verbal pitches at the Summit",
+      key: "notifications_pitches"
+    },
+    {
+      date: new Date("05/12/2020"),
+      title: "Showcase your poster at the D4SD Summit",
+      key: "d4sd_showcase"
+    }
+  ],
+  title_3: "Submission Categories",
+  content_3_1: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:",
+  submission_types: [
+    {
+      title: "Entrepreneurial",
+      description: "Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.",
+      key: "entrepreneurial"
+    },
+    {
+      title: "Civic",
+      description: "These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).",
+      key: "civic"
+    },
+    {
+      title: "Philanthropic",
+      description: "These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.",
+      key: "philanthropic"
+    }
+  ],
+  title_4: "Judging Process and Criteria",
+  content_4_1: "A committee of experts will judge all submissions before the D4SD Summit and will select 8 teams to verbally present their ideas on stage. The expert panel of judges will assess submissions primarily based on the Poster submission, but they will also refer to the responses on the Final Submission Google Form, as well as the optional video and additional materials.",
+  content_4_2: "Judges will keep in mind these key criteria:",
+  criteria: [
+    {
+      item: "Human-centered process",
+      points: ["How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?", "To what extent does the team discover the core problems at the heart of a civic challenge?"],
+      key: "human_centered_process"
+    },
+    {
+      item: "Improving on status quo",
+      points: ["Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?", "Does this proposal expand on what San Diego already has?", "How unique is the solution compared to other available solutions?"],
+      key: "status_quo"
+    },
+    {
+      item: "Feasibility/viability",
+      points: ["How likely is it that this proposal could get implemented?", "Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?"],
+      key: "feasibility_viability"
+    },
+    {
+      item: "Impact/desirability/harmony",
+      points: ["How will the solution affect people?", "Has the team identified and worked to mitigate potential downsides?"],
+      key: "impact_desirability_harmony"
+    },
+    {
+      item: "Communication quality",
+      points: ["Does the poster follow good visual design principles?", "Does the team effectively communicate a problem and proposed solution?", "Does the optional video tell a compelling story?"],
+      key: "communication_quality"
+    }
+  ],
+  title_5: "Poster Templates and Examples",
+  content_5_1: "Assuming your team meets the requirements, D4SD will pay to print and display your poster at the Design for San Diego summit on May 12 at the San Diego Central Library. First, at least one team member must plan to register and attend the May 12th summit to share your team’s poster.",
+  content_5_2: "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
+  poster_items: ["your team’s topic area and specific challenge/mission", "insights from online/user research", "constraints and resources related to your problem", "your team’s proposed solution, including photos of a prototype, if possible", "an implementation plan, including rough budgets and action steps"],
+  content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form."
+}
