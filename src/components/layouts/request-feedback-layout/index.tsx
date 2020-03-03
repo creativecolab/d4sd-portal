@@ -81,7 +81,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <Button disabled>Request Feedback</Button>
+          <Button disabled>REQUEST FEEDBACK</Button>
         </div>
       </div>
       <div className="section" id="section-3">
