@@ -2,18 +2,28 @@ import React, { useState } from 'react';
 import { Row, Col, Card, Button } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
+import Tabs from '../../../components/tabs/tabs.jsx';
 import '../../../styles/containers.less';
 import './style.less';
 import { resourcesContent } from '../../../assets/content';
 
 const { Meta } = Card;
 
-
 // TODO: Add breadcrumb / Learn more linking to navbar highlight / stakeholder highlight
 
+interface ITabDiv {
+  label: string;
+  children: any;
+}
 
 function ResourcesLayout() {
   const [key, setKey] = useState('tab');
+
+  const TabDiv = (props: ITabDiv) => (
+    <>
+      {props.children}
+    </>
+  )
   return (
     <div>
       <Header
@@ -23,10 +33,17 @@ function ResourcesLayout() {
       />
       <div className="tabcontainer">
         <div className="resourcetabs">
-          <h1 className="selected">Process</h1>
-          <h1>Community</h1>
-          <h1>Data</h1>
-          <h1>All</h1>
+          <Tabs>
+            <TabDiv label="Gator">
+              See ya later, <em>Alligator</em>!
+            </TabDiv>
+            <TabDiv label="Croc">
+              After &apos;while, <em>Crocodile</em>!
+            </TabDiv>
+            <TabDiv label="Sarcosuchus">
+              Nothing to see here, this tab is <em>extinct</em>!
+            </TabDiv>
+          </Tabs>
         </div>
       </div>
       <div className="container paragraph">
