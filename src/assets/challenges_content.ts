@@ -1,5 +1,5 @@
 import mobility1 from "./img/mobility_lastmile.jpg";
-// import mobility2 from "./img/mobility_safety.jpg";
+import mobility2 from "./img/mobility_safety.jpg";
 // import mobility3 from "./img/mobility_equitable.jpg";
 // import mobility4 from "./img/mobility_multimodal.jpg";
 // import housing1 from "./img/housing_mixed.jpg";
@@ -21,6 +21,7 @@ import mobility1 from "./img/mobility_lastmile.jpg";
 /*
 
 // get the lists of resources with labels and links from staging-d4sd.ucsd.edu:80
+// stores it as a string you can then copy and paste into here as js code
 let p = str.split("\n").map((s) => s.split(/\:(.+)/,2)).map((a) => {
   return  {label: a[0], link:a[1]};
 })
@@ -32,7 +33,7 @@ p.forEach((a) => {
 
 */
 
-export const challengesContent = {
+export const challengesContent: {[key:string]: {[key: string]: ChallengeContent | string}} = {
   mobility: {
     title: "MOBILITY CHALLENGES", // the first title above main article title
 
@@ -66,6 +67,17 @@ export const challengesContent = {
       image: mobility1
     },
     safety: {
+      title: "",
+      subTitle: "",
+      introduction: "",
+      angles: "",
+      angle_examples: [
+
+      ],
+      resources: [
+
+      ],
+      image: mobility2
 
     }
   },
@@ -78,4 +90,13 @@ export const challengesContent = {
   climate: {
 
   }
+}
+interface ChallengeContent {
+  title: string
+  subTitle: string
+  introduction: string
+  angles: string
+  angle_examples: Array<{label: string, desc: string}>
+  resources: Array<{label: string, link: string}>,
+  image: ImageData
 }
