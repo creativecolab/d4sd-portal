@@ -58,7 +58,7 @@ const HomeLayout = (): JSX.Element => {
         </div>
         <div className="key-dates">
           {homeContent.summit_banner.key_dates.map((date, i) => (
-            <div className={`date-${i + 1}`}>
+            <div className={`date-${i + 1}`} key={`${date.key}_div`}>
               <p className="date">
                 {date.date.toDateString().substring(4, 7)}
                 {' '}
@@ -87,7 +87,7 @@ const HomeLayout = (): JSX.Element => {
             type="primary-outline" size="medium" style={{ width: '100%' }}
             className="button outline"
           >
-            JOIN MAILING LIST
+            JOIN THE NEWSLETTER!
           </Button>
         </a>
       </div>

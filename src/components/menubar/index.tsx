@@ -43,6 +43,8 @@ const Menubar = (): JSX.Element => {
         setTab(['attend']);
         break;
       case '/submit':
+      case '/submit/request-feedback':
+      case '/submit/submit-proposal':
         setTab(['submit']);
         break;
       case '/volunteer':
@@ -105,7 +107,7 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
                 <span>Attend</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item" key="submit" onClick={(): void => history.push('/submit')}>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/submit')}>
                 <span>Submit</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/volunteer')}>

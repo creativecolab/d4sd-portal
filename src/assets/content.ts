@@ -94,15 +94,18 @@ export const homeContent = {
     key_dates: [
       {
         date: new Date("03/19/2020"),
-        label: "Introductory Workshop"
+        label: "Join a Workshop",
+        key: "date-1"
       },
       {
         date: new Date("03/22/2020"),
-        label: "Request Feedback"
+        label: "Request Feedback",
+        key: "date-2"
       },
       {
         date: new Date("04/22/2020"),
-        label: "Submit Proposals"
+        label: "Submit Proposals",
+        key: "date-3"
       }
     ]
   },
@@ -184,7 +187,7 @@ export const summitContent = {
   subtitle1: "JOIN US for the 2020 Design Summit",
   title1: "San Diego Central Library | May 12, 2020",
   title2:
-    "There are multiple ways to get involved, whether it be a challenge participant, attendee, volunteer, or sponsor. Click below to find out more about how you can get involved.",
+    "The D4SD Summit creates an opportunity for our community to come together to share proposals and to build alliances to address San Diego’s most complex issues. Join us for this one-of-a-kind event!",
   title3: "May 12, 2020",
   title4: "4pm - 8pm",
   address: "330 Park Blvd, San Diego, CA 92101",
@@ -220,32 +223,38 @@ export const aboutContent = {
     {
       txt:
         "To connect innovators, experts, city officials, professional designers, business leaders, and community members through a combination of in-person events and online activities.",
-      img: connect
+      img: connect,
+      key: "connect"
     },
     {
       txt:
         "To increase and diversify participation, particularly for typically underrepresented or marginalized populations, by creating a range of specific roles while striving for diversity, equity, and inclusion.",
-      img: div
+      img: div,
+      key: "diversity"
     },
     {
       txt:
         "To increase the agency of bottom-up community initiatives and enhance communication between the community and city.",
-      img: communicate
+      img: communicate,
+      key: "communicate"
     },
     {
       txt:
         "To contribute to the burgeoning design-driven economy in San Diego by providing resources to help launch top proposals by bringing together leaders from various sectors.",
-      img: city
+      img: city,
+      key: "city"
     },
     {
       txt:
         "To provide an educational opportunity that serves people from a wide range of ages, backgrounds, and motivations.",
-      img: edu
+      img: edu,
+      key: "education"
     },
     {
       txt:
         "To collaboratively explore a range of civic problems that the San Diego region faces.",
-      img: find
+      img: find,
+      key: "find"
     }
   ]
 };
@@ -265,7 +274,8 @@ export const involveContent = {
       id: "experts",
       link: "/volunteer/feedback_provider",
       isAction: "true",
-      action: "LEARN MORE"
+      action: "LEARN MORE",
+      key: "feedback-provider"
     },
     {
       title: "Become a student volunteer for the D4SD Summit",
@@ -277,7 +287,8 @@ export const involveContent = {
         'https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform',
       isAction: 'true',
       action: 'SIGN UP TO VOLUNTEER',
-      new: '_blank'
+      new: '_blank',
+      key: "student-volunteer"
     },
     {
       title: "Join the discussion",
@@ -289,7 +300,8 @@ export const involveContent = {
         "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
       isAction: "true",
       action: "JOIN DISCUSSION",
-      new: "_blank"
+      new: "_blank",
+      key: "join-discussion"
     },
     {
       title: "Join the mailing list",
@@ -300,7 +312,8 @@ export const involveContent = {
       link: "http://eepurl.com/c2kFon",
       isAction: "true",
       action: "JOIN MAILING LIST",
-      new: "_blank"
+      new: "_blank",
+      key: "mailing-list"
     }
   ]
 };
@@ -591,9 +604,9 @@ export const workspaceContent = {
       body:
         "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
       action_button: {
-        label: "REQUEST FEEDBACK",
+        label: "LEARN HOW TO REQUEST FEEDBACK",
         url: "/submit/request-feedback",
-        className: "",
+        className: "long-label",
         disabled: false
       },
       key: "community_feedback"
@@ -604,9 +617,9 @@ export const workspaceContent = {
       body:
         "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
       action_button: {
-        label: "SUBMIT A PROPOSAL",
+        label: "LEARN HOW TO SUBMIT A PROPOSAL",
         url: "/submit/submit-proposal",
-        className: "",
+        className: "long-label",
         disabled: false
       },
       key: "final_submission"
@@ -715,14 +728,16 @@ export const resourcesContent = {
       content:
         "Modeled after best practices in human-centered design research, the D4SD process involves five key phases: Discovery, Ideate, Prototype, Pitch, Activate.  Read more about how you and your team can get the most out of each phase.",
       action: "LEARN MORE",
-      link: "/resources/process"
+      link: "/resources/process",
+      key: "process"
     },
     {
       title: "Stakeholder Relationships",
       content:
         "Good civic design involves understanding the diverse perspectives of many stakeholders, including people directly and indirectly impacted by a problem or opportunity.  This guide can help D4SD participants establish and cultivate community relationships.",
       action: "LEARN MORE",
-      link: "resources/stakeholder"
+      link: "resources/stakeholder",
+      key: "stakeholder"
     }
   ]
 };
@@ -863,7 +878,7 @@ export const attendContent = {
   title_1_2: "2020 SUMMIT",
   subtitle_1: "San Diego Central Library",
   content_1_1:
-    "The 2020 Design for San Diego Summit will be a platform for all San Diegans to come together and tackle San Diego’s biggest issues surrounding mobility, health, environment, and housing.",
+    "The 2020 “Design for San Diego” Summit will be a chance to share and showcase proposals, but also to build momentum towards a more sustainable future. We invite participation from all walks of life. You can Volunteer or Submit to the challenge to get free admission. Register below for the event (coming soon!).",
   content_1_2:
     "Attend the summit to get inspired by innovative, human-centered solutions that make San Diego a more sustainable city.",
   title_2: "Event Details",
@@ -942,6 +957,7 @@ export const requestFeedbackContent = {
   content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
   title_4: "Example storyboards:",
   content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
+  example_storyboard: "exampleStoryboard.pdf",
   storyboards: [
     {
       description: "Mark is tired of touristy sites and wants an authentic experience.",

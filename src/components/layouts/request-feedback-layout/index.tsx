@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Button } from '@d4sd/components';
+import { Document, Page, pdfjs } from 'react-pdf';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -9,6 +10,8 @@ import { contentHTML } from '../../../actions';
 
 const RequestFeedbackLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
+
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   // eslint-disable-next-line
   const scrollToRef = (): void => {
@@ -47,7 +50,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
                 <React.Fragment key={`${details.key}_fragment`}>
                   {/* eslint-disable-next-line */}
                   {details.start_date ? [
-                    <li>
+                    <li key={`${details.key}_li`}>
                       <p>
                         <b>
                           {details.start_date.toDateString().substring(4, 7).toUpperCase()}
@@ -64,7 +67,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
                       </p>
                     </li>
                   ] : [
-                    <li>
+                    <li key={`${details.key}_li`}>
                       <p>
                         <b>
                           {details.date.toDateString().substring(4, 7).toUpperCase()}
@@ -81,7 +84,9 @@ const RequestFeedbackLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <Button disabled>REQUEST FEEDBACK</Button>
+          <a href="https://forms.gle/XUyHzfmLLiKjr9F18" target="_blank" rel="noopener noreferrer">
+            <Button>REQUEST FEEDBACK</Button>
+          </a>
         </div>
       </div>
       <div className="section" id="section-3">
@@ -96,12 +101,12 @@ const RequestFeedbackLayout = (): JSX.Element => {
         <div className="container">
           <h5 className="title">{requestFeedbackContent.title_4}</h5>
           <p>{requestFeedbackContent.content_4}</p>
-          {requestFeedbackContent.storyboards.map((scenario) => (
-            <React.Fragment key={scenario.key}>
-              <p>{scenario.description}</p>
-              <img src={scenario.image} alt={scenario.key} className="scenario-img" />
-            </React.Fragment>
-          ))}
+          <Document file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}>
+            <Page pageNumber={1} />
+            <p>Page 1</p>
+            <Page pageNumber={2} />
+            <p>Page 2</p>
+          </Document>
         </div>
       </div>
       <Footer />
