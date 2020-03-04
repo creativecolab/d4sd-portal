@@ -1,0 +1,55 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
+
+.internal-container{
+  #banner-image{
+    padding-top: @header-navbar-padding;
+    width: 100%;
+    height: @header-height;
+    background: #f1f1f1;
+    text-align: center;
+
+    h4{
+      color: @primary-txt;
+    }
+
+    p{
+      text-align: center;
+    }
+  }
+
+  #centralInfo{
+
+    #joinBtn{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    margin-bottom: @margin-base-1;
+
+    >*{
+      margin-top: @margin-base-1;
+    }
+  }
+
+  #specific-angles{
+    background-color: @d4sd-color-bg;
+    padding-bottom: @margin-base-1;
+
+    >*{
+      margin-top: @margin-base-1;
+    }
+  }
+
+  #resources{
+    h2{
+      margin: @margin-base-1 0;
+    }
+
+    margin-bottom: @margin-base-2;
+  }
+
+}

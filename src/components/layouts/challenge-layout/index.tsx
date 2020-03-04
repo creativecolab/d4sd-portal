@@ -138,7 +138,7 @@ const ChallengeLayout = (): JSX.Element => {
           <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
         </div>
 
-        <div className="section">
+        <div className="section" onClick={()=>{console.log("mobility")}}>
           <h4 className="text" ref={mobility}>
             <span>MOBILITY: </span>
             How might we help people move freely in San Diego?

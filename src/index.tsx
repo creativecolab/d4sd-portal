@@ -30,6 +30,7 @@ import FeedbackPage from './components/layouts/feedback-layout';
 import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
 import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
 import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
+import ChallengeInternalLayout from './components/layouts/challenge-internal-layout';
 // import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
 
 // eslint-disable-next-line
@@ -100,6 +101,8 @@ const App = (): JSX.Element => {
                 path="/workspace/view-feedback"
                 component={ViewFeedbackLayout}
               />
+
+              <Route path="/challenges/:type/:title" component={ChallengeInternalLayout} />
               {/*
               <Route exact path='/resources' component={Resources}/>
               <Route exact path='/workspace' component={Workspace}/>
