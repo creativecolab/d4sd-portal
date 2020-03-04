@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Card, Button, Menu } from '@d4sd/components';
+import { Row, Col, Card, Button } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -7,6 +7,10 @@ import './style.less';
 import { resourcesContent } from '../../../assets/content';
 
 const { Meta } = Card;
+
+
+// TODO: Add breadcrumb / Learn more linking to navbar highlight / stakeholder highlight
+
 
 function ResourcesLayout() {
   const [key, setKey] = useState('tab');
@@ -21,14 +25,14 @@ function ResourcesLayout() {
         <div className="resourcetabs">
           <h1 className="selected">Process</h1>
           <h1>Community</h1>
-          <h1>Data sources</h1>
+          <h1>Data</h1>
           <h1>All</h1>
         </div>
       </div>
       <div className="container paragraph">
-        <h1 className="cardtitle">Process-Related Resources</h1>
+        <h1 className="cardtitle">FEATURED RESOURCES</h1>
         <Row type="flex" justify="center" gutter={[16, 16]}>
-          {resourcesContent.process.map(content => (
+          {resourcesContent.process.featured.map(content => (
             <Col xs={{ span: 24 }} lg={{ span: 12 }}>
               <Card
                 className="involve-card"
@@ -50,6 +54,7 @@ function ResourcesLayout() {
             </Col>
           ))}
         </Row>
+        <h1 className="othertitle">OTHER RESOURCES</h1>
 
         <div className="extra">
           <h1>Asking the right question and solving the right problem</h1>

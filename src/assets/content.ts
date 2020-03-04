@@ -651,25 +651,29 @@ export const resourcesContent = {
   image: 'resource_header',
   title1: 'Resources',
   content1:
-    'Having trouble getting started on your project? Browse through resources for each step of the process, discover, ideate, prototype, pitch, and activiate. Additionally, look through data portals to aid your research. Here you can find an assortment of articles, videos, and websites that will help guide you through the design process and spark ideas for what your next step might be.',
-  process: [
-    {
-      title: "Get to know your stakeholder's journey and their pain points",
-      source: 'Nielson Norman Group',
-      description: "Use journey mapping to help uncover the pain points, as well as moments of achievement in a person's decision-making process. Learn about a stakeholer’s journey (getting to work every morning, finding the right health care, etc.).",
-      action: 'VIEW VIDEO',
-      link: '/resources/process',
-      photo: process1
-    },
-    {
-      title: 'The Google Design Sprint: Five Days of Quick Innovation',
-      source: 'Google Design Sprint',
-      description: "Browse this website outlining many design methods, as well as where and when to use them. Also, look through various 'case studies': helpful examples that help organizations adapt the sprint to their unique needs.",
-      action: 'VIEW ARTICLE',
-      link: 'resources/stakeholder',
-      photo: process2
-    }
-  ]
+    'This page provides a wealth of resources to help you learn methods for human-centered design, find out about the latest technology related to the challenges, and get answers to your frequently asked questions.',
+  process: {
+    featured: [
+      {
+        title: "Get to know your stakeholder's journey and their pain points",
+        source: 'Nielson Norman Group',
+        description:
+          "Use journey mapping to help uncover the pain points, as well as moments of achievement in a person's decision-making process. Learn about a stakeholer’s journey (getting to work every morning, finding the right health care, etc.).",
+        action: 'VIEW VIDEO',
+        link: '/resources/process',
+        photo: process1
+      },
+      {
+        title: 'The Google Design Sprint: Five Days of Quick Innovation',
+        source: 'Google Design Sprint',
+        description:
+          "Browse this website outlining many design methods, as well as where and when to use them. Also, look through various 'case studies': helpful examples that help organizations adapt the sprint to their unique needs.",
+        action: 'VIEW ARTICLE',
+        link: 'resources/stakeholder',
+        photo: process2
+      }
+    ],
+  }
 };
 
 export const processContent = {
