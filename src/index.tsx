@@ -116,8 +116,12 @@ const App = (): JSX.Element => {
               ~ Home
               ~ Go through all pages to fix fonts
               */}
+              {
+              /*
               <Route exact path="/signup" component={SignupPage} />
               <Route exect path="/login" component={LoginPage} />
+              */
+              }
             </Switch>
           </main>
         </>
