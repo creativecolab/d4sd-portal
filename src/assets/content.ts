@@ -74,10 +74,11 @@ import sponsors_yankelovich from "./img/sponsors_yankelovich.png";
 import sponsors_ibm from "./img/sponsors_ibm.svg";
 import sponsors_nsf from "./img/sponsors_nsf.png";
 
-import example_storyboard_1 from "./img/example_storyboard_1.png"
-import example_storyboard_2 from "./img/example_storyboard_2.png"
-import example_storyboard_3 from "./img/example_storyboard_3.png"
+import example_storyboard_1 from "./img/example_storyboard_1.png";
+import example_storyboard_2 from "./img/example_storyboard_2.png";
+import example_storyboard_3 from "./img/example_storyboard_3.png";
 
+import blank_poster_template from './img/blank-poster-template.png';
 import poster_example_temporary1 from "./img/poster_example_temporary1.png";
 import poster_example_temporary2 from "./img/poster_example_temporary2.png";
 
@@ -1068,5 +1069,5 @@ export const submitProposalContent = {
   content_5_2: "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
   poster_items: ["your team’s topic area and specific challenge/mission", "insights from online/user research", "constraints and resources related to your problem", "your team’s proposed solution, including photos of a prototype, if possible", "an implementation plan, including rough budgets and action steps"],
   content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
-  poster_examples: [poster_example_temporary1, poster_example_temporary2, poster_example_temporary1]
+  poster_examples: [poster_example_temporary1, poster_example_temporary2, blank_poster_template]
 }
