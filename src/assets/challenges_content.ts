@@ -33,7 +33,7 @@ p.forEach((a) => {
 
 */
 
-export const challengesContent: {[key:string]: {[key: string]: ChallengeContent | string}} = {
+export const challengesContent: {[key:string]: {[key: string]: ChallengeContent | string, title: string}} = {
   mobility: {
     title: "MOBILITY CHALLENGES", // the first title above main article title
 
@@ -80,15 +80,6 @@ export const challengesContent: {[key:string]: {[key: string]: ChallengeContent 
       image: mobility2
 
     }
-  },
-  housing: {
-    title: "HOUSING CHALLENGES",
-  },
-  health: {
-
-  },
-  climate: {
-
   }
 }
 interface ChallengeContent {
@@ -98,5 +89,5 @@ interface ChallengeContent {
   angles: string
   angle_examples: Array<{label: string, desc: string}>
   resources: Array<{label: string, link: string}>,
-  image: ImageData
+  image: any
 }
