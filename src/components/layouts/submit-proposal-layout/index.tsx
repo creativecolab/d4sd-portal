@@ -168,7 +168,6 @@ const SubmitProposalLayout = (): JSX.Element => {
               <img
                 src={example} alt={`${example}_${i}`} className="example-poster"
                 key={`${example}_img`}
-              // fix this key with unique image id
               />
             ))}
           </div>

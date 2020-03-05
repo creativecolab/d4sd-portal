@@ -45,38 +45,46 @@ const WorkspaceLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-
           {workspaceContent.importantDates.map((details) => (
             <div className="date-box" key={`${details.key}_box`}>
               <div className="date-info">
-                {
-                  details.override_date ? <div className="date-month temp" key={`${details.key}_month`}>{details.override_date}</div>
-                    : [<div className="date-month" key={`${details.key}_month`}>{details.date.toDateString().substring(4, 7).toUpperCase()}</div>,
-                      <div className="date-num" key={`${details.key}_num`}>{details.date.getDate()}</div>]
-                }
+                {details.override_date ? (
+                  <div className="date-month temp" key={`${details.key}_month`}>{details.override_date}</div>
+                ) : [<div className="date-month" key={`${details.key}_month`}>{details.date.toDateString().substring(4, 7).toUpperCase()}</div>,
+                  <div className="date-num" key={`${details.key}_num`}>{details.date.getDate()}</div>]}
               </div>
               <div className="date-desc">
                 <h2 className="desc-title">{details.title}</h2>
                 {/* eslint-disable-next-line */}
                 <p className="desc" dangerouslySetInnerHTML={{ __html: details.body }} />
-                {details.subbody ? [
-                  <ul key={details.subbody.key}>
-                    <li>
-                      <p className="desc">
-                        <b>
-                          {details.date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.date.getDate()}
-                          {' '}
-                          {details.subbody.time}
-                        </b>
-                        {' '}
-                        {details.subbody.content}
-                      </p>
-                    </li>
-                  </ul>
-                ] : []}
-                <Button className={`action-button ${details.action_button.className}`} onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
+                {details.subbody ? (
+                  <div key={`${details.key}_div`}>
+                    <ul>
+                      {details.subbody.map((item) => (
+                        <li key={`${item.key}_li`}>
+                          <div className="event-items">
+                            <p className="desc">
+                              <b>
+                                {item.date.toDateString().substring(4, 7).toUpperCase()}
+                                {' '}
+                                {item.date.getDate()}
+                                {' '}
+                                {item.time}
+                              </b>
+                              {' '}
+                              {item.content}
+                            </p>
+                            <Button className={`action-button ${item.action_button.className}`} onClick={(): void => history.push(item.action_button.url)} disabled={item.action_button.disabled}>
+                              {item.action_button.label}
+                            </Button>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <Button className={`action-button ${details.action_button.className}`} onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
+                )}
               </div>
             </div>
           ))}
