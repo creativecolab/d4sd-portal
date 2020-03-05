@@ -329,22 +329,57 @@ export const faqContent = {
     {
       question: "What is D4SD?",
       answer:
-        "Design for San Diego (D4SD) is a civic design initiative that brings together innovators, mentors, experts, and citizens to address San Diego’s most challenging issues through human-centered design. Our aim is to provide a space that allows for the community to discover key civic issues, to ideate and prototype solutions to the problems they see, to pitch their proposals in a public forum, and to activate others to help bring them to life.<br/><br/>This year’s theme— How can we make San Diego a more sustainable city— is rooted in the United Nations’ 2030 vision to transform our world by making cities inclusive, safe, resilient and sustainable. D4SD has organized the challenges around four main topics, but you are welcome to explore anything related to sustainability:<li>Housing</li><li>Mobility</li><li>Health</li> <li>Climate</li>"
+        "Design for San Diego (D4SD) is a civic design initiative that brings together innovators, mentors, experts, and citizens to address San Diego’s most challenging issues through human-centered design. Our aim is to provide a space that allows for the community to discover key civic issues, to ideate and prototype solutions to the problems they see, to pitch their proposals in a public forum, and to activate others to help bring them to life.<br/><br/>This year’s theme— How can we make San Diego a more sustainable city— is rooted in the United Nations’ 2030 vision to transform our world by making cities inclusive, safe, resilient and sustainable. D4SD has organized the challenges around four main topics, but you are welcome to explore anything related to sustainability:<li>Housing</li><li>Mobility</li><li>Health</li> <li>Environment</li>"
     },
     {
       question: "Why should I participate in D4SD?",
       answer:
-        "Join D4SD for this unique opportunity to collaborate and compete with other city innovators to help address sustainability-related issues facing San Diego and cities around the world. The best proposals will be rewarded with financial and mentoring resources to further develop their ideas into reality. <br/><br/>Participants may benefit from:<li> Solving real problems and inspiring change in your community.</li><li> Learning human-centered design practices from professional designers and educators in the UC San Diego Design Lab. </li><li> Working with real data and collaborate with the City of San Diego's data portal and award-winning Performance and Analytics Department. </li><li>Making new connections through networking opportunities with designers, engineers, data scientists, civic leaders, entrepreneurs, and other innovators. </li><li>Earning resources and building alliances to help develop your team’s proposal into a startup business, an infrastructure development, or a policy proposal.</li>"
+        "Join D4SD for this unique opportunity to collaborate and compete with other city innovators to help address sustainability-related issues facing San Diego and cities around the world. The best proposals will be rewarded with financial and mentoring resources to further develop their ideas into reality. <br/><br/>Participants may benefit from:<li> Solving real problems and inspiring change in your community.</li><li> Learning human-centered design practices from professional designers and educators in the UC San Diego Design Lab and beyond. </li><li> Working with real data and collaborate with the City of San Diego's data portal and SCALE SD. </li><li>Making new connections through networking opportunities with designers, engineers, data scientists, civic leaders, entrepreneurs, and other innovators. </li><li>Earning resources and building alliances to help develop your team’s proposal into a startup business, an infrastructure development, or a policy proposal.</li>"
     },
     {
       question: "How can I get started?",
       answer:
-        "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can also <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can attend one of the in-person events to help you connect with other innovators and to get mentorship from design practitioners.</li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>."
+        "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can also <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can attend one of the in-person events to help you connect with other innovators and to get mentorship from design practitioners. Upcoming events include our Information Sessions and Workshops on March 18 at UC San Diego and March 19 at DowntownWorks; <a href='/submit'>sign up here</a>.</li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>.</li><li>Until March 22, you can <a href='/submit/request-feedback'>request feedback on an early-stage idea</a> or problem that you want to work on for the challenge.</li><li>Final submissions are due April 22 (Earth Day), so when you are ready, visit the <a href='/submit/submit-proposal'>Submit Proposal page</a> to enter the challenge.</li>"
     },
     {
-      question: "How do I form teams? ",
+      question: "When is the calendar of events for D4SD?",
+      answer: "Design for San Diego has lined up an exciting set of opportunities for our community to connect and address key issues in San Diego through design.  See the calendar below for key events and online engagement opportunities:",
+      events: [
+        {
+          description: "<b>MID MARCH: Information Sessions and Workshops.</b>Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
+          dates: ["Mar 18: 12-2pm", "Mar 19: 5:30-8pm"],
+          contents: ["UC San Diego in SSRB 100", "DowntownWorks"],
+          button_labels: ["SIGN UP FOR MAR 18TH WORKSHOP", "SIGN UP FOR MAR 19TH WORKSHOP"],
+          locations: ["https://www.google.com/maps/place/Social+Sciences+Research+Building+(SSRB)/@32.8807092,-117.2406931,18.8z/data=!4m5!3m4!1s0x80dc06c1105135d7:0xc9de8745c719ca0f!8m2!3d32.8807422!4d-117.2402667", "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615"],
+          urls: ["https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069", "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113"],
+          keys: ["workshop_1", "workshop_2"],
+          url: "",
+          key: "workshops"
+        },
+        {
+          description: "<b>MAR 22: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+          button_label: "REQUEST FEEDBACK",
+          url: "/submit/request-feedback",
+          key: "community-feedback"
+        },
+        {
+          description: "<b>APR 22 (Earth Day): Final submission deadline.</b> Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
+          button_label: "SUBMIT A PROPOSAL",
+          url: "/submit/submit-proposal",
+          key: "submit-proposal"
+        },
+        {
+          description: "<b>MAY 12: D4SD Summit 2020.</b> Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+          button_label: "LEARN MORE ABOUT MAY 12 SUMMIT",
+          url: "/attend",
+          key: "attend-summit"
+        }
+      ]
+    },
+    {
+      question: "How do I form a team? ",
       answer:
-        "While you do not need a team to enter the D4SD challenge, a team can help you build your good idea into a great solution. An effective team is one that has a mix of diverse talents all striving towards a common goal. <br/><br/>The best way to find team members is to attend one of the public D4SD events (announcements coming soon). The events will give you a chance to participate in fun hands-on activities, such as small group discussions, brainstorming, and prototyping, and will help you find people interested in similar problems. <br/><br/>If you cannot attend the in-person events, you can take advantage of the D4SD Slack Channel to look for teammates and discuss solutions with other challenge participants. You are free to communicate directly with other participants and form teams on your own. There is no limit to team size, however we recommend team sizes of 4-6."
+        "While you do not need a team to enter the D4SD challenge, a team can help you build your good idea into a great solution. An effective team is one that has a mix of diverse talents all striving towards a common goal. <br/><br/>The best way to find team members is to attend one of the <a href='/submit'>public D4SD events</a>. The events will give you a chance to participate in fun hands-on activities, such as small group discussions, brainstorming, and prototyping, and will help you find people interested in similar problems. <br/><br/>If you cannot attend the in-person events, you can take advantage of the D4SD Slack Channel to look for teammates and discuss solutions with other challenge participants. You are free to communicate directly with other participants and form teams on your own. There is no limit to team size, however we recommend team sizes of 4-6."
     },
     {
       question: "Can I work on multiple teams?",
@@ -354,12 +389,12 @@ export const faqContent = {
     {
       question: "Who owns the solutions?",
       answer:
-        "Individuals or teams will retain all intellectual property rights on solutions submitted to the D4SD Challenge. As an initiative from the UC San Diego Design Lab, D4SD is a non-profit dedicated to demonstrating the value of human-centered design and incubating great ideas into companies or longer-term projects that foster economic activity in the City of San Diego and beyond."
+        "Individuals or teams will retain all intellectual property rights on solutions submitted to the D4SD Challenge. As a social impact initiative out of the UC San Diego Design Lab, D4SD is a non-profit dedicated to demonstrating the value of human-centered design and incubating great ideas into companies or longer-term projects that foster economic activity in the City of San Diego and beyond."
     },
     {
       question: "How can my team get help on our project?",
       answer:
-        "D4SD supports many ways for you and your team to get help. Your team can reach out through the Slack channel, for example, by posting a message to one of the problem thread channels. Later, during the prototyping phase of D4SD, we will open a feedback exchange where you can get input from the community. D4SD also has a resources page with various tips on how to get started."
+        "D4SD supports many ways for you and your team to get help. Your team can reach out through Slack, for example, by posting a message to one of the problem thread channels. If you have an early-stage idea that you want input on, you have until March 22 to <a href='/submit/request-feedback'>request feedback</a> from the D4SD community. D4SD also has a <a href='resources'>resources</a> page with various tips on how to get started."
     }
     // {
     //   question: 'How and when do I register for the challenge?',
