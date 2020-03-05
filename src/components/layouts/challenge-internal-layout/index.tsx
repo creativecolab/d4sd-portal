@@ -95,6 +95,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           </ul>
         </Col>
       </Row>
+      <Footer />
     </div>
   );
 };
