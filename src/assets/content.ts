@@ -74,13 +74,10 @@ import sponsors_yankelovich from "./img/sponsors_yankelovich.png";
 import sponsors_ibm from "./img/sponsors_ibm.svg";
 import sponsors_nsf from "./img/sponsors_nsf.png";
 
-import example_storyboard_1 from "./img/example_storyboard_1.png";
-import example_storyboard_2 from "./img/example_storyboard_2.png";
-import example_storyboard_3 from "./img/example_storyboard_3.png";
-
 import blank_poster_template from './img/blank-poster-template.png';
-import poster_example_temporary1 from "./img/poster_example_temporary1.png";
-import poster_example_temporary2 from "./img/poster_example_temporary2.png";
+import poster_example_1 from './img/poster_example_1.png';
+import poster_example_2 from './img/poster_example_2.png';
+import poster_example_3 from './img/poster_example_3.png';
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -970,24 +967,7 @@ export const requestFeedbackContent = {
   content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
   title_4: "Example storyboards:",
   content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
-  example_storyboard: "exampleStoryboard.pdf",
-  storyboards: [
-    {
-      description: "Mark is tired of touristy sites and wants an authentic experience.",
-      image: example_storyboard_1,
-      key: "example_scenario2"
-    },
-    {
-      description: "Mark wants to make the most of his business trip.",
-      image: example_storyboard_2,
-      key: "example_scenario3"
-    },
-    {
-      description: "Going out for a date at your travel destination.",
-      image: example_storyboard_3,
-      key: "example_scenario5"
-    },   
-  ]
+  example_storyboard: "exampleStoryboard.pdf"
 }
 
 export const submitProposalContent = {
@@ -1081,5 +1061,5 @@ export const submitProposalContent = {
   content_5_2: "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
   poster_items: ["your team’s topic area and specific challenge/mission", "insights from online/user research", "constraints and resources related to your problem", "your team’s proposed solution, including photos of a prototype, if possible", "an implementation plan, including rough budgets and action steps"],
   content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
-  poster_examples: [blank_poster_template, poster_example_temporary1, poster_example_temporary2]
+  poster_examples: [poster_example_1, poster_example_2, poster_example_3]
 }

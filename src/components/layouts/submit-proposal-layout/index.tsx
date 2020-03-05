@@ -165,10 +165,15 @@ const SubmitProposalLayout = (): JSX.Element => {
           <p>{submitProposalContent.content_5_3}</p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
-              <img
-                src={example} alt={`${example}_${i}`} className="example-poster"
-                key={`${example}_img`}
-              />
+              <a
+                href={`/posterExample${i + 1}.pdf`} target="_blank" rel="noopener noreferrer"
+                className="example-poster-anchor"
+              >
+                <img
+                  src={example} alt={`${example}_${i}`} className="example-poster"
+                  key={`${example}_img`}
+                />
+              </a>
             ))}
           </div>
         </div>
