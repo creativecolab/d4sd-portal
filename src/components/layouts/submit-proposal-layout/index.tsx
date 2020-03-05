@@ -180,12 +180,13 @@ const SubmitProposalLayout = (): JSX.Element => {
           </ul>
           <p>
             {submitProposalContent.content_5_3}
-            <Dropdown overlay={menu} trigger={['click']} placement="bottomCenter">
-              {/* eslint-disable-next-line */}
-              <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
-                here
-              </a>
-            </Dropdown>
+            <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
+            ,
+            {' '}
+            <a href="/blank-poster-template.ai" target="_blank" rel="noopener noreferrer">Illustrator</a>
+            , and
+            {' '}
+            <a href="/blank-poster-template.id" target="_blank" rel="noopener noreferrer">InDesign</a>
             {submitProposalContent.content_5_4}
           </p>
           <div className="poster-examples">
