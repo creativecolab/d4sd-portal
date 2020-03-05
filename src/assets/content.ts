@@ -1060,6 +1060,7 @@ export const submitProposalContent = {
   content_5_1: "Assuming your team meets the requirements, D4SD will pay to print and display your poster at the Design for San Diego summit on May 12 at the San Diego Central Library. First, at least one team member must plan to register and attend the May 12th summit to share your team’s poster.",
   content_5_2: "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
   poster_items: ["your team’s topic area and specific challenge/mission", "insights from online/user research", "constraints and resources related to your problem", "your team’s proposed solution, including photos of a prototype, if possible", "an implementation plan, including rough budgets and action steps"],
-  content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
+  content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available ",
+  content_5_4: ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
   poster_examples: [poster_example_1, poster_example_2, poster_example_3]
 }

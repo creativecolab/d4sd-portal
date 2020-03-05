@@ -85,7 +85,7 @@ const HomeLayout = (): JSX.Element => {
           <div style={{ marginRight: '15px' }} />
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
-              <p>{date.label}</p>
+              <p key={`${date.key}_p`}>{date.label}</p>
             ))}
           </div>
         </div>

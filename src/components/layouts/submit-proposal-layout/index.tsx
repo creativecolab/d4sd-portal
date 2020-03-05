@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import { Button } from '@d4sd/components';
+import Dropdown from 'antd/lib/dropdown';
+import Menu from 'antd/lib/menu';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -22,6 +24,20 @@ const SubmitProposalLayout = (): JSX.Element => {
       });
     }
   };
+
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <a href="/blank-poster-template.ai" target="_blank" rel="noopener noreferrer">Adobe Illustrator</a>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <a href="/blank-poster-template.psd" target="_blank" rel="noopener noreferrer">Adobe Photoshop</a>
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <div className="SubmitProposalPage">
@@ -162,12 +178,21 @@ const SubmitProposalLayout = (): JSX.Element => {
               </li>
             ))}
           </ul>
-          <p>{submitProposalContent.content_5_3}</p>
+          <p>
+            {submitProposalContent.content_5_3}
+            <Dropdown overlay={menu} trigger={['click']} placement="bottomCenter">
+              {/* eslint-disable-next-line */}
+              <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+                here
+              </a>
+            </Dropdown>
+            {submitProposalContent.content_5_4}
+          </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
               <a
                 href={`/posterExample${i + 1}.pdf`} target="_blank" rel="noopener noreferrer"
-                className="example-poster-anchor"
+                className="example-poster-anchor" key={`${example}_a`}
               >
                 <img
                   src={example} alt={`${example}_${i}`} className="example-poster"
