@@ -79,7 +79,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <p>{challengeAngles}</p>
 
           {allChallengeAngles.map((obj: any) => (
-            <p>{" • "}{obj.label}{" : "}{obj.desc}</p>
+            <p><b>{obj.label}</b>{" : "}{obj.desc}</p>
           ))}
         </Col>
       </Row>
@@ -89,7 +89,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <ul>
             {allResources.map((obj: any) => (
               <li>
-                <a href={obj.link}>{" • "}{obj.label}</a>
+                <a href={obj.link}>{obj.label}</a>
               </li>
             ))}
           </ul>
