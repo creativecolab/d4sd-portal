@@ -57,31 +57,37 @@ const HomeLayout = (): JSX.Element => {
           </div>
         </div>
         <div className="key-dates">
-          {homeContent.summit_banner.key_dates.map((date, i) => (
-            <div className={`date-${i + 1}`} key={`${date.key}_div`}>
-              <p className="date">
-                {date.start_date ? (
-                  <>
-                    {date.start_date.toDateString().substring(4, 7)}
-                    {' '}
-                    {date.start_date.getDate()}
-                    {' '}
+          <div className="dates">
+            {homeContent.summit_banner.key_dates.map((date, i) => (
+              <div className={`date-${i + 1}`} key={`${date.key}_div`}>
+                <p className="date">
+                  {date.start_date ? (
+                    <>
+                      {date.start_date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.start_date.getDate()}
+                      {' '}
                     –
-                    {' '}
-                    {date.end_date.getDate()}
-                  </>
-                ) : (
-                  <>
-                    {date.date.toDateString().substring(4, 7)}
-                    {' '}
-                    {date.date.getDate()}
-                  </>
-                )}
-              </p>
-              <div style={{ marginRight: '10px' }} />
+                      {' '}
+                      {date.end_date.getDate()}
+                    </>
+                  ) : (
+                    <>
+                      {date.date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.date.getDate()}
+                    </>
+                  )}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginRight: '15px' }} />
+          <div className="labels">
+            {homeContent.summit_banner.key_dates.map((date) => (
               <p>{date.label}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <div className="action-buttons">
