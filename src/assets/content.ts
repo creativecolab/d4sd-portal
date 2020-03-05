@@ -94,8 +94,9 @@ export const homeContent = {
     location: "San Diego Central Library",
     key_dates: [
       {
-        date: new Date("03/19/2020"),
-        label: "Join a Workshop",
+        start_date: new Date("03/18/2020"),
+        end_date: new Date("03/19/2020"),
+        label: "Information Sessions",
         key: "date-1"
       },
       {
@@ -572,12 +573,9 @@ export const workspaceContent = {
   title2: "How can you participate?",
   content2:
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
-
   title3: '',
   content3:
-    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. " +
-    "Keep reading below for details about the challenge rules and deliverables. " +
-    "If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
       date: new Date("03/19/2020"),
@@ -585,18 +583,32 @@ export const workspaceContent = {
       title: "Introductory Workshops",
       body:
         "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-      subbody: {
-        date: new Date("03/19/2020"),
-        time: "5:30 – 8pm",
-        content: "in partnership with ScaleSD and DowntownWorks",
-        key: "workshop"
-      },
-      action_button: {
-        label: "SIGN UP FOR MAR 19TH WORKSHOP",
-        url: "",
-        className: "long-label",
-        disabled: true
-      },
+      subbody: [
+        {
+          date: new Date("03/18/2020"),
+          time: "sometime",
+          content: "at SSRB 100 @ UCSD",
+          action_button: {
+            label: "SIGN UP FOR MAR 18TH WORKSHOP",
+            url: "",
+            className: "long-label",
+            disabled: true
+          },
+          key: "workshop_ucsd"
+        },
+        {
+          date: new Date("03/19/2020"),
+          time: "5:30 – 8pm",
+          content: "in partnership with ScaleSD and DowntownWorks",
+          action_button: {
+            label: "SIGN UP FOR MAR 19TH WORKSHOP",
+            url: "",
+            className: "long-label",
+            disabled: true
+          },
+          key: "workshop_downtownworks"
+        }
+      ],
       key: "intro_workshops"
     },
     {

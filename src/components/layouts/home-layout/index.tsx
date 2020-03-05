@@ -60,9 +60,23 @@ const HomeLayout = (): JSX.Element => {
           {homeContent.summit_banner.key_dates.map((date, i) => (
             <div className={`date-${i + 1}`} key={`${date.key}_div`}>
               <p className="date">
-                {date.date.toDateString().substring(4, 7)}
-                {' '}
-                {date.date.getDate()}
+                {date.start_date ? (
+                  <>
+                    {date.start_date.toDateString().substring(4, 7)}
+                    {' '}
+                    {date.start_date.getDate()}
+                    {' '}
+                    –
+                    {' '}
+                    {date.end_date.getDate()}
+                  </>
+                ) : (
+                  <>
+                    {date.date.toDateString().substring(4, 7)}
+                    {' '}
+                    {date.date.getDate()}
+                  </>
+                )}
               </p>
               <div style={{ marginRight: '10px' }} />
               <p>{date.label}</p>
