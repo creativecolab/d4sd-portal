@@ -585,25 +585,25 @@ export const workspaceContent = {
       subbody: [
         {
           date: new Date("03/18/2020"),
-          time: "sometime",
-          content: "at SSRB 100 @ UCSD",
+          time: "12 – 2pm",
+          content: "at UC San Diego in SSRB 100",
           action_button: {
             label: "SIGN UP FOR MAR 18TH WORKSHOP",
-            url: "",
+            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
             className: "long-label",
-            disabled: true
+            disabled: false
           },
           key: "workshop_ucsd"
         },
         {
           date: new Date("03/19/2020"),
           time: "5:30 – 8pm",
-          content: "in partnership with ScaleSD and DowntownWorks",
+          content: "at DowntownWorks",
           action_button: {
             label: "SIGN UP FOR MAR 19TH WORKSHOP",
-            url: "",
+            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
             className: "long-label",
-            disabled: true
+            disabled: false
           },
           key: "workshop_downtownworks"
         }
@@ -967,9 +967,13 @@ export const requestFeedbackContent = {
   content_3_1: "This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!",
   content_3_2: "Your early-stage idea/sketch should be submitted as a one-page PDF or image file (PNG, JPG, etc.) through the form above. Make sure your idea is visually legible and understandable. You will also fill out a Google Form that will ask for text descriptions of the problem, potential stakeholders, and the questions you want feedback on.",
   content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
-  title_4: "Example storyboards:",
-  content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
-  example_storyboard: "exampleStoryboard.pdf"
+  title_4: "Example submission:",
+  content_4_1: "The example below shows what you might want to create to get community feedback. These storyboards in the submission below were created by an undergraduate student team at UC San Diego as part of a design course several years ago.  The team created the three different storyboards to explore challenges related to international travel and to propose concepts for mobile applications to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. While this is just an example of what you can submit, it's a good practice to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
+  content_4_2: "Here’s ",
+  content_4_3: "an example of the Request Feedback form filled out",
+  content_4_4: " and here’s an example of how you might format your submission:",
+  example_feedback: "exampleFeedbackSubmissionForm.pdf",
+  example_storyboard: "exampleStoryboard.pdf",
 }
 
 export const submitProposalContent = {

@@ -66,60 +66,50 @@
           .desc {
             font-size: 1.75rem;
           }
-          ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            li {
-              color: #333333;
-              .event-items {
+          color: #333333;
+          .event-items {
+            display: flex;
+            justify-content: center;
+            .date-loc {
+              .event-item {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
+                padding: 3px 0;
+              }
 
-                @media screen and (max-width: 1335px) {
-                  display: block;
-                }
-                .desc {
-                  margin-bottom: 0em;
-                }
-                .action-button {
-                  @media screen and (min-width: 1335px) {
-                    min-width: fit-content;
-                  }
-
-                  @media screen and (max-width: @sm) {
-                    width: 90%;
-                    margin-left: 0px;
-                  }
-                }
+              .desc {
+                margin-bottom: 0em;
               }
             }
           }
-          .action-button {
-            margin-top: 8px;
-            margin-left: 12px;
+        }
+
+        .action-button {
+          margin-top: 8px;
+          margin-left: 12px;
+        }
+
+        .long-label {
+          @media screen and (max-width: 441px) {
+            font-size: 12px;
+            padding: 0 20px;
           }
 
-          .long-label {
-            @media screen and (max-width: 441px) {
-              font-size: 12px;
-              padding: 0 20px;
-            }
+          @media screen and (max-width: 413px) {
+            font-size: 10px;
+            padding: 0 15px;
+          }
 
-            @media screen and (max-width: 413px) {
-              font-size: 10px;
-              padding: 0 15px;
-            }
+          @media screen and (max-width: 347px) {
+            font-size: 8px;
+            padding: 0 10px;
+          }
 
-            @media screen and (max-width: 347px) {
-              font-size: 8px;
-              padding: 0 10px;
-            }
-
-            @media screen and (max-width: 333px) {
-              font-size: 7px;
-              padding: 0 5px;
-            }
+          @media screen and (max-width: 333px) {
+            font-size: 7px;
+            padding: 0 5px;
           }
         }
       }
