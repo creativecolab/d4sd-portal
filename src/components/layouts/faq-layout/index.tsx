@@ -76,7 +76,9 @@ const FaqLayout = (): JSX.Element => {
                               ) : null
                             ))
                           ) : (
-                            <Button onClick={(): void => history.push(event.url)}>{event.button_label}</Button>
+                            <Button onClick={(): void => history.push(event.url)}>
+                              {event.button_label}
+                            </Button>
                           )}
                         </div>
                       </div>
