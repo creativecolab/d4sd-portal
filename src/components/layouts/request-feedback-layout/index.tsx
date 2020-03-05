@@ -100,13 +100,20 @@ const RequestFeedbackLayout = (): JSX.Element => {
       <div className="section" id="section-4">
         <div className="container">
           <h5 className="title">{requestFeedbackContent.title_4}</h5>
-          <p>{requestFeedbackContent.content_4}</p>
-          <Document file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}>
-            <Page pageNumber={1} />
-            <p>Page 1</p>
-            <Page pageNumber={2} />
-            <p>Page 2</p>
-          </Document>
+          <p>{requestFeedbackContent.content_4_1}</p>
+          <br />
+          <p>
+            {requestFeedbackContent.content_4_2}
+            <a href={`/${requestFeedbackContent.example_feedback}`} target="_blank" rel="noopener noreferrer">
+              {requestFeedbackContent.content_4_3}
+            </a>
+            {requestFeedbackContent.content_4_4}
+          </p>
+          <a href={`/${requestFeedbackContent.example_storyboard}`} target="_blank" rel="noopener noreferrer">
+            <Document file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}>
+              <Page width={1500} pageNumber={1} />
+            </Document>
+          </a>
         </div>
       </div>
       <Footer />

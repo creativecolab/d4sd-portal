@@ -460,10 +460,30 @@
 .Home {
   .d4sdsubtitle {
     margin-top: @margin-base;
+
+    .subtitle-break {
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+    }
   }
 
   .d4sdmaintitle {
     margin-top: @margin-base * 2;
+
+    .title-break {
+      @media screen and (min-width: 1775px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1220px) and (min-width: 795px) {
+        display: none;
+      }
+
+      @media screen and (max-width: @sm) and (min-width: 511px) {
+        display: none;
+      }
+    }
   }
 
   .d4sd-content {

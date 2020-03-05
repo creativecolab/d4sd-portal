@@ -67,7 +67,7 @@ const HomeLayout = (): JSX.Element => {
                       {' '}
                       {date.start_date.getDate()}
                       {' '}
-                    –
+                      –
                       {' '}
                       {date.end_date.getDate()}
                     </>
@@ -85,7 +85,7 @@ const HomeLayout = (): JSX.Element => {
           <div style={{ marginRight: '15px' }} />
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
-              <p>{date.label}</p>
+              <p key={`${date.key}_p`}>{date.label}</p>
             ))}
           </div>
         </div>
@@ -119,8 +119,16 @@ const HomeLayout = (): JSX.Element => {
       <Menubar />
       <div className="landing">
         <div className="container">
-          <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>
-          <h1 className="d4sdmaintitle">{homeContent.title1}</h1>
+          <h3 className="d4sdsubtitle">
+            {homeContent.subtitle1_1}
+            <br className="subtitle-break" />
+            {homeContent.subtitle1_2}
+          </h3>
+          <h1 className="d4sdmaintitle">
+            {homeContent.title1_1}
+            <br className="title-break" />
+            {homeContent.title1_2}
+          </h1>
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
