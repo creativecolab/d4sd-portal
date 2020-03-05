@@ -164,6 +164,9 @@ const SubmitProposalLayout = (): JSX.Element => {
           </ul>
           <p>
             {submitProposalContent.content_5_3}
+            <a href="/blank-poster-template.pptx" target="_blank" rel="noopener noreferrer">Powerpoint</a>
+            ,
+            {' '}
             <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
             ,
             {' '}
