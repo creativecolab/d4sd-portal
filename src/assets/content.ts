@@ -642,10 +642,10 @@ export const workspaceContent = {
       body:
         "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
       action_button: {
-        label: "REGISTER FOR MAY 12TH SUMMIT",
-        url: "",
+        label: "LEARN ABOUT THE MAY 12TH SUMMIT",
+        url: "/attend",
         className: "long-label",
-        disabled: true
+        disabled: false
       },
       key: "d4sd_summit"
     }
