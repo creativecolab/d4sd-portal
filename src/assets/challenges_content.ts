@@ -1,4 +1,4 @@
-import mobility1 from "./img/mobility_lastmile.jpg";
+import mobility1 from "./img/mobility_lastmile_internal.jpg";
 import mobility2 from "./img/mobility_safety.jpg";
 // import mobility3 from "./img/mobility_equitable.jpg";
 // import mobility4 from "./img/mobility_multimodal.jpg";
