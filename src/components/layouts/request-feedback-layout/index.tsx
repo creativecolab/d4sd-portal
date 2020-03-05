@@ -102,9 +102,9 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <h5 className="title">{requestFeedbackContent.title_4}</h5>
           <p>{requestFeedbackContent.content_4}</p>
           <Document file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}>
-            <Page pageNumber={1} />
+            <Page width={1500} pageNumber={1} />
             <p>Page 1</p>
-            <Page pageNumber={2} />
+            <Page width={1500} pageNumber={2} />
             <p>Page 2</p>
           </Document>
         </div>
