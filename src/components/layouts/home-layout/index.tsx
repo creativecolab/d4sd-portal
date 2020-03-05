@@ -67,7 +67,7 @@ const HomeLayout = (): JSX.Element => {
                       {' '}
                       {date.start_date.getDate()}
                       {' '}
-                      –
+                      &amp;
                       {' '}
                       {date.end_date.getDate()}
                     </>

@@ -83,7 +83,7 @@ import poster_example_3 from './img/poster_example_3.png';
 export const homeContent = {
   subtitle1_1: "DESIGN FOR SAN DIEGO'S ",
   subtitle1_2: "2020 CIVIC DESIGN CHALLENGE",
-  title1_1: "How can we make San Diego a more ",
+  title1_1: "How might we make San Diego a more ",
   title1_2: "sustainable city?",
   content1:
     "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
