@@ -4,6 +4,7 @@
 
 .internal-container{
   #banner-image{
+
     padding-top: @header-navbar-padding;
     width: 100%;
     height: @header-height;
@@ -11,7 +12,12 @@
     text-align: center;
 
     h4{
-      color: @primary-txt;
+      color: @subheader-grey;
+    }
+
+    h1{
+      margin-top: @margin-base-1/2;
+      margin-bottom: @margin-base-1/2;
     }
 
     p{
@@ -28,7 +34,8 @@
       display: block;
     }
 
-    margin-bottom: @margin-base-1;
+    margin-top: @margin-base-1;
+    margin-bottom: @margin-base-2;
 
     >*{
       margin-top: @margin-base-1;
@@ -37,16 +44,25 @@
 
   #specific-angles{
     background-color: @d4sd-color-bg;
-    padding-bottom: @margin-base-1;
+    padding-bottom: @margin-base-2;
 
     >*{
+      margin-top: @margin-base-2;
+    }
+
+    p{
       margin-top: @margin-base-1;
     }
+
   }
 
   #resources{
     h2{
-      margin: @margin-base-1 0;
+      margin-top: @margin-base-2;
+    }
+
+    li{
+      margin-top: @margin-base-1/2;
     }
 
     margin-bottom: @margin-base-2;

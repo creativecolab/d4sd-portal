@@ -55,7 +55,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "cover"
         }}
       >
         <Col sm={14} xs={20}>
@@ -77,16 +77,10 @@ const ChallengeInternalLayout = (): JSX.Element => {
         <Col sm={16} xs={22}>
           <h2>Specific angles to explore</h2>
           <p>{challengeAngles}</p>
-          <ol>
-            {allChallengeAngles.map((obj: any) => (
-              <li>
-                {" - "}
-                {obj.label}
-                {" : "}
-                {obj.desc}
-              </li>
-            ))}
-          </ol>
+
+          {allChallengeAngles.map((obj: any) => (
+            <p>{" • "}{obj.label}{" : "}{obj.desc}</p>
+          ))}
         </Col>
       </Row>
       <Row type="flex" justify="center" id="resources">
@@ -95,7 +89,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <ul>
             {allResources.map((obj: any) => (
               <li>
-                <a href={obj.link}>{obj.label}</a>
+                <a href={obj.link}>{" • "}{obj.label}</a>
               </li>
             ))}
           </ul>
