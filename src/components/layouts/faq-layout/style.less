@@ -30,4 +30,19 @@
     list-style-position: inside;
     margin: 10px 0;
   }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    li {
+      list-style-type: decimal;
+      list-style-position: inside;
+      ul,
+      li {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin: 0 5px 0 10px;
+      }
+    }
+  }
 }
