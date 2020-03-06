@@ -6,11 +6,9 @@ import { NavLink } from 'react-router-dom';
 import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
-import { homeContent, summitContent } from '../../../assets/content';
+import { homeContent } from '../../../assets/content';
 import Footer from '../../Footer';
 import { contentHTML } from '../../../actions';
-
-import landingImage from '../../../assets/img/home_landing.svg';
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -22,7 +20,6 @@ import landingImage from '../../../assets/img/home_landing.svg';
 // };
 
 const logoCarouselSettings = {
-  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 4,
@@ -48,26 +45,47 @@ const HomeLayout = (): JSX.Element => {
   const SummitBanner = (): JSX.Element => (
     <div className="summit-banner">
       <div className="information">
-        <div className="summit-event info-tile">
+        <div className="summit-event">
           <div className="date">
-            <p>May</p>
-            <h1>12</h1>
+            <p>{homeContent.summit_banner.date.toDateString().substring(4, 7)}</p>
+            <h1>{homeContent.summit_banner.date.getDate()}</h1>
           </div>
           <div className="title">
-            <h1>D4SD Summit</h1>
-            <h5>San Diego Central Library</h5>
+            <h1>{homeContent.summit_banner.title}</h1>
+            <h5>{homeContent.summit_banner.location}</h5>
           </div>
         </div>
-        <div className="key-dates info-tile">
-          <div className="date-1">
-            <p className="date">March 20</p>
-            <div style={{ marginRight: '8px' }} />
-            <p>Request Feedback</p>
+        <div className="key-dates">
+          <div className="dates">
+            {homeContent.summit_banner.key_dates.map((date, i) => (
+              <div className={`date-${i + 1}`} key={`${date.key}_div`}>
+                <p className="date">
+                  {date.start_date ? (
+                    <>
+                      {date.start_date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.start_date.getDate()}
+                      {' '}
+                      &amp;
+                      {' '}
+                      {date.end_date.getDate()}
+                    </>
+                  ) : (
+                    <>
+                      {date.date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.date.getDate()}
+                    </>
+                  )}
+                </p>
+              </div>
+            ))}
           </div>
-          <div className="date-2">
-            <p className="date">April 22</p>
-            <div style={{ marginRight: '14px' }} />
-            <p>Submit Proposals</p>
+          <div style={{ marginRight: '15px' }} />
+          <div className="labels">
+            {homeContent.summit_banner.key_dates.map((date) => (
+              <p key={`${date.key}_p`}>{date.label}</p>
+            ))}
           </div>
         </div>
       </div>
@@ -88,7 +106,7 @@ const HomeLayout = (): JSX.Element => {
             type="primary-outline" size="medium" style={{ width: '100%' }}
             className="button outline"
           >
-            JOIN MAILING LIST
+            JOIN THE NEWSLETTER!
           </Button>
         </a>
       </div>
@@ -100,19 +118,27 @@ const HomeLayout = (): JSX.Element => {
       <Menubar />
       <div className="landing">
         <div className="container">
-          <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>
-          <h1 className="d4sdmaintitle">{homeContent.title1}</h1>
+          <h3 className="d4sdsubtitle">
+            {homeContent.subtitle1_1}
+            <br className="subtitle-break" />
+            {homeContent.subtitle1_2}
+          </h3>
+          <h1 className="d4sdmaintitle">
+            {homeContent.title1_1}
+            <br className="title-break" />
+            {homeContent.title1_2}
+          </h1>
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />
           <SummitBanner />
-          </div>
+        </div>
       </div>
       <div className="container">
         <div className="paragraph">
           <h2 ref={ref}>{homeContent.title2}</h2>
-          {/* eslint-disable */}
           <div className="text">
+            {/* eslint-disable-next-line */}
             <p dangerouslySetInnerHTML={contentHTML(homeContent.content2_1)} />
           </div>
         </div>
@@ -206,13 +232,12 @@ const HomeLayout = (): JSX.Element => {
         </div>
       </div>
 
-      {/* eslint-disable */}
       <Carousel
+        // eslint-disable-next-line
         {...logoCarouselSettings}
         slidesToShow={window.innerWidth < 768 ? 1 : 3}
         className="logo-carousel"
       >
-        {/* eslint-enable */}
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>

@@ -27,6 +27,7 @@ const InvolvedLayout = (): JSX.Element => (
           <Col
             xs={24}
             lg={12}
+            key={`${content.key}_Col`}
           >
             <Card
               className="involvecard"

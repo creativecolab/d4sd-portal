@@ -1,8 +1,7 @@
-@import "../../../styles/fonts.less";
-@img = timeline_pitch;
+@import '../../../styles/fonts.less';
 
 .SubmitPage {
-  >.section {
+  > .section {
     padding-top: 6rem;
     > .container {
       padding-bottom: 4rem;
@@ -14,13 +13,12 @@
         margin-bottom: 4rem;
       }
     }
-    background-color: #EDF6FF;
+    background-color: #edf6ff;
   }
   #section-2 {
-    padding-top:0rem;
-    background-color: #EDF6FF;
+    padding-top: 0rem;
+    background-color: #edf6ff;
     .container {
-
       .title {
         margin-bottom: 8rem;
       }
@@ -59,14 +57,59 @@
           display: inline-block;
           margin: 8px;
           width: calc(100% - 60px - 30px - 12px);
-          .desc {
-            font-size: 1.75rem;
-          }
           .desc-title {
             text-align: left;
             color: @d4sd-color;
             font-weight: 600;
             font-size: 2.5rem;
+          }
+          .desc {
+            font-size: 1.75rem;
+          }
+          color: #333333;
+          .event-items {
+            display: flex;
+            justify-content: center;
+            .date-loc {
+              .event-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3px 0;
+              }
+
+              .desc {
+                margin-bottom: 0em;
+              }
+            }
+          }
+        }
+
+        .action-button {
+          margin-top: 8px;
+          margin-left: 12px;
+        }
+
+        .long-label {
+          @media screen and (max-width: 441px) {
+            font-size: 12px;
+            padding: 0 20px;
+          }
+
+          @media screen and (max-width: 413px) {
+            font-size: 10px;
+            padding: 0 15px;
+          }
+
+          @media screen and (max-width: 347px) {
+            font-size: 8px;
+            padding: 0 10px;
+          }
+
+          @media screen and (max-width: 333px) {
+            font-size: 7px;
+            padding: 0 5px;
           }
         }
       }
@@ -77,9 +120,7 @@
       }
     }
   }
-
 }
-
 
 .WorkspaceActionCardWrapper {
   .WorkspaceActionCard {
@@ -88,7 +129,8 @@
       text-align: left;
       font-weight: 600;
     }
-    .card-short-desc, .card-full-desc {
+    .card-short-desc,
+    .card-full-desc {
       font-size: 14px;
     }
     .arrow {
@@ -104,7 +146,7 @@
   }
   width: 100%;
 }
-.d4sdtimeline-wrapper  {
+.d4sdtimeline-wrapper {
   .d4sdtimeline {
     .ant-collapse {
       border: none;
