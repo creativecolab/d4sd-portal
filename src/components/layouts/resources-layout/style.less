@@ -7,23 +7,6 @@
     font-size: 16px;
   }
 
-  .tab-list {
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-  }
-  
-  .tab-list-item {
-    display: inline-block;
-    list-style: none;
-    margin-bottom: -1px;
-    padding: 0.5rem 0.75rem;
-  }
-  
-  .tab-list-active {
-    background-color: white;
-    border-bottom: solid blue;
-    border-width: 1px 1px 0 1px;
-  }
   // Section 1
   .landing-div {
     height: 45vh;
@@ -32,52 +15,59 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     padding-top: 20vh;
-    @media screen and (max-width: 375px) {
-      padding-top: 15vh;
-      height: 65vh;
-      background-size: 125%;
-    }
   }
 
   .involve-cards {
     margin-top: @margin-base * 2;
   }
+
   .involve-card .ant-card-body {
     @media screen and (max-width: @sm) {
       height: auto;
     }
+
     @media screen and (min-width: @lg) {
       height: 420px;
     }
+
     @media screen and (min-width: @xl) {
       height: 300px;
     }
   }
+
   .ant-card-meta {
     font-size: 1.2em;
   }
+
   .ant-card-bordered {
     margin-bottom: 10px;
     margin-left: 10px;
   }
+
   .ant-card-actions {
     border-bottom-left-radius: @margin-base;
     border-bottom-right-radius: @margin-base;
   }
+
   .max-width {
     margin: auto;
+
     @media screen and (max-width: @sm) {
       width: 98%;
     }
+
     @media screen and (min-width: @sm) {
       width: 80%;
     }
+
     @media screen and (min-width: @md) {
       width: 70%;
     }
+
     @media screen and (min-width: @lg) {
       width: 85%;
     }
+
     @media screen and (min-width: @xl) {
       width: 70%;
     }
@@ -85,22 +75,49 @@
 }
 
 .extra {
+  padding: .2px 25px 7.5px 25px;
+  border-left: 25px solid #FF9696;
+  border-radius: 25px;
+  margin-bottom: 3vh;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.45);
+
+
   h1 {
     margin-top: 5vh;
     font-size: 3rem;
     text-align: left;
-    color: #4496FF;
     line-height: 15px;
   }
+
   h3 {
     text-align: left;
     line-height: 50px;
+  }
 
+  p {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    h1 {
+      line-height: 25px;
+      margin-top: 2.5vh;
+    }
+    h3 {
+      line-height: 30px;
+    }
   }
 }
 
 .paragraph {
   padding-top: 2vh;
+
+  .ant-card-cover {
+    border-bottom: 25px solid #FF9696;
+  }
+  .ant-card-bordered {
+    border: none;
+  }
 
   .cardtitle {
     text-align: left;
@@ -108,6 +125,7 @@
     margin-bottom: 2vh;
     color: #999999;
   }
+
   .cardphoto {
     border-radius: 10px 10px 0px 0px;
     height: 200px;
@@ -116,11 +134,13 @@
 
   .involve-card {
     height: 600px;
+
     .title {
       text-align: left;
       font-size: 2.75rem;
       line-height: 32px;
     }
+
     .source {
       text-align: left;
     }
@@ -156,6 +176,7 @@
 .tabcontainer {
   display: flex;
   justify-content: center;
+
   .resourcetabs {
     display: flex;
     width: 65%;
@@ -165,14 +186,66 @@
     h1 {
       color: #A7A7A7;
       font-size: 3rem;
+
       &:hover {
         cursor: pointer;
       }
+
       margin-right: 5vw;
     }
+
     .selected {
       color: #4496FF;
       border-bottom: 4px solid #4496FF;
     }
   }
+}
+
+.tabwrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vh;
+
+  .tab-list {
+    display: flex;
+    justify-content: flex-start;
+    width: 63%;
+  }
+
+  @media screen and (max-width: 375px) {
+    align-items: flex-start;
+
+  }
+}
+
+.tab-list-item {
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  margin-right: 5rem;
+  font-size: 3rem;
+  font-family: Montserrat;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-left: 1.25rem;
+    padding: 0rem 0.5rem;
+  }
+}
+
+.tab-list-active {
+  background-color: white;
+  border-bottom: solid #4496FF;
+  border-width: 0px 0px 3px 0px;
+  color: #4496FF;
+
 }

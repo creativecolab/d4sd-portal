@@ -715,11 +715,11 @@ export const resourcesContent = {
   process: {
     featured: [
       {
-        title: "Get to know your stakeholder's journey and their pain points",
-        source: 'Nielson Norman Group',
+        title: "D4SD Process Guide",
+        source: 'D4SD',
         description:
-          "Use journey mapping to help uncover the pain points, as well as moments of achievement in a person's decision-making process. Learn about a stakeholer’s journey (getting to work every morning, finding the right health care, etc.).",
-        action: 'VIEW VIDEO',
+          "Modeled after best practices in human-centered design research, the D4SD process involves five key phases: Discovery, Ideate, Prototype, Pitch, Activate. Read more about how you and your team can get the most out of each phase.",
+        action: 'LEARN MORE',
         link: '/resources/process',
         photo: process1
       },
@@ -733,6 +733,64 @@ export const resourcesContent = {
         photo: process2
       }
     ],
+    other: [
+      {
+        title: "Asking the right questions and solving the right problem.",
+        source: 'UX Collective',
+        description:
+          "It is important that you ask the right questions and solve the right problem. Read this case study about McDonald's trying to increase their sales of Milkshakes and how they put research into solving the wrong problem.",
+        link: 'https://uxdesign.cc/do-you-focus-on-the-wrong-product-problem-cf48950151f6',
+      },
+      {
+        title: "Design for Worldview",
+        source: 'Stanford d.school',
+        description:
+          "The underlying thesis of ‘Design for Worldview’ -- that we all share an innate creativity even as we share innate, unconscious bias and our creativity can and should be leveraged to disrupt our biases -- presents an opportunity to think differently about both unconscious bias awareness and the introduction-to-design-thinking experience. We hope you will accept this invitation to make this the experience that works best for you, your team, your organization or even your family and friends.",
+        link: 'https://drive.google.com/drive/folders/0B7YXKZ5JyYu4V3lyekl3c081ejQ',
+      },
+      {
+        title: "Toolkit for community driven design",
+        source: 'frog Design',
+        description:
+          "Complete guidebook outlining the specific methods that exist for community driven design, as well as outlining Frog's CAT design process for people. Also provides step by step (Plans of Action) which organizations and groups can adapt.",
+        link: 'https://www.frogdesign.com/wp-content/uploads/2016/03/CAT-English.pdf',
+      },
+      {
+        title: "A comprehensive process to design for social innovation",
+        source: 'Design for America',
+        description:
+          "Guidebook showcasing the process that DFA uses for social innovation across all its chapters. While being research driven, the guidebook also provides examples and tips for how you can apply this process to a civic problem.",
+        link: 'https://storage.googleapis.com/loft-io.appspot.com/5728464931913728/Design_Procees_1-Pagers_v.1.pdf',
+      },
+      {
+        title: "Methods to help design social innovation solutions",
+        source: 'DIY Toolkits',
+        description:
+          "This is a guidebook essentially laying out the different methods for social innovation. Each link describes the method in depth, providing an example of its use and when it should be used.",
+        link: 'https://diytoolkit.org/tools/',
+      },
+      {
+        title: "Learn how to transfer your sketches to a digital platform without coding",
+        source: 'Google for Startups',
+        description:
+          "Have an idea sketched out but want to see how it looks on a device? Learn to transfer sketches to a digital platform without writing a single line of code.",
+        link: 'https://www.youtube.com/watch?v=KWGBGTGryFk',
+      },
+      {
+        title: "Expand your ideation toolkit",
+        source: 'CareerFoundry',
+        description:
+          "Ideation is a process all designers go through, and getting ideas out on the table can be difficult when hitting a creative block. Take a look at some tips to bring to your next ideation session to help generate more and more ideas for your solution.",
+        link: 'https://careerfoundry.com/en/blog/ux-design/what-is-ideation-in-design-thinking/',
+      },
+      {
+        title: "Get to know your stakeholder's journey and their pain points",
+        source: 'Nielsen Norman Group',
+        description:
+          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
+        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+      },
+    ]
   }
 };
 
