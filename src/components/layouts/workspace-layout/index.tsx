@@ -76,7 +76,7 @@ const WorkspaceLayout = (): JSX.Element => {
                             </b>
                           </p>
                           <p className="desc">
-                            {item.content}
+                            <a href={item.url} target="_blank" rel="noopener noreferrer">{item.content}</a>
                           </p>
                           <a href={item.action_button.url} target="_blank" rel="noopener noreferrer">
                             <Button className={`action-button integrated-button ${item.action_button.className}`} disabled={item.action_button.disabled}>

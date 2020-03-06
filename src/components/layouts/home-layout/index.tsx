@@ -20,7 +20,6 @@ import { contentHTML } from '../../../actions';
 // };
 
 const logoCarouselSettings = {
-  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 4,
@@ -67,7 +66,7 @@ const HomeLayout = (): JSX.Element => {
                       {' '}
                       {date.start_date.getDate()}
                       {' '}
-                      –
+                      &amp;
                       {' '}
                       {date.end_date.getDate()}
                     </>

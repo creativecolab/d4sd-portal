@@ -164,14 +164,18 @@ const SubmitProposalLayout = (): JSX.Element => {
           </ul>
           <p>
             {submitProposalContent.content_5_3}
+            <a href="/blank-poster-template.pptx" target="_blank" rel="noopener noreferrer">Powerpoint</a>
+            ,
+            {' '}
             <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
             ,
             {' '}
             <a href="/blank-poster-template.ai" target="_blank" rel="noopener noreferrer">Illustrator</a>
             , and
             {' '}
-            <a href="/blank-poster-template.id" target="_blank" rel="noopener noreferrer">InDesign</a>
+            <a href="/blank-poster-template.indd" target="_blank" rel="noopener noreferrer">InDesign</a>
             {submitProposalContent.content_5_4}
+            .
           </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
