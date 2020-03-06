@@ -945,7 +945,9 @@ export const attendContent = {
   content_1_1:
     "The 2020 “Design for San Diego” Summit will be a chance to share and showcase proposals and ongoing efforts to make a more sustainable San Diego. Our goal is to do our part to build a more sustainable future by creating places for San Diegans to come together.",
   content_1_2:
-    "We invite participation from all walks of life. If you are working on making a more sustainable San Diego (e.g., improved housing, health, mobility, or environmental), please submit your proposals and ongoing work so that others can know about it and you can seek out to build coalitions with others. If that doesn't work for you, then consider volunteering to help the D4SD Summit and broader efforts.  OR just attend to hear about the great work happening to make San Diego a more sustainable city. If you can Submit your ideas or Volunteer, then admission is free. Register below for the event (coming soon!)",
+    "We invite participation from all walks of life. If you are working on making a more sustainable San Diego (e.g., improved housing, health, mobility, or environmental), please submit your proposals and ongoing work so that others can know about it and you can seek out to build coalitions with others. If that doesn't work for you, then consider volunteering to help the D4SD Summit and broader efforts.  OR just attend to hear about the great work happening to make San Diego a more sustainable city. If you can ",
+  content_1_3: " your ideas or ",
+  content_1_4: " then admission is free. Register below for the event (coming soon!)",
   title_2: "Event Details",
   // labels: ['When?', 'Where?', 'Who?', 'What?', 'How much is it?'],
   // details: [
