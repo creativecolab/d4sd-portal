@@ -607,7 +607,7 @@ export const challengeContent = {
   ]
 };
 
-export const workspaceContent = {
+export const submitContent = {
   image: "workspace_header",
   title1: "Submit",
   content1:

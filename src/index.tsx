@@ -78,7 +78,7 @@ const SponsorsPage = Loadable({
   loading: Loading
 });
 const SubmitPage = Loadable({
-  loader: () => import('./containers/workspace-page'),
+  loader: () => import('./containers/submit-page'),
   loading: Loading
 });
 const RequestFeedbackPage = Loadable({
