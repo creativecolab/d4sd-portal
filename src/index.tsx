@@ -9,7 +9,6 @@ import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import configureStore, { history } from './store';
 
-
 import ScrollToTop from './components/ScrollToTop';
 import SignupPage from './containers/signup-page';
 import LoginPage from './containers/login-page';

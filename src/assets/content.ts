@@ -631,11 +631,9 @@ export const workspaceContent = {
           time: "12:00 – 2:00pm",
           content: "@UC San Diego’s Design Lab",
           url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-          action_button: {
-            label: "SIGN UP FOR MAR 18TH WORKSHOP",
+          action: {
+            label: "Sign up for Workshop 1",
             url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-            className: "long-label",
-            disabled: false
           },
           key: "workshop_ucsd"
         },
@@ -644,11 +642,9 @@ export const workspaceContent = {
           time: "5:30 – 8:30pm",
           content: "@DowntownWorks",
           url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-          action_button: {
-            label: "SIGN UP FOR MAR 19TH WORKSHOP",
+          action: {
+            label: "Sign up for Workshop 2",
             url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-            className: "long-label",
-            disabled: false
           },
           key: "workshop_downtownworks"
         }
