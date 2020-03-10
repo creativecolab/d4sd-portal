@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
-import { Row, Col, Card } from '@d4sd/components';
-import Header from '../../Header/index';
-import Footer from '../../Footer/index';
-import '../../../styles/containers.less';
-import './style.less';
-import { challengeContent } from '../../../assets/content';
+import React, { useState, useRef } from "react";
+import { Row, Col, Card } from "@d4sd/components";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
+import "./style.less";
+import { challengeContent } from "../../../assets/content";
+import { Link } from "react-router-dom";
 // import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
 // import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
 // import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
@@ -45,7 +46,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -56,7 +57,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -67,7 +68,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -78,7 +79,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -96,7 +97,10 @@ const ChallengeLayout = (): JSX.Element => {
             <Col xs={10} sm={10} md={6}>
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToMobility} className="challengeicons">
-                <img src={challengeContent.nav[0].img} alt="challenge-content0" />
+                <img
+                  src={challengeContent.nav[0].img}
+                  alt="challenge-content0"
+                />
                 <h5 className="challenge-icon-caption">
                   {challengeContent.nav[0].title}
                 </h5>
@@ -105,7 +109,10 @@ const ChallengeLayout = (): JSX.Element => {
             <Col xs={10} sm={10} md={6}>
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToHealth} className="challengeicons">
-                <img src={challengeContent.nav[1].img} alt="challenge-content1" />
+                <img
+                  src={challengeContent.nav[1].img}
+                  alt="challenge-content1"
+                />
                 <h5 className="challenge-icon-caption">
                   {challengeContent.nav[1].title}
                 </h5>
@@ -114,7 +121,10 @@ const ChallengeLayout = (): JSX.Element => {
             <Col xs={10} sm={10} md={6}>
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToEnvironment} className="challengeicons">
-                <img src={challengeContent.nav[2].img} alt="challenge-content2" />
+                <img
+                  src={challengeContent.nav[2].img}
+                  alt="challenge-content2"
+                />
                 <h5 className="challenge-icon-caption">
                   {challengeContent.nav[2].title}
                 </h5>
@@ -123,7 +133,10 @@ const ChallengeLayout = (): JSX.Element => {
             <Col xs={10} sm={10} md={6}>
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToHousing} className="challengeicons">
-                <img src={challengeContent.nav[3].img} alt="challenge-content3" />
+                <img
+                  src={challengeContent.nav[3].img}
+                  alt="challenge-content3"
+                />
                 <h5 className="challenge-icon-caption">
                   {challengeContent.nav[3].title}
                 </h5>
@@ -138,7 +151,12 @@ const ChallengeLayout = (): JSX.Element => {
           <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
         </div>
 
-        <div className="section" onClick={()=>{console.log("mobility")}}>
+        <div
+          className="section"
+          onClick={() => {
+            console.log("mobility");
+          }}
+        >
           <h4 className="text" ref={mobility}>
             <span>MOBILITY: </span>
             How might we help people move freely in San Diego?
@@ -150,18 +168,20 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setLastMile(true)}
               onMouseLeave={(): void => setLastMile(false)}
             >
-              <Card hoverable className="lastmile-card">
-                <div className="card-bg">
-                  {lastMile && (
-                    <p className="card-text">
-                      How might we improve the last-mile experience where
-                      traffic is congested, parking is scarce, and public
-                      transportation is limited?
-                    </p>
-                  )}
-                  {!lastMile && <h2 className="card-text">Last Mile</h2>}
-                </div>
-              </Card>
+              <Link to="/challenges/mobility/lastmile">
+                <Card hoverable className="lastmile-card">
+                  <div className="card-bg">
+                    {lastMile && (
+                      <p className="card-text">
+                        How might we improve the last-mile experience where
+                        traffic is congested, parking is scarce, and public
+                        transportation is limited?
+                      </p>
+                    )}
+                    {!lastMile && <h2 className="card-text">Last Mile</h2>}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -199,7 +219,9 @@ const ChallengeLayout = (): JSX.Element => {
                       Diego?
                     </p>
                   )}
-                  {!equitable && <h2 className="card-text">Equitable Access</h2>}
+                  {!equitable && (
+                    <h2 className="card-text">Equitable Access</h2>
+                  )}
                 </div>
               </Card>
             </Col>

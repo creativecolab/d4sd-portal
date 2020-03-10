@@ -59,7 +59,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
         }}
       >
         <Col sm={14} xs={20}>
-          <h4>{challengeTypeHeading}</h4>
+          <h3>{challengeTypeHeading}</h3>
           <h1>{challengeHeading}</h1>
           <p>{challengeHeadInfo}</p>
         </Col>
@@ -68,9 +68,6 @@ const ChallengeInternalLayout = (): JSX.Element => {
         <Col sm={16} xs={22} id="centralInfo">
           <h2>Introduction</h2>
           <p>{challengeIntro}</p>
-          <Button type="primary" size="large" id="joinBtn">
-            JOIN THE DISCUSSION
-          </Button>
         </Col>
       </Row>
       <Row type="flex" justify="center" id="specific-angles">
@@ -79,8 +76,15 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <p>{challengeAngles}</p>
 
           {allChallengeAngles.map((obj: any) => (
-            <p><b>{obj.label}</b>{" : "}{obj.desc}</p>
+            <p>
+              <b>{obj.label}</b>
+              {" : "}
+              {obj.desc}
+            </p>
           ))}
+          <Button type="primary" size="large" id="joinBtn">
+            JOIN THE DISCUSSION
+          </Button>
         </Col>
       </Row>
       <Row type="flex" justify="center" id="resources">
@@ -89,7 +93,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <ul>
             {allResources.map((obj: any) => (
               <li>
-                <a href={obj.link}>{obj.label}</a>
+                <a href={obj.link} target="_blank">{obj.label}</a>
               </li>
             ))}
           </ul>
