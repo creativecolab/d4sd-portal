@@ -356,19 +356,21 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setEducation(true)}
               onMouseLeave={(): void => setEducation(false)}
             >
-              <Card hoverable className="education-card">
-                <div className="card-bg">
-                  {education && (
-                    <p className="card-text">
-                      How might we make people more aware of and responsible for
-                      their own personal impact on the environment?
-                    </p>
-                  )}
-                  {!education && (
-                    <h2 className="card-text">Education and Awareness</h2>
-                  )}
-                </div>
-              </Card>
+              <Link to="/challenges/environment/education_and_awareness">
+                <Card hoverable className="education-card">
+                  <div className="card-bg">
+                    {education && (
+                      <p className="card-text">
+                        How might we make people more aware of and responsible
+                        for their own personal impact on the environment?
+                      </p>
+                    )}
+                    {!education && (
+                      <h2 className="card-text">Education and Awareness</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -377,17 +379,19 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setWaste(true)}
               onMouseLeave={(): void => setWaste(false)}
             >
-              <Card hoverable className="waste-card">
-                <div className="card-bg">
-                  {waste && (
-                    <p className="card-text">
-                      How might we create a circular loop that transforms
-                      “waste” into useful resources?
-                    </p>
-                  )}
-                  {!waste && <h2 className="card-text">Waste Management</h2>}
-                </div>
-              </Card>
+              <Link to="/challenges/environment/waste_management">
+                <Card hoverable className="waste-card">
+                  <div className="card-bg">
+                    {waste && (
+                      <p className="card-text">
+                        How might we create a circular loop that transforms
+                        “waste” into useful resources?
+                      </p>
+                    )}
+                    {!waste && <h2 className="card-text">Waste Management</h2>}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -396,18 +400,20 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setGrid(true)}
               onMouseLeave={(): void => setGrid(false)}
             >
-              <Card hoverable className="grid-card">
-                <div className="card-bg">
-                  {grid && (
-                    <p className="card-text">
-                      How might we design services to help people monitor and
-                      better allocate energy resources at home and across
-                      neighborhoods?
-                    </p>
-                  )}
-                  {!grid && <h2 className="card-text">Smart Grid</h2>}
-                </div>
-              </Card>
+              <Link to="/challenges/environment/smart_grids">
+                <Card hoverable className="grid-card">
+                  <div className="card-bg">
+                    {grid && (
+                      <p className="card-text">
+                        How might we design services to help people monitor and
+                        better allocate energy resources at home and across
+                        neighborhoods?
+                      </p>
+                    )}
+                    {!grid && <h2 className="card-text">Smart Grid</h2>}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -416,19 +422,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setClimateInfra(true)}
               onMouseLeave={(): void => setClimateInfra(false)}
             >
-              <Card hoverable className="climateInfra-card">
-                <div className="card-bg">
-                  {climateInfra && (
-                    <p className="card-text">
-                      How can we prepare San Diego to be resilient in the face
-                      of climate change, beach erosion, and rising water levels?
-                    </p>
-                  )}
-                  {!climateInfra && (
-                    <h2 className="card-text">Climate Infrastructure</h2>
-                  )}
-                </div>
-              </Card>
+              <Link to="/challenges/environment/climate_infrastructure">
+                <Card hoverable className="climateInfra-card">
+                  <div className="card-bg">
+                    {climateInfra && (
+                      <p className="card-text">
+                        How can we prepare San Diego to be resilient in the face
+                        of climate change, beach erosion, and rising water
+                        levels?
+                      </p>
+                    )}
+                    {!climateInfra && (
+                      <h2 className="card-text">Climate Infrastructure</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
           </Row>
         </div>

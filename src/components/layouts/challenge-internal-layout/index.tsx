@@ -27,8 +27,11 @@ const ChallengeInternalLayout = (): JSX.Element => {
   const backgroundImageUrl = challengeTitle.image;
   const challengeIntro = challengeTitle.introduction;
   const challengeAngles = challengeTitle.angles;
+  const challengeEvidence = challengeTitle.presenting_evidence;
   const allChallengeAngles = challengeTitle.angle_examples;
-  const allResources = challengeTitle.resources;
+  const allResourcesPartners = challengeTitle.resources_partners;
+  const allResourcesNews = challengeTitle.resources_news;
+  const allResourcesNational = challengeTitle.resources_national;
 
   console.log(backgroundImageUrl);
 
@@ -74,6 +77,9 @@ const ChallengeInternalLayout = (): JSX.Element => {
         <Col sm={16} xs={22}>
           <h2>Specific angles to explore</h2>
           <p>{challengeAngles}</p>
+          <p>
+            <b>{challengeEvidence}</b>
+          </p>
 
           {allChallengeAngles.map((obj: any) => (
             <p>
@@ -90,13 +96,40 @@ const ChallengeInternalLayout = (): JSX.Element => {
       <Row type="flex" justify="center" id="resources">
         <Col sm={16} xs={22}>
           <h2>Resources</h2>
+          <h4>Organizations/Partners/Stakeholders</h4>
           <ul>
-            {allResources.map((obj: any) => (
+            {allResourcesPartners.map((obj: any) => (
               <li>
-                <a href={obj.link} target="_blank">{obj.label}</a>
+                <a href={obj.link} target="_blank">
+                  {obj.label}
+                </a>
               </li>
             ))}
           </ul>
+          <h4>News</h4>
+          <ul>
+            {allResourcesNews.map((obj: any) => (
+              <li>
+                <a href={obj.link} target="_blank">
+                  {obj.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {allResourcesNational && (
+            <div>
+              <h4>National Context</h4>
+              <ul>
+                {allResourcesNational.map((obj: any) => (
+                  <li>
+                    <a href={obj.link} target="_blank">
+                      {obj.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </Col>
       </Row>
       <Footer />
