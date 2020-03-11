@@ -73,7 +73,7 @@ const Menubar = (): JSX.Element => {
 
   useEffect(() => {
     forceUpdate();
-  }, [currentTab]);
+  }, [currentTab, forceUpdate]);
 
   const secondSlash = (path: string): number => path.indexOf('/', 1);
 

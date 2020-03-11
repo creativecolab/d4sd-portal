@@ -11,7 +11,7 @@ import Loadable from 'react-loadable';
 import configureStore, { history } from './store';
 
 import Menubar from './components/menubar';
-import CovidBanner from './components/covid-banner';
+// import CovidBanner from './components/covid-banner';
 import ScrollToTop from './components/ScrollToTop';
 
 const Loading = (): null => null; // loading component
