@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
@@ -8,26 +8,23 @@ import './style.less';
 
 import { SubMenu } from 'rc-menu';
 import d4sdlogo from '../../assets/img/logo.svg';
-import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
+// import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
-  const [, updateState] = React.useState();
-  const forceUpdate = useCallback(() => updateState({}), []);
-
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
+  // const [scroll, setScroll] = useState('');
   // eslint-disable-next-line
-  const [scroll, setScroll] = useState('');
   const [logo, setLogo] = useState(d4sdlogo);
   const [collapse, setCollapse] = useState(true);
 
-  useEffect(() => {
-    if (scroll === '') {
-      setLogo(d4sdlogo);
-    } else {
-      setLogo(d4sdlogoBlue);
-    }
-  }, [scroll]);
+  // useEffect(() => {
+  //   if (scroll === '') {
+  //     setLogo(d4sdlogo);
+  //   } else {
+  //     setLogo(d4sdlogoBlue);
+  //   }
+  // }, [scroll]);
 
   useEffect(() => {
     // console.log(history.location.pathname);
@@ -70,10 +67,6 @@ const Menubar = (): JSX.Element => {
     }
   // eslint-disable-next-line
   }, []);
-
-  useEffect(() => {
-    forceUpdate();
-  }, [currentTab, forceUpdate]);
 
   const secondSlash = (path: string): number => path.indexOf('/', 1);
 
