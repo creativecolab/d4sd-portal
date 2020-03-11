@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col, Card, Button } from '@d4sd/components';
+import { NavLink } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import Tabs from '../../../components/tabs/tabs.jsx';
@@ -33,28 +34,36 @@ function ResourcesLayout() {
           <div className="container paragraph">
             <h1 className="cardtitle">FEATURED RESOURCES</h1>
             <Row type="flex" justify="center" gutter={[32, 16]}>
+              <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                <NavLink to="/resources/process">
+                  <Card className="involve-card">
+                    <h1 className="title">D4SD Process Guide</h1>
+                    <h3 className="source">Design 4 San Diego</h3>
+                    <p>
+                      Modeled after best practices in human-centered design
+                      research, the D4SD process involves five key phases:
+                      Discovery, Ideate, Prototype, Pitch, Activate. Read more
+                      about how you and your team can get the most out of each
+                      phase.
+                    </p>
+                  </Card>
+                </NavLink>
+              </Col>
               {resourcesContent.process.featured.map(content => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <Card
-                    className="involve-card"
-                    cover={
-                      <img
-                        className="cardphoto"
-                        alt="photo"
-                        src={content.photo}
-                      />
-                    }
-                  >
-                    <h1 className="title">{content.title}</h1>
-                    <h3 className="source">{content.source}</h3>
-                    {/* <p>{content.description}</p> */}
-                  </Card>
+                  <a href={content.link} target="_blank">
+                    <Card className="involve-card">
+                      <h1 className="title">{content.title}</h1>
+                      <h3 className="source">{content.source}</h3>
+                      <p>{content.description}</p>
+                    </Card>
+                  </a>
                 </Col>
               ))}
             </Row>
             <h1 className="othertitle">OTHER RESOURCES</h1>
             {resourcesContent.process.other.map(content => (
-              <a href={content.link}>
+              <a href={content.link} target="_blank">
                 <div className="extra">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -67,62 +76,79 @@ function ResourcesLayout() {
         <TabDiv label="Community">
           <div className="container paragraph">
             <h1 className="cardtitle">FEATURED RESOURCES</h1>
-            <Row type="flex" justify="center" gutter={[16, 16]}>
+            <Row type="flex" justify="center" gutter={[32, 16]}>
               {resourcesContent.process.featured.map(content => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-                  <Card
-                    className="involve-card"
-                    cover={
-                      <img
-                        className="cardphoto"
-                        alt="photo"
-                        src={content.photo}
-                      />
-                    }
-                  >
+                  <Card className="involve-card">
                     <h1 className="title">{content.title}</h1>
                     <h3 className="source">{content.source}</h3>
                     <p>{content.description}</p>
-                    <div className="buttoncontainer">
-                      <a href={content.link}>
-                        <Button className="button" type="primary">
-                          {content.action}
-                        </Button>
-                      </a>
-                    </div>
                   </Card>
                 </Col>
               ))}
             </Row>
             <h1 className="othertitle">OTHER RESOURCES</h1>
-
-            <div className="extra">
-              <h1>Asking the right question and solving the right problem</h1>
-              <h3>UX Collective</h3>
-              <p>
-                It is important that you ask the right questions and solve the
-                right problem. Read this case study about McDonald's trying to
-                increase their sales of Milkshakes and how they put research
-                into solving the wrong problem.
-              </p>
-            </div>
-            <div className="extra">
-              <h1>Tips for Conducting Interviews</h1>
-              <h3>MJV Technology & Innovation</h3>
-              <p>
-                Every day, we meet people and process our interactions--making
-                inferences and developing beliefs about the world around us. In
-                this lesson, Maber introduces us to the idea of a ladder of
-                inference and a process for rethinking the way we interact.
-              </p>
-            </div>
+            {resourcesContent.community.other.map(content => (
+              <a href={content.link} target="_blank">
+                <div className="extra-community">
+                  <h1>{content.title}</h1>
+                  <h3>{content.source}</h3>
+                </div>
+              </a>
+            ))}
           </div>
         </TabDiv>
         <TabDiv label="Data">
-          Nothing to see here, this tab is <em>extinct</em>!
+          <div className="container paragraph">
+            <h1 className="cardtitle">FEATURED RESOURCES</h1>
+            <Row type="flex" justify="center" gutter={[32, 16]}>
+              {resourcesContent.process.featured.map(content => (
+                <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                  <Card className="involve-card">
+                    <h1 className="title">{content.title}</h1>
+                    <h3 className="source">{content.source}</h3>
+                    <p>{content.description}</p>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+            <h1 className="othertitle">OTHER RESOURCES</h1>
+            {resourcesContent.data.other.map(content => (
+              <a href={content.link} target="_blank">
+                <div className="extra-data">
+                  <h1>{content.title}</h1>
+                  <h3>{content.source}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
         </TabDiv>
         <TabDiv label="All">
-          Nothing to see here, this tab is <em>extinct</em>!
+          {resourcesContent.process.other.map(content => (
+            <a href={content.link} target="_blank">
+              <div className="extra">
+                <h1>{content.title}</h1>
+                <h3>{content.source}</h3>
+                {/* <p>{content.description}</p> */}
+              </div>
+            </a>
+          ))}
+          {resourcesContent.community.other.map(content => (
+            <a href={content.link} target="_blank">
+              <div className="extra-community">
+                <h1>{content.title}</h1>
+                <h3>{content.source}</h3>
+              </div>
+            </a>
+          ))}
+          {resourcesContent.data.other.map(content => (
+            <a href={content.link} target="_blank">
+              <div className="extra-data">
+                <h1>{content.title}</h1>
+                <h3>{content.source}</h3>
+              </div>
+            </a>
+          ))}
         </TabDiv>
       </Tabs>
       <br />

@@ -77,39 +77,39 @@ import sponsors_yankelovich from './img/sponsors_yankelovich.png';
 import sponsors_ibm from './img/sponsors_ibm.svg';
 import sponsors_nsf from './img/sponsors_nsf.png';
 
-import example_storyboard_1 from "./img/example_storyboard_1.png"
-import example_storyboard_2 from "./img/example_storyboard_2.png"
-import example_storyboard_3 from "./img/example_storyboard_3.png"
+import example_storyboard_1 from './img/example_storyboard_1.png';
+import example_storyboard_2 from './img/example_storyboard_2.png';
+import example_storyboard_3 from './img/example_storyboard_3.png';
 
-import poster_example_temporary1 from "./img/poster_example_temporary1.png";
-import poster_example_temporary2 from "./img/poster_example_temporary2.png";
+import poster_example_temporary1 from './img/poster_example_temporary1.png';
+import poster_example_temporary2 from './img/poster_example_temporary2.png';
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1: "DESIGN FOR SAN DIEGO'S 2020 CIVIC DESIGN CHALLENGE",
   title1: 'How can we make San Diego a more sustainable city?',
   content1:
-    "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
+    'San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.',
   summit_banner: {
-    date: new Date("05/12/2020"),
-    title: "D4SD Summit",
-    location: "San Diego Central Library",
+    date: new Date('05/12/2020'),
+    title: 'D4SD Summit',
+    location: 'San Diego Central Library',
     key_dates: [
       {
-        date: new Date("03/19/2020"),
-        label: "Introductory Workshop"
+        date: new Date('03/19/2020'),
+        label: 'Introductory Workshop'
       },
       {
-        date: new Date("03/22/2020"),
-        label: "Request Feedback"
+        date: new Date('03/22/2020'),
+        label: 'Request Feedback'
       },
       {
-        date: new Date("04/22/2020"),
-        label: "Submit Proposals"
+        date: new Date('04/22/2020'),
+        label: 'Submit Proposals'
       }
     ]
   },
-  title2: "How to Participate",
+  title2: 'How to Participate',
   content2_1:
     'Everyone is welcome to participate in the D4SD 2020 challenge and summit. There are multiple ways to get involved, such as submitting a proposal, attending the summit, volunteering with us, or sponsoring the challenge! Click on one of the roles below to explore different ways to get involved with this year’s D4SD challenge and summit.',
   content2_2:
@@ -569,63 +569,63 @@ export const workspaceContent = {
     "If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("03/19/2020"),
-      override_date: "Mid March",
-      title: "Introductory Workshops",
+      date: new Date('03/19/2020'),
+      override_date: 'Mid March',
+      title: 'Introductory Workshops',
       body:
         "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
       subbody: {
-        date: new Date("03/19/2020"),
-        time: "5:30 – 8pm",
-        content: "in partnership with ScaleSD and DowntownWorks",
-        key: "workshop"
+        date: new Date('03/19/2020'),
+        time: '5:30 – 8pm',
+        content: 'in partnership with ScaleSD and DowntownWorks',
+        key: 'workshop'
       },
       action_button: {
-        label: "SIGN UP FOR MAR 19TH WORKSHOP",
-        url: "",
-        className: "long-label",
+        label: 'SIGN UP FOR MAR 19TH WORKSHOP',
+        url: '',
+        className: 'long-label',
         disabled: true
       },
-      key: "intro_workshops"
+      key: 'intro_workshops'
     },
     {
-      date: new Date("03/22/2020"),
-      title: "Community Feedback",
+      date: new Date('03/22/2020'),
+      title: 'Community Feedback',
       body:
-        "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+        'Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.',
       action_button: {
-        label: "REQUEST FEEDBACK",
-        url: "/submit/request-feedback",
-        className: "",
+        label: 'REQUEST FEEDBACK',
+        url: '/submit/request-feedback',
+        className: '',
         disabled: false
       },
-      key: "community_feedback"
+      key: 'community_feedback'
     },
     {
       date: new Date('04/22/2020'),
       title: 'Final submission deadline (Earth Day!)',
       body:
-        "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
+        'Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.',
       action_button: {
-        label: "SUBMIT A PROPOSAL",
-        url: "/submit/submit-proposal",
-        className: "",
+        label: 'SUBMIT A PROPOSAL',
+        url: '/submit/submit-proposal',
+        className: '',
         disabled: false
       },
-      key: "final_submission"
+      key: 'final_submission'
     },
     {
       date: new Date('05/12/2020'),
       title: 'D4SD Summit 2020',
       body:
-        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+        'Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!',
       action_button: {
-        label: "REGISTER FOR MAY 12TH SUMMIT",
-        url: "",
-        className: "long-label",
+        label: 'REGISTER FOR MAY 12TH SUMMIT',
+        url: '',
+        className: 'long-label',
         disabled: true
       },
-      key: "d4sd_summit"
+      key: 'd4sd_summit'
     }
   ],
   timeline: [
@@ -715,130 +715,245 @@ export const resourcesContent = {
   process: {
     featured: [
       {
-        title: "D4SD Process Guide",
-        source: 'D4SD',
-        description:
-          "Modeled after best practices in human-centered design research, the D4SD process involves five key phases: Discovery, Ideate, Prototype, Pitch, Activate. Read more about how you and your team can get the most out of each phase.",
-        action: 'LEARN MORE',
-        link: '/resources/process',
-        photo: process1
-      },
-      {
         title: 'The Google Design Sprint: Five Days of Quick Innovation',
         source: 'Google Design Sprint',
         description:
           "Browse this website outlining many design methods, as well as where and when to use them. Also, look through various 'case studies': helpful examples that help organizations adapt the sprint to their unique needs.",
-        action: 'VIEW ARTICLE',
-        link: 'resources/stakeholder',
+        link: 'https://designsprintkit.withgoogle.com/methodology/phase1-understand/luma-abstraction-laddering',
         photo: process2
       }
     ],
     other: [
       {
-        title: "Asking the right questions and solving the right problem.",
         source: 'UX Collective',
+        title: 'Asking the right questions and solving the right problem.',
         description:
           "It is important that you ask the right questions and solve the right problem. Read this case study about McDonald's trying to increase their sales of Milkshakes and how they put research into solving the wrong problem.",
-        link: 'https://uxdesign.cc/do-you-focus-on-the-wrong-product-problem-cf48950151f6',
+        link:
+          'https://uxdesign.cc/do-you-focus-on-the-wrong-product-problem-cf48950151f6'
       },
       {
-        title: "Design for Worldview",
+        source: 'UX Collective',
+        title: 'Conducting inclusive user research',
+        description:
+          'User research is crucial to the design process and helps influence our design decisions. Learn a few tips for conducting inclusive user research and get the best data to help you along the way.',
+        link:
+          'https://uxdesign.cc/designing-a-better-future-with-inclusive-user-research-fb6a2a1c7c73'
+      },
+      {
         source: 'Stanford d.school',
+        title: 'Design for Worldview',
         description:
-          "The underlying thesis of ‘Design for Worldview’ -- that we all share an innate creativity even as we share innate, unconscious bias and our creativity can and should be leveraged to disrupt our biases -- presents an opportunity to think differently about both unconscious bias awareness and the introduction-to-design-thinking experience. We hope you will accept this invitation to make this the experience that works best for you, your team, your organization or even your family and friends.",
-        link: 'https://drive.google.com/drive/folders/0B7YXKZ5JyYu4V3lyekl3c081ejQ',
+          'The underlying thesis of \u00e2\u20ac\u02dcDesign for Worldview\u00e2\u20ac\u2122 -- that we all share an innate creativity even as we share innate, unconscious bias and our creativity can and should be leveraged to disrupt our biases -- presents an opportunity to think differently about both unconscious bias awareness and the introduction-to-design-thinking experience. We hope you will accept this invitation to make this the experience that works best for you, your team, your organization or even your family and friends.',
+        link:
+          'https://drive.google.com/drive/folders/0B7YXKZ5JyYu4V3lyekl3c081ejQ'
       },
       {
-        title: "Toolkit for community driven design",
-        source: 'frog Design',
+        source: 'TED-Ed',
+        title: 'Rethinking thinking',
         description:
-          "Complete guidebook outlining the specific methods that exist for community driven design, as well as outlining Frog's CAT design process for people. Also provides step by step (Plans of Action) which organizations and groups can adapt.",
-        link: 'https://www.frogdesign.com/wp-content/uploads/2016/03/CAT-English.pdf',
+          'Every day, we meet people and process our interactions--making inferences and developing beliefs about the world around us. In this lesson, Trevor Maber introduces us to the idea of a ladder of inference and a process for rethinking the way we interact.',
+        link: 'https://www.youtube.com/watch?v=KJLqOclPqis'
       },
       {
-        title: "A comprehensive process to design for social innovation",
+        source: 'Jessie Drumm',
+        title: 'Affinity mapping strategies',
+        description:
+          'Affinity mapping to focus your thinking around a messy, ambiguous problem',
+        link: 'https://www.youtube.com/watch?v=UynxDyr0lAo'
+      },
+      {
         source: 'Design for America',
+        title: 'A comprehensive process to design for social innovation',
         description:
-          "Guidebook showcasing the process that DFA uses for social innovation across all its chapters. While being research driven, the guidebook also provides examples and tips for how you can apply this process to a civic problem.",
-        link: 'https://storage.googleapis.com/loft-io.appspot.com/5728464931913728/Design_Procees_1-Pagers_v.1.pdf',
+          'Guidebook showcasing the process that DFA uses for social innovation across all its chapters. While being research driven, the guidebook also provides examples and tips for how you can apply this process to a civic problem',
+        link:
+          'https://storage.googleapis.com/loft-io.appspot.com/5728464931913728/Design_Procees_1-Pagers_v.1.pdf'
       },
       {
-        title: "Methods to help design social innovation solutions",
+        source: 'Google for Startups',
+        title:
+          'Learn how to quickly get your ideas on paper and share them with others',
+        description:
+          "Have an idea in your head? It's important to get feedback early on to guide you along the design process. Watch this video for tips on how to quickly sketch out an idea and prototype it with potential users.",
+        link: 'https://www.youtube.com/watch?v=JMjozqJS44M'
+      },
+      {
         source: 'DIY Toolkits',
+        title: 'Methods to help design social innovation solutions',
         description:
-          "This is a guidebook essentially laying out the different methods for social innovation. Each link describes the method in depth, providing an example of its use and when it should be used.",
-        link: 'https://diytoolkit.org/tools/',
+          'This is a guidebook essentially laying out the different methods for social innovation. Each link describes the method in depth, providing an example of its use and when it should be used.',
+        link: 'https://diytoolkit.org/tools/'
       },
       {
-        title: "Learn how to transfer your sketches to a digital platform without coding",
+        source: 'Inside Design by InVision',
+        title:
+          "Quickly evaluate your team's ideas with rapid ideation and testing",
+        description:
+          'When ideating and prototyping, it is crucial to move fast and generate as many ideas as you can. In this article, you can learn about a common design technique called rapid prototyping, which consists of quickly generating and testing ideas to help designers discover and validate their prototypes. Take a look at this article for an example on how to structure your first rapid prototyping session.',
+        link: 'https://www.invisionapp.com/inside-design/rapid-prototyping/'
+      },
+      {
+        source: 'Career Foundry',
+        title:
+          'Apply user testing techniques to gain insights about your solution',
+        description:
+          'Ready to test your prototype? Read about different user research methods, how to conduct them, and when to use certain testing methods over others.',
+        link:
+          'https://careerfoundry.com/en/blog/ux-design/how-to-conduct-user-experience-research-like-a-professional/'
+      },
+      {
+        source: '',
+        title: 'Tactical Urbanism Strategies',
+        description:
+          'Tactical urbanism involves short, temporary, low cost strategies to demonstrate what change might look and feel like in a space, to generate ideas and motivate support for change.  This playbook includes a range of ideas about how to get started, by reviewing past efforts.',
+        link:
+          'https://issuu.com/streetplanscollaborative/docs/tactical_urbanism_vol_2_final?mode=window&backgroundColor=%23222222'
+      },
+      {
         source: 'Google for Startups',
+        title:
+          'Learn how to transfer your sketches to a digital platform without coding',
         description:
-          "Have an idea sketched out but want to see how it looks on a device? Learn to transfer sketches to a digital platform without writing a single line of code.",
-        link: 'https://www.youtube.com/watch?v=KWGBGTGryFk',
+          'Have an idea sketched out but want to see how it looks on a device? Learn to transfer sketches to a digital platform without writing a single line of code.',
+        link: 'https://www.youtube.com/watch?v=KWGBGTGryFk'
       },
       {
-        title: "Expand your ideation toolkit",
-        source: 'CareerFoundry',
+        source: 'NACTO',
+        title: 'Urban Street Design',
         description:
-          "Ideation is a process all designers go through, and getting ideas out on the table can be difficult when hitting a creative block. Take a look at some tips to bring to your next ideation session to help generate more and more ideas for your solution.",
-        link: 'https://careerfoundry.com/en/blog/ux-design/what-is-ideation-in-design-thinking/',
+          'Learn design principles about urban street design and how to prototype in these areas',
+        link: 'https://nacto.org/publication/urban-street-design-guide/'
       },
       {
-        title: "Get to know your stakeholder's journey and their pain points",
-        source: 'Nielsen Norman Group',
-        description:
-          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
-        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
-      },
-      {
-        title: "Learn how to quickly get your ideas on paper and share them with others",
-        source: 'Google for Startups',
-        description:
-          "What's your big idea?  Can you say it in under 1-minute.  This Medium post offers several thoughts about how to craft an effective pitch.",
-        link: 'https://medium.com/swlh/how-to-effectively-pitch-business-ideas-to-investors-dd76661b02f1',
-      },
-      {
-        title: "Pitching creative work",
-        source: 'D&AD',
-        description:
-          "Not sure how to pitch your project? This video outlines some of the biggest obstacles to pitching potential creative work, and how we might get over that. Also contains tips on how to convey creative work to stakeholders who aren't designers.",
-        link: 'https://www.youtube.com/watch?v=YYFS4K3p2Aw',
-      },
-      {
-        title: "Elevate your pitch",
         source: 'Slidebean',
+        title: 'Elevate your pitch',
         description:
           "An example and analysis of how Airbnb's pitch deck contributed to its success in raising $500K. Great pointers on how to pitch new products from an entrepreneurial perspective.",
-        link: 'https://www.youtube.com/watch?v=uuxnzuH3XiM',
+        link: 'https://www.youtube.com/watch?v=uuxnzuH3XiM'
       },
       {
-        title: "Quickly evaluate your team's ideas with rapid ideation and testing",
-        source: 'Inside Design by InVision',
+        source: 'Social Innovator Series',
+        title: 'Social Innovation',
         description:
-          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
-        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+          'Guidebook for thinking about social innovation in public, private, and community settings',
+        link:
+          'https://media.nesta.org.uk/documents/the_open_book_of_social_innovation.pdf'
+      }
+    ]
+  },
+  community: {
+    featured: [
+      {
+        source: 'Depaul ABCD',
+        title: 'Developing community assets',
+        description:
+          'Identifying the community assets available to us in a civic design project can be difficult and incomprehensive. This tool helps you and your collaborators discover and pool together those assets in a worksheet format.',
+        link:
+          'https://resources.depaul.edu/abcd-institute/resources/Documents/DorfmanMappingCommunityAssetsWorkBook.pdf'
+      }
+    ],
+    other: [
+      {
+        source: 'Depaul ABCD',
+        title: 'Developing community assets',
+        description:
+          'Identifying the community assets available to us in a civic design project can be difficult and incomprehensive. This tool helps you and your collaborators discover and pool together those assets in a worksheet format.',
+        link:
+          'https://resources.depaul.edu/abcd-institute/resources/Documents/DorfmanMappingCommunityAssetsWorkBook.pdf'
       },
       {
-        title: "Get to know your stakeholder's journey and their pain points",
-        source: 'Nielsen Norman Group',
+        source: 'PwC',
+        title: 'Blind spots: Challenge assumptions',
         description:
-          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
-        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+          "Our brains are wired to make assumptions, which can sometimes be off base. We think it's an honest mistake; science calls it a blind spot.",
+        link: 'https://www.youtube.com/watch?v=BFcjfqmVah8'
       },
       {
-        title: "Get to know your stakeholder's journey and their pain points",
-        source: 'Nielsen Norman Group',
-        description:
-          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
-        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+        source: 'MJV Technology & Innovation',
+        title: 'Interviewing techniques',
+        description: 'Strategies for conducting interviews with stakeholders',
+        link: 'https://www.youtube.com/watch?v=V196868TJbo'
       },
       {
-        title: "Get to know your stakeholder's journey and their pain points",
-        source: 'Nielsen Norman Group',
+        source: 'IfD_Qualitative Research Specialists',
+        title: 'Tips for conducting interviews',
         description:
-          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
-        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+          'Tips for collecting strong qualitative data while conducting semi structured interviews, which is especially important for resource constrained teams',
+        link: 'https://www.youtube.com/watch?v=nw9TOjyCWiM'
       },
+      {
+        source: 'DavidLeeEdTech',
+        title: 'Testing and capturing feedback',
+        description:
+          'Ready to gather feedback, but not sure how to capture it? This video shows the "feedback capture grid", which allows us to capture important feedback and insights from the testing phase, helping with future iterations ',
+        link: 'https://www.youtube.com/watch?v=5XC4JqXUJbw&feature=emb_title'
+      }
+    ]
+  },
+  data: {
+    featured: [],
+    other: [
+      {
+        source: 'Mixed',
+        title: 'Our World in Data',
+        description:
+          'Unlike news articles that tend to report data about events, the Our World in Data initiative aims to track key indicators of economic, health, environmental, justice, etc., related trends',
+        link: 'https://ourworldindata.org/'
+      },
+      {
+        source: 'San Diego, County',
+        title: 'San Diego, County Data Portal',
+        description: 'San Diego County Data Portal',
+        link: 'https://data.sandiegocounty.gov/'
+      },
+      {
+        source: 'California, State',
+        title: 'California State Data Portal',
+        description: 'California State Data Portal',
+        link: 'https://data.ca.gov/'
+      },
+      {
+        source: 'California, State',
+        title: 'California State Department of Transportation - Data',
+        description: 'California State Department of Transportation - Data',
+        link: 'https://dot.ca.gov/programs/traffic-operations/census'
+      },
+      {
+        source: 'California, State',
+        title:
+          'California State Caltrans Performance Measurement System (PeMS)',
+        description:
+          'California State Caltrans Performance Measurement System (PeMS)',
+        link: 'http://pems.dot.ca.gov/'
+      },
+      {
+        source: 'Global',
+        title: 'UN Databases',
+        description: 'UN Databases',
+        link: 'https://www.un.org/en/databases/'
+      },
+      {
+        source: 'Moovit Insights',
+        title: 'San Diego Mobility Data',
+        description:
+          'Access data about how people move around San Diego, whether it be commute time, trip distance, public transit transfer counts, or walking distnace.',
+        link:
+          'https://moovitapp.com/insights/en/Moovit_Insights_Public_Transit_Index-582'
+      },
+      {
+        source: '',
+        title: 'UCSD Transportation, Commute, and Parking surveys',
+        description:
+          'Learn more about UCSD trends in parking, commuting, and transportation by studying this collection of reports and surveys.',
+        link: 'http://rmp-wapps.ucsd.edu/TS/Survey/'
+      },
+      {
+        source: 'US',
+        title: 'US Census - Data',
+        description: 'US Census - Data',
+        link: 'https://www.census.gov/data.html'
+      }
     ]
   }
 };
@@ -1018,154 +1133,199 @@ export const attendContent = {
 };
 
 export const requestFeedbackContent = {
-  image: "workspace_header",
-  title: "Request Feedback",
+  image: 'workspace_header',
+  title: 'Request Feedback',
   content:
-    "Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.",
-  title_1: "How does the community feedback exchange work?",
+    'Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.',
+  title_1: 'How does the community feedback exchange work?',
   content_1:
-    "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see.",
+    'This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see.',
   title_2: 'Timeline for Community Feedback for D4SD:',
   content3: '',
   importantDates: [
     {
-      start_date: new Date("03/15/2020"),
-      end_date: new Date("03/22/2020"),
-      title: "Open period for requesting early feedback on an idea",
-      key: "early_feedback"
+      start_date: new Date('03/15/2020'),
+      end_date: new Date('03/22/2020'),
+      title: 'Open period for requesting early feedback on an idea',
+      key: 'early_feedback'
     },
     {
-      start_date: new Date("03/23/2020"),
-      end_date: new Date("03/29/2020"),
-      title: "D4SD will recruit feedback providers from the community",
-      key: "feedback_providers"
+      start_date: new Date('03/23/2020'),
+      end_date: new Date('03/29/2020'),
+      title: 'D4SD will recruit feedback providers from the community',
+      key: 'feedback_providers'
     },
     {
-      date: new Date("03/3/2020"),
-      title: "Participants will receive an email with feedback",
-      key: "email_feedback"
+      date: new Date('03/3/2020'),
+      title: 'Participants will receive an email with feedback',
+      key: 'email_feedback'
     },
     {
-      date: new Date("04/22/2020"),
-      title: "Final deadline for submitting full proposals",
-      key: "final_deadline"
+      date: new Date('04/22/2020'),
+      title: 'Final deadline for submitting full proposals',
+      key: 'final_deadline'
     }
   ],
-  title_3: "How should I format my idea?",
-  content_3_1: "This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!",
-  content_3_2: "Your early-stage idea/sketch should be submitted as a one-page PDF or image file (PNG, JPG, etc.) through the form above. Make sure your idea is visually legible and understandable. You will also fill out a Google Form that will ask for text descriptions of the problem, potential stakeholders, and the questions you want feedback on.",
-  content_3_3: "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
-  title_4: "Example storyboards:",
-  content_4: "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
+  title_3: 'How should I format my idea?',
+  content_3_1:
+    'This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!',
+  content_3_2:
+    'Your early-stage idea/sketch should be submitted as a one-page PDF or image file (PNG, JPG, etc.) through the form above. Make sure your idea is visually legible and understandable. You will also fill out a Google Form that will ask for text descriptions of the problem, potential stakeholders, and the questions you want feedback on.',
+  content_3_3:
+    'Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.',
+  title_4: 'Example storyboards:',
+  content_4:
+    "These examples storyboards below were created by a student team at UC San Diego for a design course to describe travel-related challenges and to introduce proposed solutions to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. It's a good idea to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
   storyboards: [
     {
-      description: "Mark is tired of touristy sites and wants an authentic experience.",
+      description:
+        'Mark is tired of touristy sites and wants an authentic experience.',
       image: example_storyboard_1,
-      key: "example_scenario2"
+      key: 'example_scenario2'
     },
     {
-      description: "Mark wants to make the most of his business trip.",
+      description: 'Mark wants to make the most of his business trip.',
       image: example_storyboard_2,
-      key: "example_scenario3"
+      key: 'example_scenario3'
     },
     {
-      description: "Going out for a date at your travel destination.",
+      description: 'Going out for a date at your travel destination.',
       image: example_storyboard_3,
-      key: "example_scenario5"
-    },   
+      key: 'example_scenario5'
+    }
   ]
-}
+};
 
 export const submitProposalContent = {
-  image: "workspace_header",
-  title: "Submit a Proposal",
+  image: 'workspace_header',
+  title: 'Submit a Proposal',
   content:
-    "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region.  Read below to find out how to enter.",
-  title_1: "D4SD Challenge Details",
-  content_1_1: "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will get free registration (for up to 6 team members) for the D4SD Summit on May 12th and a chance to win great prizes.",
-  content_1_2_1: "A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the",
-  content_1_2_2: "D4SD poster templates",
-  content_1_2_3: "below. Your team poster should also describe the problem and solution, and visually represent a prototype of your idea. If teams use the poster template, and send at least one member to the Summit, D4SD will cover printing and shipping costs and will have your poster ready to display on May 12!",
-  content_1_3: "Teams may optionally submit a 2-minute video and a PDF document with additional details that judges can use to assess your idea.",
-  title_2: "Timeline for D4SD Submissions:",
+    'The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region.  Read below to find out how to enter.',
+  title_1: 'D4SD Challenge Details',
+  content_1_1:
+    'San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will get free registration (for up to 6 team members) for the D4SD Summit on May 12th and a chance to win great prizes.',
+  content_1_2_1:
+    'A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the',
+  content_1_2_2: 'D4SD poster templates',
+  content_1_2_3:
+    'below. Your team poster should also describe the problem and solution, and visually represent a prototype of your idea. If teams use the poster template, and send at least one member to the Summit, D4SD will cover printing and shipping costs and will have your poster ready to display on May 12!',
+  content_1_3:
+    'Teams may optionally submit a 2-minute video and a PDF document with additional details that judges can use to assess your idea.',
+  title_2: 'Timeline for D4SD Submissions:',
   importantDates: [
     {
-      start_date: new Date("04/15/2020"),
-      end_date: new Date("04/22/2020"),
-      title: "Open period for submitting your proposal to D4SD 2020",
-      key: "submit_proposal"
+      start_date: new Date('04/15/2020'),
+      end_date: new Date('04/22/2020'),
+      title: 'Open period for submitting your proposal to D4SD 2020',
+      key: 'submit_proposal'
     },
     {
       date_overlap: true,
-      start_date: new Date("04/23/2020"),
-      end_date: new Date("05/04/2020"),
-      title: "Judging period for D4SD submissions",
-      key: "judging_period"
+      start_date: new Date('04/23/2020'),
+      end_date: new Date('05/04/2020'),
+      title: 'Judging period for D4SD submissions',
+      key: 'judging_period'
     },
     {
-      date: new Date("05/05/2020"),
-      title: "Notifications sent for proposals to give verbal pitches at the Summit",
-      key: "notifications_pitches"
+      date: new Date('05/05/2020'),
+      title:
+        'Notifications sent for proposals to give verbal pitches at the Summit',
+      key: 'notifications_pitches'
     },
     {
-      date: new Date("05/12/2020"),
-      title: "Showcase your poster at the D4SD Summit",
-      key: "d4sd_showcase"
+      date: new Date('05/12/2020'),
+      title: 'Showcase your poster at the D4SD Summit',
+      key: 'd4sd_showcase'
     }
   ],
-  title_3: "Submission Categories",
-  content_3_1: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:",
+  title_3: 'Submission Categories',
+  content_3_1:
+    'Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:',
   submission_types: [
     {
-      title: "Entrepreneurial",
-      description: "Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.",
-      key: "entrepreneurial"
+      title: 'Entrepreneurial',
+      description:
+        'Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.',
+      key: 'entrepreneurial'
     },
     {
-      title: "Civic",
-      description: "These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).",
-      key: "civic"
+      title: 'Civic',
+      description:
+        'These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).',
+      key: 'civic'
     },
     {
-      title: "Philanthropic",
-      description: "These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.",
-      key: "philanthropic"
+      title: 'Philanthropic',
+      description:
+        'These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.',
+      key: 'philanthropic'
     }
   ],
-  title_4: "Judging Process and Criteria",
-  content_4_1: "A committee of experts will judge all submissions before the D4SD Summit and will select 8 teams to verbally present their ideas on stage. The expert panel of judges will assess submissions primarily based on the Poster submission, but they will also refer to the responses on the Final Submission Google Form, as well as the optional video and additional materials.",
-  content_4_2: "Judges will keep in mind these key criteria:",
+  title_4: 'Judging Process and Criteria',
+  content_4_1:
+    'A committee of experts will judge all submissions before the D4SD Summit and will select 8 teams to verbally present their ideas on stage. The expert panel of judges will assess submissions primarily based on the Poster submission, but they will also refer to the responses on the Final Submission Google Form, as well as the optional video and additional materials.',
+  content_4_2: 'Judges will keep in mind these key criteria:',
   criteria: [
     {
-      item: "Human-centered process",
-      points: ["How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?", "To what extent does the team discover the core problems at the heart of a civic challenge?"],
-      key: "human_centered_process"
+      item: 'Human-centered process',
+      points: [
+        'How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?',
+        'To what extent does the team discover the core problems at the heart of a civic challenge?'
+      ],
+      key: 'human_centered_process'
     },
     {
-      item: "Improving on status quo",
-      points: ["Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?", "Does this proposal expand on what San Diego already has?", "How unique is the solution compared to other available solutions?"],
-      key: "status_quo"
+      item: 'Improving on status quo',
+      points: [
+        'Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?',
+        'Does this proposal expand on what San Diego already has?',
+        'How unique is the solution compared to other available solutions?'
+      ],
+      key: 'status_quo'
     },
     {
-      item: "Feasibility/viability",
-      points: ["How likely is it that this proposal could get implemented?", "Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?"],
-      key: "feasibility_viability"
+      item: 'Feasibility/viability',
+      points: [
+        'How likely is it that this proposal could get implemented?',
+        'Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?'
+      ],
+      key: 'feasibility_viability'
     },
     {
-      item: "Impact/desirability/harmony",
-      points: ["How will the solution affect people?", "Has the team identified and worked to mitigate potential downsides?"],
-      key: "impact_desirability_harmony"
+      item: 'Impact/desirability/harmony',
+      points: [
+        'How will the solution affect people?',
+        'Has the team identified and worked to mitigate potential downsides?'
+      ],
+      key: 'impact_desirability_harmony'
     },
     {
-      item: "Communication quality",
-      points: ["Does the poster follow good visual design principles?", "Does the team effectively communicate a problem and proposed solution?", "Does the optional video tell a compelling story?"],
-      key: "communication_quality"
+      item: 'Communication quality',
+      points: [
+        'Does the poster follow good visual design principles?',
+        'Does the team effectively communicate a problem and proposed solution?',
+        'Does the optional video tell a compelling story?'
+      ],
+      key: 'communication_quality'
     }
   ],
-  title_5: "Poster Templates and Examples",
-  content_5_1: "Assuming your team meets the requirements, D4SD will pay to print and display your poster at the Design for San Diego summit on May 12 at the San Diego Central Library. First, at least one team member must plan to register and attend the May 12th summit to share your team’s poster.",
-  content_5_2: "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
-  poster_items: ["your team’s topic area and specific challenge/mission", "insights from online/user research", "constraints and resources related to your problem", "your team’s proposed solution, including photos of a prototype, if possible", "an implementation plan, including rough budgets and action steps"],
-  content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
-  poster_examples: [poster_example_temporary1, poster_example_temporary2, poster_example_temporary1]
-}
+  title_5: 'Poster Templates and Examples',
+  content_5_1:
+    'Assuming your team meets the requirements, D4SD will pay to print and display your poster at the Design for San Diego summit on May 12 at the San Diego Central Library. First, at least one team member must plan to register and attend the May 12th summit to share your team’s poster.',
+  content_5_2:
+    "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
+  poster_items: [
+    'your team’s topic area and specific challenge/mission',
+    'insights from online/user research',
+    'constraints and resources related to your problem',
+    'your team’s proposed solution, including photos of a prototype, if possible',
+    'an implementation plan, including rough budgets and action steps'
+  ],
+  content_5_3:
+    "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available here. Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
+  poster_examples: [
+    poster_example_temporary1,
+    poster_example_temporary2,
+    poster_example_temporary1
+  ]
+};

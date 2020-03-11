@@ -75,7 +75,7 @@
 }
 
 .extra {
-  padding: 0px 25px 25px 25px;
+  padding: 10px 25px 35px 25px;
   border-left: 25px solid #FF9696;
   border-radius: 20px;
   margin-bottom: 3vh;
@@ -86,12 +86,13 @@
     padding-top: 2vh;
     font-size: 2.25rem;
     text-align: left;
-    line-height: 35px;
+    line-height: 25px;
   }
 
   h3 {
     text-align: left;
-    line-height: 20px;
+    line-height: 0px;
+    font-size: 2rem;
   }
 
   p {
@@ -104,15 +105,29 @@
   }
 
   @media screen and (max-width: 375px) {
+    padding: 0px 25px 20px 25px;
+
+
     h1 {
       line-height: 25px;
       margin-top: 2.5vh;
     }
 
     h3 {
-      line-height: 30px;
+      line-height: 10px;
     }
   }
+}
+
+.extra-community {
+  .extra;
+  border-left: 25px solid #566ed1;
+}
+
+
+.extra-data {
+  .extra;
+  border-left: 25px solid #B7DFE6;
 }
 
 .paragraph {
@@ -165,6 +180,11 @@
       .button {
         width: 250px;
       }
+    }
+
+    &:hover {
+      transition: all .3s ease-out;
+      transform: translate(0, -3px);
     }
   }
 }
@@ -219,9 +239,16 @@
     width: 63%;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 676px) {
     align-items: flex-start;
+  }
 
+  @media screen and (min-width: 2000px) {
+    .tab-list {
+      display: flex;
+      justify-content: flex-start;
+      width: 54%;
+    }
   }
 }
 
