@@ -9,7 +9,8 @@ import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import configureStore, { history } from './store';
 
-
+import Menubar from './components/menubar';
+import CovidBanner from './components/covid-banner';
 import ScrollToTop from './components/ScrollToTop';
 import SignupPage from './containers/signup-page';
 import LoginPage from './containers/login-page';
@@ -58,49 +59,50 @@ const App = (): JSX.Element => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <ScrollToTop />
-        <>
-          <main>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/home" component={HomePage} />
-              <Route exact path="/volunteer" component={InvolvedPage} />
-              <Route
-                exact
-                path="/volunteer/feedback_provider"
-                component={FeedbackPage}
-              />
-              <Route exact path="/challenges" component={ChallengePage} />
-              <Route exact path="/attend" component={AttendPage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/sponsor" component={SponsorsPage} />
-              <Route exact path="/faq" component={FAQPage} />
-              <Route exact path="/workspace" component={WorkspacePage} />
-              <Route
-                exact
-                path="/workspace/community-feedback"
-                component={CommunityFeedbackLayout}
-              />
-              <Route exact path="/resources" component={ResourcesPage} />
-              <Route exact path="/resources/process" component={ProcessPage} />
-              <Route
-                exact
-                path="/resources/stakeholder"
-                component={StakeholderPage}
-              />
-              <Route exact path="/submit" component={WorkspacePage} />
-              <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
-              <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
-              <Route
-                exact
-                path="/workspace/prelim"
-                component={PreliminarySubmissionPage}
-              />
-              <Route
-                exact
-                path="/workspace/view-feedback"
-                component={ViewFeedbackLayout}
-              />
-              {/*
+        {/* <CovidBanner /> */}
+        <main>
+          <Menubar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/volunteer" component={InvolvedPage} />
+            <Route
+              exact
+              path="/volunteer/feedback_provider"
+              component={FeedbackPage}
+            />
+            <Route exact path="/challenges" component={ChallengePage} />
+            <Route exact path="/attend" component={AttendPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/sponsor" component={SponsorsPage} />
+            <Route exact path="/faq" component={FAQPage} />
+            <Route exact path="/workspace" component={WorkspacePage} />
+            <Route
+              exact
+              path="/workspace/community-feedback"
+              component={CommunityFeedbackLayout}
+            />
+            <Route exact path="/resources" component={ResourcesPage} />
+            <Route exact path="/resources/process" component={ProcessPage} />
+            <Route
+              exact
+              path="/resources/stakeholder"
+              component={StakeholderPage}
+            />
+            <Route exact path="/submit" component={WorkspacePage} />
+            <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
+            <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
+            <Route
+              exact
+              path="/workspace/prelim"
+              component={PreliminarySubmissionPage}
+            />
+            <Route
+              exact
+              path="/workspace/view-feedback"
+              component={ViewFeedbackLayout}
+            />
+            {/*
               <Route exact path='/resources' component={Resources}/>
               <Route exact path='/workspace' component={Workspace}/>
 
@@ -116,11 +118,10 @@ const App = (): JSX.Element => {
               ~ Home
               ~ Go through all pages to fix fonts
               */}
-              <Route exact path="/signup" component={SignupPage} />
-              <Route exect path="/login" component={LoginPage} />
-            </Switch>
-          </main>
-        </>
+            <Route exact path="/signup" component={SignupPage} />
+            <Route exect path="/login" component={LoginPage} />
+          </Switch>
+        </main>
       </ConnectedRouter>
     </Provider>
   );

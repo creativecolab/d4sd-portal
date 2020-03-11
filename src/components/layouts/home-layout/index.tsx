@@ -3,7 +3,6 @@ import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
-import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
@@ -115,7 +114,6 @@ const HomeLayout = (): JSX.Element => {
 
   return (
     <div className="Home">
-      <Menubar />
       <div className="landing">
         <div className="container">
           <h3 className="d4sdsubtitle">
