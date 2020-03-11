@@ -10,6 +10,7 @@ import { resourcesContent } from '../../../assets/content';
 const { Meta } = Card;
 
 // TODO: Add breadcrumb / Learn more linking to navbar highlight / stakeholder highlight
+// Remove buttons / opening on a new tab /
 
 interface ITabDiv {
   label: string;
@@ -31,7 +32,7 @@ function ResourcesLayout() {
         <TabDiv label="Process">
           <div className="container paragraph">
             <h1 className="cardtitle">FEATURED RESOURCES</h1>
-            <Row type="flex" justify="center" gutter={[16, 16]}>
+            <Row type="flex" justify="center" gutter={[32, 16]}>
               {resourcesContent.process.featured.map(content => (
                 <Col xs={{ span: 24 }} lg={{ span: 12 }}>
                   <Card
@@ -46,27 +47,20 @@ function ResourcesLayout() {
                   >
                     <h1 className="title">{content.title}</h1>
                     <h3 className="source">{content.source}</h3>
-                    <p>{content.description}</p>
-                    <div className="buttoncontainer">
-                      <a href={content.link}>
-                        <Button className="button" type="primary">
-                          {content.action}
-                        </Button>
-                      </a>
-                    </div>
+                    {/* <p>{content.description}</p> */}
                   </Card>
                 </Col>
               ))}
             </Row>
             <h1 className="othertitle">OTHER RESOURCES</h1>
             {resourcesContent.process.other.map(content => (
-              <div className="extra">
-                <a href={content.link}>
+              <a href={content.link}>
+                <div className="extra">
                   <h1>{content.title}</h1>
-                </a>
-                <h3>{content.source}</h3>
-                <p>{content.description}</p>
-              </div>
+                  <h3>{content.source}</h3>
+                  {/* <p>{content.description}</p> */}
+                </div>
+              </a>
             ))}
           </div>
         </TabDiv>

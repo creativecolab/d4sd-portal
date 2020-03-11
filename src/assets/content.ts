@@ -790,6 +790,55 @@ export const resourcesContent = {
           "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
         link: 'https://www.nngroup.com/articles/journey-mapping-101/',
       },
+      {
+        title: "Learn how to quickly get your ideas on paper and share them with others",
+        source: 'Google for Startups',
+        description:
+          "What's your big idea?  Can you say it in under 1-minute.  This Medium post offers several thoughts about how to craft an effective pitch.",
+        link: 'https://medium.com/swlh/how-to-effectively-pitch-business-ideas-to-investors-dd76661b02f1',
+      },
+      {
+        title: "Pitching creative work",
+        source: 'D&AD',
+        description:
+          "Not sure how to pitch your project? This video outlines some of the biggest obstacles to pitching potential creative work, and how we might get over that. Also contains tips on how to convey creative work to stakeholders who aren't designers.",
+        link: 'https://www.youtube.com/watch?v=YYFS4K3p2Aw',
+      },
+      {
+        title: "Elevate your pitch",
+        source: 'Slidebean',
+        description:
+          "An example and analysis of how Airbnb's pitch deck contributed to its success in raising $500K. Great pointers on how to pitch new products from an entrepreneurial perspective.",
+        link: 'https://www.youtube.com/watch?v=uuxnzuH3XiM',
+      },
+      {
+        title: "Quickly evaluate your team's ideas with rapid ideation and testing",
+        source: 'Inside Design by InVision',
+        description:
+          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
+        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+      },
+      {
+        title: "Get to know your stakeholder's journey and their pain points",
+        source: 'Nielsen Norman Group',
+        description:
+          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
+        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+      },
+      {
+        title: "Get to know your stakeholder's journey and their pain points",
+        source: 'Nielsen Norman Group',
+        description:
+          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
+        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+      },
+      {
+        title: "Get to know your stakeholder's journey and their pain points",
+        source: 'Nielsen Norman Group',
+        description:
+          "Journey mapping is a common UX tool to visualize the journey that a stakeholder takes to accomplish a goal (e.g., getting to work every morning, finding the right health care, identifying personal strategies to reduce waste). Journey mapping is useful for uncovering the pain points, as well as moments of achievement in a person's decision-making process.  Design teams use this information to generate possible solutions to a civic challenge.",
+        link: 'https://www.nngroup.com/articles/journey-mapping-101/',
+      },
     ]
   }
 };
