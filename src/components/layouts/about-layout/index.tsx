@@ -47,6 +47,7 @@ const AboutLayout = (): JSX.Element => (
             <Col
               xs={{ span: 20 }}
               lg={{ span: 11 }}
+              key={`${content.key}_Col`}
             >
               <Meta
                 avatar={(
