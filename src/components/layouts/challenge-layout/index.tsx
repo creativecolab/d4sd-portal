@@ -462,22 +462,24 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setMixuse(true)}
               onMouseLeave={(): void => setMixuse(false)}
             >
-              <Card hoverable className="mixuse-card">
-                <div className="card-bg">
-                  {mixuse && (
-                    <p className="card-text">
-                      How might we foster a sense of place and community in the
-                      face of vacation rentals, mixed-use houses, and
-                      gentrification?
-                    </p>
-                  )}
-                  {!mixuse && (
-                    <h2 className="card-text">
-                      Mixed-Use Housing and Placemaking
-                    </h2>
-                  )}
-                </div>
-              </Card>
+              <Link to="/challenges/housing/housing_and_placemaking">
+                <Card hoverable className="mixuse-card">
+                  <div className="card-bg">
+                    {mixuse && (
+                      <p className="card-text">
+                        How might we foster a sense of place and community in
+                        the face of vacation rentals, mixed-use houses, and
+                        gentrification?
+                      </p>
+                    )}
+                    {!mixuse && (
+                      <h2 className="card-text">
+                        Mixed-Use Housing and Placemaking
+                      </h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -486,18 +488,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setResilient(true)}
               onMouseLeave={(): void => setResilient(false)}
             >
-              <Card hoverable className="resilient-card">
-                <div className="card-bg">
-                  {resilient && (
-                    <p className="card-text">
-                      How might we make homes and communities more resilient to
-                      the effects of climate change, such as desertification,
-                      fires, flooding, and beach erosion?
-                    </p>
-                  )}
-                  {!resilient && <h2 className="card-text">Resilient Homes</h2>}
-                </div>
-              </Card>
+              <Link to="/challenges/housing/resilient_homes">
+                <Card hoverable className="resilient-card">
+                  <div className="card-bg">
+                    {resilient && (
+                      <p className="card-text">
+                        How might we make homes and communities more resilient
+                        to the effects of climate change, such as
+                        desertification, fires, flooding, and beach erosion?
+                      </p>
+                    )}
+                    {!resilient && (
+                      <h2 className="card-text">Resilient Homes</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             {/* TODO: Issue with background image not covering entire page */}

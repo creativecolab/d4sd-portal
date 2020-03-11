@@ -55,17 +55,158 @@ export const challengesContent: {
 } = {
   housing: {
     title: "HOUSING CHALLENGES",
-    physical_fitness: {
-      title: "Education and Awareness",
-      subTitle: "",
-      introduction: "",
-      angles: "",
+    housing_and_placemaking: {
+      title: "Mixed Use Housing and Placemaking",
+      subTitle:
+        "How might we foster a sense of place and community in the face of vacation rentals, mixed-use houses, and gentrification?",
+      introduction:
+        "On any single day, a person in San Diego has many needs they may want satisfied: work, food, social interaction, exercise, and more. Access to these needs, under car-centered development patterns of the recent past, have been separated from one another and relatively inaccessible by foot, bicycle, or public transit. This separation of uses potentially has consequences for an area's sense of place, because the elements which produce that sense — food, recreation, commerce, work — are removed from the walkable, human scale in which daily life is experienced.",
+      angles:
+        "One way to find methods for placemaking is to look at positive examples, past and present. For instance, cities are taking inspiration from the vibrant main streets of the past as exemplars in how we might live today. Cities are paying attention to zoning policies like Portland's urban growth boundary, which densify and diversify development. Here in San Diego, the city has responded with a strategic framework called the “City of Villages” plan, which “focuses growth into mixed use activity centers that are pedestrian-friendly districts linked to an improved regional transit system.” However, these centers need the insight of the people living in and around them in order to realize their full potential as centers for life, culture, and belonging in San Diego.Ï",
       presenting_evidence: "",
-      angle_examples: [{ label: "", desc: "" }],
+      angle_examples: [
+        {
+          label: "Translate urban growth boundaries",
+          desc:
+            "How might San Diego translate insightful land use policies like Portland's urban growth boundary into our city's unique situation?"
+        },
+        {
+          label: "City of Villages",
+          desc:
+            "How can San Diegans carry out the “City of Villages” strategic framework while still maintaining productive lines of communication between neighborhoods?"
+        },
+        {
+          label: "Legal Structure",
+          desc:
+            "How might we build a legal structure that allows community insights to be represented in San Diego's built environment, without allowing local resistance to stop important building like affordable housing?"
+        },
+        {
+          label: "Reflective Culture",
+          desc:
+            "How might we create neighborhood identities that reflect the people, culture, and history of a neighborhood?"
+        },
+        {
+          label: "Adapt Public Spaces",
+          desc:
+            "How might we adapt public spaces to better support a variety of purposes?"
+        },
+        {
+          label: "Lower Financial Barriers",
+          desc:
+            "How might we lower financial barriers to living in and co-producing our neighborhoods?"
+        }
+      ],
       resources_partners: [{ label: "", link: "" }],
-      resources_news: [{ label: "", link: "" }],
+      resources_news: [
+        {
+          label: "SD Union-Tribune article on “complete communities”",
+          link:
+            "https://www.sandiegouniontribune.com/communities/san-diego/story/2019-12-05/new-san-diego-proposal-goes-beyond-housing-to-seek-complete-communities"
+        },
+        {
+          label: "Mixed-use buildings on Urban Hub",
+          link:
+            "http://www.urban-hub.com/buildings/mixed-use-buildings-for-diversified-sustainable-sites/"
+        },
+        { label: "City Lab", link: "https://www.citylab.com/" },
+        {
+          label: "Placemaking on Archdaily",
+          link:
+            "https://www.archdaily.com/886275/placemaking-movement-manifesto-tool-buzzword-or-what"
+        },
+        {
+          label: "Criticism of placemaking",
+          link:
+            "http://jamessrussell.net/enough-of-bogus-placemaking/?utm_medium=website&utm_source=archdaily.com"
+        },
+        {
+          label: "City of San Diego land use council",
+          link:
+            "https://www.sandiego.gov/council-committees/land-use-housing-committee"
+        }
+      ],
       resources_national: [{ label: "", link: "" }],
-      image: climate1
+      image: housing1
+    },
+    resilient_homes: {
+      title: "Resilient Homes",
+      subTitle:
+        "How might we make homes and communities more resilient to the effects of climate change, such as desertification, fires, flooding, and beach erosion?",
+      introduction:
+        "The increases in floods, fires, hurricanes, and other natural disasters around the world continue to expose the fragility of modern human society, and in particular the fragility of our built environment. We continue to see that our homes are unable to withstand these pressures. Furthermore, we don’t have adequate physical, social, economic infrastructure to support those who are displaced. Take for example the growing contentious relationship between homeowners and insurance companies. Thus far we have spent much of building developments around permanent structures, and have begun to invest more time and energy into the development of temporary shelters. Although ensuring that people are physically safe is essential following these events, these ideas do little for the people who are potentially experiencing the most traumatic events of their life.",
+      angles:
+        "We can think about this in terms of the house itself, as well as the individuals who live in the house, and what their specific needs are when the house is placed under stress. Thinking about the house as the unit of analysis, it can be helpful to think about the way that the structure is performing when placed under different environmental pressures. The notion performing here means, how are specific components of the house adapting to changes in its environment. If you are interested in exploring how the house itself can be improved, it can be helpful to dissect some specific elements of the house and reimagine how they might respond, adapt, or be repurposed when placed under particular pressures. (Check out some of the additional lenses for looking at this issue below). Another way to look at the idea of resilient homes is through the eyes of the people that are experiencing the event itself. If beginning your inquiry from this lens, it might be helpful to think about what the house served prior to a disaster, and then thinking about how the loss or damage of the house directly impacts the lives of those who inhabit the structure. What has been briefly sketched out are a few ways of beginning to explore resilient homes.",
+      presenting_evidence: "",
+      angle_examples: [
+        {
+          label: "",
+          desc:
+            "How might we use the lens of the individual house in order to nuance our existing knowledge of climate change resilience on a regional and national scale?"
+        },
+        {
+          label: "",
+          desc:
+            "How might we compensate for emotional losses when people must move from areas that are no longer feasible to live in?"
+        },
+        {
+          label: "",
+          desc:
+            "How might we fund the construction of climate change resilience adaptations when the developers of a project are no longer invested in the site?"
+        },
+        {
+          label: "",
+          desc:
+            "How can we make homes more resilient to climate change, desertification, and other environmental challenges facing San Diego?"
+        }
+      ],
+      resources_partners: [{ label: "", link: "" }],
+      resources_news: [
+        {
+          label:
+            "San Diego's Flood Hazard Analysis (scroll to Section 5 & Section 8)",
+          link:
+            "https://www.sandiego.gov/sites/default/files/legacy/tsw/pdf/fmp.pdf"
+        },
+        {
+          label: "Hazard Mitigation Grant Program",
+          link: "https://www.fema.gov/"
+        },
+        {
+          label: "Innovations in Inclusive Housing",
+          link:
+            "https://techcrunch.com/2019/05/13/a-market-map-of-the-housing-startup-space/"
+        },
+        {
+          label: "Rural Housing Development",
+          link:
+            "https://www.researchgate.net/post/What_are_technologies_available_for_affordable_rural_and_urban_Housing_Development"
+        },
+        {
+          label: "Impacts of climate-related disasters on housing insurance",
+          link: "https://www.youtube.com/watch?v=U4VNX6483CA"
+        },
+        {
+          label: "Refugee Housing",
+          link:
+            "https://www.dezeen.com/2015/09/15/suri-modular-refugee-housing-system-emergency-shelter-suricatta-systems-urbana-de-exteriores/"
+        },
+        {
+          label: "San Diego Gov",
+          link: "https://www.sandiegocounty.gov/content/sdc/dpw/flood.html"
+        },
+        {
+          label: "Map of San Diego disasters risk areas",
+          link:
+            "https://www.arcgis.com/apps/webappviewer/index.html?id=1f35f94756bc45f9960717cbd15488a8"
+        },
+        {
+          label: "What happens to a house during a flood",
+          link:
+            "https://www.washingtonpost.com/graphics/2018/national/flooded-home/"
+        }
+      ],
+      resources_national: [{ label: "", link: "" }],
+      image: housing2
     }
   },
 
