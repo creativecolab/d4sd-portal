@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
@@ -11,6 +11,9 @@ import d4sdlogo from '../../assets/img/logo.svg';
 import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
+  const [, updateState] = React.useState();
+  const forceUpdate = useCallback(() => updateState({}), []);
+
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
   // eslint-disable-next-line
@@ -67,6 +70,17 @@ const Menubar = (): JSX.Element => {
     }
   // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    forceUpdate();
+  }, [currentTab]);
+
+  const secondSlash = (path: string): number => path.indexOf('/', 1);
+
+  history.listen(({ pathname }) => {
+    const secSlashInd = secondSlash(pathname);
+    setTab([secSlashInd !== -1 ? pathname.substring(1, secSlashInd) : pathname.substring(1)]);
+  });
 
   return (
     <div>
