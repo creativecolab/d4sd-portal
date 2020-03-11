@@ -1,11 +1,11 @@
 import mobility1 from "./img/mobility_lastmile_internal.jpg";
 import mobility2 from "./img/mobility_safety.jpg";
-// import mobility3 from "./img/mobility_equitable.jpg";
-// import mobility4 from "./img/mobility_multimodal.jpg";
-// import housing1 from "./img/housing_mixed.jpg";
-// import housing2 from "./img/housing_resilient.jpg";
-// import housing3 from "./img/housing_homelessness.jpg";
-// import housing4 from "./img/housing_smart.jpg";
+import mobility3 from "./img/mobility_equitable.jpg";
+import mobility4 from "./img/mobility_multimodal.jpg";
+import housing1 from "./img/housing_mixed.jpg";
+import housing2 from "./img/housing_resilient.jpg";
+import housing3 from "./img/housing_homelessness.jpg";
+import housing4 from "./img/housing_smart.jpg";
 // import health1 from "./img/health_senior.jpg";
 // import health2 from "./img/health_mental.jpg";
 // import health3 from "./img/health_safety.jpg";
@@ -53,6 +53,22 @@ p.forEach((a) => {
 export const challengesContent: {
   [key: string]: { [key: string]: ChallengeContent | string; title: string };
 } = {
+  housing: {
+    title: "HOUSING CHALLENGES",
+    physical_fitness: {
+      title: "Education and Awareness",
+      subTitle: "",
+      introduction: "",
+      angles: "",
+      presenting_evidence: "",
+      angle_examples: [{ label: "", desc: "" }],
+      resources_partners: [{ label: "", link: "" }],
+      resources_news: [{ label: "", link: "" }],
+      resources_national: [{ label: "", link: "" }],
+      image: climate1
+    }
+  },
+
   environment: {
     title: "ENVIRONMENT CHALLENGES",
 
@@ -437,17 +453,180 @@ export const challengesContent: {
       resources_national: [],
       image: mobility1
     },
-    safety: {
-      title: "",
-      subTitle: "",
-      introduction: "",
-      angles: "",
+
+    //SAFE ROADWAYS
+    safe_roadways: {
+      title: "SAFER ROADWAYS",
+      introduction:
+        "What is the difference between safe intersections and dangerous ones? What kinds of intersections provide more safety for pedestrians and bikers (e.g. roundabouts and t-junctions)? It’s also imperative that we educate the public about these intersections, and pedestrian safety in general. Education is an effective tool that can be used to give pedestrians alternate routes or even alternate forms of transportation.However, providing education requires some amount of time (rather asking a person to read a pamphlet or listen to a public service announcement), and may not be applied at the appropriate time to encourage someone to alter their behaviors.",
+      subTitle:
+        "Given the city’s aim to reduce roadway fatalities to zero, how might we protect pedestrians, reduce distractions for drivers, and improve emergency response?",
+      angles:
+        "One angle to consider is the Fatal 15, the 15 intersections in the San Diego area that have the highest number of pedestrian deaths and injuries since 2001. Is it possible that these intersections, like Mission Blvd. and Garnet Ave., have something in common that is causing this lack of safety? Circulate San Diego, a local non-profit devoted to promoting safe neighborhoods, streets and intersections compiled the list and estimates the cost to address these dangers at approximately $200,000. Addressing these dangerous spots is important, as is understanding how a spot becomes dangerous over time. What are the early warning signs that an intersection might be deadly, before someone is actually killed in a traffic accident? Here are other options for you to explore as well:",
       presenting_evidence: "",
-      angle_examples: [],
-      resources_partners: [],
+      angle_examples: [
+        {
+          label: "Last Mile",
+          desc:
+            "The last mile of a commute is often where cars interact with pedestrians and other modes of transportation. How do we encourage a less dangerous interface between cars and pedestrians in the last mile of a commute?"
+        },
+        {
+          label: "Intersections and Bike Lanes",
+          desc:
+            "45% of bike accidents that involve a car happen at intersections. How can we modify intersections to encourage safer interactions between bikes and cars?"
+        },
+        {
+          label: "Reducing Speed",
+          desc:
+            "The introduction of micro-mobility solutions, walkers share the sidewalk with bikes, scooters, skateboards and many other modes of transportation. How can we prevent micro-mobility devices from interfering with sidewalk use by pedestrians?"
+        },
+        {
+          label: "Public Health",
+          desc:
+            "Many people are discouraged from using public transportation because of sanitation concerns. How can we communicate to riders that MTS buses are a clean environment?"
+        }
+      ],
+      resources_partners: [
+        {
+          label: "Pedestrian Safety",
+          link:
+            "https://www.governing.com/topics/public-justice-safety/gov-transportation-anthony-foxx-pedestrian-safety.html"
+        },
+        {
+          label: "Road Safety San Diego",
+          link: "https://www.makeroadssafe.org/san-diego-road-safety-overview/"
+        },
+        {
+          label: "Sidewalk Repair",
+          link:
+            "https://www.sandiegouniontribune.com/communities/san-diego/story/2020-01-02/san-diego-may-spend-100m-on-aggressive-sidewalk-repair-campaign-as-injury-payouts-mount"
+        },
+        {
+          label: "Vision Zero",
+          link: "https://www.youtube.com/watch?v=EkcAZQOzJV0&feature=emb_logo"
+        },
+        {
+          label: "Roundabouts",
+          link:
+            "https://safety.fhwa.dot.gov/intersection/innovative/roundabouts/"
+        },
+        {
+          label: "Bike Lanes vs. Parking",
+          link: "https://www.youtube.com/watch?v=E85HMNJix_o"
+        },
+        {
+          label: "Speeding in Rural Areas",
+          link:
+            "https://www.sandiegouniontribune.com/news/public-safety/story/2019-04-20/san-diego-communities-have-urged-officials-to-keep-speed-limits-low-in-conflict-with-state-law-now-officers-cant-use-radar-guns-on-those-stretches-of-road"
+        },
+        {
+          label: "Trolley Ridership",
+          link:
+            "https://www.sandiegouniontribune.com/news/transportation/story/2019-11-06/san-diego-mts-sees-recent-spike-in-trolley-bus-ridership"
+        }
+      ],
       resources_news: [],
       resources_national: [],
       image: mobility2
+    },
+
+    //PUBLIC TRANSPORT
+    equitable_: {
+      title: "Access to Public Transportation",
+      subTitle:
+        "How might we provide mobility resources that are accessible to the many diverse needs of people in San Diego?",
+      introduction:
+        "In one day, a person experiencing homelessness, a first-year student dorming at UCSD, and a businessperson in Carmel Valley might all want to take a trip to the Downtown Library. To the businessperson in her Prius, the first year with access to ridesharing apps, and the person experiencing homelessness without a car or enough income to rideshare, the same trip to and from the library would be radically different in difficulty. Yet, all three people are citizens of San Diego. All share the right to access its public spaces, and all share the need to move about the city for work, food, and play. Citizens of our city may have different levels of physical ability or financial access, and the city's transportation networks cannot restrict their access on these grounds.",
+      angles:
+        "San Diego's history makes it a challenge to ensure public transportation is accessible. The privileging of the automobile placed public transportation in a second-class role. Existing public transportation may face low levels of ridership, local opposition to expansion, and the challenge of servicing sparsely populated, spread-out areas. Think about how to make public transit a priority for lawmakers and for new riders to reduce the city's overall carbon footprint.",
+      presenting_evidence: "",
+      angle_examples: [
+        {
+          label: "Public transport networks",
+          desc:
+            "How might public transportation networks in rural areas increase their ridership when the population is very spread out?"
+        },
+        {
+          label: "Prefer car over public transport",
+          desc:
+            "How might people in higher income strata come to see public transit as preferable over their car?"
+        },
+        {
+          label: "Funding constraints",
+          desc:
+            "How might we integrate areas of San Diego such as Torrey Pines or Carmel Valley into the city's public transportation network, given political and funding constraints?"
+        }
+      ],
+      resources_partners: [
+        {
+          label: "Opinion on San Diego's Public Transit",
+          link:
+            "https://thedailyaztec.com/95026/opinion/san-diego-needs-better-public-transit/"
+        },
+        {
+          label: "Ridership Trends",
+          link:
+            "https://www.sandiegouniontribune.com/news/transportation/story/2019-10-20/nationwide-transit-ridership-plummeting-san-diego-buck-trend"
+        },
+        {
+          label: "How to Solve a Traffic Jam",
+          link:
+            "https://www.sandiegouniontribune.com/news/environment/story/2019-04-13/what-is-congestion-pricing-exactly-and-can-it-solve-traffic-jams-in-san-diego-as-experts-promise"
+        },
+        {
+          label: "MTS Elevate SD Program",
+          link: "http://elevatesd2020.com/projects/"
+        }
+      ],
+      resources_news: [{ label: "", link: "" }],
+      resources_national: [{ label: "", link: "" }],
+      image: mobility3
+    },
+    autonomous_vehicles: {
+      title: "Autonomous Vehicles",
+      subTitle:
+        "With the potential of self-driving cars on the horizon, how might we prepare our city for major changes to transportation infrastructure?",
+      introduction:
+        "Autonomous vehicles are no longer a concept of the future. Uc San Diego is currently using self driving cars to deliver mail and figuring out how to further implement this new tool. With this new innovation, we need to consider how the city of San Diego can best prepare for the predicted effects of driverless cars.",
+      angles:
+        "The share economy has already made housing and micro-mobility available for temporary use by multiple people. Companies like Lyft and Uber pose feasible examples of what San Diego could look like when autonomous vehicles begin hitting the streets. With limitations on parking, car insurance, cost of ownership, and varying mobility needs; is it possible that autonomous vehicles could solve all these problems? And, if so, what challenges will we face when driverless cars become the new normal?",
+      presenting_evidence: "",
+      angle_examples: [
+        {
+          label: "Encourage Tourists",
+          desc:
+            "How might we encourage trust in autonomous vehicles when some members of the public see them as new and dangerous?"
+        },
+        {
+          label: "Transportation Sector",
+          desc:
+            "How might we respond to job loss in the transportation sector as more vehicles become autonomous?"
+        },
+        {
+          label: "Integrate self driving vehicles",
+          desc:
+            "How might we integrate self driving vehicles into existing strategies of transit-oriented development?"
+        }
+      ],
+      resources_partners: [],
+      resources_news: [
+        {
+          label: "How Close are we to a Self Driving World",
+          link: "https://www.youtube.com/watch?v=U5laBg-ERbQ&feature=emb_logo"
+        },
+        {
+          label: "Self Driving Mail Delivery",
+          link:
+            "https://www.nbcsandiego.com/news/local/uc-san-diego-rolls-out-self-driving-mail-delivery-cars/2230426/"
+        },
+        {
+          label: "Interfering with Transit",
+          link:
+            "https://www.sandiegouniontribune.com/columnists/story/2019-10-23/column-self-driving-vehicles-loom-over-transit-plans"
+        }
+      ],
+      resources_national: [{ label: "", link: "" }],
+      image: mobility4
     }
   }
 };

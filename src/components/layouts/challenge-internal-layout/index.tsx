@@ -67,6 +67,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <p>{challengeHeadInfo}</p>
         </Col>
       </Row>
+      <div id="bgImageUp"></div>
       <Row type="flex" justify="center">
         <Col sm={16} xs={22} id="centralInfo">
           <h2>Introduction</h2>

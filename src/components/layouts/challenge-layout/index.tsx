@@ -190,18 +190,21 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setSafety(true)}
               onMouseLeave={(): void => setSafety(false)}
             >
-              <Card hoverable className="safety-card">
-                <div className="card-bg">
-                  {safety && (
-                    <p className="card-text">
-                      Given the city’s aim to reduce roadway fatalities to zero,
-                      how might we protect pedestrians, reduce distractions for
-                      drivers, and improve emergency response?
-                    </p>
-                  )}
-                  {!safety && <h2 className="card-text">Safe Roadways</h2>}
-                </div>
-              </Card>
+              <Link to="/challenges/mobility/safe_roadways">
+                <Card hoverable className="safety-card">
+                  <div className="card-bg">
+                    {safety && (
+                      <p className="card-text">
+                        Given the city’s aim to reduce roadway fatalities to
+                        zero, how might we protect pedestrians, reduce
+                        distractions for drivers, and improve emergency
+                        response?
+                      </p>
+                    )}
+                    {!safety && <h2 className="card-text">Safe Roadways</h2>}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col

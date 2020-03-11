@@ -12,16 +12,26 @@
 
     h4 {
       color: @subheader-grey;
+      z-index: 10;
     }
 
     h1 {
       margin-top: @margin-base-1 / 2;
       margin-bottom: @margin-base-1 / 2;
+      z-index: 10;
     }
 
     p {
       text-align: center;
+      z-index: 10;
     }
+  }
+
+  #bgImageUp {
+    margin-top: -@header-height;
+    background: rgba(255, 255, 255, 0.7);
+    height: @header-height;
+    z-index: -1;
   }
 
   #centralInfo {
@@ -69,8 +79,8 @@
       margin-top: @margin-base-1 / 4;
     }
 
-    h4{
-      margin: @margin-base-1 0 @margin-base-1/2 0;
+    h4 {
+      margin: @margin-base-1 0 @margin-base-1 / 2 0;
       color: @d4sd-color-two;
     }
 
