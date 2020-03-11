@@ -213,20 +213,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setEquitable(true)}
               onMouseLeave={(): void => setEquitable(false)}
             >
-              <Card hoverable className="equitable-card">
-                <div className="card-bg">
-                  {equitable && (
-                    <p className="card-text">
-                      How might we provide mobility resources that are
-                      accessible to the many diverse needs of people in San
-                      Diego?
-                    </p>
-                  )}
-                  {!equitable && (
-                    <h2 className="card-text">Equitable Access</h2>
-                  )}
-                </div>
-              </Card>
+              <Link to="/challenges/mobility/equitable_access">
+                <Card hoverable className="equitable-card">
+                  <div className="card-bg">
+                    {equitable && (
+                      <p className="card-text">
+                        How might we provide mobility resources that are
+                        accessible to the many diverse needs of people in San
+                        Diego?
+                      </p>
+                    )}
+                    {!equitable && (
+                      <h2 className="card-text">Equitable Access</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
 
             <Col
@@ -235,20 +237,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setAutonomous(true)}
               onMouseLeave={(): void => setAutonomous(false)}
             >
-              <Card hoverable className="autonomous-card">
-                <div className="card-bg">
-                  {autonomous && (
-                    <p className="card-text">
-                      With the potential of self-driving cars on the horizon,
-                      how might we prepare our city for major changes to
-                      transportation infrastructure?
-                    </p>
-                  )}
-                  {!autonomous && (
-                    <h2 className="card-text">Autonomous Vehicles</h2>
-                  )}
-                </div>
-              </Card>
+              <Link to="/challenges/mobility/autonomous_vehicles">
+                <Card hoverable className="autonomous-card">
+                  <div className="card-bg">
+                    {autonomous && (
+                      <p className="card-text">
+                        With the potential of self-driving cars on the horizon,
+                        how might we prepare our city for major changes to
+                        transportation infrastructure?
+                      </p>
+                    )}
+                    {!autonomous && (
+                      <h2 className="card-text">Autonomous Vehicles</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
           </Row>
         </div>

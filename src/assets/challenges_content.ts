@@ -531,7 +531,7 @@ export const challengesContent: {
     },
 
     //PUBLIC TRANSPORT
-    equitable_: {
+    equitable_access: {
       title: "Access to Public Transportation",
       subTitle:
         "How might we provide mobility resources that are accessible to the many diverse needs of people in San Diego?",
@@ -582,6 +582,8 @@ export const challengesContent: {
       resources_national: [{ label: "", link: "" }],
       image: mobility3
     },
+
+    //AUTONOMOUS VEHICLES
     autonomous_vehicles: {
       title: "Autonomous Vehicles",
       subTitle:
