@@ -614,46 +614,6 @@ export const submitContent = {
     "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("03/19/2020"),
-      override_date: " ",
-      className: "event-cancelled",
-      title: "Information Session and Workshop (Cancelled)",
-      body:
-        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
-      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
-      action_button: {
-        label: "JOIN THE SLACK CONVERSATION",
-        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
-        className: "long-label",
-        disabled: false
-      },
-      // subbody: [
-      //   {
-      //     date: new Date("03/18/2020"),
-      //     time: "12:00 – 2:00pm",
-      //     content: "@UC San Diego’s Design Lab",
-      //     url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-      //     action: {
-      //       label: "Sign up for Workshop 1",
-      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-      //     },
-      //     key: "workshop_ucsd"
-      //   },
-      //   {
-      //     date: new Date("03/19/2020"),
-      //     time: "5:30 – 8:30pm",
-      //     content: "@DowntownWorks",
-      //     url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-      //     action: {
-      //       label: "Sign up for Workshop 2",
-      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-      //     },
-      //     key: "workshop_downtownworks"
-      //   }
-      // ],
-      key: "intro_workshops"
-    },
-    {
       date: new Date("04/03/2020"),
       className: "",
       title: "Community Feedback",
@@ -694,7 +654,23 @@ export const submitContent = {
         disabled: false
       },
       key: "d4sd_summit"
-    }
+    },
+    {
+      date: new Date("03/19/2020"),
+      override_date: " ",
+      className: "event-cancelled",
+      title: "Information Session and Workshop (Cancelled)",
+      body:
+        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
+      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
+      action_button: {
+        label: "JOIN THE SLACK CONVERSATION",
+        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
+        className: "long-label",
+        disabled: false
+      },
+      key: "intro_workshops"
+    },
   ],
   timeline: [
     {
