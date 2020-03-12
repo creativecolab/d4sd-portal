@@ -969,8 +969,8 @@ export const requestFeedbackContent = {
   content3: '',
   importantDates: [
     {
-      start_date: new Date("03/05/2020"),
-      end_date: new Date("03/22/2020"),
+      start_date: new Date("03/15/2020"),
+      end_date: new Date("04/03/2020"),
       title: "Open period for requesting early feedback on an idea",
       key: "early_feedback"
     },
@@ -981,7 +981,7 @@ export const requestFeedbackContent = {
       key: "feedback_providers"
     },
     {
-      date: new Date("03/3/2020"),
+      date: new Date("04/10/2020"),
       title: "Participants will receive an email with feedback",
       key: "email_feedback"
     },
