@@ -23,6 +23,7 @@ const ResourcesLayout = (): JSX.Element => (
           <Col
             xs={{ span: 24 }}
             lg={{ span: 12 }}
+            key={`${content.key}_Col`}
           >
             <Card
               className="involve-card"

@@ -14,8 +14,35 @@
     color: #333;
     padding: 2.5rem !important;
   }
+  .event {
+    text-align: left;
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   li {
     list-style-type: disc;
     list-style-position: inside;
+    margin: 10px 0;
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    li {
+      list-style-type: decimal;
+      list-style-position: inside;
+      ul,
+      li {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin: 0 5px 0 10px;
+      }
+    }
   }
 }
