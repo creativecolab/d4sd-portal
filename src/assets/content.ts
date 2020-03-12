@@ -344,7 +344,7 @@ export const faqContent = {
       answer: "There are two deadlines for submissions: The 1st deadline is for an early OPTIONAL submission to gain community feedback, and the 2nd deadline is for a REQUIRED final submission. The community feedback opportunities only serves as a resource for teams to improve their work; it will not be part of the final judging process.",
       events: [
         {
-          description: "<b>March 22: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available at the end of March so that teams have time to iterate before the final deadline (April 22).",
+          description: "<b>April 3: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (April 22).",
           button_label: "LEARN HOW TO REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "request-feedback"
@@ -361,19 +361,19 @@ export const faqContent = {
       question: "What is on the D4SD calendar of events?",
       answer: "Design for San Diego has lined up an exciting set of opportunities for our community to connect and address key issues in San Diego through design.  See the calendar below for key events and online engagement opportunities:",
       events: [
+        // {
+        //   description: "<b>MID MARCH: Information Sessions and Workshops.</b> Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
+        //   dates: ["Mar 18: 12:00-2:00pm", "Mar 19: 5:30-8:30pm"],
+        //   contents: ["UC San Diego's Design Lab (1601 Atkinson bldg)", "DowntownWorks (550 W. B St 4th floor)"],
+        //   button_labels: ["SIGN UP FOR MAR 18TH WORKSHOP", "SIGN UP FOR MAR 19TH WORKSHOP"],
+        //   locations: ["https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608", "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615"],
+        //   urls: ["https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069", "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113"],
+        //   keys: ["workshop_1", "workshop_2"],
+        //   url: "",
+        //   key: "workshops"
+        // },
         {
-          description: "<b>MID MARCH: Information Sessions and Workshops.</b> Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-          dates: ["Mar 18: 12:00-2:00pm", "Mar 19: 5:30-8:30pm"],
-          contents: ["UC San Diego's Design Lab (1601 Atkinson bldg)", "DowntownWorks (550 W. B St 4th floor)"],
-          button_labels: ["SIGN UP FOR MAR 18TH WORKSHOP", "SIGN UP FOR MAR 19TH WORKSHOP"],
-          locations: ["https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608", "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615"],
-          urls: ["https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069", "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113"],
-          keys: ["workshop_1", "workshop_2"],
-          url: "",
-          key: "workshops"
-        },
-        {
-          description: "<b>MAR 22: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+          description: "<b>APRIL 3: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
           button_label: "REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "community-feedback"
@@ -409,7 +409,7 @@ export const faqContent = {
     },
     {
       question: "What kinds of design work can we submit to the challenge?",
-      answer: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:<ol><li><b>Entrepreneurial</b>: Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.</li><li><b>Civic</b>: These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).</li><li><b>Philanthropic</b>: These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.</li></ol>D4SD compiled a list of videos, articles, toolkits, and other resources that can be useful for people working through the design challenges (check those out on the <a href='/resources'>Resource page</a>)."
+      answer: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:<ol><li><b>Entrepreneurial</b>: Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.</li><li><b>Civic</b>: These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the <a href='https://data.sandiego.gov/' target='_blank'> City of San Diego </a> or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).</li><li><b>Philanthropic</b>: These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.</li></ol>D4SD compiled a list of videos, articles, toolkits, and other resources that can be useful for people working through the design challenges (check those out on the <a href='/resources'>Resource page</a>)."
     },
     {
       question: "Do I need to print my team’s poster?",
