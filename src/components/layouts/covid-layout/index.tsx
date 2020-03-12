@@ -24,8 +24,10 @@ const CovidLayout = (): JSX.Element => {
 
       </Row>
       <div className="page-head">
+        <div className="container">
         <h1>{covidContent.title}</h1>
         <p>{covidContent.content}</p>
+        </div>
       </div>
       <div className="section" id="section-1">
         <div className="container">
