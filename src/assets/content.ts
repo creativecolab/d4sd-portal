@@ -1115,3 +1115,37 @@ export const submitProposalContent = {
   content_5_4: ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
   poster_examples: [poster_example_1, poster_example_2, poster_example_3]
 }
+
+export const covidContent = {
+  title: "D4SD Response to COVID-19",
+  content: "The COVID-19 virus is an important health risk for San Diego and beyond. This page provides updates on how this will affect the D4SD challenge and planned events.",
+  image: "covid_header",
+  title_1: "Updates as of March 11, 2020",
+  content_1_1: "COVID-19 is a new respiratory disease that has spread rapidly.  The Centers for Disease Control and Prevention have recently stated that more cases of COVID-19 are likely to be identified in the United States in the coming days. UC San Diego has responded to this health concern with an abundance of caution by temporarily delivering most courses, meetings, and public events online. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
+  content_1_2: "D4SD will take similar precautions. All our workshops will be broadcast live and recorded so that participants can get the information at home. If you are sick, please do NOT come to any in-person events.  The D4SD website includes design and data ",
+  content_1_3: " and ",
+  content_1_4: " to help you get started. You can join the ",
+  content_1_5: " to discuss topics and connect with potential teammates.",
+  content_1_6: "D4SD will also support an online feedback exchange for anyone who wants early input on their problem or proposed solution. To participate, ",
+  content_1_7: "learn more about how to request feedback",
+  content_1_8: "We currently still plan to host the ",
+  content_1_9: "D4SD Summit",
+  content_1_10: " on May 12th. However, the location and activities for the event could shift as we learn more about COVID-19.  Join the ",
+  content_1_11: "newsletter and the online discussion",
+  content_1_12: " to stay connected with D4SD and to get updates related to this ongoing concern.",
+  title_2: "For more information:",
+  links: [
+    {
+      label: "Join the D4SD newsletter and online discussion",
+      url: "/"
+    },
+    {
+      label: "Information about COVID-19 (CDC)",
+      url: "https://www.cdc.gov/coronavirus/2019-ncov/index.html"
+    },
+    {
+      label: "UCSD Response to COVID-19",
+      url: "https://aps.ucsd.edu/facdev/covid-19/index.html"
+    }
+  ]
+}

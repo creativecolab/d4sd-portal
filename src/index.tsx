@@ -11,7 +11,6 @@ import Loadable from 'react-loadable';
 import configureStore, { history } from './store';
 
 import Menubar from './components/menubar';
-// import CovidBanner from './components/covid-banner';
 import ScrollToTop from './components/ScrollToTop';
 
 const Loading = (): null => null; // loading component
@@ -79,6 +78,10 @@ const FeedbackPage = Loadable({
   loader: () => import('./components/layouts/feedback-layout'),
   loading: Loading
 });
+const CovidPage = Loadable({
+  loader: () => import('./components/layouts/covid-layout'),
+  loading: Loading
+});
 // const ViewFeedbackLayout = Loadable({
 //   loader: () => import('./components/layouts/view-feedback-layout'),
 //   loading: Loading
@@ -144,6 +147,7 @@ const App = (): JSX.Element => {
             <Route exact path="/submit" component={SubmitPage} />
             <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
             <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
+            <Route exact path="/covid19" component={CovidPage} />
             {/*
               <Route
                 exact

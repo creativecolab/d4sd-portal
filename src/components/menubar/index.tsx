@@ -3,10 +3,10 @@ import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
 } from '@d4sd/components';
-
-import './style.less';
-
 import { SubMenu } from 'rc-menu';
+
+import CovidBanner from '../covid-banner';
+import './style.less';
 import d4sdlogo from '../../assets/img/logo.svg';
 // import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
@@ -27,7 +27,6 @@ const Menubar = (): JSX.Element => {
   // }, [scroll]);
 
   useEffect(() => {
-    // console.log(history.location.pathname);
     switch (history.location.pathname) {
       case '/workspace/prelim':
       case '/workspace':
@@ -76,7 +75,8 @@ const Menubar = (): JSX.Element => {
   });
 
   return (
-    <div>
+    <div className="menubar-wrapper">
+      <CovidBanner />
       <Row>
         <Col
           md={0}
@@ -102,9 +102,6 @@ const Menubar = (): JSX.Element => {
                 </span>
               )}
             >
-              {/* <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
-                <span>Home</span>
-              </Menu.Item> */}
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/challenges')}>
                 <span>Challenges</span>
               </Menu.Item>
@@ -147,9 +144,6 @@ const Menubar = (): JSX.Element => {
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
-            {/* <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
-              <span>Home</span>
-            </Menu.Item> */}
             <Menu.Item className="menu-item" key="challenges" onClick={(): void => history.push('/challenges')}>
               <span>Challenges</span>
             </Menu.Item>
