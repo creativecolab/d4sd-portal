@@ -81,6 +81,8 @@ import poster_example_1 from './img/poster_example_1.png';
 import poster_example_2 from './img/poster_example_2.png';
 import poster_example_3 from './img/poster_example_3.png';
 
+import covid_header from './img/covid_header.svg';
+
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1_1: "DESIGN FOR SAN DIEGO'S ",
@@ -402,7 +404,7 @@ export const faqContent = {
     },
     {
       question: "How will my work be judged?",
-      answer: 
+      answer:
         "To enter the D4SD 2020 Challenge, teams must submit the final submission deliverables by April 22, 2020 at 11:59PM PDT.<br /><br />In general, solutions to the D4SD Challenge will be assessed based on <b>five key criteria</b>:<ol><li><b>Human-centered process</b><ul><li>How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?</li><li>To what extent does the team discover the core problems at the heart of a civic challenge?</li></ul></li><li><b>Improving on the current status quo</b><ul><li>Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?</li><li>Does this proposal expand on what San Diego already has?</li><li>How unique is the solution compared to other available solutions?</li></ul><li><b>Feasibility/viability/harmony</b><ul><li>How likely is it that this proposal could get implemented?</li><li>Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?</li></ul></li><li><b>Impact/desirability:</b><ul><li>How will the solution affect people?</li><li>Does it have any downsides?</li></ul></li><li><b>Communication quality:</b><ul><li>Does the poster follow good visual design principles?</li><li>Does the team have a good verbal pitch of their problem and proposed solution?</li><li>Does the optional video tell a compelling story?</li></ul></li></ol><br />The judging process has two rounds:<ol><li>In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed above. This judging process will happen between April 23 and May 4.  Finalists will be notified on May 5th through email so they can prepare a slide and verbal pitch for the Summit.</li><li>In round two, distinguished jurors will assess the finalists during the D4SD Summit on May 12th. Teams must have at least one team member available to present the poster throughout the day and to interact with jurors. Finalist teams will deliver a two-minute verbal pitch that at the D4SD Awards Ceremony.</li></ol>"
     },
     {
@@ -1100,7 +1102,7 @@ export const submitProposalContent = {
 export const covidContent = {
   title: "D4SD Response to COVID-19",
   content: "The COVID-19 virus is an important health risk for San Diego and beyond. This page provides updates on how this will affect the D4SD challenge and planned events.",
-  image: "covid_header",
+  image: covid_header,
   title_1: "Updates as of March 12, 2020",
   content_1_1: "COVID-19 is a new respiratory disease that has spread rapidly.  The Centers for Disease Control and Prevention have recently stated that more cases of COVID-19 are likely to be identified in the United States in the coming days. The World Health Organization has officially classified COVID-19 as a pandemic. UC San Diego has responded to this health concern with an abundance of caution by temporarily delivering most courses, meetings, and public events online. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
   content_1_2: "D4SD will take similar precautions. All of our informational sessions will now be broadcast live and recorded so that participants can get the information at home. If you are sick, please do NOT come to any in-person events.  The D4SD website includes design and data ",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Row, Col } from 'antd';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import './style.less';
@@ -10,11 +11,24 @@ const CovidLayout = (): JSX.Element => {
 
   return (
     <div className="CovidPage">
-      <Header
-        title={covidContent.title}
-        content={covidContent.content}
-        image={covidContent.image}
-      />
+      <Row
+        type="flex"
+        justify="center"
+        id="banner-image"
+        style={{
+          backgroundImage: `url(${covidContent.image})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover"
+        }}
+      >
+
+      </Row>
+      <div className="page-head">
+        <div className="container">
+        <h1>{covidContent.title}</h1>
+        <p>{covidContent.content}</p>
+        </div>
+      </div>
       <div className="section" id="section-1">
         <div className="container">
           <h2 className="title">{covidContent.title_1}</h2>
