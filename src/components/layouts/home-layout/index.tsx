@@ -20,7 +20,6 @@ import { contentHTML } from '../../../actions';
 // };
 
 const logoCarouselSettings = {
-  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 4,
@@ -57,17 +56,37 @@ const HomeLayout = (): JSX.Element => {
           </div>
         </div>
         <div className="key-dates">
-          {homeContent.summit_banner.key_dates.map((date, i) => (
-            <div className={`date-${i + 1}`}>
-              <p className="date">
-                {date.date.toDateString().substring(4, 7)}
-                {' '}
-                {date.date.getDate()}
-              </p>
-              <div style={{ marginRight: '10px' }} />
-              <p>{date.label}</p>
-            </div>
-          ))}
+          <div className="dates">
+            {homeContent.summit_banner.key_dates.map((date, i) => (
+              <div className={`date-${i + 1}`} key={`${date.key}_div`}>
+                <p className="date">
+                  {date.start_date ? (
+                    <>
+                      {date.start_date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.start_date.getDate()}
+                      {' '}
+                      &amp;
+                      {' '}
+                      {date.end_date.getDate()}
+                    </>
+                  ) : (
+                    <>
+                      {date.date.toDateString().substring(4, 7)}
+                      {' '}
+                      {date.date.getDate()}
+                    </>
+                  )}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginRight: '15px' }} />
+          <div className="labels">
+            {homeContent.summit_banner.key_dates.map((date) => (
+              <p key={`${date.key}_p`}>{date.label}</p>
+            ))}
+          </div>
         </div>
       </div>
       <div className="action-buttons">
@@ -87,7 +106,7 @@ const HomeLayout = (): JSX.Element => {
             type="primary-outline" size="medium" style={{ width: '100%' }}
             className="button outline"
           >
-            JOIN MAILING LIST
+            JOIN THE NEWSLETTER!
           </Button>
         </a>
       </div>
@@ -99,8 +118,16 @@ const HomeLayout = (): JSX.Element => {
       <Menubar />
       <div className="landing">
         <div className="container">
-          <h3 className="d4sdsubtitle">{homeContent.subtitle1}</h3>
-          <h1 className="d4sdmaintitle">{homeContent.title1}</h1>
+          <h3 className="d4sdsubtitle">
+            {homeContent.subtitle1_1}
+            <br className="subtitle-break" />
+            {homeContent.subtitle1_2}
+          </h3>
+          <h1 className="d4sdmaintitle">
+            {homeContent.title1_1}
+            <br className="title-break" />
+            {homeContent.title1_2}
+          </h1>
           <p className="d4sd-content">{homeContent.content1}</p>
           <br />
           <br />

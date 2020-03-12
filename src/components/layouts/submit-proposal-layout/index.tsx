@@ -162,14 +162,32 @@ const SubmitProposalLayout = (): JSX.Element => {
               </li>
             ))}
           </ul>
-          <p>{submitProposalContent.content_5_3}</p>
+          <p>
+            {submitProposalContent.content_5_3}
+            <a href="/blank-poster-template.pptx" target="_blank" rel="noopener noreferrer">Powerpoint</a>
+            ,
+            {' '}
+            <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
+            ,
+            {' '}
+            <a href="/blank-poster-template.ai" target="_blank" rel="noopener noreferrer">Illustrator</a>
+            , and
+            {' '}
+            <a href="/blank-poster-template.indd" target="_blank" rel="noopener noreferrer">InDesign</a>
+            {submitProposalContent.content_5_4}
+            .
+          </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
-              <img
-                src={example} alt={`${example}_${i}`} className="example-poster"
-                key={`${example}_img`}
-              // fix this key with unique image id
-              />
+              <a
+                href={`/posterExample${i + 1}.pdf`} target="_blank" rel="noopener noreferrer"
+                className="example-poster-anchor" key={`${example}_a`}
+              >
+                <img
+                  src={example} alt={`${example}_${i}`} className="example-poster"
+                  key={`${example}_img`}
+                />
+              </a>
             ))}
           </div>
         </div>

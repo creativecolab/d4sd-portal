@@ -84,9 +84,8 @@
 
     .key-dates {
       display: flex;
-      flex-direction: column;
       justify-content: space-evenly;
-      align-items: flex-start;
+      align-items: flex-end;
       margin-top: 5px;
 
       .date {
@@ -101,6 +100,7 @@
       .date-2,
       .date-3 {
         display: flex;
+        justify-content: flex-end;
       }
     }
   }
@@ -460,10 +460,34 @@
 .Home {
   .d4sdsubtitle {
     margin-top: @margin-base;
+
+    .subtitle-break {
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+    }
   }
 
   .d4sdmaintitle {
     margin-top: @margin-base * 2;
+
+    .title-break {
+      @media screen and (min-width: 1851px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1294px) and (min-width: 840px) {
+        display: none;
+      }
+
+      @media screen and (max-width: @sm) and (min-width: 540px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 445px) {
+        display: none;
+      }
+    }
   }
 
   .d4sd-content {
@@ -538,5 +562,26 @@
 
   .ant-carousel .slick-dots {
     height: 5vh;
+  }
+}
+
+.logo-carousel {
+  .slick-list {
+    padding-bottom: 110px;
+  }
+  .slick-dots {
+    height: 10vh;
+    background: #244c7e;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(12px);
+    li button,
+    li.slick-active button {
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      margin-left: 30px;
+    }
   }
 }
