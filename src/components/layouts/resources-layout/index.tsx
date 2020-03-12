@@ -29,7 +29,73 @@ function ResourcesLayout() {
         content={resourcesContent.content1}
         image={resourcesContent.image}
       />
-      <Tabs>
+      <div className="container paragraph">
+        <div className="red">
+          <h1 className="cardtitle">FEATURED RESOURCES</h1>
+          <Row type="flex" justify="center" gutter={[32, 16]}>
+            <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+              <NavLink to="/resources/process">
+                <Card className="involve-card">
+                  <h1 className="title">D4SD Process Guide</h1>
+                  <h3 className="source">Design for San Diego</h3>
+                  <p>
+                    Modeled after best practices in human-centered design
+                    research, the D4SD process involves five key phases:
+                    Discovery, Ideate, Prototype, Pitch, Activate. Read more
+                    about how you and your team can get the most out of each
+                    phase.
+                  </p>
+                </Card>
+              </NavLink>
+            </Col>
+            <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+              <NavLink to="/resources/stakeholder">
+                <div className="blue">
+                  <Card className="involve-card">
+                    <h1 className="title">Stakeholder Relationships</h1>
+                    <h3 className="source">Design for San Diego</h3>
+                    <p>
+                      Good civic design involves understanding the diverse
+                      perspectives of many stakeholders, including people
+                      directly and indirectly impacted by a problem or
+                      opportunity. This guide can help D4SD participants
+                      establish and cultivate community relationships.
+                    </p>
+                  </Card>
+                </div>
+              </NavLink>
+            </Col>
+          </Row>
+          <h1 className="othertitle">OTHER RESOURCES</h1>
+          <div className="allcards">
+            {resourcesContent.process.other.map(content => (
+              <a href={content.link} target="_blank">
+                <div className="extra">
+                  <h1>{content.title}</h1>
+                  <h3>{content.source}</h3>
+                </div>
+              </a>
+            ))}
+            {resourcesContent.community.other.map(content => (
+              <a href={content.link} target="_blank">
+                <div className="extra-community">
+                  <h1>{content.title}</h1>
+                  <h3>{content.source}</h3>
+                </div>
+              </a>
+            ))}
+            {resourcesContent.data.other.map(content => (
+              <a href={content.link} target="_blank">
+                <div className="extra-data">
+                  <h1>{content.title}</h1>
+                  <h3>{content.source}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* <Tabs>
         <TabDiv label="Process">
           <div className="container paragraph">
             <div className="red">
@@ -179,7 +245,7 @@ function ResourcesLayout() {
             ))}
           </div>
         </TabDiv>
-      </Tabs>
+      </Tabs> */}
       <br />
       <br />
       <Footer />
