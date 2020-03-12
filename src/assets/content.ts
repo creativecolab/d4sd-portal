@@ -95,20 +95,14 @@ export const homeContent = {
     location: "San Diego Central Library",
     key_dates: [
       {
-        start_date: new Date("03/18/2020"),
-        end_date: new Date("03/19/2020"),
-        label: "Come to a Workshop",
-        key: "date-1"
-      },
-      {
-        date: new Date("03/22/2020"),
+        date: new Date("04/03/2020"),
         label: "Request Feedback",
-        key: "date-2"
+        key: "date-1"
       },
       {
         date: new Date("04/22/2020"),
         label: "Submit Proposals",
-        key: "date-3"
+        key: "date-2"
       }
     ]
   },
@@ -621,38 +615,47 @@ export const submitContent = {
   importantDates: [
     {
       date: new Date("03/19/2020"),
-      override_date: "Mid March",
-      title: "Information Session and Workshop",
+      override_date: " ",
+      className: "event-cancelled",
+      title: "Information Session and Workshop (Cancelled)",
       body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-      subbody: [
-        {
-          date: new Date("03/18/2020"),
-          time: "12:00 – 2:00pm",
-          content: "@UC San Diego’s Design Lab",
-          url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-          action: {
-            label: "Sign up for Workshop 1",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-          },
-          key: "workshop_ucsd"
-        },
-        {
-          date: new Date("03/19/2020"),
-          time: "5:30 – 8:30pm",
-          content: "@DowntownWorks",
-          url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-          action: {
-            label: "Sign up for Workshop 2",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-          },
-          key: "workshop_downtownworks"
-        }
-      ],
+        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
+      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
+      action_button: {
+        label: "JOIN THE SLACK CONVERSATION",
+        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
+        className: "long-label",
+        disabled: false
+      },
+      // subbody: [
+      //   {
+      //     date: new Date("03/18/2020"),
+      //     time: "12:00 – 2:00pm",
+      //     content: "@UC San Diego’s Design Lab",
+      //     url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
+      //     action: {
+      //       label: "Sign up for Workshop 1",
+      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
+      //     },
+      //     key: "workshop_ucsd"
+      //   },
+      //   {
+      //     date: new Date("03/19/2020"),
+      //     time: "5:30 – 8:30pm",
+      //     content: "@DowntownWorks",
+      //     url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
+      //     action: {
+      //       label: "Sign up for Workshop 2",
+      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
+      //     },
+      //     key: "workshop_downtownworks"
+      //   }
+      // ],
       key: "intro_workshops"
     },
     {
-      date: new Date("03/22/2020"),
+      date: new Date("04/03/2020"),
+      className: "",
       title: "Community Feedback",
       body:
         "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
@@ -666,6 +669,7 @@ export const submitContent = {
     },
     {
       date: new Date("04/22/2020"),
+      className: "",
       title: "Final submission deadline (Earth Day!)",
       body:
         "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
@@ -679,6 +683,7 @@ export const submitContent = {
     },
     {
       date: new Date("05/12/2020"),
+      className: "",
       title: "D4SD Summit 2020",
       body:
         "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
