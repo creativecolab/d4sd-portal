@@ -79,7 +79,7 @@ const Menubar = (): JSX.Element => {
       <CovidBanner />
       <Row>
         <Col
-          md={0}
+          lg={0}
           xs={24}
         >
           <Menu
@@ -134,7 +134,7 @@ const Menubar = (): JSX.Element => {
         </Col>
         {/* NAVBAR FOR DESKTOP/PC (LARGER SCREENS) */}
         <Col
-          md={24}
+          lg={24}
           xs={0}
         >
           <Menu id="menubar" mode="horizontal" selectedKeys={currentTab}>
