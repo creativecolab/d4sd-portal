@@ -45,25 +45,35 @@ const CovidLayout = (): JSX.Element => {
             <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/volunteer'); }}>{covidContent.content_1_11}</a>
             {covidContent.content_1_12}
           </p>
+          <p>
+            <b>{covidContent.title_2}</b>
+            <ul>
+              {covidContent.links.map(({ label, url }) => (
+                url === '/' ? (
+                  <li>
+                    {/* eslint-disable-next-line */}
+                    <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/'); }}>{label}</a>
+                  </li>
+                ) : (
+                  <li>
+                    <a href={url} target="_blank" rel="noopener noreferrer">{label}</a>
+                  </li>
+                )
+              ))}
+            </ul>
+          </p>
+          <p>
+            <b>{covidContent.title_3}</b>
+            <ul>
+              {covidContent.tips.map((tip) => (
+                <li>{tip}</li>
+              ))}
+            </ul>
+          </p>
         </div>
       </div>
-      <div className="section" id="section-2">
-        <div className="container">
-          <h2 className="title">{covidContent.title_2}</h2>
-          {covidContent.links.map(({ label, url }) => (
-            url === '/' ? (
-              <p>
-                {/* eslint-disable-next-line */}
-                <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/'); }}>{label}</a>
-              </p>
-            ) : (
-              <p>
-                <a href={url} target="_blank" rel="noopener noreferrer">{label}</a>
-              </p>
-            )
-          ))}
-        </div>
-      </div>
+      <div className="section" id="section-2" />
+      <br />
       <br />
       <Footer />
     </div>
