@@ -96,7 +96,7 @@ export const challengesContent: {
             "How might we lower financial barriers to living in and co-producing our neighborhoods?"
         }
       ],
-      resources_partners: [{ label: "", link: "" }],
+      resources_partners: [],
       resources_news: [
         {
           label: "SD Union-Tribune article on “complete communities”",
@@ -125,7 +125,7 @@ export const challengesContent: {
             "https://www.sandiego.gov/council-committees/land-use-housing-committee"
         }
       ],
-      resources_national: [{ label: "", link: "" }],
+      resources_national: [],
       image: housing1
     },
     resilient_homes: {
