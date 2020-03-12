@@ -2,6 +2,7 @@
 @import '../../../styles/mixins.less';
 @import '../../../styles/fonts.less';
 
+
 .ResourcesLayout {
   .ant-collapse-header {
     font-size: 16px;
@@ -124,7 +125,6 @@
   border-left: 25px solid #566ed1;
 }
 
-
 .extra-data {
   .extra;
   border-left: 25px solid #B7DFE6;
@@ -133,9 +133,25 @@
 .paragraph {
   padding-top: 2vh;
 
-  .ant-card-bordered {
-    border-left: 25px solid #FF9696;
+  .red {
 
+    .ant-card-bordered {
+      border-left: 25px solid #FF9696;
+    }
+  
+  }
+
+  .blue {
+    .ant-card-bordered {
+      border-left: 25px solid #566ED1;
+    }
+
+  }
+  
+  .light {
+    .ant-card-bordered {
+      border-left: 25px solid #B7DFE6;
+    }
   }
 
   .cardtitle {
@@ -153,6 +169,8 @@
 
   .involve-card {
     height: 400px;
+
+
 
     .title {
       text-align: left;
@@ -278,5 +296,18 @@
   border-bottom: solid #4496FF;
   border-width: 0px 0px 3px 0px;
   color: #4496FF;
+
+}
+
+.allcards {
+  width: 1180px;
+  .tags {
+    margin-bottom: 3vh;
+  }
+
+  @media screen and (max-width: 1500px) {
+    width: auto;
+    margin: 0px 15px;
+  }
 
 }

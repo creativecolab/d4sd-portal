@@ -719,7 +719,8 @@ export const resourcesContent = {
         source: 'Google Design Sprint',
         description:
           "Browse this website outlining many design methods, as well as where and when to use them. Also, look through various 'case studies': helpful examples that help organizations adapt the sprint to their unique needs.",
-        link: 'https://designsprintkit.withgoogle.com/methodology/phase1-understand/luma-abstraction-laddering',
+        link:
+          'https://designsprintkit.withgoogle.com/methodology/phase1-understand/luma-abstraction-laddering',
         photo: process2
       }
     ],
@@ -892,8 +893,27 @@ export const resourcesContent = {
     ]
   },
   data: {
-    featured: [],
+    featured: [
+      {
+        source: 'San Diego, City',
+        title: 'San Diego, City Data Portal',
+        description: 'Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.',
+        link: 'https://data.sandiego.gov/'
+      },
+      {
+        source: 'San Diego, County',
+        title: 'SANDAG Data Portal',
+        description: 'The Regional GIS Data Warehouse provides data for everything from addresses to zoning, including: roads, property, parks, lakes, topography, census, and dozens of other layers - over 270 layers in 29 different categories.',
+        link: 'http://datasurfer.sandag.org/'
+      },
+    ],
     other: [
+      {
+        source: 'San Diego, County',
+        title: 'UN Sustainability Goals - Data',
+        description: 'UN Sustainability Goals - Data',
+        link: 'https://sdg-tracker.org/'
+      },
       {
         source: 'Mixed',
         title: 'Our World in Data',
