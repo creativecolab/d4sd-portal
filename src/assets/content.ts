@@ -95,20 +95,14 @@ export const homeContent = {
     location: "San Diego Central Library",
     key_dates: [
       {
-        start_date: new Date("03/18/2020"),
-        end_date: new Date("03/19/2020"),
-        label: "Come to a Workshop",
-        key: "date-1"
-      },
-      {
-        date: new Date("03/22/2020"),
+        date: new Date("04/03/2020"),
         label: "Request Feedback",
-        key: "date-2"
+        key: "date-1"
       },
       {
         date: new Date("04/22/2020"),
         label: "Submit Proposals",
-        key: "date-3"
+        key: "date-2"
       }
     ]
   },
@@ -621,38 +615,47 @@ export const submitContent = {
   importantDates: [
     {
       date: new Date("03/19/2020"),
-      override_date: "Mid March",
-      title: "Information Session and Workshop",
+      override_date: " ",
+      className: "event-cancelled",
+      title: "Information Session and Workshop (Cancelled)",
       body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-      subbody: [
-        {
-          date: new Date("03/18/2020"),
-          time: "12:00 – 2:00pm",
-          content: "@UC San Diego’s Design Lab",
-          url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-          action: {
-            label: "Sign up for Workshop 1",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-          },
-          key: "workshop_ucsd"
-        },
-        {
-          date: new Date("03/19/2020"),
-          time: "5:30 – 8:30pm",
-          content: "@DowntownWorks",
-          url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-          action: {
-            label: "Sign up for Workshop 2",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-          },
-          key: "workshop_downtownworks"
-        }
-      ],
+        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
+      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
+      action_button: {
+        label: "JOIN THE SLACK CONVERSATION",
+        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
+        className: "long-label",
+        disabled: false
+      },
+      // subbody: [
+      //   {
+      //     date: new Date("03/18/2020"),
+      //     time: "12:00 – 2:00pm",
+      //     content: "@UC San Diego’s Design Lab",
+      //     url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
+      //     action: {
+      //       label: "Sign up for Workshop 1",
+      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
+      //     },
+      //     key: "workshop_ucsd"
+      //   },
+      //   {
+      //     date: new Date("03/19/2020"),
+      //     time: "5:30 – 8:30pm",
+      //     content: "@DowntownWorks",
+      //     url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
+      //     action: {
+      //       label: "Sign up for Workshop 2",
+      //       url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
+      //     },
+      //     key: "workshop_downtownworks"
+      //   }
+      // ],
       key: "intro_workshops"
     },
     {
-      date: new Date("03/22/2020"),
+      date: new Date("04/03/2020"),
+      className: "",
       title: "Community Feedback",
       body:
         "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
@@ -666,6 +669,7 @@ export const submitContent = {
     },
     {
       date: new Date("04/22/2020"),
+      className: "",
       title: "Final submission deadline (Earth Day!)",
       body:
         "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
@@ -679,6 +683,7 @@ export const submitContent = {
     },
     {
       date: new Date("05/12/2020"),
+      className: "",
       title: "D4SD Summit 2020",
       body:
         "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
@@ -1114,4 +1119,40 @@ export const submitProposalContent = {
   content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Here are templates for ",
   content_5_4: ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
   poster_examples: [poster_example_1, poster_example_2, poster_example_3]
+}
+
+export const covidContent = {
+  title: "D4SD Response to COVID-19",
+  content: "The COVID-19 virus is an important health risk for San Diego and beyond. This page provides updates on how this will affect the D4SD challenge and planned events.",
+  image: "covid_header",
+  title_1: "Updates as of March 12, 2020",
+  content_1_1: "COVID-19 is a new respiratory disease that has spread rapidly.  The Centers for Disease Control and Prevention have recently stated that more cases of COVID-19 are likely to be identified in the United States in the coming days. The World Health Organization has officially classified COVID-19 as a pandemic. UC San Diego has responded to this health concern with an abundance of caution by temporarily delivering most courses, meetings, and public events online. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
+  content_1_2: "D4SD will take similar precautions. All of our informational sessions will now be broadcast live and recorded so that participants can get the information at home. If you are sick, please do NOT come to any in-person events.  The D4SD website includes design and data ",
+  content_1_3: " and ",
+  content_1_4: " to help you get started. You can join the ",
+  content_1_5: " to discuss topics and connect with potential teammates.",
+  content_1_6: "To further support our innovators, D4SD will also provide an opportunity for online feedback exchange for anyone who wants early input on their problem or proposed solution. To participate, ",
+  content_1_7: "learn more about how to request feedback",
+  content_1_8: "We currently still plan to host the ",
+  content_1_9: "D4SD Summit",
+  content_1_10: " on May 12th. However, the location and activities for the event could shift as we learn more about COVID-19. Join the ",
+  content_1_11: "newsletter and the online discussion",
+  content_1_12: " to stay connected with D4SD and to get updates related to this ongoing concern.",
+  title_2: "For more information:",
+  links: [
+    {
+      label: "Join the D4SD newsletter and online discussion",
+      url: "/"
+    },
+    {
+      label: "Information about COVID-19 (CDC)",
+      url: "https://www.cdc.gov/coronavirus/2019-ncov/index.html"
+    },
+    {
+      label: "UCSD Response to COVID-19",
+      url: "https://aps.ucsd.edu/facdev/covid-19/index.html"
+    }
+  ],
+  title_3: "Here are some helpful tips to stay healthy:",
+  tips: ["Wash your hands regularly with soap and water for at least 20 seconds.  If soap and water are not available, please use alcohol-based hand sanitizer.", "Avoid touching your eyes, nose, mouth with unwashed hands.", "Avoid contact with individuals who show signs of illness, when possible.", "Clean and disinfect frequently touched objects and surfaces.", "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided the links above."]
 }

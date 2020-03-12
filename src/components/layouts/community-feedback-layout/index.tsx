@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Row, Header, FeedbackActionCard
 } from '@d4sd/components';
-import Menubar from '../../menubar/index';
 import CopyURL from '../../copy-url';
 import './style.less';
 
@@ -27,7 +26,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
   // signupStep
   return (
     <div>
-      <Menubar />
       <div className="CommunityFeedbackLayout">
         <Header
           title="Community Feedback"
