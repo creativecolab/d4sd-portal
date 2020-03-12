@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   Header, message, Row, Col, Input, Icon, Rate
 } from '@d4sd/components';
-import Menubar from '../../menubar/index';
 import './style.less';
 
 const ViewFeedbackLayout = (): JSX.Element => {
@@ -106,7 +105,6 @@ const ViewFeedbackLayout = (): JSX.Element => {
 
   return (
     <div>
-      <Menubar />
       <div className="ViewFeedbackLayout">
         <Header
           title="View Feedback"

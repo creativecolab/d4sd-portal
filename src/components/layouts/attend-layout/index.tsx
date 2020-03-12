@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import Footer from '../../Footer/index';
-import Menubar from '../../menubar';
 import '../../../styles/containers.less';
 import './style.less';
 
@@ -24,7 +23,6 @@ const AttendLayout = (): JSX.Element => {
   };
   return (
     <div>
-      <Menubar />
       <div className="summit">
         <div className="pics">
           <img className="pic" alt="summit-img-1" src={summitContent.image1} />

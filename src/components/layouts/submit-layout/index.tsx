@@ -5,9 +5,9 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { workspaceContent } from '../../../assets/content';
+import { submitContent } from '../../../assets/content';
 
-const WorkspaceLayout = (): JSX.Element => {
+const SubmitLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
   const history = useHistory();
 
@@ -32,21 +32,21 @@ const WorkspaceLayout = (): JSX.Element => {
   return (
     <div className="SubmitPage">
       <Header
-        title={workspaceContent.title1}
-        content={workspaceContent.content1}
-        image={workspaceContent.image}
+        title={submitContent.title1}
+        content={submitContent.content1}
+        image={submitContent.image}
       />
       <div className="section" id="section-1">
         <div className="container">
-          <h2 className="title">{workspaceContent.title2}</h2>
+          <h2 className="title">{submitContent.title2}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: workspaceContent.content2 }} />
+          <p dangerouslySetInnerHTML={{ __html: submitContent.content2 }} />
         </div>
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          {workspaceContent.importantDates.map((details) => (
-            <div className="date-box" key={`${details.key}_box`}>
+          {submitContent.importantDates.map((details) => (
+            <div className={`date-box ${details.className}`} key={`${details.key}_box`}>
               <div className="date-info">
                 {details.override_date ? (
                   <div className="date-month temp" key={`${details.key}_month`}>{details.override_date}</div>
@@ -58,36 +58,24 @@ const WorkspaceLayout = (): JSX.Element => {
                 )}
               </div>
               <div className="date-desc">
-                <h2 className="desc-title">{details.title}</h2>
+                <h2 className={`desc-title ${details.className}`}>
+                  {details.override_date ? <s>{details.title}</s> : details.title}
+                </h2>
                 {/* eslint-disable-next-line */}
-                <p className="desc" dangerouslySetInnerHTML={{ __html: details.body }} />
-                {details.subbody ? (
-                  <div className="event-items" key={`${details.key}_div`}>
-                    <div className="date-loc">
-                      {details.subbody.map((item) => (
-                        <div className="event-item" key={`${item.key}_div`}>
-                          <p className="desc">
-                            <b className="date">
-                              {item.date.toDateString().substring(4, 7).toUpperCase()}
-                              {' '}
-                              {item.date.getDate()}
-                              {' '}
-                              {item.time}
-                            </b>
-                          </p>
-                          <p className="desc">
-                            <a href={item.url} target="_blank" rel="noopener noreferrer">{item.content}</a>
-                          </p>
-                          <a href={item.action_button.url} target="_blank" rel="noopener noreferrer">
-                            <Button className={`action-button integrated-button ${item.action_button.className}`} disabled={item.action_button.disabled}>
-                              {item.action_button.label}
-                            </Button>
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                    <div style={{ marginRight: '15px' }} />
-                  </div>
+                <p className="desc">
+                  {details.body}
+                  {details.body_2 ? (
+                    <>
+                      {/* eslint-disable-next-line */}
+                      <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/covid19'); }}>here</a>
+                      {details.body_2}
+                    </>
+                  ) : null}
+                </p>
+                {details.override_date ? (
+                  <a href={details.action_button.url} target="_blank" rel="noopener noreferrer">
+                    <Button className={`action-button ${details.action_button.className}`} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
+                  </a>
                 ) : (
                   <Button className={`action-button ${details.action_button.className}`} onClick={(): void => history.push(details.action_button.url)} disabled={details.action_button.disabled}>{details.action_button.label}</Button>
                 )}
@@ -95,7 +83,7 @@ const WorkspaceLayout = (): JSX.Element => {
             </div>
           ))}
           {/* eslint-disable-next-line */}
-          <p className="bottomContent" dangerouslySetInnerHTML={{ __html: workspaceContent.content3 }} />
+          <p className="bottomContent" dangerouslySetInnerHTML={{ __html: submitContent.content3 }} />
           <a href="http://eepurl.com/c2kFon" target="_blank" rel="noopener noreferrer">
             <Button>JOIN THE NEWSLETTER!</Button>
           </a>
@@ -109,4 +97,4 @@ const WorkspaceLayout = (): JSX.Element => {
   );
 };
 
-export default WorkspaceLayout;
+export default SubmitLayout;

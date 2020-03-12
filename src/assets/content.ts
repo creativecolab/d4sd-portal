@@ -81,6 +81,8 @@ import poster_example_1 from './img/poster_example_1.png';
 import poster_example_2 from './img/poster_example_2.png';
 import poster_example_3 from './img/poster_example_3.png';
 
+import covid_header from './img/covid_header.svg';
+
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1_1: "DESIGN FOR SAN DIEGO'S ",
@@ -95,20 +97,14 @@ export const homeContent = {
     location: "San Diego Central Library",
     key_dates: [
       {
-        start_date: new Date("03/18/2020"),
-        end_date: new Date("03/19/2020"),
-        label: "Come to a Workshop",
-        key: "date-1"
-      },
-      {
-        date: new Date("03/22/2020"),
+        date: new Date("04/03/2020"),
         label: "Request Feedback",
-        key: "date-2"
+        key: "date-1"
       },
       {
         date: new Date("04/22/2020"),
         label: "Submit Proposals",
-        key: "date-3"
+        key: "date-2"
       }
     ]
   },
@@ -341,14 +337,13 @@ export const faqContent = {
     {
       question: "How can I get started?",
       answer:
-        "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can attend one of the in-person events to help you connect with other innovators and to get mentorship from design practitioners. Upcoming events include our Information Sessions and Workshops on March 18 at UC San Diego and March 19 at DowntownWorks; <a href='/submit'>sign up here</a>.</li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>.</li><li>Until March 22, you can <a href='/submit/request-feedback'>request feedback on an early-stage idea</a> or problem that you want to work on for the challenge.</li><li>Final submissions are due April 22 (Earth Day), so when you are ready, visit the <a href='/submit/submit-proposal'>Submit Proposal page</a> to enter the challenge.</li>"
-    },
+      "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>.</li><li>Until April 3, you can <a href='/submit/request-feedback'>request feedback on an early-stage idea</a> or problem that you want to work on for the challenge.</li><li>Final submissions are due April 22 (Earth Day), so when you are ready, visit the <a href='/submit/submit-proposal'>Submit Proposal page</a> to enter the challenge.</li>"    },
     {
       question: "What are the important deadlines?",
       answer: "There are two deadlines for submissions: The 1st deadline is for an early OPTIONAL submission to gain community feedback, and the 2nd deadline is for a REQUIRED final submission. The community feedback opportunities only serves as a resource for teams to improve their work; it will not be part of the final judging process.",
       events: [
         {
-          description: "<b>March 22: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available at the end of March so that teams have time to iterate before the final deadline (April 22).",
+          description: "<b>April 3: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (April 22).",
           button_label: "LEARN HOW TO REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "request-feedback"
@@ -365,19 +360,19 @@ export const faqContent = {
       question: "What is on the D4SD calendar of events?",
       answer: "Design for San Diego has lined up an exciting set of opportunities for our community to connect and address key issues in San Diego through design.  See the calendar below for key events and online engagement opportunities:",
       events: [
+        // {
+        //   description: "<b>MID MARCH: Information Sessions and Workshops.</b> Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
+        //   dates: ["Mar 18: 12:00-2:00pm", "Mar 19: 5:30-8:30pm"],
+        //   contents: ["UC San Diego's Design Lab (1601 Atkinson bldg)", "DowntownWorks (550 W. B St 4th floor)"],
+        //   button_labels: ["SIGN UP FOR MAR 18TH WORKSHOP", "SIGN UP FOR MAR 19TH WORKSHOP"],
+        //   locations: ["https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608", "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615"],
+        //   urls: ["https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069", "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113"],
+        //   keys: ["workshop_1", "workshop_2"],
+        //   url: "",
+        //   key: "workshops"
+        // },
         {
-          description: "<b>MID MARCH: Information Sessions and Workshops.</b> Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved!  To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-          dates: ["Mar 18: 12:00-2:00pm", "Mar 19: 5:30-8:30pm"],
-          contents: ["UC San Diego's Design Lab (1601 Atkinson bldg)", "DowntownWorks (550 W. B St 4th floor)"],
-          button_labels: ["SIGN UP FOR MAR 18TH WORKSHOP", "SIGN UP FOR MAR 19TH WORKSHOP"],
-          locations: ["https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608", "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615"],
-          urls: ["https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069", "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113"],
-          keys: ["workshop_1", "workshop_2"],
-          url: "",
-          key: "workshops"
-        },
-        {
-          description: "<b>MAR 22: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+          description: "<b>APRIL 3: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
           button_label: "REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "community-feedback"
@@ -408,12 +403,12 @@ export const faqContent = {
     },
     {
       question: "How will my work be judged?",
-      answer: 
+      answer:
         "To enter the D4SD 2020 Challenge, teams must submit the final submission deliverables by April 22, 2020 at 11:59PM PDT.<br /><br />In general, solutions to the D4SD Challenge will be assessed based on <b>five key criteria</b>:<ol><li><b>Human-centered process</b><ul><li>How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?</li><li>To what extent does the team discover the core problems at the heart of a civic challenge?</li></ul></li><li><b>Improving on the current status quo</b><ul><li>Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?</li><li>Does this proposal expand on what San Diego already has?</li><li>How unique is the solution compared to other available solutions?</li></ul><li><b>Feasibility/viability/harmony</b><ul><li>How likely is it that this proposal could get implemented?</li><li>Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?</li></ul></li><li><b>Impact/desirability:</b><ul><li>How will the solution affect people?</li><li>Does it have any downsides?</li></ul></li><li><b>Communication quality:</b><ul><li>Does the poster follow good visual design principles?</li><li>Does the team have a good verbal pitch of their problem and proposed solution?</li><li>Does the optional video tell a compelling story?</li></ul></li></ol><br />The judging process has two rounds:<ol><li>In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed above. This judging process will happen between April 23 and May 4.  Finalists will be notified on May 5th through email so they can prepare a slide and verbal pitch for the Summit.</li><li>In round two, distinguished jurors will assess the finalists during the D4SD Summit on May 12th. Teams must have at least one team member available to present the poster throughout the day and to interact with jurors. Finalist teams will deliver a two-minute verbal pitch that at the D4SD Awards Ceremony.</li></ol>"
     },
     {
       question: "What kinds of design work can we submit to the challenge?",
-      answer: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:<ol><li><b>Entrepreneurial</b>: Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.</li><li><b>Civic</b>: These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).</li><li><b>Philanthropic</b>: These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.</li></ol>D4SD compiled a list of videos, articles, toolkits, and other resources that can be useful for people working through the design challenges (check those out on the <a href='/resources'>Resource page</a>)."
+      answer: "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:<ol><li><b>Entrepreneurial</b>: Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.</li><li><b>Civic</b>: These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the <a href='https://data.sandiego.gov/' target='_blank'> City of San Diego </a> or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).</li><li><b>Philanthropic</b>: These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.</li></ol>D4SD compiled a list of videos, articles, toolkits, and other resources that can be useful for people working through the design challenges (check those out on the <a href='/resources'>Resource page</a>)."
     },
     {
       question: "Do I need to print my team’s poster?",
@@ -607,7 +602,7 @@ export const challengeContent = {
   ]
 };
 
-export const workspaceContent = {
+export const submitContent = {
   image: "workspace_header",
   title1: "Submit",
   content1:
@@ -620,43 +615,8 @@ export const workspaceContent = {
     "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("03/19/2020"),
-      override_date: "Mid March",
-      title: "Information Session and Workshop",
-      body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-      subbody: [
-        {
-          date: new Date("03/18/2020"),
-          time: "12:00 – 2:00pm",
-          content: "@UC San Diego’s Design Lab",
-          url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-          action_button: {
-            label: "SIGN UP FOR MAR 18TH WORKSHOP",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-            className: "long-label",
-            disabled: false
-          },
-          key: "workshop_ucsd"
-        },
-        {
-          date: new Date("03/19/2020"),
-          time: "5:30 – 8:30pm",
-          content: "@DowntownWorks",
-          url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-          action_button: {
-            label: "SIGN UP FOR MAR 19TH WORKSHOP",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-            className: "long-label",
-            disabled: false
-          },
-          key: "workshop_downtownworks"
-        }
-      ],
-      key: "intro_workshops"
-    },
-    {
-      date: new Date("03/22/2020"),
+      date: new Date("04/03/2020"),
+      className: "",
       title: "Community Feedback",
       body:
         "Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
@@ -670,6 +630,7 @@ export const workspaceContent = {
     },
     {
       date: new Date("04/22/2020"),
+      className: "",
       title: "Final submission deadline (Earth Day!)",
       body:
         "Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
@@ -683,6 +644,7 @@ export const workspaceContent = {
     },
     {
       date: new Date("05/12/2020"),
+      className: "",
       title: "D4SD Summit 2020",
       body:
         "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
@@ -693,7 +655,23 @@ export const workspaceContent = {
         disabled: false
       },
       key: "d4sd_summit"
-    }
+    },
+    {
+      date: new Date("03/19/2020"),
+      override_date: " ",
+      className: "event-cancelled",
+      title: "Information Session and Workshop (Cancelled)",
+      body:
+        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
+      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
+      action_button: {
+        label: "JOIN THE SLACK CONVERSATION",
+        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
+        className: "long-label",
+        disabled: false
+      },
+      key: "intro_workshops"
+    },
   ],
   timeline: [
     {
@@ -990,8 +968,8 @@ export const requestFeedbackContent = {
   content3: '',
   importantDates: [
     {
-      start_date: new Date("03/05/2020"),
-      end_date: new Date("03/22/2020"),
+      start_date: new Date("03/15/2020"),
+      end_date: new Date("04/03/2020"),
       title: "Open period for requesting early feedback on an idea",
       key: "early_feedback"
     },
@@ -1002,7 +980,7 @@ export const requestFeedbackContent = {
       key: "feedback_providers"
     },
     {
-      date: new Date("03/3/2020"),
+      date: new Date("04/10/2020"),
       title: "Participants will receive an email with feedback",
       key: "email_feedback"
     },
@@ -1118,4 +1096,40 @@ export const submitProposalContent = {
   content_5_3: "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Here are templates for ",
   content_5_4: ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
   poster_examples: [poster_example_1, poster_example_2, poster_example_3]
+}
+
+export const covidContent = {
+  title: "D4SD Response to COVID-19",
+  content: "The COVID-19 virus is an important health risk for San Diego and beyond. This page provides updates on how this will affect the D4SD challenge and planned events.",
+  image: covid_header,
+  title_1: "Updates as of March 12, 2020",
+  content_1_1: "COVID-19 is a new respiratory disease that has spread rapidly.  The Centers for Disease Control and Prevention have recently stated that more cases of COVID-19 are likely to be identified in the United States in the coming days. The World Health Organization has officially classified COVID-19 as a pandemic. UC San Diego has responded to this health concern with an abundance of caution by temporarily delivering most courses, meetings, and public events online. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
+  content_1_2: "D4SD will take similar precautions. All of our informational sessions will now be broadcast live and recorded so that participants can get the information at home. If you are sick, please do NOT come to any in-person events.  The D4SD website includes design and data ",
+  content_1_3: " and ",
+  content_1_4: " to help you get started. You can join the ",
+  content_1_5: " to discuss topics and connect with potential teammates.",
+  content_1_6: "To further support our innovators, D4SD will also provide an opportunity for online feedback exchange for anyone who wants early input on their problem or proposed solution. To participate, ",
+  content_1_7: "learn more about how to request feedback",
+  content_1_8: "We currently still plan to host the ",
+  content_1_9: "D4SD Summit",
+  content_1_10: " on May 12th. However, the location and activities for the event could shift as we learn more about COVID-19. Join the ",
+  content_1_11: "newsletter and the online discussion",
+  content_1_12: " to stay connected with D4SD and to get updates related to this ongoing concern.",
+  title_2: "For more information:",
+  links: [
+    {
+      label: "Join the D4SD newsletter and online discussion",
+      url: "/"
+    },
+    {
+      label: "Information about COVID-19 (CDC)",
+      url: "https://www.cdc.gov/coronavirus/2019-ncov/index.html"
+    },
+    {
+      label: "UCSD Response to COVID-19",
+      url: "https://aps.ucsd.edu/facdev/covid-19/index.html"
+    }
+  ],
+  title_3: "Here are some helpful tips to stay healthy:",
+  tips: ["Wash your hands regularly with soap and water for at least 20 seconds.  If soap and water are not available, please use alcohol-based hand sanitizer.", "Avoid touching your eyes, nose, mouth with unwashed hands.", "Avoid contact with individuals who show signs of illness, when possible.", "Clean and disinfect frequently touched objects and surfaces.", "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided the links above."]
 }

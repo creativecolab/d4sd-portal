@@ -1,0 +1,43 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+@import '../../../styles/fonts.less';
+
+.CovidPage {
+  > .section {
+    padding-top: 6rem;
+    > .container {
+      padding-bottom: 4rem;
+    }
+  }
+  .page-head {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    top: @header-navbar-padding + 6rem;
+  }
+  #banner-image {
+    position: relative;
+    padding-top: @header-navbar-padding;
+    width: 100%;
+    height: 48rem;
+    opacity: 0.4;
+    text-align: center;
+  }
+  #section-1 {
+    background-color: #edf6ff;
+    .container {
+      .title {
+        margin-bottom: 4rem;
+      }
+      ul {
+        margin-left: 30px;
+        li {
+          list-style-type: disc;
+          color: #333333;
+          font: inherit;
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,6 @@ import {
   Row, Header
 } from '@d4sd/components';
 import SignupCard from '../../signup-card/index';
-import Menubar from '../../menubar/index';
 import LoginCard from '../../login-card';
 import './style.less';
 
@@ -15,7 +14,6 @@ const SignupLayout = (): JSX.Element => {
   // signupStep
   return (
     <div>
-      <Menubar />
       <div className="SignupLayout">
         <Header teamTitle="Workspace Registration" className="header" />
         <Row className="card-container">
