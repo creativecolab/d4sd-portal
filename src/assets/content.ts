@@ -974,8 +974,8 @@ export const requestFeedbackContent = {
       key: "early_feedback"
     },
     {
-      start_date: new Date("03/23/2020"),
-      end_date: new Date("03/29/2020"),
+      start_date: new Date("04/04/2020"),
+      end_date: new Date("04/09/2020"),
       title: "D4SD will recruit feedback providers from the community",
       key: "feedback_providers"
     },
