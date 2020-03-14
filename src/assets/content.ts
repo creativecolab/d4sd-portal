@@ -615,46 +615,9 @@ export const submitContent = {
     "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
   importantDates: [
     {
-<<<<<<< HEAD
-      date: new Date("03/19/2020"),
-      override_date: "Mid March",
-      title: "Information Session and Workshop",
-      body:
-        "Learn about the challenge topics. Participate in a short design sprint. Find a team. It’s not too late to get involved! To request a workshop for your organization, send an email to <a href='mailto:team@d4sd.org'>team@d4sd.org</a>.",
-      subbody: [
-        {
-          date: new Date("03/18/2020"),
-          time: "12:00 – 2:00pm",
-          content: "@UC San Diego’s Design Lab",
-          url: "https://www.google.com/maps/place/The+Design+Lab+UC+San+Diego/@32.8825863,-117.2364013,17.51z/data=!4m5!3m4!1s0x80dc06c302c254ad:0xf79cd56dde1eeb78!8m2!3d32.8827576!4d-117.2346608",
-          action: {
-            label: "Sign up for Workshop 1",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-318-tickets-98434443069",
-          },
-          key: "workshop_ucsd"
-        },
-        {
-          date: new Date("03/19/2020"),
-          time: "5:30 – 8:30pm",
-          content: "@DowntownWorks",
-          url: "https://www.google.com/maps/place/Downtown+Works/@32.7175254,-117.170329,16.69z/data=!4m5!3m4!1s0x80d954abfc06c98f:0x54de9cc9aaaf6801!8m2!3d32.7178936!4d-117.1681615",
-          action: {
-            label: "Sign up for Workshop 2",
-            url: "https://www.eventbrite.com/e/d4sd-info-session-workshop-319-tickets-97880133113",
-          },
-          key: "workshop_downtownworks"
-        }
-      ],
-      key: "intro_workshops"
-    },
-    {
-      date: new Date('03/22/2020'),
-      title: 'Community Feedback',
-=======
       date: new Date("04/03/2020"),
       className: "",
       title: "Community Feedback",
->>>>>>> staging
       body:
         'Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.',
       action_button: {
@@ -666,14 +629,9 @@ export const submitContent = {
       key: 'community_feedback'
     },
     {
-<<<<<<< HEAD
-      date: new Date('04/22/2020'),
-      title: 'Final submission deadline (Earth Day!)',
-=======
       date: new Date("04/22/2020"),
       className: "",
       title: "Final submission deadline (Earth Day!)",
->>>>>>> staging
       body:
         'Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.',
       action_button: {
@@ -685,14 +643,9 @@ export const submitContent = {
       key: 'final_submission'
     },
     {
-<<<<<<< HEAD
-      date: new Date('05/12/2020'),
-      title: 'D4SD Summit 2020',
-=======
       date: new Date("05/12/2020"),
       className: "",
       title: "D4SD Summit 2020",
->>>>>>> staging
       body:
         'Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!',
       action_button: {
@@ -701,10 +654,6 @@ export const submitContent = {
         className: "long-label",
         disabled: false
       },
-<<<<<<< HEAD
-      key: 'd4sd_summit'
-    }
-=======
       key: "d4sd_summit"
     },
     {
@@ -723,7 +672,6 @@ export const submitContent = {
       },
       key: "intro_workshops"
     },
->>>>>>> staging
   ],
   timeline: [
     {
@@ -1272,17 +1220,6 @@ export const requestFeedbackContent = {
       key: "early_feedback"
     },
     {
-<<<<<<< HEAD
-      start_date: new Date('03/23/2020'),
-      end_date: new Date('03/29/2020'),
-      title: 'D4SD will recruit feedback providers from the community',
-      key: 'feedback_providers'
-    },
-    {
-      date: new Date('03/3/2020'),
-      title: 'Participants will receive an email with feedback',
-      key: 'email_feedback'
-=======
       start_date: new Date("04/04/2020"),
       end_date: new Date("04/09/2020"),
       title: "D4SD will recruit feedback providers from the community",
@@ -1292,7 +1229,6 @@ export const requestFeedbackContent = {
       date: new Date("04/10/2020"),
       title: "Participants will receive an email with feedback",
       key: "email_feedback"
->>>>>>> staging
     },
     {
       date: new Date('04/22/2020'),
@@ -1434,8 +1370,6 @@ export const submitProposalContent = {
   content_5_4: ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
   poster_examples: [poster_example_1, poster_example_2, poster_example_3]
 }
-<<<<<<< HEAD
-=======
 
 export const covidContent = {
   title: "D4SD Response to COVID-19",
@@ -1472,4 +1406,3 @@ export const covidContent = {
   title_3: "Here are some helpful tips to stay healthy:",
   tips: ["Wash your hands regularly with soap and water for at least 20 seconds.  If soap and water are not available, please use alcohol-based hand sanitizer.", "Avoid touching your eyes, nose, mouth with unwashed hands.", "Avoid contact with individuals who show signs of illness, when possible.", "Clean and disinfect frequently touched objects and surfaces.", "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided the links above."]
 }
->>>>>>> staging
