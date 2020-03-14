@@ -59,6 +59,8 @@ const RequestFeedbackLayout = (): JSX.Element => {
                           {' '}
                           –
                           {' '}
+                          {details.end_date.toDateString().substring(4, 7).toUpperCase()}
+                          {' '}
                           {details.end_date.getDate()}
                           :
                         </b>
@@ -84,8 +86,8 @@ const RequestFeedbackLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <a href="https://forms.gle/XUyHzfmLLiKjr9F18" target="_blank" rel="noopener noreferrer">
-            <Button>REQUEST FEEDBACK</Button>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <Button disabled>REQUEST FEEDBACK</Button>
           </a>
         </div>
       </div>

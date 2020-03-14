@@ -10,33 +10,10 @@ import ReactGA from 'react-ga';
 import Loadable from 'react-loadable';
 import configureStore, { history } from './store';
 
-// import ScrollToTop from './components/ScrollToTop';
-// import SignupPage from './containers/signup-page';
-// import LoginPage from './containers/login-page';
-// import HomePage from './containers/home-page';
-// import InvolvedPage from './containers/involved-page';
-// import AboutPage from './containers/about-page';
-// import ChallengePage from './containers/challenge-page';
-// import AttendPage from './containers/attend-page';
-// import ResourcesPage from './containers/resources-page';
-// import FAQPage from './containers/faq-page';
-// import SponsorsPage from './containers/sponsors-page';
-// import WorkspacePage from './containers/workspace-page';
-// import RequestFeedbackPage from './containers/request-feedback-page';
-// import SubmitProposalPage from './containers/submit-proposal-page';
-// import ProcessPage from './components/layouts/process-layout';
-// import StakeholderPage from './components/layouts/stakeholder-layout';
-// import FeedbackPage from './components/layouts/feedback-layout';
-// import ViewFeedbackLayout from './components/layouts/view-feedback-layout';
-// import CommunityFeedbackLayout from './components/layouts/community-feedback-layout';
-// import PreliminarySubmissionPage from './components/layouts/preliminary-submission-layout';
-// import FeedbackProviderLayout from './components/layouts/feedback-provider-layout';
+import Menubar from './components/menubar';
+import ScrollToTop from './components/ScrollToTop';
 
 const Loading = (): null => null; // loading component
-const ScrollToTop = Loadable({
-  loader: () => import('./components/ScrollToTop'),
-  loading: Loading
-});
 const HomePage = Loadable({
   loader: () => import('./containers/home-page'),
   loading: Loading
@@ -101,6 +78,10 @@ const FeedbackPage = Loadable({
   loader: () => import('./components/layouts/feedback-layout'),
   loading: Loading
 });
+const CovidPage = Loadable({
+  loader: () => import('./components/layouts/covid-layout'),
+  loading: Loading
+});
 // const ViewFeedbackLayout = Loadable({
 //   loader: () => import('./components/layouts/view-feedback-layout'),
 //   loading: Loading
@@ -140,33 +121,34 @@ const App = (): JSX.Element => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <ScrollToTop />
-        <>
-          <main>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/home" component={HomePage} />
-              <Route exact path="/volunteer" component={InvolvedPage} />
-              <Route
-                exact
-                path="/volunteer/feedback_provider"
-                component={FeedbackPage}
-              />
-              <Route exact path="/challenges" component={ChallengePage} />
-              <Route exact path="/attend" component={AttendPage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/sponsor" component={SponsorsPage} />
-              <Route exact path="/faq" component={FAQPage} />
-              <Route exact path="/resources" component={ResourcesPage} />
-              <Route exact path="/resources/process" component={ProcessPage} />
-              <Route
-                exact
-                path="/resources/stakeholder"
-                component={StakeholderPage}
-              />
-              <Route exact path="/submit" component={SubmitPage} />
-              <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
-              <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
-              {/*
+        <main>
+          <Menubar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/volunteer" component={InvolvedPage} />
+            <Route
+              exact
+              path="/volunteer/feedback_provider"
+              component={FeedbackPage}
+            />
+            <Route exact path="/challenges" component={ChallengePage} />
+            <Route exact path="/attend" component={AttendPage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/sponsor" component={SponsorsPage} />
+            <Route exact path="/faq" component={FAQPage} />
+            <Route exact path="/resources" component={ResourcesPage} />
+            <Route exact path="/resources/process" component={ProcessPage} />
+            <Route
+              exact
+              path="/resources/stakeholder"
+              component={StakeholderPage}
+            />
+            <Route exact path="/submit" component={SubmitPage} />
+            <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
+            <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
+            <Route exact path="/covid19" component={CovidPage} />
+            {/*
               <Route
                 exact
                 path="/workspace/prelim"
@@ -197,11 +179,10 @@ const App = (): JSX.Element => {
               ~ Home
               ~ Go through all pages to fix fonts
               */}
-              <Route exact path="/signup" component={SignupPage} />
-              <Route exect path="/login" component={LoginPage} />
-            </Switch>
-          </main>
-        </>
+            <Route exact path="/signup" component={SignupPage} />
+            <Route exect path="/login" component={LoginPage} />
+          </Switch>
+        </main>
       </ConnectedRouter>
     </Provider>
   );
