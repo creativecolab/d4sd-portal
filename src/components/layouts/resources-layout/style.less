@@ -133,12 +133,23 @@
 .paragraph {
   padding-top: 2vh;
 
-  .red {
+}
+
+.red {
+
+  .ant-card-bordered {
+    border-left: 25px solid #FF9696;
+
+  }
+
+  @media (max-width:1244px) and (min-width:1000px) {
 
     .ant-card-bordered {
-      border-left: 25px solid #FF9696;
+      height: 500px !important;
+
     }
-  
+
+
   }
 
   .blue {
@@ -147,7 +158,7 @@
     }
 
   }
-  
+
   .light {
     .ant-card-bordered {
       border-left: 25px solid #B7DFE6;
@@ -299,8 +310,27 @@
 
 }
 
+.submitmore {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+
+  p {
+    width: 65%;
+  }
+
+  @media screen and (max-width: 375px) {
+    p {
+      width: 80%;
+
+    }
+  }
+}
+
+
 .allcards {
   width: 1180px;
+
   .tags {
     margin-bottom: 3vh;
   }
