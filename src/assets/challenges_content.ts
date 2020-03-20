@@ -209,7 +209,86 @@ export const challengesContent: {
       ],
       resources_national: [{ label: '', link: '' }],
       image: housing2
-    }
+    },
+    homelessness: {
+      title: 'Homelessness',
+      subTitle:
+        'How might we address the safety, shelter, and nutritional needs of people who are without housing for short-term and long-term periods of time?',
+      introduction:
+        "Homelessness is not a new problem. It can be traced back as early to the 1600s. Although the nature of the homeless has shifted and intensified within the past few decades, homeless continues to be an issue that must be engaged on the human level. Our goal is to open this topic up, and look at it from as many lens of possible (ie. social, political, economic), while grounding this thinking in the lived experiences of those who are homeless.",
+      angles:
+        "One way to find methods for placemaking is to look at positive examples, past and present. For instance, cities are taking inspiration from the vibrant main streets of the past as exemplars in how we might live today. Cities are paying attention to zoning policies like Portland's urban growth boundary, which densify and diversify development. Here in San Diego, the city has responded with a strategic framework called the “City of Villages” plan, which “focuses growth into mixed use activity centers that are pedestrian-friendly districts linked to an improved regional transit system.” However, these centers need the insight of the people living in and around them in order to realize their full potential as centers for life, culture, and belonging in San Diego.Ï",
+      presenting_evidence: '',
+      angle_examples: [
+        {
+          label: 'Translate urban growth boundaries',
+          desc:
+            "How might San Diego translate insightful land use policies like Portland's urban growth boundary into our city's unique situation?"
+        }
+      ],
+      resources_partners: [],
+      resources_news: [
+        {
+          label: 'SD Union-Tribune article on “complete communities”',
+          link:
+            'https://www.sandiegouniontribune.com/communities/san-diego/story/2019-12-05/new-san-diego-proposal-goes-beyond-housing-to-seek-complete-communities'
+        }
+      ],
+      resources_national: [],
+      image: housing3
+    },
+    internet_of_things: {
+      title: 'Smart Homes (IoT)',
+      subTitle:
+        'How might we design services and internet-connected products for the home to make everyday life easier, more fun, and more secure?',
+      introduction:
+        "Over the past decade, the idea of “smart houses” has grown rapidly. Central to the concept of “smart houses” is the “Internet of Things.” The “Internet of Things”, aka IoT, refers to objects that are not typically connected to the Internet gaining the ability to connect to the internet and each other, making open, ad hoc connections, sharing data freely and allowing unexpected applications. Some examples of IoT objects that could be found within a house include smart refrigerators, microwaves, and doorbells. Adding several IoT objects to a house can transform it into a “smart house.” San Diego is in the process of the largest urban deployment of IoT nodes in North America.",
+      angles:
+        "Smart houses are already changing the way people live. For example, Ring is a home security and smart house company owned by Amazon that manufactures a range of home security products that incorporate outdoor motion-detecting cameras. Ring doorbells have allowed homeowners to monitor and protect their homes when they're not home. Ring has even provided law enforcement officials key video evidence to find subjects of interest. In the future, smart house technology is expected to continue to grow rapidly. Indeed, shows, movies, books, etc. that depict the future often depict people living in smart homes with IoT devices. However, as technology encroaches further into our homes, it is becoming more important to think about the impact that they might have on our lives as well as what sort of behaviors they might create or promote.",
+      presenting_evidence: '',
+      angle_examples: [
+        {
+          label: 'Privacy vs convenience',
+          desc:
+            "How might we more explicitly consider and balance the trade-offs between privacy and convenience when adopting smart home technology?"
+        },
+        {
+          label: 'Closing the legislative loop',
+          desc:
+            "How might we reduce the time between technology innovation and legislation that protects consumers from privacy or security abuses?"
+        },
+        {
+          label: 'Awareness and agency',
+          desc:
+            "How might we make smart home users more aware of the current data collection practices associated with smart home technology?"
+        },
+        {
+          label: 'Connection',
+          desc:
+            "How can smart home technology connect us rather than isolate us while still keeping a sense of privacy and security?"
+        }
+      ],
+      resources_partners: [],
+      resources_news: [
+        {
+          label: 'San Diego Makes Strong Bet on IoT, Telematics and Apps',
+          link:
+            'https://www.techwire.net/news/san-diego-makes-strong-bet-on-iot-telematics-and-apps.html'
+        },
+        {
+          label: 'Inspiring San Diego: Teens Propose Solutions to Stop Youth Sex Trafficking',
+          link:
+            'https://www.nbcsandiego.com/news/local/smart-city-saturday-hackathon-sex-trafficking-499509441.html'
+        },
+        {
+          label: 'San Diego to Cover Half the City with Intelligent Streetlights',
+          link:
+            'https://www.govtech.com/fs/San-Diego-to-Cover-Half-the-City-with-Intelligent-Streetlights.html'
+        }
+      ],
+      resources_national: [],
+      image: housing4
+    },
   },
 
   environment: {

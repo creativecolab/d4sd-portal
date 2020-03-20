@@ -6,18 +6,38 @@ import { stringLiteralTypeAnnotation } from '@babel/types';
 import { challengesContent } from '../../../assets/challenges_content';
 
 import Footer from '../../Footer/index';
-import Menubar from '../../menubar';
 import '../../../styles/containers.less';
 import './style.less';
-import AttendLayout from '../attend-layout';
+
+type ChallengeAngleType = {
+  label: string;
+  desc: string;
+}
+
+type ResourcesPartnersType = {
+  label: string;
+  link: string;
+}
+
+type ResourcesNewsType = {
+  label: string;
+  link: string;
+}
+
+type ResourcesNationalType = {
+  label: string;
+  link: string;
+}
 
 const ChallengeInternalLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
 
   const { type, title } = useParams();
+  // eslint-disable-next-line
   // @ts-ignore
   const challengeType = challengesContent[type];
 
+  // eslint-disable-next-line
   // @ts-ignore
   const challengeTitle = challengeType[title];
 
@@ -81,10 +101,11 @@ const ChallengeInternalLayout = (): JSX.Element => {
             <b>{challengeEvidence}</b>
           </p>
 
-          {allChallengeAngles.map((obj: any) => (
+          {allChallengeAngles.map((obj: ChallengeAngleType) => (
             <p>
               <b>{obj.label}</b>
                :
+              {' '}
               {obj.desc}
             </p>
           ))}
@@ -98,7 +119,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <h2>Resources</h2>
           <h4>Organizations/Partners/Stakeholders</h4>
           <ul>
-            {allResourcesPartners.map((obj: any) => (
+            {allResourcesPartners.map((obj: ResourcesPartnersType) => (
               <li>
                 <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
@@ -108,7 +129,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           </ul>
           <h4>News</h4>
           <ul>
-            {allResourcesNews.map((obj: any) => (
+            {allResourcesNews.map((obj: ResourcesNewsType) => (
               <li>
                 <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
@@ -120,7 +141,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
             <div>
               <h4>National Context</h4>
               <ul>
-                {allResourcesNational.map((obj: any) => (
+                {allResourcesNational.map((obj: ResourcesNationalType) => (
                   <li>
                     <a href={obj.link} target="_blank" rel="noopener noreferrer">
                       {obj.label}

@@ -515,19 +515,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setHomelessness(true)}
               onMouseLeave={(): void => setHomelessness(false)}
             >
-              <Card hoverable className="homelessness-card">
-                <div className="card-bg">
-                  {homelessness && (
-                    <p className="card-text">
+              <Link to="/challenges/housing/homelessness">
+                <Card hoverable className="homelessness-card">
+                  <div className="card-bg">
+                    {homelessness && (
+                      <p className="card-text">
                       How might we address the safety, shelter, and nutritional
                       needs of people who are without housing for short-term and
                       long-term periods of time?
-                    </p>
-                  )}
-                  {!homelessness && <h2 className="card-text">Homelessness</h2>}
-                </div>
-              </Card>
+                      </p>
+                    )}
+                    {!homelessness && <h2 className="card-text">Homelessness</h2>}
+                  </div>
+                </Card>
+              </Link>
             </Col>
+
 
             <Col
               xs={24}
@@ -535,20 +538,22 @@ const ChallengeLayout = (): JSX.Element => {
               onMouseEnter={(): void => setIot(true)}
               onMouseLeave={(): void => setIot(false)}
             >
-              <Card hoverable className="iot-card">
-                <div className="card-bg">
-                  {iot && (
-                    <p className="card-text">
+              <Link to="/challenges/housing/internet_of_things">
+                <Card hoverable className="iot-card">
+                  <div className="card-bg">
+                    {iot && (
+                      <p className="card-text">
                       How might we design services and internet-connected
                       products for the home to make everyday life easier, more
                       fun, and more secure?
-                    </p>
-                  )}
-                  {!iot && (
-                    <h2 className="card-text">Internet of Things (IoT)</h2>
-                  )}
-                </div>
-              </Card>
+                      </p>
+                    )}
+                    {!iot && (
+                      <h2 className="card-text">Smart Homes (IoT)</h2>
+                    )}
+                  </div>
+                </Card>
+              </Link>
             </Col>
           </Row>
         </div>
