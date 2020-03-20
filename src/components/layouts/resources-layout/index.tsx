@@ -29,7 +29,7 @@ function ResourcesLayout() {
       />
       <div className="container paragraph">
         <div className="red">
-          <h1 className="cardtitle">FEATURED RESOURCES</h1>
+          {/* <h1 className="cardtitle">FEATURED RESOURCES</h1> */}
           <Row type="flex" justify="center" gutter={[32, 16]}>
             <Col xs={{ span: 24 }} lg={{ span: 12 }}>
               <NavLink to="/resources/process">
@@ -64,7 +64,7 @@ function ResourcesLayout() {
               </NavLink>
             </Col>
           </Row>
-          <h1 className="othertitle">OTHER RESOURCES</h1>
+          <h1 className="othertitle">{' '}</h1>
           <div className="allcards">
             {resourcesContent.process.other.map(content => (
               <a href={content.link} target="_blank">
