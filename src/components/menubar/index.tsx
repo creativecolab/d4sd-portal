@@ -3,31 +3,30 @@ import { NavLink, useHistory } from 'react-router-dom';
 import {
   Menu, Icon, Col, Row
 } from '@d4sd/components';
-
-import './style.less';
-
 import { SubMenu } from 'rc-menu';
+
+import CovidBanner from '../covid-banner';
+import './style.less';
 import d4sdlogo from '../../assets/img/logo.svg';
-import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
+// import d4sdlogoBlue from '../../assets/img/logo-blue.svg';
 
 const Menubar = (): JSX.Element => {
   const history = useHistory();
   const [currentTab, setTab] = useState(['']);
+  // const [scroll, setScroll] = useState('');
   // eslint-disable-next-line
-  const [scroll, setScroll] = useState('');
   const [logo, setLogo] = useState(d4sdlogo);
   const [collapse, setCollapse] = useState(true);
 
-  useEffect(() => {
-    if (scroll === '') {
-      setLogo(d4sdlogo);
-    } else {
-      setLogo(d4sdlogoBlue);
-    }
-  }, [scroll]);
+  // useEffect(() => {
+  //   if (scroll === '') {
+  //     setLogo(d4sdlogo);
+  //   } else {
+  //     setLogo(d4sdlogoBlue);
+  //   }
+  // }, [scroll]);
 
   useEffect(() => {
-    // console.log(history.location.pathname);
     switch (history.location.pathname) {
       case '/workspace/prelim':
       case '/workspace':
@@ -68,11 +67,19 @@ const Menubar = (): JSX.Element => {
   // eslint-disable-next-line
   }, []);
 
+  const secondSlash = (path: string): number => path.indexOf('/', 1);
+
+  history.listen(({ pathname }) => {
+    const secSlashInd = secondSlash(pathname);
+    setTab([secSlashInd !== -1 ? pathname.substring(1, secSlashInd) : pathname.substring(1)]);
+  });
+
   return (
-    <div>
+    <div className="menubar-wrapper">
+      <CovidBanner />
       <Row>
         <Col
-          md={0}
+          lg={0}
           xs={24}
         >
           <Menu
@@ -95,9 +102,6 @@ const Menubar = (): JSX.Element => {
                 </span>
               )}
             >
-              {/* <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/')}>
-                <span>Home</span>
-              </Menu.Item> */}
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/challenges')}>
                 <span>Challenges</span>
               </Menu.Item>
@@ -130,7 +134,7 @@ const Menubar = (): JSX.Element => {
         </Col>
         {/* NAVBAR FOR DESKTOP/PC (LARGER SCREENS) */}
         <Col
-          md={24}
+          lg={24}
           xs={0}
         >
           <Menu id="menubar" mode="horizontal" selectedKeys={currentTab}>
@@ -140,9 +144,6 @@ const Menubar = (): JSX.Element => {
               </NavLink>
             </Menu.Item>
             <div className="emptybar" />
-            {/* <Menu.Item className="menu-item" key="home" onClick={(): void => history.push('/')}>
-              <span>Home</span>
-            </Menu.Item> */}
             <Menu.Item className="menu-item" key="challenges" onClick={(): void => history.push('/challenges')}>
               <span>Challenges</span>
             </Menu.Item>

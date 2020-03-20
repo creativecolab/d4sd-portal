@@ -3,7 +3,6 @@ import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
-import Menubar from '../../menubar/index';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
@@ -60,23 +59,9 @@ const HomeLayout = (): JSX.Element => {
             {homeContent.summit_banner.key_dates.map((date, i) => (
               <div className={`date-${i + 1}`} key={`${date.key}_div`}>
                 <p className="date">
-                  {date.start_date ? (
-                    <>
-                      {date.start_date.toDateString().substring(4, 7)}
-                      {' '}
-                      {date.start_date.getDate()}
-                      {' '}
-                      &amp;
-                      {' '}
-                      {date.end_date.getDate()}
-                    </>
-                  ) : (
-                    <>
-                      {date.date.toDateString().substring(4, 7)}
-                      {' '}
-                      {date.date.getDate()}
-                    </>
-                  )}
+                  {date.date.toDateString().substring(4, 7)}
+                  {' '}
+                  {date.date.getDate()}
                 </p>
               </div>
             ))}
@@ -115,7 +100,6 @@ const HomeLayout = (): JSX.Element => {
 
   return (
     <div className="Home">
-      <Menubar />
       <div className="landing">
         <div className="container">
           <h3 className="d4sdsubtitle">
