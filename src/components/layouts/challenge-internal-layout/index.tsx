@@ -1,15 +1,15 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Button, Row, Col } from "@d4sd/components";
-import { useParams } from "react-router";
-import { challengesContent } from "../../../assets/challenges_content";
+import React, { useRef, useState, useEffect } from 'react';
+import { Button, Row, Col } from '@d4sd/components';
+import { useParams } from 'react-router';
+import { challengesContent } from '../../../assets/challenges_content';
 
-import Footer from "../../Footer/index";
-import Menubar from "../../menubar";
-import "../../../styles/containers.less";
-import "./style.less";
-import AttendLayout from "../attend-layout";
-import { string } from "prop-types";
-import { stringLiteralTypeAnnotation } from "@babel/types";
+import Footer from '../../Footer/index';
+import Menubar from '../../menubar';
+import '../../../styles/containers.less';
+import './style.less';
+import AttendLayout from '../attend-layout';
+import { string } from 'prop-types';
+import { stringLiteralTypeAnnotation } from '@babel/types';
 
 const ChallengeInternalLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -43,7 +43,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -57,8 +57,8 @@ const ChallengeInternalLayout = (): JSX.Element => {
         id="banner-image"
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover"
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
         }}
       >
         <Col sm={14} xs={20}>
@@ -67,7 +67,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <p>{challengeHeadInfo}</p>
         </Col>
       </Row>
-      <div id="bgImageUp"></div>
+      <div id="bgImageUp" />
       <Row type="flex" justify="center">
         <Col sm={16} xs={22} id="centralInfo">
           <h2>Introduction</h2>
@@ -85,7 +85,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           {allChallengeAngles.map((obj: any) => (
             <p>
               <b>{obj.label}</b>
-              {" : "}
+               :
               {obj.desc}
             </p>
           ))}

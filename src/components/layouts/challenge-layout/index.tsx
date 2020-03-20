@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import { Row, Col, Card } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { challengeContent } from "../../../assets/content";
-import { Link } from "react-router-dom";
+import React, { useState, useRef } from 'react';
+import { Row, Col, Card } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { challengeContent } from '../../../assets/content';
+import { Link } from 'react-router-dom';
 // import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
 // import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
 // import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
@@ -46,7 +46,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -57,7 +57,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -68,7 +68,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -79,7 +79,7 @@ const ChallengeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -154,7 +154,7 @@ const ChallengeLayout = (): JSX.Element => {
         <div
           className="section"
           onClick={() => {
-            console.log("mobility");
+            console.log('mobility');
           }}
         >
           <h4 className="text" ref={mobility}>

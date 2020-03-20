@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Row, Col, Card, Tag } from '@d4sd/components';
+import {
+  Row, Col, Card, Tag
+} from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
-import Tabs from '../../../components/tabs/tabs.jsx';
+import Tabs from '../../tabs/tabs.jsx';
 import '../../../styles/containers.less';
 import './style.less';
 import { resourcesContent } from '../../../assets/content';
@@ -68,7 +70,7 @@ function ResourcesLayout() {
           </Row>
           <h1 className="othertitle">OTHER RESOURCES</h1>
           <div className="allcards">
-            {resourcesContent.process.other.map(content => (
+            {resourcesContent.process.other.map((content) => (
               <a href={content.link} target="_blank">
                 <div className="extra">
                   <h1>{content.title}</h1>
@@ -76,7 +78,7 @@ function ResourcesLayout() {
                 </div>
               </a>
             ))}
-            {resourcesContent.community.other.map(content => (
+            {resourcesContent.community.other.map((content) => (
               <a href={content.link} target="_blank">
                 <div className="extra-community">
                   <h1>{content.title}</h1>
@@ -84,7 +86,7 @@ function ResourcesLayout() {
                 </div>
               </a>
             ))}
-            {resourcesContent.data.other.map(content => (
+            {resourcesContent.data.other.map((content) => (
               <a href={content.link} target="_blank">
                 <div className="extra-data">
                   <h1>{content.title}</h1>
@@ -98,7 +100,8 @@ function ResourcesLayout() {
       <div className="submitmore">
         <p>
           The D4SD community is actively generating resources. For a more
-          complete and up-to-date list of resources, please see the following{' '}
+          complete and up-to-date list of resources, please see the following
+          {' '}
           <a
             href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
             target="_blank"
@@ -106,7 +109,8 @@ function ResourcesLayout() {
             Google Sheet
           </a>
           . We have also created a Google Form for you to submit resources
-          related to the{' '}
+          related to the
+          {' '}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
             target="_blank"
