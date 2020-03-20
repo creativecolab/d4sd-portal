@@ -18,7 +18,6 @@ interface ITabDiv {
 }
 
 function ResourcesLayout() {
-
   const TabDiv = (props: ITabDiv) => <>{props.children}</>;
   return (
     <div>
@@ -64,7 +63,36 @@ function ResourcesLayout() {
               </NavLink>
             </Col>
           </Row>
-          <h1 className="othertitle">{' '}</h1>
+          <h1 className="othertitle">
+            External references that the D4SD team found useful
+          </h1>
+          <p>
+            During the past several months the D4SD team has collected a series
+            of resources to help you and your team of innovators work through
+            the D4SD challenges. The following are some of the resources that we
+            found valuable.
+          </p>
+          <div className="submitmore">
+            <p>
+              The D4SD community is actively generating resources. For a more
+              complete and up-to-date list of resources, please see the
+              following{' '}
+              <a
+                href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
+                target="_blank"
+              >
+                Google Sheet
+              </a>
+              . We have also created a Google Form for you to submit resources
+              related to the{' '}
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
+                target="_blank"
+              >
+                D4SD process or challenges
+              </a>
+            </p>
+          </div>
           <div className="allcards">
             {resourcesContent.process.other.map(content => (
               <a href={content.link} target="_blank">
@@ -93,26 +121,7 @@ function ResourcesLayout() {
           </div>
         </div>
       </div>
-      <div className="submitmore">
-        <p>
-          The D4SD community is actively generating resources. For a more
-          complete and up-to-date list of resources, please see the following{' '}
-          <a
-            href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
-            target="_blank"
-          >
-            Google Sheet
-          </a>
-          . We have also created a Google Form for you to submit resources
-          related to the{' '}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
-            target="_blank"
-          >
-            D4SD process or challenges
-          </a>
-        </p>
-      </div>
+
       <br />
       <br />
       <Footer />
