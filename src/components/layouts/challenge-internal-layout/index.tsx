@@ -14,17 +14,7 @@ type ChallengeAngleType = {
   desc: string;
 }
 
-type ResourcesPartnersType = {
-  label: string;
-  link: string;
-}
-
-type ResourcesNewsType = {
-  label: string;
-  link: string;
-}
-
-type ResourcesNationalType = {
+type ResourcesType = {
   label: string;
   link: string;
 }
@@ -49,10 +39,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
   const challengeAngles = challengeTitle.angles;
   const challengeEvidence = challengeTitle.presenting_evidence;
   const allChallengeAngles = challengeTitle.angle_examples;
-  const allResourcesPartners = challengeTitle.resources_partners;
-  const allResourcesNews = challengeTitle.resources_news;
-  const allResourcesNational = challengeTitle.resources_national;
-
+  const allResources = challengeTitle.resources;
   console.log(backgroundImageUrl);
 
   console.log(typeof challengeType);
@@ -117,40 +104,15 @@ const ChallengeInternalLayout = (): JSX.Element => {
       <Row type="flex" justify="center" id="resources">
         <Col sm={16} xs={22}>
           <h2>Resources</h2>
-          <h4>Organizations/Partners/Stakeholders</h4>
           <ul>
-            {allResourcesPartners.map((obj: ResourcesPartnersType) => (
+            {allResources ? allResources.map((obj: ResourcesType) => (
               <li>
                 <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
                 </a>
               </li>
-            ))}
+            )) : null}
           </ul>
-          <h4>News</h4>
-          <ul>
-            {allResourcesNews.map((obj: ResourcesNewsType) => (
-              <li>
-                <a href={obj.link} target="_blank" rel="noopener noreferrer">
-                  {obj.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          {allResourcesNational && (
-            <div>
-              <h4>National Context</h4>
-              <ul>
-                {allResourcesNational.map((obj: ResourcesNationalType) => (
-                  <li>
-                    <a href={obj.link} target="_blank" rel="noopener noreferrer">
-                      {obj.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </Col>
       </Row>
       <Footer />

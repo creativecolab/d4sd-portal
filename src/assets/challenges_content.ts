@@ -98,8 +98,7 @@ export const challengesContent: {
             'How might we lower financial barriers to living in and co-producing our neighborhoods?'
         }
       ],
-      resources_partners: [],
-      resources_news: [
+      resources: [
         {
           label: 'SD Union-Tribune article on “complete communities”',
           link:
@@ -127,7 +126,6 @@ export const challengesContent: {
             'https://www.sandiego.gov/council-committees/land-use-housing-committee'
         }
       ],
-      resources_national: [],
       image: housing1
     },
     resilient_homes: {
@@ -161,8 +159,7 @@ export const challengesContent: {
             'How can we make homes more resilient to climate change, desertification, and other environmental challenges facing San Diego?'
         }
       ],
-      resources_partners: [{ label: '', link: '' }],
-      resources_news: [
+      resources: [
         {
           label:
             "San Diego's Flood Hazard Analysis (scroll to Section 5 & Section 8)",
@@ -207,7 +204,6 @@ export const challengesContent: {
             'https://www.washingtonpost.com/graphics/2018/national/flooded-home/'
         }
       ],
-      resources_national: [{ label: '', link: '' }],
       image: housing2
     },
     homelessness: {
@@ -215,26 +211,92 @@ export const challengesContent: {
       subTitle:
         'How might we address the safety, shelter, and nutritional needs of people who are without housing for short-term and long-term periods of time?',
       introduction:
-        "Homelessness is not a new problem. It can be traced back as early to the 1600s. Although the nature of the homeless has shifted and intensified within the past few decades, homeless continues to be an issue that must be engaged on the human level. Our goal is to open this topic up, and look at it from as many lens of possible (ie. social, political, economic), while grounding this thinking in the lived experiences of those who are homeless.",
+        "As urban areas develop and the cost of owning land increases, many residents are having a difficult time paying rent and mortgages. For many professions the salaries are not able to keep up with housing prices. As a result, 40% of Americans say that they would “struggle to come up with $400 for an unexpected expense.” These expenses, such as a parking ticket or a surprise visit to the doctor, can be the difference between paying rent and being evicted. Because the pathways to homelessnesss and experiences of homeless people are varied and complex, it is important to think about homelessness from a human-centered perspective.",
       angles:
-        "One way to find methods for placemaking is to look at positive examples, past and present. For instance, cities are taking inspiration from the vibrant main streets of the past as exemplars in how we might live today. Cities are paying attention to zoning policies like Portland's urban growth boundary, which densify and diversify development. Here in San Diego, the city has responded with a strategic framework called the “City of Villages” plan, which “focuses growth into mixed use activity centers that are pedestrian-friendly districts linked to an improved regional transit system.” However, these centers need the insight of the people living in and around them in order to realize their full potential as centers for life, culture, and belonging in San Diego.Ï",
+        "One of the most promising methodologies to approaching homelessness has been to develop holistic communities that address the social, emotional and economic dimensions of those who are homeless. These methods seek to utilize the skills, talents, and aspirations of those who were previously homeless to fuel the economic forces that support the communities being built. However, one of the most important things to keep in mind is that many of the most effective initiatives are addressing the social dimensions of the issue as well as the physical need.",
       presenting_evidence: '',
       angle_examples: [
         {
-          label: 'Translate urban growth boundaries',
+          label: 'Leveraging assets',
           desc:
-            "How might San Diego translate insightful land use policies like Portland's urban growth boundary into our city's unique situation?"
-        }
-      ],
-      resources_partners: [],
-      resources_news: [
+            "How might we utilize the skills and talents of homeless individuals to build resilient communities?"
+        },
         {
-          label: 'SD Union-Tribune article on “complete communities”',
-          link:
-            'https://www.sandiegouniontribune.com/communities/san-diego/story/2019-12-05/new-san-diego-proposal-goes-beyond-housing-to-seek-complete-communities'
+          label: 'Belongings',
+          desc:
+            "How might we redesign San Diego to provide safe spaces for homeless people to store and protect their belongings?"
+        },
+        {
+          label: 'Transitional housing',
+          desc:
+            "How might we make the transition to rehousing easier for homeless people in San Diego?"
+        },
+        {
+          label: 'Crising housing',
+          desc:
+            "How might we provide emergency housing during large scale displacement, what sort of spaces would we open up to support our neighbors?"
         }
       ],
-      resources_national: [],
+      resources: [
+        {
+          label: 'National Homeless',
+          link:  'https://nationalhomeless.org/tag/history/'
+        },
+        {
+          label: 'Invisible People',
+          link:  'https://invisiblepeople.tv/'
+        },
+        {
+          label: 'The Governance Lab @ NYU',
+          link:  'http://thegovlab.org/?s=Homelessness'
+        },
+        {
+          label: 'The Housing Innovation Challenge',
+          link:  'https://www.housinginnovationchallenge.com/'
+        },
+        {
+          label: 'How big tech companies are affecting housing',
+          link:
+            'https://www.curbed.com/2019/1/2/18165392/2019-cities-housing-transit-traffic-big-tech'
+        },
+        {
+          label: 'Stand Together Foundation takes on Homelessness',
+          link:  'https://www.youtube.com/watch?v=pBB0JqxVlxs'
+        },
+        {
+          label: 'Homelessness in San Diego',
+          link:
+            'https://www.sandiegouniontribune.com/news/homelessness/sd-me-homeless-report-20181217-story.html'
+        },
+        {
+          label: 'Homelessness in America',
+          link:  'https://www.vox.com/2016/3/8/11173304/homeless-in-america'
+        },
+        {
+          label: 'Homelessness in LA',
+          link:
+            'https://www.nrpa.org/parks-recreation-magazine/2017/march/los-angeles-innovation-lab-tackles-homelessness/'
+        },
+        {
+          label: 'UIA approach to poverty Cycle',
+          link:
+            'https://www.uia-initiative.eu/sites/default/files/2018-12/Urban%20poverty%20Thematic%20paper.pdf'
+        },
+        {
+          label: 'New homelessness plan gets approved in SD',
+          link:
+            'https://www.10news.com/news/local-news/san-diego-city-council-approves-1-9-billion-homelessness-plan'
+        },
+        {
+          label: 'Moving forward with homelessness plan in SD',
+          link:
+            'https://www.sandiegouniontribune.com/news/homelessness/story/2019-10-14/san-diego-city-council-moves-forward-with-homeless-action-plan'
+        },
+        {
+          label: 'San Diego Housing Commission',
+          link:  'https://www.sdhc.org/homelessness-solutions/'
+        }
+      ],
       image: housing3
     },
     internet_of_things: {
@@ -268,8 +330,7 @@ export const challengesContent: {
             "How can smart home technology connect us rather than isolate us while still keeping a sense of privacy and security?"
         }
       ],
-      resources_partners: [],
-      resources_news: [
+      resources: [
         {
           label: 'San Diego Makes Strong Bet on IoT, Telematics and Apps',
           link:
@@ -286,7 +347,6 @@ export const challengesContent: {
             'https://www.govtech.com/fs/San-Diego-to-Cover-Half-the-City-with-Intelligent-Streetlights.html'
         }
       ],
-      resources_national: [],
       image: housing4
     },
   },
@@ -321,7 +381,7 @@ export const challengesContent: {
             'How might we connect people who want to take action against climate change with relevant resources and organizations in San Diego?'
         }
       ],
-      resources_partners: [
+      resources: [
         { label: 'San Diego 350', link: 'https://sandiego350.org' },
         { label: 'UCSD Green New Deal', link: 'https://ucsdgreennewdeal.net/' },
         {
@@ -332,9 +392,7 @@ export const challengesContent: {
           label: 'Climate Action Network',
           link: 'https://www.sdclimatenetwork.org/'
         },
-        { label: 'Sunrise San Diego', link: 'https://www.sunrisemovement.org/' }
-      ],
-      resources_news: [
+        { label: 'Sunrise San Diego', link: 'https://www.sunrisemovement.org/' },
         {
           label: 'Climate Change Education in SD',
           link:
@@ -349,9 +407,7 @@ export const challengesContent: {
           label: 'Climate Strike in SD',
           link:
             'https://www.nbcsandiego.com/news/local/Climate-Strike-San-Diego-Walk-Rally-Earth-Environment-560892601.html'
-        }
-      ],
-      resources_national: [
+        },
         {
           label: 'Yale Research on Public Perception of Climate Change',
           link:
@@ -396,7 +452,7 @@ export const challengesContent: {
             'How might we analyze existing recycling systems in order to find new opportunities to maximize the number of materials that can be recycled?'
         }
       ],
-      resources_partners: [
+      resources: [
         {
           label: 'Zero Waste San Diego',
           link: 'http://zerowastesandiego.org/'
@@ -424,9 +480,7 @@ export const challengesContent: {
           label: 'City of San Diego Residential Recycling Plan',
           link:
             'https://www.sandiego.gov/sites/default/files/legacy/environmental-services/pdf/recycling/recycguide.pdf'
-        }
-      ],
-      resources_news: [
+        },
         {
           label: 'Tossing Trash Article',
           link:
@@ -453,7 +507,6 @@ export const challengesContent: {
             'https://www.discovermagazine.com/environment/are-you-an-aspirational-recycler-heres-9-things-you-actually-cant-recycle'
         }
       ],
-      resources_national: [{ label: '', link: '' }],
       image: climate2
     },
     smart_grids: {
@@ -482,7 +535,7 @@ export const challengesContent: {
             'How might we help city officials find new uses for the data collected by new smart meters and smart home products?'
         }
       ],
-      resources_partners: [
+      resources: [
         {
           label: 'Offcents App',
           link:
@@ -499,8 +552,6 @@ export const challengesContent: {
             'https://store.google.com/us/product/nest_learning_thermostat_3rd_gen'
         }
       ],
-      resources_news: [],
-      resources_national: [],
       image: climate3
     },
     climate_infrastructure: {
@@ -534,7 +585,7 @@ export const challengesContent: {
             'How might we improve existing parks and spaces to integrate more infrastructure that reduces carbon emissions?'
         }
       ],
-      resources_partners: [
+      resources: [
         {
           label: 'San Diego Community Garden Network',
           link: 'http://sdcgn.org/'
@@ -546,9 +597,7 @@ export const challengesContent: {
         {
           label: 'San Diego Coastkeeper',
           link: 'https://www.sdcoastkeeper.org/'
-        }
-      ],
-      resources_news: [
+        },
         {
           label: "Downtown parks and spaces: America's worst?",
           link:
@@ -581,7 +630,6 @@ export const challengesContent: {
             'https://ucsdnews.ucsd.edu/feature/getting-ready-for-sea-level-rise'
         }
       ],
-      resources_national: [],
       image: climate4
     }
   },
@@ -625,7 +673,7 @@ export const challengesContent: {
         }
       ],
       // list of resources. Creates a bulleted list with label and link
-      resources_partners: [
+      resources: [
         {
           label: 'Overnight Parking Lot Program',
           link:
@@ -671,8 +719,6 @@ export const challengesContent: {
             ' https://www.10news.com/news/-skyway-from-airport-to-downtown-san-diego-could-work-study-says'
         }
       ],
-      resources_news: [],
-      resources_national: [],
       image: mobility1
     },
 
@@ -708,7 +754,7 @@ export const challengesContent: {
             'Many people are discouraged from using public transportation because of sanitation concerns. How can we communicate to riders that MTS buses are a clean environment?'
         }
       ],
-      resources_partners: [
+      resources: [
         {
           label: 'Pedestrian Safety',
           link:
@@ -747,8 +793,6 @@ export const challengesContent: {
             'https://www.sandiegouniontribune.com/news/transportation/story/2019-11-06/san-diego-mts-sees-recent-spike-in-trolley-bus-ridership'
         }
       ],
-      resources_news: [],
-      resources_national: [],
       image: mobility2
     },
 
@@ -779,7 +823,7 @@ export const challengesContent: {
             "How might we integrate areas of San Diego such as Torrey Pines or Carmel Valley into the city's public transportation network, given political and funding constraints?"
         }
       ],
-      resources_partners: [
+      resources: [
         {
           label: "Opinion on San Diego's Public Transit",
           link:
@@ -800,8 +844,6 @@ export const challengesContent: {
           link: 'http://elevatesd2020.com/projects/'
         }
       ],
-      resources_news: [{ label: '', link: '' }],
-      resources_national: [{ label: '', link: '' }],
       image: mobility3
     },
 
@@ -832,8 +874,7 @@ export const challengesContent: {
             'How might we integrate self driving vehicles into existing strategies of transit-oriented development?'
         }
       ],
-      resources_partners: [],
-      resources_news: [
+      resources: [
         {
           label: 'How Close are we to a Self Driving World',
           link: 'https://www.youtube.com/watch?v=U5laBg-ERbQ&feature=emb_logo'
@@ -849,7 +890,6 @@ export const challengesContent: {
             'https://www.sandiegouniontribune.com/columnists/story/2019-10-23/column-self-driving-vehicles-loom-over-transit-plans'
         }
       ],
-      resources_national: [{ label: '', link: '' }],
       image: mobility4
     }
   }
@@ -861,8 +901,6 @@ interface ChallengeContent {
   angles: string;
   presenting_evidence: string;
   angle_examples: Array<{ label: string; desc: string }>;
-  resources_partners: Array<{ label: string; link: string }>;
-  resources_news: Array<{ label: string; link: string }>;
-  resources_national: Array<{ label: string; link: string }>;
+  resources: Array<{ label: string; link: string }>;
   image: any;
 }
