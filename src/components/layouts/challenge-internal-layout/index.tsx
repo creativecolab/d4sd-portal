@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Button, Row, Col } from '@d4sd/components';
 import { useParams } from 'react-router';
+import { string } from 'prop-types';
+import { stringLiteralTypeAnnotation } from '@babel/types';
 import { challengesContent } from '../../../assets/challenges_content';
 
 import Footer from '../../Footer/index';
@@ -8,8 +10,6 @@ import Menubar from '../../menubar';
 import '../../../styles/containers.less';
 import './style.less';
 import AttendLayout from '../attend-layout';
-import { string } from 'prop-types';
-import { stringLiteralTypeAnnotation } from '@babel/types';
 
 const ChallengeInternalLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -50,7 +50,6 @@ const ChallengeInternalLayout = (): JSX.Element => {
 
   return (
     <div className="internal-container">
-      <Menubar />
       <Row
         type="flex"
         justify="center"
@@ -101,7 +100,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <ul>
             {allResourcesPartners.map((obj: any) => (
               <li>
-                <a href={obj.link} target="_blank">
+                <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
                 </a>
               </li>
@@ -111,7 +110,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <ul>
             {allResourcesNews.map((obj: any) => (
               <li>
-                <a href={obj.link} target="_blank">
+                <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
                 </a>
               </li>
@@ -123,7 +122,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
               <ul>
                 {allResourcesNational.map((obj: any) => (
                   <li>
-                    <a href={obj.link} target="_blank">
+                    <a href={obj.link} target="_blank" rel="noopener noreferrer">
                       {obj.label}
                     </a>
                   </li>
