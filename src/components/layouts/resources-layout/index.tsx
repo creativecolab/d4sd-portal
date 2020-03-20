@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import {
-  Row, Col, Card, Tag
+  Row, Col, Card
 } from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
-import Tabs from '../../tabs/tabs.jsx';
 import '../../../styles/containers.less';
 import './style.less';
 import { resourcesContent } from '../../../assets/content';
-
-const { Meta } = Card;
 
 // TODO: Add breadcrumb / Learn more linking to navbar highlight / stakeholder highlight
 // Remove buttons / opening on a new tab /
 
 interface ITabDiv {
   label: string;
+  // eslint-disable-next-line
   children: any;
 }
 
-function ResourcesLayout() {
+const ResourcesLayout = (): JSX.Element => {
+  // eslint-disable-next-line
   const [key, setKey] = useState('tab');
 
-  const TabDiv = (props: ITabDiv) => <>{props.children}</>;
+  // eslint-disable-next-line
+  const TabDiv = ({ children }: ITabDiv): JSX.Element => <>{children}</>;
   return (
     <div>
       <Header
@@ -71,7 +71,7 @@ function ResourcesLayout() {
           <h1 className="othertitle">OTHER RESOURCES</h1>
           <div className="allcards">
             {resourcesContent.process.other.map((content) => (
-              <a href={content.link} target="_blank">
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -79,7 +79,7 @@ function ResourcesLayout() {
               </a>
             ))}
             {resourcesContent.community.other.map((content) => (
-              <a href={content.link} target="_blank">
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra-community">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -87,7 +87,7 @@ function ResourcesLayout() {
               </a>
             ))}
             {resourcesContent.data.other.map((content) => (
-              <a href={content.link} target="_blank">
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra-data">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -105,6 +105,7 @@ function ResourcesLayout() {
           <a
             href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Google Sheet
           </a>
@@ -114,6 +115,7 @@ function ResourcesLayout() {
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
             target="_blank"
+            rel="noopener noreferrer"
           >
             D4SD process or challenges
           </a>
@@ -124,6 +126,6 @@ function ResourcesLayout() {
       <Footer />
     </div>
   );
-}
+};
 
 export default ResourcesLayout;

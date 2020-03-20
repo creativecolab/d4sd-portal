@@ -7,11 +7,11 @@ import './style.less';
 
 const { TextArea } = Input;
 
-interface UploadCardIF {
+interface IUploadCard {
   setSubmitStep(step: string): void;
 }
 
-const UploadCard = (props: UploadCardIF): JSX.Element => {
+const UploadCard = (props: IUploadCard): JSX.Element => {
   const { setSubmitStep } = props;
   const [loading, setLoading] = useState('plus');
   const [viewURL, setViewURL] = useState('');

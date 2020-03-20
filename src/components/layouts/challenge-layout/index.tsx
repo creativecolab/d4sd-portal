@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { Row, Col, Card } from '@d4sd/components';
+import { Link } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
 import { challengeContent } from '../../../assets/content';
-import { Link } from 'react-router-dom';
 // import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
 // import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
 // import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
@@ -151,12 +151,14 @@ const ChallengeLayout = (): JSX.Element => {
           <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
         </div>
 
+        {/* eslint-disable */}
         <div
           className="section"
-          onClick={() => {
+          onClick={(): void => {
             console.log('mobility');
           }}
         >
+        {/* eslint-enable */}
           <h4 className="text" ref={mobility}>
             <span>MOBILITY: </span>
             How might we help people move freely in San Diego?

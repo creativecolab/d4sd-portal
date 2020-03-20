@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Title from 'antd/lib/typography/Title';
 import mobility1 from './img/mobility_lastmile_internal.jpg';
 import mobility2 from './img/mobility_safety.jpg';
