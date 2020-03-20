@@ -63,9 +63,7 @@ function ResourcesLayout() {
               </NavLink>
             </Col>
           </Row>
-          <h1 className="othertitle">
-            External references that the D4SD team found useful
-          </h1>
+          <h1 className="othertitle">External references</h1>
           <div className="submitmore">
             <p>
               During the past several months the D4SD team has collected a
