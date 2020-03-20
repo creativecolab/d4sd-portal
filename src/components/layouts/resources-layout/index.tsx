@@ -3,7 +3,6 @@ import { Row, Col, Card, Tag } from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
-import Tabs from '../../../components/tabs/tabs.jsx';
 import '../../../styles/containers.less';
 import './style.less';
 import { resourcesContent } from '../../../assets/content';
@@ -19,7 +18,6 @@ interface ITabDiv {
 }
 
 function ResourcesLayout() {
-  const [key, setKey] = useState('tab');
 
   const TabDiv = (props: ITabDiv) => <>{props.children}</>;
   return (
