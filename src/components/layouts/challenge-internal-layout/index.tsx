@@ -1,8 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { Button, Row, Col } from '@d4sd/components';
 import { useParams } from 'react-router';
-import { string } from 'prop-types';
-import { stringLiteralTypeAnnotation } from '@babel/types';
 import { challengesContent } from '../../../assets/challenges_content';
 
 import Footer from '../../Footer/index';
@@ -20,9 +18,8 @@ type ResourcesType = {
 }
 
 const ChallengeInternalLayout = (): JSX.Element => {
-  const ref = useRef<HTMLHeadingElement>(null);
-
   const { type, title } = useParams();
+
   // eslint-disable-next-line
   // @ts-ignore
   const challengeType = challengesContent[type];
@@ -40,20 +37,6 @@ const ChallengeInternalLayout = (): JSX.Element => {
   const challengeEvidence = challengeTitle.presenting_evidence;
   const allChallengeAngles = challengeTitle.angle_examples;
   const allResources = challengeTitle.resources;
-  console.log(backgroundImageUrl);
-
-  console.log(typeof challengeType);
-  const scrollToRef = (): void => {
-    if (ref && ref.current) {
-      const position = ref.current.offsetTop - 90;
-      // eslint-disable-next-line
-      window.scrollTo({
-        left: 0,
-        top: position,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <div className="internal-container">
