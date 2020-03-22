@@ -5,15 +5,15 @@ import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
 import './style.less';
-import { challengeContent } from '../../../assets/content';
+import {
+  challengesContent, IChallengesContent, IChallengeContent, INav
+} from '../../../assets/challenges_content';
 // import ChallengeMobility from '../../../assets/img/challenge_mobility.svg';
 // import ChallengeClimate from '../../../assets/img/challenge_climate.svg';
 // import ChallengeHousing from '../../../assets/img/challenge_housing.svg';
 // import ChallengeHealth from '../../../assets/img/challenge_health.svg';
 
 const ChallengeLayout = (): JSX.Element => {
-  // const { Meta } = Card;
-
   const [lastMile, setLastMile] = useState(false);
   const [safety, setSafety] = useState(false);
   const [equitable, setEquitable] = useState(false);
@@ -38,6 +38,11 @@ const ChallengeLayout = (): JSX.Element => {
   const health = useRef<HTMLHeadingElement>(null);
   const housing = useRef<HTMLHeadingElement>(null);
   const environment = useRef<HTMLHeadingElement>(null);
+
+  const housingContent = challengesContent.housing as IChallengesContent;
+  const healthContent = challengesContent.health as IChallengesContent;
+  const environmentContent = challengesContent.environment as IChallengesContent;
+  const mobilityContent = challengesContent.mobility as IChallengesContent;
 
   const scrollToMobility = (): void => {
     if (mobility && mobility.current) {
@@ -87,9 +92,9 @@ const ChallengeLayout = (): JSX.Element => {
   return (
     <div>
       <Header
-        title={challengeContent.title}
-        content={challengeContent.content}
-        image={challengeContent.image}
+        title={challengesContent.title as string}
+        content={challengesContent.content as string}
+        image={challengesContent.image as string}
       />
       <div className="ChallengeLayout container">
         <div className="section">
@@ -98,11 +103,11 @@ const ChallengeLayout = (): JSX.Element => {
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToMobility} className="challengeicons">
                 <img
-                  src={challengeContent.nav[0].img}
+                  src={(challengesContent.nav as Array<INav>)[0].img}
                   alt="challenge-content0"
                 />
                 <h5 className="challenge-icon-caption">
-                  {challengeContent.nav[0].title}
+                  {(challengesContent.nav as Array<INav>)[0].title}
                 </h5>
               </figure>
             </Col>
@@ -110,11 +115,11 @@ const ChallengeLayout = (): JSX.Element => {
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToHealth} className="challengeicons">
                 <img
-                  src={challengeContent.nav[1].img}
+                  src={(challengesContent.nav as Array<INav>)[1].img}
                   alt="challenge-content1"
                 />
                 <h5 className="challenge-icon-caption">
-                  {challengeContent.nav[1].title}
+                  {(challengesContent.nav as Array<INav>)[1].title}
                 </h5>
               </figure>
             </Col>
@@ -122,11 +127,11 @@ const ChallengeLayout = (): JSX.Element => {
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToEnvironment} className="challengeicons">
                 <img
-                  src={challengeContent.nav[2].img}
+                  src={(challengesContent.nav as Array<INav>)[2].img}
                   alt="challenge-content2"
                 />
                 <h5 className="challenge-icon-caption">
-                  {challengeContent.nav[2].title}
+                  {(challengesContent.nav as Array<INav>)[2].title}
                 </h5>
               </figure>
             </Col>
@@ -134,11 +139,11 @@ const ChallengeLayout = (): JSX.Element => {
               {/* eslint-disable-next-line */}
               <figure onClick={scrollToHousing} className="challengeicons">
                 <img
-                  src={challengeContent.nav[3].img}
+                  src={(challengesContent.nav as Array<INav>)[3].img}
                   alt="challenge-content3"
                 />
                 <h5 className="challenge-icon-caption">
-                  {challengeContent.nav[3].title}
+                  {(challengesContent.nav as Array<INav>)[3].title}
                 </h5>
               </figure>
             </Col>
@@ -146,9 +151,9 @@ const ChallengeLayout = (): JSX.Element => {
         </div>
 
         <div className="section">
-          <h2 className="text">{challengeContent.title2}</h2>
+          <h2 className="text">{challengesContent.title2}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: challengeContent.content2 }} />
+          <p dangerouslySetInnerHTML={{ __html: challengesContent.content2 as string }} />
         </div>
 
         {/* eslint-disable */}
@@ -175,9 +180,7 @@ const ChallengeLayout = (): JSX.Element => {
                   <div className="card-bg">
                     {lastMile && (
                       <p className="card-text">
-                        How might we improve the last-mile experience where
-                        traffic is congested, parking is scarce, and public
-                        transportation is limited?
+                        {(mobilityContent.lastmile as IChallengeContent).subTitle}
                       </p>
                     )}
                     {!lastMile && <h2 className="card-text">Last Mile</h2>}
