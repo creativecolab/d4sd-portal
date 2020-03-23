@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import './style.less';
 
-interface PrelimFinishCardIF {
+interface IPrelimFinishCard {
   setSubmitStep(step: string): void;
 }
 

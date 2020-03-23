@@ -5,11 +5,11 @@ import {
 } from '@d4sd/components';
 import './style.less';
 
-interface ProjectInfoCardIF {
+interface IProjectInfoCard {
   setSubmitStep(step: string): void;
 }
 
-const ProjectInfoCard = (props: ProjectInfoCardIF): JSX.Element => {
+const ProjectInfoCard = (props: IProjectInfoCard): JSX.Element => {
   const { setSubmitStep } = props;
   const { register, handleSubmit, setValue } = useForm();
   const [teamName, setTeamName] = useState<string>('');

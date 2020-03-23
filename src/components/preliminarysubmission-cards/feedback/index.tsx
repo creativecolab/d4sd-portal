@@ -3,11 +3,11 @@ import useForm from 'react-hook-form';
 import { Form } from '@d4sd/components';
 import './style.less';
 
-interface FeedbackCardIF {
+interface IFeedbackCard {
   setSubmitStep(step: string): void;
 }
 
-const FeedbackCard = (props: FeedbackCardIF): JSX.Element => {
+const FeedbackCard = (props: IFeedbackCard): JSX.Element => {
   const { setSubmitStep } = props;
   const { register, handleSubmit, setValue } = useForm();
 

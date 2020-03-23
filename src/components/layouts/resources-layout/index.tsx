@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Row, Col, Card, Tag } from '@d4sd/components';
+import React from 'react';
+import {
+  Row, Col, Card
+} from '@d4sd/components';
 import { NavLink } from 'react-router-dom';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
@@ -7,18 +9,19 @@ import '../../../styles/containers.less';
 import './style.less';
 import { resourcesContent } from '../../../assets/content';
 
-const { Meta } = Card;
-
 // TODO: Add breadcrumb / Learn more linking to navbar highlight / stakeholder highlight
 // Remove buttons / opening on a new tab /
 
 interface ITabDiv {
   label: string;
+  // eslint-disable-next-line
   children: any;
 }
 
-function ResourcesLayout() {
-  const TabDiv = (props: ITabDiv) => <>{props.children}</>;
+const ResourcesLayout = (): JSX.Element => {
+  // eslint-disable-next-line
+  const TabDiv = (props: ITabDiv): JSX.Element => <>{props.children}</>;
+
   return (
     <div>
       <Header
@@ -71,18 +74,22 @@ function ResourcesLayout() {
               through the D4SD challenges. The following are some of the
               resources that we found valuable. The D4SD community is actively
               generating resources. For a more complete and up-to-date list of
-              resources, please see the following{' '}
+              resources, please see the following
+              {' '}
               <a
                 href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Google Sheet
               </a>
               . We have also created a Google Form for you to submit resources
-              related to the{' '}
+              related to the
+              {' '}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 D4SD process or challenges
               </a>
@@ -90,24 +97,24 @@ function ResourcesLayout() {
           </div>
 
           <div className="allcards">
-            {resourcesContent.process.other.map(content => (
-              <a href={content.link} target="_blank">
+            {resourcesContent.process.other.map((content) => (
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
                 </div>
               </a>
             ))}
-            {resourcesContent.community.other.map(content => (
-              <a href={content.link} target="_blank">
+            {resourcesContent.community.other.map((content) => (
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra-community">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
                 </div>
               </a>
             ))}
-            {resourcesContent.data.other.map(content => (
-              <a href={content.link} target="_blank">
+            {resourcesContent.data.other.map((content) => (
+              <a href={content.link} target="_blank" rel="noopener noreferrer">
                 <div className="extra-data">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -117,12 +124,11 @@ function ResourcesLayout() {
           </div>
         </div>
       </div>
-
       <br />
       <br />
       <Footer />
     </div>
   );
-}
+};
 
 export default ResourcesLayout;
