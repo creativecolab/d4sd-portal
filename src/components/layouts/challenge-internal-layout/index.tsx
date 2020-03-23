@@ -22,11 +22,11 @@ const ChallengeInternalLayout = (): JSX.Element => {
 
   // eslint-disable-next-line
   // @ts-ignore
-  const challengeType = challengesContent[type];
+  const challengeType = challengesContent.sections[type];
 
   // eslint-disable-next-line
   // @ts-ignore
-  const challengeTitle = challengeType[title];
+  const challengeTitle = challengeType.challenges[title];
 
   const challengeTypeHeading = challengeType.title;
   const challengeHeading = challengeTitle.title;
