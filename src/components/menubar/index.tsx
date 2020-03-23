@@ -26,15 +26,13 @@ const Menubar = (): JSX.Element => {
   //   }
   // }, [scroll]);
 
+  const rootPath = (path: string): string => {
+    const secSlashInd = path.indexOf('/', 1);
+    return secSlashInd !== -1 ? path.substring(1, secSlashInd) : path.substring(1);
+  };
+
   useEffect(() => {
-    switch (history.location.pathname) {
-      case '/workspace/prelim':
-      case '/workspace':
-        setTab(['workspace']);
-        break;
-      case '/':
-        setTab(['']);
-        break;
+    switch (`/${rootPath(history.location.pathname)}`) {
       case '/challenges':
         setTab(['challenges']);
         break;
@@ -42,8 +40,6 @@ const Menubar = (): JSX.Element => {
         setTab(['attend']);
         break;
       case '/submit':
-      case '/submit/request-feedback':
-      case '/submit/submit-proposal':
         setTab(['submit']);
         break;
       case '/volunteer':
@@ -61,17 +57,17 @@ const Menubar = (): JSX.Element => {
       case '/sponsor':
         setTab(['sponsor']);
         break;
+      case '/workspace':
+        setTab(['workspace']);
+        break;
       default:
         setTab(['']);
     }
   // eslint-disable-next-line
   }, []);
 
-  const secondSlash = (path: string): number => path.indexOf('/', 1);
-
   history.listen(({ pathname }) => {
-    const secSlashInd = secondSlash(pathname);
-    setTab([secSlashInd !== -1 ? pathname.substring(1, secSlashInd) : pathname.substring(1)]);
+    setTab([rootPath(pathname)]);
   });
 
   return (
