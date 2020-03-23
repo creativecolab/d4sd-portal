@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Row, Col, Card
 } from '@d4sd/components';
@@ -19,7 +19,9 @@ interface ITabDiv {
 }
 
 const ResourcesLayout = (): JSX.Element => {
-  const TabDiv = (props: ITabDiv) => <>{props.children}</>;
+  // eslint-disable-next-line
+  const TabDiv = (props: ITabDiv): JSX.Element => <>{props.children}</>;
+
   return (
     <div>
       <Header
@@ -77,6 +79,7 @@ const ResourcesLayout = (): JSX.Element => {
               <a
                 href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Google Sheet
               </a>
@@ -86,6 +89,7 @@ const ResourcesLayout = (): JSX.Element => {
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 D4SD process or challenges
               </a>
