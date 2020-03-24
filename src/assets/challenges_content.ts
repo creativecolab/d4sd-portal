@@ -72,7 +72,7 @@ export interface IChallengesContent {
 }
 
 export interface ISection {
-  [key: string]: { 
+  [key: string]: {
     title: string;
     heading: string;
     challenges: IChallengesContent | string;
@@ -358,7 +358,7 @@ export const challengesContent: {
         }
       }
     },
-  
+
     mobility: {
       title: "MOBILITY CHALLENGES", // the first title above main article title
       heading: "MOBILITY: How might we help people move freely in San Diego?",
@@ -447,7 +447,7 @@ export const challengesContent: {
           ],
           image: mobility1
         },
-    
+
         // SAFE ROADWAYS
         safe_roadways: {
           className: "safety-card",
@@ -522,7 +522,7 @@ export const challengesContent: {
           ],
           image: mobility2
         },
-    
+
         // PUBLIC TRANSPORT
         equitable_access: {
           className: "equitable-card",
@@ -572,9 +572,9 @@ export const challengesContent: {
               link: "http://elevatesd2020.com/projects/"
             }
           ],
-          image: mobility3
+          image: mobility4
         },
-    
+
         // AUTONOMOUS VEHICLES
         autonomous_vehicles: {
           className: "autonomous-card",
@@ -619,11 +619,11 @@ export const challengesContent: {
                 "https://www.sandiegouniontribune.com/columnists/story/2019-10-23/column-self-driving-vehicles-loom-over-transit-plans"
             }
           ],
-          image: mobility4
+          image: mobility3
         }
       }
     },
-  
+
     environment: {
       title: "ENVIRONMENT CHALLENGES",
       heading: "ENVIRONMENT: How might we prepare San Diego for natural and human-influenced environmental challenges?",
@@ -915,7 +915,7 @@ export const challengesContent: {
         }
       }
     },
-  
+
     housing: {
       title: "HOUSING CHALLENGES",
       heading: "HOUSING: How might we reimagine housing to meet the needs of all San Diegans?",

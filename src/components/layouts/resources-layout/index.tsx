@@ -69,29 +69,25 @@ const ResourcesLayout = (): JSX.Element => {
           <h1 className="othertitle">External references</h1>
           <div className="submitmore">
             <p>
-              During the past several months the D4SD team has collected a
-              series of resources to help you and your team of innovators work
-              through the D4SD challenges. The following are some of the
-              resources that we found valuable. The D4SD community is actively
-              generating resources. For a more complete and up-to-date list of
-              resources, please see the following
+              The D4SD team, working with our educator alliance, has collected
+              a series of resources to help you and your team innovate on the
+              D4SD challenges. For a more complete and up-to-date list of resources, please
               {' '}
               <a
                 href="https://docs.google.com/spreadsheets/d/1BuLEN-JLFrEEPW2mlQ-mk93tP4kpFaIHSOA1UZU1F-I/edit"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Google Sheet
+                see the following Google Sheet
               </a>
-              . We have also created a Google Form for you to submit resources
-              related to the
+              . If you have a design or data-related resource to share, please
               {' '}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfuHbBGqH3nonF2O04O-69y4J5CVcVEtUqCwG5suMaaEKGR2g/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                D4SD process or challenges
+                submit them on this Google Form
               </a>
             </p>
           </div>
