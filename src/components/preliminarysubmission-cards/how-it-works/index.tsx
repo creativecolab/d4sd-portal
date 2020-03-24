@@ -2,11 +2,11 @@ import React from 'react';
 import { Button } from '@d4sd/components';
 import './style.less';
 
-interface HowItWorksCardIF {
+interface IHowItWorksCard {
   setSubmitStep(step: string): void;
 }
 
-const HowItWorksCard = (props: HowItWorksCardIF): JSX.Element => {
+const HowItWorksCard = (props: IHowItWorksCard): JSX.Element => {
   const { setSubmitStep } = props;
 
   /* eslint-disable */

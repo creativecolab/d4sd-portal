@@ -6,11 +6,11 @@ import {
 import CopyURL from '../../copy-url';
 import './style.less';
 
-interface PrelimFinishCardIF {
+interface IPrelimFinishCard {
   setSubmitStep(step: string): void;
 }
 
-const PrelimFinishCard = (props: PrelimFinishCardIF): JSX.Element => {
+const PrelimFinishCard = (props: IPrelimFinishCard): JSX.Element => {
   // eslint-disable-next-line
   const { setSubmitStep } = props;
   // eslint-disable-next-line
