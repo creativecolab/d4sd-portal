@@ -422,10 +422,10 @@ export const submitContent = {
     "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
   title3: '',
   content3:
-    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Virtual Summit</a> on May 12. ",
   importantDates: [
     {
-      date: new Date("04/03/2020"),
+      date: new Date("04/13/2020"),
       className: "",
       title: "Community Feedback",
       body:
@@ -439,9 +439,9 @@ export const submitContent = {
       key: 'community_feedback'
     },
     {
-      date: new Date("04/22/2020"),
+      date: new Date("05/01/2020"),
       className: "",
-      title: "Final submission deadline (Earth Day!)",
+      title: "Final submission deadline",
       body:
         'Final submission deadline. Submit a poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.',
       action_button: {
@@ -455,14 +455,14 @@ export const submitContent = {
     {
       date: new Date("05/12/2020"),
       className: "",
-      title: "D4SD Summit 2020",
+      title: "D4SD Virtual Summit and Showcase 2020",
       body:
-        'Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!',
+        'Showcase your digital poster and participate in civic oriented discussions with key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!',
       action_button: {
-        label: "LEARN ABOUT THE MAY 12TH SUMMIT",
+        label: "STAY TUNED FOR INFORMATION",
         url: "/attend",
         className: "long-label",
-        disabled: false
+        disabled: true
       },
       key: "d4sd_summit"
     },
@@ -472,10 +472,9 @@ export const submitContent = {
       className: "event-cancelled",
       title: "Information Session and Workshop (Cancelled)",
       body:
-        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
-      body_2: ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
+        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response <a href='/covid19'>here</a>. There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
       action_button: {
-        label: "JOIN THE SLACK CONVERSATION",
+        label: "JOIN THE DISCUSSION IN SLACK",
         url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
         className: "long-label",
         disabled: false

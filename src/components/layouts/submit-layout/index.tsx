@@ -62,15 +62,7 @@ const SubmitLayout = (): JSX.Element => {
                   {details.override_date ? <s>{details.title}</s> : details.title}
                 </h2>
                 {/* eslint-disable-next-line */}
-                <p className="desc">
-                  {details.body}
-                  {details.body_2 ? (
-                    <>
-                      {/* eslint-disable-next-line */}
-                      <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/covid19'); }}>here</a>
-                      {details.body_2}
-                    </>
-                  ) : null}
+                <p className="desc" dangerouslySetInnerHTML={{__html: details.body}}>
                 </p>
                 {details.override_date ? (
                   <a href={details.action_button.url} target="_blank" rel="noopener noreferrer">
