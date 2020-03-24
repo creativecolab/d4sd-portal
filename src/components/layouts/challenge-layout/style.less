@@ -66,93 +66,66 @@
     width: 200px;
     height: 200px;
   }
-  // .challenge-icon-caption {
-  // }
-  // Mobility Cards
-  .lastmile-card {
-    background: url('../../../assets/img/mobility_lastmile.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .safety-card {
-    background: url('../../../assets/img/mobility_safety.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .equitable-card {
-    background: url('../../../assets/img/mobility_equitable.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .autonomous-card {
-    background-image: url('../../../assets/img/mobility_multimodal.jpg');
-    background-size: cover;
-    border-radius: 20px;
-  }
 
-  // Environment Cards
-  .education-card {
-    background: url('../../../assets/img/climate_education.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .waste-card {
-    background: url('../../../assets/img/climate_waste.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .grid-card {
-    background: url('../../../assets/img/climate_coastal.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .climateInfra-card {
-    background-image: url('../../../assets/img/climate_community.jpg');
-    background-size: cover;
-    border-radius: 20px;
-  }
-
-  // Housing Cards
-  .mixuse-card {
-    background: url('../../../assets/img/housing_mixed.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .resilient-card {
-    background: url('../../../assets/img/housing_resilient.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .homelessness-card {
-    background: url('../../../assets/img/housing_homelessness.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-  }
-  .iot-card {
-    background-image: url('../../../assets/img/housing_smart.jpg');
+  .card-background(@img) {
+    background: url('../../../assets/img/@{img}.jpg') no-repeat;
     background-size: cover;
     border-radius: 20px;
   }
 
   // Health Cards
-  .senior-card {
-    background: url('../../../assets/img/health_senior.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
+  .publichealth-card {
+    .card-background('health_public');
   }
-  .wellbeing-card {
-    background: url('../../../assets/img/health_mental.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
+  .physicalfitness-card {
+    .card-background('health_fitness');
   }
-  .dataAgency-card {
-    background: url('../../../assets/img/health_safety.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 20px;
+  .mentalhealth-card {
+    .card-background('health_mental');
   }
-  .foodInsecurity-card {
-    background-image: url('../../../assets/img/health_food.jpg');
-    background-size: cover;
-    border-radius: 20px;
+  .nutritionfood-card {
+    .card-background('health_food');
+  }
+
+  // Mobility Cards
+  .lastmile-card {
+    .card-background('mobility_lastmile');
+  }
+  .safety-card {
+    .card-background('mobility_safety');
+  }
+  .equitable-card {
+    .card-background('mobility_equitable');
+  }
+  .autonomous-card {
+    .card-background('mobility_multimodal');
+  }
+
+  // Environment Cards
+  .education-card {
+    .card-background('climate_education');
+  }
+  .waste-card {
+    .card-background('climate_waste');
+  }
+  .grid-card {
+    .card-background('climate_coastal');
+  }
+  .communityinfra-card {
+    .card-background('climate_community');
+  }
+
+  // Housing Cards
+  .mixuse-card {
+    .card-background('housing_mixed');
+  }
+  .resilient-card {
+    .card-background('housing_resilient');
+  }
+  .homelessness-card {
+    .card-background('housing_homelessness');
+  }
+  .iot-card {
+    .card-background('housing_smart');
   }
 }

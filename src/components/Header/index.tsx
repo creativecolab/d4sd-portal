@@ -3,13 +3,13 @@ import '../../styles/containers.less';
 import './style.less';
 import { contentHTML } from '../../actions';
 
-interface HeaderIF {
+interface IHeader {
   image?: string;
   title?: string;
   content?: string;
 }
 
-const Header = (props: HeaderIF): JSX.Element => {
+const Header = (props: IHeader): JSX.Element => {
   const { image, title, content } = props;
   return (
     <div>

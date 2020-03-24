@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Row, Col } from 'antd';
-import Header from '../../Header/index';
+import { Row } from 'antd';
 import Footer from '../../Footer/index';
 import './style.less';
 import { covidContent } from '../../../assets/content';
@@ -17,16 +16,14 @@ const CovidLayout = (): JSX.Element => {
         id="banner-image"
         style={{
           backgroundImage: `url(${covidContent.image})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover"
+          backgroundPosition: 'center',
+          backgroundSize: 'cover'
         }}
-      >
-
-      </Row>
+      />
       <div className="page-head">
         <div className="container">
-        <h1>{covidContent.title}</h1>
-        <p>{covidContent.content}</p>
+          <h1>{covidContent.title}</h1>
+          <p>{covidContent.content}</p>
         </div>
       </div>
       <div className="section" id="section-1">

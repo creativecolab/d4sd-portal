@@ -19,6 +19,7 @@ module.exports = {
     'react/jsx-max-props-per-line': [2, { maximum: 3, when: 'always' }],
     'comma-dangle': [2, 'never'],
     'import/no-extraneous-dependencies': [2, { devDependencies: ['**/test.tsx', '**/test.ts'] }],
-    '@typescript-eslint/indent': [2, 2]
+    '@typescript-eslint/indent': [2, 2],
+    '@typescript-eslint/interface-name-prefix' : [2, { "prefixWithI": "always" }]
   }
 };

@@ -4,11 +4,11 @@ import {
 } from '@d4sd/components';
 import './style.less';
 
-interface EthicsCardIF {
+interface IEthicsCard {
   setSignupStep: (state: string) => void;
 }
 
-const EthicsCard = (props: EthicsCardIF): JSX.Element => {
+const EthicsCard = (props: IEthicsCard): JSX.Element => {
   const { setSignupStep } = props;
 
   return (
