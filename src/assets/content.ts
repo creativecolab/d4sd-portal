@@ -466,21 +466,6 @@ export const submitContent = {
       },
       key: "d4sd_summit"
     },
-    {
-      date: new Date("03/19/2020"),
-      override_date: " ",
-      className: "event-cancelled",
-      title: "Information Session and Workshop (Cancelled)",
-      body:
-        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response <a href='/covid19'>here</a>. There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
-      action_button: {
-        label: "JOIN THE DISCUSSION IN SLACK",
-        url: "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
-        className: "long-label",
-        disabled: false
-      },
-      key: "intro_workshops"
-    },
   ],
   timeline: [
     {
