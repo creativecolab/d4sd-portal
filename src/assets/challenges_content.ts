@@ -14,7 +14,7 @@ import health3 from "./img/health_mental.jpg";
 import health4 from "./img/health_food.jpg";
 import climate1 from "./img/climate_education.jpg";
 import climate2 from "./img/climate_waste.jpg";
-import climate3 from "./img/climate_coastal.jpg";
+import climate3 from "./img/climate_grid.jpg";
 import climate4 from "./img/climate_community.jpg";
 import challenge_mobility from './img/challenge_mobility.svg';
 import challenge_health from './img/challenge_health.svg';
