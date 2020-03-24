@@ -79,9 +79,11 @@ const ChallengeInternalLayout = (): JSX.Element => {
               {obj.desc}
             </p>
           ))}
-          <Button type="primary" size="large" id="joinBtn">
-            JOIN THE DISCUSSION
-          </Button>
+          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" target="_blank">
+            <Button type="primary" size="large" id="joinBtn">
+              JOIN THE DISCUSSION
+            </Button>
+          </a>
         </Col>
       </Row>
       <Row type="flex" justify="center" id="resources">
