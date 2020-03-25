@@ -1099,7 +1099,6 @@ export const requestFeedbackContent = {
   ],
   content_2_1: "Want to help other teams by becoming a feedback provider, ",
   content_2_2: "sign up today",
-  url_2_2: "/volunteer/feedback_provider",
   title_3: "How should I format my idea?",
   content_3_1:
     "This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!",
