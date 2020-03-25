@@ -76,13 +76,18 @@ export const homeContent = {
     key_dates: [
       {
         date: new Date("04/03/2020"),
-        label: "Request Feedback",
+        label: "Join a Design Jam",
         key: "date-1"
       },
       {
-        date: new Date("04/22/2020"),
-        label: "Submit Proposals",
+        date: new Date("04/15/2020"),
+        label: "Request Feedback",
         key: "date-2"
+      },
+      {
+        date: new Date("05/01/2020"),
+        label: "Submit Proposals",
+        key: "date-3"
       }
     ]
   },
