@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -9,7 +8,6 @@ import { attendContent, summitContent } from '../../../assets/content';
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const history = useHistory();
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
@@ -57,30 +55,16 @@ const AttendLayout = (): JSX.Element => {
       </div>
       <div className="AttendLayout container">
         <div className="event-info">
-          <h1 ref={ref}>{attendContent.title_1_1}</h1>
+          <h1 ref={ref} className="summitDetails">{attendContent.title_1_1}</h1>
           <h3>{summitContent.title3}</h3>
           <br />
-          <h3>{attendContent.subtitle_1}</h3>
           <h3>{summitContent.addressLine2}</h3>
-          <h3>
-            <a
-              href={summitContent.addressLink} className="sum-add" target="_blank"
-              rel="noopener noreferrer"
-            >
-              {summitContent.address}
-            </a>
-          </h3>
           <br />
           <p>{attendContent.content_1_1}</p>
-          <p>
-            {attendContent.content_1_2}
-            {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/submit')}>Submit</a>
-            {attendContent.content_1_3}
-            {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/volunteer')}>Volunteer</a>
-            {attendContent.content_1_4}
-          </p>
+          {/* eslint-disable */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_2 }} />
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_3 }} />
+          {/* eslint-enable */}
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
 

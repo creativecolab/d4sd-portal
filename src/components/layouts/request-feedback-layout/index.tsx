@@ -87,8 +87,8 @@ const RequestFeedbackLayout = (): JSX.Element => {
             </ul>
           </div>
           {/* eslint-disable-next-line */}
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <Button disabled>REQUEST FEEDBACK</Button>
+          <a href={requestFeedbackContent.form} target="_blank" rel="noopener noreferrer">
+            <Button>REQUEST FEEDBACK</Button>
           </a>
         </div>
       </div>
@@ -98,6 +98,13 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <p>{requestFeedbackContent.content_3_1}</p>
           <p>{requestFeedbackContent.content_3_2}</p>
           <p>{requestFeedbackContent.content_3_3}</p>
+          <p>{requestFeedbackContent.content_3_4}</p>
+          <p>{requestFeedbackContent.content_3_5}</p>
+          <ul>
+            {requestFeedbackContent.requirements.map((req) => (
+              <li>{req}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="section" id="section-4">
