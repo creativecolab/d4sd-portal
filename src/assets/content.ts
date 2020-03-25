@@ -1100,38 +1100,32 @@ export const submitProposalContent = {
     "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region.  Read below to find out how to enter.",
   title_1: "D4SD Challenge Details",
   content_1_1:
-    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will get free registration (for up to 6 team members) for the D4SD Summit on May 12th and a chance to win great prizes.",
+    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 12.",
   content_1_2_1:
     "A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the",
   content_1_2_2: "D4SD poster templates",
   content_1_2_3:
-    "below. Your team poster should also describe the problem and solution, and visually represent a prototype of your idea. If teams use the poster template, and send at least one member to the Summit, D4SD will cover printing and shipping costs and will have your poster ready to display on May 12!",
+    "below. Your team poster should also describe the problem and solution, and visually represent a prototype of your idea.",
   content_1_3:
     "Teams may optionally submit a 2-minute video and a PDF document with additional details that judges can use to assess your idea.",
   title_2: "Timeline for D4SD Submissions:",
   importantDates: [
     {
       start_date: new Date("04/15/2020"),
-      end_date: new Date("04/22/2020"),
+      end_date: new Date("05/01/2020"),
       title: "Open period for submitting your proposal to D4SD 2020",
       key: "submit_proposal"
     },
     {
       date_overlap: true,
-      start_date: new Date("04/23/2020"),
-      end_date: new Date("05/04/2020"),
+      start_date: new Date("05/01/2020"),
+      end_date: new Date("05/10/2020"),
       title: "Judging period for D4SD submissions",
       key: "judging_period"
     },
     {
-      date: new Date("05/05/2020"),
-      title:
-        "Notifications sent for proposals to give verbal pitches at the Summit",
-      key: "notifications_pitches"
-    },
-    {
       date: new Date("05/12/2020"),
-      title: "Showcase your poster at the D4SD Summit",
+      title: "Showcase your proposal during the online D4SD Summit",
       key: "d4sd_showcase"
     }
   ],
@@ -1160,7 +1154,7 @@ export const submitProposalContent = {
   ],
   title_4: "Judging Process and Criteria",
   content_4_1:
-    "A committee of experts will judge all submissions before the D4SD Summit and will select 8 teams to verbally present their ideas on stage. The expert panel of judges will assess submissions primarily based on the Poster submission, but they will also refer to the responses on the Final Submission Google Form, as well as the optional video and additional materials.",
+    "A committee of experts will judge all submissions before the D4SD Summit and will select 8 teams to verbally present their ideas during the virual showcase. The expert panel of judges will assess submissions primarily based on the Poster submission, but they will also refer to the responses on the Final Submission Google Form, as well as the optional video and additional materials.",
   content_4_2: "Judges will keep in mind these key criteria:",
   criteria: [
     {
@@ -1207,10 +1201,8 @@ export const submitProposalContent = {
     }
   ],
   title_5: "Poster Templates and Examples",
-  content_5_1:
-    "Assuming your team meets the requirements, D4SD will pay to print and display your poster at the Design for San Diego summit on May 12 at the San Diego Central Library. First, at least one team member must plan to register and attend the May 12th summit to share your team’s poster.",
   content_5_2:
-    "The poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
+    "The digital poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
   poster_items: [
     "your team’s topic area and specific challenge/mission",
     "insights from online/user research",

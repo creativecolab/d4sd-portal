@@ -152,7 +152,6 @@ const SubmitProposalLayout = (): JSX.Element => {
       <div className="section" id="section-5">
         <div className="container">
           <h2 className="title" id="poster-template">{submitProposalContent.title_5}</h2>
-          <p>{submitProposalContent.content_5_1}</p>
           <p style={{ marginBottom: 5 }}>{submitProposalContent.content_5_2}</p>
           <ul style={{ marginBottom: '1.5em' }}>
             {submitProposalContent.poster_items.map((item, i) => (
