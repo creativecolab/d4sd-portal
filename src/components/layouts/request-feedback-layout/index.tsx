@@ -87,7 +87,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
             </ul>
           </div>
           {/* eslint-disable-next-line */}
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href={requestFeedbackContent.form} target="_blank" rel="noopener noreferrer">
             <Button>REQUEST FEEDBACK</Button>
           </a>
         </div>

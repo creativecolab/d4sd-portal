@@ -166,7 +166,7 @@ export const homeContent = {
 
 /** ***********************************Summit content************************************** */
 export const summitContent = {
-  subtitle1: "JOIN US for the 2020 Design Summit",
+  subtitle1: "JOIN US for the D4SD 2020 Summit",
   title1: "Broadcast Live Online | May 12, 2020",
   title2:
     "The D4SD 2020 Summit creates an opportunity for our community to come together to share proposals and to build alliances to address San Diego’s most complex issues. Join us online for this one-of-a-kind event!",
@@ -1049,6 +1049,7 @@ export const attendContent = {
 export const requestFeedbackContent = {
   image: "workspace_header",
   title: "Request Feedback",
+  form: "https://forms.gle/EndkEefioT3gnvp17",
   content:
     "Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.",
   title_1: "How does the community feedback exchange work?",
@@ -1066,7 +1067,7 @@ export const requestFeedbackContent = {
     {
       start_date: new Date("04/15/2020"),
       end_date: new Date("04/18/2020"),
-      title: "Participants receive feedback through emails",
+      title: "Participants receive feedback through email",
       key: "email_feedback"
     },
     {

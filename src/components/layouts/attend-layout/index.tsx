@@ -57,7 +57,7 @@ const AttendLayout = (): JSX.Element => {
       </div>
       <div className="AttendLayout container">
         <div className="event-info">
-          <h1 ref={ref}>{attendContent.title_1_1}</h1>
+          <h1 ref={ref} className="summitDetails">{attendContent.title_1_1}</h1>
           <h3>{summitContent.title3}</h3>
           <br />
           <h3>{summitContent.addressLine2}</h3>
