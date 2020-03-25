@@ -86,6 +86,10 @@ const ChallengeInternalLayout = Loadable({
   loader: () => import('./components/layouts/challenge-internal-layout'),
   loading: Loading
 });
+const JoinDesignJam = Loadable({
+  loader: () => import('./components/layouts/design-jam'),
+  loading: Loading
+});
 // const ViewFeedbackLayout = Loadable({
 //   loader: () => import('./components/layouts/view-feedback-layout'),
 //   loading: Loading
@@ -153,6 +157,7 @@ const App = (): JSX.Element => {
             <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
             <Route exact path="/covid19" component={CovidPage} />
             <Route path="/challenges/:type/:title" component={ChallengeInternalLayout} />
+            <Route exact path="/submit/join-a-design-jam" component={JoinDesignJam} />
             {/*
               <Route
                 exact

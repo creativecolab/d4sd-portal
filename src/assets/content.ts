@@ -595,6 +595,49 @@ export const submitContent = {
   ]
 };
 
+export const joinDesignJam = {
+  image: "workspace_header",
+  title1: "Join a Design Jam",
+  content1:
+    "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Get practice with empathy building, research, problem framing, ideating, prototyping, and testing. D4SD design jams are free and open to anyone!",
+  title2: "Weekly D4SD Design Jams every Friday during April",
+  content2:
+    "Design for San Diego is a human-centered challenge aimed at addressing important civic issues in our region. If you are new to design thinking, take part in this unique month-long online course to set yourself up for a successful proposal submission. Every Friday throughout the month of April, the D4SD educator team will host interactive sessions on zoom where you can hear from experts, take part in small group discussions, and meet potential teammates for the D4SD civic challenge. <br /> Participants can join any or all sessions. Come for all four to get a crash course on human-centered design, or pick up a couple of modules to strengthen your skills.  ",
+  title3: "",
+  content3:
+    "REGISTER NOW! Feel free to invite your friends. Get more details on the design jams before they happen. Participants will need to have a laptop, an internet connection, and an account with <a href='https://zoom.us/' target='_blank'> Zoom. </a> <br /> <br />These hour-long D4SD Design Jams are timed to keep everyone on track, but feel free to stick around after the jam if you want to continue jamming with other innovators! Teams can enter the D4SD summit without taking the course, but the Design Jams will help innovators get ready for the challenge. All participants can take advantage of the <a href='/submit/request-feedback'> community feedback </a> opportunity (April 15th deadline) to request input on an early-stage idea. Make sure to <a href='/submit'> submit your team’s proposal </a> by the May 1st deadline!",
+  importantDates: [
+    {
+      date: new Date("04/03/2020"),
+      className: "",
+      title: "DISCOVER",
+      body: "Challenge topics and user research",
+      key: "discover"
+    },
+    {
+      date: new Date("04/10/2020"),
+      className: "",
+      title: "IDEATE",
+      body: "Framing, ideating, and storyboarding",
+      key: "ideate"
+    },
+    {
+      date: new Date("04/17/2020"),
+      className: "",
+      title: "PROTOTYPING",
+      body: "Making and testing prototypes",
+      key: "prototyping"
+    },
+    {
+      date: new Date("04/24/2020"),
+      className: "",
+      title: "PITCH",
+      body: "Creating compelling stories and visuals",
+      key: "PITCH"
+    }
+  ]
+};
+
 export const resourcesContent = {
   image: "resource_header",
   title1: "Resources",
