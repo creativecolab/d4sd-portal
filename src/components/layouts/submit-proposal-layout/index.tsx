@@ -109,7 +109,9 @@ const SubmitProposalLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <Button disabled>SUBMIT TEAM PROPOSAL</Button>
+          <a href='https://docs.google.com/forms/d/14OKpGb4wxX3HxquKF7Q2KOfL9TGDQbQoN-DHQylJj88/edit' target='_blank'>
+            <Button>SUBMIT TEAM PROPOSAL</Button>
+          </a>
         </div>
       </div>
       <div className="section" id="section-3">

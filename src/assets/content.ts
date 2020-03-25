@@ -1096,7 +1096,7 @@ export const requestFeedbackContent = {
     },
     {
       date: new Date("05/01/2020"),
-      title: `Final deadline for submmiting proposals`,
+      title: `Final deadline to submit to the 2020 D4SD challenge `,
       key: "final_deadline"
     }
   ],
@@ -1107,6 +1107,8 @@ export const requestFeedbackContent = {
     "Your early-stage idea/sketch should be submitted as a one-page PDF or image file (PNG, JPG, etc.) through the form above. Make sure your idea is visually legible and understandable. You will also fill out a Google Form that will ask for text descriptions of the problem, potential stakeholders, and the questions you want feedback on.",
   content_3_3:
     "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
+  content_3_4:
+    "If sketching is not your strong suit, take a few paragraphs to write up your ideas. While this opportunity for feedback is totally optional, early stage feedback can help your team target the real problems and refine your ideas.",
   title_4: "Example submission:",
   content_4_1:
     "The example below shows what you might want to create to get community feedback. These storyboards in the submission below were created by an undergraduate student team at UC San Diego as part of a design course several years ago.  The team created the three different storyboards to explore challenges related to international travel and to propose concepts for mobile applications to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. While this is just an example of what you can submit, it's a good practice to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",
@@ -1122,7 +1124,7 @@ export const submitProposalContent = {
   image: "workspace_header",
   title: "Submit a Proposal",
   content:
-    "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region.  Read below to find out how to enter.",
+    "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region. Read below to find out how to enter.",
   title_1: "D4SD Challenge Details",
   content_1_1:
     "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 12.",
