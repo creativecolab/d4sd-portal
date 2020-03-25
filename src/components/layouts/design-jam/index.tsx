@@ -47,36 +47,18 @@ const SubmitLayout = (): JSX.Element => {
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
           {joinDesignJam.importantDates.map(details => (
-            <div
-              className={`date-box ${details.className}`}
-              key={`${details.key}_box`}
-            >
-              <div className="date-info">
-                <>
-                  <div className="date-month" key={`${details.key}_month`}>
-                    {details.date
-                      .toDateString()
-                      .substring(4, 7)
-                      .toUpperCase()}
-                  </div>
-                  <div className="date-num" key={`${details.key}_num`}>
-                    {details.date.getDate()}
-                  </div>
-                </>
-              </div>
-              <div className="date-desc">
-                <h2 className={`desc-title ${details.className}`}>
-                  {details.title}
-                </h2>
-                {/* eslint-disable-next-line */}
-                <p className="desc">{details.body}</p>
-              </div>
-            </div>
+            <p>
+              <b>
+                {details.date
+                  .toDateString()
+                  .substring(4, 7)
+                  .toUpperCase()}{" "}
+                {details.date.getDate()}
+              </b>
+              : {details.title} - {details.body}
+            </p>
           ))}
-          <a
-            href="/attend"
-            rel=""
-          >
+          <a href="/attend" rel="" id="registerBtn">
             <Button>REGISTER NOW</Button>
           </a>
           {/* eslint-disable-next-line */}
