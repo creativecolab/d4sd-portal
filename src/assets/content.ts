@@ -1029,12 +1029,11 @@ export const attendContent = {
   title_1_2: "2020 SUMMIT",
   subtitle_1: "San Diego Central Library",
   content_1_1:
-    "The 2020 “Design for San Diego” Summit will be an online, interactive showcase and discussion about how to make a more sustainable San Diego. Our goal is to do our part to build a more sustainable future by creating places for San Diegans to come together.",
+    "The 2020 “Design for San Diego” Summit will be an online, interactive showcase, and discussion about how to make a more sustainable San Diego.",
   content_1_2:
-    "We invite participation from all walks of life. All you need is an internet connection. If you are working on making a more sustainable San Diego (e.g., improved housing, health, mobility, or environmental), please ",
+    "We encourage people from all walks of life to join the Design Summit. All you need is access to an internet connection (please note that <a target='_blank' href='https://www.google.com/url?q=https://www.sandiegouniontribune.com/business/technology/story/2020-03-16/cox-spectrum-and-other-internet-providers-boost-speeds-drop-fees-for-students-and-workers-stuck-at-home&sa=D&ust=1585174357408000&usg=AFQjCNHN1EP0sQTFZvCgmDCCl4G1p09Dqw'>COX, Spectrum, and other Internet providers</a> in San Diego have taken steps to provide broad access as we address COVID19).  Are you already working on ways to make San Diego more sustainable (e.g., improving access to housing, health care, mobility options, or strategies to clean up the environment), please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(May 1st submission deadline)</a>.",
   content_1_3:
-    " and ongoing work so that others can know about it and you can seek out to build coalitions with others.  OR just take part to hear about the great work happening to make San Diego a more sustainable city.",
-  content_1_4: " Register below for the event (coming soon!)",
+    "Not working on an idea at the moment, but just want to learn more or get inspired by others? Not a problem!  Join the Design Summit for a rich discussion about the 2020 civic challenges and ways for San Diego to become a more sustainable city.",
   title_2: "Event Details",
   // labels: ['When?', 'Where?', 'Who?', 'What?', 'How much is it?'],
   // details: [

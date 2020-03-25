@@ -63,13 +63,8 @@ const AttendLayout = (): JSX.Element => {
           <h3>{summitContent.addressLine2}</h3>
           <br />
           <p>{attendContent.content_1_1}</p>
-          <p>
-            {attendContent.content_1_2}
-            <a href="/submit">submit your proposal</a>
-            {attendContent.content_1_3}
-            {/* eslint-disable-next-line */}
-            {attendContent.content_1_4}
-          </p>
+          <p dangerouslySetInnerHTML={{__html:attendContent.content_1_2}} />
+          <p dangerouslySetInnerHTML={{__html:attendContent.content_1_3}} />
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
 
