@@ -1053,30 +1053,25 @@ export const requestFeedbackContent = {
     "Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.",
   title_1: "How does the community feedback exchange work?",
   content_1:
-    "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see.",
+    "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see. Note: you do not need to participate in the D4SD Design Jams to request feedback!",
   title_2: "Timeline for Community Feedback for D4SD:",
   content3: "",
   importantDates: [
     {
-      start_date: new Date("03/15/2020"),
-      end_date: new Date("04/03/2020"),
+      start_date: new Date("04/03/2020"),
+      end_date: new Date("04/15/2020"),
       title: "Open period for requesting early feedback on an idea",
       key: "early_feedback"
     },
     {
-      start_date: new Date("04/04/2020"),
-      end_date: new Date("04/09/2020"),
-      title: "D4SD will recruit feedback providers from the community",
-      key: "feedback_providers"
-    },
-    {
-      date: new Date("04/10/2020"),
-      title: "Participants will receive an email with feedback",
+      start_date: new Date("04/15/2020"),
+      end_date: new Date("04/18/2020"),
+      title: "Participants receive feedback through emails",
       key: "email_feedback"
     },
     {
-      date: new Date("04/22/2020"),
-      title: "Final deadline for submitting full proposals",
+      date: new Date("05/01/2020"),
+      title: `Final deadline for submmiting proposals`,
       key: "final_deadline"
     }
   ],
