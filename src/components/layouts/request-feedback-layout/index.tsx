@@ -87,8 +87,8 @@ const RequestFeedbackLayout = (): JSX.Element => {
             </ul>
           </div>
           {/* eslint-disable-next-line */}
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <Button disabled>REQUEST FEEDBACK</Button>
+          <a href={requestFeedbackContent.form} target="_blank" rel="noopener noreferrer">
+            <Button>REQUEST FEEDBACK</Button>
           </a>
         </div>
       </div>
@@ -98,6 +98,13 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <p>{requestFeedbackContent.content_3_1}</p>
           <p>{requestFeedbackContent.content_3_2}</p>
           <p>{requestFeedbackContent.content_3_3}</p>
+          <p>{requestFeedbackContent.content_3_4}</p>
+          <p>Feedback submission requirements:</p>
+          <ul>
+            <li>Ideas must fit on one 8x11 inch page (PDF or image file, e.g.,PNG, JPG, etc.)</li>
+            <li>Be prepared to submit a text description of the problem, potential stakeholders, and the questions you want feedback on from the D4SD community</li>
+            <li>Submit your one-page idea and description using the Google Form above</li>
+          </ul>
         </div>
       </div>
       <div className="section" id="section-4">
