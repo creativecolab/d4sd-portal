@@ -31,7 +31,7 @@ const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
   const scrollToRef = (): void => {
     if (ref && ref.current) {
-      const position = ref.current.offsetTop - 90;
+      const position = ref.current.offsetTop - 130;
       // eslint-disable-next-line
       window.scrollTo({
         left: 0,
