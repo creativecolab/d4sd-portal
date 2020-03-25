@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
-import { Button } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { submitProposalContent } from "../../../assets/content";
+import React, { useRef } from 'react';
+import { Button } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { submitProposalContent } from '../../../assets/content';
 
 const SubmitProposalLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ const SubmitProposalLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -36,8 +36,10 @@ const SubmitProposalLayout = (): JSX.Element => {
           {/* eslint-disable-next-line */}
           <p>{submitProposalContent.content_1_1}</p>
           <p>
-            {submitProposalContent.content_1_2_1}{" "}
-            <a href="#poster-template">{submitProposalContent.content_1_2_2}</a>{" "}
+            {submitProposalContent.content_1_2_1}
+            {' '}
+            <a href="#poster-template">{submitProposalContent.content_1_2_2}</a>
+            {' '}
             {submitProposalContent.content_1_2_3}
           </p>
           <p>{submitProposalContent.content_1_3}</p>
@@ -48,59 +50,76 @@ const SubmitProposalLayout = (): JSX.Element => {
           <h5 className="title">{submitProposalContent.title_2}</h5>
           <div className="date-box">
             <ul>
-              {submitProposalContent.importantDates.map(details => (
+              {submitProposalContent.importantDates.map((details) => (
                 <React.Fragment key={`${details.key}_fragment`}>
                   {/* eslint-disable-next-line */}
                   {details.date_overlap
                     ? [
-                        <li key={`${details.key}_li`}>
-                          <p>
-                            <b>
-                              {details.start_date
-                                .toDateString()
-                                .substring(4, 7)
-                                .toUpperCase()}{" "}
-                              {details.start_date.getDate()} –{" "}
-                              {details.end_date
-                                .toDateString()
-                                .substring(4, 7)
-                                .toUpperCase()}{" "}
-                              {details.end_date.getDate()}
-                            </b>
-                            : {details.title}
-                          </p>
-                        </li>
-                      ]
+                      <li key={`${details.key}_li`}>
+                        <p>
+                          <b>
+                            {details.start_date
+                              .toDateString()
+                              .substring(4, 7)
+                              .toUpperCase()}
+                            {' '}
+                            {details.start_date.getDate()}
+                            {' '}
+–
+                            {' '}
+                            {details.end_date
+                              .toDateString()
+                              .substring(4, 7)
+                              .toUpperCase()}
+                            {' '}
+                            {details.end_date.getDate()}
+                          </b>
+                            :
+                          {' '}
+                          {details.title}
+                        </p>
+                      </li>
+                    ]
                     : details.start_date
-                    ? [
+                      ? [
                         <li key={`${details.key}_li`}>
                           <p>
                             <b>
                               {details.start_date
                                 .toDateString()
                                 .substring(4, 7)
-                                .toUpperCase()}{" "}
-                              {details.start_date.getDate()} –{" "}
+                                .toUpperCase()}
+                              {' '}
+                              {details.start_date.getDate()}
+                              {' '}
+–
+                              {' '}
                               {details.end_date
                                 .toDateString()
                                 .substring(4, 7)
-                                .toUpperCase()}{" "}
-                              {details.end_date.getDate()}:
-                            </b>{" "}
+                                .toUpperCase()}
+                              {' '}
+                              {details.end_date.getDate()}
+:
+                            </b>
+                            {' '}
                             {details.title}
                           </p>
                         </li>
                       ]
-                    : [
+                      : [
                         <li key={`${details.key}_li`}>
                           <p>
                             <b>
                               {details.date
                                 .toDateString()
                                 .substring(4, 7)
-                                .toUpperCase()}{" "}
-                              {details.date.getDate()}:
-                            </b>{" "}
+                                .toUpperCase()}
+                              {' '}
+                              {details.date.getDate()}
+:
+                            </b>
+                            {' '}
                             {details.title}
                           </p>
                         </li>
@@ -109,7 +128,7 @@ const SubmitProposalLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <a href='https://docs.google.com/forms/d/14OKpGb4wxX3HxquKF7Q2KOfL9TGDQbQoN-DHQylJj88/edit' target='_blank'>
+          <a href="https://docs.google.com/forms/d/14OKpGb4wxX3HxquKF7Q2KOfL9TGDQbQoN-DHQylJj88/edit" target="_blank" rel="noopener noreferrer">
             <Button>SUBMIT TEAM PROPOSAL</Button>
           </a>
         </div>
@@ -119,10 +138,14 @@ const SubmitProposalLayout = (): JSX.Element => {
           <h2 className="title">{submitProposalContent.title_3}</h2>
           <p>{submitProposalContent.content_3_1}</p>
           <ol className="submission-types">
-            {submitProposalContent.submission_types.map(type => (
+            {submitProposalContent.submission_types.map((type) => (
               <li key={`${type.key}_li`}>
                 <p>
-                  <b>{type.title}: </b>
+                  <b>
+                    {type.title}
+:
+                    {' '}
+                  </b>
                   {type.description}
                 </p>
               </li>
@@ -135,7 +158,7 @@ const SubmitProposalLayout = (): JSX.Element => {
           <h2 className="title">{submitProposalContent.title_4}</h2>
           <p>{submitProposalContent.content_4_1}</p>
           <p>{submitProposalContent.content_4_2}</p>
-          {submitProposalContent.criteria.map(item => (
+          {submitProposalContent.criteria.map((item) => (
             <React.Fragment key={`${item.key}_fragment`}>
               <p className="criteria-title" key={`${item.key}_p`}>
                 <b>{item.item}</b>
@@ -156,7 +179,7 @@ const SubmitProposalLayout = (): JSX.Element => {
             {submitProposalContent.title_5}
           </h2>
           <p style={{ marginBottom: 5 }}>{submitProposalContent.content_5_2}</p>
-          <ul style={{ marginBottom: "1.5em" }}>
+          <ul style={{ marginBottom: '1.5em' }}>
             {submitProposalContent.poster_items.map((item, i) => (
               // eslint-disable-next-line
               <li key={`poster_item_${i}_fragment`}>{item}</li>
@@ -171,7 +194,8 @@ const SubmitProposalLayout = (): JSX.Element => {
             >
               Powerpoint
             </a>
-            ,{" "}
+            ,
+            {' '}
             <a
               href="/blank-poster-template.key"
               target="_blank"
@@ -179,7 +203,8 @@ const SubmitProposalLayout = (): JSX.Element => {
             >
               Keynote
             </a>
-            ,{" "}
+            ,
+            {' '}
             <a
               href="/blank-poster-template.ai"
               target="_blank"
@@ -187,7 +212,8 @@ const SubmitProposalLayout = (): JSX.Element => {
             >
               Illustrator
             </a>
-            , and{" "}
+            , and
+            {' '}
             <a
               href="/blank-poster-template.indd"
               target="_blank"
@@ -195,7 +221,8 @@ const SubmitProposalLayout = (): JSX.Element => {
             >
               InDesign
             </a>
-            {submitProposalContent.content_5_4}.
+            {submitProposalContent.content_5_4}
+.
           </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (

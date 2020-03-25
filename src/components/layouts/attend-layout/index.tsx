@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -9,7 +8,6 @@ import { attendContent, summitContent } from '../../../assets/content';
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const history = useHistory();
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
@@ -63,8 +61,10 @@ const AttendLayout = (): JSX.Element => {
           <h3>{summitContent.addressLine2}</h3>
           <br />
           <p>{attendContent.content_1_1}</p>
-          <p dangerouslySetInnerHTML={{__html:attendContent.content_1_2}} />
-          <p dangerouslySetInnerHTML={{__html:attendContent.content_1_3}} />
+          {/* eslint-disable */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_2 }} />
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_3 }} />
+          {/* eslint-enable */}
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
 

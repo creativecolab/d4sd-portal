@@ -1107,6 +1107,12 @@ export const requestFeedbackContent = {
     "Storyboards are one good option because they allow you to represent a design scenario as simple illustrations that can be easily shared with others for feedback. A good storyboard will have 3-4 panels that clearly communicate 1) the context (setting, stakeholders, etc.), 2) a perceived problem, 3) a proposed solution, and 4) a resolution (how the solution could affect the stakeholders). Your storyboards may be sketch-based or photo-based, but they must be legible and easy to understand. To support legibility, the text under each panel should be carefully handwritten or preferably use typed text.",
   content_3_4:
     "If sketching is not your strong suit, take a few paragraphs to write up your ideas. While this opportunity for feedback is totally optional, early stage feedback can help your team target the real problems and refine your ideas.",
+  content_3_5: "Feedback submission requirements:",
+  requirements: [
+    "Ideas must fit on one 8x11 inch page (PDF or image file, e.g.,PNG, JPG, etc.)",
+    "Be prepared to submit a text description of the problem, potential stakeholders, and the questions you want feedback on from the D4SD community",
+    "Submit your one-page idea and description using the Google Form above"
+  ],
   title_4: "Example submission:",
   content_4_1:
     "The example below shows what you might want to create to get community feedback. These storyboards in the submission below were created by an undergraduate student team at UC San Diego as part of a design course several years ago.  The team created the three different storyboards to explore challenges related to international travel and to propose concepts for mobile applications to solve these challenges. Notice that each storyboard describes the setting, problem, and potential solution. While this is just an example of what you can submit, it's a good practice to submit multiple ideas like this so that feedback providers can compare and contrast your solutions.",

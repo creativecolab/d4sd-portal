@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import { useHistory } from "react-router-dom";
-import { Button } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { submitContent } from "../../../assets/content";
+import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Button } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { submitContent } from '../../../assets/content';
 
 const SubmitLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ const SubmitLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -29,7 +29,7 @@ const SubmitLayout = (): JSX.Element => {
   const [loggedIn] = useState(true);
   // eslint-disable-next-line
   const loggedInHeaderText =
-    "D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.";
+    'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.';
   return (
     <div className="SubmitPage">
       <Header
@@ -46,28 +46,27 @@ const SubmitLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          {submitContent.importantDates.map(details => (
+          {submitContent.importantDates.map((details) => (
             <div
               className={`date-box ${details.className}`}
               key={`${details.key}_box`}
             >
-              <div className="date-info">{(
-                  <>
-                    <div className="date-month" key={`${details.key}_month`}>
-                      {details.date
-                        .toDateString()
-                        .substring(4, 7)
-                        .toUpperCase()}
-                    </div>
-                    <div className="date-num" key={`${details.key}_num`}>
-                      {details.date.getDate()}
-                    </div>
-                  </>
-                )}
+              <div className="date-info">
+                <>
+                  <div className="date-month" key={`${details.key}_month`}>
+                    {details.date
+                      .toDateString()
+                      .substring(4, 7)
+                      .toUpperCase()}
+                  </div>
+                  <div className="date-num" key={`${details.key}_num`}>
+                    {details.date.getDate()}
+                  </div>
+                </>
               </div>
               <div className="date-desc">
                 <h2 className={`desc-title ${details.className}`}>
-                    {details.title}
+                  {details.title}
                 </h2>
                 {/* eslint-disable-next-line */}
                 <p className="desc">
@@ -75,9 +74,7 @@ const SubmitLayout = (): JSX.Element => {
                 </p>
                 <Button
                   className={`action-button ${details.action_button.className}`}
-                  onClick={(): void =>
-                    history.push(details.action_button.url)
-                  }
+                  onClick={(): void => history.push(details.action_button.url)}
                   disabled={details.action_button.disabled}
                 >
                   {details.action_button.label}
@@ -85,10 +82,9 @@ const SubmitLayout = (): JSX.Element => {
               </div>
             </div>
           ))}
-
-          {/* eslint-disable-next-line */}
           <p
             className="bottomContent"
+            // eslint-disable-next-line
             dangerouslySetInnerHTML={{ __html: submitContent.content3 }}
           />
           <a

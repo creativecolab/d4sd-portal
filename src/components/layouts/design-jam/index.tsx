@@ -1,15 +1,13 @@
-import React, { useState, useRef } from "react";
-import { useHistory } from "react-router-dom";
-import { Button } from "@d4sd/components";
-import Header from "../../Header/index";
-import Footer from "../../Footer/index";
-import "../../../styles/containers.less";
-import "./style.less";
-import { joinDesignJam } from "../../../assets/content";
+import React, { useState, useRef } from 'react';
+import { Button } from '@d4sd/components';
+import Header from '../../Header/index';
+import Footer from '../../Footer/index';
+import '../../../styles/containers.less';
+import './style.less';
+import { joinDesignJam } from '../../../assets/content';
 
 const SubmitLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
-  const history = useHistory();
 
   // eslint-disable-next-line
   const scrollToRef = (): void => {
@@ -20,7 +18,7 @@ const SubmitLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   };
@@ -29,7 +27,7 @@ const SubmitLayout = (): JSX.Element => {
   const [loggedIn] = useState(true);
   // eslint-disable-next-line
   const loggedInHeaderText =
-    "D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.";
+    'D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.';
   return (
     <div className="SubmitPage">
       <Header
@@ -46,24 +44,31 @@ const SubmitLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          {joinDesignJam.importantDates.map(details => (
+          {joinDesignJam.importantDates.map((details) => (
             <p>
               <b>
                 {details.date
                   .toDateString()
                   .substring(4, 7)
-                  .toUpperCase()}{" "}
+                  .toUpperCase()}
+                {' '}
                 {details.date.getDate()}
               </b>
-              : {details.title} - {details.body}
+              :
+              {' '}
+              {details.title}
+              {' '}
+-
+              {' '}
+              {details.body}
             </p>
           ))}
           <a href="/attend" rel="" id="registerBtn">
             <Button>REGISTER NOW</Button>
           </a>
-          {/* eslint-disable-next-line */}
           <p
             className="bottomContent"
+            // eslint-disable-next-line
             dangerouslySetInnerHTML={{ __html: joinDesignJam.content3 }}
           />
         </div>
