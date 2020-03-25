@@ -72,7 +72,7 @@ export const homeContent = {
   summit_banner: {
     date: new Date('05/12/2020'),
     title: 'D4SD Summit',
-    location: 'San Diego Central Library',
+    location: 'Broadcast Live Online',
     key_dates: [
       {
         date: new Date("04/03/2020"),
