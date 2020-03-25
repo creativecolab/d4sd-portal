@@ -1078,7 +1078,6 @@ export const requestFeedbackContent = {
   content_1:
     "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see. Note: you do not need to participate in the D4SD Design Jams to request feedback!",
   title_2: "Timeline for Community Feedback for D4SD:",
-  content3: "",
   importantDates: [
     {
       start_date: new Date("04/03/2020"),
@@ -1098,6 +1097,9 @@ export const requestFeedbackContent = {
       key: "final_deadline"
     }
   ],
+  content_2_1: "Want to help other teams by becoming a feedback provider, ",
+  content_2_2: "sign up today",
+  url_2_2: "/volunteer/feedback_provider",
   title_3: "How should I format my idea?",
   content_3_1:
     "This community feedback exchange is an opportunity to get diverse input on an early-stage idea. It’s ok if your idea may be rough or vague, but we would like to see some visual representation.  This can be an illustrated storyboard, or a photo mockup, or even a written description, although we tend to prefer visual representations over text. Even a sketch from your notebook would work!",

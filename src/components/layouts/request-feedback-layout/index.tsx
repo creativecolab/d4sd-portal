@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import { Document, Page, pdfjs } from 'react-pdf';
 import Header from '../../Header/index';
@@ -10,7 +11,7 @@ import { contentHTML } from '../../../actions';
 
 const RequestFeedbackLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
-
+  const history = useHistory();
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   // eslint-disable-next-line
@@ -86,10 +87,17 @@ const RequestFeedbackLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          {/* eslint-disable-next-line */}
           <a href={requestFeedbackContent.form} target="_blank" rel="noopener noreferrer">
             <Button>REQUEST FEEDBACK</Button>
           </a>
+          <br />
+          <br />
+          <p>
+            {requestFeedbackContent.content_2_1}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/volunteer/feedback_provider'); }}>{requestFeedbackContent.content_2_2}</a>
+            .
+          </p>
         </div>
       </div>
       <div className="section" id="section-3">
