@@ -51,12 +51,7 @@ const SubmitLayout = (): JSX.Element => {
               className={`date-box ${details.className}`}
               key={`${details.key}_box`}
             >
-              <div className="date-info">
-                {details.override_date ? (
-                  <div className="date-month temp" key={`${details.key}_month`}>
-                    {details.override_date}
-                  </div>
-                ) : (
+              <div className="date-info">{(
                   <>
                     <div className="date-month" key={`${details.key}_month`}>
                       {details.date
@@ -72,72 +67,37 @@ const SubmitLayout = (): JSX.Element => {
               </div>
               <div className="date-desc">
                 <h2 className={`desc-title ${details.className}`}>
-                  {details.override_date ? (
-                    <s>{details.title}</s>
-                  ) : (
-                    details.title
-                  )}
+                    {details.title}
                 </h2>
                 {/* eslint-disable-next-line */}
                 <p className="desc">
                   {details.body}
-                  {details.body_2 ? (
-                    <>
-                      {/* eslint-disable-next-line */}
-                      <a
-                        href=""
-                        onClick={(
-                          evt: React.MouseEvent<HTMLAnchorElement>
-                        ): void => {
-                          evt.preventDefault();
-                          history.push("/covid19");
-                        }}
-                      >
-                        here
-                      </a>
-                      {details.body_2}
-                    </>
-                  ) : null}
                 </p>
-                {details.override_date ? (
-                  <a
-                    href={details.action_button.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button
-                      className={`action-button ${details.action_button.className}`}
-                      disabled={details.action_button.disabled}
-                    >
-                      {details.action_button.label}
-                    </Button>
-                  </a>
-                ) : (
-                  <Button
-                    className={`action-button ${details.action_button.className}`}
-                    onClick={(): void =>
-                      history.push(details.action_button.url)
-                    }
-                    disabled={details.action_button.disabled}
-                  >
-                    {details.action_button.label}
-                  </Button>
-                )}
+                <Button
+                  className={`action-button ${details.action_button.className}`}
+                  onClick={(): void =>
+                    history.push(details.action_button.url)
+                  }
+                  disabled={details.action_button.disabled}
+                >
+                  {details.action_button.label}
+                </Button>
               </div>
             </div>
           ))}
-          <a
-            href="/register"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button>REGISTER NOW</Button>
-          </a>
+
           {/* eslint-disable-next-line */}
           <p
             className="bottomContent"
             dangerouslySetInnerHTML={{ __html: submitContent.content3 }}
           />
+          <a
+            href="http://eepurl.com/c2kFon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>JOIN THE NEWSLETTER!</Button>
+          </a>
         </div>
       </div>
       <div className="section" id="section-3">

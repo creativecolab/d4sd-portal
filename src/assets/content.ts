@@ -169,7 +169,7 @@ export const summitContent = {
   subtitle1: "JOIN US for the D4SD 2020 Summit",
   title1: "Broadcast Live Online | May 12, 2020",
   title2:
-    "The D4SD 2020 Summit creates an opportunity for our community to come together to share proposals and to build alliances to address San Diego’s most complex issues. Join us online for this one-of-a-kind event!",
+    "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us online for this one-of-a-kind event!",
   title3: "May 12, 2020",
   title4: "4pm - 8pm",
   addressLine2: "Broadcast Live Online",
@@ -436,7 +436,7 @@ export const submitContent = {
     "D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.",
   title2: "How can you participate?",
   content2:
-    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events. More information coming soon! ",
+    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events.",
   title3: "",
   content3:
     "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
@@ -446,7 +446,7 @@ export const submitContent = {
       className: "",
       title: "Online Design Jams",
       body:
-        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday from 11-12pm // 3-4pm to practice empathy building, research, problem framing, ideating, prototyping, and testing. Join for any or all of the D4SD design jams!",
+        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday from 11-12pm to practice empathy building, research, problem framing, ideating, prototyping, and testing. Join for any or all of the D4SD design jams!",
       action_button: {
         label: "JOIN A DESIGN JAM",
         url: "/submit/join-a-design-jam",
@@ -474,7 +474,7 @@ export const submitContent = {
       className: "",
       title: "Submission Deadline",
       body:
-        "Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea at the Summit.",
+        "Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea virtually at the Summit.",
       action_button: {
         label: "SUBMIT A PROPOSAL",
         url: "/submit/submit-proposal",
@@ -497,24 +497,6 @@ export const submitContent = {
       },
       key: "d4sd_summit"
     },
-    {
-      date: new Date("03/19/2020"),
-      override_date: " ",
-      className: "event-cancelled",
-      title: "Information Session and Workshop (Cancelled)",
-      body:
-        "To ensure the safety of our community, the San Diego region, and beyond, we have cancelled our information sessions and workshops that were previously scheduled for Mar 18 & 19. Learn more about our COVID-19 response ",
-      body_2:
-        ". There are still a variety of ways to learn about and participate in our thriving community online via our slack channel below.",
-      action_button: {
-        label: "JOIN THE SLACK CONVERSATION",
-        url:
-          "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
-        className: "long-label",
-        disabled: false
-      },
-      key: "intro_workshops"
-    }
   ],
   timeline: [
     {
@@ -1094,7 +1076,7 @@ export const requestFeedbackContent = {
   title: "Request Feedback",
   form: "https://forms.gle/EndkEefioT3gnvp17",
   content:
-    "Do you have an idea for how to make San Diego a more sustainable city? The D4SD community is ready to provide feedback to help you better understand the problem you’re addressing and refine your ideas before you submit to the D4SD challenge.",
+    "How might we make San Diego a more sustainable city? Submit your ideas to the D4SD community for feedback and support as you iterate on your submission to the 2020 D4SD civic design challenge. Find out how below.",
   title_1: "How does the community feedback exchange work?",
   content_1:
     "This is an <i>optional</i> opportunity to get early feedback on your idea before your team submits a proposal for the D4SD challenge. Participants can submit a one-page PDF or a single image that briefly explains the context and details for their selected problem, as well as a proposed solution. Participants will also be able to include up to three questions for feedback providers to answer. The D4SD team will work to recruit a few community members, domain experts, and potential users to provide input on your concept. Only selected feedback providers will see your idea at this stage; it will not be published for the public to see. Note: you do not need to participate in the D4SD Design Jams to request feedback!",
