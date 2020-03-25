@@ -60,25 +60,14 @@ const AttendLayout = (): JSX.Element => {
           <h1 ref={ref}>{attendContent.title_1_1}</h1>
           <h3>{summitContent.title3}</h3>
           <br />
-          <h3>{attendContent.subtitle_1}</h3>
           <h3>{summitContent.addressLine2}</h3>
-          <h3>
-            <a
-              href={summitContent.addressLink} className="sum-add" target="_blank"
-              rel="noopener noreferrer"
-            >
-              {summitContent.address}
-            </a>
-          </h3>
           <br />
           <p>{attendContent.content_1_1}</p>
           <p>
             {attendContent.content_1_2}
-            {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/submit')}>Submit</a>
+            <a href="/submit">submit your proposal</a>
             {attendContent.content_1_3}
             {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/volunteer')}>Volunteer</a>
             {attendContent.content_1_4}
           </p>
           <br />

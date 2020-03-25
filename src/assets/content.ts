@@ -167,13 +167,12 @@ export const homeContent = {
 /** ***********************************Summit content************************************** */
 export const summitContent = {
   subtitle1: 'JOIN US for the 2020 Design Summit',
-  title1: 'San Diego Central Library | May 12, 2020',
+  title1: 'Broadcast Live Online | May 12, 2020',
   title2:
-    "The D4SD Summit creates an opportunity for our community to come together to share proposals and to build alliances to address San Diego’s most complex issues. Join us for this one-of-a-kind event!",
+    "The D4SD 2020 Summit creates an opportunity for our community to come together to share proposals and to build alliances to address San Diego’s most complex issues. Join us online for this one-of-a-kind event!",
   title3: "May 12, 2020",
   title4: "4pm - 8pm",
-  address: "330 Park Blvd, San Diego, CA 92101",
-  addressLine2: "Shiley Center on 9th Floor",
+  addressLine2: "Broadcast Live Online",
   addressLink:
     'https://www.google.com/maps/place/San+Diego+Central+Library/@32.7086753,-117.1629765,15z/data=!4m8!1m2!2m1!1scentral+library!3m4!1s0x80d9535c5f64fdab:0x1aeb7374a4c0c726!8m2!3d32.7086753!4d-117.1542218',
   image_col: summit_pics,
@@ -976,11 +975,11 @@ export const attendContent = {
   title_1_2: '2020 SUMMIT',
   subtitle_1: 'San Diego Central Library',
   content_1_1:
-    "The 2020 “Design for San Diego” Summit will be a chance to share and showcase proposals and ongoing efforts to make a more sustainable San Diego. Our goal is to do our part to build a more sustainable future by creating places for San Diegans to come together.",
+    "The 2020 “Design for San Diego” Summit will be an online, interactive showcase and discussion about how to make a more sustainable San Diego. Our goal is to do our part to build a more sustainable future by creating places for San Diegans to come together.",
   content_1_2:
-    "We invite participation from all walks of life. If you are working on making a more sustainable San Diego (e.g., improved housing, health, mobility, or environmental), please submit your proposals and ongoing work so that others can know about it and you can seek out to build coalitions with others. If that doesn't work for you, then consider volunteering to help the D4SD Summit and broader efforts.  OR just attend to hear about the great work happening to make San Diego a more sustainable city. If you can ",
-  content_1_3: " your ideas or ",
-  content_1_4: " then admission is free. Register below for the event (coming soon!)",
+    "We invite participation from all walks of life. All you need is an internet connection. If you are working on making a more sustainable San Diego (e.g., improved housing, health, mobility, or environmental), please ",
+  content_1_3: " and ongoing work so that others can know about it and you can seek out to build coalitions with others.  OR just take part to hear about the great work happening to make San Diego a more sustainable city.",
+  content_1_4: " Register below for the event (coming soon!)",
   title_2: "Event Details",
   // labels: ['When?', 'Where?', 'Who?', 'What?', 'How much is it?'],
   // details: [
