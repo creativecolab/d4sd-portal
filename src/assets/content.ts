@@ -77,16 +77,19 @@ export const homeContent = {
       {
         date: new Date("04/03/2020"),
         label: "Join a Design Jam",
+        url: "/submit/join-a-design-jam",
         key: "date-1"
       },
       {
         date: new Date("04/15/2020"),
         label: "Request Feedback",
+        url: "/submit/request-feedback",
         key: "date-2"
       },
       {
         date: new Date("05/01/2020"),
         label: "Submit Proposals",
+        url: "/submit/submit-proposal",
         key: "date-3"
       }
     ]

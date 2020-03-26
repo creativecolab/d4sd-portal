@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
-import { NavLink } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
@@ -29,6 +29,7 @@ const logoCarouselSettings = {
 
 const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
+  const history = useHistory();
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 130;
@@ -69,7 +70,10 @@ const HomeLayout = (): JSX.Element => {
           <div style={{ marginRight: '15px' }} />
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
-              <p key={`${date.key}_p`}>{date.label}</p>
+              <p key={`${date.key}_p`}>
+                {/* eslint-disable-next-line */}
+                <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push(date.url); }}>{date.label}</a>
+              </p>
             ))}
           </div>
         </div>
