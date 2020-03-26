@@ -4,7 +4,7 @@
 
 .AttendLayout {
   .event-info {
-    padding: 75px 0;
+    padding: 75px 0 25px 0;
 
     a,
     h1,
@@ -49,6 +49,22 @@
     .comingSoon {
       font-size: 1.8rem;
       color: @d4sd-color;
+    }
+  }
+
+  .before-summit {
+    padding: 0 0 75px 0;
+    h3 {
+      color: black;
+      text-align: left;
+    }
+    ul {
+      padding: 12px;
+      li {
+        color: black;
+        list-style: disc;
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -249,6 +265,11 @@
       color: white;
       width: 75%;
       font-weight: 500;
+
+      i {
+        font-family: 'Open Sans', sans-serif !important;
+        font-style: italic;
+      }
 
       @media screen and (max-width: 600px) {
         font-size: 2.1rem;
