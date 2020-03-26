@@ -67,24 +67,8 @@ const AttendLayout = (): JSX.Element => {
           {/* eslint-enable */}
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
-
         </div>
       </div>
-      {/* <div className="event-details">
-      <div className="container">
-        <h2>{attendContent.title_2}</h2>
-        <div className="details">
-          {attendContent.details.map(detail => (
-            <div className="detail">
-              <h3>{detail.label}</h3>
-              <div className="divider" />
-              <p>{detail.detail}</p>
-            </div>
-          ))}
-        </div>
-        <Button>REGISTER ON EVENTBRITE</Button>
-      </div>
-    </div> */}
       <Footer />
     </div>
   );
