@@ -583,7 +583,7 @@ export const joinDesignJam = {
   image: "workspace_header",
   title1: "Join a Design Jam",
   content1:
-    "In light of COVID-19, our community faces new and unprecedented challenges. Educators are learning to teach online, individuals are dealing with new sources of stress, and others are home alone looking for ways to help. D4SD is here to provide support for our community through online, collaborative design jams. These “design jams” are free and open to anyone -- so grab a few friends, family, or coworkers and help us make a difference!",
+    "In light of COVID-19, our community faces new and unprecedented challenges. Educators are learning to teach online, individuals are dealing with new sources of stress, and others are home alone looking for ways to help. D4SD is here to provide support for our community through online, collaborative design jams.",
   title2: "Weekly D4SD Design Jams start April 10th",
   content2:
     "Design for San Diego is a human-centered challenge aimed at addressing important civic issues in our region. If you are new to design thinking, take part in this unique month-long online course to set yourself up for a successful proposal submission.<br /><br />Every Friday starting on April 10th from 11am-2pm, the D4SD educator team will host interactive sessions on zoom where you can share the problems that you’re grappling with, take part in small group discussions and design activities, and meet potential teammates for the D4SD civic challenge.<br/><br/>Participants can join any or all sessions. Come for all four to get a crash course on human-centered design, or pick up a couple of modules to strengthen your skills.",
