@@ -54,6 +54,7 @@ const ChallengeLayout = (): JSX.Element => {
         scrollTo(section);
       }
     }, 100);
+  // eslint-disable-next-line
   }, []);
 
   return (
