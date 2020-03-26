@@ -70,10 +70,8 @@ const HomeLayout = (): JSX.Element => {
           <div style={{ marginRight: '15px' }} />
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
-              <p key={`${date.key}_p`}>
-                {/* eslint-disable-next-line */}
-                <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push(date.url); }}>{date.label}</a>
-              </p>
+              // eslint-disable-next-line
+              <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push(date.url); }} key={`${date.key}_p`}><p>{date.label}</p></a>
             ))}
           </div>
         </div>
