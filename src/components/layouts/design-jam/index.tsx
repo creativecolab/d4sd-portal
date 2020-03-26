@@ -81,8 +81,12 @@ const SubmitLayout = (): JSX.Element => {
           />
         </div>
       </div>
-      <div className="section" id="section-3">
-        <div className="container" />
+      <div className="section" id="section-4">
+        <div className="container">
+          <h2 className="title">{joinDesignJam.title4}</h2>
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: joinDesignJam.content4 }} />
+        </div>
       </div>
       <Footer />
     </div>
