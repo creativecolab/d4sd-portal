@@ -94,7 +94,10 @@ const ResourcesLayout = (): JSX.Element => {
 
           <div className="allcards">
             {resourcesContent.process.other.map((content) => (
-              <a href={content.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={content.link} target="_blank" rel="noopener noreferrer"
+                key={`${content.title.toLowerCase().split(' ').join()}_a`}
+              >
                 <div className="extra">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -102,7 +105,10 @@ const ResourcesLayout = (): JSX.Element => {
               </a>
             ))}
             {resourcesContent.community.other.map((content) => (
-              <a href={content.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={content.link} target="_blank" rel="noopener noreferrer"
+                key={`${content.title.toLowerCase().split(' ').join()}_a`}
+              >
                 <div className="extra-community">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>
@@ -110,7 +116,10 @@ const ResourcesLayout = (): JSX.Element => {
               </a>
             ))}
             {resourcesContent.data.other.map((content) => (
-              <a href={content.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={content.link} target="_blank" rel="noopener noreferrer"
+                key={`${content.title.toLowerCase().split(' ').join()}_a`}
+              >
                 <div className="extra-data">
                   <h1>{content.title}</h1>
                   <h3>{content.source}</h3>

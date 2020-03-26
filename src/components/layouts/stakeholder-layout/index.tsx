@@ -14,7 +14,7 @@ const StakeholderLayout = (): JSX.Element => (
       <div className="section">
         <h2>{stakeholderContent.title2}</h2>
         {stakeholderContent.content2.map((content) => (
-          <div>
+          <div key={`${content.title.toLowerCase().split(' ').join()}_div`}>
             {/* eslint-disable */}
             <h4
               style={{ textAlign: 'left' }}
@@ -28,7 +28,7 @@ const StakeholderLayout = (): JSX.Element => (
       <div className="section">
         <h2>{stakeholderContent.title3}</h2>
         {stakeholderContent.content3.map((content) => (
-          <div>
+          <div key={`${content.title.toLowerCase().split(' ').join()}_div`}>
             {/* eslint-disable */}
             <h4
               style={{ textAlign: 'left' }}

@@ -83,7 +83,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           </p>
 
           {allChallengeAngles.map((obj: ChallengeAngleType) => (
-            <p>
+            <p key={`${obj.label.toLowerCase().split(' ').join()}_p`}>
               <b>{obj.label}</b>
                :
               {' '}
@@ -102,7 +102,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <h2>Resources</h2>
           <ul>
             {allResources ? allResources.map((obj: ResourcesType) => (
-              <li>
+              <li key={`${obj.label.toLowerCase().split(' ').join()}_li`}>
                 <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
                 </a>
