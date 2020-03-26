@@ -82,6 +82,7 @@ export interface ISection {
 export interface INav {
   title: string;
   img: string;
+  ref: string;
 }
 
 export const challengesContent: {
@@ -100,19 +101,23 @@ export const challengesContent: {
   nav: [
     {
       title: 'Health',
-      img: challenge_health
+      img: challenge_health,
+      ref: "health"
     },
     {
       title: 'Mobility',
-      img: challenge_mobility
+      img: challenge_mobility,
+      ref: "mobility"
     },
     {
       title: 'Environment',
-      img: challenge_climate
+      img: challenge_climate,
+      ref: "environment"
     },
     {
       title: 'Housing',
-      img: challenge_housing
+      img: challenge_housing,
+      ref: "housing"
     }
   ],
   sections: {

@@ -68,7 +68,10 @@ const SubmitLayout = (): JSX.Element => {
             ))}
           </ul>
           <br />
-          <a href="/attend" rel="" id="registerBtn">
+          <a
+            href="https://d4sd-design-jams.eventbrite.com" target="_blank" rel="noopener noreferrer"
+            id="registerBtn"
+          >
             <Button>REGISTER NOW</Button>
           </a>
           <p
