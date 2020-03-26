@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Row, Col, Card } from '@d4sd/components';
 import { Link } from 'react-router-dom';
 import Header from '../../Header/index';
@@ -27,8 +27,15 @@ const ChallengeLayout = (): JSX.Element => {
 
   const { sections } = challengesContent;
 
-  const scrollTo = (ind: number): void => {
-    const section = sectionRefs[ind];
+  const sectionMap: { [key: string]: number} = {
+    health: 0,
+    mobility: 1,
+    environment: 2,
+    housing: 3
+  };
+
+  const scrollTo = (sect: string): void => {
+    const section = sectionRefs[sectionMap[sect]];
     if (section && section.current) {
       const position = section.current.offsetTop - 110;
       // eslint-disable-next-line
@@ -39,6 +46,15 @@ const ChallengeLayout = (): JSX.Element => {
       });
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const section = window.location.search.substr(1);
+      if (section in sectionMap) {
+        scrollTo(section);
+      }
+    }, 100);
+  }, []);
 
   return (
     <div>
@@ -51,9 +67,12 @@ const ChallengeLayout = (): JSX.Element => {
         <div className="section">
           <Row justify="center" type="flex">
             {(challengesContent.nav as Array<INav>).map((nav, i) => (
-              <Col xs={10} sm={10} md={6}>
+              <Col
+                xs={10} sm={10} md={6}
+                key={`${nav.title}_Col`}
+              >
                 {/* eslint-disable-next-line */}
-                <figure onClick={(): void => scrollTo(i)} className="challengeicons">
+                <figure onClick={(): void => scrollTo(nav.ref)} className="challengeicons">
                   <img
                     src={nav.img}
                     alt={`challenge-content${i}`}
@@ -77,7 +96,7 @@ const ChallengeLayout = (): JSX.Element => {
           const section = (sections as ISection)[sect];
 
           return (
-            <div className="challenge">
+            <div className="challenge" key={`${sect}_div`}>
               <h4 className="text" ref={sectionRefs[i]}>
                 {section.heading}
               </h4>
@@ -92,6 +111,7 @@ const ChallengeLayout = (): JSX.Element => {
                       lg={12}
                       onMouseEnter={(): void => setChallengeTile(setTile(index))}
                       onMouseLeave={(): void => setChallengeTile(setTile(-1))}
+                      key={`${chlng}_Col`}
                     >
                       <Link to={`/challenges/${sect}/${chlng}`}>
                         <Card hoverable className={challenge.className}>

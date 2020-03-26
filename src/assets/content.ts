@@ -123,24 +123,24 @@ export const homeContent = {
   ],
   challenges: [
     {
-      id: 0,
-      src: home1,
-      header: "LEARN ABOUT THE CHALLENGES: IMPROVING MOBILITY",
-      title: "How might we help people move freely in San Diego?",
-      txt:
-        "As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>"
-    },
-    {
-      id: 3,
       src: home4,
+      url: "/challenges?health",
       header: "LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES",
       title: "How might we help all San Diegans live healthy and active lives?",
       txt:
         'Many San Diego residents have limited access to preventive and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
     },
     {
-      id: 1,
+      src: home1,
+      url: "/challenges?mobility",
+      header: "LEARN ABOUT THE CHALLENGES: IMPROVING MOBILITY",
+      title: "How might we help people move freely in San Diego?",
+      txt:
+        "As people are looking for alternate ways to move around, while also wanting to reduce their emissions, the topic of inclusive and environmentally conscious transportation continues to be a pressing issue in our urban environment. Mobility can be examined from a number of lenses such as motor vehicle systems, transit, parking, intermodal connections, electric vehicles, accident reduction, walkability and bike-ability, and land-use patterns. <b>Help shape this problem by joining our discussion!</b>"
+    },
+    {
       src: home2,
+      url: "/challenges?environment",
       header: "LEARN ABOUT THE CHALLENGES: ADDRESSING ENVIRONMENT EFFECTS",
       title:
         "How might we prepare San Diego for natural and human-influenced environmental challenges?",
@@ -148,8 +148,8 @@ export const homeContent = {
         "Burning of fossil fuels has resulted in the gradual increase of global temperatures. Scientists have high confidence that global temperatures will continue to rise for decades to come. Climate change impacts areas such as transportation, housing, health, natural resources, food waste, agriculture, air pollution, and education. <b>Help shape this problem by joining our discussion!</b>"
     },
     {
-      id: 2,
       src: home3,
+      url: "/challenges?housing",
       header: "LEARN ABOUT THE CHALLENGES: CREATING ACCESSIBLE HOUSING",
       title:
         "How might we reimagine housing to meet the needs of all San Diegans?",

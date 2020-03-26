@@ -171,7 +171,7 @@ const HomeLayout = (): JSX.Element => {
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
-                    <NavLink to="/challenges">
+                    <NavLink to={challenge.url}>
                       <Button type="primary">LEARN MORE</Button>
                     </NavLink>
                   </div>
