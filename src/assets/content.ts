@@ -1147,19 +1147,19 @@ export const requestFeedbackContent = {
   title_2: "Timeline for Community Feedback for D4SD:",
   importantDates: [
     {
-      start_date: new Date("04/03/2020"),
-      end_date: new Date("04/15/2020"),
+      start_date: new Date("04/10/2020"),
+      end_date: new Date("04/21/2020"),
       title: "Open period for requesting early feedback on an idea",
       key: "early_feedback"
     },
     {
-      start_date: new Date("04/15/2020"),
-      end_date: new Date("04/18/2020"),
+      start_date: new Date("04/21/2020"),
+      end_date: new Date("04/27/2020"),
       title: "Participants receive feedback through email",
       key: "email_feedback"
     },
     {
-      date: new Date("05/01/2020"),
+      date: new Date("05/08/2020"),
       title: `Final deadline to submit to the 2020 D4SD challenge `,
       key: "final_deadline"
     }
