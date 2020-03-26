@@ -1195,7 +1195,7 @@ export const submitProposalContent = {
     "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region. Read below to find out how to enter.",
   title_1: "D4SD Challenge Details",
   content_1_1:
-    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 12.",
+    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 15.",
   content_1_2_1:
     "A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the",
   content_1_2_2: "D4SD poster templates",
@@ -1206,20 +1206,20 @@ export const submitProposalContent = {
   title_2: "Timeline for D4SD Submissions:",
   importantDates: [
     {
-      start_date: new Date("04/15/2020"),
-      end_date: new Date("05/01/2020"),
+      start_date: new Date("04/21/2020"),
+      end_date: new Date("05/08/2020"),
       title: "Open period for submitting your proposal to D4SD 2020",
       key: "submit_proposal"
     },
     {
       date_overlap: true,
-      start_date: new Date("05/01/2020"),
-      end_date: new Date("05/10/2020"),
+      start_date: new Date("05/08/2020"),
+      end_date: new Date("05/13/2020"),
       title: "Judging period for D4SD submissions",
       key: "judging_period"
     },
     {
-      date: new Date("05/12/2020"),
+      date: new Date("05/15/2020"),
       title: "Showcase your proposal during the online D4SD Summit",
       key: "d4sd_showcase"
     }
