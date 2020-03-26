@@ -438,17 +438,17 @@ export const submitContent = {
     "D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.",
   title2: "How can you participate?",
   content2:
-    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, we want you to participate!  To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read our <a href='/resources/process/'>advice on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events.",
+    "If you’re a problem solver and you want to devote your ideas, energy, and enthusiasm to addressing complex challenges in San Diego, such as the many issues around COVID-19, we want you to participate! To get started, <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego, read up <a href='/resources/process/'>on methods for human-centered design</a>, and <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>join the D4SD Slack workspace</a> to discuss the civic issues and find teammates. See the calendar below for key events.",
   title3: "",
   content3:
-    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 12. ",
+    "Join the newsletter to get the latest news and instructions for how to submit early ideas for feedback and how to enter the challenge. Keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 15. ",
   importantDates: [
     {
-      date: new Date("04/01/2020"),
+      date: new Date("04/10/2020"),
       className: "",
       title: "Online Design Jams",
       body:
-        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday from 11-12pm to practice empathy building, research, problem framing, ideating, prototyping, and testing. Join for any or all of the D4SD design jams!",
+        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday starting April 10th from 10am-2pm to practice empathy building, research, problem framing, ideating, prototyping, and connecting with the stakeholder community. Join for any or all of the D4SD design jams!",
       action_button: {
         label: "JOIN A DESIGN JAM",
         url: "/submit/join-a-design-jam",
@@ -458,7 +458,7 @@ export const submitContent = {
       key: "online_design_jam"
     },
     {
-      date: new Date("04/15/2020"),
+      date: new Date("04/21/2020"),
       className: "",
       title: "Community Feedback",
       body:
@@ -472,7 +472,7 @@ export const submitContent = {
       key: "community_feedback"
     },
     {
-      date: new Date("05/01/2020"),
+      date: new Date("05/08/2020"),
       className: "",
       title: "Submission Deadline",
       body:
@@ -486,11 +486,11 @@ export const submitContent = {
       key: "final_submission"
     },
     {
-      date: new Date("05/12/2020"),
+      date: new Date("05/15/2020"),
       className: "",
       title: "D4SD Summit 2020",
       body:
-        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event. Win prizes!",
       action_button: {
         label: "REGISTER FOR SUMMIT",
         url: "/attend",
