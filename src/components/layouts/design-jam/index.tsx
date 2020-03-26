@@ -44,25 +44,30 @@ const SubmitLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          {joinDesignJam.importantDates.map((details) => (
-            <p>
-              <b>
-                {details.date
-                  .toDateString()
-                  .substring(4, 7)
-                  .toUpperCase()}
-                {' '}
-                {details.date.getDate()}
-              </b>
-              :
-              {' '}
-              {details.title}
-              {' '}
--
-              {' '}
-              {details.body}
-            </p>
-          ))}
+          <ul>
+            {joinDesignJam.importantDates.map((details) => (
+              <li>
+                <p>
+                  <b>
+                    {details.date
+                      .toDateString()
+                      .substring(4, 7)
+                      .toUpperCase()}
+                    {' '}
+                    {details.date.getDate()}
+                  </b>
+                  :
+                  {' '}
+                  {details.title}
+                  {' '}
+                  &ndash;
+                  {' '}
+                  {details.body}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <br />
           <a href="/attend" rel="" id="registerBtn">
             <Button>REGISTER NOW</Button>
           </a>
