@@ -450,7 +450,7 @@ export const submitContent = {
       className: "",
       title: "Online Design Jams",
       body:
-        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday starting April 10th from 10am-2pm to practice empathy building, research, problem framing, ideating, prototyping, and connecting with the stakeholder community. Join for any or all of the D4SD design jams!",
+        "New to design thinking? Learn the basics of design thinking through a live online course hosted by D4SD educators. Join us every Friday starting April 10th from 11am-2pm to practice empathy building, research, problem framing, ideating, prototyping, and connecting with the stakeholder community. Join for any or all of the D4SD design jams!",
       action_button: {
         label: "JOIN A DESIGN JAM",
         url: "/submit/join-a-design-jam",
