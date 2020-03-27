@@ -44,7 +44,8 @@ const SubmitLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
-          <h2>Design Modules: </h2>
+          <h3>Design Modules: </h3>
+          <p className="module-para">{joinDesignJam.content5}</p>
           <ul>
             {joinDesignJam.importantDates.map((details) => (
               <li>
