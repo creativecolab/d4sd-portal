@@ -89,7 +89,7 @@ const SubmitLayout = (): JSX.Element => {
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: joinDesignJam.content4 }} />
           <a href="/attend">
-            <Button>Learn about the D4SD Summit</Button>
+            <Button>LEARN ABOUT THE D4SD SUMMIT</Button>
           </a>
         </div>
 
