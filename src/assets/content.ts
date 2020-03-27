@@ -68,11 +68,11 @@ export const homeContent = {
   title1_1: 'How can design help San Diego address ',
   title1_2: 'COVID-19 and become more sustainable?',
   content1_1:
-    'D4SD advances the use of design to address difficult challenges in San Diego. Our long-term goal is a more sustainable San Diego. In light of COVID-19, we are offering design support, called “',
+    'D4SD advances the use of design and design thinking to address difficult challenges in San Diego. Our long-term goal is a more sustainable San Diego. In light of COVID-19, we are offering design support, called “',
   content1_2: 'design jams',
   content1_3:
     '”, to support community-driven design related to COVID-19 and sustainability efforts. ',
-  content1_4: 'We will hold a virtual ',
+  content1_4: 'We will also hold a virtual ',
   content1_5: 'D4SD Summit',
   content1_6:
     ' to translate design ideas into action and cultivate connections across San Diego. ',
