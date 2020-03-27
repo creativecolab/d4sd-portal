@@ -22,7 +22,12 @@ const ProcessLayout = (): JSX.Element => (
       <img src={processSvg} alt="process-img" />
       <div className="section">
         {processContent.content3.map(({ title, txt, resources }) => (
-          <div key={`${title.toLowerCase().split(' ').join()}_div`}>
+          <div
+            key={`${title
+              .toLowerCase()
+              .split(' ')
+              .join()}_div`}
+          >
             {/* eslint-disable */}
             <h4
               style={{ textAlign: 'left', marginBottom: '10px' }}
@@ -31,11 +36,22 @@ const ProcessLayout = (): JSX.Element => (
             <p dangerouslySetInnerHTML={{ __html: txt }} />
             <p className="title">Resources: </p>
             <div className="linkswrapper">
-              {resources.map(({ title, link }) => (
-                <a className="links" href={link} key={`${title.toLowerCase().split(' ').join()}_a`}>
-                  {title}
-                </a>
-              ))}
+              <ul>
+                {resources.map(({ title, link }) => (
+                  <li className="item">
+                    <a
+                      className="links"
+                      href={link}
+                      key={`${title
+                        .toLowerCase()
+                        .split(' ')
+                        .join()}_a`}
+                    >
+                      {title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
