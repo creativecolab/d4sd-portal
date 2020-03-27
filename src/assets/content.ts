@@ -267,19 +267,6 @@ export const involveContent = {
       key: "feedback-provider"
     },
     {
-      title: "Become a student volunteer for the D4SD Summit",
-      txt:
-        "Volunteer to help us create a successful summit! We’ll need your help to set up the space and ensure that the event is running smoothly. Sign up now to get free attendance and make an impact.",
-      image: sponsor,
-      id: "sponsors",
-      link:
-        "https://docs.google.com/forms/d/e/1FAIpQLSctXlG83mwHnd8p4UE2ON-OqLnoQ7mD2x8FvanA0OKovTmPfA/viewform",
-      isAction: "true",
-      action: "SIGN UP TO VOLUNTEER",
-      new: "_blank",
-      key: "student-volunteer"
-    },
-    {
       title: "Join the discussion",
       txt:
         "We have a Slack workspace set up with multiple channels that will allow innovators to communicate with their team members and the greater D4SD community. When you register online, you will be connected to our network of resources based on how you want to participate.",
@@ -1338,21 +1325,18 @@ export const covidContent = {
   content:
     "The COVID-19 virus is an important health risk for San Diego and beyond. This page provides updates on how this will affect the D4SD challenge and planned events.",
   image: covid_header,
-  title_1: "Updates as of March 12, 2020",
+  title_1: "Updates as of March 27, 2020",
   content_1_1:
-    "COVID-19 is a new respiratory disease that has spread rapidly.  The Centers for Disease Control and Prevention have recently stated that more cases of COVID-19 are likely to be identified in the United States in the coming days. The World Health Organization has officially classified COVID-19 as a pandemic. UC San Diego has responded to this health concern with an abundance of caution by temporarily delivering most courses, meetings, and public events online. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
+    "COVID-19 is a new respiratory disease that has spread rapidly.  The World Health Organization has officially classified COVID-19 as a pandemic. San Diego has responded to this health concern by temporarily advising against meetings and public events. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.",
   content_1_2:
-    "D4SD will take similar precautions. All of our informational sessions will now be broadcast live and recorded so that participants can get the information at home. If you are sick, please do NOT come to any in-person events.  The D4SD website includes design and data ",
+    "All of our events will now be broadcast live and recorded so that participants can get information at home.  The D4SD website includes design and data ",
   content_1_3: " and ",
   content_1_4: " to help you get started. You can join the ",
   content_1_5: " to discuss topics and connect with potential teammates.",
-  content_1_6:
-    "To further support our innovators, D4SD will also provide an opportunity for online feedback exchange for anyone who wants early input on their problem or proposed solution. To participate, ",
+  content_1_6: "To further support our community,  we will be hosting weekly Design Jams starting on April 10th and ending May 1 from 11-2pm. Come jam with us to learn about human-centered design while also addressing the immediate challenges posed by COVID-19.",
   content_1_7: "learn more about how to request feedback",
-  content_1_8: "We currently still plan to host the ",
-  content_1_9: "D4SD Summit",
   content_1_10:
-    " on May 12th. However, the location and activities for the event could shift as we learn more about COVID-19. Join the ",
+    "Join the ",
   content_1_11: "newsletter and the online discussion",
   content_1_12:
     " to stay connected with D4SD and to get updates related to this ongoing concern.",
@@ -1361,6 +1345,9 @@ export const covidContent = {
     {
       label: "Join the D4SD newsletter and online discussion",
       url: "/"
+    },
+    {
+      label: "Come to an online “design jam” on Fridays 11-2pm",
     },
     {
       label: "Information about COVID-19 (CDC)",

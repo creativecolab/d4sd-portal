@@ -43,14 +43,8 @@ const CovidLayout = (): JSX.Element => {
           </p>
           <p>
             {covidContent.content_1_6}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/submit/request-feedback'); }}>{covidContent.content_1_7}</a>
-            .
           </p>
           <p>
-            {covidContent.content_1_8}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/attend'); }}>{covidContent.content_1_9}</a>
             {covidContent.content_1_10}
             {/* eslint-disable-next-line */}
             <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/volunteer'); }}>{covidContent.content_1_11}</a>
