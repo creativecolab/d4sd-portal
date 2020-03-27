@@ -63,8 +63,11 @@ const Menubar = (): JSX.Element => {
       default:
         setTab(['']);
     }
+    if (history.location.pathname === '/submit/join-a-design-jam') {
+      setTab(['join-a-design-jam']);
+    }
   // eslint-disable-next-line
-  }, []);
+}, [history.location.pathname]);
 
   history.listen(({ pathname }) => {
     setTab([rootPath(pathname)]);
@@ -103,6 +106,9 @@ const Menubar = (): JSX.Element => {
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
                 <span>Resources</span>
+              </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/submit/join-a-design-jam')}>
+                <span>Jam</span>
               </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
                 <span>Attend</span>
@@ -145,6 +151,9 @@ const Menubar = (): JSX.Element => {
             </Menu.Item>
             <Menu.Item className="menu-item" key="resources" onClick={(): void => history.push('/resources')}>
               <span>Resources</span>
+            </Menu.Item>
+            <Menu.Item className="menu-item" key="join-a-design-jam" onClick={(): void => history.push('/submit/join-a-design-jam')}>
+              <span>Jam</span>
             </Menu.Item>
             <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
               <span>Attend</span>
