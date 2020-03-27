@@ -41,8 +41,6 @@ const SubmitLayout = (): JSX.Element => {
         <div className="container">
           <h2 className="title">{submitContent.title2}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: submitContent.content2 }} />
-          {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: submitContent.content4 }} />
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: submitContent.content5 }} />

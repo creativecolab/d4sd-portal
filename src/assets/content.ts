@@ -65,15 +65,15 @@ import covid_header from "./img/covid_header.svg";
 export const homeContent = {
   subtitle1_1: "DESIGN FOR SAN DIEGO'S ",
   subtitle1_2: "2020 CIVIC DESIGN CHALLENGE",
-  title1_1: "How can human-centered design help",
-  title1_2: " San Diego address covid-19 and become more sustainable?",
+  title1_1: "How can design help San Diego address ",
+  title1_2: "COVID-19 and become more sustainable?",
   content1_1:
-    "D4SD advances the use of design to address difficult challenges in San Diego. Our long-term goal is a more sustainable San Diego. In light of COVID-19, we are offering design support, called ",
-  content1_2: '“design jams,”',
-  content1_3: " to support community-driven design related to covid-19 and sustainability efforts. ",
+    "D4SD advances the use of design to address difficult challenges in San Diego. Our long-term goal is a more sustainable San Diego. In light of COVID-19, we are offering design support, called “",
+  content1_2: 'design jams',
+  content1_3: "” to support community-driven design related to covid-19 and sustainability efforts. ",
   content1_4: "We will hold a virtual ",
   content1_5: "D4SD Summit",
-  content1_6: " to translate design ideas (e.g., covid-19, sustainability) into action and cultivate connections across San Diego. ",
+  content1_6: " to translate design ideas into action and cultivate connections across San Diego. ",
   summit_banner: {
     date: new Date("05/15/2020"),
     title: "D4SD Summit",
@@ -453,7 +453,7 @@ export const submitContent = {
   title3: "",
   content3:
     "Join the newsletter to get the latest news and instructions for how to get design help and also submit early ideas for feedback and how to enter the challenge. If you want to submit your and your team’s work to the summit, then keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 15. ",
-  content4: "If you want to contribute by bringing a problem, asset, or solution to the D4SD Summit, then there are three pathways to contribute. First, you can <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego and work on developing a team or continue with a team already working on one of those challenges. Second, you can join one of our Design Jams, which will be Fridays 11-2 starting April 10 until May 1. Third, volunteer to offer <a href='/volunteer/feedback_provider'>community feedback</a> to teams that formed either around sustainability challenges or more acute needs related to covid-19 and help them during Design Challenges, as a community partner providing feedback during our community feedback support, or at the summit. Note, you can also <a href='/attend'>attend the summit</a> as an audience member as well.",  
+  content4: "If you want to contribute by bringing a problem, asset, or solution to the D4SD Summit, then there are three pathways to contribute. First, you can <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego and work on developing a team or continue with a team already working on one of those challenges. Second, you can join one of our <a href='/submit/join-a-design-jam'>Design Jams</a>, which will be Fridays 11-2 starting April 10 until May 1. Third, volunteer to offer <a href='/volunteer/feedback_provider'>community feedback</a> to teams that formed either around sustainability challenges or more acute needs related to covid-19 and help them during Design Challenges, as a community partner providing feedback during our community feedback support, or at the summit. Note, you can also <a href='/attend'>attend the summit</a> as an audience member as well.",  
   content5: "For everyone, we welcome you to take advantage of the resources we&rsquo;ve developed to help the community, such as <a href='/resources'>resources about methods for human-centered design</a>, and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   content6: "See the calendar below for key opportunities to get involved.",
   importantDates: [
@@ -504,7 +504,7 @@ export const submitContent = {
       className: "",
       title: "D4SD Summit 2020",
       body:
-        "Showcase your digital poster and participate in online civic design discussions with key leaders in business and civics. Remix your concepts with others working to address challenges during this one-of-a-kind interactive virtual event. Win prizes!",
+        "Showcase your digital poster and participate in online civic design discussions with key leaders in business and civics. Remix your concepts with others working to address challenges during this one-of-a-kind interactive virtual event.",
       action_button: {
         label: "REGISTER FOR SUMMIT",
         url: "/attend",
@@ -598,7 +598,7 @@ export const joinDesignJam = {
   title1: "Join a Design Jam",
   content1:
     "Design for San Diego is a human-centered challenge aimed at addressing important civic issues in our region. In light of COVID-19, our community faces new and unprecedented challenges. Educators are learning to teach online, individuals are dealing with new sources of stress, and others are home alone looking for ways to help. D4SD is here to help through online, collaborative design jams.",
-  title2: "Weekly D4SD Design Jams every Friday 11-2, starting April 10th",
+  title2: "Design Jams every Friday 11-2, starting April 10th",
   content2:
     "<p>Struggling with covid-19 and need a place to think, create, and test solutions with others? Interested in learning about design thinking? Working on making San Diego more sustainable? Looking for ways to connect with others and help out in San Diego? If you answered yes to any of these, join us each Friday in our Design Jams. <br /><br />Every Friday starting on April 10th from 11am-2pm, the D4SD educator team will host interactive sessions on zoom where you can:</p> <ul> <li>Learn basics in human-centered design</li> <li>Share the problems that you&rsquo;re grappling with</li> <li>Take part in small group discussions and design activities</li> <li>Help out groups who are working through problems related to covid-19 or sustainability challenges</li> <li>Bring your current team and get some design support from trained designersn</li> <li>Meet potential teammates for your challenges that you could then bring to the D4SD Summit</li> </ul> <p><br />Participants can join any or all sessions. Come for all four to get a crash course on human-centered design, or pick a module or two to get the focused help you need, volunteer on the parts you feel you could best help with, or just strengthen your skills.</p>",
   title3: "",
