@@ -1348,10 +1348,11 @@ export const covidContent = {
   links: [
     {
       label: 'Join the D4SD newsletter and online discussion',
-      url: '/'
+      url: '/volunteer'
     },
     {
-      label: 'Come to an online “design jam” on Fridays 11-2pm'
+      label: 'Come to an online “design jam” on Fridays 11-2pm',
+      url: '/submit/join-a-design-jam'
     },
     {
       label: 'Information about COVID-19 (CDC)',
