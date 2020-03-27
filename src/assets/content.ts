@@ -70,7 +70,7 @@ export const homeContent = {
   content1_1:
     "D4SD advances the use of design to address difficult challenges in San Diego. Our long-term goal is a more sustainable San Diego. In light of COVID-19, we are offering design support, called “",
   content1_2: 'design jams',
-  content1_3: "” to support community-driven design related to covid-19 and sustainability efforts. ",
+  content1_3: "”, to support community-driven design related to covid-19 and sustainability efforts. ",
   content1_4: "We will hold a virtual ",
   content1_5: "D4SD Summit",
   content1_6: " to translate design ideas into action and cultivate connections across San Diego. ",
