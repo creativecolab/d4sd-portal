@@ -492,7 +492,7 @@ export const submitContent = {
       className: "",
       title: "D4SD Summit 2020",
       body:
-        "Showcase your poster at the San Diego Central Library for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event. Win prizes!",
+        "Showcase your digital poster and participate in online civic design discussions with key leaders in business and civics. Remix your concepts with other innovators during this one-of-a-kind interactive virtual event. Win prizes!",
       action_button: {
         label: "REGISTER FOR SUMMIT",
         url: "/attend",
