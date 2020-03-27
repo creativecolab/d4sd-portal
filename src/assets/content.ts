@@ -1078,7 +1078,6 @@ export const sponsorsContent = {
     '<li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.</li>' +
     '<li>Meetings with D4SD organizers before and during the civic design challenge to provide input on problem areas  and solutions.</li>' +
     '<li>Opportunity to sponsor, mentor, and work directly with design teams that enters this year’s civic design challenge.</li>' +
-    '<li>Up to four free registrations with VIP access to the D4SD summit in May 2020.</li>' +
     '<li>Invitation to join the D4SD Executive Planning Committee for next year.</li>',
   title3: '2020 Sponsors',
   img1: sponsors_designlab,
