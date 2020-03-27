@@ -114,7 +114,14 @@ const HomeLayout = (): JSX.Element => {
             <br className="title-break" />
             {homeContent.title1_2}
           </h1>
-          <p className="d4sd-content">{homeContent.content1}</p>
+          <p className="d4sd-content">
+            {homeContent.content1_1}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/submit')}>
+              {homeContent.content1_2}
+            </a>
+            {homeContent.content1_3}
+          </p>
           <br />
           <br />
           <SummitBanner />

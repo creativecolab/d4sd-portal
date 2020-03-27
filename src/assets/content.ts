@@ -67,27 +67,29 @@ export const homeContent = {
   subtitle1_2: '2020 CIVIC DESIGN CHALLENGE',
   title1_1: 'How might we make San Diego a more ',
   title1_2: 'sustainable city?',
-  content1:
-    "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
+  content1_1:
+    "D4SD is an initiative aimed at using human-centered design to address difficult challenges around public health, mobility, climate, and housing. Like many in San Diego, we are rapidly adapting our plans in response to COVID-19. ",
+  content1_2: "Join us online",
+  content1_3: " to share your challenges and to co-design solutions to make San Diego more sustainable.",
   summit_banner: {
     date: new Date("05/12/2020"),
     title: "D4SD Summit",
     location: "Broadcast Live Online",
     key_dates: [
       {
-        date: new Date("04/03/2020"),
+        date: new Date("04/10/2020"),
         label: "Join a Design Jam",
         url: "/submit/join-a-design-jam",
         key: "date-1"
       },
       {
-        date: new Date("04/15/2020"),
+        date: new Date("04/21/2020"),
         label: "Request Feedback",
         url: "/submit/request-feedback",
         key: "date-2"
       },
       {
-        date: new Date("05/01/2020"),
+        date: new Date("05/08/2020"),
         label: "Submit Proposals",
         url: "/submit/submit-proposal",
         key: "date-3"
@@ -170,9 +172,9 @@ export const homeContent = {
 /** ***********************************Summit content************************************** */
 export const summitContent = {
   subtitle1: "JOIN US for the D4SD 2020 Summit",
-  title1: "Broadcast Live Online | May 12, 2020",
+  title1: "Broadcast Live Online | May 15, 2020",
   title2:
-    "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us online for this one-of-a-kind event!",
+    "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us <i>online</i> for this one-of-a-kind event!",
   title3: "May 12, 2020",
   title4: "4pm - 8pm",
   addressLine2: "Broadcast Live Online",
@@ -1096,41 +1098,42 @@ export const attendContent = {
   content_1_1:
     "The 2020 “Design for San Diego” Summit will be an online, interactive showcase, and discussion about how to make a more sustainable San Diego.",
   content_1_2:
-    "We encourage people from all walks of life to join the Design Summit. All you need is access to an internet connection (please note that <a target='_blank' href='https://www.google.com/url?q=https://www.sandiegouniontribune.com/business/technology/story/2020-03-16/cox-spectrum-and-other-internet-providers-boost-speeds-drop-fees-for-students-and-workers-stuck-at-home&sa=D&ust=1585174357408000&usg=AFQjCNHN1EP0sQTFZvCgmDCCl4G1p09Dqw'>COX, Spectrum, and other Internet providers</a> in San Diego have taken steps to provide broad access as we address COVID19).  Are you already working on ways to make San Diego more sustainable (e.g., improving access to housing, health care, mobility options, or strategies to clean up the environment), please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(May 1st submission deadline)</a>.",
+    "We encourage people from all walks of life to join the Design Summit. All you need is access to an internet connection (please note that <a target='_blank' href='https://www.google.com/url?q=https://www.sandiegouniontribune.com/business/technology/story/2020-03-16/cox-spectrum-and-other-internet-providers-boost-speeds-drop-fees-for-students-and-workers-stuck-at-home&sa=D&ust=1585174357408000&usg=AFQjCNHN1EP0sQTFZvCgmDCCl4G1p09Dqw'>COX, Spectrum, and other Internet providers</a> in San Diego have taken steps to provide broad access as we address COVID19).  Are you already working on ways to make San Diego more sustainable (e.g., improving access to housing, health care, mobility options, or strategies to clean up the environment), please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(May 8th submission deadline)</a>.",
   content_1_3:
     "Not working on an idea at the moment, but just want to learn more or get inspired by others? Not a problem!  Join the Design Summit for a rich discussion about the 2020 civic challenges and ways for San Diego to become a more sustainable city.",
-  title_2: "Event Details",
-  // labels: ['When?', 'Where?', 'Who?', 'What?', 'How much is it?'],
-  // details: [
-  //   'May 12, 2020, 4:00 PM to 8:00 PM',
-  //   'San Diego Central library, 330 Park Blvd, San Diego, CA',
-  //   'Whether you’re an innovator or expert, anyone is welcome to attend the D4SD 2020 Summit.',
-  //   'A city’s inhabitants coming together to tackle its biggest challenges',
-  //   'We will be charging a fee of $20 to cover the amount for food, speakers, and the space. However, if you participate in the challenge as an innovator and submit a solution proposal, the cost will be waived.'
-  // ]
-  details: [
+  title_2: "What's happening before the Summit?",
+  content_2_1: "Trying to get started? We have many ",
+  content_2_2: "resources",
+  content_2_3: " and a list of civic ",
+  content_2_4: "challenge topics",
+  content_2_5: " to dig into. If you just want to learn more and get inspired by others, the D4SD educator team will be offering weekly online ",
+  content_2_6: "Design Jams",
+  content_2_7: " on Fridays 11-2 on Zoom. Join us to share the problems that you’re grappling with, to take part in small group design activities, and to meet potential teammates for the D4SD civic challenge. These “design jams” are free and open to anyone -- so, grab a few friends, family, or coworkers and help us make a difference on pressing civic issues including COVID-19!",
+  content_2_8: "Here’s the timeline of opportunities leading up to the D4SD Summit:",
+  timeline: [
     {
-      label: "When?",
-      detail: "May 12, 2020, 4:00 PM to 8:00 PM"
+      date: "April 10",
+      desc: "Design Jam #1 (DISCOVER): exploring challenge topics and doing research"
     },
     {
-      label: "Where?",
-      detail: "San Diego Central library, 330 Park Blvd, San Diego, CA"
+      date: "April 17",
+      desc: "Design Jam #2 (IDEATE):  framing, ideating, and storyboarding"
     },
     {
-      label: "Who?",
-      detail:
-        "Whether you’re an innovator or expert, anyone is welcome to attend the D4SD 2020 Summit."
+      date: "April 24",
+      desc: "Design Jam #3 (PROTOTYPE): making and testing prototypes"
     },
     {
-      label: "What?",
-      detail:
-        "A city’s inhabitants coming together to tackle its biggest challenges"
+      date: "May 1",
+      desc: "Design Jam #4 (CONNECT): creating stories and making connections"
     },
     {
-      label: "How much is it?",
-      detail:
-        "We will be charging a fee of $20 to cover the amount for food, speakers, and the space. However, if you participate in the challenge as an innovator and submit a solution proposal, the cost will be waived."
+      date: "May 8",
+      desc: "DEADLINE: Submit your final proposals for the D4SD Summit"
+    },
+    {
+      date: "May 15",
+      desc: "D4SD SUMMIT: Showcase proposals and build alliances"
     }
   ]
 };
@@ -1199,7 +1202,7 @@ export const submitProposalContent = {
     "The D4SD challenge is an opportunity to showcase your talents for the common good of San Diego. In that spirit, we welcome all perspectives and insights that can help us advance our city and region. Read below to find out how to enter.",
   title_1: "D4SD Challenge Details",
   content_1_1:
-    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 12.",
+    "San Diego’s most pressing challenges need innovative ideas and concrete solutions from its very own inhabitants. Your perspective and ideas can make our city a better place. Participating in the challenge gives you an opportunity to develop solutions, pitch them to stakeholders, and make San Diego a more sustainable city. Challenge participants will have an opportunity to win great prizes and to pitch their ideas for civic and business leaders during the online D4SD Summit on May 15.",
   content_1_2_1:
     "A final valid submission requires short written descriptions of the problem, the stakeholders involved with that problem, and the proposed solution. These descriptions will be entered as text into fields on the Final Submission Google Form and should be no longer than 300 words each. Teams should also submit a visual poster as a PDF using the",
   content_1_2_2: "D4SD poster templates",
@@ -1210,20 +1213,20 @@ export const submitProposalContent = {
   title_2: "Timeline for D4SD Submissions:",
   importantDates: [
     {
-      start_date: new Date("04/15/2020"),
-      end_date: new Date("05/01/2020"),
+      start_date: new Date("04/21/2020"),
+      end_date: new Date("05/08/2020"),
       title: "Open period for submitting your proposal to D4SD 2020",
       key: "submit_proposal"
     },
     {
       date_overlap: true,
-      start_date: new Date("05/01/2020"),
-      end_date: new Date("05/10/2020"),
+      start_date: new Date("05/08/2020"),
+      end_date: new Date("05/13/2020"),
       title: "Judging period for D4SD submissions",
       key: "judging_period"
     },
     {
-      date: new Date("05/12/2020"),
+      date: new Date("05/15/2020"),
       title: "Showcase your proposal during the online D4SD Summit",
       key: "d4sd_showcase"
     }

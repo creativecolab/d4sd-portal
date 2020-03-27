@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -8,6 +9,7 @@ import { attendContent, summitContent } from '../../../assets/content';
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
+  const history = useHistory();
   const scrollToRef = (): void => {
     if (ref && ref.current) {
       const position = ref.current.offsetTop - 90;
@@ -40,7 +42,8 @@ const AttendLayout = (): JSX.Element => {
           <h3>{summitContent.title1}</h3>
           <br />
           <br />
-          <h3>{summitContent.title2}</h3>
+          {/* eslint-disable-next-line */}
+          <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
             <Button
               className="learn"
@@ -57,7 +60,6 @@ const AttendLayout = (): JSX.Element => {
         <div className="event-info">
           <h1 ref={ref} className="summitDetails">{attendContent.title_1_1}</h1>
           <h3>{summitContent.title3}</h3>
-          <br />
           <h3>{summitContent.addressLine2}</h3>
           <br />
           <p>{attendContent.content_1_1}</p>
@@ -67,6 +69,45 @@ const AttendLayout = (): JSX.Element => {
           {/* eslint-enable */}
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
+        </div>
+        <div className="before-summit">
+          <h3>{attendContent.title_2}</h3>
+          <br />
+          <p>
+            {attendContent.content_2_1}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/resources')}>
+              {attendContent.content_2_2}
+            </a>
+            {attendContent.content_2_3}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/challenges')}>
+              {attendContent.content_2_4}
+            </a>
+            {attendContent.content_2_5}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/submit/join-a-design-jam')}>
+              {attendContent.content_2_6}
+            </a>
+            {attendContent.content_2_7}
+          </p>
+          <p>
+            {attendContent.content_2_8}
+            <ul>
+              {attendContent.timeline.map((event) => (
+                <li>
+                  <p>
+                    <b>{event.date}</b>
+                    {' '}
+                    {event.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </p>
+          <Button onClick={(): void => history.push('/submit')}>
+            LEARN HOW TO SUBMIT
+          </Button>
         </div>
       </div>
       <Footer />
