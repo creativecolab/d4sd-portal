@@ -27,6 +27,13 @@ const logoCarouselSettings = {
   autoplay: true
 };
 
+function isApril(date: any) {
+  if (date === 10) {
+    return '10+';
+  }
+  return date;
+}
+
 const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
   const history = useHistory();
@@ -47,7 +54,9 @@ const HomeLayout = (): JSX.Element => {
       <div className="information">
         <div className="summit-event">
           <div className="date">
-            <p>{homeContent.summit_banner.date.toDateString().substring(4, 7)}</p>
+            <p>
+              {homeContent.summit_banner.date.toDateString().substring(4, 7)}
+            </p>
             <h1>{homeContent.summit_banner.date.getDate()}</h1>
           </div>
           <div className="title">
@@ -62,7 +71,7 @@ const HomeLayout = (): JSX.Element => {
                 <p className="date">
                   {date.date.toDateString().substring(4, 7)}
                   {' '}
-                  {date.date.getDate()}
+                  {isApril(date.date.getDate())}
                 </p>
               </div>
             ))}
@@ -71,14 +80,25 @@ const HomeLayout = (): JSX.Element => {
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
               // eslint-disable-next-line
-              <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push(date.url); }} key={`${date.key}_p`}><p>{date.label}</p></a>
+              <a
+                href=""
+                onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => {
+                  evt.preventDefault();
+                  history.push(date.url);
+                }}
+                key={`${date.key}_p`}
+              >
+                <p>{date.label}</p>
+              </a>
             ))}
           </div>
         </div>
       </div>
       <div className="action-buttons">
         <Button
-          type="primary" size="medium" onClick={scrollToRef}
+          type="primary"
+          size="medium"
+          onClick={scrollToRef}
           className="button-container button learn-more"
         >
           LEARN MORE
@@ -90,7 +110,9 @@ const HomeLayout = (): JSX.Element => {
           className="button-container"
         >
           <Button
-            type="primary-outline" size="medium" style={{ width: '100%' }}
+            type="primary-outline"
+            size="medium"
+            style={{ width: '100%' }}
             className="button outline"
           >
             JOIN THE NEWSLETTER!
@@ -117,10 +139,19 @@ const HomeLayout = (): JSX.Element => {
           <p className="d4sd-content">
             {homeContent.content1_1}
             {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/submit')}>
+            <a
+              href=""
+              onClick={(): void => history.push('/submit/join-a-design-jam')}
+            >
               {homeContent.content1_2}
             </a>
             {homeContent.content1_3}
+            {homeContent.content1_4}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/submit')}>
+              {homeContent.content1_5}
+            </a>
+            {homeContent.content1_6}
           </p>
           <br />
           <br />
