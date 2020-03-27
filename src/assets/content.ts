@@ -67,27 +67,29 @@ export const homeContent = {
   subtitle1_2: '2020 CIVIC DESIGN CHALLENGE',
   title1_1: 'How might we make San Diego a more ',
   title1_2: 'sustainable city?',
-  content1:
-    "San Diego is an amazing place to live, work, and visit. But like many cities, San Diego faces a number of difficult challenges around mobility, climate, housing, and public health. Design for San Diego (D4SD) is an initiative to address complex challenges through design thinking and crowdsourcing.",
+  content1_1:
+    "D4SD is an initiative aimed at using human-centered design to address difficult challenges around public health, mobility, climate, and housing. Like many in San Diego, we are rapidly adapting our plans in response to COVID-19. ",
+  content1_2: "Join us online",
+  content1_3: " to share your challenges and to co-design solutions to make San Diego more sustainable.",
   summit_banner: {
     date: new Date("05/12/2020"),
     title: "D4SD Summit",
     location: "Broadcast Live Online",
     key_dates: [
       {
-        date: new Date("04/03/2020"),
+        date: new Date("04/10/2020"),
         label: "Join a Design Jam",
         url: "/submit/join-a-design-jam",
         key: "date-1"
       },
       {
-        date: new Date("04/15/2020"),
+        date: new Date("04/21/2020"),
         label: "Request Feedback",
         url: "/submit/request-feedback",
         key: "date-2"
       },
       {
-        date: new Date("05/01/2020"),
+        date: new Date("05/08/2020"),
         label: "Submit Proposals",
         url: "/submit/submit-proposal",
         key: "date-3"
