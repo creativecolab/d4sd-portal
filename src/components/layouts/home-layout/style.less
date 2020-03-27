@@ -53,6 +53,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin-top: 12px;
 
         p {
           margin-bottom: 10px;
@@ -138,6 +139,7 @@
     .information {
       .summit-event {
         .date {
+          margin-top: 12px;
           p {
             font-size: 2.3rem;
             margin-bottom: 5px;
@@ -167,6 +169,7 @@
     .information {
       .summit-event {
         .date {
+          margin-top: 0px;
           p {
             font-size: 2rem;
             margin-bottom: 4px;
@@ -223,13 +226,13 @@
     }
   }
 
-  @media screen and (max-width: 815px) {
+  @media screen and (max-width: @sm) {
     .information .summit-event {
       justify-content: space-between;
     }
   }
 
-  @media screen and (max-width: @md) {
+  @media screen and (max-width: 900px) {
     height: auto;
     padding: 25px;
     .information {
