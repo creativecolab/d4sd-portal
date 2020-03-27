@@ -110,9 +110,11 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/submit/join-a-design-jam')}>
                 <span>Jam</span>
               </Menu.Item>
-              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
-                <span>Attend</span>
-              </Menu.Item>
+              {
+              //   <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
+              //   <span>Attend</span>
+              // </Menu.Item>
+              }
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/submit')}>
                 <span>Submit</span>
               </Menu.Item>
@@ -155,9 +157,11 @@ const Menubar = (): JSX.Element => {
             <Menu.Item className="menu-item" key="join-a-design-jam" onClick={(): void => history.push('/submit/join-a-design-jam')}>
               <span>Jam</span>
             </Menu.Item>
-            <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
-              <span>Attend</span>
-            </Menu.Item>
+            {
+              // <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
+              //   <span>Attend</span>
+              // </Menu.Item>
+            }
             <Menu.Item className="menu-item" key="submit" onClick={(): void => history.push('/submit')}>
               <span>Submit</span>
             </Menu.Item>
