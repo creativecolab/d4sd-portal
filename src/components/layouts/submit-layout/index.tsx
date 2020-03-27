@@ -42,6 +42,11 @@ const SubmitLayout = (): JSX.Element => {
           <h2 className="title">{submitContent.title2}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: submitContent.content2 }} />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: submitContent.content4 }} />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: submitContent.content5 }} />
+          <p>{submitContent.content6}</p>
         </div>
       </div>
       <div className="section" id="section-2" ref={ref}>
@@ -69,9 +74,7 @@ const SubmitLayout = (): JSX.Element => {
                   {details.title}
                 </h2>
                 {/* eslint-disable-next-line */}
-                <p className="desc">
-                  {details.body}
-                </p>
+                <p className="desc">{details.body}</p>
                 <Button
                   className={`action-button ${details.action_button.className}`}
                   onClick={(): void => history.push(details.action_button.url)}
