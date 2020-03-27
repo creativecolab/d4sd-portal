@@ -47,12 +47,12 @@ import summit_3 from "./img/summit_3.jpg";
 import summit_4 from "./img/summit_4.jpg";
 import d4sd_horizontal from "./img/d4sd_horizontal.svg";
 
-import sponsors_designlab from './img/sponsors_designlab.svg';
-import sponsors_yankelovich from './img/sponsors_yankelovich.png';
-import sponsors_ibm from './img/sponsors_ibm.svg';
-import sponsors_nsf from './img/sponsors_nsf.png';
-import sponsors_scalesd from './img/scale-logo.svg';
-import sponsors_downtownworks from './img/downtownworks-logo.png';
+import sponsors_designlab from "./img/sponsors_designlab.svg";
+import sponsors_yankelovich from "./img/sponsors_yankelovich.png";
+import sponsors_ibm from "./img/sponsors_ibm.svg";
+import sponsors_nsf from "./img/sponsors_nsf.png";
+import sponsors_scalesd from "./img/scale-logo.svg";
+import sponsors_downtownworks from "./img/downtownworks-logo.png";
 
 import blank_poster_template from "./img/blank-poster-template.png";
 import poster_example_1 from "./img/poster_example_1.png";
@@ -64,13 +64,14 @@ import covid_header from "./img/covid_header.svg";
 /** ***********************************Home content************************************** */
 export const homeContent = {
   subtitle1_1: "DESIGN FOR SAN DIEGO'S ",
-  subtitle1_2: '2020 CIVIC DESIGN CHALLENGE',
-  title1_1: 'How might we make San Diego a more ',
-  title1_2: 'sustainable city?',
+  subtitle1_2: "2020 CIVIC DESIGN CHALLENGE",
+  title1_1: "How might we make San Diego a more ",
+  title1_2: "sustainable city?",
   content1_1:
     "D4SD is an initiative aimed at using human-centered design to address difficult challenges around public health, mobility, climate, and housing. Like many in San Diego, we are rapidly adapting our plans in response to COVID-19. ",
   content1_2: "Join us online",
-  content1_3: " to share your challenges and to co-design solutions to make San Diego more sustainable.",
+  content1_3:
+    " to share your challenges and to co-design solutions to make San Diego more sustainable.",
   summit_banner: {
     date: new Date("05/12/2020"),
     title: "D4SD Summit",
@@ -119,8 +120,8 @@ export const homeContent = {
     },
     {
       image: sponsor,
-      contents: 'Sponsor a Challenge',
-      link: 'sponsor'
+      contents: "Sponsor a Challenge",
+      link: "sponsor"
     }
   ],
   challenges: [
@@ -130,7 +131,7 @@ export const homeContent = {
       header: "LEARN ABOUT THE CHALLENGES: LIVING HEALTHY LIVES",
       title: "How might we help all San Diegans live healthy and active lives?",
       txt:
-        'Many San Diego residents have limited access to preventive and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>'
+        "Many San Diego residents have limited access to preventive and restorative health services. Health is determined by social and physical environments and is directly connected to how people live, learn, work, and play. Topics such as quality of life, population health, and social well being, are all different aspects of how we as a city, need to improve our well being. <b>Help shape this problem by joining our discussion!</b>"
     },
     {
       src: home1,
@@ -208,39 +209,39 @@ export const aboutContent = {
   content3: [
     {
       txt:
-        'To connect innovators, experts, city officials, professional designers, business leaders, and community members through a combination of in-person events and online activities.',
+        "To connect innovators, experts, city officials, professional designers, business leaders, and community members through a combination of in-person events and online activities.",
       img: connect,
-      key: 'connect'
+      key: "connect"
     },
     {
       txt:
-        'To increase and diversify participation, particularly for typically underrepresented or marginalized populations, by creating a range of specific roles while striving for diversity, equity, and inclusion.',
+        "To increase and diversify participation, particularly for typically underrepresented or marginalized populations, by creating a range of specific roles while striving for diversity, equity, and inclusion.",
       img: div,
-      key: 'diversity'
+      key: "diversity"
     },
     {
       txt:
-        'To increase the agency of bottom-up community initiatives and enhance communication between the community and city.',
+        "To increase the agency of bottom-up community initiatives and enhance communication between the community and city.",
       img: communicate,
-      key: 'communicate'
+      key: "communicate"
     },
     {
       txt:
-        'To contribute to the burgeoning design-driven economy in San Diego by providing resources to help launch top proposals by bringing together leaders from various sectors.',
+        "To contribute to the burgeoning design-driven economy in San Diego by providing resources to help launch top proposals by bringing together leaders from various sectors.",
       img: city,
-      key: 'city'
+      key: "city"
     },
     {
       txt:
-        'To provide an educational opportunity that serves people from a wide range of ages, backgrounds, and motivations.',
+        "To provide an educational opportunity that serves people from a wide range of ages, backgrounds, and motivations.",
       img: edu,
-      key: 'education'
+      key: "education"
     },
     {
       txt:
-        'To collaboratively explore a range of civic problems that the San Diego region faces.',
+        "To collaboratively explore a range of civic problems that the San Diego region faces.",
       img: find,
-      key: 'find'
+      key: "find"
     }
   ]
 };
@@ -257,11 +258,11 @@ export const involveContent = {
       txt:
         "Contribute to D4SD as a feedback provider! Innovators in D4SD need diverse community members’ perspectives to improve their proposals on civic issues. Learn more about how you can provide critique on ideas to help teams iterate upon their concepts.",
       image: feedback,
-      id: 'experts',
-      link: '/volunteer/feedback_provider',
-      isAction: 'true',
-      action: 'LEARN MORE',
-      key: 'feedback-provider'
+      id: "experts",
+      link: "/volunteer/feedback_provider",
+      isAction: "true",
+      action: "LEARN MORE",
+      key: "feedback-provider"
     },
     {
       title: "Become a student volunteer for the D4SD Summit",
@@ -283,23 +284,23 @@ export const involveContent = {
       image: innovator,
       id: "innovators",
       link:
-        'https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU',
-      isAction: 'true',
-      action: 'JOIN DISCUSSION',
-      new: '_blank',
-      key: 'join-discussion'
+        "https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU",
+      isAction: "true",
+      action: "JOIN DISCUSSION",
+      new: "_blank",
+      key: "join-discussion"
     },
     {
       title: "Join the mailing list",
       txt:
         "Keep up with D4SD updates and events with our newsletter! Every week we highlight key takeaways from discussions, shout out community members, and remind you of important deadlines to help you stay on track during the challenge.",
       image: expert,
-      id: 'experts',
-      link: 'http://eepurl.com/c2kFon',
-      isAction: 'true',
-      action: 'JOIN MAILING LIST',
-      new: '_blank',
-      key: 'mailing-list'
+      id: "experts",
+      link: "http://eepurl.com/c2kFon",
+      isAction: "true",
+      action: "JOIN MAILING LIST",
+      new: "_blank",
+      key: "mailing-list"
     }
   ]
 };
@@ -324,7 +325,7 @@ export const faqContent = {
     {
       question: "How can I get started?",
       answer:
-      "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>.</li><li>Starting April 10, we will host online “design jams” to teach the basics of human-centered design and to bring people together for discussions and co-working opportunities.</li><li>Until April 21, you can <a href='/submit/request-feedback'>request feedback on an early-stage idea</a> or problem that you want to work on for the challenge.</li><li>Final submissions are due May 8, so when you are ready, visit the <a href='/submit/submit-proposal'>Submit Proposal page</a> to enter the challenge.</li>"
+        "Our goal is to motivate and support citizens in learning how to use human-centered design to truly understand issues facing our region and to creatively generate solutions that could improve sustainability in San Diego. There’s many ways to get started:<li>You can learn more about the D4SD sustainability topics on the <a href='/challenges'>Challenges page</a>. </li><li>You can <a href='http://eepurl.com/c2kFon' target='_blank'>sign up to be on our mailing list</a> and to volunteer for other roles as part of the challenge. </li><li>You can chat online with other innovators, experts, and citizens through our <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank'>D4SD Slack forum</a>. </li><li>You can read up on human-centered design, get advice on building stakeholder relationships, and see example solutions on the <a href='/resources'>Resources page</a>.</li><li>Starting April 10, we will host online “design jams” to teach the basics of human-centered design and to bring people together for discussions and co-working opportunities.</li><li>Until April 21, you can <a href='/submit/request-feedback'>request feedback on an early-stage idea</a> or problem that you want to work on for the challenge.</li><li>Final submissions are due May 8, so when you are ready, visit the <a href='/submit/submit-proposal'>Submit Proposal page</a> to enter the challenge.</li>"
     },
     {
       question: "What are the important deadlines?",
@@ -332,13 +333,15 @@ export const faqContent = {
         "There are two deadlines for submissions: The 1st deadline is for an early OPTIONAL submission to gain community feedback, and the 2nd deadline is for a REQUIRED final submission. The community feedback opportunity serves as a resource for teams to improve their work; it will not be part of the final judging process.",
       events: [
         {
-          description: "<b>April 21: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (May 8).",
+          description:
+            "<b>April 21: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (May 8).",
           button_label: "LEARN HOW TO REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "request-feedback"
         },
         {
-          description: "<b>May 8: Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.",
+          description:
+            "<b>May 8: Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.",
           button_label: "LEARN HOW TO SUBMIT A PROPOSAL",
           url: "/submit/submit-proposal",
           key: "final-proposal"
@@ -362,25 +365,29 @@ export const faqContent = {
         //   key: "workshops"
         // },
         {
-          description: "<b>APR 10 (and each Friday): Online Design Jams.</b> Learn the basics of design thinking through a live online course hosted by D4SD educators. Get practice with empathy building, research, problem framing, ideating, prototyping, and testing. Free and open to anyone!",
+          description:
+            "<b>APR 10 (and each Friday): Online Design Jams.</b> Learn the basics of design thinking through a live online course hosted by D4SD educators. Get practice with empathy building, research, problem framing, ideating, prototyping, and testing. Free and open to anyone!",
           button_label: "JOIN A DESIGN JAM",
           url: "/submit/join-a-design-jam",
           key: "design-jam"
         },
         {
-          description: "<b>APR 21: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
+          description:
+            "<b>APR 21: Community Feedback.</b> Optional opportunity to get early feedback from the community. Submit a sketch, writeup, or prototype. Get input from diverse perspectives.",
           button_label: "REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "community-feedback"
         },
         {
-          description: "<b>MAY 8: Final Submission Deadline.</b> Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea virtually at the Summit.",
+          description:
+            "<b>MAY 8: Final Submission Deadline.</b> Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea virtually at the Summit.",
           button_label: "SUBMIT A PROPOSAL",
           url: "/submit/submit-proposal",
           key: "submit-proposal"
         },
         {
-          description: "<b>MAY 15: D4SD Summit 2020.</b> Showcase your digital poster during the online D4SD Summit for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
+          description:
+            "<b>MAY 15: D4SD Summit 2020.</b> Showcase your digital poster during the online D4SD Summit for key leaders in design, business, and civics. Remix your concepts with other innovators at this one-of-a-kind interactive event.  Win prizes!",
           button_label: "LEARN MORE ABOUT MAY 15 SUMMIT",
           url: "/attend",
           key: "attend-summit"
@@ -388,17 +395,17 @@ export const faqContent = {
       ]
     },
     {
-      question: 'What are some tips for forming a team?',
+      question: "What are some tips for forming a team?",
       answer:
         "While you do not need a team to enter the D4SD challenge, a team can help you build your good idea into a great solution. An effective team is one that has a mix of diverse talents all striving towards a common goal. <br/><br/>The best way to find team members is to attend one of the <a href='/submit'>online D4SD events</a>. The events will give you a chance to participate in fun interactive activities, such as small group discussions, brainstorming, and prototyping, and will help you find people interested in similar problems. <br/><br/>You can also join the <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener noreferrer'>D4SD Slack workspace</a> to look for teammates and discuss solutions with other challenge participants. You are free to communicate directly with other participants and form teams on your own. There is no limit to team size, however we recommend team sizes of 4-6."
     },
     {
-      question: 'Can I join multiple teams?',
+      question: "Can I join multiple teams?",
       answer:
         "No. Participants can enter the challenge either as an individual or as a team. Participants can even switch teams during the challenge or combine two teams together. However, each participant can only be part of one team proposal."
     },
     {
-      question: 'How will my work be judged?',
+      question: "How will my work be judged?",
       answer:
         "To enter the D4SD 2020 Challenge, teams must submit the final submission deliverables by May 8, 2020 at 11:59PM PDT.<br /><br />In general, solutions to the D4SD Challenge will be assessed based on <b>five key criteria</b>:<ol><li><b>Human-centered process</b><ul><li>How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?</li><li>To what extent does the team discover the core problems at the heart of a civic challenge?</li></ul></li><li><b>Improving on the current status quo</b><ul><li>Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?</li><li>Does this proposal expand on what San Diego already has?</li><li>How unique is the solution compared to other available solutions?</li></ul><li><b>Feasibility/viability/harmony</b><ul><li>How likely is it that this proposal could get implemented?</li><li>Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?</li></ul></li><li><b>Impact/desirability:</b><ul><li>How will the solution affect people?</li><li>Does it have any downsides?</li></ul></li><li><b>Communication quality:</b><ul><li>Does the poster follow good visual design principles?</li><li>Does the team have a good verbal pitch of their problem and proposed solution?</li><li>Does the optional video tell a compelling story?</li></ul></li></ol><br />The judging process has two rounds:<ol><li>In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed above. This judging process will happen between May 8 and May 13.  Finalists will be notified on May 13th through email so they can prepare a slide and verbal pitch for the online Summit.</li><li>In round two, distinguished jurors will assess the finalists during the online D4SD Summit on May 15th. Teams must have at least one team member available to present the poster throughout the day and to interact with jurors. Finalist teams will deliver a two-minute verbal pitch during the online D4SD Summit on May 12th.</li></ol>"
     },
@@ -416,9 +423,9 @@ export const faqContent = {
     //   answer: "Yes, at least one member of your team should plan to attend the May 12 D4SD Summit at the Central Library to present your team poster. If your team is selected as a finalist, we request that at least one team member appears at the D4SD Awards Ceremony as part of the Summit on May 12th. At this event, team members will present a poster and selected teams will give a pitch of their idea."
     // },
     {
-      question: 'Who owns the submitted concepts?',
+      question: "Who owns the submitted concepts?",
       answer:
-        'Individuals or teams will retain all intellectual property rights on solutions submitted to the D4SD Challenge. As a social impact initiative out of the UC San Diego Design Lab, D4SD is a non-profit dedicated to demonstrating the value of human-centered design and incubating great ideas into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.'
+        "Individuals or teams will retain all intellectual property rights on solutions submitted to the D4SD Challenge. As a social impact initiative out of the UC San Diego Design Lab, D4SD is a non-profit dedicated to demonstrating the value of human-centered design and incubating great ideas into companies or longer-term projects that foster economic activity in the City of San Diego and beyond."
     },
     {
       question: "How do innovators connect with each other?",
@@ -434,8 +441,8 @@ export const faqContent = {
 };
 
 export const submitContent = {
-  image: 'workspace_header',
-  title1: 'Submit',
+  image: "workspace_header",
+  title1: "Submit",
   content1:
     "D4SD is a human-centered design challenge focused on bringing together our community to discover and articulate civic issues, to generate ideas and create prototypes, and to build alliances with key civic, business and design leaders. Everyone can participate.",
   title2: "How can you participate?",
@@ -500,7 +507,7 @@ export const submitContent = {
         disabled: false
       },
       key: "d4sd_summit"
-    },
+    }
   ],
   timeline: [
     {
@@ -589,12 +596,12 @@ export const joinDesignJam = {
   title2: "Weekly D4SD Design Jams start April 10th",
   content2:
     "Design for San Diego is a human-centered challenge aimed at addressing important civic issues in our region. If you are new to design thinking, take part in this unique month-long online course to set yourself up for a successful proposal submission.<br /><br />Every Friday starting on April 10th from 11am-2pm, the D4SD educator team will host interactive sessions on zoom where you can share the problems that you’re grappling with, take part in small group discussions and design activities, and meet potential teammates for the D4SD civic challenge.<br/><br/>Participants can join any or all sessions. Come for all four to get a crash course on human-centered design, or pick up a couple of modules to strengthen your skills.",
-  title3:"",
+  title3: "",
   content3:
     "REGISTER NOW! Feel free to invite your friends. Get more details on the design jams before they happen. Participants will need to have a laptop, an internet connection, and an account with <a href='https://zoom.us/' target='_blank'> Zoom. </a>",
   title4: "Continue Jamming at the D4SD Summit",
   content4:
-    "Teams can enter the D4SD summit without participating in the design jams.  However, if you’re new to D4SD and human-centered design, the design jams are a great way to get ready for the challenge. All participants can take advantage of the community feedback opportunity (April 21st deadline) to request input on an early-stage idea. Make sure to submit your team’s proposal by the May 8th deadline!",
+    "Teams can enter the D4SD challenge without participating in the design jams.  However, if you’re new to D4SD and human-centered design, the design jams are a great way to get ready for the challenge. All participants can take advantage of the <a href='/submit/request-feedback'> community feedback </a> opportunity (April 21st deadline) to request input on an early-stage idea. Make sure to <a href='/submit/submit-proposal'> submit your team’s proposal </a> by the May 8th deadline!  Mark your calendars for the May 15th online <a href='/'> D4SD Summit </a> where innovators can pitch proposals to civic and business leaders. ",
   importantDates: [
     {
       date: new Date("04/10/2020"),
@@ -912,51 +919,51 @@ export const processContent = {
       title:
         "Discover:	What experiences do people have with different civic issues?",
       txt:
-        'To investigate a civic issue, D4SD participants conduct interviews, focus groups, and other fieldwork to deeply understand how an issue affects different stakeholders as they engage with the communities of people affected most by an issue.  During the discovery phase, innovators listen for stakeholder values, resources, and concerns, which they translate into design constraints that bound the space of viable solutions as well as questions to explore further.  Innovators build empathy with the stakeholders through the process of discovery.',
+        "To investigate a civic issue, D4SD participants conduct interviews, focus groups, and other fieldwork to deeply understand how an issue affects different stakeholders as they engage with the communities of people affected most by an issue.  During the discovery phase, innovators listen for stakeholder values, resources, and concerns, which they translate into design constraints that bound the space of viable solutions as well as questions to explore further.  Innovators build empathy with the stakeholders through the process of discovery.",
       resources: [
         {
-          title: 'How do I identify stakeholder groups?',
-          link: '/resources/stakeholder'
+          title: "How do I identify stakeholder groups?",
+          link: "/resources/stakeholder"
         },
         {
-          title: 'Tips on how to learn your stakeholder’s journey',
-          link: 'https://www.nngroup.com/articles/journey-mapping-101/'
+          title: "Tips on how to learn your stakeholder’s journey",
+          link: "https://www.nngroup.com/articles/journey-mapping-101/"
         },
         {
-          title: 'Google’s approach to design sprints',
-          link: 'https://designsprintkit.withgoogle.com/'
+          title: "Google’s approach to design sprints",
+          link: "https://designsprintkit.withgoogle.com/"
         }
       ]
     },
     {
       title: "Ideate: Can we imagine better ways to address the issues? ",
       txt:
-        'D4SD participants generate ideas with other people and as teams. Through the process of generating ideas, D4SD participants explore the problem-space of a civic issue by paying careful attention to the design constraints and design questions identified during the Discovery phase.  D4SD participants may also reach out to the stakeholder community as collaborators throughout the ideation process.',
+        "D4SD participants generate ideas with other people and as teams. Through the process of generating ideas, D4SD participants explore the problem-space of a civic issue by paying careful attention to the design constraints and design questions identified during the Discovery phase.  D4SD participants may also reach out to the stakeholder community as collaborators throughout the ideation process.",
       resources: [
         {
-          title: 'Tips to jump start your ideation',
-          link: 'https://www.nngroup.com/articles/journey-mapping-101/'
+          title: "Tips to jump start your ideation",
+          link: "https://www.nngroup.com/articles/journey-mapping-101/"
         },
         {
-          title: 'Examples from 2017',
-          link: 'https://d4sd2017.ucsd.edu/entries'
+          title: "Examples from 2017",
+          link: "https://d4sd2017.ucsd.edu/entries"
         }
       ]
     },
     {
       title: "Prototype: How can we make our ideas concrete and testable?  ",
       txt:
-        'As D4SD participants identify viable design ideas, they begin to work with physical materials, such as paper, web systems, and other lightweight media to rapidly realize the idea.  By working with materials and engaging with feedback provided by community stakeholders, D4SD participants may recognize new design constraints and questions about the issue.',
+        "As D4SD participants identify viable design ideas, they begin to work with physical materials, such as paper, web systems, and other lightweight media to rapidly realize the idea.  By working with materials and engaging with feedback provided by community stakeholders, D4SD participants may recognize new design constraints and questions about the issue.",
       resources: [
         {
-          title: 'Strategies for service design research',
+          title: "Strategies for service design research",
           link:
-            'https://www.ideou.com/blogs/inspiration/6-tips-for-how-to-prototype-a-service'
+            "https://www.ideou.com/blogs/inspiration/6-tips-for-how-to-prototype-a-service"
         },
         {
-          title: 'Consider ways to prototype locally with tactical urbanism',
+          title: "Consider ways to prototype locally with tactical urbanism",
           link:
-            'https://issuu.com/streetplanscollaborative/docs/tactical_urbanism_vol_2_final?mode=window&backgroundColor=%23222222'
+            "https://issuu.com/streetplanscollaborative/docs/tactical_urbanism_vol_2_final?mode=window&backgroundColor=%23222222"
         }
       ]
     },
@@ -964,17 +971,16 @@ export const processContent = {
       title:
         "Pitch: How can we convince other people that we have a good concept?",
       txt:
-        'Without a good story, even the best of ideas can fall flat. During this phase, D4SD participants will develop pitch materials, including a poster and a short elevator pitch, to introduce other people to the problem and to the proposed solutions.  Read the advice here to refine your team’s concept and create polished pitch materials to help prepare for the D4SD Summit.',
+        "Without a good story, even the best of ideas can fall flat. During this phase, D4SD participants will develop pitch materials, including a poster and a short elevator pitch, to introduce other people to the problem and to the proposed solutions.  Read the advice here to refine your team’s concept and create polished pitch materials to help prepare for the D4SD Summit.",
       resources: [
         {
-          title: 'Advice on making effective posters',
-          link:
-            '/submit/submit-proposal'
+          title: "Advice on making effective posters",
+          link: "/submit/submit-proposal"
         },
         {
-          title: 'Hints on giving an elevator pitch',
+          title: "Hints on giving an elevator pitch",
           link:
-            'https://medium.com/swlh/how-to-effectively-pitch-business-ideas-to-investors-dd76661b02f1'
+            "https://medium.com/swlh/how-to-effectively-pitch-business-ideas-to-investors-dd76661b02f1"
         }
       ]
     },
@@ -982,17 +988,15 @@ export const processContent = {
       title:
         "Activate: What are the opportunities and barriers toward deployment?",
       txt:
-        'Many civic proposals will fail to gain traction without community support.  After developing a viable prototype, your team will need to reach out to those affected by an issue and build alliances with key community leaders and organizers. D4SD participants will have an opportunity to activate their network and to build alliances through the D4SD Summit.',
+        "Many civic proposals will fail to gain traction without community support.  After developing a viable prototype, your team will need to reach out to those affected by an issue and build alliances with key community leaders and organizers. D4SD participants will have an opportunity to activate their network and to build alliances through the D4SD Summit.",
       resources: [
         {
-          title: 'How to build stakeholder relationships',
-          link:
-            '/resources/stakeholder'
+          title: "How to build stakeholder relationships",
+          link: "/resources/stakeholder"
         },
         {
-          title: 'How to organize a civic campaign',
-          link:
-            'http://ourcommunity.is/engaged/'
+          title: "How to organize a civic campaign",
+          link: "http://ourcommunity.is/engaged/"
         }
       ]
     }
@@ -1106,14 +1110,18 @@ export const attendContent = {
   content_2_2: "resources",
   content_2_3: " and a list of civic ",
   content_2_4: "challenge topics",
-  content_2_5: " to dig into. If you just want to learn more and get inspired by others, the D4SD educator team will be offering weekly online ",
+  content_2_5:
+    " to dig into. If you just want to learn more and get inspired by others, the D4SD educator team will be offering weekly online ",
   content_2_6: "Design Jams",
-  content_2_7: " on Fridays 11-2 on Zoom. Join us to share the problems that you’re grappling with, to take part in small group design activities, and to meet potential teammates for the D4SD civic challenge. These “design jams” are free and open to anyone -- so, grab a few friends, family, or coworkers and help us make a difference on pressing civic issues including COVID-19!",
-  content_2_8: "Here’s the timeline of opportunities leading up to the D4SD Summit:",
+  content_2_7:
+    " on Fridays 11-2 on Zoom. Join us to share the problems that you’re grappling with, to take part in small group design activities, and to meet potential teammates for the D4SD civic challenge. These “design jams” are free and open to anyone -- so, grab a few friends, family, or coworkers and help us make a difference on pressing civic issues including COVID-19!",
+  content_2_8:
+    "Here’s the timeline of opportunities leading up to the D4SD Summit:",
   timeline: [
     {
       date: "April 10",
-      desc: "Design Jam #1 (DISCOVER): exploring challenge topics and doing research"
+      desc:
+        "Design Jam #1 (DISCOVER): exploring challenge topics and doing research"
     },
     {
       date: "April 17",
@@ -1345,16 +1353,16 @@ export const covidContent = {
   title_2: "For more information:",
   links: [
     {
-      label: 'Join the D4SD newsletter and online discussion',
-      url: '/'
+      label: "Join the D4SD newsletter and online discussion",
+      url: "/"
     },
     {
-      label: 'Information about COVID-19 (CDC)',
-      url: 'https://www.cdc.gov/coronavirus/2019-ncov/index.html'
+      label: "Information about COVID-19 (CDC)",
+      url: "https://www.cdc.gov/coronavirus/2019-ncov/index.html"
     },
     {
-      label: 'UCSD Response to COVID-19',
-      url: 'https://aps.ucsd.edu/facdev/covid-19/index.html'
+      label: "UCSD Response to COVID-19",
+      url: "https://aps.ucsd.edu/facdev/covid-19/index.html"
     }
   ],
   title_3: "Here are some helpful tips to stay healthy:",
