@@ -445,7 +445,7 @@ export const submitContent = {
   content4:
     "If you want to contribute by bringing a problem, asset, or solution to the <a href='/attend'>D4SD Summit</a>, then there are three pathways to contribute. First, you can <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego. Second, you can join one of our <a href='/submit/join-a-design-jam'>Design Jams</a>, on Fridays 11-2 starting April 10 until May 1. Third, volunteer to offer <a href='/volunteer/feedback_provider'>community feedback</a> to teams on sustainability challenges or more acute needs related to COVID-19.",
   content5:
-    "We welcome everyone to take advantage of the resources we collected to help the community, such as <a href='/resources'>resources about methods for human-centered design</a>, and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
+    "We welcome everyone to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   content6: 'See the calendar below for key opportunities to get involved.',
   importantDates: [
     {
