@@ -443,7 +443,7 @@ export const submitContent = {
   content3:
     "Join the newsletter to get the latest news and instructions for how to get design help and also submit early ideas for feedback and how to enter the challenge. If you want to submit your and your team’s work to the summit, then keep reading below for details about the challenge rules and deliverables. If you want to get involved in other ways, check out our <a href='/volunteer'>volunteer opportunities</a> or register to <a href='/attend'>attend the D4SD Summit</a> on May 15. ",
   content4:
-    "If you want to contribute by bringing a problem, asset, or solution to the <a href='/attend'>D4SD Summit</a>, then there are three pathways to contribute. First, you can <a href='/challenges'>read the challenge briefs</a> about making a more sustainable San Diego. Second, you can join one of our <a href='/submit/join-a-design-jam'>Design Jams</a>, on Fridays 11-2 starting April 10 until May 1. Third, volunteer to offer <a href='/volunteer/feedback_provider'>community feedback</a> to teams on sustainability challenges or more acute needs related to COVID-19.",
+    "If you want to contribute by bringing a problem, asset, or solution to the <a href='/attend'>D4SD Summit</a>, then there are three pathways to contribute. You can:<ul><li><a href='/challenges'>Read the challenge briefs</a> about making a more sustainable San Diego.</li><li>Join one of our <a href='/submit/join-a-design-jam'>Design Jams</a>, on Fridays 11-2 starting April 10 until May 1.</li> <li>Volunteer to offer <a href='/volunteer/feedback_provider'>community feedback</a> to teams on sustainability challenges or more acute needs related to COVID-19.</li></ul>",
   content5:
     "We welcome everyone to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   content6: 'See the calendar below for key opportunities to get involved.',
@@ -453,7 +453,7 @@ export const submitContent = {
       className: '',
       title: 'Online Design Jams',
       body:
-        'In light of COVID-19, our community faces new and unprecedented challenges. D4SD is here to provide support for our community through online, collaborative design support. Join us every Friday starting April 10th from 11am-2pm to practice empathy building, research, problem framing, ideating, prototyping, and connecting with the stakeholder community. Join for any or all of the D4SD design jams on April 10, April 17, April 24, and May 1.',
+        'In light of COVID-19, our community faces new and unprecedented challenges. D4SD is here to provide support for our community through online, collaborative design support. Join us every Friday starting April 10 from 11am-2pm to practice empathy building, research, problem framing, ideating, prototyping, and connecting with the stakeholder community. Join for any or all of the D4SD design jams on April 10, April 17, April 24, and May 1.',
       action_button: {
         label: 'JOIN A DESIGN JAM',
         url: '/submit/join-a-design-jam',
