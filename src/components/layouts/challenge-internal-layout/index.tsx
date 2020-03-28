@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Row, Col } from '@d4sd/components';
+import { LeftOutlined } from '@ant-design/icons';
 import { useParams } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { challengesContent } from '../../../assets/challenges_content';
 
 import Footer from '../../Footer/index';
@@ -40,6 +42,15 @@ const ChallengeInternalLayout = (): JSX.Element => {
 
   return (
     <div className="internal-container">
+      <NavLink to="/challenges">
+        <b>
+          <div className="breadcrumb">
+            <LeftOutlined style={{ fontSize: '20px' }} />
+            <div style={{ marginRight: '5px' }} />
+            <p>Challenges</p>
+          </div>
+        </b>
+      </NavLink>
       <Row
         type="flex"
         justify="center"
@@ -72,14 +83,14 @@ const ChallengeInternalLayout = (): JSX.Element => {
           </p>
 
           {allChallengeAngles.map((obj: ChallengeAngleType) => (
-            <p>
+            <p key={`${obj.label.toLowerCase().split(' ').join()}_p`}>
               <b>{obj.label}</b>
                :
               {' '}
               {obj.desc}
             </p>
           ))}
-          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" target="_blank">
+          <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" target="_blank" rel="noopener noreferrer">
             <Button type="primary" size="large" id="joinBtn">
               JOIN THE DISCUSSION
             </Button>
@@ -91,7 +102,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
           <h2>Resources</h2>
           <ul>
             {allResources ? allResources.map((obj: ResourcesType) => (
-              <li>
+              <li key={`${obj.label.toLowerCase().split(' ').join()}_li`}>
                 <a href={obj.link} target="_blank" rel="noopener noreferrer">
                   {obj.label}
                 </a>

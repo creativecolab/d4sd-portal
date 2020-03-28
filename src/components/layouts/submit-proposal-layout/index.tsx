@@ -53,62 +53,84 @@ const SubmitProposalLayout = (): JSX.Element => {
               {submitProposalContent.importantDates.map((details) => (
                 <React.Fragment key={`${details.key}_fragment`}>
                   {/* eslint-disable-next-line */}
-                  {details.date_overlap ? [
-                    <li key={`${details.key}_li`}>
-                      <p>
-                        <b>
-                          {details.start_date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.start_date.getDate()}
-                          {' '}
-                          –
-                          {' '}
-                          {details.end_date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.end_date.getDate()}
-                        </b>
-                        :
-                        {' '}
-                        {details.title}
-                      </p>
-                    </li>
-                  ]
-                    : details.start_date ? [
+                  {details.date_overlap
+                    ? [
                       <li key={`${details.key}_li`}>
                         <p>
                           <b>
-                            {details.start_date.toDateString().substring(4, 7).toUpperCase()}
+                            {details.start_date
+                              .toDateString()
+                              .substring(4, 7)
+                              .toUpperCase()}
                             {' '}
                             {details.start_date.getDate()}
                             {' '}
-                            –
+–
+                            {' '}
+                            {details.end_date
+                              .toDateString()
+                              .substring(4, 7)
+                              .toUpperCase()}
                             {' '}
                             {details.end_date.getDate()}
-                            :
                           </b>
+                            :
                           {' '}
                           {details.title}
                         </p>
                       </li>
-                    ] : [
-                      <li key={`${details.key}_li`}>
-                        <p>
-                          <b>
-                            {details.date.toDateString().substring(4, 7).toUpperCase()}
+                    ]
+                    : details.start_date
+                      ? [
+                        <li key={`${details.key}_li`}>
+                          <p>
+                            <b>
+                              {details.start_date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}
+                              {' '}
+                              {details.start_date.getDate()}
+                              {' '}
+–
+                              {' '}
+                              {details.end_date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}
+                              {' '}
+                              {details.end_date.getDate()}
+:
+                            </b>
                             {' '}
-                            {details.date.getDate()}
-                            :
-                          </b>
-                          {' '}
-                          {details.title}
-                        </p>
-                      </li>
-                    ]}
+                            {details.title}
+                          </p>
+                        </li>
+                      ]
+                      : [
+                        <li key={`${details.key}_li`}>
+                          <p>
+                            <b>
+                              {details.date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}
+                              {' '}
+                              {details.date.getDate()}
+:
+                            </b>
+                            {' '}
+                            {details.title}
+                          </p>
+                        </li>
+                      ]}
                 </React.Fragment>
               ))}
             </ul>
           </div>
-          <Button disabled>SUBMIT TEAM PROPOSAL</Button>
+          <a href="https://docs.google.com/forms/d/14OKpGb4wxX3HxquKF7Q2KOfL9TGDQbQoN-DHQylJj88/edit" target="_blank" rel="noopener noreferrer">
+            <Button>SUBMIT TEAM PROPOSAL</Button>
+          </a>
         </div>
       </div>
       <div className="section" id="section-3">
@@ -121,7 +143,7 @@ const SubmitProposalLayout = (): JSX.Element => {
                 <p>
                   <b>
                     {type.title}
-                    :
+:
                     {' '}
                   </b>
                   {type.description}
@@ -138,7 +160,9 @@ const SubmitProposalLayout = (): JSX.Element => {
           <p>{submitProposalContent.content_4_2}</p>
           {submitProposalContent.criteria.map((item) => (
             <React.Fragment key={`${item.key}_fragment`}>
-              <p className="criteria-title" key={`${item.key}_p`}><b>{item.item}</b></p>
+              <p className="criteria-title" key={`${item.key}_p`}>
+                <b>{item.item}</b>
+              </p>
               <ul key={`${item.key}_ul`}>
                 {item.points.map((point, i) => (
                   // eslint-disable-next-line
@@ -151,40 +175,68 @@ const SubmitProposalLayout = (): JSX.Element => {
       </div>
       <div className="section" id="section-5">
         <div className="container">
-          <h2 className="title" id="poster-template">{submitProposalContent.title_5}</h2>
-          <p>{submitProposalContent.content_5_1}</p>
+          <h2 className="title" id="poster-template">
+            {submitProposalContent.title_5}
+          </h2>
           <p style={{ marginBottom: 5 }}>{submitProposalContent.content_5_2}</p>
           <ul style={{ marginBottom: '1.5em' }}>
             {submitProposalContent.poster_items.map((item, i) => (
               // eslint-disable-next-line
-              <li key={`poster_item_${i}_fragment`}>
-                {item}
-              </li>
+              <li key={`poster_item_${i}_fragment`}>{item}</li>
             ))}
           </ul>
           <p>
             {submitProposalContent.content_5_3}
-            <a href="/blank-poster-template.pptx" target="_blank" rel="noopener noreferrer">Powerpoint</a>
+            <a
+              href="/blank-poster-template.pptx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powerpoint
+            </a>
             ,
             {' '}
-            <a href="/blank-poster-template.key" target="_blank" rel="noopener noreferrer">Keynote</a>
+            <a
+              href="/blank-poster-template.key"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Keynote
+            </a>
             ,
             {' '}
-            <a href="/blank-poster-template.ai" target="_blank" rel="noopener noreferrer">Illustrator</a>
+            <a
+              href="/blank-poster-template.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Illustrator
+            </a>
             , and
             {' '}
-            <a href="/blank-poster-template.indd" target="_blank" rel="noopener noreferrer">InDesign</a>
+            <a
+              href="/blank-poster-template.indd"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              InDesign
+            </a>
             {submitProposalContent.content_5_4}
-            .
+.
           </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
               <a
-                href={`/posterExample${i + 1}.pdf`} target="_blank" rel="noopener noreferrer"
-                className="example-poster-anchor" key={`${example}_a`}
+                href={`/posterExample${i + 1}.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="example-poster-anchor"
+                key={`${example}_a`}
               >
                 <img
-                  src={example} alt={`${example}_${i}`} className="example-poster"
+                  src={example}
+                  alt={`${example}_${i}`}
+                  className="example-poster"
                   key={`${example}_img`}
                 />
               </a>

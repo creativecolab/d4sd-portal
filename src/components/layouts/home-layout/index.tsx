@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {
   Row, Col, Button, Carousel
 } from '@d4sd/components';
-import { NavLink } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 import './style.less';
 import '../../../styles/containers.less';
 import { homeContent } from '../../../assets/content';
@@ -27,11 +27,19 @@ const logoCarouselSettings = {
   autoplay: true
 };
 
+function isApril(date: any) {
+  if (date === 10) {
+    return '10+';
+  }
+  return date;
+}
+
 const HomeLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
+  const history = useHistory();
   const scrollToRef = (): void => {
     if (ref && ref.current) {
-      const position = ref.current.offsetTop - 90;
+      const position = ref.current.offsetTop - 130;
       // eslint-disable-next-line
       window.scrollTo({
         left: 0,
@@ -46,7 +54,9 @@ const HomeLayout = (): JSX.Element => {
       <div className="information">
         <div className="summit-event">
           <div className="date">
-            <p>{homeContent.summit_banner.date.toDateString().substring(4, 7)}</p>
+            <p>
+              {homeContent.summit_banner.date.toDateString().substring(4, 7)}
+            </p>
             <h1>{homeContent.summit_banner.date.getDate()}</h1>
           </div>
           <div className="title">
@@ -61,7 +71,7 @@ const HomeLayout = (): JSX.Element => {
                 <p className="date">
                   {date.date.toDateString().substring(4, 7)}
                   {' '}
-                  {date.date.getDate()}
+                  {isApril(date.date.getDate())}
                 </p>
               </div>
             ))}
@@ -69,14 +79,26 @@ const HomeLayout = (): JSX.Element => {
           <div style={{ marginRight: '15px' }} />
           <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
-              <p key={`${date.key}_p`}>{date.label}</p>
+              // eslint-disable-next-line
+              <a
+                href=""
+                onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => {
+                  evt.preventDefault();
+                  history.push(date.url);
+                }}
+                key={`${date.key}_p`}
+              >
+                <p>{date.label}</p>
+              </a>
             ))}
           </div>
         </div>
       </div>
       <div className="action-buttons">
         <Button
-          type="primary" size="medium" onClick={scrollToRef}
+          type="primary"
+          size="medium"
+          onClick={scrollToRef}
           className="button-container button learn-more"
         >
           LEARN MORE
@@ -88,7 +110,9 @@ const HomeLayout = (): JSX.Element => {
           className="button-container"
         >
           <Button
-            type="primary-outline" size="medium" style={{ width: '100%' }}
+            type="primary-outline"
+            size="medium"
+            style={{ width: '100%' }}
             className="button outline"
           >
             JOIN THE NEWSLETTER!
@@ -112,7 +136,23 @@ const HomeLayout = (): JSX.Element => {
             <br className="title-break" />
             {homeContent.title1_2}
           </h1>
-          <p className="d4sd-content">{homeContent.content1}</p>
+          <p className="d4sd-content">
+            {homeContent.content1_1}
+            {/* eslint-disable-next-line */}
+            <a
+              href=""
+              onClick={(): void => history.push('/submit/join-a-design-jam')}
+            >
+              {homeContent.content1_2}
+            </a>
+            {homeContent.content1_3}
+            {homeContent.content1_4}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/submit')}>
+              {homeContent.content1_5}
+            </a>
+            {homeContent.content1_6}
+          </p>
           <br />
           <br />
           <SummitBanner />
@@ -167,7 +207,7 @@ const HomeLayout = (): JSX.Element => {
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
                     <p dangerouslySetInnerHTML={contentHTML(challenge.txt)} />
-                    <NavLink to="/challenges">
+                    <NavLink to={challenge.url}>
                       <Button type="primary">LEARN MORE</Button>
                     </NavLink>
                   </div>

@@ -4,22 +4,37 @@
   > .section {
     padding-top: 6rem;
     > .container {
-      padding-bottom: 4rem;
-      ul {
-        li {
-          color: @b1;
-          margin-top: 1rem;
-        }
-        padding-left: 3rem;
-        list-style: decimal;
+      h3 {
+        text-align: left;
+        color: black;
+        margin-bottom: 1vh;
       }
-    }
-  }
-  #section-1 {
-    .container {
+
+      .module-para {
+        margin-bottom: 4vh;
+      }
+
+      padding-bottom: 4rem;
       .title {
         margin-bottom: 4rem;
       }
+    }
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 15px;
+
+    li {
+      color: #333333;
+      text-align: left;
+    }
+  }
+  #section-4 {
+    margin-bottom: @margin-base * 4;
+  }
+  #section-1 {
+    .container {
+
     }
     background-color: #edf6ff;
   }

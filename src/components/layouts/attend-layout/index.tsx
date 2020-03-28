@@ -42,7 +42,8 @@ const AttendLayout = (): JSX.Element => {
           <h3>{summitContent.title1}</h3>
           <br />
           <br />
-          <h3>{summitContent.title2}</h3>
+          {/* eslint-disable-next-line */}
+          <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
             <Button
               className="learn"
@@ -57,50 +58,58 @@ const AttendLayout = (): JSX.Element => {
       </div>
       <div className="AttendLayout container">
         <div className="event-info">
-          <h1 ref={ref}>{attendContent.title_1_1}</h1>
+          <h1 ref={ref} className="summitDetails">{attendContent.title_1_1}</h1>
           <h3>{summitContent.title3}</h3>
-          <br />
-          <h3>{attendContent.subtitle_1}</h3>
           <h3>{summitContent.addressLine2}</h3>
-          <h3>
-            <a
-              href={summitContent.addressLink} className="sum-add" target="_blank"
-              rel="noopener noreferrer"
-            >
-              {summitContent.address}
-            </a>
-          </h3>
           <br />
           <p>{attendContent.content_1_1}</p>
-          <p>
-            {attendContent.content_1_2}
-            {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/submit')}>Submit</a>
-            {attendContent.content_1_3}
-            {/* eslint-disable-next-line */}
-            <a onClick={(): void => history.push('/volunteer')}>Volunteer</a>
-            {attendContent.content_1_4}
-          </p>
+          {/* eslint-disable */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_2 }} />
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_3 }} />
+          {/* eslint-enable */}
           <br />
           <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
-
+        </div>
+        <div className="before-summit">
+          <h3>{attendContent.title_2}</h3>
+          <br />
+          <p>
+            {attendContent.content_2_1}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/resources')}>
+              {attendContent.content_2_2}
+            </a>
+            {attendContent.content_2_3}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/challenges')}>
+              {attendContent.content_2_4}
+            </a>
+            {attendContent.content_2_5}
+            {/* eslint-disable-next-line */}
+            <a href="" onClick={(): void => history.push('/submit/join-a-design-jam')}>
+              {attendContent.content_2_6}
+            </a>
+            {attendContent.content_2_7}
+          </p>
+          <p>
+            {attendContent.content_2_8}
+            <ul>
+              {attendContent.timeline.map((event) => (
+                <li>
+                  <p>
+                    <b>{event.date}</b>
+                    {' '}
+                    {event.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </p>
+          <Button onClick={(): void => history.push('/submit')}>
+            LEARN HOW TO SUBMIT
+          </Button>
         </div>
       </div>
-      {/* <div className="event-details">
-      <div className="container">
-        <h2>{attendContent.title_2}</h2>
-        <div className="details">
-          {attendContent.details.map(detail => (
-            <div className="detail">
-              <h3>{detail.label}</h3>
-              <div className="divider" />
-              <p>{detail.detail}</p>
-            </div>
-          ))}
-        </div>
-        <Button>REGISTER ON EVENTBRITE</Button>
-      </div>
-    </div> */}
       <Footer />
     </div>
   );

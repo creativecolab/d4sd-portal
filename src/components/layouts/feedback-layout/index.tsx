@@ -20,7 +20,7 @@ const FeedbackLayout = (): JSX.Element => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button>Sign up as a feedback provider</Button>
+        <Button>SIGN UP AS A FEEDBACK PROVIDER</Button>
       </a>
     </div>
     <br />

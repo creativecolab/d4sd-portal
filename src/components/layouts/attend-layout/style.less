@@ -4,13 +4,17 @@
 
 .AttendLayout {
   .event-info {
-    padding: 75px 0;
+    padding: 75px 0 25px 0;
 
     a,
     h1,
     h2 {
       color: #4496ff;
       line-height: 16pt;
+    }
+
+    .summitDetails {
+      color: black;
     }
 
     h1 {
@@ -45,6 +49,22 @@
     .comingSoon {
       font-size: 1.8rem;
       color: @d4sd-color;
+    }
+  }
+
+  .before-summit {
+    padding: 0 0 75px 0;
+    h3 {
+      color: black;
+      text-align: left;
+    }
+    ul {
+      padding: 12px;
+      li {
+        color: black;
+        list-style: disc;
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -97,6 +117,7 @@
     padding: 45px 100px 0px 100px;
     height: 90vh;
     justify-content: center;
+    min-height: 750px;
   }
 
   .pics {
@@ -122,14 +143,12 @@
 
       @media screen and (min-width: 1090px) {
         flex-direction: column;
-        width: 25vw;
+        width: 35vh;
         height: auto;
         margin-bottom: 7.5px;
         margin-top: 7.5px;
-      }
-
-      @media screen and (min-width: 1201px) {
-        width: 35vh;
+        min-width: 315px;
+        min-height: 194px;
       }
     }
   }
@@ -246,6 +265,11 @@
       color: white;
       width: 75%;
       font-weight: 500;
+
+      i {
+        font-family: 'Open Sans', sans-serif !important;
+        font-style: italic;
+      }
 
       @media screen and (max-width: 600px) {
         font-size: 2.1rem;

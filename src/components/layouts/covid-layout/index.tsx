@@ -41,16 +41,8 @@ const CovidLayout = (): JSX.Element => {
             <a href="https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU" target="_blank" rel="noopener noreferrer">D4SD slack workspace</a>
             {covidContent.content_1_5}
           </p>
+          <p dangerouslySetInnerHTML={{__html:covidContent.content_1_6}} />
           <p>
-            {covidContent.content_1_6}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/submit/request-feedback'); }}>{covidContent.content_1_7}</a>
-            .
-          </p>
-          <p>
-            {covidContent.content_1_8}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/attend'); }}>{covidContent.content_1_9}</a>
             {covidContent.content_1_10}
             {/* eslint-disable-next-line */}
             <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/volunteer'); }}>{covidContent.content_1_11}</a>

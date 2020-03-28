@@ -53,6 +53,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin-top: 12px;
 
         p {
           margin-bottom: 10px;
@@ -90,6 +91,7 @@
 
       p {
         margin-bottom: 0.2em;
+        font-size: 1.9rem;
       }
 
       .date-1,
@@ -97,6 +99,10 @@
       .date-3 {
         display: flex;
         justify-content: flex-end;
+      }
+
+      a {
+        color: white;
       }
     }
   }
@@ -129,10 +135,11 @@
     }
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1350px) {
     .information {
       .summit-event {
         .date {
+          margin-top: 12px;
           p {
             font-size: 2.3rem;
             margin-bottom: 5px;
@@ -151,7 +158,7 @@
         }
       }
       .key-dates p {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
     }
   }
@@ -162,6 +169,7 @@
     .information {
       .summit-event {
         .date {
+          margin-top: 0px;
           p {
             font-size: 2rem;
             margin-bottom: 4px;
@@ -180,7 +188,7 @@
         }
       }
       .key-dates p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 2.5rem;
       }
     }
@@ -212,19 +220,19 @@
       .key-dates {
         margin-bottom: 5px;
         p {
-          font-size: 1.7rem;
+          font-size: 1.3rem;
         }
       }
     }
   }
 
-  @media screen and (max-width: 815px) {
+  @media screen and (max-width: @sm) {
     .information .summit-event {
       justify-content: space-between;
     }
   }
 
-  @media screen and (max-width: @md) {
+  @media screen and (max-width: 900px) {
     height: auto;
     padding: 25px;
     .information {
@@ -254,7 +262,7 @@
         width: max-content;
         margin-bottom: 20px;
         p {
-          font-size: 2.2rem;
+          font-size: 2rem;
           line-height: 3.3rem;
         }
       }
@@ -318,7 +326,7 @@
         }
       }
       .key-dates p {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
   }
@@ -356,7 +364,7 @@
       .summit-event {
         .date {
           p {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 0;
           }
           h1 {
@@ -451,6 +459,7 @@
 }
 .piccontents {
   font-size: 2rem;
+  padding: 0 10px;
 }
 
 .Home {
