@@ -1331,14 +1331,14 @@ export const covidContent = {
   image: covid_header,
   title_1: 'Updates as of March 27, 2020',
   content_1_1:
-    'COVID-19 is a new respiratory disease that has spread rapidly.  The World Health Organization has officially classified COVID-19 as a pandemic. San Diego has responded to this health concern by temporarily advising against meetings and public events. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.',
+    'COVID-19 is a new respiratory disease that is spreading rapidly around the globe. The World Health Organization has officially classified COVID-19 as a pandemic. San Diego has responded to this health concern by temporarily advising against meetings and public events. These steps are meant to minimize the potential risks to our community, the San Diego region, and beyond.',
   content_1_2:
     'All of our events will now be broadcast live and recorded so that participants can get information at home.  The D4SD website includes design and data ',
   content_1_3: ' and ',
   content_1_4: ' to help you get started. You can join the ',
   content_1_5: ' to discuss topics and connect with potential teammates.',
   content_1_6:
-    'To further support our community,  we will be hosting weekly Design Jams starting on April 10th and ending May 1 from 11-2pm. Come jam with us to learn about human-centered design while also addressing the immediate challenges posed by COVID-19.',
+    'To further support our community, we will be hosting weekly <a href="/submit/join-a-design-jam">Design Jams</a> starting on April 10th and ending May 1 from 11-2pm. Come jam with us to learn about human-centered design while also addressing the immediate challenges posed by COVID-19.',
   content_1_7: 'learn more about how to request feedback',
   content_1_10: 'Join the ',
   content_1_11: 'newsletter and the online discussion',
@@ -1365,10 +1365,10 @@ export const covidContent = {
   ],
   title_3: 'Here are some helpful tips to stay healthy:',
   tips: [
-    'Wash your hands regularly with soap and water for at least 20 seconds.  If soap and water are not available, please use alcohol-based hand sanitizer.',
+    'Wash your hands regularly with soap and water for at least 20 seconds. If soap and water are not available, please use alcohol-based hand sanitizer.',
     'Avoid touching your eyes, nose, mouth with unwashed hands.',
     'Avoid contact with individuals who show signs of illness, when possible.',
     'Clean and disinfect frequently touched objects and surfaces.',
-    'If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided the links above.'
+    'If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided in the links above.'
   ]
 };
