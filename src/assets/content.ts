@@ -585,7 +585,7 @@ export const submitContent = {
 };
 
 export const joinDesignJam = {
-  image: 'workspace_header',
+  image: 'jam-header',
   title1: 'Join a Design Jam',
   content1:
     'Design for San Diego is a human-centered challenge aimed at addressing important civic issues in our region. In light of COVID-19, our community faces new and unprecedented challenges. Educators are learning to teach online, individuals are dealing with new sources of stress, and others are home alone looking for ways to help. D4SD is here to help through online, collaborative design jams.',
