@@ -72,7 +72,7 @@ const Menubar = (): JSX.Element => {
   history.listen(({ pathname }) => {
     setTab([rootPath(pathname)]);
   });
-  
+
   return (
     <div className="menubar-wrapper">
       <CovidBanner />
