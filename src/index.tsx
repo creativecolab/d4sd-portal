@@ -1,93 +1,94 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-import './index.less';
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { ConnectedRouter } from 'connected-react-router';
-import { Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import ReactGA from 'react-ga';
-import Loadable from 'react-loadable';
-import configureStore, { history } from './store';
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
+import "./index.less";
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
+import { ConnectedRouter } from "connected-react-router";
+import { Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import ReactGA from "react-ga";
+import Loadable from "react-loadable";
+import configureStore, { history } from "./store";
 
-import Menubar from './components/menubar';
-import ScrollToTop from './components/ScrollToTop';
+import Menubar from "./components/menubar";
+import ScrollToTop from "./components/ScrollToTop";
+import FeedbackProviderLayout from "./components/layouts/feedback-provider-layout";
 
 const Loading = (): null => null; // loading component
 const HomePage = Loadable({
-  loader: () => import('./containers/home-page'),
+  loader: () => import("./containers/home-page"),
   loading: Loading
 });
 const SignupPage = Loadable({
-  loader: () => import('./containers/signup-page'),
+  loader: () => import("./containers/signup-page"),
   loading: Loading
 });
 const LoginPage = Loadable({
-  loader: () => import('./containers/login-page'),
+  loader: () => import("./containers/login-page"),
   loading: Loading
 });
 const InvolvedPage = Loadable({
-  loader: () => import('./containers/involved-page'),
+  loader: () => import("./containers/involved-page"),
   loading: Loading
 });
 const AboutPage = Loadable({
-  loader: () => import('./containers/about-page'),
+  loader: () => import("./containers/about-page"),
   loading: Loading
 });
 const ChallengePage = Loadable({
-  loader: () => import('./containers/challenge-page'),
+  loader: () => import("./containers/challenge-page"),
   loading: Loading
 });
 const AttendPage = Loadable({
-  loader: () => import('./containers/attend-page'),
+  loader: () => import("./containers/attend-page"),
   loading: Loading
 });
 const ResourcesPage = Loadable({
-  loader: () => import('./containers/resources-page'),
+  loader: () => import("./containers/resources-page"),
   loading: Loading
 });
 const FAQPage = Loadable({
-  loader: () => import('./containers/faq-page'),
+  loader: () => import("./containers/faq-page"),
   loading: Loading
 });
 const SponsorsPage = Loadable({
-  loader: () => import('./containers/sponsors-page'),
+  loader: () => import("./containers/sponsors-page"),
   loading: Loading
 });
 const SubmitPage = Loadable({
-  loader: () => import('./containers/submit-page'),
+  loader: () => import("./containers/submit-page"),
   loading: Loading
 });
 const RequestFeedbackPage = Loadable({
-  loader: () => import('./containers/request-feedback-page'),
+  loader: () => import("./containers/request-feedback-page"),
   loading: Loading
 });
 const SubmitProposalPage = Loadable({
-  loader: () => import('./containers/submit-proposal-page'),
+  loader: () => import("./containers/submit-proposal-page"),
   loading: Loading
 });
 const ProcessPage = Loadable({
-  loader: () => import('./components/layouts/process-layout'),
+  loader: () => import("./components/layouts/process-layout"),
   loading: Loading
 });
 const StakeholderPage = Loadable({
-  loader: () => import('./components/layouts/stakeholder-layout'),
+  loader: () => import("./components/layouts/stakeholder-layout"),
   loading: Loading
 });
 const FeedbackPage = Loadable({
-  loader: () => import('./components/layouts/feedback-layout'),
+  loader: () => import("./components/layouts/feedback-layout"),
   loading: Loading
 });
 const CovidPage = Loadable({
-  loader: () => import('./components/layouts/covid-layout'),
+  loader: () => import("./components/layouts/covid-layout"),
   loading: Loading
 });
 const ChallengeInternalLayout = Loadable({
-  loader: () => import('./components/layouts/challenge-internal-layout'),
+  loader: () => import("./components/layouts/challenge-internal-layout"),
   loading: Loading
 });
 const JoinDesignJam = Loadable({
-  loader: () => import('./components/layouts/design-jam'),
+  loader: () => import("./components/layouts/design-jam"),
   loading: Loading
 });
 // const ViewFeedbackLayout = Loadable({
@@ -118,7 +119,7 @@ const App = (): JSX.Element => {
   useEffect(() => {
     // eslint-disable-next-line
     // @ts-ignore
-    ReactGA.initialize('UA-90860713-2');
+    ReactGA.initialize("UA-90860713-2");
     // eslint-disable-next-line
     history.listen((location: any) => {
       logPageView(location);
@@ -153,11 +154,31 @@ const App = (): JSX.Element => {
               component={StakeholderPage}
             />
             <Route exact path="/submit" component={SubmitPage} />
-            <Route exact path="/submit/request-feedback" component={RequestFeedbackPage} />
-            <Route exact path="/submit/submit-proposal" component={SubmitProposalPage} />
+            <Route
+              exact
+              path="/submit/request-feedback"
+              component={RequestFeedbackPage}
+            />
+            <Route
+              exact
+              path="/submit/submit-proposal"
+              component={SubmitProposalPage}
+            />
             <Route exact path="/covid19" component={CovidPage} />
-            <Route path="/challenges/:type/:title" component={ChallengeInternalLayout} />
-            <Route exact path="/submit/join-a-design-jam" component={JoinDesignJam} />
+            <Route
+              exact
+              path="/volunteer/provide_feedback"
+              component={FeedbackProviderLayout}
+            />
+            <Route
+              path="/challenges/:type/:title"
+              component={ChallengeInternalLayout}
+            />
+            <Route
+              exact
+              path="/submit/join-a-design-jam"
+              component={JoinDesignJam}
+            />
             {/*
               <Route
                 exact
@@ -198,4 +219,4 @@ const App = (): JSX.Element => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

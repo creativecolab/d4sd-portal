@@ -1,10 +1,11 @@
-import React from 'react';
-import {
-  Row, Col, Button
-} from '@d4sd/components';
-import ProviderInformation from './provider-information';
-import QuestionList from './question-list';
-import SubmissionPreview from './submission-preview';
+import React from "react";
+import { Row, Col, Button } from "@d4sd/components";
+import ProviderInformation from "./provider-information";
+import QuestionList from "./question-list";
+import SubmissionPreview from "./submission-preview";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import { provideFeedbackContent } from "../../../assets/content";
 
 const FeedbackProviderLayout = (): JSX.Element => {
   /* eslint-disable */
@@ -16,22 +17,11 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
   return (
     <div>
-      <div className="header">
-        <Row type="flex" justify="center" className="subtxt">
-          <Col span={18}>
-            <h1>Provide Feedback</h1>
-            <p>
-              {' '}
-              Welcome and thank you for agreeing to provide feedback!
-              Start by saying a little bit about yourself.  Then please
-              review the team’s concept below on the left and provide
-              feedback on the right. Feedback makes the most impact
-              when it is positive, constructive, well-justified, and actionable.
-            </p>
-          </Col>
-
-        </Row>
-      </div>
+      <Header
+        title={provideFeedbackContent.title}
+        content={provideFeedbackContent.subInfo}
+        image={provideFeedbackContent.image}
+      />
       <ProviderInformation />
 
       <Row className="provideInput">
@@ -49,9 +39,13 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
       <Row type="flex" justify="center" className="submit-btn-feedback">
         <Col>
-          <Button htmlType="submit" type="primary">SUBMIT</Button>
+          <Button htmlType="submit" type="primary" size="large">
+            SUBMIT
+          </Button>
         </Col>
       </Row>
+
+      <Footer />
     </div>
   );
 };
