@@ -29,7 +29,7 @@ const SubmissionPreview = (): JSX.Element => {
         </ul>
       </p>
       <Row type="flex">
-        <Col xs={{ span: 24 }} sm={{ span: 20 }}>
+        <Col xs={{ span: 24 }} md={{ span: 20 }}>
           <p>
             <b>1. Problem Statement</b>
           </p>
@@ -37,7 +37,7 @@ const SubmissionPreview = (): JSX.Element => {
         </Col>
       </Row>
       <Row className="proposed-concept">
-        <Col xs={{ span: 24 }} sm={{ span: 20 }}>
+        <Col xs={{ span: 24 }} md={{ span: 20 }}>
           <p>
             <b>2. Proposed Initial Concepts</b>
           </p>
