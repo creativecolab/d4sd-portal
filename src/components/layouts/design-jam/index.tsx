@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Button } from '@d4sd/components';
+import ReactGoogleSlides from 'react-google-slides';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
 import '../../../styles/containers.less';
@@ -71,7 +72,9 @@ const SubmitLayout = (): JSX.Element => {
           </ul>
           <br />
           <a
-            href="https://d4sd-design-jams.eventbrite.com" target="_blank" rel="noopener noreferrer"
+            href="https://d4sd-design-jams.eventbrite.com"
+            target="_blank"
+            rel="noopener noreferrer"
             id="registerBtn"
           >
             <Button>REGISTER NOW</Button>
@@ -92,7 +95,16 @@ const SubmitLayout = (): JSX.Element => {
             <Button>LEARN ABOUT THE D4SD SUMMIT</Button>
           </a>
         </div>
-
+        <div className="gslides">
+          <ReactGoogleSlides
+            width={620}
+            height={400}
+            slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
+            slideDuration={5}
+            showControls
+            loop
+          />
+        </div>
       </div>
       <Footer />
     </div>
