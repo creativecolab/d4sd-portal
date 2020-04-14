@@ -97,7 +97,7 @@ const SubmitLayout = (): JSX.Element => {
         </div>
         <div className="gslides">
           <ReactGoogleSlides
-            width={620}
+            width={600}
             height={400}
             slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
             slideDuration={5}
