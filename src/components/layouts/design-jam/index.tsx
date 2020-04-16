@@ -66,6 +66,9 @@ const SubmitLayout = (): JSX.Element => {
                   &ndash;
                   {' '}
                   {details.body}
+                  {details.link && 
+                    <div><a href={'#' + details.link}>Link to session slides</a></div>
+                  }
                 </p>
               </li>
             ))}
@@ -96,14 +99,17 @@ const SubmitLayout = (): JSX.Element => {
           </a>
         </div>
         <div className="gslides">
-          <ReactGoogleSlides
-            width={600}
-            height={400}
-            slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
-            slideDuration={5}
-            showControls
-            loop
-          />
+          <div id='discover'>
+            <h2>Discover</h2>
+            <ReactGoogleSlides
+              width={600}
+              height={400}
+              slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
+              slideDuration={5}
+              showControls
+              loop
+            />
+          </div>
         </div>
       </div>
       <Footer />
