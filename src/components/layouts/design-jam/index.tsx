@@ -100,18 +100,21 @@ const SubmitLayout = (): JSX.Element => {
         </div>
       </div>
       <div className="section" id="section-5">
-        <h2 className='title'>Design Jam Slides and Videos</h2>
-        <div className="gslides">
-          <div id='discover'>
-            <h4 className='subtitle'>Jam #1 on DISCOVER (April 10)</h4>
-            <ReactGoogleSlides
-              width={600}
-              height={400}
-              slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
-              slideDuration={5}
-              showControls
-              loop
-            />
+        <div className='container'>
+          <h2 className='title'>Design Jam Slides and Videos</h2>
+          <p>The D4SD Jam Sessions are free, online, public events. In case you cannot join the live sessions on Fridays, the videos from each session will be recorded and posted <a href='https://www.youtube.com/playlist?list=PLoWuaQlGD1dlk4AmbjeVJ4CI8lTjNE2kr' target='_blank'>here on Youtube</a>. The slides for the plenary sessions are also posted below.</p>
+          <div className="gslides">
+            <div id='discover'>
+              <h4 className='subtitle'>Jam #1 on DISCOVER (April 10)</h4>
+              <ReactGoogleSlides
+                width='100%'
+                height={400}
+                slidesLink="https://docs.google.com/presentation/d/1Mc1Zmte9ohaDCkruWZY0TSXdzeVh81RarCY8LSneIa8"
+                slideDuration={5}
+                showControls
+                loop
+              />
+            </div>
           </div>
         </div>
       </div>
