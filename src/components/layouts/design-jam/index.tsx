@@ -98,9 +98,12 @@ const SubmitLayout = (): JSX.Element => {
             <Button>LEARN ABOUT THE D4SD SUMMIT</Button>
           </a>
         </div>
+      </div>
+      <div className="section" id="section-5">
+        <h2 className='title'>Design Jam Slides and Videos</h2>
         <div className="gslides">
           <div id='discover'>
-            <h2>Discover</h2>
+            <h4 className='subtitle'>Jam #1 on DISCOVER (April 10)</h4>
             <ReactGoogleSlides
               width={600}
               height={400}
