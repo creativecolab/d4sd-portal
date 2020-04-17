@@ -66,9 +66,6 @@ const SubmitLayout = (): JSX.Element => {
                   &ndash;
                   {' '}
                   {details.body}
-                  {details.link && 
-                    <div><a href={'#' + details.link}>Link to session slides</a></div>
-                  }
                 </p>
               </li>
             ))}
