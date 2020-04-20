@@ -4,15 +4,13 @@ import DisplaySolution from "./solution-view";
 import { provideFeedbackContent } from "../../../assets/content";
 import { Document, Page, pdfjs } from "react-pdf";
 
-const SubmissionPreview = (): JSX.Element => {
+const SubmissionPreview = (props: any): JSX.Element => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
+  const info = props.submitInfo;
   // get these details from firebase via axios!
-  const projectName = "Lorem Ipsum";
+  const projectName = info.title;
   const teamMembers = ["Person1", "Person2", "Person3", "Person4"];
-  const problemStatement =
-    localStorage.getItem("problemStatement") ||
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  const problemStatement = info.problemStatement
   return (
     <div id="submissionPreview">
       <h4>Submission Preview</h4>

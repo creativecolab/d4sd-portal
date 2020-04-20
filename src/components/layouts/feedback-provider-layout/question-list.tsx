@@ -4,16 +4,15 @@ import { Row, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import "./styles.less";
 
-const QuestionList = (): JSX.Element => {
+const QuestionList = (props: any): JSX.Element => {
   const { register, setValue } = useForm();
 
   // Need to get these questions from Firebase
-  const question1 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-  const question2 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-  const question3 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  const question1 = props.questions[0];
+  const question2 = props.questions[1]
+
+  const question3 = props.questions[2];
+
 
   // get the three answers from local storage
   const answer1 = localStorage.getItem("question1") || "";
@@ -39,9 +38,11 @@ const QuestionList = (): JSX.Element => {
 
   return (
     <div id="questionList">
-      <h4>Question List</h4>
+      {
+        (question1 || question2 || question3) && <h4>Question List</h4>
+      }
       <Input.Group className="inputs">
-        <Row>
+        {question1 && <Row>
           <p>
             <b>Question 1: </b> {question1}
           </p>
@@ -51,35 +52,41 @@ const QuestionList = (): JSX.Element => {
             name="question1"
             defaultValue={answer1}
           />
-        </Row>
+        </Row>}
+
+        {
+          question2 &&
+          <Row>
+            <p>
+              <b>Question 2: </b> {question2}
+            </p>
+            <TextArea
+              autoSize={{ minRows: 3, maxRows: 5 }}
+              onChange={handleChange}
+              name="question2"
+              defaultValue={answer2}
+            />
+          </Row>
+        }
+
+        {
+          question3 &&
+          <Row>
+            <p>
+              <b>Question 3: </b> {question3}
+            </p>
+            <TextArea
+              autoSize={{ minRows: 3, maxRows: 5 }}
+              onChange={handleChange}
+              name="question3"
+              defaultValue={answer3}
+            />
+          </Row>
+        }
 
         <Row>
           <p>
-            <b>Question 2: </b> {question2}
-          </p>
-          <TextArea
-            autoSize={{ minRows: 3, maxRows: 5 }}
-            onChange={handleChange}
-            name="question2"
-            defaultValue={answer2}
-          />
-        </Row>
-
-        <Row>
-          <p>
-            <b>Question 3: </b> {question3}
-          </p>
-          <TextArea
-            autoSize={{ minRows: 3, maxRows: 5 }}
-            onChange={handleChange}
-            name="question3"
-            defaultValue={answer3}
-          />
-        </Row>
-
-        <Row>
-          <p>
-            <b>Other Comments: </b>
+            <b>Comments: </b>
           </p>
           <TextArea
             autoSize={{ minRows: 3, maxRows: 5 }}

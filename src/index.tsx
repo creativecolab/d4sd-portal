@@ -167,7 +167,7 @@ const App = (): JSX.Element => {
             <Route exact path="/covid19" component={CovidPage} />
             <Route
               exact
-              path="/volunteer/provide_feedback"
+              path="/volunteer/provide_feedback/:id"
               component={FeedbackProviderLayout}
             />
             <Route
