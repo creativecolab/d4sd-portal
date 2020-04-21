@@ -49,12 +49,17 @@
   background-width: 100%;
   padding-top: @margin-base-25;
   background-size: contain;
-  height: 400px;
-
+  height: auto;
+  padding-bottom: 64px;
+  
+  @media screen and (max-width: 845px) {
+    padding-bottom: 108px;
+  }
   .container {
     @media screen and (max-width: 845px) {
       margin-left: auto;
       margin-right: auto;
+      margin-top: 24px;
     }
   }
 }
