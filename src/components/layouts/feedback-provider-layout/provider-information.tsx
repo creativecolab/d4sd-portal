@@ -4,15 +4,18 @@ import {
 } from '@d4sd/components';
 import useForm from 'react-hook-form';
 
-const ProviderInformation = (): JSX.Element => {
+const ProviderInformation = (props: any): JSX.Element => {
   const { register, handleSubmit, setValue } = useForm();
-
+  const setResponseValue = props.setResponseValue;
   // get values from local storage
   const name = localStorage.getItem('name') || '';
   const email = localStorage.getItem('email') || '';
   const institution = localStorage.getItem('institution') || '';
   const expertise = localStorage.getItem('expertise') || '';
-
+  setResponseValue("name", name);
+  setResponseValue("email", email);
+  setResponseValue("institution", institution);
+  setResponseValue("expertise", expertise);
   /* eslint-disable */
   const onSubmit = (data: any) => {
     console.log(data);
@@ -24,8 +27,7 @@ const ProviderInformation = (): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
-    // eslint-disable-next-line
-    console.log(e.target.value);
+    setResponseValue(e.target.name, e.target.value);
   };
 
   useEffect(() => {

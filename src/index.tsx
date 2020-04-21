@@ -95,10 +95,14 @@ const JoinDesignJam = Loadable({
 //   loader: () => import('./components/layouts/view-feedback-layout'),
 //   loading: Loading
 // });
-// const CommunityFeedbackLayout = Loadable({
-//   loader: () => import('./components/layouts/community-feedback-layout'),
-//   loading: Loading
-// });
+const CommunityFeedbackLayout = Loadable({
+  loader: () => import('./components/layouts/community-feedback-layout'),
+  loading: Loading
+});
+const CommunityFeedbackSingleLayout = Loadable({
+  loader: () => import('./components/layouts/community-feedback-single-layout'),
+  loading: Loading
+});
 // const PreliminarySubmissionPage = Loadable({
 //   loader: () => import('./components/layouts/preliminary-submission-layout'),
 //   loading: Loading
@@ -178,6 +182,16 @@ const App = (): JSX.Element => {
               exact
               path="/submit/join-a-design-jam"
               component={JoinDesignJam}
+            />
+            <Route
+              exact
+              path="/community-feedback/:id"
+              component={CommunityFeedbackLayout}
+            />
+            <Route
+              exact
+              path="/community-feedback/:id/:feedbackID"
+              component={CommunityFeedbackSingleLayout}
             />
             {/*
               <Route

@@ -1,7 +1,9 @@
+import firebase from 'firebase';
 import app from 'firebase/app';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
 import { message } from '@d4sd/components';
+import { Feedback, FeedbackData } from './types';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -25,6 +27,55 @@ class Firebase {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
+  }
+
+  /**
+   * Get feedback for submission associated with a document id, which is associated with the row on the sheets
+   */
+  getFeedbackForSubmission = (documentID: string): Promise<Array<FeedbackData>> => {
+    return new Promise((resolve, reject) => {
+      app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
+        let data = res.data();
+        if (data) {
+          let submitID = data.submitID
+          app.firestore().collection('feedback-data').where("submissionID", "==", submitID).get().then((res) => {
+
+            let mapped: any = (res.docs).map((doc) => {
+              return {...doc.data(), documentID: doc.id}
+            });
+            let finalMap = <Array<FeedbackData>>(mapped.map((data: any) => {
+              data.created = new Date(data.created.seconds);
+            }));
+            resolve(mapped);
+          });
+        }
+        else {
+          resolve([])
+        }
+      });
+    })
+  }
+  /**
+   * Get one feedback row
+   */
+  getSingleFeedbackForSubmission = (documentID: string): Promise<FeedbackData> => {
+    return new Promise((resolve, reject) => {
+      app.firestore().collection('feedback-data').doc(documentID).get().then((res) => {
+        let data = res.data();
+        if (data) {
+          resolve(<FeedbackData>data)
+        }
+        else {
+          resolve(undefined);
+        }
+      });
+    });
+  }
+  submitFeedback = (feedback: Feedback) => {
+    return app.firestore().collection('feedback-data').add({
+      ...feedback,
+      created: firebase.firestore.Timestamp.now()
+    });
   }
 
   login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {

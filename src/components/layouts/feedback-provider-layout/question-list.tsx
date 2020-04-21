@@ -3,6 +3,7 @@ import useForm from "react-hook-form";
 import { Row, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import "./styles.less";
+import firebase from '../../../actions/firebase';
 
 const QuestionList = (props: any): JSX.Element => {
   const { register, setValue } = useForm();
@@ -13,6 +14,7 @@ const QuestionList = (props: any): JSX.Element => {
 
   const question3 = props.questions[2];
 
+  const setResponseValue = props.setResponseValue;
 
   // get the three answers from local storage
   const answer1 = localStorage.getItem("question1") || "";
@@ -22,13 +24,18 @@ const QuestionList = (props: any): JSX.Element => {
   // eslint-disable-next-line
   const comments = localStorage.getItem("comments") || "";
 
+  setResponseValue("question1", answer1);
+  setResponseValue("question2", answer2);
+  setResponseValue("question3", answer3);
+  setResponseValue("comments", comments);
+
   // Set the three questions from firebase
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
+    setResponseValue(e.target.name, e.target.value)
   };
-
   useEffect(() => {
     register({ name: "question1" });
     register({ name: "question2" });

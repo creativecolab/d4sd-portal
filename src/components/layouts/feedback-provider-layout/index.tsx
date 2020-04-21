@@ -7,16 +7,55 @@ import Header from "../../Header/index";
 import { useParams, useHistory } from 'react-router-dom'
 import Footer from "../../Footer/index";
 import { provideFeedbackContent } from "../../../assets/content";
+import firebase from '../../../actions/firebase';
+import { Feedback } from "../../../actions/types";
 
 const FeedbackProviderLayout = (): JSX.Element => {
 
   const history = useHistory();
   const params = useParams<{id: string | undefined}>();
   
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = () => {
+
     // Write to firebase
+    
+    let questionResponses = [responses.question1, responses.question2, responses.question3]
+    let feedback = {
+      name: responses.name,
+      comments: responses.comments,
+      institution: responses.institution,
+      email: responses.email,
+      expertise: responses.expertise,
+      submissionID: params.id,
+      questionResponses: questionResponses, questions: questions
+    }
+
+    console.log(feedback);
+    firebase.submitFeedback(feedback).then(() => {
+      message.success("Succesfully submited feedback!");
+    }).catch(() => {
+      message.error("There was an error with submiting, try again or contact us")
+    });
   };
+
+  const [responses, setResponses] = React.useState<any>(
+    {
+      questionResponses:[],
+      comments: "",
+      questions: [],
+      submissionID: "",
+      name: "",
+      institution: "",
+      email: "",
+      expertise: ""
+    }
+  );
+
+  const setResponseValue = (key: string, value: string) => {
+    responses[key] = value;
+    setResponses(responses);
+  }
+
   const [submitInfo, setSubmitInfo] = React.useState({});
   const [questions, setQuestions] = React.useState<Array<any>>([]);
 
@@ -41,8 +80,6 @@ const FeedbackProviderLayout = (): JSX.Element => {
         return
       }
       let vals = res.values[0];
-      
-      console.log(vals);
       setSubmitInfo({
         title: vals[3],
         problemStatement: vals[4],
@@ -57,7 +94,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
         content={provideFeedbackContent.subInfo}
         image={provideFeedbackContent.image}
       />
-      <ProviderInformation />
+      <ProviderInformation setResponseValue={setResponseValue}/>
 
       <Row className="provideInput">
         <h1>Review and Provide Input</h1>
@@ -65,16 +102,16 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
       <Row type="flex" justify="center">
         <Col xs={{ span: 20 }} md={{ span: 10 }}>
-          <SubmissionPreview submitInfo={submitInfo}/>
+          <SubmissionPreview submitInfo={submitInfo} />
         </Col>
         <Col xs={{ span: 20 }} md={{ span: 10 }}>
-          <QuestionList questions={questions} />
+          <QuestionList questions={questions} setResponseValue={setResponseValue} />
         </Col>
       </Row>
 
       <Row type="flex" justify="center" className="submit-btn-feedback">
         <Col>
-          <Button htmlType="submit" type="primary" size="large">
+          <Button htmlType="submit" type="primary" size="large" onClick={onSubmit}>
             SUBMIT
           </Button>
         </Col>

@@ -18,14 +18,14 @@ const SubmissionPreview = (props: any): JSX.Element => {
         <b>Project Name: </b>
         {projectName}
       </p>
-      <p>
+      {/* <p>
         <b>Team Members:</b>{" "}
         <ul>
           {teamMembers.map(member => (
             <li>{member}</li>
           ))}
         </ul>
-      </p>
+      </p> */}
       <Row type="flex">
         <Col xs={{ span: 24 }} md={{ span: 20 }}>
           <p>

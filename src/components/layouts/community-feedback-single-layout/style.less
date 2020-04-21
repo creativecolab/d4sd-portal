@@ -1,0 +1,27 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+.CommunityFeedbackSingleLayout {
+  margin-top: @tab-height;
+  .container {
+    margin-top: @margin-base * 2;
+    margin-bottom: @margin-base * 2;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 3rem;
+    color: @d4sd-color;
+    margin-bottom: 24px;
+  }
+  .feedback {
+    text-align: left;
+    .response {
+      .question-label {
+        font-weight: 600;
+        color: @d4sd-color;
+      }
+      .response-label {
+        font-weight: 600;
+      }
+    }
+  }
+}
