@@ -120,8 +120,6 @@ const FeedbackProviderLayout = (): JSX.Element => {
   
   React.useEffect(() => {
     const submitSecretID = params.id
-    let urlToFeedback = `${window.location.origin}/community-feedback/${submitSecretID}`
-    setReceiveFeedbackURL(urlToFeedback);
     if (feedbackCount >= 3) {
       setSuccess(true);
     }
@@ -167,7 +165,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
         <div>
           <Header
             title={provideFeedbackContent.title}
-            content={provideFeedbackContent.subInfo + ` Check out the feedback so far for this submission <a href='${receiveFeedbackURL}' target='_blank'>here</a>`}
+            content={provideFeedbackContent.subInfo}
             image={provideFeedbackContent.image}
           />
           <ProviderInformation setResponseValue={setResponseValue}/>
