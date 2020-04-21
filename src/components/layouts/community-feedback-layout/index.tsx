@@ -35,7 +35,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     if (params.id) {
       firebase.getFeedbackForSubmission(params.id)
       .then((res: Array<FeedbackData>) => {
-        console.log(res);
         if (res.length) {
           let submitID = res[0].submissionID;
           let newLink = `${window.location.origin}/volunteer/provide_feedback/${submitID}`;

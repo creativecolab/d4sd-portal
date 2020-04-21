@@ -10,20 +10,6 @@ import { joinDesignJam } from '../../../assets/content';
 import firebase from '../../../actions/firebase';
 import { Feedback, FeedbackData } from '../../../actions/types';
 
-const cardJson = {
-  cards: [
-    {
-      name: 'Jane Doe',
-      dateBack: new Date('1988-03-21'),
-      feedbacklink: 'http://google.com/'
-    },
-    {
-      name: 'Jane Doe',
-      dateBack: new Date('1988-03-21'),
-      feedbacklink: 'http://google.com/'
-    }
-  ]
-};
 
 const CommunityFeedbackLayout = (): JSX.Element => {
   const params = useParams<{feedbackID: string | undefined }>();
@@ -34,7 +20,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     if (params.feedbackID) {
       firebase.getSingleFeedbackForSubmission(params.feedbackID)
       .then((res: FeedbackData) => {
-        console.log(res);
         if (res) {
           setFeedback(res);
         }

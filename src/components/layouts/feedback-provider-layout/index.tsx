@@ -27,10 +27,8 @@ const FeedbackProviderLayout = (): JSX.Element => {
       email: responses.email,
       expertise: responses.expertise,
       submissionID: params.id,
-      questionResponses: questionResponses, questions: questions
+      questionResponses: questionResponses, questions: questions.map((q) => q ? q : "")
     }
-
-    console.log(feedback);
     firebase.submitFeedback(feedback).then(() => {
       message.success("Succesfully submited feedback!");
     }).catch(() => {

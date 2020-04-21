@@ -37,16 +37,18 @@ class Firebase {
       app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
         let data = res.data();
         if (data) {
-          let submitID = data.submitID
+          let submitID = (data.submitID).toString();
           app.firestore().collection('feedback-data').where("submissionID", "==", submitID).get().then((res) => {
 
             let mapped: any = (res.docs).map((doc) => {
               return {...doc.data(), documentID: doc.id}
             });
+            
             let finalMap = <Array<FeedbackData>>(mapped.map((data: any) => {
-              data.created = new Date(data.created.seconds);
+              data.created = new Date(data.created.seconds * 1000);
+              return data;
             }));
-            resolve(mapped);
+            resolve(finalMap);
           });
         }
         else {
@@ -76,6 +78,15 @@ class Firebase {
       ...feedback,
       created: firebase.firestore.Timestamp.now()
     });
+  }
+
+  appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
+    // goes from id 1 to 100
+    for (let i = start; i <= end; i++) {
+      app.firestore().collection('submissionIDs').add({
+        submitID: i
+      });
+    }
   }
 
   login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
