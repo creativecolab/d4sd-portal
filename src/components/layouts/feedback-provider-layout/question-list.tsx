@@ -45,9 +45,6 @@ const QuestionList = (props: any): JSX.Element => {
 
   return (
     <div id="questionList">
-      {
-        (question1 || question2 || question3) && <h4>Question List</h4>
-      }
       <Input.Group className="inputs">
         {question1 && <Row>
           <p>

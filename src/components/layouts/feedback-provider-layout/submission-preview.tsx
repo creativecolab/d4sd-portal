@@ -13,7 +13,6 @@ const SubmissionPreview = (props: any): JSX.Element => {
   const problemStatement = info.problemStatement
   return (
     <div id="submissionPreview">
-      <h4>Submission Preview</h4>
       <p>
         <b>Project Name: </b>
         {projectName}

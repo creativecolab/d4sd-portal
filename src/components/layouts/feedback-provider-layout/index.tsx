@@ -172,10 +172,10 @@ const FeedbackProviderLayout = (): JSX.Element => {
           />
           <ProviderInformation setResponseValue={setResponseValue}/>
 
-          <Row className="provideInput">
+          <Row className="provideInput" justify='center'>
             <h1>Review and Provide Input</h1>
+            <p>Feedback makes the most impact when it is positive, constructive, well-justified, and actionable</p>
           </Row>
-
           <Row type="flex" justify="center">
             <Col xs={{ span: 20 }} md={{ span: 10 }}>
               <SubmissionPreview submitInfo={submitInfo} />

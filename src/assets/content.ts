@@ -637,7 +637,7 @@ export const provideFeedbackContent = {
   title: "Provide Feedback",
   image: "involve_header",
   subInfo:
-    "Welcome and thank you for giving feedback. Start by saying a little bit about yourself. Then please review the team’s concept below on the left and provide feedback on the right. Feedback makes the most impact when it is positive, constructive, well-justified, and actionable.",
+    "Welcome and thank you for giving feedback. Start by saying a little bit about yourself. Then please review the team’s concept below on the left and provide feedback on the right. ",
   example_storyboard: "exampleStoryboard.pdf"
 };
 
