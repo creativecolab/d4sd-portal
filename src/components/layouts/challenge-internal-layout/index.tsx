@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Row, Col } from '@d4sd/components';
-import { LeftOutlined } from '@ant-design/icons';
+// import { LeftOutline } from '@ant-design/icons';
 import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { challengesContent } from '../../../assets/challenges_content';
@@ -45,7 +45,7 @@ const ChallengeInternalLayout = (): JSX.Element => {
       <NavLink to="/challenges">
         <b>
           <div className="breadcrumb">
-            <LeftOutlined style={{ fontSize: '20px' }} />
+            {/* <LeftOutline style={{ fontSize: '20px' }} /> */}
             <div style={{ marginRight: '5px' }} />
             <p>Challenges</p>
           </div>
