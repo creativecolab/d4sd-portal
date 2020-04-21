@@ -75,7 +75,7 @@ class Firebase {
       });
     });
   }
-  submitFeedback = (feedback: Feedback) => {
+  submitFeedback = async (feedback: Feedback) => {
     return app.firestore().collection('feedback-data').add({
       ...feedback,
       created: firebase.firestore.Timestamp.now()

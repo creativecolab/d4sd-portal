@@ -14,6 +14,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
   const history = useHistory();
   const params = useParams<{id: string | undefined}>();
+  const [submitState, setSubmitState] = useState('not submitted');
   const [success, setSuccess] = useState(false);
   const [submitID, setSubmitID] = useState<any>();
   const [visible, setVisible] = useState(false);
@@ -23,13 +24,12 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
   let localFeedbackCount = localStorage.getItem('d4sd-feedback-counts');
   let feedbackCount = parseInt(localFeedbackCount ? localFeedbackCount : "0");
-  if (feedbackCount >= 3) {
-
-  };
+  
 
   const onSubmit = () => {
 
     // Write to firebase
+    setSubmitState('submitting');
     
     let questionResponses = [responses.question1, responses.question2, responses.question3]
     let feedback: Feedback = {
@@ -53,7 +53,9 @@ const FeedbackProviderLayout = (): JSX.Element => {
       }
     }).catch(() => {
       message.error("There was an error with submiting, try again or contact us")
-    });
+    }).finally(() => {
+      setSubmitState('not submitted');
+    })
   };
   const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c"
   const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
@@ -120,7 +122,11 @@ const FeedbackProviderLayout = (): JSX.Element => {
     const submitSecretID = params.id
     let urlToFeedback = `${window.location.origin}/community-feedback/${submitSecretID}`
     setReceiveFeedbackURL(urlToFeedback);
-    firebase.getSubmitID(submitSecretID).then((res: any) => {
+    if (feedbackCount >= 3) {
+      setSuccess(true);
+    }
+    else {
+      firebase.getSubmitID(submitSecretID).then((res: any) => {
       const submitID = res.submitID;
       setSubmitID(submitID);
       
@@ -148,10 +154,11 @@ const FeedbackProviderLayout = (): JSX.Element => {
         });
         setQuestions([vals[11], vals[13], vals[18]])
       });
-    }).catch(() => {
-      message.error("Invalid feedback url");
-      history.push("/");
-    })
+      }).catch(() => {
+        message.error("Invalid feedback url");
+        history.push("/");
+      });
+    }
   }, [history.location]);
   return (
     <div className='FeedbackProvider'>
@@ -180,8 +187,8 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
           <Row type="flex" justify="center" className="submit-btn-feedback">
             <Col>
-              <Button htmlType="submit" type="primary" size="large" onClick={onSubmit}>
-                SUBMIT
+              <Button htmlType="submit" type="primary" size="large" onClick={onSubmit} disabled={submitState === 'submitting'}>
+                {submitState === 'submitting' ? 'SUBMITTING...' : 'SUBMIT'}
               </Button>
             </Col>
           </Row>
