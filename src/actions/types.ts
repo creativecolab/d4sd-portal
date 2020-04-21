@@ -7,8 +7,9 @@ export interface Feedback {
   comments: string,
   name?: string,
   email?: string,
-  title?: string,
-  expertise?: string
+  institution?: string,
+  expertise?: string,
+  shareEmail: boolean
 }
 // data from firebase
 export interface FeedbackData extends Feedback {

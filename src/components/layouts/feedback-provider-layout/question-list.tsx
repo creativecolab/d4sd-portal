@@ -51,7 +51,8 @@ const QuestionList = (props: any): JSX.Element => {
       <Input.Group className="inputs">
         {question1 && <Row>
           <p>
-            <b>Question 1: </b> {question1}
+            <b className='question-title'>Questions for Stakeholders: </b> <br/>
+            {question1}
           </p>
           <TextArea
             autoSize={{ minRows: 3, maxRows: 5 }}
@@ -65,7 +66,8 @@ const QuestionList = (props: any): JSX.Element => {
           question2 &&
           <Row>
             <p>
-              <b>Question 2: </b> {question2}
+              <b className='question-title'>Question for Potential Users: </b> <br/>
+              {question2}
             </p>
             <TextArea
               autoSize={{ minRows: 3, maxRows: 5 }}
@@ -80,7 +82,8 @@ const QuestionList = (props: any): JSX.Element => {
           question3 &&
           <Row>
             <p>
-              <b>Question 3: </b> {question3}
+              <b className='question-title'>Question for Experts: </b> <br/>
+              {question3}
             </p>
             <TextArea
               autoSize={{ minRows: 3, maxRows: 5 }}

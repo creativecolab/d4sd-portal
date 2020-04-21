@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Row, FeedbackActionCard, message
+  message, Button
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import CopyURL from '../../copy-url';
@@ -15,7 +15,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
   const params = useParams<{feedbackID: string | undefined }>();
   const [feedback, setFeedback] = useState<FeedbackData>();
   const location = useLocation();
-  // signupStep
+
   useEffect(() => {
     if (params.feedbackID) {
       firebase.getSingleFeedbackForSubmission(params.feedbackID)
@@ -40,7 +40,13 @@ const CommunityFeedbackLayout = (): JSX.Element => {
       {
         feedback ? 
         <div className='feedback'>
+          <a href={`${window.location}/../`} className='go-back-btn'><Button>Go Back to All Feedback</Button></a>
           <h3 className='name'>From: {feedback.name ? feedback.name : "Anonymous"}</h3>
+          <p><strong>Institution</strong>: {feedback.institution ? feedback.institution : "Not stated"}</p>
+          <p><strong>Area of Expertise</strong>: {feedback.expertise ? feedback.expertise : "Not stated"}</p>
+          { feedback.shareEmail && feedback.email &&
+            <p><strong>Email</strong>: {feedback.email}</p>
+          }
           {feedback.questions.map((question, i) => {
             return (
               <div className='response' key={`res-${i}`}>
@@ -49,6 +55,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
               </div>
             )
           })}
+          <h3><span className='comment-label'>Comments: <br></br></span> {feedback.comments ? feedback.comments : "No comments"}</h3>
         </div>
         :
         <p>Loading...</p>

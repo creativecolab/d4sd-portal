@@ -4,6 +4,7 @@ import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
 import { message } from '@d4sd/components';
 import { Feedback, FeedbackData } from './types';
+import { rejects } from 'assert';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -36,9 +37,10 @@ class Firebase {
     return new Promise((resolve, reject) => {
       app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
         let data = res.data();
+
         if (data) {
           let submitID = (data.submitID).toString();
-          app.firestore().collection('feedback-data').where("submissionID", "==", submitID).get().then((res) => {
+          app.firestore().collection('feedback-data').where("submissionID", "==", `${submitID}`).get().then((res) => {
 
             let mapped: any = (res.docs).map((doc) => {
               return {...doc.data(), documentID: doc.id}
@@ -60,7 +62,7 @@ class Firebase {
   /**
    * Get one feedback row
    */
-  getSingleFeedbackForSubmission = (documentID: string): Promise<FeedbackData> => {
+  getSingleFeedbackForSubmission = async (documentID: string): Promise<FeedbackData> => {
     return new Promise((resolve, reject) => {
       app.firestore().collection('feedback-data').doc(documentID).get().then((res) => {
         let data = res.data();
@@ -80,14 +82,45 @@ class Firebase {
     });
   }
 
-  appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
-    // goes from id 1 to 100
-    for (let i = start; i <= end; i++) {
-      app.firestore().collection('submissionIDs').add({
-        submitID: i
+  getSubmitID = async (documentID: string) => {
+    return new Promise((resolve, reject) => {
+      app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
+        let data = res.data();
+        if (data) {
+          resolve(data);
+        }
+        else {
+          reject();
+        }
       });
-    }
+    })
   }
+  getDocumentIDofSubmitID = async (submitID: string) => {
+    return new Promise((resolve, reject) => {
+      app.firestore().collection('submissionIDs').where('submitID', '==', parseInt(submitID)).get().then((res) => {
+        console.log(res.docs);
+        let data = res.docs[0];
+        if (data) {
+          resolve(data.id);
+        }
+        else {
+          reject();
+        }
+      });
+    })
+  }
+
+  /**
+   * Do not use
+   */
+  // appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
+  //   // goes from id 1 to 100
+  //   for (let i = start; i <= end; i++) {
+  //     app.firestore().collection('submissionIDs').add({
+  //       submitID: i
+  //     });
+  //   }
+  // }
 
   login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
     this

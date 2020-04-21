@@ -41,15 +41,12 @@ const SubmissionPreview = (props: any): JSX.Element => {
           </p>
           <div id="pdfSection">
             <a
-              href={`/${provideFeedbackContent.example_storyboard}`}
+              href={info.pdf}
               target="_blank"
               rel="noopener noreferrer"
+              className='proposal'
             >
-              <Document
-                file={`${process.env.PUBLIC_URL}/${provideFeedbackContent.example_storyboard}`}
-              >
-                <Page width={1500} pageNumber={1} />
-              </Document>
+              Link To Proposal
             </a>
           </div>
         </Col>

@@ -1,99 +1,140 @@
 @import "../../../styles/vars.less";
-.inputs {
-  p {
+.FeedbackProvider-Modal {
+  .modal-title {
+    text-align: left;
+    margin-bottom: @margin-base * 2;
+  }
+  .d4sdbutton {
+    margin-bottom: 8px;
+  }
+}
+.FeedbackProvider {
+  .container {
+    padding-top: 6rem;
+    .message {
+      font-size: 2.4rem;
+    }
+  }
+  .inputs {
+    p {
+      margin-top: @margin-base-1;
+    }
+  }
+  .header {
+    background-color: #e4f2ff;
+    height: @header-height;
+
+    .subtxt {
+      padding-top: @margin-base-2;
+    }
+  }
+
+  .provideInput {
+    margin: @margin-base-2 0 @margin-base-1 0;
+  }
+
+  .AboutYou {
+    background: @d4sd-color-bg;
+    padding: @margin-base-2 0 @margin-base-2 0;
+
+    .p {
+      margin-top: @margin-base-1 / 2;
+    }
+
+    form {
+      margin-top: @margin-base-1 / 2;
+    }
+
+    h5 {
+      margin-bottom: @margin-base-1 / 2;
+    }
+    .form {
+      padding: 24px;
+      .label {
+        @media screen and (max-width: 600px) {
+          margin-top: 24px;
+        }
+      }
+      margin: auto;
+    }
+    .share-email {
+      font-size: 2rem;
+      margin-top: 12px;
+    }
+    .shareEmailCheck { 
+      display: inline-block;
+      margin-left: 12px;
+    }
+    
+  }
+
+  .probStatement {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: @margin-base-1 / 2;
+  }
+
+  .submit-btn-feedback {
+    margin-bottom: @margin-base-2;
     margin-top: @margin-base-1;
   }
-}
-.header {
-  background-color: #e4f2ff;
-  height: @header-height;
 
-  .subtxt {
-    padding-top: @margin-base-2;
-  }
-}
-
-.provideInput {
-  margin: @margin-base-2 0 @margin-base-1 0;
-}
-
-.AboutYou {
-  background: @d4sd-color-bg;
-  padding: @margin-base-2 0 @margin-base-2 0;
-
-  .p {
-    margin-top: @margin-base-1 / 2;
+  .proposed-concept {
+    margin-top: @margin-base-1;
   }
 
-  form {
-    margin-top: @margin-base-1 / 2;
-  }
+  #submissionPreview {
+    margin-bottom: @margin-base-2;
 
-  h5 {
-    margin-bottom: @margin-base-1 / 2;
-  }
-}
-
-.probStatement {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: @margin-base-1 / 2;
-}
-
-.submit-btn-feedback {
-  margin-bottom: @margin-base-2;
-  margin-top: @margin-base-1;
-}
-
-.proposed-concept {
-  margin-top: @margin-base-1;
-}
-
-#submissionPreview {
-  margin-bottom: @margin-base-2;
-
-  > p {
-    margin-bottom: @margin-base-1;
-  }
-  h4 {
-    color: @d4sd-color;
-    margin-bottom: @margin-base-1;
-  }
-  #pdfSection {
-    padding-top: 0;
-
-    .title {
-      text-align: left;
+    > p {
+      margin-bottom: @margin-base-1;
     }
+    h4 {
+      color: @d4sd-color;
+      margin-bottom: @margin-base-1;
+    }
+    .proposal {
+      font-size: 2.2rem;
+    }
+    #pdfSection {
+      padding-top: 0;
 
-    .react-pdf__Document {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      width: 60% !important;
-      margin: auto;
-
-      p {
-        text-align: center;
-        font-size: 9pt;
+      .title {
+        text-align: left;
       }
 
-      .react-pdf__Page {
-        display: flex;
-        justify-content: center;
+      .react-pdf__Document {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 60% !important;
+        margin: auto;
 
-        .react-pdf__Page__canvas {
-          width: 100% !important;
-          height: auto !important;
+        p {
+          text-align: center;
+          font-size: 9pt;
         }
 
-        .react-pdf__Page__textContent {
-          display: none;
+        .react-pdf__Page {
+          display: flex;
+          justify-content: center;
+
+          .react-pdf__Page__canvas {
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .react-pdf__Page__textContent {
+            display: none;
+          }
         }
       }
     }
   }
-}
 
-#questionList {
-  h4 {
-    color: @d4sd-color;
+  #questionList {
+    h4 {
+      color: @d4sd-color;
+    }
+    .question-title {
+      color: @b2;
+    }
   }
 }
