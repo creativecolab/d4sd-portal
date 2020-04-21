@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  Row, Header, FeedbackActionCard
+  Row, FeedbackActionCard, message
 } from '@d4sd/components';
+import Header from '../../Header/index';
 import CopyURL from '../../copy-url';
 import './style.less';
+import { useParams, useHistory, useLocation } from 'react-router-dom'
+import { joinDesignJam } from '../../../assets/content';
+import firebase from '../../../actions/firebase';
+import { Feedback, FeedbackData } from '../../../actions/types';
 
 const cardJson = {
   cards: [
@@ -21,23 +26,54 @@ const cardJson = {
 };
 
 const CommunityFeedbackLayout = (): JSX.Element => {
-  // eslint-disable-next-line
+  const params = useParams<{id: string | undefined }>();
   const [linkToFeedback, setLinkToFeedback] = useState('LINK TO FEEDBACK');
+  const location = useLocation();
+  const [feedbackCards, setFeedbackCards] = useState({cards: []});
   // signupStep
+  useEffect(() => {
+    if (params.id) {
+      let newLink = `${window.location.origin}/volunteer/provide_feedback/${params.id}`;
+      setLinkToFeedback(newLink);
+      firebase.getFeedbackForSubmission(params.id)
+      .then((res: Array<FeedbackData>) => {
+        if (res.length) {
+          let submitID = res[0].submissionID;
+          
+          let newContent = {
+            cards: []
+          }
+          let cards: any = [];
+          res.forEach((feedback) => {
+            cards.push({
+              name: feedback.name ? feedback.name : "Anonymous",
+              dateBack: feedback.created,
+              feedbacklink: `${window.location.href}/${feedback.documentID}`
+            });
+          });
+          newContent.cards = cards;
+          setFeedbackCards(newContent);
+        }
+        else {
+          message.warn("You have received no feedback yet! Check again later");
+        }
+      });
+    }
+  }, []);
   return (
     <div>
       <div className="CommunityFeedbackLayout">
-        <Header
-          title="Community Feedback"
-          back="Back to workspace"
-          handleBackClick={undefined}
-        />
+      <Header
+        title={"Community Feedback"}
+        // content={joinDesignJam.content1}
+        image={joinDesignJam.image}
+      />
 
         <div className="content">
           <Row className="row">
             <p>
               Share the link below to more people to if you want to get more
-              feedback:
+              feedback on this submission:
             </p>
           </Row>
           <Row className="row">
@@ -53,7 +89,11 @@ const CommunityFeedbackLayout = (): JSX.Element => {
           </Row>
         </div>
         <div className="feedback">
-          { cardJson.cards.map((data) => <FeedbackActionCard card={data} />)}
+          { feedbackCards ? 
+            feedbackCards.cards.map((data, i) => <FeedbackActionCard key={`feedback-${i}`} card={data} />)
+            :
+            <p>Loading Feedback...</p>
+          }
         </div>
       </div>
     </div>

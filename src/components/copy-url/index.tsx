@@ -8,13 +8,11 @@ interface IPrelimFinishCard {
 }
 
 const CopyURL = (props: {link: string}): JSX.Element => {
-  // eslint-disable-next-line
-  const [linkToFeedback, setLinkToFeedback] = useState(props.link);
   /* eslint-disable */
   const setURL = (): void => {
     const inputField = document.getElementById('copyLink');
     // @ts-ignore
-    inputField.value = linkToFeedback;
+    inputField.value = props.link;
   };
 
   const copyURL = (): void => {
@@ -30,7 +28,7 @@ const CopyURL = (props: {link: string}): JSX.Element => {
   useEffect(() => {
     setURL();
   // eslint-disable-next-line
-  }, []);
+  }, [props.link]);
 
   // eslint-disable-next-line
   const history = useHistory();

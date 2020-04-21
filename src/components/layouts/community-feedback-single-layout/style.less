@@ -1,0 +1,39 @@
+@import '../../../styles/vars.less';
+@import '../../../styles/mixins.less';
+.CommunityFeedbackSingleLayout {
+  margin-top: @tab-height;
+  .container {
+    margin-top: @margin-base * 4;
+    margin-bottom: @margin-base * 8;
+    .go-back-btn {
+      margin-bottom: @margin-base * 2;
+      display: inline-block;
+    }
+  }
+  .name {
+    font-weight: 600;
+    font-size: 3rem;
+    color: @d4sd-color;
+    margin-bottom: 24px;
+  }
+  .comment-label {
+    font-weight: 600;
+    color: @d4sd-color;
+  }
+  .feedback {
+    text-align: left;
+    .response {
+      h3 {
+        color: @b1;
+        font-weight: 400;
+      }
+      .question-label {
+        font-weight: 600;
+        color: @d4sd-color;
+      }
+      .response-label {
+        font-weight: 600;
+      }
+    }
+  }
+}
