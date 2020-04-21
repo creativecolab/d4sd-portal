@@ -94,6 +94,8 @@ const QuestionList = (props: any): JSX.Element => {
         <Row>
           <p>
             <b>Comments: </b>
+            <br></br>
+            Please provide general feedback for this idea
           </p>
           <TextArea
             autoSize={{ minRows: 3, maxRows: 5 }}
