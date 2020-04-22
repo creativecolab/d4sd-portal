@@ -27,6 +27,14 @@ class Firebase {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
+    app.auth().signInAnonymously().catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      message.error("there was an issue with linking to our datbase, try again later")
+      console.error(errorMessage);
+    });
+    
   }
 
   /**
