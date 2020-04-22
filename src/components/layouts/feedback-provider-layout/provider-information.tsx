@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Row, Col, Form, Input, Checkbox
 } from '@d4sd/components';
 
 const ProviderInformation = (props: any): JSX.Element => {
   const setResponseValue = props.setResponseValue;
+  
   // get values from local storage
   const name = localStorage.getItem('name') || '';
   const email = localStorage.getItem('email') || '';
@@ -19,12 +20,6 @@ const ProviderInformation = (props: any): JSX.Element => {
   setResponseValue("institution", institution);
   setResponseValue("expertise", expertise);
   setResponseValue("shareEmail", shareEmail);
-  /* eslint-disable */
-  const onSubmit = (data: any) => {
-    console.log(data);
-    // store information to Firebase
-  };
-  /* eslint-enable */
 
   // store to state
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
