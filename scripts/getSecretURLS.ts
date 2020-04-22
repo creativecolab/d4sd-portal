@@ -1,7 +1,7 @@
 import Firebase from './firebase';
 import fs from 'fs';
 
-let serviceAccount = require("./privatekey.prod.json");
+let serviceAccount = require("./privatekey.staging.json");
 let app = new Firebase(serviceAccount)
 app.getSecretURLs().then((rows: any)=> {
   let csv = `"${rows.join('"\n"').replace(/,/g, '","')}"`;
