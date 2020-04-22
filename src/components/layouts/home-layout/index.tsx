@@ -1,13 +1,11 @@
-import React, { useRef } from 'react';
-import {
-  Row, Col, Button, Carousel
-} from '@d4sd/components';
-import { useHistory, NavLink } from 'react-router-dom';
-import './style.less';
-import '../../../styles/containers.less';
-import { homeContent } from '../../../assets/content';
-import Footer from '../../Footer';
-import { contentHTML } from '../../../actions';
+import React, { useRef } from "react";
+import { Row, Col, Button, Carousel } from "@d4sd/components";
+import { useHistory, NavLink } from "react-router-dom";
+import "./style.less";
+import "../../../styles/containers.less";
+import { homeContent } from "../../../assets/content";
+import Footer from "../../Footer";
+import { contentHTML } from "../../../actions";
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -29,7 +27,7 @@ const logoCarouselSettings = {
 
 function isApril(date: any) {
   if (date === 10) {
-    return '10+';
+    return "10+";
   }
   return date;
 }
@@ -44,7 +42,7 @@ const HomeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -69,16 +67,15 @@ const HomeLayout = (): JSX.Element => {
             {homeContent.summit_banner.key_dates.map((date, i) => (
               <div className={`date-${i + 1}`} key={`${date.key}_div`}>
                 <p className="date">
-                  {date.date.toDateString().substring(4, 7)}
-                  {' '}
+                  {date.date.toDateString().substring(4, 7)}{" "}
                   {isApril(date.date.getDate())}
                 </p>
               </div>
             ))}
           </div>
-          <div style={{ marginRight: '15px' }} />
+          <div style={{ marginRight: "15px" }} />
           <div className="labels">
-            {homeContent.summit_banner.key_dates.map((date) => (
+            {homeContent.summit_banner.key_dates.map(date => (
               // eslint-disable-next-line
               <a
                 href=""
@@ -93,31 +90,6 @@ const HomeLayout = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="action-buttons">
-        <Button
-          type="primary"
-          size="medium"
-          onClick={scrollToRef}
-          className="button-container button learn-more"
-        >
-          LEARN MORE
-        </Button>
-        <a
-          href="http://eepurl.com/c2kFon"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button-container"
-        >
-          <Button
-            type="primary-outline"
-            size="medium"
-            style={{ width: '100%' }}
-            className="button outline"
-          >
-            JOIN THE NEWSLETTER!
-          </Button>
-        </a>
       </div>
     </div>
   );
@@ -141,20 +113,43 @@ const HomeLayout = (): JSX.Element => {
             {/* eslint-disable-next-line */}
             <a
               href=""
-              onClick={(): void => history.push('/submit/join-a-design-jam')}
+              onClick={(): void => history.push("/submit/join-a-design-jam")}
             >
               {homeContent.content1_2}
             </a>
             {homeContent.content1_3}
             {homeContent.content1_4}
             {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/submit')}>
+            <a href="" onClick={(): void => history.push("/submit")}>
               {homeContent.content1_5}
             </a>
             {homeContent.content1_6}
           </p>
-          <br />
-          <br />
+          <div className="action-buttons">
+            <Button
+              type="primary"
+              size="medium"
+              onClick={scrollToRef}
+              className="button-container button learn-more"
+            >
+              LEARN MORE
+            </Button>
+            <a
+              href="http://eepurl.com/c2kFon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-container"
+            >
+              <Button
+                type="primary-outline"
+                size="medium"
+                style={{ width: "100%" }}
+                className="button outline"
+              >
+                JOIN THE NEWSLETTER!
+              </Button>
+            </a>
+          </div>
           <SummitBanner />
         </div>
       </div>
@@ -179,7 +174,7 @@ const HomeLayout = (): JSX.Element => {
                   <img
                     className="picitems"
                     src={role.image}
-                    style={{ width: '75%' }}
+                    style={{ width: "75%" }}
                     alt=""
                   />
                 </NavLink>
@@ -240,7 +235,7 @@ const HomeLayout = (): JSX.Element => {
             md={6}
             xs={9}
           >
-            <img src={img} style={{ width: '98%' }} alt="" />
+            <img src={img} style={{ width: "98%" }} alt="" />
           </Col>
         ))}
       </Row>
@@ -265,7 +260,7 @@ const HomeLayout = (): JSX.Element => {
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>
-            <img src={logo} style={{ width: '100%' }} alt="" />
+            <img src={logo} style={{ width: "100%" }} alt="" />
           </div>
         ))}
       </Carousel>
