@@ -15,6 +15,8 @@ const SubmissionPreview = (props: any): JSX.Element => {
         <br />
         <b>Designer: </b>
         {info.name}
+        <br />
+        {info.org && <span><b>School/Organization:</b> {info.org}</span>}
       </p>
       <Row type="flex">
         <Col xs={{ span: 24 }} md={{ span: 20 }}>
