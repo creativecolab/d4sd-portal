@@ -196,8 +196,9 @@ const HomeLayout = (): JSX.Element => {
                   backgroundImage: `url(${challenge.src})`
                 }}
               >
+                <div id="opacity"></div>
                 <div className="container">
-                  <div className="paragraph">
+                  <div className="paragraph" style={{zIndex: 100}}>
                     <h3>{challenge.header}</h3>
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
