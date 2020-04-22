@@ -18,9 +18,6 @@ const FeedbackProviderLayout = (): JSX.Element => {
   const [success, setSuccess] = useState(false);
   const [submitID, setSubmitID] = useState<any>();
   const [visible, setVisible] = useState(false);
-  const [receiveFeedbackURL, setReceiveFeedbackURL] = useState("");
-
-  const [newFeedbackLink, setNewFeedbackLink] = useState("");
 
   let localFeedbackCount = localStorage.getItem('d4sd-feedback-counts');
   let feedbackCount = parseInt(localFeedbackCount ? localFeedbackCount : "0");
@@ -28,7 +25,6 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
   const onSubmit = () => {
 
-    // Write to firebase
     setSubmitState('submitting');
     
     let questionResponses = [responses.question1, responses.question2, responses.question3]
@@ -51,6 +47,10 @@ const FeedbackProviderLayout = (): JSX.Element => {
       else {
         setVisible(true);
       }
+      localStorage.removeItem('question1');
+      localStorage.removeItem('question2');
+      localStorage.removeItem('question3');
+      localStorage.removeItem('comments');
     }).catch(() => {
       message.error("There was an error with submiting, try again or contact us")
     }).finally(() => {
@@ -86,7 +86,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
 
         // get the secret submit id and redirect
         firebase.getDocumentIDofSubmitID(newSubmissionID.toString()).then((secretSubmitID) => {
-          history.push(`/volunteer/provide_feedback/${secretSubmitID}`);
+          window.location.href = `/volunteer/provide_feedback/${secretSubmitID}`;
         }).catch(() => {
           message.error("Sorry, we got an error when trying get more submissions for feedback")
         }).finally(() => {
@@ -145,10 +145,14 @@ const FeedbackProviderLayout = (): JSX.Element => {
           return
         }
         let vals = res.values[0];
+
+        // hardcoded index values based on the sheets
         setSubmitInfo({
           title: vals[3],
           problemStatement: vals[4],
-          pdf: vals[6]
+          pdf: vals[6],
+          name: vals[1],
+          stakeholders: vals[5]
         });
         setQuestions([vals[11], vals[13], vals[18]])
       });

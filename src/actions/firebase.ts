@@ -32,7 +32,7 @@ class Firebase {
       var errorCode = error.code;
       var errorMessage = error.message;
       message.error("there was an issue with linking to our datbase, try again later")
-      console.error(errorMessage);
+      console.error(errorCode, errorMessage);
     });
     
   }
@@ -48,16 +48,22 @@ class Firebase {
         if (data) {
           let submitID = (data.submitID).toString();
           app.firestore().collection('feedback-data').where("submissionID", "==", `${submitID}`).get().then((res) => {
-
-            let mapped: any = (res.docs).map((doc) => {
-              return {...doc.data(), documentID: doc.id}
-            });
-            
-            let finalMap = <Array<FeedbackData>>(mapped.map((data: any) => {
-              data.created = new Date(data.created.seconds * 1000);
-              return data;
-            }));
-            resolve(finalMap);
+            if (res.docs.length) {
+              console.log(res.docs)
+              let mapped: any = (res.docs).map((doc) => {
+                return {...doc.data(), documentID: doc.id}
+              });
+              
+              // NOTE, do not remove the outside <> of Array<FeedbackData>, it causes a wierd typescript issues that makes mapped.map return a higher dimensional array
+              let finalMap = (<Array<FeedbackData>>(mapped.map((data: any) => {
+                data.created = new Date(data.created.seconds * 1000);
+                return data;
+              })));
+              resolve(finalMap);
+            }
+            else {
+              resolve([])
+            }
           });
         }
         else {

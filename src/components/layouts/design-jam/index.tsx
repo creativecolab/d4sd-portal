@@ -102,7 +102,7 @@ const SubmitLayout = (): JSX.Element => {
       <div className="section" id="section-5">
         <div className='container'>
           <h2 className='title'>Design Jam Slides and Videos</h2>
-          <p>The D4SD Jam Sessions are free, online, public events. In case you cannot join the live sessions on Fridays, the videos from each session will be recorded and posted <a href='https://www.youtube.com/playlist?list=PLoWuaQlGD1dlk4AmbjeVJ4CI8lTjNE2kr' target='_blank'>here on Youtube</a>. The slides for the plenary sessions are also posted below.</p>
+          <p>The D4SD Jam Sessions are free, online, public events. In case you cannot join the live sessions on Fridays, the videos from each session will be recorded and posted <a href='https://www.youtube.com/playlist?list=PLoWuaQlGD1dlk4AmbjeVJ4CI8lTjNE2kr' target='_blank' rel="noopener noreferrer">here on Youtube</a>. The slides for the plenary sessions are also posted below.</p>
           <div className="gslides">
             <div id='discover'>
               <h4 className='subtitle'>Jam #1 on DISCOVER (April 10)</h4>
