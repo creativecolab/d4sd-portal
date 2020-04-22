@@ -1,34 +1,25 @@
 import React from "react";
 import { Row, Col } from "@d4sd/components";
-import DisplaySolution from "./solution-view";
-import { provideFeedbackContent } from "../../../assets/content";
-import { Document, Page, pdfjs } from "react-pdf";
 
 const SubmissionPreview = (props: any): JSX.Element => {
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const info = props.submitInfo;
-  // get these details from firebase via axios!
+
   const projectName = info.title;
-  const teamMembers = ["Person1", "Person2", "Person3", "Person4"];
+
   const problemStatement = info.problemStatement
   return (
     <div id="submissionPreview">
       <p>
         <b>Project Name: </b>
         {projectName}
+        <br />
+        <b>Designer: </b>
+        {info.name}
       </p>
-      {/* <p>
-        <b>Team Members:</b>{" "}
-        <ul>
-          {teamMembers.map(member => (
-            <li>{member}</li>
-          ))}
-        </ul>
-      </p> */}
       <Row type="flex">
         <Col xs={{ span: 24 }} md={{ span: 20 }}>
           <p>
-            <b>1. Problem Statement</b>
+            <b>Team's Problem Statement</b>
           </p>
           <div className="probStatement">{problemStatement}</div>
         </Col>
@@ -36,7 +27,7 @@ const SubmissionPreview = (props: any): JSX.Element => {
       <Row className="proposed-concept">
         <Col xs={{ span: 24 }} md={{ span: 20 }}>
           <p>
-            <b>2. Proposed Initial Concepts</b>
+            <b>Team's Proposed Initial Concepts</b>
           </p>
           <div id="pdfSection">
             <a
@@ -49,6 +40,12 @@ const SubmissionPreview = (props: any): JSX.Element => {
             </a>
           </div>
         </Col>
+      </Row>
+      <Row>
+        <p><b>Stakeholders this team wants input from:</b>
+        <br />
+        {info.stakeholders}
+        </p>
       </Row>
     </div>
   );

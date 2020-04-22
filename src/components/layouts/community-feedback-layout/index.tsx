@@ -5,32 +5,16 @@ import {
 import Header from '../../Header/index';
 import CopyURL from '../../copy-url';
 import './style.less';
-import { useParams, useHistory, useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { joinDesignJam } from '../../../assets/content';
 import firebase from '../../../actions/firebase';
-import { Feedback, FeedbackData } from '../../../actions/types';
-
-const cardJson = {
-  cards: [
-    {
-      name: 'Jane Doe',
-      dateBack: new Date('1988-03-21'),
-      feedbacklink: 'http://google.com/'
-    },
-    {
-      name: 'Jane Doe',
-      dateBack: new Date('1988-03-21'),
-      feedbacklink: 'http://google.com/'
-    }
-  ]
-};
+import { FeedbackData } from '../../../actions/types';
 
 const CommunityFeedbackLayout = (): JSX.Element => {
   const params = useParams<{id: string | undefined }>();
   const [linkToFeedback, setLinkToFeedback] = useState('LINK TO FEEDBACK');
-  const location = useLocation();
   const [feedbackCards, setFeedbackCards] = useState({cards: []});
-  // signupStep
+
   useEffect(() => {
     if (params.id) {
       let newLink = `${window.location.origin}/volunteer/provide_feedback/${params.id}`;
@@ -38,7 +22,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
       firebase.getFeedbackForSubmission(params.id)
       .then((res: Array<FeedbackData>) => {
         if (res.length) {
-          let submitID = res[0].submissionID;
           
           let newContent = {
             cards: []
