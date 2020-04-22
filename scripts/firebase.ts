@@ -1,6 +1,6 @@
 import admin from "firebase-admin";
 import fetch from 'node-fetch';
-let serviceAccount = require("./privatekey.json");
+let serviceAccount = require("./privatekey.staging.json");
 
 let app = admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -20,17 +20,16 @@ class Firebase {
     this.db = app.firestore();
   }
 
-  /**
-   * Do not use
-   */
-  // appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
-  //   // goes from id 1 to 100
-  //   for (let i = start; i <= end; i++) {
-  //     app.firestore().collection('submissionIDs').add({
-  //       submitID: i
-  //     });
-  //   }
-  // }
+  appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
+    // goes from id 1 to 100
+    for (let i = start; i <= end; i++) {
+      app.firestore().collection('submissionIDs').add({
+        submitID: i
+      }).then(() => {console.log("Added " + i)}).catch((error) => {
+        console.error(error);
+      })
+    }
+  }
 
   // script to get secret urls and the submission emails
   getSecretURLs = () => {
@@ -54,23 +53,28 @@ class Firebase {
         
         fetch(uri).then((res) => res.json()).then((res: any) => {
           let vals = res.values;
-          for (let i = 0; i < vals.length; i++) {
-            data[i].email = vals[i][0];
+          if (data.length >= vals.length) {
+            for (let i = 0; i < vals.length; i++) {
+              data[i].email = vals[i][0];
+            }
+            data = data.splice(0, vals.length);
+
+            // create the csv rows
+            let rows = [['email', 'feedback link', 'view feedback link', 'secret ID', 'response row number on sheets']];
+            rows.push(...data.map((info: any) => {
+              // @ts-ignore
+              return [info.email, info.feedbackLink, info.viewFeedbackLink, info.secretID, info.submitID]
+            }));
+
+            let csvContent = "data:text/csv;charset=utf-8," 
+            + rows.map(e => e.join(",")).join("\n");
+            // var encodedUri = encodeURI(csvContent);
+            // window.open(encodedUri);
+            console.log(rows);
           }
-          data = data.splice(0, vals.length);
-
-          // create the csv rows
-          let rows = [['email', 'feedback link', 'view feedback link', 'secret ID', 'response row number on sheets']];
-          rows.push(...data.map((info: any) => {
-            // @ts-ignore
-            return [info.email, info.feedbackLink, info.viewFeedbackLink, info.secretID, info.submitID]
-          }));
-
-          let csvContent = "data:text/csv;charset=utf-8," 
-          + rows.map(e => e.join(",")).join("\n");
-          // var encodedUri = encodeURI(csvContent);
-          // window.open(encodedUri);
-          console.log(rows);
+          else {
+            console.error("need to initialize secret IDs")
+          }
         });
       }
     });
