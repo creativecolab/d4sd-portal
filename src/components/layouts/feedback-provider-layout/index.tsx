@@ -152,7 +152,8 @@ const FeedbackProviderLayout = (): JSX.Element => {
           problemStatement: vals[4],
           pdf: vals[6],
           name: vals[1],
-          stakeholders: vals[5]
+          stakeholders: vals[5],
+          org: vals[17]
         });
         setQuestions([vals[11], vals[13], vals[18]])
       });
