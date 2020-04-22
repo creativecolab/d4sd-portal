@@ -183,7 +183,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
             <h1>Review and Provide Input</h1>
             <p>Feedback makes the most impact when it is positive, constructive, well-justified, and actionable</p>
           </Row>
-          <Row type="flex" justify="center">
+          <Row type="flex" justify="center" gutter={{md: 48, xs: 24}} style={{marginLeft: '0px', marginRight: '0px'}}>
             <Col xs={{ span: 20 }} md={{ span: 10 }}>
               <SubmissionPreview submitInfo={submitInfo} />
             </Col>
