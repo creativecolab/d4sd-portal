@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@d4sd/components';
 import './style.less';
@@ -10,8 +10,7 @@ interface IPrelimFinishCard {
 const CopyURL = (props: {link: string}): JSX.Element => {
   /* eslint-disable */
   const setURL = (): void => {
-    const inputField = document.getElementById('copyLink');
-    // @ts-ignore
+    const inputField: any = document.getElementById('copyLink');
     inputField.value = props.link;
   };
 

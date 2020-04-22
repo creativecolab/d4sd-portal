@@ -3,18 +3,16 @@ import {
   message, Button
 } from '@d4sd/components';
 import Header from '../../Header/index';
-import CopyURL from '../../copy-url';
 import './style.less';
-import { useParams, useHistory, useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { joinDesignJam } from '../../../assets/content';
 import firebase from '../../../actions/firebase';
-import { Feedback, FeedbackData } from '../../../actions/types';
+import { FeedbackData } from '../../../actions/types';
 
 
 const CommunityFeedbackLayout = (): JSX.Element => {
   const params = useParams<{feedbackID: string | undefined }>();
   const [feedback, setFeedback] = useState<FeedbackData>();
-  const location = useLocation();
 
   useEffect(() => {
     if (params.feedbackID) {
@@ -33,7 +31,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     <div className="CommunityFeedbackSingleLayout">
       <Header
         title={"Community Feedback"}
-        // content={joinDesignJam.content1}
         image={joinDesignJam.image}
       />
       <div className='container'>

@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import useForm from "react-hook-form";
+import React from "react";
 import { Row, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import "./styles.less";
-import firebase from '../../../actions/firebase';
 
 const QuestionList = (props: any): JSX.Element => {
-  const { register, setValue } = useForm();
 
-  // Need to get these questions from Firebase
   const question1 = props.questions[0];
   const question2 = props.questions[1]
-
   const question3 = props.questions[2];
 
   const setResponseValue = props.setResponseValue;
@@ -21,7 +16,6 @@ const QuestionList = (props: any): JSX.Element => {
   const answer2 = localStorage.getItem("question2") || "";
   const answer3 = localStorage.getItem("question3") || "";
 
-  // eslint-disable-next-line
   const comments = localStorage.getItem("comments") || "";
 
   setResponseValue("question1", answer1);
@@ -29,26 +23,18 @@ const QuestionList = (props: any): JSX.Element => {
   setResponseValue("question3", answer3);
   setResponseValue("comments", comments);
 
-  // Set the three questions from firebase
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-    setValue(e.target.name, e.target.value);
     localStorage.setItem(e.target.name, e.target.value);
     setResponseValue(e.target.name, e.target.value)
   };
-  useEffect(() => {
-    register({ name: "question1" });
-    register({ name: "question2" });
-    register({ name: "question3" });
-    register({ name: "comments" });
-  }, []);
 
   return (
     <div id="questionList">
-      <Input.Group className="inputs">
+      <Input.Group className="inputs" key={props.submitID}>
         {question1 && <Row>
           <p>
-            <b className='question-title'>Questions for Stakeholders: </b> <br/>
+            <b className='question-title'>Question for Stakeholders: </b> <br/>
             {question1}
           </p>
           <TextArea
