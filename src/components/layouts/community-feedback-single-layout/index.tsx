@@ -47,7 +47,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
           {feedback.questions.map((question, i) => {
             return (
               <div className='response' key={`res-${i}`}>
-                <h3><span className='question-label'>Question {i + 1}:</span> {question}</h3>
+                <h3 className='question'><span className='question-label'>Question {i + 1}:</span> {question}</h3>
                 <p><span className='response-label'>Response</span>: {feedback.questionResponses[i] ? feedback.questionResponses[i] : "No response"}</p>
               </div>
             )
