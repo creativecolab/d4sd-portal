@@ -1,11 +1,6 @@
 import admin from "firebase-admin";
 import fetch from 'node-fetch';
-let serviceAccount = require("./privatekey.staging.json");
 
-let app = admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://d4sd-2020.firebaseio.com"
-});
 
 class Firebase {
   // eslint-disable-next-line
@@ -14,18 +9,23 @@ class Firebase {
   // eslint-disable-next-line
   db: any;
 
-  constructor() {
+  app: any;
 
-    this.auth = app.auth();
-    this.db = app.firestore();
+  constructor(serviceAccount: any) {
+    this.app = admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+      databaseURL: "https://d4sd-2020.firebaseio.com"
+    });
+    this.auth = this.app.auth();
+    this.db = this.app.firestore();
   }
 
   appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
     // goes from id 1 to 100
     for (let i = start; i <= end; i++) {
-      app.firestore().collection('submissionIDs').add({
+      this.app.firestore().collection('submissionIDs').add({
         submitID: i
-      }).then(() => {console.log("Added " + i)}).catch((error) => {
+      }).then(() => {console.log("Added " + i)}).catch((error: Error) => {
         console.error(error);
       })
     }
@@ -33,7 +33,7 @@ class Firebase {
 
   // script to get secret urls and the submission emails
   getSecretURLs = () => {
-    this.db.collection('submissionIDs').where('submitID', '<', 100).get().then((res: any) => {
+    return this.db.collection('submissionIDs').where('submitID', '<', 100).get().then((res: any) => {
       let data = res.docs.map((doc: any) => {
         return {
           secretID: doc.id,
@@ -51,7 +51,7 @@ class Firebase {
         // get emails
         let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
         
-        fetch(uri).then((res) => res.json()).then((res: any) => {
+        return fetch(uri).then((res) => res.json()).then((res: any) => {
           let vals = res.values;
           if (data.length >= vals.length) {
             for (let i = 0; i < vals.length; i++) {
@@ -70,7 +70,7 @@ class Firebase {
             + rows.map(e => e.join(",")).join("\n");
             // var encodedUri = encodeURI(csvContent);
             // window.open(encodedUri);
-            console.log(rows);
+            return rows;
           }
           else {
             console.error("need to initialize secret IDs")
@@ -81,4 +81,4 @@ class Firebase {
   }
 }
 
-export default new Firebase();
+export default Firebase;
