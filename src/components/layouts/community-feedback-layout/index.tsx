@@ -28,10 +28,17 @@ const CommunityFeedbackLayout = (): JSX.Element => {
           }
           let cards: any = [];
           res.forEach((feedback) => {
+            let url = window.location.href;
+            if (url[url.length - 1] === '/') {
+              url = `${url}${feedback.documentID}`
+            }
+            else {
+              url = `${url}/${feedback.documentID}`
+            }
             cards.push({
               name: feedback.name ? feedback.name : "Anonymous",
               dateBack: feedback.created,
-              feedbacklink: `${window.location.href}/${feedback.documentID}`
+              feedbacklink: url
             });
           });
           newContent.cards = cards;

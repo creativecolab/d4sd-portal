@@ -34,7 +34,7 @@ const QuestionList = (props: any): JSX.Element => {
       <Input.Group className="inputs" key={props.submitID}>
         {question1 && <Row>
           <p>
-            <b className='question-title'>Question for Stakeholders: </b> <br/>
+            <b className='question-title'>Question for Potential Users: </b> <br/>
             {question1}
           </p>
           <TextArea
@@ -49,7 +49,7 @@ const QuestionList = (props: any): JSX.Element => {
           question2 &&
           <Row>
             <p>
-              <b className='question-title'>Question for Potential Users: </b> <br/>
+              <b className='question-title'>Question for Experts: </b> <br/>
               {question2}
             </p>
             <TextArea
@@ -65,7 +65,7 @@ const QuestionList = (props: any): JSX.Element => {
           question3 &&
           <Row>
             <p>
-              <b className='question-title'>Question for Experts: </b> <br/>
+              <b className='question-title'>Question for Community Members: </b> <br/>
               {question3}
             </p>
             <TextArea
