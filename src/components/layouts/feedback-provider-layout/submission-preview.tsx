@@ -42,7 +42,7 @@ const SubmissionPreview = (props: any): JSX.Element => {
         </Col>
       </Row>
       <Row>
-        <p><b>Stakeholders</b>
+        <p><b>Stakeholders this team wants input from:</b>
         <br />
         {info.stakeholders}
         </p>
