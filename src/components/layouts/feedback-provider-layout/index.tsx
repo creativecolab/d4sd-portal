@@ -93,7 +93,9 @@ const FeedbackProviderLayout = (): JSX.Element => {
           setVisible(false);
         })
       }
-    });
+    }).catch((res) => {
+      message.error("Sorry, there was a slight error trying to retrieve a new link. Contact us for a new one");
+    })
   };
 
   const [responses, setResponses] = React.useState<any>(
@@ -124,42 +126,44 @@ const FeedbackProviderLayout = (): JSX.Element => {
       setSuccess(true);
     }
     else {
-      firebase.getSubmitID(submitSecretID).then((res: any) => {
-      const submitID = res.submitID;
-      setSubmitID(submitID);
-      
-      const range = `A${submitID}:Z${submitID}`
-      
-      
-      let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
-      
-      fetch(uri, {
-        method: 'GET',
-        headers: {
-          Accept: 'application/json'
-        }
-      }).then((res) => res.json()).then((res) => {
-        if (res.values === undefined) {
-          message.error("Invalid submission ID")
-          history.push("/");
-          return
-        }
-        let vals = res.values[0];
+      firebase.signinAnonymomus().then(() => {
+        firebase.getSubmitID(submitSecretID).then((res: any) => {
+        const submitID = res.submitID;
+        setSubmitID(submitID);
+        
+        const range = `A${submitID}:Z${submitID}`
+        
+        
+        let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
+        
+        fetch(uri, {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json'
+          }
+        }).then((res) => res.json()).then((res) => {
+          if (res.values === undefined) {
+            message.error("Invalid submission ID")
+            history.push("/");
+            return
+          }
+          let vals = res.values[0];
 
-        // hardcoded index values based on the sheets
-        setSubmitInfo({
-          title: vals[3],
-          problemStatement: vals[4],
-          pdf: vals[6],
-          name: vals[1],
-          stakeholders: vals[5],
-          org: vals[17]
+          // hardcoded index values based on the sheets
+          setSubmitInfo({
+            title: vals[3],
+            problemStatement: vals[4],
+            pdf: vals[6],
+            name: vals[1],
+            stakeholders: vals[5],
+            org: vals[17]
+          });
+          setQuestions([vals[11], vals[13], vals[18]])
         });
-        setQuestions([vals[11], vals[13], vals[18]])
-      });
-      }).catch(() => {
-        message.error("Invalid feedback url");
-        history.push("/");
+        }).catch(() => {
+          message.error("Invalid feedback url");
+          history.push("/");
+        });
       });
     }
   }, [history.location]);
@@ -179,7 +183,7 @@ const FeedbackProviderLayout = (): JSX.Element => {
             <h1>Review and Provide Input</h1>
             <p>Feedback makes the most impact when it is positive, constructive, well-justified, and actionable</p>
           </Row>
-          <Row type="flex" justify="center">
+          <Row type="flex" justify="center" gutter={{md: 48, xs: 24}} style={{marginLeft: '0px', marginRight: '0px'}}>
             <Col xs={{ span: 20 }} md={{ span: 10 }}>
               <SubmissionPreview submitInfo={submitInfo} />
             </Col>

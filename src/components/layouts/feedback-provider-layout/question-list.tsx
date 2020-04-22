@@ -38,7 +38,7 @@ const QuestionList = (props: any): JSX.Element => {
             {question1}
           </p>
           <TextArea
-            autoSize={{ minRows: 3, maxRows: 5 }}
+            className='textAreas'
             onChange={handleChange}
             name="question1"
             defaultValue={answer1}
@@ -53,7 +53,7 @@ const QuestionList = (props: any): JSX.Element => {
               {question2}
             </p>
             <TextArea
-              autoSize={{ minRows: 3, maxRows: 5 }}
+              className='textAreas'
               onChange={handleChange}
               name="question2"
               defaultValue={answer2}
@@ -69,7 +69,7 @@ const QuestionList = (props: any): JSX.Element => {
               {question3}
             </p>
             <TextArea
-              autoSize={{ minRows: 3, maxRows: 5 }}
+              className='textAreas'
               onChange={handleChange}
               name="question3"
               defaultValue={answer3}
@@ -84,7 +84,7 @@ const QuestionList = (props: any): JSX.Element => {
             Please provide general feedback for this idea
           </p>
           <TextArea
-            autoSize={{ minRows: 3, maxRows: 5 }}
+            className='textAreas'
             onChange={handleChange}
             name="comments"
           />
