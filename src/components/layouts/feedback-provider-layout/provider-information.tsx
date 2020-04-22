@@ -54,6 +54,22 @@ const ProviderInformation = (props: any): JSX.Element => {
                 <Input onChange={handleChange} name="email" defaultValue={email} />
               </Col>
             </Row>
+            <Row type="flex" gutter={{sm: 12}} justify='center'>
+              <Col xs={{ span: 24 }} sm={{ span: 8 }}>
+                <h5 className='label'>3. Your institution and title</h5>
+              </Col>
+              <Col xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 8 }}>
+                <Input onChange={handleChange} name="institution" defaultValue={institution} />
+              </Col>
+            </Row>
+            <Row type="flex" gutter={{sm: 12}} justify='center'>
+              <Col xs={{ span: 24 }} sm={{ span: 8 }}>
+                <h5 className='label'>4. Your area of expertise</h5>
+              </Col>
+              <Col xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 8 }}>
+                <Input onChange={handleChange} name="expertise" defaultValue={expertise} />
+              </Col>
+            </Row>
             <Row type='flex' gutter={{sm: 12}} justify='center'>
               <Col xs={{ span: 24 }} sm={{ span: 8 }} lg={{ span: 8 }}>
                 <p className='share-email'><span className='text'>Can we share your email with the team who submitted this idea?</span><Checkbox className='shareEmailCheck' onChange={(e) => {
@@ -63,24 +79,6 @@ const ProviderInformation = (props: any): JSX.Element => {
               </Col>
               <Col xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 8 }}>
                 
-              </Col>
-            </Row>
-
-            <Row type="flex" gutter={{sm: 12}} justify='center'>
-              <Col xs={{ span: 24 }} sm={{ span: 8 }}>
-                <h5 className='label'>3. Your institution and title</h5>
-              </Col>
-              <Col xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 8 }}>
-                <Input onChange={handleChange} name="institution" defaultValue={institution} />
-              </Col>
-            </Row>
-
-            <Row type="flex" gutter={{sm: 12}} justify='center'>
-              <Col xs={{ span: 24 }} sm={{ span: 8 }}>
-                <h5 className='label'>4. Your area of expertise</h5>
-              </Col>
-              <Col xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 8 }}>
-                <Input onChange={handleChange} name="expertise" defaultValue={expertise} />
               </Col>
             </Row>
           </Input.Group>
