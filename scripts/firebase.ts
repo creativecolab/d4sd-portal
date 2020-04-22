@@ -20,7 +20,7 @@ class Firebase {
     this.db = this.app.firestore();
   }
 
-  appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
+  appendUniqueSubmissionIDs = (start:number = 2, end: number = 500) => {
     // goes from id 1 to 100
     for (let i = start; i <= end; i++) {
       this.app.firestore().collection('submissionIDs').add({
