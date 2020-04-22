@@ -27,14 +27,6 @@ class Firebase {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
-    app.auth().signInAnonymously().catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      message.error("there was an issue with linking to our datbase, try again later")
-      console.error(errorCode, errorMessage);
-    });
-    
   }
 
   /**
@@ -123,18 +115,6 @@ class Firebase {
     })
   }
 
-  /**
-   * Do not use
-   */
-  // appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
-  //   // goes from id 1 to 100
-  //   for (let i = start; i <= end; i++) {
-  //     app.firestore().collection('submissionIDs').add({
-  //       submitID: i
-  //     });
-  //   }
-  // }
-
   // script to get secret urls and the submission emails
   getSecretURLs = () => {
     app.firestore().collection('submissionIDs').where('submitID', '<', 100).get().then((res) => {
@@ -180,6 +160,21 @@ class Firebase {
           window.open(encodedUri);
         });
       }
+    });
+  }
+
+  signinAnonymomus = async () => {
+    return new Promise((resolve, reject) => {
+      app.auth().signInAnonymously().then(() => {
+        resolve();
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        message.error("there was an issue with linking to our datbase, try again later")
+        console.error(errorCode, errorMessage);
+        reject();
+      });
     });
   }
 

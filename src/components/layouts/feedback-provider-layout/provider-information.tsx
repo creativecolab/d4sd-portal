@@ -11,9 +11,9 @@ const ProviderInformation = (props: any): JSX.Element => {
   const email = localStorage.getItem('email') || '';
   const institution = localStorage.getItem('institution') || '';
   const expertise = localStorage.getItem('expertise') || '';
-  let shareEmail = true;
-  if (localStorage.getItem('shareEmail') === 'false') {
-    shareEmail = false;
+  let shareEmail = false;
+  if (localStorage.getItem('shareEmail') === 'true') {
+    shareEmail = true;
   }
   setResponseValue("name", name);
   setResponseValue("email", email);

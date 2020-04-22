@@ -19,34 +19,36 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     if (params.id) {
       let newLink = `${window.location.origin}/volunteer/provide_feedback/${params.id}`;
       setLinkToFeedback(newLink);
-      firebase.getFeedbackForSubmission(params.id)
-      .then((res: Array<FeedbackData>) => {
-        if (res.length) {
-          
-          let newContent = {
-            cards: []
-          }
-          let cards: any = [];
-          res.forEach((feedback) => {
-            let url = window.location.href;
-            if (url[url.length - 1] === '/') {
-              url = `${url}${feedback.documentID}`
+      firebase.signinAnonymomus().then(() => {
+        firebase.getFeedbackForSubmission(params.id)
+        .then((res: Array<FeedbackData>) => {
+          if (res.length) {
+            
+            let newContent = {
+              cards: []
             }
-            else {
-              url = `${url}/${feedback.documentID}`
-            }
-            cards.push({
-              name: feedback.name ? feedback.name : "Anonymous",
-              dateBack: feedback.created,
-              feedbacklink: url
+            let cards: any = [];
+            res.forEach((feedback) => {
+              let url = window.location.href;
+              if (url[url.length - 1] === '/') {
+                url = `${url}${feedback.documentID}`
+              }
+              else {
+                url = `${url}/${feedback.documentID}`
+              }
+              cards.push({
+                name: feedback.name ? feedback.name : "Anonymous",
+                dateBack: feedback.created,
+                feedbacklink: url
+              });
             });
-          });
-          newContent.cards = cards;
-          setFeedbackCards(newContent);
-        }
-        else {
-          message.warn("You have received no feedback yet! Check again later");
-        }
+            newContent.cards = cards;
+            setFeedbackCards(newContent);
+          }
+          else {
+            message.warn("You have received no feedback yet! Check again later");
+          }
+        });
       });
     }
   }, []);
