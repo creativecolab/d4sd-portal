@@ -93,7 +93,9 @@ const FeedbackProviderLayout = (): JSX.Element => {
           setVisible(false);
         })
       }
-    });
+    }).catch((res) => {
+      message.error("Sorry, there was a slight error trying to retrieve a new link. Contact us for a new one");
+    })
   };
 
   const [responses, setResponses] = React.useState<any>(
