@@ -31,12 +31,6 @@ const RequestFeedbackLayout = (): JSX.Element => {
 
   return (
     <div className="RequestFeedbackPage">
-      <Header
-        title={requestFeedbackContent.title}
-        content={requestFeedbackContent.content}
-        image={requestFeedbackContent.image}
-      />
-
       <div className="breadcrumbSubmit">
         <h5>
           <a href="/submit">Submit</a>
@@ -44,6 +38,12 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <span id="req-feed">Request Feedback</span>
         </h5>
       </div>
+      <div style={{ height: "4rem" }}></div>
+      <Header
+        title={requestFeedbackContent.title}
+        content={requestFeedbackContent.content}
+        image={requestFeedbackContent.image}
+      />
 
       <div className="section" id="section-1">
         <div className="container">
