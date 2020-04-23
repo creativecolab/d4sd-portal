@@ -16,7 +16,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
   const [feedbackCards, setFeedbackCards] = useState({cards: []});
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
-
+  const [loading, setLoading] = useState(false);
   // move this .env later
   const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c"
   const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
@@ -27,7 +27,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
       setLinkToFeedback(newLink);
 
       firebase.signinAnonymomus().then(() => {
-        firebase.getSubmitID((params.id)).then((res: any) => {
+        firebase.getSubmitID(params.id).then((res: any) => {
           const range = `A${res.submitID}:Z${res.submitID}`
           let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
           fetch(uri, {
@@ -37,13 +37,15 @@ const CommunityFeedbackLayout = (): JSX.Element => {
             }
           }).then((res) => res.json()).then((res) => {
             let vals = res.values[0];
-            let titleval = vals[3];
-            let nameval = vals[1];
-            setName(nameval);
-            setTitle(titleval);
+            if (vals != undefined) {
+              let titleval = vals[3];
+              let nameval = vals[1];
+              setName(nameval);
+              setTitle(titleval);
+            }
           });
         }).catch((error) => {
-          console.error(error);
+          console.error('couldn\'t get the names', error);
         })
         
         firebase.getFeedbackForSubmission(params.id)
@@ -74,6 +76,8 @@ const CommunityFeedbackLayout = (): JSX.Element => {
           else {
             message.warn("You have received no feedback yet! Check again later");
           }
+        }).finally(() => {
+          setLoading(true);
         });
       });
     }
@@ -90,7 +94,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
         <div className="content">
           
           
-          { feedbackCards.cards.length ? 
+          { loading ? 
             [<Row className="row">
             <p>
               {name && 
