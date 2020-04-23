@@ -1,17 +1,24 @@
-import React from 'react';
-import { Button, Table } from '@d4sd/components';
+import React, { useState, useEffect } from 'react';
+import { Table } from '@d4sd/components';
 import Header from '../../Header/index';
 import Footer from '../../Footer/index';
-import { feedbackContent } from '../../../assets/content';
+import './style.less';
+import firebase from '../../../actions/firebase';
+import { joinDesignJam } from '../../../assets/content';
 
 const columns = [
   {
-    title: 'Idea',
+    title: 'Project name',
     dataIndex: 'name'
   },
   {
+    title: 'Feedback Link',
+    dataIndex: 'feedlink',
+    render: (text: string) => <a href={text}>{text}</a>
+  },
+  {
     title: 'Members',
-    dataIndex: 'mem'
+    dataIndex: 'members'
   },
   {
     title: 'Feedback Providers',
@@ -19,64 +26,53 @@ const columns = [
   },
   {
     title: 'Amount of Feedback',
-    dataIndex: 'feed',
+    dataIndex: 'amt',
     defaultSortOrder: 'descend',
     // @ts-ignore
-    sorter: (a, b) => a.feed - b.feed
+    sorter: (a: number, b: number) => a.feed - b.feed
   }
 ];
 
-const data = [
-  {
-    key: '1',
-    name: 'Link to Idea #1',
-    mem: 'Bob, Joe, Jane',
-    feed: 12,
-    prov: 'Bob, Joe, Jane'
-  },
-  {
-    key: '2',
-    name: 'Link to Idea #2',
-    mem: 'Bob, Joe, Jane',
-    feed: 312,
-    prov: 'Bob, Joe, Jane'
-  },
-  {
-    key: '3',
-    name: 'Link to Idea #3',
-    mem: 'Bob, Joe, Jane',
-    feed: 342,
-    prov: 'Bob, Joe, Jane'
-  },
-  {
-    key: '4',
-    name: 'Link to Idea #4',
-    mem: 'Bob, Joe, Jane',
-    feed: 3,
-    prov: 'Bob, Joe, Jane'
-  }
-];
-
-function onChange(pagination: any, filters: any, sorter: any, extra: any) {
-  console.log('params', pagination, filters, sorter, extra);
+interface IInterfaceData {
+  key: string;
+  name: string;
+  feedlink: string;
+  members: string;
+  amt: number;
+  prov: string;
 }
 
-const FeedBackTablePage = (): JSX.Element => (
-  <div>
-    <Header
-      title={feedbackContent.title1}
-      content={feedbackContent.content1}
-      image={feedbackContent.image}
-    />
-    <div className="container paragraph">
-      {/*
-  // @ts-ignore */}
-      <Table columns={columns} dataSource={data} onChange={onChange} />
+const dummydata: IInterfaceData[] = [
+  {
+    key: 'K1PXUny44KQzew2oIOR8',
+    name: 'Autonomous FLM Vehicle Service',
+    feedlink: 'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
+    members: 'Connor Burkesmith, Alex Rusu',
+    amt: 12,
+    prov: 'Frank G.'
+  }
+];
+
+const FeedBackTablePage = (): JSX.Element => {
+  const [feedbackData, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    // @ts-ignore
+    setData(dummydata);
+  }, []);
+  return (
+    <div>
+      <Header title="Feedback Dashboard" image={joinDesignJam.image} />
+      <div className="container paragraph">
+        <div className="tablewrapper">
+          {/*
+// @ts-ignore */}
+          <Table columns={columns} dataSource={feedbackData} />
+        </div>
+      </div>
+      <Footer />
     </div>
-    <br />
-    <br />
-    <Footer />
-  </div>
-);
+  );
+};
 
 export default FeedBackTablePage;
