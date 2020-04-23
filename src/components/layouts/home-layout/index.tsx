@@ -84,6 +84,7 @@ const HomeLayout = (): JSX.Element => {
                   history.push(date.url);
                 }}
                 key={`${date.key}_p`}
+                className="summit-links"
               >
                 <p>{date.label}</p>
               </a>
@@ -198,7 +199,7 @@ const HomeLayout = (): JSX.Element => {
               >
                 <div id="opacity"></div>
                 <div className="container">
-                  <div className="paragraph" style={{zIndex: 100}}>
+                  <div className="paragraph" style={{ zIndex: 100 }}>
                     <h3>{challenge.header}</h3>
                     <h2>{challenge.title}</h2>
                     {/* eslint-disable-next-line */}
