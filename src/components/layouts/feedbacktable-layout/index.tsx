@@ -8,8 +8,8 @@ import { joinDesignJam } from '../../../assets/content';
 
 const columns = [
   {
-    title: 'Project name',
-    dataIndex: 'name'
+    title: 'key',
+    dataIndex: 'key'
   },
   {
     title: 'Feedback Link',
@@ -17,8 +17,9 @@ const columns = [
     render: (text: string) => <a href={text}>{text}</a>
   },
   {
-    title: 'Members',
-    dataIndex: 'members'
+    title: 'View Feedback Link',
+    dataIndex: 'vfeedlink',
+    render: (text: string) => <a href={text}>{text}</a>
   },
   {
     title: 'Feedback Providers',
@@ -35,9 +36,8 @@ const columns = [
 
 interface IInterfaceData {
   key: string;
-  name: string;
   feedlink: string;
-  members: string;
+  vfeedlink: string;
   amt: number;
   prov: string;
 }
@@ -45,20 +45,54 @@ interface IInterfaceData {
 const dummydata: IInterfaceData[] = [
   {
     key: 'K1PXUny44KQzew2oIOR8',
-    name: 'Autonomous FLM Vehicle Service',
-    feedlink: 'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
-    members: 'Connor Burkesmith, Alex Rusu',
+    feedlink:
+      'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
+    vfeedlink:
+      'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
+    amt: 12,
+    prov: 'Frank G.'
+  },
+  {
+    key: 'K1PXUny44KQzew2oIOR8',
+    feedlink:
+      'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
+    vfeedlink:
+      'https://d4sd.org/volunteer/provide_feedback/K1PXUny44KQzew2oIOR8',
     amt: 12,
     prov: 'Frank G.'
   }
 ];
 
+// ah yes callback hell
 const FeedBackTablePage = (): JSX.Element => {
   const [feedbackData, setData] = React.useState([]);
 
   React.useEffect(() => {
+    const data: any = [];
+
     // @ts-ignore
-    setData(dummydata);
+    firebase.getSubmitIDs().then((res: any) => {
+      res.forEach((element: any) => {
+        // @ts-ignore
+        firebase.getFeedbackForSubmission(element.secretID).then((ret: any) => {
+          if (ret.length) {
+            let names = '';
+            ret.forEach((elem: any) => {
+              const sorted: string = elem.name ? elem.name : 'Anonymous';
+              names += `${sorted} | `;
+            });
+            data.push({
+              key: element.secretID,
+              feedlink: `${window.location.origin}/volunteer/provide_feedback/${element.secretID}`,
+              vfeedlink: `${window.location.origin}/community-feedback/${element.secretID}`,
+              prov: names,
+              amt: ret.length
+            });
+            setData(data);
+          }
+        });
+      });
+    });
   }, []);
   return (
     <div>
