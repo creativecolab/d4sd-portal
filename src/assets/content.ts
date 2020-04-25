@@ -607,7 +607,7 @@ export const joinDesignJam = {
       title: 'DISCOVER',
       body: 'challenge topics and user research',
       key: 'discover',
-      link: 'discover',
+      link: 'section-5',
     },
     {
       date: new Date("04/17/2020"),
