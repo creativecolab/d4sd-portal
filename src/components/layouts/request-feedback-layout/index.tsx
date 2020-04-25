@@ -1,13 +1,14 @@
-import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Button } from '@d4sd/components';
-import { Document, Page, pdfjs } from 'react-pdf';
-import Header from '../../Header/index';
-import Footer from '../../Footer/index';
-import '../../../styles/containers.less';
-import './style.less';
-import { requestFeedbackContent } from '../../../assets/content';
-import { contentHTML } from '../../../actions';
+import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
+import { Button } from "@d4sd/components";
+import { RightOutlined } from "@ant-design/icons";
+import { Document, Page, pdfjs } from "react-pdf";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
+import "./style.less";
+import { requestFeedbackContent } from "../../../assets/content";
+import { contentHTML } from "../../../actions";
 
 const RequestFeedbackLayout = (): JSX.Element => {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,23 +24,36 @@ const RequestFeedbackLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
 
   return (
     <div className="RequestFeedbackPage">
+      <div className="breadcrumbSubmit">
+        <h5>
+          <a href="/submit">Submit</a>
+          <RightOutlined style={{ fontSize: "2rem" }} />
+          <span id="req-feed">Request Feedback</span>
+        </h5>
+      </div>
+      <div style={{ height: "4rem" }}></div>
       <Header
         title={requestFeedbackContent.title}
         content={requestFeedbackContent.content}
         image={requestFeedbackContent.image}
       />
+
       <div className="section" id="section-1">
         <div className="container">
           <h2 className="title">{requestFeedbackContent.title_1}</h2>
           {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={contentHTML(requestFeedbackContent.content_1)} />
+          <p
+            dangerouslySetInnerHTML={contentHTML(
+              requestFeedbackContent.content_1
+            )}
+          />
         </div>
       </div>
       <div className="section" id="section-2" ref={ref}>
@@ -47,47 +61,52 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <h5 className="title">{requestFeedbackContent.title_2}</h5>
           <div className="date-box">
             <ul>
-              {requestFeedbackContent.importantDates.map((details) => (
+              {requestFeedbackContent.importantDates.map(details => (
                 <React.Fragment key={`${details.key}_fragment`}>
                   {/* eslint-disable-next-line */}
-                  {details.start_date ? [
-                    <li key={`${details.key}_li`}>
-                      <p>
-                        <b>
-                          {details.start_date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.start_date.getDate()}
-                          {' '}
-                          –
-                          {' '}
-                          {details.end_date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.end_date.getDate()}
-                          :
-                        </b>
-                        {' '}
-                        {details.title}
-                      </p>
-                    </li>
-                  ] : [
-                    <li key={`${details.key}_li`}>
-                      <p>
-                        <b>
-                          {details.date.toDateString().substring(4, 7).toUpperCase()}
-                          {' '}
-                          {details.date.getDate()}
-                          :
-                        </b>
-                        {' '}
-                        {details.title}
-                      </p>
-                    </li>
-                  ]}
+                  {details.start_date
+                    ? [
+                        <li key={`${details.key}_li`}>
+                          <p>
+                            <b>
+                              {details.start_date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}{" "}
+                              {details.start_date.getDate()} –{" "}
+                              {details.end_date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}{" "}
+                              {details.end_date.getDate()}:
+                            </b>{" "}
+                            {details.title}
+                          </p>
+                        </li>
+                      ]
+                    : [
+                        <li key={`${details.key}_li`}>
+                          <p>
+                            <b>
+                              {details.date
+                                .toDateString()
+                                .substring(4, 7)
+                                .toUpperCase()}{" "}
+                              {details.date.getDate()}:
+                            </b>{" "}
+                            {details.title}
+                          </p>
+                        </li>
+                      ]}
                 </React.Fragment>
               ))}
             </ul>
           </div>
-          <a href={requestFeedbackContent.form} target="_blank" rel="noopener noreferrer">
+          <a
+            href={requestFeedbackContent.form}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button>REQUEST FEEDBACK</Button>
           </a>
           <br />
@@ -95,7 +114,15 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <p>
             {requestFeedbackContent.content_2_1}
             {/* eslint-disable-next-line */}
-            <a href="" onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => { evt.preventDefault(); history.push('/volunteer/feedback_provider'); }}>{requestFeedbackContent.content_2_2}</a>
+            <a
+              href=""
+              onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => {
+                evt.preventDefault();
+                history.push("/volunteer/feedback_provider");
+              }}
+            >
+              {requestFeedbackContent.content_2_2}
+            </a>
             .
           </p>
         </div>
@@ -109,7 +136,7 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <p>{requestFeedbackContent.content_3_4}</p>
           <p>{requestFeedbackContent.content_3_5}</p>
           <ul>
-            {requestFeedbackContent.requirements.map((req) => (
+            {requestFeedbackContent.requirements.map(req => (
               <li>{req}</li>
             ))}
           </ul>
@@ -122,13 +149,23 @@ const RequestFeedbackLayout = (): JSX.Element => {
           <br />
           <p>
             {requestFeedbackContent.content_4_2}
-            <a href={`/${requestFeedbackContent.example_feedback}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`/${requestFeedbackContent.example_feedback}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {requestFeedbackContent.content_4_3}
             </a>
             {requestFeedbackContent.content_4_4}
           </p>
-          <a href={`/${requestFeedbackContent.example_storyboard}`} target="_blank" rel="noopener noreferrer">
-            <Document file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}>
+          <a
+            href={`/${requestFeedbackContent.example_storyboard}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Document
+              file={`${process.env.PUBLIC_URL}/${requestFeedbackContent.example_storyboard}`}
+            >
               <Page width={1500} pageNumber={1} />
             </Document>
           </a>
