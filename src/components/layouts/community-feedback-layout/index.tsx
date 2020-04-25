@@ -25,7 +25,6 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     if (params.id) {
       let newLink = `${window.location.origin}/volunteer/provide_feedback/${params.id}`;
       setLinkToFeedback(newLink);
-
       firebase.signinAnonymomus().then(() => {
         firebase.getSubmitID(params.id).then((res: any) => {
           const range = `A${res.submitID}:Z${res.submitID}`
