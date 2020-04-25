@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  message, Button
+  message, Button, Skeleton
 } from '@d4sd/components';
 import Header from '../../Header/index';
 import './style.less';
@@ -34,10 +34,11 @@ const CommunityFeedbackLayout = (): JSX.Element => {
         image={joinDesignJam.image}
       />
       <div className='container'>
+      <a href={`${window.location}/../`} className='go-back-btn'><Button>Go Back to All Feedback</Button></a>
       {
         feedback ? 
         <div className='feedback'>
-          <a href={`${window.location}/../`} className='go-back-btn'><Button>Go Back to All Feedback</Button></a>
+          
           <h3 className='name'>From: {feedback.name ? feedback.name : "Anonymous"}</h3>
           <p><strong>Institution</strong>: {feedback.institution ? feedback.institution : "Not stated"}</p>
           <p><strong>Area of Expertise</strong>: {feedback.expertise ? feedback.expertise : "Not stated"}</p>
@@ -55,7 +56,7 @@ const CommunityFeedbackLayout = (): JSX.Element => {
           <h3><span className='comment-label'>Comments: <br></br></span> {feedback.comments ? feedback.comments : "No comments"}</h3>
         </div>
         :
-        <p>Loading...</p>
+        <Skeleton />
       }
       </div>
     </div>
