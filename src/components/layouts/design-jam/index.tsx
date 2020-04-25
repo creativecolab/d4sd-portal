@@ -126,6 +126,17 @@ const SubmitLayout = (): JSX.Element => {
                 loop
               />
             </div>
+            <div id='prototype'>
+              <h4 className='subtitle'>Jam #3 on PROTOTYPE (April 24)</h4>
+              <ReactGoogleSlides
+                width='100%'
+                height={400}
+                slidesLink="hhttps://docs.google.com/presentation/d/1J4wEWtP9DQ5wyANN93ZMMbkyZALGupGp6kroITC0S-k/edit"
+                slideDuration={5}
+                showControls
+                loop
+              />
+            </div>
           </div>
         </div>
       </div>
