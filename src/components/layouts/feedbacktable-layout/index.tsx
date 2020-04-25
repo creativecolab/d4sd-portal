@@ -5,6 +5,7 @@ import Footer from '../../Footer/index';
 import './style.less';
 import firebase from '../../../actions/firebase';
 import { joinDesignJam } from '../../../assets/content';
+import { FeedbackData } from '../../../actions/types';
 
 const columns = [
   {
@@ -70,29 +71,34 @@ const FeedBackTablePage = (): JSX.Element => {
   React.useEffect(() => {
     const data: any = [];
 
-    // @ts-ignore
+    let promiseList: Array<Promise<FeedbackData[]>> = [];
     firebase.getSubmitIDs().then((res: any) => {
       res.forEach((element: any) => {
-        // @ts-ignore
-        firebase.getFeedbackForSubmission(element.secretID).then((ret: any) => {
+        promiseList.push(firebase.getFeedbackForSubmission(element.secretID));
+      });
+      Promise.all(promiseList).then((feedbackDataLists) => {
+        console.log(feedbackDataLists);
+        feedbackDataLists.forEach((ret) => {
           if (ret.length) {
             let names = '';
             ret.forEach((elem: any) => {
               const sorted: string = elem.name ? elem.name : 'Anonymous';
               names += `${sorted} | `;
             });
+            let secretID = ret[0].documentID;
             data.push({
-              key: element.secretID,
-              feedlink: `${window.location.origin}/volunteer/provide_feedback/${element.secretID}`,
-              vfeedlink: `${window.location.origin}/community-feedback/${element.secretID}`,
+              key: secretID,
+              feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
+              vfeedlink: `${window.location.origin}/community-feedback/${secretID}`,
               prov: names,
               amt: ret.length
             });
-            setData(data);
           }
         });
+        setData(data);
       });
     });
+    
   }, []);
   return (
     <div>
