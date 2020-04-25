@@ -30,8 +30,7 @@ const columns = [
     title: 'Amount of Feedback',
     dataIndex: 'amt',
     defaultSortOrder: 'descend',
-    // @ts-ignore
-    sorter: (a: number, b: number) => a.feed - b.feed
+    sorter: (a: IInterfaceData, b: IInterfaceData) => a.amt - b.amt
   }
 ];
 
@@ -77,7 +76,6 @@ const FeedBackTablePage = (): JSX.Element => {
         promiseList.push(firebase.getFeedbackForSubmission(element.secretID));
       });
       Promise.all(promiseList).then((feedbackDataLists) => {
-        console.log(feedbackDataLists);
         feedbackDataLists.forEach((ret) => {
           if (ret.length) {
             let names = '';
