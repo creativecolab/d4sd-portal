@@ -1,9 +1,9 @@
-import firebase from 'firebase';
-import app from 'firebase/app';
-import 'firebase/firebase-auth';
-import 'firebase/firebase-firestore';
-import { message } from '@d4sd/components';
-import { Feedback, FeedbackData } from './types';
+import firebase from "firebase";
+import app from "firebase/app";
+import "firebase/firebase-auth";
+import "firebase/firebase-firestore";
+import { message } from "@d4sd/components";
+import { Feedback, FeedbackData } from "./types";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -30,12 +30,12 @@ class Firebase {
     app
       .auth()
       .signInAnonymously()
-      .catch((error) => {
+      .catch(error => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
         message.error(
-          'there was an issue with linking to our datbase, try again later'
+          "there was an issue with linking to our datbase, try again later"
         );
         console.error(errorCode, errorMessage);
       });
@@ -46,130 +46,136 @@ class Firebase {
    */
   getFeedbackForSubmission = (
     documentID: string
-  ): Promise<Array<FeedbackData>> => new Promise((resolve, reject) => {
-    app
-      .firestore()
-      .collection('submissionIDs')
-      .doc(documentID)
-      .get()
-      .then((res) => {
-        const data = res.data();
+  ): Promise<Array<FeedbackData>> =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
 
-        if (data) {
-          const submitID = data.submitID.toString();
-          app
-            .firestore()
-            .collection('feedback-data')
-            .where('submissionID', '==', `${submitID}`)
-            .get()
-            .then((res) => {
-              if (res.docs.length) {
-                const mapped: any = res.docs.map((doc) => ({
-                  ...doc.data(),
-                  documentID: doc.id
-                }));
+          if (data) {
+            const submitID = data.submitID.toString();
+            app
+              .firestore()
+              .collection("feedback-data")
+              .where("submissionID", "==", `${submitID}`)
+              .get()
+              .then(res => {
+                if (res.docs.length) {
+                  const mapped: any = res.docs.map(doc => ({
+                    ...doc.data(),
+                    documentID: doc.id
+                  }));
 
-                // NOTE, do not remove the outside <> of Array<FeedbackData>, it causes a wierd typescript issues that makes mapped.map return a higher dimensional array
-                const finalMap = <Array<FeedbackData>>mapped.map(
-                  (data: any) => {
-                    data.created = new Date(data.created.seconds * 1000);
-                    return data;
-                  }
-                );
-                resolve(finalMap);
-              } else {
-                resolve([]);
-              }
-            });
-        } else {
-          resolve([]);
-        }
-      });
-  });
+                  // NOTE, do not remove the outside <> of Array<FeedbackData>, it causes a wierd typescript issues that makes mapped.map return a higher dimensional array
+                  const finalMap = <Array<FeedbackData>>mapped.map(
+                    (data: any) => {
+                      data.created = new Date(data.created.seconds * 1000);
+                      return data;
+                    }
+                  );
+                  resolve(finalMap);
+                } else {
+                  resolve([]);
+                }
+              });
+          } else {
+            resolve([]);
+          }
+        });
+    });
 
-  getSubmitIDs = async () => new Promise((resolve) => {
-    app
-      .firestore()
-      .collection('submissionIDs')
-      .where('submitID', '<', 100)
-      .get()
-      .then((res) => {
-        // @ts-ignore
-        const data: any = res.docs.map((doc) => ({
-          submitID: doc,
-          secretID: doc.id,
-          ...doc.data(),
-          feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
-          viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
-          email: ''
-        }));
-        if (data) {
-          resolve(data);
-        }
-      });
-  });
+  getSubmitIDs = async () =>
+    new Promise(resolve => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .where("submitID", "<", 100)
+        .get()
+        .then(res => {
+          // @ts-ignore
+          const data: any = res.docs.map(doc => ({
+            submitID: doc,
+            secretID: doc.id,
+            ...doc.data(),
+            feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
+            viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
+            email: ""
+          }));
+          if (data) {
+            resolve(data);
+          }
+        });
+    });
 
   /**
    * Get one feedback row
    */
   getSingleFeedbackForSubmission = async (
     documentID: string
-  ): Promise<FeedbackData> => new Promise((resolve, reject) => {
-    app
-      .firestore()
-      .collection('feedback-data')
-      .doc(documentID)
-      .get()
-      .then((res) => {
-        const data = res.data();
-        if (data) {
-          resolve(<FeedbackData>data);
-        } else {
-          resolve(undefined);
-        }
-      });
-  });
-
-  submitFeedback = async (feedback: Feedback) => app
-    .firestore()
-    .collection('feedback-data')
-    .add({
-      ...feedback,
-      created: firebase.firestore.Timestamp.now()
+  ): Promise<FeedbackData> =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("feedback-data")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
+          if (data) {
+            resolve(<FeedbackData>data);
+          } else {
+            resolve(undefined);
+          }
+        });
     });
 
-  getSubmitID = async (documentID: string) => new Promise((resolve, reject) => {
+  submitFeedback = async (feedback: Feedback) =>
     app
       .firestore()
-      .collection('submissionIDs')
-      .doc(documentID)
-      .get()
-      .then((res) => {
-        const data = res.data();
-        if (data) {
-          resolve(data);
-        } else {
-          reject();
-        }
+      .collection("feedback-data")
+      .add({
+        ...feedback,
+        created: firebase.firestore.Timestamp.now()
       });
-  });
 
-  getDocumentIDofSubmitID = async (submitID: string) => new Promise((resolve, reject) => {
-    app
-      .firestore()
-      .collection('submissionIDs')
-      .where('submitID', '==', parseInt(submitID))
-      .get()
-      .then((res) => {
-        console.log(res.docs);
-        const data = res.docs[0];
-        if (data) {
-          resolve(data.id);
-        } else {
-          reject();
-        }
-      });
-  });
+  getSubmitID = async (documentID: string) =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
+          if (data) {
+            resolve(data);
+          } else {
+            reject();
+          }
+        });
+    });
+
+  getDocumentIDofSubmitID = async (submitID: string) =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .where("submitID", "==", parseInt(submitID))
+        .get()
+        .then(res => {
+          console.log(res.docs);
+          const data = res.docs[0];
+          if (data) {
+            resolve(data.id);
+          } else {
+            reject();
+          }
+        });
+    });
 
   /**
    * Do not use
@@ -187,32 +193,32 @@ class Firebase {
   getSecretURLs = () => {
     app
       .firestore()
-      .collection('submissionIDs')
-      .where('submitID', '<', 100)
+      .collection("submissionIDs")
+      .where("submitID", "<", 100)
       .get()
-      .then((res) => {
-        let data = res.docs.map((doc) => ({
+      .then(res => {
+        let data = res.docs.map(doc => ({
           secretID: doc.id,
           ...doc.data(),
           feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
           viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
-          email: ''
+          email: ""
         }));
         if (data) {
           const range = `C${2}:C${1000}`;
-          const API_KEY = 'AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c';
-          const sheetID = '1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ';
+          const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c";
+          const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
           // get emails
           const uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`;
 
           fetch(uri, {
-            method: 'GET',
+            method: "GET",
             headers: {
-              Accept: 'application/json'
+              Accept: "application/json"
             }
           })
-            .then((res) => res.json())
-            .then((res) => {
+            .then(res => res.json())
+            .then(res => {
               const vals = res.values;
               for (let i = 0; i < vals.length; i++) {
                 data[i].email = vals[i][0];
@@ -222,15 +228,15 @@ class Firebase {
               // create the csv rows
               const rows = [
                 [
-                  'email',
-                  'feedback link',
-                  'view feedback link',
-                  'secret ID',
-                  'response row number on sheets'
+                  "email",
+                  "feedback link",
+                  "view feedback link",
+                  "secret ID",
+                  "response row number on sheets"
                 ]
               ];
               rows.push(
-                ...data.map((info) =>
+                ...data.map(info =>
                   // @ts-ignore
                   [
                     info.email,
@@ -239,12 +245,13 @@ class Firebase {
                     info.secretID,
                     // @ts-ignore
                     info.submitID
-                  ])
+                  ]
+                )
               );
 
               const csvContent = `data:text/csv;charset=utf-8,${rows
-                .map((e) => e.join(','))
-                .join('\n')}`;
+                .map(e => e.join(","))
+                .join("\n")}`;
               const encodedUri = encodeURI(csvContent);
               window.open(encodedUri);
             });
@@ -252,16 +259,17 @@ class Firebase {
       });
   };
 
-  login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
-    this.auth
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        resolve(true);
-      })
-      .catch((error: string) => {
-        reject(error);
-      });
-  });
+  login = (email: string, password: string): Promise<boolean> =>
+    new Promise((resolve, reject) => {
+      this.auth
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+          resolve(true);
+        })
+        .catch((error: string) => {
+          reject(error);
+        });
+    });
 
   // eslint-disable-next-line
   logout = (): any => this.auth.signOut();
@@ -272,74 +280,75 @@ class Firebase {
     lastName: string,
     email: string,
     password: string
-  ): Promise<boolean> => new Promise((resolve, reject) => {
-    this.auth
-      .createUserWithEmailAndPassword(email, password)
-    // eslint-disable-next-line
+  ): Promise<boolean> =>
+    new Promise((resolve, reject) => {
+      this.auth
+        .createUserWithEmailAndPassword(email, password)
+        // eslint-disable-next-line
         .then((data: any) => {
-        const actionCodeSettings = {
-          url: 'http://staging-d4sd.ucsd.edu:8080/',
-          handleCodeInApp: true
-        };
+          const actionCodeSettings = {
+            url: "http://staging-d4sd.ucsd.edu:8080/",
+            handleCodeInApp: true
+          };
 
-        // Verify Email
-        data.user
-          .sendEmailVerification(actionCodeSettings)
-          .then(() => {
-            // eslint-disable-next-line
-              console.log('Email Sent!');
-          })
-          .catch(() => {
-            // eslint-disable-next-line
-              console.log('Email not sent!');
-          });
+          // Verify Email
+          data.user
+            .sendEmailVerification(actionCodeSettings)
+            .then(() => {
+              // eslint-disable-next-line
+              console.log("Email Sent!");
+            })
+            .catch(() => {
+              // eslint-disable-next-line
+              console.log("Email not sent!");
+            });
 
-        // Add user to "users" firestore collection.
-        app
-          .firestore()
-          .collection('users')
-          .doc(data.user.uid)
-          .set({
-            firstName,
-            lastName,
-            email,
-            emailVerified: false,
-            role: null,
-            ethics: false
-          })
-          .then(() => {
+          // Add user to "users" firestore collection.
+          app
+            .firestore()
+            .collection("users")
+            .doc(data.user.uid)
+            .set({
+              firstName,
+              lastName,
+              email,
+              emailVerified: false,
+              role: null,
+              ethics: false
+            })
+            .then(() => {
+              // eslint-disable-next-line
+              console.log("User document added!");
+              resolve(true);
+            })
             // eslint-disable-next-line
-              console.log('User document added!');
-            resolve(true);
-          })
-        // eslint-disable-next-line
             .catch((error: any) => {
-            // eslint-disable-next-line
-              console.log('Error writing document: ', error);
-            error.message('OOps');
-            reject(error);
-          });
-        resolve(true);
-      })
-    // eslint-disable-next-line
-        .catch((error: any) => {
-        if (error.code === 'auth/weak-password') {
-          message.error('The password is too weak.');
-          // eslint-disable-next-line
-            console.log('The password is too weak.');
-        } else {
-          // eslint-disable-next-line
-            console.log(error.message);
-        }
+              // eslint-disable-next-line
+              console.log("Error writing document: ", error);
+              error.message("OOps");
+              reject(error);
+            });
+          resolve(true);
+        })
         // eslint-disable-next-line
+        .catch((error: any) => {
+          if (error.code === "auth/weak-password") {
+            message.error("The password is too weak.");
+            // eslint-disable-next-line
+            console.log("The password is too weak.");
+          } else {
+            // eslint-disable-next-line
+            console.log(error.message);
+          }
+          // eslint-disable-next-line
           console.log(error);
-        reject(error);
-      });
-  });
+          reject(error);
+        });
+    });
 
   // eslint-disable-next-line
   isInitialized = () => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.auth.onAuthStateChanged(resolve);
     });
   };
@@ -354,7 +363,7 @@ class Firebase {
     const quote = await this.db
       .doc(`users_codedamn_video/${this.auth.currentUser.uid}`)
       .get();
-    return quote.get('quote');
+    return quote.get("quote");
   }
 }
 

@@ -80,8 +80,8 @@ const FeedBackTablePage = (): JSX.Element => {
 
     let promiseList: Array<Promise<FeedbackData[]>> = [];
     firebase.getSubmitIDs().then((res: any) => {
-      console.log(res);
       res.forEach((element: any) => {
+        console.log(element);
         promiseList.push(firebase.getFeedbackForSubmission(element.secretID));
       });
       Promise.all(promiseList).then(feedbackDataLists => {
