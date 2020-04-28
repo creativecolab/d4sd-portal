@@ -84,14 +84,14 @@ const FeedBackTablePage = (): JSX.Element => {
         promiseList.push(firebase.getFeedbackForSubmission(element.secretID));
       });
       Promise.all(promiseList).then(feedbackDataLists => {
-        feedbackDataLists.forEach(ret => {
+        feedbackDataLists.forEach((ret, i) => {
           if (ret.length) {
             let names = "";
             ret.forEach((elem: any) => {
               const sorted: string = elem.name ? elem.name : "Anonymous";
               names += `${sorted} | `;
             });
-            let secretID = ret[0].documentID;
+            let secretID = res[i].secretID;
             data.push({
               key: secretID,
               feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
