@@ -25,59 +25,61 @@ const CommunityFeedbackLayout = (): JSX.Element => {
     if (params.id) {
       let newLink = `${window.location.origin}/volunteer/provide_feedback/${params.id}`;
       setLinkToFeedback(newLink);
-      firebase.getSubmitID(params.id).then((res: any) => {
-        const range = `A${res.submitID}:Z${res.submitID}`
-        let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
-        fetch(uri, {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json'
+      firebase.signInAnonymomus().then(() => {
+        firebase.getSubmitID(params.id).then((res: any) => {
+          const range = `A${res.submitID}:Z${res.submitID}`
+          let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
+          fetch(uri, {
+            method: 'GET',
+            headers: {
+              Accept: 'application/json'
+            }
+          }).then((res) => res.json()).then((res) => {
+            let vals = res.values[0];
+            if (vals != undefined) {
+              let titleval = vals[3];
+              let nameval = vals[1];
+              setName(nameval);
+              setTitle(titleval);
+            }
+          }).finally(() => {
+            setLoading(true);
+          });
+        }).catch((error) => {
+          console.error('couldn\'t get the names', error);
+        })
+        
+        firebase.getFeedbackForSubmission(params.id)
+        .then((res: Array<FeedbackData>) => {
+          if (res.length) {
+            
+            let newContent = {
+              cards: []
+            }
+            let cards: any = [];
+            res.forEach((feedback) => {
+              let url = window.location.href;
+              if (url[url.length - 1] === '/') {
+                url = `${url}${feedback.documentID}`
+              }
+              else {
+                url = `${url}/${feedback.documentID}`
+              }
+              cards.push({
+                name: feedback.name ? feedback.name : "Anonymous",
+                dateBack: feedback.created,
+                feedbacklink: url
+              });
+            });
+            newContent.cards = cards;
+            setFeedbackCards(newContent);
           }
-        }).then((res) => res.json()).then((res) => {
-          let vals = res.values[0];
-          if (vals != undefined) {
-            let titleval = vals[3];
-            let nameval = vals[1];
-            setName(nameval);
-            setTitle(titleval);
+          else {
+            message.warn("You have received no feedback yet! Check again later");
           }
         }).finally(() => {
           setLoading(true);
         });
-      }).catch((error) => {
-        console.error('couldn\'t get the names', error);
-      })
-      
-      firebase.getFeedbackForSubmission(params.id)
-      .then((res: Array<FeedbackData>) => {
-        if (res.length) {
-          
-          let newContent = {
-            cards: []
-          }
-          let cards: any = [];
-          res.forEach((feedback) => {
-            let url = window.location.href;
-            if (url[url.length - 1] === '/') {
-              url = `${url}${feedback.documentID}`
-            }
-            else {
-              url = `${url}/${feedback.documentID}`
-            }
-            cards.push({
-              name: feedback.name ? feedback.name : "Anonymous",
-              dateBack: feedback.created,
-              feedbacklink: url
-            });
-          });
-          newContent.cards = cards;
-          setFeedbackCards(newContent);
-        }
-        else {
-          message.warn("You have received no feedback yet! Check again later");
-        }
-      }).finally(() => {
-        setLoading(true);
       });
     }
   }, []);

@@ -88,33 +88,35 @@ const FeedBackTablePage = (): JSX.Element => {
 
     let promiseList: Array<Promise<void>> = [];
 
-    firebase.getSubmissionNamesEmailsAndTitles().then((res: any) => {
-      res.forEach((element: any) => {
-        let secretID = element.secretID;
-        promiseList.push(firebase.getFeedbackForSubmission(secretID).then((feedback) => {
-          let names = "";
-          
-          if (feedback.length) {
+    firebase.signInAnonymomus().then(() => {
+      firebase.getSubmissionNamesEmailsAndTitles().then((res: any) => {
+        res.forEach((element: any) => {
+          let secretID = element.secretID;
+          promiseList.push(firebase.getFeedbackForSubmission(secretID).then((feedback) => {
+            let names = "";
             
-            feedback.forEach((elem: any) => {
-              const sorted: string = elem.name ? elem.name : "Anonymous";
-              names += `${sorted}, `;
-            });
-          }
+            if (feedback.length) {
+              
+              feedback.forEach((elem: any) => {
+                const sorted: string = elem.name ? elem.name : "Anonymous";
+                names += `${sorted}, `;
+              });
+            }
 
-          data.push({
-            name: element.name,
-            email: element.email,
-            title: element.title,
-            feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
-            vfeedlink: `${window.location.origin}/community-feedback/${secretID}`,
-            prov: names,
-            amt: feedback.length
-          });
-        }));
-      });
-      Promise.all(promiseList).then(feedbackDataLists => {
-        setData(data);
+            data.push({
+              name: element.name,
+              email: element.email,
+              title: element.title,
+              feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
+              vfeedlink: `${window.location.origin}/community-feedback/${secretID}`,
+              prov: names,
+              amt: feedback.length
+            });
+          }));
+        });
+        Promise.all(promiseList).then(feedbackDataLists => {
+          setData(data);
+        });
       });
     });
   }, []);
