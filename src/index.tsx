@@ -79,6 +79,10 @@ const FeedbackPage = Loadable({
   loader: () => import("./components/layouts/feedback-layout"),
   loading: Loading
 });
+const FeedbackTablePage = Loadable({
+  loader: () => import("./components/layouts/feedbacktable-layout"),
+  loading: Loading
+});
 const CovidPage = Loadable({
   loader: () => import("./components/layouts/covid-layout"),
   loading: Loading
@@ -96,11 +100,11 @@ const JoinDesignJam = Loadable({
 //   loading: Loading
 // });
 const CommunityFeedbackLayout = Loadable({
-  loader: () => import('./components/layouts/community-feedback-layout'),
+  loader: () => import("./components/layouts/community-feedback-layout"),
   loading: Loading
 });
 const CommunityFeedbackSingleLayout = Loadable({
-  loader: () => import('./components/layouts/community-feedback-single-layout'),
+  loader: () => import("./components/layouts/community-feedback-single-layout"),
   loading: Loading
 });
 // const PreliminarySubmissionPage = Loadable({
@@ -173,6 +177,11 @@ const App = (): JSX.Element => {
               exact
               path="/volunteer/provide_feedback/:id"
               component={FeedbackProviderLayout}
+            />
+            <Route
+              exact
+              path="/volunteer/feedback_table"
+              component={FeedbackTablePage}
             />
             <Route
               path="/challenges/:type/:title"
