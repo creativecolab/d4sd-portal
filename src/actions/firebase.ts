@@ -189,8 +189,8 @@ class Firebase {
   //   }
   // }
 
-  // script to get secret urls and the submission emails
-  getSecretURLs = () => {
+  // script to get secret urls and the submission names, emails, and titles
+  getSubmissionNamesEmailsAndTitles = () => new Promise((resolve, reject) => {
     app
       .firestore()
       .collection("submissionIDs")
@@ -200,12 +200,14 @@ class Firebase {
         let data = res.docs.map(doc => ({
           secretID: doc.id,
           ...doc.data(),
-          feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
-          viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
-          email: ""
+          feedbackLink: `${window.location.origin}/volunteer/provide_feedback/${doc.id}`,
+          viewFeedbackLink: `${window.location.origin}/community-feedback/${doc.id}`,
+          email: "",
+          name: "",
+          title:""
         }));
         if (data) {
-          const range = `C${2}:C${1000}`;
+          const range = `B${2}:D${1000}`;
           const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c";
           const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
           // get emails
@@ -221,43 +223,19 @@ class Firebase {
             .then(res => {
               const vals = res.values;
               for (let i = 0; i < vals.length; i++) {
-                data[i].email = vals[i][0];
+                data[i].email = vals[i][1];
+                data[i].title = vals[i][2];
+                data[i].name = vals[i][0];
               }
               data = data.splice(0, vals.length);
-
-              // create the csv rows
-              const rows = [
-                [
-                  "email",
-                  "feedback link",
-                  "view feedback link",
-                  "secret ID",
-                  "response row number on sheets"
-                ]
-              ];
-              rows.push(
-                ...data.map(info =>
-                  // @ts-ignore
-                  [
-                    info.email,
-                    info.feedbackLink,
-                    info.viewFeedbackLink,
-                    info.secretID,
-                    // @ts-ignore
-                    info.submitID
-                  ]
-                )
-              );
-
-              const csvContent = `data:text/csv;charset=utf-8,${rows
-                .map(e => e.join(","))
-                .join("\n")}`;
-              const encodedUri = encodeURI(csvContent);
-              window.open(encodedUri);
+              resolve(data);
             });
         }
+        else {
+          reject();
+        }
       });
-  };
+  });
 
   login = (email: string, password: string): Promise<boolean> =>
     new Promise((resolve, reject) => {

@@ -9,8 +9,16 @@ import { FeedbackData } from "../../../actions/types";
 
 const columns = [
   {
-    title: "Key",
-    dataIndex: "key"
+    title: "Name",
+    dataIndex: "name"
+  },
+  {
+    title: "Email",
+    dataIndex: "email"
+  },
+  {
+    title: "Title",
+    dataIndex: "title"
   },
   {
     title: "Feedback Link",
@@ -78,29 +86,34 @@ const FeedBackTablePage = (): JSX.Element => {
   React.useEffect(() => {
     const data: any = [];
 
-    let promiseList: Array<Promise<FeedbackData[]>> = [];
-    firebase.getSubmitIDs().then((res: any) => {
+    let promiseList: Array<Promise<void>> = [];
+
+    firebase.getSubmissionNamesEmailsAndTitles().then((res: any) => {
       res.forEach((element: any) => {
-        promiseList.push(firebase.getFeedbackForSubmission(element.secretID));
-      });
-      Promise.all(promiseList).then(feedbackDataLists => {
-        feedbackDataLists.forEach((ret, i) => {
-          if (ret.length) {
-            let names = "";
-            ret.forEach((elem: any) => {
+        let secretID = element.secretID;
+        promiseList.push(firebase.getFeedbackForSubmission(secretID).then((feedback) => {
+          let names = "";
+          
+          if (feedback.length) {
+            
+            feedback.forEach((elem: any) => {
               const sorted: string = elem.name ? elem.name : "Anonymous";
-              names += `${sorted} | `;
-            });
-            let secretID = res[i].secretID;
-            data.push({
-              key: secretID,
-              feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
-              vfeedlink: `${window.location.origin}/community-feedback/${secretID}`,
-              prov: names,
-              amt: ret.length
+              names += `${sorted}, `;
             });
           }
-        });
+
+          data.push({
+            name: element.name,
+            email: element.email,
+            title: element.title,
+            feedlink: `${window.location.origin}/volunteer/provide_feedback/${secretID}`,
+            vfeedlink: `${window.location.origin}/community-feedback/${secretID}`,
+            prov: names,
+            amt: feedback.length
+          });
+        }));
+      });
+      Promise.all(promiseList).then(feedbackDataLists => {
         setData(data);
       });
     });
