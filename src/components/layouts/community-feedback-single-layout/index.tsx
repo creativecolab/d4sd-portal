@@ -16,14 +16,16 @@ const CommunityFeedbackLayout = (): JSX.Element => {
 
   useEffect(() => {
     if (params.feedbackID) {
-      firebase.getSingleFeedbackForSubmission(params.feedbackID)
-      .then((res: FeedbackData) => {
-        if (res) {
-          setFeedback(res);
-        }
-        else {
-          message.warn("You have received no feedback yet! Check again later");
-        }
+      firebase.signInAnonymomus().then(() => {
+        firebase.getSingleFeedbackForSubmission(params.feedbackID)
+        .then((res: FeedbackData) => {
+          if (res) {
+            setFeedback(res);
+          }
+          else {
+            message.warn("You have received no feedback yet! Check again later");
+          }
+        });
       });
     }
   }, []);

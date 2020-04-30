@@ -41,6 +41,21 @@ class Firebase {
       });
   }
 
+  signInAnonymomus = async () => {
+    return app
+      .auth()
+      .signInAnonymously()
+      .catch(error => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        message.error(
+          "there was an issue with linking to our datbase, try again later"
+        );
+        console.error(errorCode, errorMessage);
+      });
+  }
+
   /**
    * Get feedback for submission associated with a document id, which is associated with the row on the sheets
    */
