@@ -41,6 +41,8 @@ const CommunityFeedbackLayout = (): JSX.Element => {
             setName(nameval);
             setTitle(titleval);
           }
+        }).finally(() => {
+          setLoading(true);
         });
       }).catch((error) => {
         console.error('couldn\'t get the names', error);
