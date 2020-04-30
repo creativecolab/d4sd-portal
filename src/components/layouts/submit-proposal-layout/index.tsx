@@ -128,7 +128,7 @@ const SubmitProposalLayout = (): JSX.Element => {
               ))}
             </ul>
           </div>
-          <a href="https://docs.google.com/forms/d/14OKpGb4wxX3HxquKF7Q2KOfL9TGDQbQoN-DHQylJj88/edit" target="_blank" rel="noopener noreferrer">
+          <a href="https://forms.gle/ZJBCaerjCDxb2fs96" target="_blank" rel="noopener noreferrer">
             <Button>SUBMIT TEAM PROPOSAL</Button>
           </a>
         </div>
