@@ -1,9 +1,9 @@
-import firebase from 'firebase';
-import app from 'firebase/app';
-import 'firebase/firebase-auth';
-import 'firebase/firebase-firestore';
-import { message } from '@d4sd/components';
-import { Feedback, FeedbackData } from './types';
+import firebase from "firebase";
+import app from "firebase/app";
+import "firebase/firebase-auth";
+import "firebase/firebase-firestore";
+import { message } from "@d4sd/components";
+import { Feedback, FeedbackData } from "./types";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -27,248 +27,321 @@ class Firebase {
     app.initializeApp(firebaseConfig);
     this.auth = app.auth();
     this.db = app.firestore();
+    app
+      .auth()
+      .signInAnonymously()
+      .catch(error => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        message.error(
+          "there was an issue with linking to our datbase, try again later"
+        );
+        console.error(errorCode, errorMessage);
+      });
   }
 
   /**
    * Get feedback for submission associated with a document id, which is associated with the row on the sheets
    */
-  getFeedbackForSubmission = (documentID: string): Promise<Array<FeedbackData>> => {
-    return new Promise((resolve, reject) => {
-      app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
-        let data = res.data();
+  getFeedbackForSubmission = (
+    documentID: string
+  ): Promise<Array<FeedbackData>> =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
 
-        if (data) {
-          let submitID = (data.submitID).toString();
-          app.firestore().collection('feedback-data').where("submissionID", "==", `${submitID}`).get().then((res) => {
-            if (res.docs.length) {
-              console.log(res.docs)
-              let mapped: any = (res.docs).map((doc) => {
-                return {...doc.data(), documentID: doc.id}
+          if (data) {
+            const submitID = data.submitID.toString();
+            app
+              .firestore()
+              .collection("feedback-data")
+              .where("submissionID", "==", `${submitID}`)
+              .get()
+              .then(res => {
+                if (res.docs.length) {
+                  const mapped: any = res.docs.map(doc => ({
+                    ...doc.data(),
+                    documentID: doc.id
+                  }));
+
+                  // NOTE, do not remove the outside <> of Array<FeedbackData>, it causes a wierd typescript issues that makes mapped.map return a higher dimensional array
+                  const finalMap = <Array<FeedbackData>>mapped.map(
+                    (data: any) => {
+                      data.created = new Date(data.created.seconds * 1000);
+                      return data;
+                    }
+                  );
+                  resolve(finalMap);
+                } else {
+                  resolve([]);
+                }
               });
-              
-              // NOTE, do not remove the outside <> of Array<FeedbackData>, it causes a wierd typescript issues that makes mapped.map return a higher dimensional array
-              let finalMap = (<Array<FeedbackData>>(mapped.map((data: any) => {
-                data.created = new Date(data.created.seconds * 1000);
-                return data;
-              })));
-              resolve(finalMap);
-            }
-            else {
-              resolve([])
-            }
-          });
-        }
-        else {
-          resolve([])
-        }
-      });
-    })
-  }
+          } else {
+            resolve([]);
+          }
+        });
+    });
+
+  getSubmitIDs = async () =>
+    new Promise(resolve => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .where("submitID", "<", 100)
+        .get()
+        .then(res => {
+          // @ts-ignore
+          const data: any = res.docs.map(doc => ({
+            submitID: doc,
+            secretID: doc.id,
+            ...doc.data(),
+            feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
+            viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
+            email: ""
+          }));
+          if (data) {
+            resolve(data);
+          }
+        });
+    });
+
   /**
    * Get one feedback row
    */
-  getSingleFeedbackForSubmission = async (documentID: string): Promise<FeedbackData> => {
-    return new Promise((resolve, reject) => {
-      app.firestore().collection('feedback-data').doc(documentID).get().then((res) => {
-        let data = res.data();
-        if (data) {
-          resolve(<FeedbackData>data)
-        }
-        else {
-          resolve(undefined);
-        }
-      });
+  getSingleFeedbackForSubmission = async (
+    documentID: string
+  ): Promise<FeedbackData> =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("feedback-data")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
+          if (data) {
+            resolve(<FeedbackData>data);
+          } else {
+            resolve(undefined);
+          }
+        });
     });
-  }
-  submitFeedback = async (feedback: Feedback) => {
-    return app.firestore().collection('feedback-data').add({
-      ...feedback,
-      created: firebase.firestore.Timestamp.now()
+
+  submitFeedback = async (feedback: Feedback) =>
+    app
+      .firestore()
+      .collection("feedback-data")
+      .add({
+        ...feedback,
+        created: firebase.firestore.Timestamp.now()
+      });
+
+  getSubmitID = async (documentID: string) =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .doc(documentID)
+        .get()
+        .then(res => {
+          const data = res.data();
+          if (data) {
+            resolve(data);
+          } else {
+            reject();
+          }
+        });
     });
-  }
 
-  getSubmitID = async (documentID: string) => {
-    return new Promise((resolve, reject) => {
-      app.firestore().collection('submissionIDs').doc(documentID).get().then((res) => {
-        let data = res.data();
-        if (data) {
-          resolve(data);
-        }
-        else {
-          reject();
-        }
-      });
-    })
-  }
-  getDocumentIDofSubmitID = async (submitID: string) => {
-    return new Promise((resolve, reject) => {
-      app.firestore().collection('submissionIDs').where('submitID', '==', parseInt(submitID)).get().then((res) => {
-        console.log(res.docs);
-        let data = res.docs[0];
-        if (data) {
-          resolve(data.id);
-        }
-        else {
-          reject();
-        }
-      });
-    })
-  }
+  getDocumentIDofSubmitID = async (submitID: string) =>
+    new Promise((resolve, reject) => {
+      app
+        .firestore()
+        .collection("submissionIDs")
+        .where("submitID", "==", parseInt(submitID))
+        .get()
+        .then(res => {
+          console.log(res.docs);
+          const data = res.docs[0];
+          if (data) {
+            resolve(data.id);
+          } else {
+            reject();
+          }
+        });
+    });
 
-  // script to get secret urls and the submission emails
-  getSecretURLs = () => {
-    app.firestore().collection('submissionIDs').where('submitID', '<', 100).get().then((res) => {
-      let data = res.docs.map((doc) => {
-        return {
+  /**
+   * Do not use
+   */
+  // appendUniqueSubmissionIDs = (start:number = 1, end: number = 500) => {
+  //   // goes from id 1 to 100
+  //   for (let i = start; i <= end; i++) {
+  //     app.firestore().collection('submissionIDs').add({
+  //       submitID: i
+  //     });
+  //   }
+  // }
+
+  // script to get secret urls and the submission names, emails, and titles
+  getSubmissionNamesEmailsAndTitles = () => new Promise((resolve, reject) => {
+    app
+      .firestore()
+      .collection("submissionIDs")
+      .where("submitID", "<", 100)
+      .get()
+      .then(res => {
+        let data = res.docs.map(doc => ({
           secretID: doc.id,
           ...doc.data(),
-          feedbackLink: `https://d4sd.org/volunteer/provide_feedback/${doc.id}`,
-          viewFeedbackLink: `https://d4sd.org/community-feedback/${doc.id}`,
-          email: ''
+          feedbackLink: `${window.location.origin}/volunteer/provide_feedback/${doc.id}`,
+          viewFeedbackLink: `${window.location.origin}/community-feedback/${doc.id}`,
+          email: "",
+          name: "",
+          title:""
+        }));
+        if (data) {
+          const range = `B${2}:D${1000}`;
+          const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c";
+          const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
+          // get emails
+          const uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`;
+
+          fetch(uri, {
+            method: "GET",
+            headers: {
+              Accept: "application/json"
+            }
+          })
+            .then(res => res.json())
+            .then(res => {
+              const vals = res.values;
+              for (let i = 0; i < vals.length; i++) {
+                data[i].email = vals[i][1];
+                data[i].title = vals[i][2];
+                data[i].name = vals[i][0];
+              }
+              data = data.splice(0, vals.length);
+              resolve(data);
+            });
+        }
+        else {
+          reject();
         }
       });
-      if (data) {
-        
-        const range = `C${2}:C${1000}`
-        const API_KEY = "AIzaSyB4YEb9HIR_BeSCGYrgezusX3HSgiWHg9c"
-        const sheetID = "1yaDW5Qwzt1OnhMh70Z_HXlsM7MbHPCLq9y3kkkJqWdQ";
-        // get emails
-        let uri = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${API_KEY}`
-        
-        fetch(uri, {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json'
-          }
-        }).then((res) => res.json()).then((res) => {
-          let vals = res.values;
-          for (let i = 0; i < vals.length; i++) {
-            data[i].email = vals[i][0];
-          }
-          data = data.splice(0, vals.length);
+  });
 
-          // create the csv rows
-          let rows = [['email', 'feedback link', 'view feedback link', 'secret ID', 'response row number on sheets']];
-          rows.push(...data.map((info) => {
-            // @ts-ignore
-            return [info.email, info.feedbackLink, info.viewFeedbackLink, info.secretID, info.submitID]
-          }));
-
-          let csvContent = "data:text/csv;charset=utf-8," 
-          + rows.map(e => e.join(",")).join("\n");
-          var encodedUri = encodeURI(csvContent);
-          window.open(encodedUri);
+  login = (email: string, password: string): Promise<boolean> =>
+    new Promise((resolve, reject) => {
+      this.auth
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+          resolve(true);
+        })
+        .catch((error: string) => {
+          reject(error);
         });
-      }
     });
-  }
-
-  signinAnonymomus = async () => {
-    return new Promise((resolve, reject) => {
-      app.auth().signInAnonymously().then(() => {
-        resolve();
-      }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        message.error("there was an issue with linking to our datbase, try again later")
-        console.error(errorCode, errorMessage);
-        reject();
-      });
-    });
-  }
-
-  login = (email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
-    this
-      .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(() => { resolve(true); })
-      .catch((error: string) => { reject(error); });
-  })
 
   // eslint-disable-next-line
-  logout = (): any => this.auth.signOut()
+  logout = (): any => this.auth.signOut();
 
   // eslint-disable-next-line max-len
-  register = (firstName: string, lastName: string, email: string, password: string): Promise<boolean> => new Promise((resolve, reject) => {
-    this
-      .auth
-      .createUserWithEmailAndPassword(email, password)
-      // eslint-disable-next-line
-      .then((data: any) => {
-        const actionCodeSettings = {
-          url: 'http://staging-d4sd.ucsd.edu:8080/',
-          handleCodeInApp: true
-        };
-
-        // Verify Email
-        data.user.sendEmailVerification(actionCodeSettings)
-          .then(() => {
-            // eslint-disable-next-line
-            console.log('Email Sent!');
-          })
-          .catch(() => {
-            // eslint-disable-next-line
-            console.log('Email not sent!');
-          });
-
-        // Add user to "users" firestore collection.
-        app.firestore().collection('users')
-          .doc(data.user.uid)
-          .set({
-            firstName,
-            lastName,
-            email,
-            emailVerified: false,
-            role: null,
-            ethics: false
-          })
-          .then(() => {
-            // eslint-disable-next-line
-            console.log('User document added!');
-            resolve(true);
-          })
+  register = (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ): Promise<boolean> =>
+    new Promise((resolve, reject) => {
+      this.auth
+        .createUserWithEmailAndPassword(email, password)
         // eslint-disable-next-line
-          .catch((error: any) => {
+        .then((data: any) => {
+          const actionCodeSettings = {
+            url: "http://staging-d4sd.ucsd.edu:8080/",
+            handleCodeInApp: true
+          };
+
+          // Verify Email
+          data.user
+            .sendEmailVerification(actionCodeSettings)
+            .then(() => {
+              // eslint-disable-next-line
+              console.log("Email Sent!");
+            })
+            .catch(() => {
+              // eslint-disable-next-line
+              console.log("Email not sent!");
+            });
+
+          // Add user to "users" firestore collection.
+          app
+            .firestore()
+            .collection("users")
+            .doc(data.user.uid)
+            .set({
+              firstName,
+              lastName,
+              email,
+              emailVerified: false,
+              role: null,
+              ethics: false
+            })
+            .then(() => {
+              // eslint-disable-next-line
+              console.log("User document added!");
+              resolve(true);
+            })
             // eslint-disable-next-line
-            console.log('Error writing document: ', error);
-            error.message('OOps');
-            reject(error);
-          });
-        resolve(true);
-      })
-    // eslint-disable-next-line
-      .catch((error: any) => {
-        if (error.code === 'auth/weak-password') {
-          message.error('The password is too weak.');
-          // eslint-disable-next-line
-          console.log('The password is too weak.');
-        } else {
-          // eslint-disable-next-line
-          console.log(error.message);
-        }
+            .catch((error: any) => {
+              // eslint-disable-next-line
+              console.log("Error writing document: ", error);
+              error.message("OOps");
+              reject(error);
+            });
+          resolve(true);
+        })
         // eslint-disable-next-line
-        console.log(error);
-        reject(error);
-      });
-  })
+        .catch((error: any) => {
+          if (error.code === "auth/weak-password") {
+            message.error("The password is too weak.");
+            // eslint-disable-next-line
+            console.log("The password is too weak.");
+          } else {
+            // eslint-disable-next-line
+            console.log(error.message);
+          }
+          // eslint-disable-next-line
+          console.log(error);
+          reject(error);
+        });
+    });
 
   // eslint-disable-next-line
   isInitialized = () => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.auth.onAuthStateChanged(resolve);
     });
-  }
+  };
 
   // eslint-disable-next-line
   getCurrentUsername = () => {
     return this.auth.currentUser && this.auth.currentUser.displayName;
-  }
+  };
 
   // eslint-disable-next-line
   async getCurrentUserQuote() {
-    const quote = await this.db.doc(`users_codedamn_video/${this.auth.currentUser.uid}`).get();
-    return quote.get('quote');
+    const quote = await this.db
+      .doc(`users_codedamn_video/${this.auth.currentUser.uid}`)
+      .get();
+    return quote.get("quote");
   }
 }
 
