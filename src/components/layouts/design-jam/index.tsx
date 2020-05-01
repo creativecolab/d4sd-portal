@@ -46,7 +46,7 @@ const SubmitLayout = (): JSX.Element => {
       <div className="section" id="section-2" ref={ref}>
         <div className="container">
           <h3>Design Modules: </h3>
-          <p className="module-para">{joinDesignJam.content5}</p>
+          <p className="module-para">{joinDesignJam.content5} <a href="#section-5">Link to session slides</a></p>
           <ul>
             {joinDesignJam.importantDates.map((details) => (
               <li>
@@ -66,9 +66,6 @@ const SubmitLayout = (): JSX.Element => {
                   &ndash;
                   {' '}
                   {details.body}
-                  {details.link && 
-                    <div><a href={'#' + details.link}>Link to session slides</a></div>
-                  }
                 </p>
               </li>
             ))}
@@ -131,7 +128,18 @@ const SubmitLayout = (): JSX.Element => {
               <ReactGoogleSlides
                 width='100%'
                 height={400}
-                slidesLink="hhttps://docs.google.com/presentation/d/1J4wEWtP9DQ5wyANN93ZMMbkyZALGupGp6kroITC0S-k/edit"
+                slidesLink="https://docs.google.com/presentation/d/1J4wEWtP9DQ5wyANN93ZMMbkyZALGupGp6kroITC0S-k/edit"
+                slideDuration={5}
+                showControls
+                loop
+              />
+            </div>
+            <div id='prototype'>
+              <h4 className='subtitle'>Jam #4 on CONNECT (May 1)</h4>
+              <ReactGoogleSlides
+                width='100%'
+                height={400}
+                slidesLink="https://docs.google.com/presentation/d/1Kd3PPzYdra4PAeglLqQbeVQanlsWpr14sLSn8v4km3Q/edit#slide=id.g8465f1de2a_0_58"
                 slideDuration={5}
                 showControls
                 loop

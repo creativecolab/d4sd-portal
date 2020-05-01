@@ -45,14 +45,15 @@ const AttendLayout = (): JSX.Element => {
           {/* eslint-disable-next-line */}
           <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
-            <Button
-              className="learn"
-              size="default"
-              type="primary"
-              onClick={scrollToRef}
-            >
-              LEARN MORE
-            </Button>
+            <a href="http://d4sd-summit.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="learn"
+                size="default"
+                type="primary"
+              >
+                REGISTER NOW
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -68,7 +69,9 @@ const AttendLayout = (): JSX.Element => {
           <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_3 }} />
           {/* eslint-enable */}
           <br />
-          <Button type="primary" disabled>REGISTER ON EVENTBRITE</Button>
+          <a href="http://d4sd-summit.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+            <Button type="primary">REGISTER ON EVENTBRITE</Button>
+          </a>
         </div>
         <div className="before-summit">
           <h3>{attendContent.title_2}</h3>
@@ -105,7 +108,7 @@ const AttendLayout = (): JSX.Element => {
               ))}
             </ul>
           </p>
-          <Button onClick={(): void => history.push('/submit')}>
+          <Button onClick={(): void => history.push('/submit/submit-proposal')}>
             LEARN HOW TO SUBMIT
           </Button>
         </div>

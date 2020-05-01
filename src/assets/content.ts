@@ -177,10 +177,10 @@ export const homeContent = {
 /** ***********************************Summit content************************************** */
 export const summitContent = {
   subtitle1: "JOIN US for the D4SD 2020 Summit",
-  title1: "Broadcast Live Online | May 15, 2020",
+  title1: "Broadcast Live Online | 11am-2pm on May 15, 2020",
   title2:
     "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us <i>online</i> for this one-of-a-kind event!",
-  title3: "May 12, 2020",
+  title3: "11am-2pm on May 15, 2020",
   title4: "4pm - 8pm",
   addressLine2: "Broadcast Live Online",
   addressLink:
@@ -398,21 +398,13 @@ export const faqContent = {
     {
       question: "How will my work be judged?",
       answer:
-        "To enter the D4SD 2020 Challenge, teams must submit the final submission deliverables by May 8, 2020 at 11:59PM PDT.<br /><br />In general, solutions to the D4SD Challenge will be assessed based on <b>five key criteria</b>:<ol><li><b>Human-centered process</b><ul><li>How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?</li><li>To what extent does the team discover the core problems at the heart of a civic challenge?</li></ul></li><li><b>Improving on the current status quo</b><ul><li>Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?</li><li>Does this proposal expand on what San Diego already has?</li><li>How unique is the solution compared to other available solutions?</li></ul><li><b>Feasibility/viability/harmony</b><ul><li>How likely is it that this proposal could get implemented?</li><li>Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?</li></ul></li><li><b>Impact/desirability:</b><ul><li>How will the solution affect people?</li><li>Does it have any downsides?</li></ul></li><li><b>Communication quality:</b><ul><li>Does the poster follow good visual design principles?</li><li>Does the team have a good verbal pitch of their problem and proposed solution?</li><li>Does the optional video tell a compelling story?</li></ul></li></ol><br />The judging process has two rounds:<ol><li>In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed above. This judging process will happen between May 8 and May 13.  Finalists will be notified on May 13th through email so they can prepare a slide and verbal pitch for the online Summit.</li><li>In round two, distinguished jurors will assess the finalists during the online D4SD Summit on May 15th. Teams must have at least one team member available to present the poster throughout the day and to interact with jurors. Finalist teams will deliver a two-minute verbal pitch during the online D4SD Summit on May 12th.</li></ol>"
+        "To enter the D4SD 2020 Challenge, teams must submit the final submission deliverables by May 8, 2020 at 11:59PM PDT.<br /><br />In general, solutions to the D4SD Challenge will be assessed based on <b>five key criteria</b>:<ol><li><b>Human-centered process</b><ul><li>How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?</li><li>To what extent does the team discover the core problems at the heart of a civic challenge?</li></ul></li><li><b>Improving on the current status quo</b><ul><li>Does the team effectively map out a competitive analysis of existing solutions, technologies, work-arounds etc. both within San Diego and beyond?</li><li>Does this proposal expand on what San Diego already has?</li><li>How unique is the solution compared to other available solutions?</li></ul><li><b>Feasibility/viability/harmony</b><ul><li>How likely is it that this proposal could get implemented?</li><li>Has the team considered what it would need to lead this project through the next stages of development (e.g., rough budget, development plan)?</li></ul></li><li><b>Impact/desirability:</b><ul><li>How will the solution affect people?</li><li>Does it have any downsides?</li></ul></li><li><b>Communication quality:</b><ul><li>Does the poster follow good visual design principles?</li><li>Does the team have a good verbal pitch of their problem and proposed solution?</li><li>Does the optional video tell a compelling story?</li></ul></li></ol><br />The judging process has two rounds:<ol><li>In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed above. This judging process will happen between May 8 and May 13.  Finalists will be notified on May 13th through email so they can prepare a slide and verbal pitch for the online Summit.</li><li>In round two, distinguished jurors will assess the finalists during the online D4SD Summit on May 15th. Teams must have at least one team member available to present the poster throughout the day and to interact with jurors. Finalist teams will deliver a two-minute verbal pitch during the online D4SD Summit on May 15th.</li></ol>"
     },
     {
       question: "What kinds of design work can we submit to the challenge?",
       answer:
         "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:<ol><li><b>Entrepreneurial</b>: Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.</li><li><b>Civic</b>: These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the <a href='https://data.sandiego.gov/' target='_blank'> City of San Diego </a> or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).</li><li><b>Philanthropic</b>: These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.</li></ol>D4SD compiled a list of videos, articles, toolkits, and other resources that can be useful for people working through the design challenges (check those out on the <a href='/resources'>Resource page</a>)."
     },
-    // {
-    //   question: "Do I need to print my team’s poster?",
-    //   answer: "No. D4SD will cover the cost of printing posters for all valid submissions under the following conditions:<li>The entry must be complete and valid as determined by the D4SD organizing team.</li><li>The poster must follow the guidelines and use the <a href='/submit/submit-proposal#poster-template'>poster template specified here</a>.</li><li>At least one team member must be able to present your poster at the D4SD Summit at the San Diego Central Library on May 12. Teams that submit to the challenge will get a registration code for up to 6 people to register for the D4SD Summit.</li><li>If your team is selected as a finalist, at least one team member must be available for the D4SD Awards Ceremony on May 12.</li>"
-    // },
-    // {
-    //   question: "Do I need to attend the 2020 Design Summit?",
-    //   answer: "Yes, at least one member of your team should plan to attend the May 12 D4SD Summit at the Central Library to present your team poster. If your team is selected as a finalist, we request that at least one team member appears at the D4SD Awards Ceremony as part of the Summit on May 12th. At this event, team members will present a poster and selected teams will give a pitch of their idea."
-    // },
     {
       question: "Who owns the submitted concepts?",
       answer:
@@ -606,8 +598,7 @@ export const joinDesignJam = {
       className: '',
       title: 'DISCOVER',
       body: 'challenge topics and user research',
-      key: 'discover',
-      link: 'section-5',
+      key: 'discover'
     },
     {
       date: new Date("04/17/2020"),
@@ -1318,7 +1309,7 @@ export const submitProposalContent = {
   ],
   title_5: "Poster Templates and Examples",
   content_5_2:
-    "The digital poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
+    "Alternatively, your team may submit a digital poster (40” tall by 30” wide) in full color. The poster should include a title and visual material that help to highlight your team’s proposed solution. The poster should also provide details about:",
   poster_items: [
     "your team’s topic area and specific challenge/mission",
     "insights from online/user research",
@@ -1330,7 +1321,14 @@ export const submitProposalContent = {
     "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Here are templates for ",
   content_5_4:
     ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
-  poster_examples: [poster_example_1, poster_example_2, poster_example_3]
+  poster_examples: [poster_example_1, poster_example_2, poster_example_3],
+  title_6: "Slide Deck Templates and Examples",
+  content_6_1: `You may submit a short slide deck based on this <a href='https://docs.google.com/presentation/d/1CqKqw_vkd8xA3zE_LRA4ZSGs_rq8VA28qt9O8kcgkWc/edit?usp=sharing' target='_blank' rel='noopener noreferrer'>Google Slide template</a> to explain your team's concept. The slide deck should generally follow a three-part structure where you explain the "hook" (motivate why it's important to solve your selected problem), your solution including illustrations or mockups, and your "ask" (what would be most helpful to your team going forward). Your slide deck can provide details about:`,
+  content_6_1_points: ["Your team's topic area and specific challenge/mission",
+  "Insights from online/user research",
+  "Constraints and resources related to your problem",
+  "Your team's proposed solution, including photos of a prototype, if possible",
+  "An implementation plan, including rough budgets and action steps"]
 };
 
 export const covidContent = {
