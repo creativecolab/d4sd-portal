@@ -177,7 +177,7 @@ export const homeContent = {
 /** ***********************************Summit content************************************** */
 export const summitContent = {
   subtitle1: "JOIN US for the D4SD 2020 Summit",
-  title1: "Broadcast Live Online | May 15, 2020",
+  title1: "Broadcast Live Online | May 12, 2020",
   title2:
     "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us <i>online</i> for this one-of-a-kind event!",
   title3: "May 12, 2020",
@@ -606,8 +606,7 @@ export const joinDesignJam = {
       className: '',
       title: 'DISCOVER',
       body: 'challenge topics and user research',
-      key: 'discover',
-      link: 'section-5',
+      key: 'discover'
     },
     {
       date: new Date("04/17/2020"),
@@ -1146,7 +1145,7 @@ export const attendContent = {
       desc: "DEADLINE: Submit your final proposals for the D4SD Summit"
     },
     {
-      date: "May 15",
+      date: "May 12",
       desc: "D4SD SUMMIT: Showcase proposals and build alliances"
     }
   ]

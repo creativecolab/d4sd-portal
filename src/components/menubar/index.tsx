@@ -44,6 +44,8 @@ const Menubar = (): JSX.Element => {
         break;
       case '/volunteer':
         setTab(['volunteer']);
+      case '/attend':
+        setTab(['attend']);
         break;
       case '/resources':
         setTab(['resources']);
@@ -107,6 +109,9 @@ const Menubar = (): JSX.Element => {
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/resources')}>
                 <span>Resources</span>
               </Menu.Item>
+              <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
+                <span>Attend</span>
+              </Menu.Item>
               <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/submit/join-a-design-jam')}>
                 <span>Jam</span>
               </Menu.Item>
@@ -153,6 +158,9 @@ const Menubar = (): JSX.Element => {
             </Menu.Item>
             <Menu.Item className="menu-item" key="resources" onClick={(): void => history.push('/resources')}>
               <span>Resources</span>
+            </Menu.Item>
+            <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
+              <span>Attend</span>
             </Menu.Item>
             <Menu.Item className="menu-item" key="join-a-design-jam" onClick={(): void => history.push('/submit/join-a-design-jam')}>
               <span>Jam</span>
