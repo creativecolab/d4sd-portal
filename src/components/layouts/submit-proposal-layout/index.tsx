@@ -173,6 +173,29 @@ const SubmitProposalLayout = (): JSX.Element => {
           ))}
         </div>
       </div>
+      <div className="section" id="section-6">
+        <div className="container">
+          <h2 className="title">
+            {submitProposalContent.title_6}
+          </h2>
+          <p dangerouslySetInnerHTML={{__html:submitProposalContent.content_6_1}}></p>
+          <ul>
+            {submitProposalContent.content_6_1_points.map((point) => {
+              return (
+                <li>{point}</li>
+              )
+            })}
+          </ul>
+          <iframe 
+            className='pdf-view'
+            src='/SafeD-slide-example.pdf'
+          />
+          <iframe 
+            className='pdf-view'
+            src='/ARC-example.pdf'
+          />
+        </div>
+      </div>
       <div className="section" id="section-5">
         <div className="container">
           <h2 className="title" id="poster-template">
@@ -222,7 +245,6 @@ const SubmitProposalLayout = (): JSX.Element => {
               InDesign
             </a>
             {submitProposalContent.content_5_4}
-.
           </p>
           <div className="poster-examples">
             {submitProposalContent.poster_examples.map((example, i) => (
@@ -244,6 +266,7 @@ const SubmitProposalLayout = (): JSX.Element => {
           </div>
         </div>
       </div>
+      
       <Footer />
     </div>
   );

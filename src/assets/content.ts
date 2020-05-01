@@ -1317,7 +1317,7 @@ export const submitProposalContent = {
   ],
   title_5: "Poster Templates and Examples",
   content_5_2:
-    "The digital poster should be 40” tall by 30” wide in full color and adopt a design language that best represents the team's identity/concept. The poster should include a title and visual material that help to highlight your team’s proposed solution.  The poster should also provide details about:",
+    "Alternatively, your team may submit a digital poster (40” tall by 30” wide) in full color. The poster should include a title and visual material that help to highlight your team’s proposed solution. The poster should also provide details about:",
   poster_items: [
     "your team’s topic area and specific challenge/mission",
     "insights from online/user research",
@@ -1329,7 +1329,14 @@ export const submitProposalContent = {
     "Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Here are templates for ",
   content_5_4:
     ". Posters should be uploaded to the submission site in PDF format. There's a field for the poster in the submission form.",
-  poster_examples: [poster_example_1, poster_example_2, poster_example_3]
+  poster_examples: [poster_example_1, poster_example_2, poster_example_3],
+  title_6: "Slide Deck Templates and Examples",
+  content_6_1: `You may submit a short slide deck based on this <a href='https://docs.google.com/presentation/d/1CqKqw_vkd8xA3zE_LRA4ZSGs_rq8VA28qt9O8kcgkWc/edit?usp=sharing' target='_blank' rel='noopener noreferrer'>Google Slide template</a> to explain your team's concept. The slide deck should generally follow a three-part structure where you explain the "hook" (motivate why it's important to solve your selected problem), your solution including illustrations or mockups, and your "ask" (what would be most helpful to your team going forward). Your slide deck can provide details about:`,
+  content_6_1_points: ["Your team's topic area and specific challenge/mission",
+  "Insights from online/user research",
+  "Constraints and resources related to your problem",
+  "Your team's proposed solution, including photos of a prototype, if possible",
+  "An implementation plan, including rough budgets and action steps"]
 };
 
 export const covidContent = {
