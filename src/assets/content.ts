@@ -177,10 +177,10 @@ export const homeContent = {
 /** ***********************************Summit content************************************** */
 export const summitContent = {
   subtitle1: "JOIN US for the D4SD 2020 Summit",
-  title1: "Broadcast Live Online | May 15, 2020",
+  title1: "Broadcast Live Online | 11am-2pm on May 15, 2020",
   title2:
     "The D4SD 2020 Summit is an opportunity for our community to come together to share proposals and to build alliances around  complex challenges facing San Diego. Join us <i>online</i> for this one-of-a-kind event!",
-  title3: "May 15, 2020",
+  title3: "11am-2pm on May 15, 2020",
   title4: "4pm - 8pm",
   addressLine2: "Broadcast Live Online",
   addressLink:

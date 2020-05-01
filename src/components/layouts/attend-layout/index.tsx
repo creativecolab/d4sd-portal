@@ -108,7 +108,7 @@ const AttendLayout = (): JSX.Element => {
               ))}
             </ul>
           </p>
-          <Button onClick={(): void => history.push('/submit')}>
+          <Button onClick={(): void => history.push('/submit/submit-proposal')}>
             LEARN HOW TO SUBMIT
           </Button>
         </div>
