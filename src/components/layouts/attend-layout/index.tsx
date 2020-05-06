@@ -45,12 +45,12 @@ const AttendLayout = (): JSX.Element => {
           {/* eslint-disable-next-line */}
           <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
-            <a href="http://d4sd-summit.eventbrite.com/" target="_blank" rel="noopener noreferrer">
-              <Button
-                className="learn"
-                size="default"
-                type="primary"
-              >
+            <a
+              href="http://d4sd-summit.eventbrite.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="learn" size="default" type="primary">
                 REGISTER NOW
               </Button>
             </a>
@@ -59,58 +59,60 @@ const AttendLayout = (): JSX.Element => {
       </div>
       <div className="AttendLayout container">
         <div className="event-info">
-          <h1 ref={ref} className="summitDetails">{attendContent.title_1_1}</h1>
+          <h1 ref={ref} className="summitDetails">
+            {attendContent.title_1_1}
+          </h1>
           <h3>{summitContent.title3}</h3>
           <h3>{summitContent.addressLine2}</h3>
           <br />
           <p>{attendContent.content_1_1}</p>
           {/* eslint-disable */}
-          <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_2 }} />
           <p dangerouslySetInnerHTML={{ __html: attendContent.content_1_3 }} />
           {/* eslint-enable */}
           <br />
-          <a href="http://d4sd-summit.eventbrite.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="http://d4sd-summit.eventbrite.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button type="primary">REGISTER ON EVENTBRITE</Button>
           </a>
         </div>
+        <br />
         <div className="before-summit">
           <h3>{attendContent.title_2}</h3>
           <br />
           <p>
             {attendContent.content_2_1}
             {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/resources')}>
-              {attendContent.content_2_2}
-            </a>
-            {attendContent.content_2_3}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/challenges')}>
-              {attendContent.content_2_4}
-            </a>
-            {attendContent.content_2_5}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/submit/join-a-design-jam')}>
-              {attendContent.content_2_6}
-            </a>
-            {attendContent.content_2_7}
+            <br />
           </p>
-          <p>
-            {attendContent.content_2_8}
-            <ul>
-              {attendContent.timeline.map((event) => (
-                <li>
-                  <p>
-                    <b>{event.date}</b>
-                    {' '}
-                    {event.desc}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </p>
+          <br />
+          <p>{attendContent.content_2_2}</p>
+          <br />
           <Button onClick={(): void => history.push('/submit/submit-proposal')}>
             LEARN HOW TO SUBMIT
           </Button>
+          <br />
+          <br />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_2_3 }} />
+        </div>
+        <div className="before-summit">
+          <h3>{attendContent.title_3}</h3>
+          <br />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_3_1 }} />
+          <br />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_3_2 }} />
+          <br />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_3_3 }} />
+          <br />
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: attendContent.content_3_4 }} />
+          <br />
         </div>
       </div>
       <Footer />
