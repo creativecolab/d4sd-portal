@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-import { Button } from '@d4sd/components';
-import Footer from '../../Footer/index';
-import '../../../styles/containers.less';
-import './style.less';
+import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
+import { Button } from "@d4sd/components";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
+import "./style.less";
 
-import { attendContent, summitContent } from '../../../assets/content';
+import { attendContent, summitContent } from "../../../assets/content";
 
 const AttendLayout = (): JSX.Element => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -17,7 +17,7 @@ const AttendLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -44,6 +44,7 @@ const AttendLayout = (): JSX.Element => {
           <br />
           <br />
           {/* eslint-disable-next-line */}
+
           <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
             <a
@@ -58,8 +59,8 @@ const AttendLayout = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="AttendLayout container">
-        <div className="event-info">
+      <div className="AttendLayout">
+        <div className="event-info container">
           <h1 ref={ref} className="summitDetails">
             {attendContent.title_1_1}
           </h1>
@@ -80,26 +81,32 @@ const AttendLayout = (): JSX.Element => {
           </a>
         </div>
         <br />
-        <div className="before-summit">
-          <h3>{attendContent.title_2}</h3>
-          <br />
-          <p>
-            {attendContent.content_2_1}
-            {/* eslint-disable-next-line */}
+        <div className="how-submit">
+          <div className="container">
+            <h3>{attendContent.title_2}</h3>
             <br />
-          </p>
-          <br />
-          <p>{attendContent.content_2_2}</p>
-          <br />
-          <Button onClick={(): void => history.push('/submit/submit-proposal')}>
-            LEARN HOW TO SUBMIT
-          </Button>
-          <br />
-          <br />
-          {/* eslint-disable-next-line */}
-          <p dangerouslySetInnerHTML={{ __html: attendContent.content_2_3 }} />
+            <p>
+              {attendContent.content_2_1}
+              {/* eslint-disable-next-line */}
+              <br />
+            </p>
+            <br />
+            <p>{attendContent.content_2_2}</p>
+            <br />
+            <Button
+              onClick={(): void => history.push("/submit/submit-proposal")}
+            >
+              LEARN HOW TO SUBMIT
+            </Button>
+            <br />
+            <br />
+            {/* eslint-disable-next-line */}
+            <p
+              dangerouslySetInnerHTML={{ __html: attendContent.content_2_3 }}
+            />
+          </div>
         </div>
-        <div className="before-summit">
+        <div className="before-summit container">
           <h3>{attendContent.title_3}</h3>
           <br />
           {/* eslint-disable-next-line */}
