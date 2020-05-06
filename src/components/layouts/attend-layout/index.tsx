@@ -42,6 +42,7 @@ const AttendLayout = (): JSX.Element => {
           <h3>{summitContent.title1}</h3>
           <br />
           <br />
+          <br />
           {/* eslint-disable-next-line */}
           <h3 dangerouslySetInnerHTML={{ __html: summitContent.title2 }} />
           <div className="buttons">
