@@ -325,14 +325,14 @@ export const faqContent = {
       events: [
         {
           description:
-            "<b>April 27: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (May 8).",
+            "<b>April 27: Request early community feedback (optional)</b> This will be an early submission deadline for teams who want to seek community feedback on an idea. This is optional, but we highly recommend that you participate. It’s best to learn as early as possible about the pros and cons of your idea. Community members will review your submitted one-page document where you can include  storyboards, photos, or some other illustration of their concept. The D4SD team will recruit experts across civics, business, and design to provide feedback and guidance. Feedback will be available in early April so that teams have time to iterate before the final deadline (<strike>May 8 </strike> Deadline extended to May 11).",
           button_label: "LEARN HOW TO REQUEST FEEDBACK",
           url: "/submit/request-feedback",
           key: "request-feedback"
         },
         {
           description:
-            `<b> <strike>May 8 </strike> (Deadline extended to May 11 : Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.`,
+            `<b> <strike>May 8 </strike>   Deadline extended to May 11 : Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.`,
           button_label: "LEARN HOW TO SUBMIT A PROPOSAL",
           url: "/submit/submit-proposal",
           key: "final-proposal"
