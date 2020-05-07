@@ -371,7 +371,7 @@ export const faqContent = {
         },
         {
           description:
-            "<b>MAY 8: Final Submission Deadline.</b> Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea virtually at the Summit.",
+            `<b> <strike> MAY 8 </strike>  MAY 11 (Deadline Extended) : Final Submission Deadline.</b> Submit a digital poster to illustrate your team’s problem and proposed solution. Be ready to pitch your idea virtually at the Summit.`,
           button_label: "SUBMIT A PROPOSAL",
           url: "/submit/submit-proposal",
           key: "submit-proposal"
