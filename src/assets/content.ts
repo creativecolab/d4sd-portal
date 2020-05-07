@@ -332,7 +332,7 @@ export const faqContent = {
         },
         {
           description:
-            "<b>May 8: Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.",
+            `<b> <strike>May 8 </strike> (Deadline extended to May 11 : Submit your team’s final Submission (required)</b> This is the final deadline to submit a digital poster to illustrate your team’s problem and proposed solution. All teams will have the chance to virtually present posters at the summit. Finalists will be announced before the online summit so that those teams have time to prepare a slide and verbal pitch.`,
           button_label: "LEARN HOW TO SUBMIT A PROPOSAL",
           url: "/submit/submit-proposal",
           key: "final-proposal"
