@@ -1097,7 +1097,7 @@ export const attendContent = {
   title_1_2: "2020 SUMMIT",
   subtitle_1: "San Diego Central Library",
   content_1_1:
-    "The 2020 “Design for San Diego” Summit will be an online, interactive showcase, and discussion about how to make a more sustainable San Diego. We encourage people from all walks of life to join the Design Summit. All you need is access to an internet connection.",
+    "The 2020 “Design for San Diego” Summit will be an online, interactive showcase and discussion about how to make a more sustainable San Diego. All are welcome. Attend as an observer, facilitator, subject-matter experts, concerned citizen, or as a civic designer. All you need is access to an internet connection.",
   content_1_2:
     "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)?  Please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(<strike>May 8th </strike> May 11 submission deadline)</a>.",
   content_1_3:
