@@ -1097,48 +1097,25 @@ export const attendContent = {
   content_1_1:
     "The 2020 “Design for San Diego” Summit will be an online, interactive showcase and discussion about how to make a more sustainable San Diego. All are welcome. Attend as an observer, facilitator, subject-matter experts, concerned citizen, or as a civic designer. All you need is access to an internet connection.",
   content_1_2:
-    "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)?  Please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(<strike>May 8th </strike> May 11 submission deadline)</a>.",
+    "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)?  Please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(May 8th submission deadline)</a>.",
   content_1_3:
     "Join us for a rich discussion about the 2020 civic challenges to learn more about ways to make San Diego a more sustainable city.",
-  title_2: "What's happening before the Summit?",
-  content_2_1: "Trying to get started? We have many ",
-  content_2_2: "resources",
-  content_2_3: " and a list of civic ",
-  content_2_4: "challenge topics",
-  content_2_5:
-    " to dig into. If you just want to learn more and get inspired by others, the D4SD educator team will be offering weekly online ",
-  content_2_6: "Design Jams",
-  content_2_7:
-    " on Fridays 11-2 on Zoom. Join us to share the problems that you’re grappling with, to take part in small group design activities, and to meet potential teammates for the D4SD civic challenge. These “design jams” are free and open to anyone -- so, grab a few friends, family, or coworkers and help us make a difference on pressing civic issues including COVID-19!",
-  content_2_8:
-    "Here’s the timeline of opportunities leading up to the D4SD Summit:",
-  timeline: [
-    {
-      date: "April 10",
-      desc:
-        "Design Jam #1 (DISCOVER): exploring challenge topics and doing research"
-    },
-    {
-      date: "April 17",
-      desc: "Design Jam #2 (IDEATE):  framing, ideating, and storyboarding"
-    },
-    {
-      date: "April 24",
-      desc: "Design Jam #3 (PROTOTYPE): making and testing prototypes"
-    },
-    {
-      date: "May 1",
-      desc: "Design Jam #4 (CONNECT): creating stories and making connections"
-    },
-    {
-      date: `May 11`,
-      desc: "DEADLINE: Submit your final proposals for the D4SD Summit"
-    },
-    {
-      date: "May 15",
-      desc: "D4SD SUMMIT: Showcase proposals and build alliances"
-    }
-  ]
+  title_2: "How can you submit proposals for D4SD 2020?",
+  content_2_1:
+    "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)? Do you want to showcase your ideas at the Summit?",
+  content_2_2:
+    `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended)`,
+  content_2_3:
+    "We welcome you to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener noreferrer'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
+  title_3: "What will happen at the Summit?",
+  content_3_1:
+    "<b>Learn from others.</b> Enjoy the unique opportunity to present and observe novel ideas that address civic challenges across a variety of domains. Listen carefully to others, and you can learn a lot about the design process and key about the civic problems in our region.",
+  content_3_2:
+    "<b>Receive Feedback.</b> Subject matter experts, design experts, and business leaders will be available to help you move your ideas to the next level. Through Zoom breakout sessions, you will have the opportunity to present your ideas to representatives from City of San Diego, SANDAG, IBM, and other D4SD partners.",
+  content_3_3:
+    "<b>Get recognized for your work.</b> Strong submissions will be featured on theour D4SD and Design Lab websites. Your work will have the potential to gain a lot of visibility across many diverse design communities! Attendees will also see your work through interactive discussions and presentations. ",
+  content_3_4:
+    "<b>Build alliances.</b> Connect with other teams around shared problems to identify synergies and build on their progress. This can help you garner the design assets and community support that you need to move your idea forward."
 };
 
 export const requestFeedbackContent = {
