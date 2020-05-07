@@ -1099,7 +1099,7 @@ export const attendContent = {
   content_1_1:
     "The 2020 “Design for San Diego” Summit will be an online, interactive showcase, and discussion about how to make a more sustainable San Diego. We encourage people from all walks of life to join the Design Summit. All you need is access to an internet connection.",
   content_1_2:
-    "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)?  Please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(May 8th submission deadline)</a>.",
+    "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)?  Please consider submitting an idea to the 2020 D4SD civic challenge <a href='/submit'>(<strike>May 8th </strike> May 11 submission deadline)</a>.",
   content_1_3:
     "Join us for a rich discussion about the 2020 civic challenges to learn more about ways to make San Diego a more sustainable city.",
   title_2: "What's happening before the Summit?",
@@ -1133,7 +1133,7 @@ export const attendContent = {
       desc: "Design Jam #4 (CONNECT): creating stories and making connections"
     },
     {
-      date: "May 8",
+      date: `May 11`,
       desc: "DEADLINE: Submit your final proposals for the D4SD Summit"
     },
     {
