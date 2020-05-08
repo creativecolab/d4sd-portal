@@ -1,13 +1,11 @@
-import React, { useRef } from 'react';
-import {
-  Row, Col, Button, Carousel
-} from '@d4sd/components';
-import { useHistory, NavLink } from 'react-router-dom';
-import './style.less';
-import '../../../styles/containers.less';
-import { homeContent } from '../../../assets/content';
-import Footer from '../../Footer';
-import { contentHTML } from '../../../actions';
+import React, { useRef } from "react";
+import { Row, Col, Button, Carousel } from "@d4sd/components";
+import { useHistory, NavLink, Link } from "react-router-dom";
+import "./style.less";
+import "../../../styles/containers.less";
+import { homeContent } from "../../../assets/content";
+import Footer from "../../Footer";
+import { contentHTML } from "../../../actions";
 
 // const photoCarouselSettings = {
 //   dots: true,
@@ -29,7 +27,7 @@ const logoCarouselSettings = {
 
 function isApril(date: any) {
   if (date === 10) {
-    return '10+';
+    return "10+";
   }
   return date;
 }
@@ -44,7 +42,7 @@ const HomeLayout = (): JSX.Element => {
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   };
@@ -64,8 +62,15 @@ const HomeLayout = (): JSX.Element => {
             <h5>{homeContent.summit_banner.location}</h5>
           </div>
         </div>
+        <div style={{ marginRight: "60px" }} />
         <div className="key-dates">
-          <div className="dates">
+          <Link to="/submit">
+            <p>
+              Submit your proposals for D4SD 2020 by Monday{" "}
+              <span style={{ color: "#fd9798" }}> May 11</span> at 11:59 PM
+            </p>
+          </Link>
+          {/* <div className="dates">
             {homeContent.summit_banner.key_dates.map((date, i) => (
               <div className={`date-${i + 1}`} key={`${date.key}_div`}>
                 <p className="date">
@@ -75,9 +80,9 @@ const HomeLayout = (): JSX.Element => {
                 </p>
               </div>
             ))}
-          </div>
-          <div style={{ marginRight: '15px' }} />
-          <div className="labels">
+          </div> */}
+
+          {/* <div className="labels">
             {homeContent.summit_banner.key_dates.map((date) => (
               // eslint-disable-next-line
               <a
@@ -91,7 +96,7 @@ const HomeLayout = (): JSX.Element => {
                 <p>{date.label}</p>
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="action-buttons">
@@ -112,7 +117,7 @@ const HomeLayout = (): JSX.Element => {
           <Button
             type="primary-outline"
             size="medium"
-            style={{ width: '100%' }}
+            style={{ width: "100%" }}
             className="button outline"
           >
             JOIN THE NEWSLETTER!
@@ -141,14 +146,14 @@ const HomeLayout = (): JSX.Element => {
             {/* eslint-disable-next-line */}
             <a
               href=""
-              onClick={(): void => history.push('/submit/join-a-design-jam')}
+              onClick={(): void => history.push("/submit/join-a-design-jam")}
             >
               {homeContent.content1_2}
             </a>
             {homeContent.content1_3}
             {homeContent.content1_4}
             {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push('/submit')}>
+            <a href="" onClick={(): void => history.push("/submit")}>
               {homeContent.content1_5}
             </a>
             {homeContent.content1_6}
@@ -179,7 +184,7 @@ const HomeLayout = (): JSX.Element => {
                   <img
                     className="picitems"
                     src={role.image}
-                    style={{ width: '75%' }}
+                    style={{ width: "75%" }}
                     alt=""
                   />
                 </NavLink>
@@ -240,7 +245,7 @@ const HomeLayout = (): JSX.Element => {
             md={6}
             xs={9}
           >
-            <img src={img} style={{ width: '98%' }} alt="" />
+            <img src={img} style={{ width: "98%" }} alt="" />
           </Col>
         ))}
       </Row>
@@ -265,7 +270,7 @@ const HomeLayout = (): JSX.Element => {
         {homeContent.logos.map((logo, i) => (
           // eslint-disable-next-line
           <div key={`logo${i}`}>
-            <img src={logo} style={{ width: '100%' }} alt="" />
+            <img src={logo} style={{ width: "100%" }} alt="" />
           </div>
         ))}
       </Carousel>

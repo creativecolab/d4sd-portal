@@ -82,20 +82,8 @@ export const homeContent = {
     location: "Broadcast Live Online",
     key_dates: [
       {
-        date: new Date("04/10/2020"),
-        label: "Join a Design Jam on Fridays 11-2",
-        url: "/submit/join-a-design-jam",
-        key: "date-1"
-      },
-      {
-        date: new Date("04/27/2020"),
-        label: "Request Community Feedback",
-        url: "/submit/request-feedback",
-        key: "date-2"
-      },
-      {
         date: new Date("05/08/2020"),
-        label: "Submit Proposals to the D4SD Summit",
+        label: "Submit your proposals for D4SD 2020 by Monday, May 11 at 11:59 PM PST",
         url: "/submit/submit-proposal",
         key: "date-3"
       }
@@ -1104,7 +1092,7 @@ export const attendContent = {
   content_2_1:
     "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)? Do you want to showcase your ideas at the Summit?",
   content_2_2:
-    `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended)`,
+    `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended).`,
   content_2_3:
     "We welcome you to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener noreferrer'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   title_3: "What will happen at the Summit?",
