@@ -62,26 +62,19 @@ const HomeLayout = (): JSX.Element => {
             <h5>{homeContent.summit_banner.location}</h5>
           </div>
         </div>
-        <div style={{ marginRight: "60px" }} />
-        <div className="key-dates">
-          <Link to="/submit">
-            <p>
-              Submit your proposals for D4SD 2020 by Monday{" "}
-              <span style={{ color: "#fd9798" }}> May 11</span> at 11:59 PM
-            </p>
-          </Link>
-        </div>
       </div>
       <div className="action-buttons">
-        <Button
-          type="primary"
-          size="medium"
-          onClick={scrollToRef}
-          className="button-container button learn-more"
-        >
-          LEARN MORE
-        </Button>
-        <a
+        <a href="https://www.eventbrite.com/e/design-for-san-diego-d4sd-online-summit-tickets-103272954186" target="_blank">
+          <Button
+            type="primary"
+            size="large"
+            onClick={scrollToRef}
+            className="button-container button learn-more"
+          >
+            REGISTER
+          </Button>
+        </a>
+        {/* <a
           href="http://eepurl.com/c2kFon"
           target="_blank"
           rel="noopener noreferrer"
@@ -95,7 +88,7 @@ const HomeLayout = (): JSX.Element => {
           >
             JOIN THE NEWSLETTER!
           </Button>
-        </a>
+        </a> */}
       </div>
     </div>
   );
@@ -115,7 +108,7 @@ const HomeLayout = (): JSX.Element => {
             {homeContent.title1_2}
           </h1>
           <p className="d4sd-content">
-          <p dangerouslySetInnerHTML={contentHTML(homeContent.content1_1)} />
+            <p dangerouslySetInnerHTML={contentHTML(homeContent.content1_1)} />
           </p>
           <br />
           <br />
