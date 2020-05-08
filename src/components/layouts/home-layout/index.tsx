@@ -82,7 +82,6 @@ const HomeLayout = (): JSX.Element => {
           <Button
             type="primary-outline"
             size="medium"
-            style={{ width: "100%" }}
             className="button outline"
           >
             JOIN THE NEWSLETTER!
