@@ -64,17 +64,16 @@ const HomeLayout = (): JSX.Element => {
         </div>
       </div>
       <div className="action-buttons">
-        <a href="https://www.eventbrite.com/e/design-for-san-diego-d4sd-online-summit-tickets-103272954186" target="_blank">
-          <Button
-            type="primary"
-            size="large"
-            onClick={scrollToRef}
-            className="button-container button learn-more"
-          >
+        <a
+          href="https://www.eventbrite.com/e/design-for-san-diego-d4sd-online-summit-tickets-103272954186"
+          className="button-container"
+          target="_blank"
+        >
+          <Button type="primary" size="medium" className="button learn-more">
             REGISTER
           </Button>
         </a>
-        {/* <a
+        <a
           href="http://eepurl.com/c2kFon"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,7 +87,7 @@ const HomeLayout = (): JSX.Element => {
           >
             JOIN THE NEWSLETTER!
           </Button>
-        </a> */}
+        </a>
       </div>
     </div>
   );
