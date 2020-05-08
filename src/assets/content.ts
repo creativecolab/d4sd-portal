@@ -1182,13 +1182,13 @@ export const submitProposalContent = {
   importantDates: [
     {
       start_date: new Date("04/21/2020"),
-      end_date: new Date("05/08/2020"),
+      end_date: new Date("05/11/2020"),
       title: "Open period for submitting your proposal to D4SD 2020",
       key: "submit_proposal"
     },
     {
       date_overlap: true,
-      start_date: new Date("05/08/2020"),
+      start_date: new Date("05/11/2020"),
       end_date: new Date("05/13/2020"),
       title: "Judging period for D4SD submissions",
       key: "judging_period"
