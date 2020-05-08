@@ -70,33 +70,6 @@ const HomeLayout = (): JSX.Element => {
               <span style={{ color: "#fd9798" }}> May 11</span> at 11:59 PM
             </p>
           </Link>
-          {/* <div className="dates">
-            {homeContent.summit_banner.key_dates.map((date, i) => (
-              <div className={`date-${i + 1}`} key={`${date.key}_div`}>
-                <p className="date">
-                  {date.date.toDateString().substring(4, 7)}
-                  {' '}
-                  {isApril(date.date.getDate())}
-                </p>
-              </div>
-            ))}
-          </div> */}
-
-          {/* <div className="labels">
-            {homeContent.summit_banner.key_dates.map((date) => (
-              // eslint-disable-next-line
-              <a
-                href=""
-                onClick={(evt: React.MouseEvent<HTMLAnchorElement>): void => {
-                  evt.preventDefault();
-                  history.push(date.url);
-                }}
-                key={`${date.key}_p`}
-              >
-                <p>{date.label}</p>
-              </a>
-            ))}
-          </div> */}
         </div>
       </div>
       <div className="action-buttons">
@@ -142,21 +115,7 @@ const HomeLayout = (): JSX.Element => {
             {homeContent.title1_2}
           </h1>
           <p className="d4sd-content">
-            {homeContent.content1_1}
-            {/* eslint-disable-next-line */}
-            <a
-              href=""
-              onClick={(): void => history.push("/submit/join-a-design-jam")}
-            >
-              {homeContent.content1_2}
-            </a>
-            {homeContent.content1_3}
-            {homeContent.content1_4}
-            {/* eslint-disable-next-line */}
-            <a href="" onClick={(): void => history.push("/submit")}>
-              {homeContent.content1_5}
-            </a>
-            {homeContent.content1_6}
+          <p dangerouslySetInnerHTML={contentHTML(homeContent.content1_1)} />
           </p>
           <br />
           <br />
