@@ -137,20 +137,17 @@ const SubmitProposalLayout = (): JSX.Element => {
         <div className="container">
           <h2 className="title">{submitProposalContent.title_3}</h2>
           <p>{submitProposalContent.content_3_1}</p>
-          <ol className="submission-types">
+          <p>{submitProposalContent.content_3_2}</p>
+          <ul className="submission-types">
             {submitProposalContent.submission_types.map((type) => (
               <li key={`${type.key}_li`}>
                 <p>
-                  <b>
-                    {type.title}
-:
-                    {' '}
-                  </b>
+                  <b />
                   {type.description}
                 </p>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
       <div className="section" id="section-4">
@@ -178,21 +175,19 @@ const SubmitProposalLayout = (): JSX.Element => {
           <h2 className="title">
             {submitProposalContent.title_6}
           </h2>
-          <p dangerouslySetInnerHTML={{__html:submitProposalContent.content_6_1}}></p>
+          <p dangerouslySetInnerHTML={{ __html: submitProposalContent.content_6_1 }} />
           <ul>
-            {submitProposalContent.content_6_1_points.map((point) => {
-              return (
-                <li>{point}</li>
-              )
-            })}
+            {submitProposalContent.content_6_1_points.map((point) => (
+              <li>{point}</li>
+            ))}
           </ul>
-          <iframe 
-            className='pdf-view'
-            src='/SafeD-slide-example.pdf'
+          <iframe
+            className="pdf-view"
+            src="/SafeD-slide-example.pdf"
           />
-          <iframe 
-            className='pdf-view'
-            src='/ARC-example.pdf'
+          <iframe
+            className="pdf-view"
+            src="/ARC-example.pdf"
           />
         </div>
       </div>
@@ -266,7 +261,7 @@ const SubmitProposalLayout = (): JSX.Element => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

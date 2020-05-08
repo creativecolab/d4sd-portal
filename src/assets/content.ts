@@ -1211,28 +1211,41 @@ export const submitProposalContent = {
       key: "d4sd_showcase"
     }
   ],
-  title_3: "Submission Categories",
+  title_3: "Submission Considerations",
   content_3_1:
-    "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development. In practical terms, how will this idea get funding or resources to move it forward?  To support a wide range of possible proposals, D4SD will accept one of three types of submissions:",
-  submission_types: [
+    "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Think through the following questions related to your design and be prepared to answer them when submitting. Finally, since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development.",
+  content_3_2: "Below are questions you should be prepared to answer in the Google Form when submitting your idea:",
+    submission_types: [
     {
-      title: "Entrepreneurial",
       description:
-        "Projects in this category will be oriented as very early-stage startups that would need investments from the business community to get off the ground. Entrepreneurial projects will typically be concepts for new products or services and would include a rough business plan.",
-      key: "entrepreneurial"
+        "Write a paragraph that explains your understanding of the problem that you have chosen to explore in your project?",
+      key: "understand"
     },
     {
-      title: "Civic",
       description:
-        "These projects would be oriented towards leaders of large organizations that provide funds/resources projects for the public good. This could be targeted at the City of San Diego or at an established organization (i.e., your school) that could help to vet and test the proposed concepts. Civic projects will typically be concepts for new policies or changes to civic infrastructure (e.g., parks, roads, structures).",
-      key: "civic"
+        "How do you know that this is a problem?",
+      key: "problem"
     },
     {
-      title: "Philanthropic",
       description:
-        "These projects would rely on support and resources from the public or donors. Some concepts could really improve how people live, but will have a hard time getting funded as a business or as a civic project. For these proposals, the team should consider creating a crowdfunding campaign to take the concepts directly to the public.  Philanthropic projects will typically be concepts for new experiences for residents or new social/cultural campaigns.",
-      key: "philanthropic"
-    }
+        "What stakeholders are affected by your problem? Which stakeholders can influence your problem?",
+      key: "affected"
+    },
+    {
+      description:
+        "Is anyone else (organizations, initiatives, people) currently working on the problem?",
+      key: "stakeholders"
+    },
+    {
+      description:
+        "What have you learned about the problem through your design process?",
+      key: "design"
+    },
+    {
+      description:
+        "To move ideas forward, it can be helpful to think about how your idea might get funded or adopted. Who might you need to involve to get your idea adopted (city officials, entrepreneurs, community volunteers, etc)? ",
+      key: "funded"
+    },
   ],
   title_4: "Judging Process and Criteria",
   content_4_1:
