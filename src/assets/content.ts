@@ -455,7 +455,7 @@ export const submitContent = {
       key: "community_feedback"
     },
     {
-      date: new Date("05/08/2020"),
+      date: new Date("05/11/2020"),
       className: "",
       title: "Submission Deadline",
       body:
