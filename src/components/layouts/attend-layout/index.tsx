@@ -91,7 +91,7 @@ const AttendLayout = (): JSX.Element => {
               <br />
             </p>
             <br />
-            <p>{attendContent.content_2_2}</p>
+            <p dangerouslySetInnerHTML={{ __html: attendContent.content_2_2 }} />
             <br />
             <Button
               onClick={(): void => history.push("/submit/submit-proposal")}
