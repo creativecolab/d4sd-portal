@@ -1360,5 +1360,14 @@ export const covidContent = {
 export const entriesContent = {
   title : "Entries",
   image : "attend_header",
-  subInfo : "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry."
+  subInfo : "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
+  finalists : [
+    {
+      category : "",
+      image : "",
+      projectName : "",
+      teamMembers : [],
+      description : "",
+    }
+  ]
 }
