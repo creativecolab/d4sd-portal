@@ -1377,5 +1377,21 @@ export const entriesContent = {
         "How might we Re-open Essential Public Transit in San Diego?",
       featuredImage: ""
     }
+  ],
+  high_potential_for_impact: [
+    {
+      projectName: "COVID Confidential",
+      members: "Kat Alexander, Allysa Chung, Ramona Pindus, Zoe Wong",
+      projectDescription:
+        "COVID Confidential: A safe space for students' stories",
+      featuredImage: ""
+    },
+    {
+      projectName: "Project PARCEL",
+      members: "Ken Lew",
+      projectDescription:
+        "How might we implement fair and efficient resource distribution at local stores during COVID?",
+      featuredImage: ""
+    }
   ]
 };

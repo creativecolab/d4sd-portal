@@ -8,8 +8,8 @@ const EntryCard = (props: any) => {
   console.log(typeof props.info);
   return (
     <Col
-      xs={{ span: 24}}
-      md={{ span: 12}}
+      xs={{ span: 24 }}
+      md={{ span: 12 }}
       style={{ color: "#4497ff" }}
       className="entryCards"
     >
@@ -39,6 +39,15 @@ const EntriesLayout = (): JSX.Element => {
               return <EntryCard info={project} />;
             })}
           </Row>
+
+          <div className="compelling_storytelling">
+            <h2>High Potential For Impact</h2>
+            <Row justify="start">
+              {entriesContent.high_potential_for_impact.map(project => {
+                return <EntryCard info={project} />;
+              })}
+            </Row>
+          </div>
         </div>
       </div>
     </div>
