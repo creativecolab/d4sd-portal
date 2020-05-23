@@ -1393,5 +1393,21 @@ export const entriesContent = {
         "How might we implement fair and efficient resource distribution at local stores during COVID?",
       featuredImage: ""
     }
+  ],
+  human_centered_design_process: [
+    {
+      projectName: "Idle Reminder",
+      members: "Nancy R, Alberto P, Symphony J, Uriel H",
+      projectDescription:
+        "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
+      featuredImage: ""
+    },
+    {
+      projectName: "SunShun",
+      members: "Malia Acol",
+      projectDescription:
+        "How might we decrease skin cancer rates through wearable technology?",
+      featuredImage: ""
+    }
   ]
 };

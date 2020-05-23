@@ -48,6 +48,15 @@ const EntriesLayout = (): JSX.Element => {
               })}
             </Row>
           </div>
+
+          <div className="compelling_storytelling">
+            <h2>Showing The Human-Centered Design Process</h2>
+            <Row justify="start">
+              {entriesContent.human_centered_design_process.map(project => {
+                return <EntryCard info={project} />;
+              })}
+            </Row>
+          </div>
         </div>
       </div>
     </div>
