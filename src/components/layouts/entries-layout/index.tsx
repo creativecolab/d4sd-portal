@@ -8,8 +8,8 @@ const EntryCard = (props: any) => {
   console.log(typeof props.info);
   return (
     <Col
-      xs={{ span: 20, offset: 2 }}
-      md={{ span: 9, offset: 2 }}
+      xs={{ span: 24}}
+      md={{ span: 12}}
       style={{ color: "#4497ff" }}
       className="entryCards"
     >
@@ -31,13 +31,15 @@ const EntriesLayout = (): JSX.Element => {
         content={entriesContent.subInfo}
         image={entriesContent.image}
       />
-      <div className="compelling_storytelling">
-        <h2>Compelling Storytelling</h2>
-        <Row justify="end">
-          {entriesContent.compelling_storytelling.map(project => {
-            return <EntryCard info={project} />;
-          })}
-        </Row>
+      <div className="container">
+        <div className="compelling_storytelling">
+          <h2>Compelling Storytelling</h2>
+          <Row justify="start">
+            {entriesContent.compelling_storytelling.map(project => {
+              return <EntryCard info={project} />;
+            })}
+          </Row>
+        </div>
       </div>
     </div>
   );

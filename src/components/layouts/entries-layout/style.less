@@ -10,13 +10,15 @@
 
 .entryCards {
   margin-top: @margin-base-1;
+  text-align: left;
 
   .entryDiv {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-
+    >*{
+      margin-top: @margin-base;
+    }
     h4 {
       color: @d4sd-color;
     }
@@ -27,13 +29,9 @@
       color: @primary-txt;
     }
 
-    > * {
-      margin-top: @margin-base-1 / 2;
-    }
-
     .imgDiv {
       background: @primary-txt;
-      height: 30rem;
+      height: 25rem;
       width: 100%;
     }
   }
