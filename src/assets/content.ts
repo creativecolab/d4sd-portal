@@ -82,7 +82,8 @@ export const homeContent = {
     key_dates: [
       {
         date: new Date("05/08/2020"),
-        label: "Submit your proposals for D4SD 2020 by Monday, May 11 at 11:59 PM PST",
+        label:
+          "Submit your proposals for D4SD 2020 by Monday, May 11 at 11:59 PM PST",
         url: "/submit/submit-proposal",
         key: "date-3"
       }
@@ -1090,8 +1091,7 @@ export const attendContent = {
   title_2: "How can you submit proposals for D4SD 2020?",
   content_2_1:
     "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)? Do you want to showcase your ideas at the Summit?",
-  content_2_2:
-    `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended).`,
+  content_2_2: `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended).`,
   content_2_3:
     "We welcome you to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener noreferrer'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   title_3: "What will happen at the Summit?",
@@ -1201,16 +1201,16 @@ export const submitProposalContent = {
   title_3: "Submission Considerations",
   content_3_1:
     "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Think through the following questions related to your design and be prepared to answer them when submitting. Finally, since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development.",
-  content_3_2: "Below are questions you should be prepared to answer in the Google Form when submitting your idea:",
-    submission_types: [
+  content_3_2:
+    "Below are questions you should be prepared to answer in the Google Form when submitting your idea:",
+  submission_types: [
     {
       description:
         "Write a paragraph that explains your understanding of the problem that you have chosen to explore in your project?",
       key: "understand"
     },
     {
-      description:
-        "How do you know that this is a problem?",
+      description: "How do you know that this is a problem?",
       key: "problem"
     },
     {
@@ -1232,7 +1232,7 @@ export const submitProposalContent = {
       description:
         "To move ideas forward, it can be helpful to think about how your idea might get funded or adopted. Who might you need to involve to get your idea adopted (city officials, entrepreneurs, community volunteers, etc)? ",
       key: "funded"
-    },
+    }
   ],
   title_4: "Judging Process and Criteria",
   content_4_1:
@@ -1358,16 +1358,24 @@ export const covidContent = {
 };
 
 export const entriesContent = {
-  title : "Entries",
-  image : "attend_header",
-  subInfo : "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
-  finalists : [
+  title: "Entries",
+  image: "attend_header",
+  subInfo:
+    "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
+  compelling_storytelling: [
     {
-      category : "",
-      image : "",
-      projectName : "",
-      teamMembers : [],
-      description : "",
+      projectName: "Helpr",
+      members: "Mona Powell, Lillian Nguyen, Nathan Brucher",
+      projectDescription:
+        "How might we help people easily give and receive virtual services that benefit each other and increase connection? ",
+      featuredImage: ""
+    },
+    {
+      projectName: "Transporting our city, not the virus",
+      members: ["Evan Shulman", "Nazima Ahmad", "Debbie Leung", "Erika Cheng"],
+      projectDescription:
+        "How might we Re-open Essential Public Transit in San Diego?",
+      featuredImage: ""
     }
   ]
-}
+};
