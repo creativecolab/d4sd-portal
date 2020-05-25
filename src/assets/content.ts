@@ -1440,24 +1440,6 @@ export const entriesContent = {
         "How might we help San Diego businesses and citizens survive & thrive during COVID?",
       featuredImage: "",
       projectLink: ""
-    },
-    {
-      projectName: "Thrive San Diego",
-      members:
-        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
-      projectDescription:
-        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
-      featuredImage: "",
-      projectLink: ""
-    },
-    {
-      projectName: "Thrive San Diego",
-      members:
-        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
-      projectDescription:
-        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
-      featuredImage: "",
-      projectLink: ""
     }
   ]
 };
