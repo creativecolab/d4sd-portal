@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import { Row, Col, Button, Carousel } from "@d4sd/components";
+import { Button, Carousel } from "@d4sd/components";
+import {Row, Col} from "react-grid-system";
 import Header from "../../Header/index";
 import { entriesContent } from "../../../assets/content";
 import "./style.less";
@@ -7,9 +8,7 @@ const EntryCard = (props: any) => {
   const [entryInfo, setEntryInfo] = useState(props);
   console.log(typeof props.info);
   return (
-    <Col
-      xs={{ span: 24 }}
-      md={{ span: 12 }}
+    <Col xs={12} md={6}
       className="entryCards"
     >
       <div className="entryDiv">
@@ -30,7 +29,7 @@ const EntriesLayout = (): JSX.Element => {
         content={entriesContent.subInfo}
         image={entriesContent.image}
       />
-      <div className="entry-container">
+      <div className="container">
         <div className="compelling_storytelling">
           <h2>Compelling Storytelling</h2>
           <Row justify="start">
