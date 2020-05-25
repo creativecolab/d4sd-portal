@@ -10,7 +10,6 @@ const EntryCard = (props: any) => {
     <Col
       xs={{ span: 24 }}
       md={{ span: 12 }}
-      style={{ color: "#4497ff" }}
       className="entryCards"
     >
       <div className="entryDiv">
@@ -31,7 +30,7 @@ const EntriesLayout = (): JSX.Element => {
         content={entriesContent.subInfo}
         image={entriesContent.image}
       />
-      <div className="container">
+      <div className="entry-container">
         <div className="compelling_storytelling">
           <h2>Compelling Storytelling</h2>
           <Row justify="start">
@@ -53,6 +52,15 @@ const EntriesLayout = (): JSX.Element => {
             <h2>Showing The Human-Centered Design Process</h2>
             <Row justify="start">
               {entriesContent.human_centered_design_process.map(project => {
+                return <EntryCard info={project} />;
+              })}
+            </Row>
+          </div>
+
+          <div className="compelling_storytelling">
+            <h2>People's Choice</h2>
+            <Row justify="start">
+              {entriesContent.peoples_choice.map(project => {
                 return <EntryCard info={project} />;
               })}
             </Row>

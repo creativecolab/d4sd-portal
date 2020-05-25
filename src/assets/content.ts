@@ -1384,14 +1384,16 @@ export const entriesContent = {
       members: "Kat Alexander, Allysa Chung, Ramona Pindus, Zoe Wong",
       projectDescription:
         "COVID Confidential: A safe space for students' stories",
-      featuredImage: ""
+      featuredImage: "",
+      projectLink: ""
     },
     {
       projectName: "Project PARCEL",
       members: "Ken Lew",
       projectDescription:
         "How might we implement fair and efficient resource distribution at local stores during COVID?",
-      featuredImage: ""
+      featuredImage: "",
+      projectLink: ""
     }
   ],
   human_centered_design_process: [
@@ -1400,14 +1402,62 @@ export const entriesContent = {
       members: "Nancy R, Alberto P, Symphony J, Uriel H",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
-      featuredImage: ""
+      featuredImage: "",
+      projectLink: ""
     },
     {
       projectName: "SunShun",
       members: "Malia Acol",
       projectDescription:
         "How might we decrease skin cancer rates through wearable technology?",
-      featuredImage: ""
+      featuredImage: "",
+      projectLink: ""
+    }
+  ],
+  peoples_choice: [
+    {
+      projectName: "Room In A Box",
+      members: "Holley McGinnis, Julieta Meneses, Nicollete Peji",
+      projectDescription:
+        "How might we provide low-income families with beautiful, low-cost, and usable furniture that is affordably priced?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Mixed Income Housing Units",
+      members:
+        "Jesus Felix, Yaretzi Jacinto, Ana Belen Carcamo, Ahmed Isaac Porras, Stacy Evangelista Cea, Luis Marquez",
+      projectDescription:
+        "How might we reimagine housing to meet the needs of all San Diego residents?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Thrive San Diego",
+      members:
+        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+      projectDescription:
+        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Thrive San Diego",
+      members:
+        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+      projectDescription:
+        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Thrive San Diego",
+      members:
+        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+      projectDescription:
+        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
+      featuredImage: "",
+      projectLink: ""
     }
   ]
 };
