@@ -1,16 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Button, Carousel } from "@d4sd/components";
-import {Row, Col} from "react-grid-system";
+import { Row, Col } from "react-grid-system";
 import Header from "../../Header/index";
 import { entriesContent } from "../../../assets/content";
 import "./style.less";
+import Footer from "../../Footer";
 const EntryCard = (props: any) => {
   const [entryInfo, setEntryInfo] = useState(props);
   console.log(typeof props.info);
   return (
-    <Col xs={12} md={6}
-      className="entryCards"
-    >
+    <Col xs={12} md={6} className="entryCards">
       <div className="entryDiv">
         <div className="imgDiv"></div>
         <h4>{props.info.projectName}</h4>
@@ -30,7 +29,7 @@ const EntriesLayout = (): JSX.Element => {
         image={entriesContent.image}
       />
       <div className="container">
-        <div className="compelling_storytelling">
+        <div className="project_section">
           <h2>Compelling Storytelling</h2>
           <Row justify="start">
             {entriesContent.compelling_storytelling.map(project => {
@@ -38,7 +37,7 @@ const EntriesLayout = (): JSX.Element => {
             })}
           </Row>
 
-          <div className="compelling_storytelling">
+          <div className="project_section">
             <h2>High Potential For Impact</h2>
             <Row justify="start">
               {entriesContent.high_potential_for_impact.map(project => {
@@ -47,7 +46,7 @@ const EntriesLayout = (): JSX.Element => {
             </Row>
           </div>
 
-          <div className="compelling_storytelling">
+          <div className="project_section">
             <h2>Showing The Human-Centered Design Process</h2>
             <Row justify="start">
               {entriesContent.human_centered_design_process.map(project => {
@@ -56,7 +55,7 @@ const EntriesLayout = (): JSX.Element => {
             </Row>
           </div>
 
-          <div className="compelling_storytelling">
+          <div className="project_section">
             <h2>People's Choice</h2>
             <Row justify="start">
               {entriesContent.peoples_choice.map(project => {
@@ -64,8 +63,18 @@ const EntriesLayout = (): JSX.Element => {
               })}
             </Row>
           </div>
+
+          <div className="project_section">
+            <h2>All Projects</h2>
+            <Row justify="start">
+              {entriesContent.all_projects.map(project => {
+                return <EntryCard info={project} />;
+              })}
+            </Row>
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

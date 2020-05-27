@@ -1442,7 +1442,7 @@ export const entriesContent = {
       projectLink: ""
     }
   ],
-  allProjects: [
+  all_projects: [
     {
       projectName: "SwiftSD",
       members:
@@ -1497,9 +1497,9 @@ export const entriesContent = {
       projectLink: ""
     },
     {
-      projectName: "EW Team",
-      members: "Erika Cheng, Tessa Hatlelid, Swathi Jagannath, Tan Zhou",
-      projectDescription: "How might we help essential workers get the verified information and access to needed materials?",
+      projectName: "LightOn",
+      members: "Nancy Chang; Kelsey Guo, Kendal Asprec",
+      projectDescription: "How might we help restaurant owners better promote their businesses during this pandemic? ",
       featuredImage: "",
       projectLink: ""
     }
