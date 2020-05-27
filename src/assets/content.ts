@@ -1476,6 +1476,27 @@ export const entriesContent = {
       projectLink: ""
     },
     {
+      projectName: "Infinity Clip",
+      members: "Melissa Woods, Angelica Torres, Cheilon Deas, Uriel Torres, and Christina Arias",
+      projectDescription: "How might we help blind/visually impaired people get around unknown and unaccommodating areas?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "ASSYT",
+      members: " Arianna Morris; Max Crowe; Ernesto Jimenez",
+      projectDescription: "How might we help match students and moderators anonymously to provide help on problems?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Project Aegis",
+      members: "Marlow Perdomo",
+      projectDescription: "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
       projectName: "EW Team",
       members: "Erika Cheng, Tessa Hatlelid, Swathi Jagannath, Tan Zhou",
       projectDescription: "How might we help essential workers get the verified information and access to needed materials?",
