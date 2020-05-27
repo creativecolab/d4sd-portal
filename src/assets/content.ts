@@ -1467,6 +1467,20 @@ export const entriesContent = {
         "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
       featuredImage: "",
       projectLink: ""
+    },
+    {
+      projectName: "Re-Entry",
+      members: "Mika Marzette and Jaime Wright",
+      projectDescription: "How might we create COVID testing solutions for essential workers?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "EW Team",
+      members: "Erika Cheng, Tessa Hatlelid, Swathi Jagannath, Tan Zhou",
+      projectDescription: "How might we help essential workers get the verified information and access to needed materials?",
+      featuredImage: "",
+      projectLink: ""
     }
   ]
 };
