@@ -1441,5 +1441,32 @@ export const entriesContent = {
       featuredImage: "",
       projectLink: ""
     }
+  ],
+  allProjects: [
+    {
+      projectName: "SwiftSD",
+      members:
+        "Amy An, Mylinh Lac, Braeanne Oribello, Kendall Nakai, Syed Adam Emir Putra, Daman Heer",
+      projectDescription:
+        "How might we promote sustainability, provide affordable transportation options, and alleviate the last mile challenge?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Electric Scooters",
+      members: "Jonathan Fong, Nicolette Shin, Julia Chu, Yi Cai",
+      projectDescription:
+        "How might we decrease electric scooter injuries by implementing self-service helmet kiosks throughout urban San Diego in order to provide a service that advocates safe riding practices to users?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "FLM Commuter Service CABR",
+      members: "Connor Burkesmith; Alex Rusu",
+      projectDescription:
+        "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
+      featuredImage: "",
+      projectLink: ""
+    }
   ]
 };
