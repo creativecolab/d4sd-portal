@@ -1368,14 +1368,16 @@ export const entriesContent = {
       members: "Mona Powell, Lillian Nguyen, Nathan Brucher",
       projectDescription:
         "How might we help people easily give and receive virtual services that benefit each other and increase connection? ",
-      featuredImage: "https://drive.google.com/open?id=1YJsW1sMAxFdk7lYMUIlChDGR-DiYyePS"
+      projectLink: "https://drive.google.com/open?id=1YJsW1sMAxFdk7lYMUIlChDGR-DiYyePS",
+      featuredImage : ""
     },
     {
       projectName: "Transporting our city, not the virus",
       members: "Evan Shulman, Nazima Ahmad, Debbie Leung, Erika Cheng",
       projectDescription:
         "How might we Re-open Essential Public Transit in San Diego?",
-      featuredImage: "https://drive.google.com/open?id=1ArGQirc2rvZWGHoRLnsyCDiGHl7jFDD_"
+      projectLink: "https://drive.google.com/open?id=1ArGQirc2rvZWGHoRLnsyCDiGHl7jFDD_",
+      featuredImage : ""
     }
   ],
   high_potential_for_impact: [

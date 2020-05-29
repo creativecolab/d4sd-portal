@@ -5,13 +5,19 @@ import Header from "../../Header/index";
 import { entriesContent } from "../../../assets/content";
 import "./style.less";
 import Footer from "../../Footer";
+import { Link } from "react-router-dom";
 const EntryCard = (props: any) => {
-  const [entryInfo, setEntryInfo] = useState(props);
-  console.log(typeof props.info);
   return (
     <Col xs={12} md={6} className="entryCards">
       <div className="entryDiv">
-        <div className="imgDiv"></div>
+        <a
+          href={props.info.projectLink}
+          target="_blank"
+          title={props.info.projectName}
+        >
+          <div className="imgDiv"></div>
+        </a>
+
         <h4>{props.info.projectName}</h4>
         <h5>{props.info.members}</h5>
         <p>{props.info.projectDescription}</p>
