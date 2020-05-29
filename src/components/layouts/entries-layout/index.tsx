@@ -72,6 +72,15 @@ const EntriesLayout = (): JSX.Element => {
               })}
             </Row>
           </div>
+
+          <div className="project_section">
+            <h2>Posters</h2>
+            <Row justify="start">
+              {entriesContent.all_posters.map(project => {
+                return <EntryCard info={project} />;
+              })}
+            </Row>
+          </div>
         </div>
       </div>
       <Footer />
