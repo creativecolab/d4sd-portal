@@ -82,7 +82,8 @@ export const homeContent = {
     key_dates: [
       {
         date: new Date("05/08/2020"),
-        label: "Submit your proposals for D4SD 2020 by Monday, May 11 at 11:59 PM PST",
+        label:
+          "Submit your proposals for D4SD 2020 by Monday, May 11 at 11:59 PM PST",
         url: "/submit/submit-proposal",
         key: "date-3"
       }
@@ -1090,8 +1091,7 @@ export const attendContent = {
   title_2: "How can you submit proposals for D4SD 2020?",
   content_2_1:
     "Are you working on ways to make San Diego more sustainable (e.g., addressing urgent public health issues, access to housing, mobility options, or environmental measures)? Do you want to showcase your ideas at the Summit?",
-  content_2_2:
-    `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended).`,
+  content_2_2: `Teams are invited to submit a design proposal to the 2020 D4SD challenge here by <strike>May 8</strike> May 11 (Deadline extended).`,
   content_2_3:
     "We welcome you to take advantage of the resources we collected to help the community, such as <a href='/resources'>methods for human-centered design</a> and a <a href='https://join.slack.com/t/d4sd/shared_invite/enQtMjExMjA5MDY0MjkzLTk3NjY4NGM3MTE0N2M1NTJjODAxMGRiMDgxNmQ4ZDk1NTU4Mzk0OThjMTdkMzc0NTJmY2M1ZmNkZDA3NTdjYTU' target='_blank' rel='noopener noreferrer'>D4SD Slack workspace</a> to discuss the civic issues and find teammates.",
   title_3: "What will happen at the Summit?",
@@ -1201,16 +1201,16 @@ export const submitProposalContent = {
   title_3: "Submission Considerations",
   content_3_1:
     "Submissions can be proposals for new products, software, services, infrastructure changes, or policies for any topic related to making San Diego a more sustainable city. Think through the following questions related to your design and be prepared to answer them when submitting. Finally, since D4SD is oriented towards making real change in the world, teams should consider the possible paths for getting ideas adopted or moved into the next stage of development.",
-  content_3_2: "Below are questions you should be prepared to answer in the Google Form when submitting your idea:",
-    submission_types: [
+  content_3_2:
+    "Below are questions you should be prepared to answer in the Google Form when submitting your idea:",
+  submission_types: [
     {
       description:
         "Write a paragraph that explains your understanding of the problem that you have chosen to explore in your project?",
       key: "understand"
     },
     {
-      description:
-        "How do you know that this is a problem?",
+      description: "How do you know that this is a problem?",
       key: "problem"
     },
     {
@@ -1232,7 +1232,7 @@ export const submitProposalContent = {
       description:
         "To move ideas forward, it can be helpful to think about how your idea might get funded or adopted. Who might you need to involve to get your idea adopted (city officials, entrepreneurs, community volunteers, etc)? ",
       key: "funded"
-    },
+    }
   ],
   title_4: "Judging Process and Criteria",
   content_4_1:
@@ -1354,5 +1354,270 @@ export const covidContent = {
     "Avoid contact with individuals who show signs of illness, when possible.",
     "Clean and disinfect frequently touched objects and surfaces.",
     "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided in the links above."
+  ]
+};
+
+export const entriesContent = {
+  title: "Entries",
+  image: "attend_header",
+  subInfo:
+    "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
+  compelling_storytelling: [
+    {
+      projectName: "Helpr",
+      members: "Mona Powell, Lillian Nguyen, Nathan Brucher",
+      projectDescription:
+        "How might we help people easily give and receive virtual services that benefit each other and increase connection? ",
+      projectLink: "https://drive.google.com/open?id=1YJsW1sMAxFdk7lYMUIlChDGR-DiYyePS",
+      featuredImage : ""
+    },
+    {
+      projectName: "Transporting our city, not the virus",
+      members: "Evan Shulman, Nazima Ahmad, Debbie Leung, Erika Cheng",
+      projectDescription:
+        "How might we Re-open Essential Public Transit in San Diego?",
+      projectLink: "https://drive.google.com/open?id=1ArGQirc2rvZWGHoRLnsyCDiGHl7jFDD_",
+      featuredImage : ""
+    }
+  ],
+  high_potential_for_impact: [
+    {
+      projectName: "COVID Confidential",
+      members: "Kat Alexander, Allysa Chung, Ramona Pindus, Zoe Wong",
+      projectDescription:
+        "COVID Confidential: A safe space for students' stories",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1yZEr7GkmGLlMihSTT4n8J4d3rVXiWOjosxFDn8dXHls/edit?usp=sharing"
+    },
+    {
+      projectName: "Project PARCEL",
+      members: "Ken Lew",
+      projectDescription:
+        "How might we implement fair and efficient resource distribution at local stores during COVID?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1pxZo81bAh91v1Yp-EeHzgJp09-AIXRqo65Pk9UwH350/edit?usp=sharing"
+    }
+  ],
+  human_centered_design_process: [
+    {
+      projectName: "Idle Reminder",
+      members: "Stephen Cerruti, Nancy R, Alberto P, Symphony J, Uriel H",
+      projectDescription:
+        "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1ZkV80htSVic4axd0C9X4o3_9s7LDHuWGW1F-oLegxxg/edit#slide=id.g77829bb83c_0_10"
+    },
+    {
+      projectName: "SunShun",
+      members: "Malia Acol",
+      projectDescription:
+        "How might we decrease skin cancer rates through wearable technology?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1MBHNCR4TpSHpDKaIrq7sElqDZZzarBF-"
+    }
+  ],
+  peoples_choice: [
+    {
+      projectName: "Room In A Box",
+      members: "Holley McGinnis, Julieta Meneses, Nicollete Peji",
+      projectDescription:
+        "How might we provide low-income families with beautiful, low-cost, and usable furniture that is affordably priced?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Mixed Income Housing Units",
+      members:
+        "Jesus Felix, Yaretzi Jacinto, Ana Belen Carcamo, Ahmed Isaac Porras, Stacy Evangelista Cea, Luis Marquez",
+      projectDescription:
+        "How might we reimagine housing to meet the needs of all San Diego residents?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/19Qep5Bys5G5KTMEVWXBbXm4yk6OPWfrtXm-uJPascUs/edit?usp=sharing"
+    },
+    {
+      projectName: "THRIVE : San Diego",
+      members:
+        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+      projectDescription:
+        "How might we help San Diego businesses and citizens survive & thrive during COVID?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1QdqCHg3nKEpU4AUG9GjWcmLEAomZsiiS"
+    }
+  ],
+  all_projects: [
+    {
+      projectName: "SwiftSD",
+      members:
+        "Amy An, Mylinh Lac, Braeanne Oribello, Kendall Nakai, Syed Adam Emir Putra, Daman Heer",
+      projectDescription:
+        "How might we promote sustainability, provide affordable transportation options, and alleviate the last mile challenge?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1mWMQULp3if2BplCDQYIaSyhqtT3oz7hC"
+    },
+    {
+      projectName: "Electric Scooters",
+      members: "Jonathan Fong, Nicolette Shin, Julia Chu, Yi Cai",
+      projectDescription:
+        "How might we decrease electric scooter injuries by implementing self-service helmet kiosks throughout urban San Diego in order to provide a service that advocates safe riding practices to users?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1TmeqWw8dvGKorgGmpqPsPmomoP9LeaUF"
+    },
+    {
+      projectName: "FLM Commuter Service CABR",
+      members: "Connor Burkesmith; Alex Rusu",
+      projectDescription:
+        "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1J2cj8wuwIFSEiOl0Wehs6hJpn8QvNWhl"
+    },
+    {
+      projectName: "Re-Entry",
+      members: "Mika Marzette and Jaime Wright",
+      projectDescription: "How might we create COVID testing solutions for essential workers?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1tx_wAY-IrkmqEBGZ4K1St4oCVsFPPuuwaSEKQ1mSOIc/edit#slide=id.g802d17b272_1_0"
+    },
+    {
+      projectName: "Infinity Clip",
+      members: "Melissa Woods, Angelica Torres, Cheilon Deas, Uriel Torres, and Christina Arias",
+      projectDescription: "How might we help blind/visually impaired people get around unknown and unaccommodating areas?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=18Wg-PciBIG3OtD4Bx4R24T5h9myQa-id"
+    },
+    {
+      projectName: "ASSYT",
+      members: " Arianna Morris; Max Crowe; Ernesto Jimenez",
+      projectDescription: "How might we help match students and moderators anonymously to provide help on problems?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Project Aegis",
+      members: "Marlow Perdomo",
+      projectDescription: "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=15IGSZol9CrKSyn4BtI3u02kHxbC1pxmy"
+    },
+    {
+      projectName: "LightOn",
+      members: "Nancy Chang; Kelsey Guo, Kendal Asprec",
+      projectDescription: "How might we help restaurant owners better promote their businesses during this pandemic? ",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1fTOsA5Ovbecob3Vo96yFobmLUidAHtZ76ZtSaP4EV60/edit?usp=sharing"
+    }
+  ],
+  all_posters : [
+    {
+      projectName: "TinyTracker",
+      members: " Jiayi Ruan",
+      projectDescription: "How might we leverage data science in relocating resources and reopening California?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1UJBvmc2Ql_l8BJkkBWGHXOxPp0WhBWYS"
+    },
+    {
+      projectName: "Saving Shellfish",
+      members: " Hidali Lomeli; Alana Hao; Lillian CJ; Leilanie Quezada",
+      projectDescription: "How might we help shellfish farmers harvest and prevent diseases and toxins from entering into sea life in San Diego?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1z6Pjwy9YVi-vp0f2RDYuIj_rRTuqVyVFLDzCCfHeHHA/edit?usp=sharing"
+    },
+    {
+      projectName: "Fighting Dehydration",
+      members: " Sam Coleman",
+      projectDescription: "How might we fight dehydration in these desert enviroments?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1C0jboiJhsMtxbU8nkl6hglhhS5Nh4lb_5zurMsUYXrc/edit#slide=id.p"
+    },
+    {
+      projectName: "Pack App",
+      members: "Cody Wechter",
+      projectDescription: "How might we make packing for trips easier and more efficient?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1VU_bctP01Ifr2QglnPjJfq6rF8ZU9fmU/edit#slide=id.p1"
+    },
+    {
+      projectName: "The Good Neighbor App",
+      members: "Ricardo Cervera",
+      projectDescription: "How might we improve the process of acquiring a home service?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/file/d/1kha9o0MDARpslR5fB7YCCetWvNG1Ef4g/view?usp=sharing"
+    },
+    {
+      projectName: "Life Buay",
+      members: "Alex Besharati",
+      projectDescription: "How might we improve the safety of home pools in San Diego, while making it effortless and reliable?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1PTTi5-v93UQtjS4FtPrhfBJg_QhvaCG1HciXNM6KVhA/edit#slide=id.p1"
+    },
+    {
+      projectName: "Healthy Ocean App",
+      members: "Mia Gresh",
+      projectDescription: "How might we educate people on the ocean water quality?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1bfCbczEKKJsgZ5yjQS1e071ssLDbsC86/edit#slide=id.p1"
+    },
+    {
+      projectName: "Home Electricity Monitorin",
+      members: "Aidan Risse",
+      projectDescription: "How might we monitor light usage throughout the home and control it from anywhere?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=17pdpnY5peigDyx9Z9CCit-FYc1RsDZCQ"
+    },
+    {
+      projectName: "Smart Sprinkler",
+      members: "Devin, Nathan Axel",
+      projectDescription: "How might we save on water usage in larger grass areas?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1AOj0frgs7boT3aCcd4hgzFjBklQAKKWJk5ykeKYYgZM/edit?usp=sharing"
+    },
+    {
+      projectName: "Windoze",
+      members: "Leah Tauber",
+      projectDescription: "How might we make a living space more comfortable with regards to temperature in an environmentally-friendly manner?",
+      featuredImage: "",
+      projectLink: "https://drive.google.com/open?id=1ZBcOW5fRbSbf5gHwJnptMCcUu-v3RB-E"
+    },
+    {
+      projectName: "Fire Destructor",
+      members: "Kassandra Rodriguez, Valeria Del Rio, Sofia Hernandez, Alexander Jacinto",
+      projectDescription: "How might we prevent people's houses and habitats from getting destroyed from wildfires created by global warming?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1iW3w85SV-dNqaAzYieHIrS-E3a5nNkY2SMP3F0nf1sg/edit?usp=sharing"
+    },
+    {
+      projectName: "Sustainable Community Design in K-1",
+      members: "Lisa Shepherd, Lori Anapoell",
+      projectDescription: "How might we develop communities where all citizens have access to housing, food, water, and clean air?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1MoCe0QW99zfoR9qXjCBOYNzvvsbYIiGXRhzbDGqXGUo/edit?usp=sharing"
+    },
+    {
+      projectName: "Boreas Solution Inc",
+      members: "Dalila, Andrew, Alejandro, Johny, Robin",
+      projectDescription: "How might we make breathing and everyday life easier when wildfires pollue the air?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1_rTt1pZLeBTCTJ87X5l6GgHtrAlBYXi4VVk3gbfmI9U/edit?usp=sharing"
+    },
+    {
+      projectName: "Revolutionay Shores",
+      members: "Jennifer Munoz, Nancy Swanberg",
+      projectDescription: "How might we incentivize participation in recycling and waste-free lunches to reduce impact on the environment?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1nOjHpLz76HOzSEvCnnaTQSz8si_k1NI8lZkoYZVymWw/edit?usp=sharing"
+    },
+    {
+      projectName: "Shaping the Sage Canyon",
+      members: "Paris Esmaili, Shannon Joannou, Nancy Pronko",
+      projectDescription: "How might we redesign the library and technology lab into a vibrant innovation center to better serve the campus community?",
+      featuredImage: "",
+      projectLink: "https://docs.google.com/presentation/d/1P6-eqDJWRjK2ZocidpxwFegqZsRyiLjvjIn59kTSfnQ/edit?usp=sharing"
+    },
+    {
+      projectName: "Carbon Capture",
+      members: "Seth Holt, Nate Petrucelli, Adam Chronister, Roberto Gomez",
+      projectDescription: "How might we capture carbon emissions before it enters the atmosphere?",
+      featuredImage: "",
+      projectLink: ""
+    }
   ]
 };
