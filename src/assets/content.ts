@@ -1503,5 +1503,126 @@ export const entriesContent = {
       featuredImage: "",
       projectLink: ""
     }
+  ],
+  all_posters : [
+    {
+      projectName: "TinyTracker",
+      members: " Jiayi Ruan",
+      projectDescription: "How might we leverage data science in relocating resources and reopening California?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Saving Shellfish",
+      members: " Hidali Lomeli; Alana Hao; Lillian CJ; Leilanie Quezada",
+      projectDescription: "How might we help shellfish farmers harvest and prevent diseases and toxins from entering into sea life in San Diego?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Fighting Dehydration",
+      members: " Sam Coleman",
+      projectDescription: "How might we fight dehydration in these desert enviroments?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Pack App",
+      members: "Cody Wechter",
+      projectDescription: "How might we make packing for trips easier and more efficient?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "The Good Neighbor App",
+      members: "Ricardo Cervera",
+      projectDescription: "How might we improve the process of acquiring a home service?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Life Buay",
+      members: "Alex Besharati",
+      projectDescription: "How might we improve the safety of home pools in San Diego, while making it effortless and reliable?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Healthy Ocean App",
+      members: "Mia Gresh",
+      projectDescription: "How might we educate people on the ocean water quality?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Home Electricity Monitorin",
+      members: "Aidan Risse",
+      projectDescription: "How might we monitor light usage throughout the home and control it from anywhere?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Smart Sprinkler",
+      members: "Devin, Nathan Axel",
+      projectDescription: "How might we save on water usage in larger grass areas?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Windoze",
+      members: "Leah Tauber",
+      projectDescription: "How might we make a living space more comfortable with regards to temperature in an environmentally-friendly manner?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Fire Destructor",
+      members: "Kassandra Rodriguez, Valeria Del Rio, Sofia Hernandez, Alexander Jacinto",
+      projectDescription: "How might we prevent people's houses and habitats from getting destroyed from wildfires created by global warming?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Sustainable Community Design in K-1",
+      members: "Lisa Shepherd, Lori Anapoell",
+      projectDescription: "How might we develop communities where all citizens have access to housing, food, water, and clean air?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Boreas Solution Inc",
+      members: "Dalila, Andrew, Alejandro, Johny, Robin",
+      projectDescription: "How might we make breathing and everyday life easier when wildfires pollue the air?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Revolutionay Shores",
+      members: "Jennifer Munoz, Nancy Swanberg",
+      projectDescription: "How might we incentivize participation in recycling and waste-free lunches to reduce impact on the environment?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Shaping the Sage Canyon",
+      members: "Paris Esmaili, Shannon Joannou, Nancy Pronko",
+      projectDescription: "How might we redesign the library and technology lab into a vibrant innovation center to better serve the campus community?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Carbon Capture",
+      members: "Seth Holt, Nate Petrucelli, Adam Chronister, Roberto Gomez",
+      projectDescription: "How might we capture carbon emissions before it enters the atmosphere?",
+      featuredImage: "",
+      projectLink: ""
+    },
+    {
+      projectName: "Living room in a box",
+      members: "Holley McGinnis, Julieta Meneses, Nicollete Peji",
+      projectDescription: "How might we provide low-income families with beautiful, low-cost, and usable furniture that is affordably priced?",
+      featuredImage: "",
+      projectLink: ""
+    }
   ]
 };
