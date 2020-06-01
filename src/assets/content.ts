@@ -1369,7 +1369,7 @@ export const entriesContent = {
       projectDescription:
         "How might we help people easily give and receive virtual services that benefit each other and increase connection? ",
       projectLink: "https://drive.google.com/open?id=1YJsW1sMAxFdk7lYMUIlChDGR-DiYyePS",
-      featuredImage : ""
+      featuredImage : "./img/entries/helpr.png"
     },
     {
       projectName: "Transporting our city, not the virus",
@@ -1377,7 +1377,7 @@ export const entriesContent = {
       projectDescription:
         "How might we Re-open Essential Public Transit in San Diego?",
       projectLink: "https://drive.google.com/open?id=1ArGQirc2rvZWGHoRLnsyCDiGHl7jFDD_",
-      featuredImage : ""
+      featuredImage : "./img/entries/transporting-city.png"
     }
   ],
   high_potential_for_impact: [
@@ -1386,7 +1386,7 @@ export const entriesContent = {
       members: "Kat Alexander, Allysa Chung, Ramona Pindus, Zoe Wong",
       projectDescription:
         "COVID Confidential: A safe space for students' stories",
-      featuredImage: "",
+      featuredImage: "./img/entries/covid-confidential.png",
       projectLink: "https://docs.google.com/presentation/d/1yZEr7GkmGLlMihSTT4n8J4d3rVXiWOjosxFDn8dXHls/edit?usp=sharing"
     },
     {
@@ -1394,7 +1394,7 @@ export const entriesContent = {
       members: "Ken Lew",
       projectDescription:
         "How might we implement fair and efficient resource distribution at local stores during COVID?",
-      featuredImage: "",
+      featuredImage: "./img/entries/parcel.png",
       projectLink: "https://docs.google.com/presentation/d/1pxZo81bAh91v1Yp-EeHzgJp09-AIXRqo65Pk9UwH350/edit?usp=sharing"
     }
   ],
@@ -1404,7 +1404,7 @@ export const entriesContent = {
       members: "Stephen Cerruti, Nancy R, Alberto P, Symphony J, Uriel H",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
-      featuredImage: "",
+      featuredImage: "./img/entries/idle-reminder.png",
       projectLink: "https://docs.google.com/presentation/d/1ZkV80htSVic4axd0C9X4o3_9s7LDHuWGW1F-oLegxxg/edit#slide=id.g77829bb83c_0_10"
     },
     {
@@ -1412,7 +1412,7 @@ export const entriesContent = {
       members: "Malia Acol",
       projectDescription:
         "How might we decrease skin cancer rates through wearable technology?",
-      featuredImage: "",
+      featuredImage: "./img/entries/SunShun.png",
       projectLink: "https://drive.google.com/open?id=1MBHNCR4TpSHpDKaIrq7sElqDZZzarBF-"
     }
   ],
@@ -1422,7 +1422,7 @@ export const entriesContent = {
       members: "Holley McGinnis, Julieta Meneses, Nicollete Peji",
       projectDescription:
         "How might we provide low-income families with beautiful, low-cost, and usable furniture that is affordably priced?",
-      featuredImage: "",
+      featuredImage: "./img/entries/room-in-a-box.png",
       projectLink: ""
     },
     {
@@ -1431,7 +1431,7 @@ export const entriesContent = {
         "Jesus Felix, Yaretzi Jacinto, Ana Belen Carcamo, Ahmed Isaac Porras, Stacy Evangelista Cea, Luis Marquez",
       projectDescription:
         "How might we reimagine housing to meet the needs of all San Diego residents?",
-      featuredImage: "",
+      featuredImage: "./img/entries/housing-project.png",
       projectLink: "https://docs.google.com/presentation/d/19Qep5Bys5G5KTMEVWXBbXm4yk6OPWfrtXm-uJPascUs/edit?usp=sharing"
     },
     {
@@ -1440,7 +1440,7 @@ export const entriesContent = {
         "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
       projectDescription:
         "How might we help San Diego businesses and citizens survive & thrive during COVID?",
-      featuredImage: "",
+      featuredImage: "./img/entries/ThriveSD.png",
       projectLink: "https://drive.google.com/open?id=1QdqCHg3nKEpU4AUG9GjWcmLEAomZsiiS"
     }
   ],
@@ -1451,7 +1451,7 @@ export const entriesContent = {
         "Amy An, Mylinh Lac, Braeanne Oribello, Kendall Nakai, Syed Adam Emir Putra, Daman Heer",
       projectDescription:
         "How might we promote sustainability, provide affordable transportation options, and alleviate the last mile challenge?",
-      featuredImage: "",
+      featuredImage: "./img/entries/SwiftSD.png",
       projectLink: "https://drive.google.com/open?id=1mWMQULp3if2BplCDQYIaSyhqtT3oz7hC"
     },
     {
@@ -1459,7 +1459,7 @@ export const entriesContent = {
       members: "Jonathan Fong, Nicolette Shin, Julia Chu, Yi Cai",
       projectDescription:
         "How might we decrease electric scooter injuries by implementing self-service helmet kiosks throughout urban San Diego in order to provide a service that advocates safe riding practices to users?",
-      featuredImage: "",
+      featuredImage: "./img/entries/SwiftSD.png",
       projectLink: "https://drive.google.com/open?id=1TmeqWw8dvGKorgGmpqPsPmomoP9LeaUF"
     },
     {
@@ -1467,42 +1467,42 @@ export const entriesContent = {
       members: "Connor Burkesmith; Alex Rusu",
       projectDescription:
         "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
-      featuredImage: "",
+      featuredImage: "./img/entries/flm-commuter.png",
       projectLink: "https://drive.google.com/open?id=1J2cj8wuwIFSEiOl0Wehs6hJpn8QvNWhl"
     },
     {
       projectName: "Re-Entry",
       members: "Mika Marzette and Jaime Wright",
       projectDescription: "How might we create COVID testing solutions for essential workers?",
-      featuredImage: "",
+      featuredImage: "./img/entries/re-entry.png",
       projectLink: "https://docs.google.com/presentation/d/1tx_wAY-IrkmqEBGZ4K1St4oCVsFPPuuwaSEKQ1mSOIc/edit#slide=id.g802d17b272_1_0"
     },
     {
       projectName: "Infinity Clip",
       members: "Melissa Woods, Angelica Torres, Cheilon Deas, Uriel Torres, and Christina Arias",
       projectDescription: "How might we help blind/visually impaired people get around unknown and unaccommodating areas?",
-      featuredImage: "",
+      featuredImage: "./img/entries/infinity-clip.png",
       projectLink: "https://drive.google.com/open?id=18Wg-PciBIG3OtD4Bx4R24T5h9myQa-id"
     },
     {
       projectName: "ASSYT",
       members: " Arianna Morris; Max Crowe; Ernesto Jimenez",
       projectDescription: "How might we help match students and moderators anonymously to provide help on problems?",
-      featuredImage: "",
+      featuredImage: "./img/entries/ASSYT.png",
       projectLink: ""
     },
     {
       projectName: "Project Aegis",
       members: "Marlow Perdomo",
       projectDescription: "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
-      featuredImage: "",
+      featuredImage: "./img/entries/project-aegis.png",
       projectLink: "https://drive.google.com/open?id=15IGSZol9CrKSyn4BtI3u02kHxbC1pxmy"
     },
     {
       projectName: "LightOn",
       members: "Nancy Chang; Kelsey Guo, Kendal Asprec",
       projectDescription: "How might we help restaurant owners better promote their businesses during this pandemic? ",
-      featuredImage: "",
+      featuredImage: "./img/entries/LightOn.png",
       projectLink: "https://docs.google.com/presentation/d/1fTOsA5Ovbecob3Vo96yFobmLUidAHtZ76ZtSaP4EV60/edit?usp=sharing"
     }
   ],
@@ -1511,14 +1511,14 @@ export const entriesContent = {
       projectName: "TinyTracker",
       members: " Jiayi Ruan",
       projectDescription: "How might we leverage data science in relocating resources and reopening California?",
-      featuredImage: "",
+      featuredImage: "./img/entries/Tinytrackr.png",
       projectLink: "https://drive.google.com/open?id=1UJBvmc2Ql_l8BJkkBWGHXOxPp0WhBWYS"
     },
     {
       projectName: "Saving Shellfish",
       members: " Hidali Lomeli; Alana Hao; Lillian CJ; Leilanie Quezada",
       projectDescription: "How might we help shellfish farmers harvest and prevent diseases and toxins from entering into sea life in San Diego?",
-      featuredImage: "",
+      featuredImage: "./img/entries/toxic-shellfish.png",
       projectLink: "https://docs.google.com/presentation/d/1z6Pjwy9YVi-vp0f2RDYuIj_rRTuqVyVFLDzCCfHeHHA/edit?usp=sharing"
     },
     {
@@ -1532,18 +1532,18 @@ export const entriesContent = {
       projectName: "Pack App",
       members: "Cody Wechter",
       projectDescription: "How might we make packing for trips easier and more efficient?",
-      featuredImage: "",
+      featuredImage: "./img/entries/PackApp.png",
       projectLink: "https://docs.google.com/presentation/d/1VU_bctP01Ifr2QglnPjJfq6rF8ZU9fmU/edit#slide=id.p1"
     },
     {
       projectName: "The Good Neighbor App",
       members: "Ricardo Cervera",
       projectDescription: "How might we improve the process of acquiring a home service?",
-      featuredImage: "",
+      featuredImage: "./img/entries/good-neighbour.png",
       projectLink: "https://drive.google.com/file/d/1kha9o0MDARpslR5fB7YCCetWvNG1Ef4g/view?usp=sharing"
     },
     {
-      projectName: "Life Buay",
+      projectName: "Life Buoy",
       members: "Alex Besharati",
       projectDescription: "How might we improve the safety of home pools in San Diego, while making it effortless and reliable?",
       featuredImage: "",
@@ -1553,14 +1553,14 @@ export const entriesContent = {
       projectName: "Healthy Ocean App",
       members: "Mia Gresh",
       projectDescription: "How might we educate people on the ocean water quality?",
-      featuredImage: "",
+      featuredImage: "./img/entries/healthy-ocean.png",
       projectLink: "https://docs.google.com/presentation/d/1bfCbczEKKJsgZ5yjQS1e071ssLDbsC86/edit#slide=id.p1"
     },
     {
-      projectName: "Home Electricity Monitorin",
+      projectName: "LumenEye",
       members: "Aidan Risse",
       projectDescription: "How might we monitor light usage throughout the home and control it from anywhere?",
-      featuredImage: "",
+      featuredImage: "./img/entries/LumenEye.png",
       projectLink: "https://drive.google.com/open?id=17pdpnY5peigDyx9Z9CCit-FYc1RsDZCQ"
     },
     {
@@ -1574,49 +1574,49 @@ export const entriesContent = {
       projectName: "Windoze",
       members: "Leah Tauber",
       projectDescription: "How might we make a living space more comfortable with regards to temperature in an environmentally-friendly manner?",
-      featuredImage: "",
+      featuredImage: "./img/entries/Windoze.png",
       projectLink: "https://drive.google.com/open?id=1ZBcOW5fRbSbf5gHwJnptMCcUu-v3RB-E"
     },
     {
       projectName: "Fire Destructor",
       members: "Kassandra Rodriguez, Valeria Del Rio, Sofia Hernandez, Alexander Jacinto",
       projectDescription: "How might we prevent people's houses and habitats from getting destroyed from wildfires created by global warming?",
-      featuredImage: "",
+      featuredImage: "./img/entries/Fire-destructor.png",
       projectLink: "https://docs.google.com/presentation/d/1iW3w85SV-dNqaAzYieHIrS-E3a5nNkY2SMP3F0nf1sg/edit?usp=sharing"
     },
     {
       projectName: "Sustainable Community Design in K-1",
       members: "Lisa Shepherd, Lori Anapoell",
       projectDescription: "How might we develop communities where all citizens have access to housing, food, water, and clean air?",
-      featuredImage: "",
+      featuredImage: "./img/entries/community-design.png",
       projectLink: "https://docs.google.com/presentation/d/1MoCe0QW99zfoR9qXjCBOYNzvvsbYIiGXRhzbDGqXGUo/edit?usp=sharing"
     },
     {
       projectName: "Boreas Solution Inc",
       members: "Dalila, Andrew, Alejandro, Johny, Robin",
       projectDescription: "How might we make breathing and everyday life easier when wildfires pollue the air?",
-      featuredImage: "",
+      featuredImage: "./img/entries/boreas-solution.png",
       projectLink: "https://docs.google.com/presentation/d/1_rTt1pZLeBTCTJ87X5l6GgHtrAlBYXi4VVk3gbfmI9U/edit?usp=sharing"
     },
     {
       projectName: "Revolutionay Shores",
       members: "Jennifer Munoz, Nancy Swanberg",
       projectDescription: "How might we incentivize participation in recycling and waste-free lunches to reduce impact on the environment?",
-      featuredImage: "",
+      featuredImage: "./img/entries/revolutionary-shores.png",
       projectLink: "https://docs.google.com/presentation/d/1nOjHpLz76HOzSEvCnnaTQSz8si_k1NI8lZkoYZVymWw/edit?usp=sharing"
     },
     {
       projectName: "Shaping the Sage Canyon",
       members: "Paris Esmaili, Shannon Joannou, Nancy Pronko",
       projectDescription: "How might we redesign the library and technology lab into a vibrant innovation center to better serve the campus community?",
-      featuredImage: "",
+      featuredImage: "./img/entries/sage-canyon.png",
       projectLink: "https://docs.google.com/presentation/d/1P6-eqDJWRjK2ZocidpxwFegqZsRyiLjvjIn59kTSfnQ/edit?usp=sharing"
     },
     {
       projectName: "Carbon Capture",
       members: "Seth Holt, Nate Petrucelli, Adam Chronister, Roberto Gomez",
       projectDescription: "How might we capture carbon emissions before it enters the atmosphere?",
-      featuredImage: "",
+      featuredImage: "./img/entries/carbon-capture.png",
       projectLink: ""
     }
   ]
