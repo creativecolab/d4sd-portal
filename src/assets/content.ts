@@ -1358,7 +1358,7 @@ export const covidContent = {
 };
 
 export const entriesContent = {
-  title: "Entries",
+  title: "Proposals",
   image: "attend_header",
   subInfo:
     "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
@@ -1525,7 +1525,7 @@ export const entriesContent = {
       projectName: "Fighting Dehydration",
       members: " Sam Coleman",
       projectDescription: "How might we fight dehydration in these desert enviroments?",
-      featuredImage: "",
+      featuredImage: "./img/entries/fighting-dehydration.png",
       projectLink: "https://docs.google.com/presentation/d/1C0jboiJhsMtxbU8nkl6hglhhS5Nh4lb_5zurMsUYXrc/edit#slide=id.p"
     },
     {
@@ -1546,7 +1546,7 @@ export const entriesContent = {
       projectName: "Life Buoy",
       members: "Alex Besharati",
       projectDescription: "How might we improve the safety of home pools in San Diego, while making it effortless and reliable?",
-      featuredImage: "",
+      featuredImage: "./img/entries/life-buoy.png",
       projectLink: "https://docs.google.com/presentation/d/1PTTi5-v93UQtjS4FtPrhfBJg_QhvaCG1HciXNM6KVhA/edit#slide=id.p1"
     },
     {
@@ -1567,7 +1567,7 @@ export const entriesContent = {
       projectName: "Smart Sprinkler",
       members: "Devin, Nathan Axel",
       projectDescription: "How might we save on water usage in larger grass areas?",
-      featuredImage: "",
+      featuredImage: "./img/entries/smart-sprinkler.png",
       projectLink: "https://docs.google.com/presentation/d/1AOj0frgs7boT3aCcd4hgzFjBklQAKKWJk5ykeKYYgZM/edit?usp=sharing"
     },
     {

@@ -101,9 +101,9 @@ const Menubar = (): JSX.Element => {
             >
               <Menu.Item
                 className="mobile-menu-item"
-                onClick={(): void => history.push("/entries")}
+                onClick={(): void => history.push("/proposals")}
               >
-                <span>Entries</span>
+                <span>Proposals</span>
               </Menu.Item>
               <Menu.Item
                 className="mobile-menu-item"
@@ -181,10 +181,10 @@ const Menubar = (): JSX.Element => {
             <div className="emptybar" />
             <Menu.Item
               className="menu-item"
-              key="entries"
-              onClick={(): void => history.push("/entries")}
+              key="proposals"
+              onClick={(): void => history.push("/proposals")}
             >
-              <span>Entries</span>
+              <span>Proposals</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
