@@ -75,7 +75,7 @@ import electric_scooters from "./img/entries/ew-team.png";
 import flm_commuter from "./img/entries/flm-commuter.png";
 import reentry from "./img/entries/re-entry.png";
 import infinity_clip from "./img/entries/infinity-clip.png";
-import assyt from "./img/entries/assyt.png";
+import assyt from "./img/entries/ASSYT.png";
 import lightOn from "./img/entries/LightOn.png";
 import tiny_tracker from "./img/entries/Tinytrackr.png";
 import saving_shellfish from "./img/entries/toxic-shellfish.png";
