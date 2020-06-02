@@ -7,7 +7,6 @@ import "./style.less";
 import Footer from "../../Footer";
 import { Link } from "react-router-dom";
 const EntryCard = (props: any) => {
-  console.log(props.info.featuredImage);
   return (
     <Col xs={12} md={6} className="entryCards">
       <div className="entryDiv">
@@ -16,10 +15,7 @@ const EntryCard = (props: any) => {
           target="_blank"
           title={props.info.projectName}
         >
-          <img
-            src={props.info.featuredImage}
-            className="featuredImage"
-          />
+          <div className="imgDiv"></div>
         </a>
 
         <h4>{props.info.projectName}</h4>

@@ -166,7 +166,7 @@ const App = (): JSX.Element => {
               path="/resources/stakeholder"
               component={StakeholderPage}
             />
-            <Route exact path="/proposals" component = {EntriesLayout} />
+            <Route exact path="/entries" component = {EntriesLayout} />
             <Route exact path="/submit" component={SubmitPage} />
             <Route
               exact
