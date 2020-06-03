@@ -8,10 +8,12 @@
   }
 }
 
-.entryCards {
+.entryCards, .entryMeta {
   margin-top: @margin-base-1;
   text-align: left;
   margin-bottom: @margin-base-1;
+  display: inline-block;
+  vertical-align: middle;
 
   .entryDiv {
     width: 90%;
@@ -41,5 +43,10 @@
     .featuredImage:hover {
       transform: scale(0.95);
     }
+  }
+}
+.entryMeta {
+  .entryDiv {
+    width: 100%;
   }
 }
