@@ -9,24 +9,29 @@ import { Link } from "react-router-dom";
 const EntryCard = (props: any) => {
   console.log(props.info.featuredImage);
   return (
-    <Col xs={12} md={6} className="entryCards">
+    <div>
+      <Col xs={12} md={4} className="entryCards">
+        <div className="entryDiv">
+          <a
+            href={props.info.projectLink}
+            target="_blank"
+            title={props.info.projectName}
+          >
+            <img
+              src={props.info.featuredImage}
+              className="featuredImage"
+            />
+          </a>
+        </div>
+    </Col>
+    <Col xs={12} md={6} className="entryMeta">
       <div className="entryDiv">
-        <a
-          href={props.info.projectLink}
-          target="_blank"
-          title={props.info.projectName}
-        >
-          <img
-            src={props.info.featuredImage}
-            className="featuredImage"
-          />
-        </a>
-
         <h4>{props.info.projectName}</h4>
         <h5>{props.info.members}</h5>
         <p>{props.info.projectDescription}</p>
       </div>
     </Col>
+    </div>
   );
 };
 
