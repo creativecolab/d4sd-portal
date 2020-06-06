@@ -28,7 +28,7 @@ const EntryCard = (props: any) => {
       <div className="entryDiv">
         <h4>{props.info.projectName}</h4>
         <h5>{props.info.members}</h5>
-        <p>{props.info.projectDescription}</p>
+        <p className="projectDescription">{props.info.projectDescription}</p>
       </div>
     </Col>
     </div>

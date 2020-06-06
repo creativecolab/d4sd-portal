@@ -93,6 +93,7 @@ import boreas_solution from "./img/entries/boreas-solution.png";
 import revolutionary_shores from "./img/entries/revolutionary-shores.png";
 import shaping_canyon from "./img/entries/sage-canyon.png";
 import carbon_capture from "./img/entries/carbon-capture.png";
+import aegis from './img/entries/aegis.png';
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -1477,7 +1478,7 @@ export const entriesContent = {
     {
       projectName: "THRIVE : San Diego",
       members:
-        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+        "Ben Brin, Bryan (Sage) Rill,  Lisa Grega, Gurucharan Khalsa, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
       projectDescription:
         "How might we help San Diego businesses and citizens survive & thrive during COVID?",
       featuredImage: thrive,
@@ -1507,7 +1508,7 @@ export const entriesContent = {
     },
     {
       projectName: "FLM Commuter Service CABR",
-      members: "Connor Burkesmith; Alex Rusu",
+      members: "Connor Burkesmith, Alex Rusu",
       projectDescription:
         "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
       featuredImage: flm_commuter,
@@ -1546,7 +1547,7 @@ export const entriesContent = {
       members: "Marlow Perdomo",
       projectDescription:
         "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
-      featuredImage: assyt,
+      featuredImage: aegis,
       projectLink:
         "https://drive.google.com/open?id=15IGSZol9CrKSyn4BtI3u02kHxbC1pxmy"
     },
@@ -1572,7 +1573,7 @@ export const entriesContent = {
     },
     {
       projectName: "Saving Shellfish",
-      members: " Hidali Lomeli; Alana Hao; Lillian CJ; Leilanie Quezada",
+      members: " Hidali Lomeli, Alana Hao, Lillian CJ, Leilanie Quezada",
       projectDescription:
         "How might we help shellfish farmers harvest and prevent diseases and toxins from entering into sea life in San Diego?",
       featuredImage: saving_shellfish,
