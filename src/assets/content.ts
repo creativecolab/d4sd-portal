@@ -1395,7 +1395,7 @@ export const entriesContent = {
   title: "Entries",
   image: "attend_header",
   subInfo:
-    "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
+    "Congratulations to all 2020 D4SD participants! Out of a total of 33 proposals, the D4SD team selected 6 finalists that exemplify great storytelling, potential for impact, and human-centered processes. An additional three proposals were selected by the D4SD community as the “people’s choice” awards. Congratulations on advancing ideas that could make San Diego a more sustainable region.",
   compelling_storytelling: [
     {
       projectName: "Helpr",

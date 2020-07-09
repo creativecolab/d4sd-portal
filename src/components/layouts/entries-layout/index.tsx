@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
-import { Button, Carousel } from "@d4sd/components";
-import { Row, Col } from "react-grid-system";
-import Header from "../../Header/index";
-import { entriesContent } from "../../../assets/content";
-import "./style.less";
-import Footer from "../../Footer";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Row, Col } from 'react-grid-system';
+
+import Header from '../../Header/index';
+import { entriesContent } from '../../../assets/content';
+import Footer from '../../Footer';
+
+import './style.less';
+
 const EntryCard = (props: any) => {
   console.log(props.info.featuredImage);
   return (
@@ -23,84 +24,75 @@ const EntryCard = (props: any) => {
             />
           </a>
         </div>
-    </Col>
-    <Col xs={12} md={6} className="entryMeta">
-      <div className="entryDiv">
-        <h4>{props.info.projectName}</h4>
-        <h5>{props.info.members}</h5>
-        <p className="projectDescription">{props.info.projectDescription}</p>
-      </div>
-    </Col>
+      </Col>
+      <Col xs={12} md={6} className="entryMeta">
+        <div className="entryDiv">
+          <h4>{props.info.projectName}</h4>
+          <h5>{props.info.members}</h5>
+          <p className="projectDescription">{props.info.projectDescription}</p>
+        </div>
+      </Col>
     </div>
   );
 };
 
-const EntriesLayout = (): JSX.Element => {
-  return (
-    <div>
-      <Header
-        title={entriesContent.title}
-        content={entriesContent.subInfo}
-        image={entriesContent.image}
-      />
-      <div className="container">
+const EntriesLayout = (): JSX.Element => (
+  <div>
+    <Header
+      title={entriesContent.title}
+      content={entriesContent.subInfo}
+      image={entriesContent.image}
+    />
+    <div className="container">
+      <div className="project_section">
+        <h2>D4SD Summit Award for Compelling Storytelling</h2>
+        <p className="award-description">The D4SD team rewarded these two projects for crafting compelling stories about how the proposed solutions can impact everyday people, especially transportation workers and small businesses affected by COVID-19.</p>
+        <Row justify="start">
+          {entriesContent.compelling_storytelling.map((project) => <EntryCard info={project} />)}
+        </Row>
+
         <div className="project_section">
-          <h2>Compelling Storytelling</h2>
+          <h2>D4SD Summit Award for Potential Impact</h2>
+          <p className="award-description">The D4SD awards team felt that these two projects, in particular, are well positioned to make an impact today on the emotional health and safety of our residents.</p>
           <Row justify="start">
-            {entriesContent.compelling_storytelling.map(project => {
-              return <EntryCard info={project} />;
-            })}
+            {entriesContent.high_potential_for_impact.map((project) => <EntryCard info={project} />)}
           </Row>
+        </div>
 
-          <div className="project_section">
-            <h2>High Potential For Impact</h2>
-            <Row justify="start">
-              {entriesContent.high_potential_for_impact.map(project => {
-                return <EntryCard info={project} />;
-              })}
-            </Row>
-          </div>
+        <div className="project_section">
+          <h2>D4SD Summit Award for Exemplifying Human-Centered Design</h2>
+          <p className="award-description">The D4SD awards team selected these two projects as wonderful examples of human-centered design where teams identified core problems by getting input from stakeholders.</p>
+          <Row justify="start">
+            {entriesContent.human_centered_design_process.map((project) => <EntryCard info={project} />)}
+          </Row>
+        </div>
 
-          <div className="project_section">
-            <h2>Showing The Human-Centered Design Process</h2>
-            <Row justify="start">
-              {entriesContent.human_centered_design_process.map(project => {
-                return <EntryCard info={project} />;
-              })}
-            </Row>
-          </div>
+        <div className="project_section">
+          <h2>D4SD Summit People's Choice Award</h2>
+          <p className="award-description">A survey at the D4SD Summit asked attendees to weigh in on the best proposals. The people voted and these three team proposals were among the best.</p>
+          <Row justify="start">
+            {entriesContent.peoples_choice.map((project) => <EntryCard info={project} />)}
+          </Row>
+        </div>
 
-          <div className="project_section">
-            <h2>People's Choice</h2>
-            <Row justify="start">
-              {entriesContent.peoples_choice.map(project => {
-                return <EntryCard info={project} />;
-              })}
-            </Row>
-          </div>
+        <div className="project_section">
+          <h2>All Proposals from the D4SD 2020 Summit</h2>
+          <p className="award-description">Congratulations to all participants who submitted proposals for this year’s Design for San Diego challenge!</p>
+          <Row justify="start">
+            {entriesContent.all_projects.map((project) => <EntryCard info={project} />)}
+          </Row>
+        </div>
 
-          <div className="project_section">
-            <h2>All Projects</h2>
-            <Row justify="start">
-              {entriesContent.all_projects.map(project => {
-                return <EntryCard info={project} />;
-              })}
-            </Row>
-          </div>
-
-          <div className="project_section">
-            <h2>Posters</h2>
-            <Row justify="start">
-              {entriesContent.all_posters.map(project => {
-                return <EntryCard info={project} />;
-              })}
-            </Row>
-          </div>
+        <div className="project_section">
+          <h2>Posters</h2>
+          <Row justify="start">
+            {entriesContent.all_posters.map((project) => <EntryCard info={project} />)}
+          </Row>
         </div>
       </div>
-      <Footer />
     </div>
-  );
-};
+    <Footer />
+  </div>
+);
 
 export default EntriesLayout;
