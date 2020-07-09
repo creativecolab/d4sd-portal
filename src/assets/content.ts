@@ -1439,7 +1439,7 @@ export const entriesContent = {
   human_centered_design_process: [
     {
       projectName: "Idle Reminder",
-      members: "Stephen Cerruti, Nancy R, Alberto P, Symphony J, Uriel H",
+      members: "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
       featuredImage: idle_reminder,
@@ -1673,7 +1673,7 @@ export const entriesContent = {
     },
     {
       projectName: "Boreas Solution Inc",
-      members: "Dalila, Andrew, Alejandro, Johny, Robin",
+      members: "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
       projectDescription:
         "How might we make breathing and everyday life easier when wildfires pollue the air?",
       featuredImage: boreas_solution,
