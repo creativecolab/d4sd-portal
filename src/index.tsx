@@ -99,7 +99,12 @@ const JoinDesignJam = Loadable({
 const EntriesLayout = Loadable({
   loader: () => import("./components/layouts/entries-layout"),
   loading: Loading
-})
+});
+
+const EventsLayout = Loadable({
+  loader: () => import("./components/layouts/events-layout"),
+  loading: Loading
+});
 // const ViewFeedbackLayout = Loadable({
 //   loader: () => import('./components/layouts/view-feedback-layout'),
 //   loading: Loading
@@ -166,7 +171,8 @@ const App = (): JSX.Element => {
               path="/resources/stakeholder"
               component={StakeholderPage}
             />
-            <Route exact path="/proposals" component = {EntriesLayout} />
+            <Route exact path="/events" component={EventsLayout} />
+            <Route exact path="/proposals" component={EntriesLayout} />
             <Route exact path="/submit" component={SubmitPage} />
             <Route
               exact

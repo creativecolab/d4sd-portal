@@ -18,6 +18,12 @@ import logo5 from "./img/home_logo5.png";
 import logo6 from "./img/home_logo6.png";
 import logo7 from "./img/home_logo7.png";
 
+import speaker_one from "./img/events/speaker_1.jpg";
+import speaker_two from "./img/events/speaker_2.jpg";
+import speaker_three from "./img/events/speaker_3.jpg";
+import speaker_four from "./img/events/speaker_4.jpg";
+import speaker_five from "./img/events/speaker_5.jpg";
+
 import involve_header from "./img/involve_header.svg";
 
 import city from "./img/about_city.svg";
@@ -1388,6 +1394,51 @@ export const covidContent = {
     "Clean and disinfect frequently touched objects and surfaces.",
     "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided in the links above."
   ]
+};
+
+export const eventsContent = {
+  title: "Events",
+  image: "resource_header",
+  subInfo:
+    "D4SD is a civic design challenge that brings together young innovators, educators, mentors, domain experts, and decision makers to address complex challenges facing our region. This year, a series of engagements culminated at the D4SD 2020 Summit, a virtual event where hundreds shared ideas and discussed the future of San Diego.",
+  summary: {
+    title: "Summary of Events",
+    info:
+      "D4SD 2020 included a series of events that brought together our community to address civic challenges through human-centered design. Our primary events for 2020 included:",
+    events: [
+      {
+        name: "Civic Design Speaker Series",
+        start_date: "Jan 21 - Mar 3",
+        description:
+          "Local experts shared knowledge on a range of civic issues such as mobility, urban planning, and transportation technology."
+      },
+      {
+        name: "Design Jams",
+        start_date: "Apr 10 - May 1",
+        description:
+          "Concerned citizens gathered weekly to practice human-centered design through virtual workshops focused on the new challenges created by COVID-19."
+      },
+      {
+        name: "2020 Summit",
+        start_date: "May 15",
+        description:
+          "Our local community came together virtually to share proposals and to build alliances around complex challenges facing San Diego."
+      }
+    ]
+  },
+
+  speaker: {
+    title: "Civic Design Speaker Series",
+    info:
+      "As part of the “Civic Design” course offered at UC San Diego, D4SD hosted a series of expert panel discussions about current and future challenges related to mobility, housing and public health. Experts from around the region offered amazing insights and knowledge to help innovators understand where to focus.",
+    images: [
+      speaker_one,
+      speaker_two,
+      speaker_three,
+      speaker_four,
+      speaker_five
+    ]
+  }
 };
 
 export const entriesContent = {

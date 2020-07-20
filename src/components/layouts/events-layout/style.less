@@ -1,0 +1,53 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+
+.events-content {
+  .events-summary {
+    margin: @margin-base-2 0;
+  }
+
+  .event-dates {
+    color: @primary-txt;
+  }
+
+  .speakers {
+    width: 100vw;
+    background: @d4sd-color-bg;
+    padding: @margin-base-2 0;
+  }
+
+  .scrollWrapper {
+    margin-top: @margin-base-1;
+    overflow-y: hidden;
+    height: 40rem;
+  }
+  .scrollContainer {
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    cursor: ew-resize;
+    height: 41.5rem;
+    margin-left: @margin-base-2;
+  }
+
+  .imageDiv {
+    height: 100%;
+    display: flex;
+    //align-items: center;
+    img {
+      // -webkit-filter: grayscale(100%); /* safari6.0 - 9.0  */
+      // filter: grayscale(100%);
+      height: 100%;
+      margin-right: @margin-base-1;
+      &:nth-child(3n -1) {
+        height: 70%;
+      }
+      &:nth-child(3n) {
+        height: 85%;
+      }
+      &:last-child {
+        padding-right: @margin-base-2;
+      }
+    }
+  }
+}
