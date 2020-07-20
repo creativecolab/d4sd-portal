@@ -5,7 +5,6 @@ import Footer from "../../Footer";
 import { Link } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
 import "./style.less";
-import speaker_one from "../../../assets/img/events/speaker_1.jpg";
 
 const EventsLayout = (): JSX.Element => {
   return (
@@ -26,7 +25,9 @@ const EventsLayout = (): JSX.Element => {
                   <b>
                     {index + 1}. {event.name}
                   </b>{" "}
-                  <span className="event-dates">{event.start_date}</span>
+                  <span className="event-dates">
+                    {event.start_date.toUpperCase()}
+                  </span>
                 </p>
                 <p>{event.description}</p>
               </div>
@@ -49,6 +50,27 @@ const EventsLayout = (): JSX.Element => {
               </div>
             </div>
           </div>
+        </Col>
+      </Row>
+      <Row type="flex" justify="center" className="events-summary">
+        <Col xs={20} md={16}>
+          <h2>{eventsContent.design_jam.title}</h2>
+          <p>{eventsContent.design_jam.info}</p>
+          {eventsContent.design_jam.dates.map((event, index) => {
+            return (
+              <p>
+                • <a href={event.link}>{event.date.toUpperCase()}</a> {" : "}
+                {event.description}
+              </p>
+            );
+          })}
+        </Col>
+      </Row>
+      <Row type="flex" justify="center" className="speakers">
+        <Col xs={20} md={16}>
+          <h2>{eventsContent.summit.title}</h2>
+          {/* eslint-disable-next-line */}
+          <p dangerouslySetInnerHTML={{ __html: eventsContent.summit.info }} />
         </Col>
       </Row>
       <Footer />

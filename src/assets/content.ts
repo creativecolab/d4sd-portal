@@ -1438,6 +1438,43 @@ export const eventsContent = {
       speaker_four,
       speaker_five
     ]
+  },
+
+  design_jam: {
+    title: "Design Jams",
+    info:
+      "In light of COVID-19, D4SD hosted weekly online collaborative “design jams” aimed at exploring challenges and generating potential solutions using human-centered design. Each week, citizens practiced empathy building, research, problem framing, ideating, prototyping, and testing towards helping our community.",
+    dates: [
+      {
+        date: "Apr 10",
+        link:
+          "https://www.youtube.com/watch?v=oz8H7RZIOCY&list=PLoWuaQlGD1dlk4AmbjeVJ4CI8lTjNE2kr",
+        description: "DISCOVER: Exploring Challenge Topics and Doing Research"
+      },
+      {
+        date: "Apr 17",
+        description: "IDEATE:  Framing, Ideating, and Storyboarding",
+        link:
+          "https://www.youtube.com/watch?v=t_Zs37sMbrc&list=PLoWuaQlGD1dlW2GEDGC8IeMDPBszqXaFL"
+      },
+      {
+        date: "Apr 24",
+        description: "PROTOTYPE:  Making and Testing Prototypes",
+        link:
+          "https://www.youtube.com/watch?v=3nR1tTN2GSQ&list=PLoWuaQlGD1dk3OtvLUtFWEbKgttz6PjrY"
+      },
+      {
+        date: "May 1",
+        description:
+          "CONNECT: Creating Compelling Stories and Making Connections",
+        link:
+          "https://www.youtube.com/watch?v=oz8H7RZIOCY&list=PLoWuaQlGD1dnl3-oFWyssQoUZZHOH1t9u"
+      }
+    ]
+  }, 
+  summit : {
+    title : "2020 Summit",
+    info : `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`
   }
 };
 
