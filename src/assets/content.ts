@@ -1398,7 +1398,7 @@ export const covidContent = {
 
 export const eventsContent = {
   title: "Events",
-  image: "resource_header",
+  image: "jam-header",
   subInfo:
     "D4SD is a civic design challenge that brings together young innovators, educators, mentors, domain experts, and decision makers to address complex challenges facing our region. This year, a series of engagements culminated at the D4SD 2020 Summit, a virtual event where hundreds shared ideas and discussed the future of San Diego.",
   summary: {
