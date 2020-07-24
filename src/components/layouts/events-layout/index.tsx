@@ -14,8 +14,8 @@ const EventsLayout = (): JSX.Element => {
         content={eventsContent.subInfo}
         image={eventsContent.image}
       />
-      <Row type="flex" justify="center" className="events-summary">
-        <Col xs={20} md={16}>
+      <div className="events-summary">
+        <div className="container">
           <h2>{eventsContent.summary.title}</h2>
           <p>{eventsContent.summary.info}</p>
           {eventsContent.summary.events.map((event, index) => {
@@ -33,27 +33,27 @@ const EventsLayout = (): JSX.Element => {
               </div>
             );
           })}
-        </Col>
-      </Row>
-      <Row className="speakers" type="flex" justify="center">
-        <Col xs={20} md={16}>
+        </div>
+      </div>
+      {/*  */}
+      <div className="speakers">
+        <div className="container">
+          {" "}
           <h2>{eventsContent.speaker.title}</h2>
           <p>{eventsContent.speaker.info}</p>
-        </Col>
-        <Col xs={24}>
-          <div className="scrollWrapper">
-            <div className="scrollContainer">
-              <div className="imageDiv">
-                {eventsContent.speaker.images.map(imgSrc => {
-                  return <img src={imgSrc} className="speaker-images" />;
-                })}
-              </div>
+        </div>
+        <div className="scrollWrapper">
+          <div className="scrollContainer">
+            <div className="imageDiv">
+              {eventsContent.speaker.images.map(imgSrc => {
+                return <img src={imgSrc} className="speaker-images" />;
+              })}
             </div>
           </div>
-        </Col>
-      </Row>
-      <Row type="flex" justify="center" className="events-summary">
-        <Col xs={20} md={16}>
+        </div>
+      </div>
+      <div className="events-summary">
+        <div className="container">
           <h2>{eventsContent.design_jam.title}</h2>
           <p>{eventsContent.design_jam.info}</p>
           {eventsContent.design_jam.dates.map((event, index) => {
@@ -64,15 +64,16 @@ const EventsLayout = (): JSX.Element => {
               </p>
             );
           })}
-        </Col>
-      </Row>
-      <Row type="flex" justify="center" className="speakers">
-        <Col xs={20} md={16}>
+        </div>
+      </div>
+      <div className="speakers">
+        <div className="container">
           <h2>{eventsContent.summit.title}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: eventsContent.summit.info }} />
-        </Col>
-      </Row>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
