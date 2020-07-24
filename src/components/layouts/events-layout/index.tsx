@@ -22,9 +22,10 @@ const EventsLayout = (): JSX.Element => {
             return (
               <div>
                 <p>
-                  <b>• {event.name}</b>{" "}
+                  <b>• {event.name}</b>
+                  {"  "}
                   <span className="event-dates">
-                    {event.start_date.toUpperCase()}
+                    ( {event.start_date.toUpperCase()} )
                   </span>
                 </p>
                 <p>{event.description}</p>
@@ -39,6 +40,35 @@ const EventsLayout = (): JSX.Element => {
           {" "}
           <h2>{eventsContent.speaker.title}</h2>
           <p>{eventsContent.speaker.info}</p>
+          <div className="guests">
+            {eventsContent.speaker.series.map(guest => {
+              var len = guest.content.length - 1;
+              return (
+                <div className="guest-content">
+                  <p>
+                    • {guest.date.toUpperCase()} :{" "}
+                    <span>
+                      {guest.content.map((guest, index) => {
+                        var delimiter = "";
+                        if (index === len) {
+                          delimiter = ".";
+                        } else {
+                          delimiter = ", ";
+                        }
+                        return (
+                          <>
+                            <a href={guest.linkedin}>{guest.name}</a> {"from"}{" "}
+                            {guest.from}
+                            {delimiter}
+                          </>
+                        );
+                      })}
+                    </span>
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="imageDiv">
           {eventsContent.speaker.images.map(imgSrc => {
