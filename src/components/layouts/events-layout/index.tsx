@@ -1,12 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Row, Col, Button } from "@d4sd/components";
 import Header from "../../Header/index";
 import Footer from "../../Footer";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
 import "./style.less";
 
 const EventsLayout = (): JSX.Element => {
+  const sectionRefs = [
+    useRef<HTMLHeadingElement>(null),
+    useRef<HTMLHeadingElement>(null),
+    useRef<HTMLHeadingElement>(null)
+  ];
+  const sectionMap: { [key: string]: number } = {
+    civic_speakers: 0,
+    design_jams: 1,
+    summit_2020: 2
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      const section = window.location.search.substr(1);
+      if (section in sectionMap) {
+        scrollTo(section);
+      }
+    }, 100);
+    // eslint-disable-next-line
+  }, []);
+  const ref = useRef<HTMLHeadingElement>(null);
+  const history = useHistory();
+  const scrollTo = (sect: string): void => {
+    const section = sectionRefs[sectionMap[sect]];
+    if (section && section.current) {
+      const position = section.current.offsetTop - 110;
+      // eslint-disable-next-line
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behavior: "smooth"
+      });
+    }
+  };
   return (
     <div className="events-content">
       <Header
@@ -21,8 +55,10 @@ const EventsLayout = (): JSX.Element => {
           {eventsContent.summary.events.map(event => {
             return (
               <div>
+                {/*es-lint disable next line */}
                 <p>
                   <b>• {event.name}</b>
+
                   {"  "}
                   <span className="event-dates">
                     ( {event.start_date.toUpperCase()} )
@@ -90,7 +126,7 @@ const EventsLayout = (): JSX.Element => {
           })}
         </div>
       </div>
-      <div className="speakers">
+      <div className="speakers" id="summit-2020">
         <div className="container">
           <h2>{eventsContent.summit.title}</h2>
           {/* eslint-disable-next-line */}
