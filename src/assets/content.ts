@@ -1432,7 +1432,6 @@ export const eventsContent = {
     info:
       "As part of the “Civic Design” course offered at UC San Diego, D4SD hosted a series of expert panel discussions about current and future challenges related to mobility, housing and public health. Experts from around the region offered amazing insights and knowledge to help innovators understand where to focus.",
     images: [
-      speaker_one,
       speaker_two,
       speaker_three,
       speaker_four,
