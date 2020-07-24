@@ -18,13 +18,11 @@ const EventsLayout = (): JSX.Element => {
         <div className="container">
           <h2>{eventsContent.summary.title}</h2>
           <p>{eventsContent.summary.info}</p>
-          {eventsContent.summary.events.map((event, index) => {
+          {eventsContent.summary.events.map(event => {
             return (
               <div>
                 <p>
-                  <b>
-                    {index + 1}. {event.name}
-                  </b>{" "}
+                  <b>• {event.name}</b>{" "}
                   <span className="event-dates">
                     {event.start_date.toUpperCase()}
                   </span>
@@ -42,21 +40,17 @@ const EventsLayout = (): JSX.Element => {
           <h2>{eventsContent.speaker.title}</h2>
           <p>{eventsContent.speaker.info}</p>
         </div>
-        <div className="scrollWrapper">
-          <div className="scrollContainer">
-            <div className="imageDiv">
-              {eventsContent.speaker.images.map(imgSrc => {
-                return <img src={imgSrc} className="speaker-images" />;
-              })}
-            </div>
-          </div>
+        <div className="imageDiv">
+          {eventsContent.speaker.images.map(imgSrc => {
+            return <img src={imgSrc} className="speaker-images" />;
+          })}
         </div>
       </div>
       <div className="events-summary">
         <div className="container">
           <h2>{eventsContent.design_jam.title}</h2>
           <p>{eventsContent.design_jam.info}</p>
-          {eventsContent.design_jam.dates.map((event, index) => {
+          {eventsContent.design_jam.dates.map(event => {
             return (
               <p>
                 • <a href={event.link}>{event.date.toUpperCase()}</a> {" : "}
