@@ -1395,7 +1395,7 @@ export const entriesContent = {
   title: "Entries",
   image: "attend_header",
   subInfo:
-    "Congratulations to all 2020 D4SD participants! Out of a total of 33 proposals, the D4SD team selected 6 finalists that exemplify great storytelling, potential for impact, and human-centered processes. An additional three proposals were selected by the D4SD community as the “people’s choice” awards. Congratulations on advancing ideas that could make San Diego a more sustainable region.",
+    "Congratulations to all 2020 D4SD participants! Out of 33 proposals, the D4SD team selected 6 finalists that exemplify great storytelling, potential for impact, and human-centered processes. An additional three proposals were selected by the D4SD community as the “people’s choice” awards. Congratulations on advancing ideas that could make San Diego a more sustainable region.",
   compelling_storytelling: [
     {
       projectName: "Helpr",

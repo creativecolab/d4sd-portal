@@ -77,7 +77,7 @@ const EntriesLayout = (): JSX.Element => (
 
         <div className="project_section">
           <h2>All Proposals from the D4SD 2020 Summit</h2>
-          <p className="award-description">Congratulations to all participants who submitted proposals for this year’s Design for San Diego challenge!</p>
+          <p className="award-description">Congratulations to all participants who submitted proposals for this year’s Design for San Diego challenge! These proposals were selected to verbally present their ideas at the 2020 Summit.</p>
           <Row justify="start">
             {entriesContent.all_projects.map((project) => <EntryCard info={project} />)}
           </Row>
@@ -85,6 +85,7 @@ const EntriesLayout = (): JSX.Element => (
 
         <div className="project_section">
           <h2>Posters</h2>
+          <p className="award-description">Congratulations to all participants who submitted proposals for this year’s Design for San Diego challenge! These proposals were selected to verbally present their ideas at the 2020 Summit.</p>
           <Row justify="start">
             {entriesContent.all_posters.map((project) => <EntryCard info={project} />)}
           </Row>
