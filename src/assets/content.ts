@@ -18,6 +18,12 @@ import logo5 from "./img/home_logo5.png";
 import logo6 from "./img/home_logo6.png";
 import logo7 from "./img/home_logo7.png";
 
+import speaker_one from "./img/events/speaker_1.jpg";
+import speaker_two from "./img/events/speaker_2.jpg";
+import speaker_three from "./img/events/speaker_3.jpg";
+import speaker_four from "./img/events/speaker_4.jpg";
+import speaker_five from "./img/events/speaker_5.jpg";
+
 import involve_header from "./img/involve_header.svg";
 
 import city from "./img/about_city.svg";
@@ -1389,6 +1395,283 @@ export const covidContent = {
     "Clean and disinfect frequently touched objects and surfaces.",
     "If you have ANY symptoms, even if you think it is just a cold or flu, please prioritize your health, stay home, self-isolate as possible and appropriately, and follow the recommendations provided in the links above."
   ]
+};
+
+export const eventsContent = {
+  title: "Events",
+  image: "jam-header",
+  subInfo:
+    "D4SD is a civic design challenge that brings together young innovators, educators, mentors, domain experts, and decision makers to address complex challenges facing our region. This year, a series of engagements culminated at the D4SD 2020 Summit, a virtual event where hundreds shared ideas and discussed the future of San Diego.",
+  summary: {
+    title: "Summary of Events",
+    info:
+      "D4SD 2020 included a series of events that brought together our community to address civic challenges through human-centered design. Our primary events for 2020 included:",
+    events: [
+      {
+        name: "Civic Design Speaker Series",
+        start_date: "Jan 21 - Mar 3",
+        description:
+          "Local experts shared knowledge on a range of civic issues such as mobility, urban planning, and transportation technology."
+      },
+      {
+        name: "Design Jams",
+        start_date: "Apr 10 - May 1",
+        description:
+          "Concerned citizens gathered weekly to practice human-centered design through virtual workshops focused on the new challenges created by COVID-19."
+      },
+      {
+        name: "2020 Summit",
+        start_date: "May 15",
+        description:
+          "Our local community came together virtually to share proposals and to build alliances around complex challenges facing San Diego."
+      }
+    ]
+  },
+
+  speaker: {
+    title: "Civic Design Speaker Series",
+    info:
+      "As part of the “Civic Design” course offered at UC San Diego, D4SD hosted a series of expert panel discussions about current and future challenges related to mobility, housing and public health. Experts from around the region offered amazing insights and knowledge to help innovators understand where to focus.",
+    series: [
+      {
+        date: "Jan 9",
+        content: [
+          {
+            name: "Brian McInnis",
+            linkedin: "https://www.linkedin.com/in/brian-mcinnis-4872399/",
+            from: "UCSD"
+          }
+        ]
+      },
+      {
+        date: "Jan 21",
+        content: [
+          {
+            name: "Lima Saft",
+            linkedin: "https://www.linkedin.com/in/lima-saft-phd/",
+            from: "Caltrans"
+          },
+          {
+            name: "Howard Blackson",
+            linkedin: "https://www.linkedin.com/in/howard-blackson-b586478/",
+            from: "AVRP Skyport"
+          },
+          {
+            name: "Don Murphy",
+            linkedin: "https://www.linkedin.com/in/don-murphy-3064265/",
+            from: "IBI Group"
+          }
+        ]
+      },
+      {
+        date: "Jan 23",
+        content: [
+          {
+            name: "Antoinette Meier",
+            linkedin: "https://www.linkedin.com/in/armeier/",
+            from: "SANDAG"
+          },
+          {
+            name: "Colleen Emmenegger",
+            linkedin:
+              "https://www.linkedin.com/in/colleen-emmenegger-6722b8a1/",
+            from: "Design Lab"
+          }
+        ]
+      },
+
+      {
+        date: "Jan 23",
+        content: [
+          {
+            name: "Steve MacNeil",
+            linkedin: "https://www.linkedin.com/in/stevemacn1/",
+            from: "UCSD"
+          },
+          {
+            name: "Josh Kavanagh",
+            linkedin: "https://www.linkedin.com/in/joshkavanagh/",
+            from: "UCSD Campus Planning"
+          },
+          {
+            name: "Dan Lenzen",
+            linkedin: "https://www.linkedin.com/in/daniel-lenzen-293b6732/",
+            from: "LJCDS"
+          }
+        ]
+      },
+      {
+        date: "Jan 30",
+        content: [
+          {
+            name: "Alyssa Muto",
+            linkedin: "linkedin.com/in/alyssa-muto-b9009621/",
+            from: "City of San Diego"
+          },
+          {
+            name: "Roger Lewis",
+            linkedin: "",
+            from: ""
+          }
+        ]
+      },
+      {
+        date: "Feb 4",
+        content: [
+          {
+            name: 'Kevin "The Idea Guy" Popovic',
+            linkedin: "https://www.linkedin.com/in/kevinpopovic/",
+            from: "The Idea Guy"
+          },
+          {
+            name: "Laura Spencer",
+            linkedin: "https://www.linkedin.com/in/lspenceredd/",
+            from: "Elite Academic Academy"
+          },
+          {
+            name: 'Bryan "Sage" Rill',
+            linkedin: "",
+            from: ""
+          },
+          {
+            name: "Jennifer Taylor",
+            linkedin: "https://www.linkedin.com/in/jennifer-constance-taylor/",
+            from: "UCSD Design Lab"
+          }
+        ]
+      },
+      {
+        date: "Feb 6",
+        content: [
+          {
+            name: "Brent Boyd",
+            linkedin: "https://www.linkedin.com/in/brent-boyd-0754816/",
+            from: "MTS"
+          },
+          {
+            name: "Dave Schumacher",
+            linkedin: "https://www.linkedin.com/in/dave-schumacher-0245a6161/",
+            from: "WSP"
+          }
+        ]
+      },
+      {
+        date: "Feb 11",
+        content: [
+          {
+            name: "Colin Santulli",
+            linkedin: "https://www.linkedin.com/in/colinsantulli/",
+            from: "City of San Diego"
+          },
+          {
+            name: "Dave Schumacher",
+            linkedin: "https://www.linkedin.com/in/dave-schumacher-0245a6161/",
+            from: "WSP"
+          },
+          {
+            name: "Debbie Leung",
+            linkedin: "https://www.linkedin.com/in/debbieleung/",
+            from: "IBI Group"
+          },
+          {
+            name: "Matt Cox",
+            linkedin: "https://www.linkedin.com/in/mattbcox/",
+            from: "IBI Group"
+          }
+        ]
+      },
+      {
+        date: "Feb 13",
+        content: [
+          {
+            name: "Coleen Clementson",
+            linkedin: "",
+            from: ""
+          },
+          {
+            name: "Everett Hauser",
+            linkedin:
+              "https://www.linkedin.com/in/everett-hauser-aicp-ptp-4665b47/",
+            from: "City of San Diego"
+          },
+          {
+            name: "Catherine Thibault",
+            linkedin:
+              "https://www.linkedin.com/in/catherine-thibault-53059b1b/",
+            from: "Fehr & Peers"
+          },
+          {
+            name: "Amy Jackson",
+            linkedin: "",
+            from: "Fehr & Peers"
+          },
+          {
+            name: "Cecily Taylor",
+            linkedin: "https://www.linkedin.com/in/cecilytaylor/",
+            from: "Fehr & Peers"
+          }
+        ]
+      },
+      {
+        date: "Feb 18",
+        content: [
+          {
+            name: "Sean van Tyne",
+            linkedin: "https://www.linkedin.com/in/seanvantyne/",
+            from: "UCSD Rady School of Management"
+          }
+        ]
+      },
+      {
+        date: "Mar 3",
+        content: [
+          {
+            name: "Greg Horowitt",
+            linkedin: "https://www.linkedin.com/in/horowitt/",
+            from: "T2 Venture Capital"
+          }
+        ]
+      }
+    ],
+    images: [speaker_two, speaker_three, speaker_four, speaker_five]
+  },
+
+  design_jam: {
+    title: "Design Jams",
+    info:
+      "In light of COVID-19, D4SD hosted weekly online collaborative “design jams” aimed at exploring challenges and generating potential solutions using human-centered design. Each week, citizens practiced empathy building, research, problem framing, ideating, prototyping, and testing towards helping our community.",
+    dates: [
+      {
+        date: "Apr 10",
+        link:
+          "https://www.youtube.com/watch?v=oz8H7RZIOCY&list=PLoWuaQlGD1dlk4AmbjeVJ4CI8lTjNE2kr",
+        description: "DISCOVER: Exploring Challenge Topics and Doing Research"
+      },
+      {
+        date: "Apr 17",
+        description: "IDEATE:  Framing, Ideating, and Storyboarding",
+        link:
+          "https://www.youtube.com/watch?v=t_Zs37sMbrc&list=PLoWuaQlGD1dlW2GEDGC8IeMDPBszqXaFL"
+      },
+      {
+        date: "Apr 24",
+        description: "PROTOTYPE:  Making and Testing Prototypes",
+        link:
+          "https://www.youtube.com/watch?v=3nR1tTN2GSQ&list=PLoWuaQlGD1dk3OtvLUtFWEbKgttz6PjrY"
+      },
+      {
+        date: "May 1",
+        description:
+          "CONNECT: Creating Compelling Stories and Making Connections",
+        link:
+          "https://www.youtube.com/watch?v=oz8H7RZIOCY&list=PLoWuaQlGD1dnl3-oFWyssQoUZZHOH1t9u"
+      }
+    ]
+  },
+  summit: {
+    title: "2020 Summit",
+    info: `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`
+  }
 };
 
 export const entriesContent = {

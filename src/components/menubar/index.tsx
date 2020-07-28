@@ -110,6 +110,12 @@ const Menubar = (): JSX.Element => {
               </Menu.Item>
               <Menu.Item
                 className="mobile-menu-item"
+                onClick={(): void => history.push("/events")}
+              >
+                <span>Events</span>
+              </Menu.Item>
+              <Menu.Item
+                className="mobile-menu-item"
                 onClick={(): void => history.push("/challenges")}
               >
                 <span>Challenges</span>
@@ -120,29 +126,29 @@ const Menubar = (): JSX.Element => {
               >
                 <span>Resources</span>
               </Menu.Item>
-              <Menu.Item
+              {/* <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/attend")}
               >
                 <span>Attend</span>
-              </Menu.Item>
-              <Menu.Item
+              </Menu.Item> */}
+              {/* <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/submit/join-a-design-jam")}
               >
                 <span>Jam</span>
-              </Menu.Item>
+              </Menu.Item> */}
               {
                 //   <Menu.Item className="mobile-menu-item" onClick={(): void => history.push('/attend')}>
                 //   <span>Attend</span>
                 // </Menu.Item>
               }
-              <Menu.Item
+              {/* <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/submit")}
               >
                 <span>Submit</span>
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/volunteer")}
@@ -155,12 +161,12 @@ const Menubar = (): JSX.Element => {
               >
                 <span>Sponsor</span>
               </Menu.Item>
-              <Menu.Item
+              {/* <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/faq")}
               >
                 <span>FAQs</span>
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/about")}
@@ -191,6 +197,13 @@ const Menubar = (): JSX.Element => {
             </Menu.Item>
             <Menu.Item
               className="menu-item"
+              key="events"
+              onClick={(): void => history.push("/events")}
+            >
+              <span>Events</span>
+            </Menu.Item>
+            <Menu.Item
+              className="menu-item"
               key="challenges"
               onClick={(): void => history.push("/challenges")}
             >
@@ -203,32 +216,32 @@ const Menubar = (): JSX.Element => {
             >
               <span>Resources</span>
             </Menu.Item>
-            <Menu.Item
+            {/* <Menu.Item
               className="menu-item"
               key="attend"
               onClick={(): void => history.push("/attend")}
             >
               <span>Attend</span>
-            </Menu.Item>
-            <Menu.Item
+            </Menu.Item> */}
+            {/* <Menu.Item
               className="menu-item"
               key="join-a-design-jam"
               onClick={(): void => history.push("/submit/join-a-design-jam")}
             >
               <span>Jam</span>
-            </Menu.Item>
+            </Menu.Item> */}
             {
               // <Menu.Item className="menu-item" key="attend" onClick={(): void => history.push('/attend')}>
               //   <span>Attend</span>
               // </Menu.Item>
             }
-            <Menu.Item
+            {/* <Menu.Item
               className="menu-item"
               key="submit"
               onClick={(): void => history.push("/submit")}
             >
               <span>Submit</span>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
               className="menu-item"
               key="volunteer"
@@ -243,13 +256,13 @@ const Menubar = (): JSX.Element => {
             >
               <span>Sponsor</span>
             </Menu.Item>
-            <Menu.Item
+            {/* <Menu.Item
               className="menu-item"
               key="faq"
               onClick={(): void => history.push("/faq")}
             >
               <span>FAQs</span>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
               className="menu-item"
               key="about"
