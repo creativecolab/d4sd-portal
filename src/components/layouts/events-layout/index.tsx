@@ -4,43 +4,10 @@ import Header from "../../Header/index";
 import Footer from "../../Footer";
 import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
+import d4sdSummit from '../../../assets/img/d4sd-summit.png';
 import "./style.less";
 
 const EventsLayout = (): JSX.Element => {
-  const sectionRefs = [
-    useRef<HTMLHeadingElement>(null),
-    useRef<HTMLHeadingElement>(null),
-    useRef<HTMLHeadingElement>(null)
-  ];
-  const sectionMap: { [key: string]: number } = {
-    civic_speakers: 0,
-    design_jams: 1,
-    summit_2020: 2
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      const section = window.location.search.substr(1);
-      if (section in sectionMap) {
-        scrollTo(section);
-      }
-    }, 100);
-    // eslint-disable-next-line
-  }, []);
-  const ref = useRef<HTMLHeadingElement>(null);
-  const history = useHistory();
-  const scrollTo = (sect: string): void => {
-    const section = sectionRefs[sectionMap[sect]];
-    if (section && section.current) {
-      const position = section.current.offsetTop - 110;
-      // eslint-disable-next-line
-      window.scrollTo({
-        left: 0,
-        top: position,
-        behavior: "smooth"
-      });
-    }
-  };
   return (
     <div className="events-content">
       <Header
@@ -131,6 +98,7 @@ const EventsLayout = (): JSX.Element => {
           <h2>{eventsContent.summit.title}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: eventsContent.summit.info }} />
+          <img src={d4sdSummit} className="summit-img" />
         </div>
       </div>
 
