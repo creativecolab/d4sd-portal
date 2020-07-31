@@ -6,8 +6,40 @@ import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
 import d4sdMural from "../../../assets/img/designjam-mural.png";
 import "./style.less";
+import { any } from "prop-types";
 
 const EventsLayout = (): JSX.Element => {
+  const sectionRefs = [useRef<HTMLHeadingElement>(null), useRef<HTMLHeadingElement>(null),
+    useRef<HTMLHeadingElement>(null)];
+
+  const sectionMap : {[key : string] : number} = {
+    speakers : 0,
+    designJam : 1,
+    summit : 2
+  }
+
+  const scrollTo = (sect:string):void => {
+    const section = sectionRefs[sectionMap[sect]];
+    if (section && section.current){
+      const position = section.current.offsetTop - 110;
+      // eslint-disable-next-line
+      window.scrollTo({
+        left: 0,
+        top: position,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      const section = window.location.search.substr(1)
+      if (section in sectionMap) {
+        scrollTo(section)
+      }
+    }, 100)
+  })
+
   return (
     <div className="events-content">
       <Header
@@ -19,26 +51,25 @@ const EventsLayout = (): JSX.Element => {
         <div className="container">
           <h2>{eventsContent.summary.title}</h2>
           <p>{eventsContent.summary.info}</p>
-          {eventsContent.summary.events.map(event => {
-            return (
-              <div>
-                {/*es-lint disable next line */}
-                <p>
-                  <b>• {event.name}</b>
-
-                  {"  "}
-                  <span className="event-dates">
-                    ( {event.start_date.toUpperCase()} )
-                  </span>
-                </p>
-                <p>{event.description}</p>
-              </div>
-            );
-          })}
+          <Row justify="center">
+            {eventsContent.summary.events.map(event => {
+              return (
+                <Col xs={8} className="events">
+                  {/*es-lint disable next line */}
+                  <img src={event.image} onClick={():void => scrollTo(event.ref)}/>
+                  <p style={{ textAlign: "center" }}>{event.name}</p>
+                  <p style={{ textAlign: "center" }}>
+                    {event.start_date.toUpperCase()}
+                  </p>
+                  {/* <p>{event.description}</p> */}
+                </Col>
+              );
+            })}
+          </Row>
         </div>
       </div>
       {/*  */}
-      <div className="speakers">
+      <div className="speakers" ref={sectionRefs[0]}>
         <div className="container">
           {" "}
           <h2>{eventsContent.speaker.title}</h2>
@@ -79,14 +110,18 @@ const EventsLayout = (): JSX.Element => {
           })}
         </div>
       </div>
-      <div className="events-summary">
+      <div className="events-summary" ref={sectionRefs[1]}>
         <div className="container">
           <h2>{eventsContent.design_jam.title}</h2>
           <p>{eventsContent.design_jam.info}</p>
           {eventsContent.design_jam.dates.map(event => {
             return (
               <p>
-                • <a href={event.link}>{event.date.toUpperCase()}</a> {" : "}
+                •{" "}
+                <a href={event.link} target="_blank">
+                  {event.date.toUpperCase()}
+                </a>{" "}
+                {" : "}
                 {event.description}
               </p>
             );
@@ -94,7 +129,7 @@ const EventsLayout = (): JSX.Element => {
         </div>
         <img src={d4sdMural} className="mural-img" />
       </div>
-      <div className="speakers" id="summit-2020">
+      <div className="speakers" ref={sectionRefs[2]}>
         <div className="container">
           <h2>{eventsContent.summit.title}</h2>
           {/* eslint-disable-next-line */}
@@ -102,7 +137,7 @@ const EventsLayout = (): JSX.Element => {
         </div>
         <div className="imageDiv">
           {eventsContent.summit.images.map(imgSrc => {
-            return <img src={imgSrc} key = {imgSrc} className="speaker-images" />;
+            return <img src={imgSrc} key={imgSrc} className="speaker-images" />;
           })}
         </div>
       </div>
