@@ -9,36 +9,39 @@ import "./style.less";
 import { any } from "prop-types";
 
 const EventsLayout = (): JSX.Element => {
-  const sectionRefs = [useRef<HTMLHeadingElement>(null), useRef<HTMLHeadingElement>(null),
-    useRef<HTMLHeadingElement>(null)];
+  const sectionRefs = [
+    useRef<HTMLHeadingElement>(null),
+    useRef<HTMLHeadingElement>(null),
+    useRef<HTMLHeadingElement>(null)
+  ];
 
-  const sectionMap : {[key : string] : number} = {
-    speakers : 0,
-    designJam : 1,
-    summit : 2
-  }
+  const sectionMap: { [key: string]: number } = {
+    speakers: 0,
+    designJam: 1,
+    summit: 2
+  };
 
-  const scrollTo = (sect:string):void => {
+  const scrollTo = (sect: string): void => {
     const section = sectionRefs[sectionMap[sect]];
-    if (section && section.current){
+    if (section && section.current) {
       const position = section.current.offsetTop - 110;
       // eslint-disable-next-line
       window.scrollTo({
         left: 0,
         top: position,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
-  }
+  };
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      const section = window.location.search.substr(1)
+  useEffect(() => {
+    setTimeout(() => {
+      const section = window.location.search.substr(1);
       if (section in sectionMap) {
-        scrollTo(section)
+        scrollTo(section);
       }
-    }, 100)
-  })
+    }, 100);
+  });
 
   return (
     <div className="events-content">
@@ -54,13 +57,17 @@ const EventsLayout = (): JSX.Element => {
           <Row justify="center">
             {eventsContent.summary.events.map(event => {
               return (
-                <Col xs={8} className="events">
+                <Col
+                  xs={8}
+                  className="events"
+                  onClick={(): void => scrollTo(event.ref)}
+                >
                   {/*es-lint disable next line */}
-                  <img src={event.image} onClick={():void => scrollTo(event.ref)}/>
-                  <p style={{ textAlign: "center" }}>{event.name}</p>
-                  <p style={{ textAlign: "center" }}>
+                  <img src={event.image} />
+                  <h4 style={{ textAlign: "center" }}>{event.name}</h4>
+                  <h5 style={{ textAlign: "center" }}>
                     {event.start_date.toUpperCase()}
-                  </p>
+                  </h5>
                   {/* <p>{event.description}</p> */}
                 </Col>
               );
