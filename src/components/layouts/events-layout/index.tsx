@@ -4,8 +4,7 @@ import Header from "../../Header/index";
 import Footer from "../../Footer";
 import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
-import d4sdSummit from '../../../assets/img/d4sd-summit.png';
-import d4sdMural from '../../../assets/img/designjam-mural.png';
+import d4sdMural from "../../../assets/img/designjam-mural.png";
 import "./style.less";
 
 const EventsLayout = (): JSX.Element => {
@@ -100,7 +99,11 @@ const EventsLayout = (): JSX.Element => {
           <h2>{eventsContent.summit.title}</h2>
           {/* eslint-disable-next-line */}
           <p dangerouslySetInnerHTML={{ __html: eventsContent.summit.info }} />
-          <img src={d4sdSummit} className="summit-img" />
+        </div>
+        <div className="imageDiv">
+          {eventsContent.summit.images.map(imgSrc => {
+            return <img src={imgSrc} key = {imgSrc} className="speaker-images" />;
+          })}
         </div>
       </div>
 

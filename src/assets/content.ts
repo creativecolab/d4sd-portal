@@ -39,6 +39,12 @@ import expert from "./img/involve_volunteer.svg";
 import innovator from "./img/involve_innovate.svg";
 import mail from "./img/involve_mail.svg";
 import feedback from "./img/involve_feedback.svg";
+
+import summitImage from './img/d4sd-summit.png'
+import donNorman from './img/don-norman.png'
+import srini from './img/srini.png'
+import barbara from './img/barbara.png'
+
 //
 // import discover from "./img/timeline_discover.svg";
 // import ideate from "./img/timeline_ideate.svg";
@@ -1669,7 +1675,8 @@ export const eventsContent = {
   },
   summit: {
     title: "2020 Summit",
-    info: `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`
+    info: `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`,
+    images : [donNorman, barbara, srini, summitImage]
   }
 };
 
