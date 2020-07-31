@@ -24,6 +24,10 @@ import speaker_three from "./img/events/speaker_3.jpg";
 import speaker_four from "./img/events/speaker_4.jpg";
 import speaker_five from "./img/events/speaker_5.jpg";
 
+import challenge_health from "./img/challenge_health.svg";
+import challenge_climate from "./img/challenge_climate.svg";
+import challenge_housing from "./img/challenge_housing.svg";
+
 import involve_header from "./img/involve_header.svg";
 
 import city from "./img/about_city.svg";
@@ -39,6 +43,12 @@ import expert from "./img/involve_volunteer.svg";
 import innovator from "./img/involve_innovate.svg";
 import mail from "./img/involve_mail.svg";
 import feedback from "./img/involve_feedback.svg";
+
+import summitImage from "./img/d4sd-summit.png";
+import donNorman from "./img/don-norman.png";
+import srini from "./img/srini.png";
+import barbara from "./img/barbara.png";
+
 //
 // import discover from "./img/timeline_discover.svg";
 // import ideate from "./img/timeline_ideate.svg";
@@ -1410,18 +1420,24 @@ export const eventsContent = {
       {
         name: "Civic Design Speaker Series",
         start_date: "Jan 21 - Mar 3",
+        image: challenge_climate,
+        ref: "speakers",
         description:
           "Local experts shared knowledge on a range of civic issues such as mobility, urban planning, and transportation technology."
       },
       {
         name: "Design Jams",
         start_date: "Apr 10 - May 1",
+        image: challenge_health,
+        ref: "designJam",
         description:
           "Concerned citizens gathered weekly to practice human-centered design through virtual workshops focused on the new challenges created by COVID-19."
       },
       {
         name: "2020 Summit",
         start_date: "May 15",
+        image: challenge_housing,
+        ref: "summit",
         description:
           "Our local community came together virtually to share proposals and to build alliances around complex challenges facing San Diego."
       }
@@ -1670,7 +1686,8 @@ export const eventsContent = {
   },
   summit: {
     title: "2020 Summit",
-    info: `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`
+    info: `The May 15 2020 “Design for San Diego” Summit was an online, interactive showcase and discussion about how to make a more sustainable San Diego. Over 175 people attended as observers, facilitators, subject-matter experts, concerned citizens, and as civic innovators to address urgent public issues related to health, mobility, housing and the environment. A total of <a href="/proposals"> 33 teams </a> proposed solutions and several were recognized for great storytelling, for potential impact, and for demonstrating human-centered design.`,
+    images: [donNorman, barbara, srini, summitImage]
   }
 };
 
