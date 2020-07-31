@@ -5,6 +5,7 @@ import Footer from "../../Footer";
 import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
 import d4sdSummit from '../../../assets/img/d4sd-summit.png';
+import d4sdMural from '../../../assets/img/designjam-mural.png';
 import "./style.less";
 
 const EventsLayout = (): JSX.Element => {
@@ -92,6 +93,7 @@ const EventsLayout = (): JSX.Element => {
             );
           })}
         </div>
+        <img src={d4sdMural} className="mural-img" />
       </div>
       <div className="speakers" id="summit-2020">
         <div className="container">
