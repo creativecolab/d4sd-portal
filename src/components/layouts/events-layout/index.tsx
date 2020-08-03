@@ -54,11 +54,11 @@ const EventsLayout = (): JSX.Element => {
         <div className="container">
           <h2>{eventsContent.summary.title}</h2>
           <p>{eventsContent.summary.info}</p>
-          <Row justify="center">
+          <Row justify="center" type="flex">
             {eventsContent.summary.events.map(event => {
               return (
                 <Col
-                  xs={8}
+                  xs={6}
                   className="events"
                   onClick={(): void => scrollTo(event.ref)}
                 >

@@ -49,6 +49,10 @@ import donNorman from "./img/don-norman.png";
 import srini from "./img/srini.png";
 import barbara from "./img/barbara.png";
 
+import speakerIcon from "./img/speaker-icon.svg";
+import designJamIcon from "./img/design-jam-icon.svg";
+import summitIcon from "./img/summit-icon.svg";
+
 //
 // import discover from "./img/timeline_discover.svg";
 // import ideate from "./img/timeline_ideate.svg";
@@ -1417,9 +1421,9 @@ export const eventsContent = {
       "D4SD 2020 included a series of events that brought together our community to address civic challenges through human-centered design. Our primary events for 2020 included:",
     events: [
       {
-        name: "Civic Design Speaker Series",
+        name: "Speaker Series",
         start_date: "Jan 21 - Mar 3",
-        image: challenge_climate,
+        image: speakerIcon,
         ref: "speakers",
         description:
           "Local experts shared knowledge on a range of civic issues such as mobility, urban planning, and transportation technology."
@@ -1427,7 +1431,7 @@ export const eventsContent = {
       {
         name: "Design Jams",
         start_date: "Apr 10 - May 1",
-        image: challenge_health,
+        image: designJamIcon,
         ref: "designJam",
         description:
           "Concerned citizens gathered weekly to practice human-centered design through virtual workshops focused on the new challenges created by COVID-19."
@@ -1435,7 +1439,7 @@ export const eventsContent = {
       {
         name: "2020 Summit",
         start_date: "May 15",
-        image: challenge_housing,
+        image: summitIcon,
         ref: "summit",
         description:
           "Our local community came together virtually to share proposals and to build alliances around complex challenges facing San Diego."
