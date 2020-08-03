@@ -1458,7 +1458,7 @@ export const eventsContent = {
           {
             name: "Brian McInnis",
             linkedin: "https://www.linkedin.com/in/brian-mcinnis-4872399/",
-            from: "UCSD"
+            from: "UCSD Design Lab"
           }
         ]
       },
@@ -1494,7 +1494,7 @@ export const eventsContent = {
             name: "Colleen Emmenegger",
             linkedin:
               "https://www.linkedin.com/in/colleen-emmenegger-6722b8a1/",
-            from: "Design Lab"
+            from: "UCSD Design Lab"
           }
         ]
       },
@@ -1505,7 +1505,7 @@ export const eventsContent = {
           {
             name: "Steve MacNeil",
             linkedin: "https://www.linkedin.com/in/stevemacn1/",
-            from: "UCSD"
+            from: "UCSD Design Lab"
           },
           {
             name: "Josh Kavanagh",
@@ -1540,7 +1540,7 @@ export const eventsContent = {
           {
             name: 'Kevin "The Idea Guy" Popovic',
             linkedin: "https://www.linkedin.com/in/kevinpopovic/",
-            from: "The Idea Guy"
+            from: ""
           },
           {
             name: "Laura Spencer",
