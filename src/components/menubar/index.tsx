@@ -33,6 +33,12 @@ const Menubar = (): JSX.Element => {
 
   useEffect(() => {
     switch (`/${rootPath(history.location.pathname)}`) {
+      case "/proposals":
+        setTab(["proposals"]);
+        break;
+      case "/events":
+        setTab(["events"]);
+        break;
       case "/challenges":
         setTab(["challenges"]);
         break;
