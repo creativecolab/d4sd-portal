@@ -4,8 +4,9 @@ import Header from "../../Header/index";
 import Footer from "../../Footer";
 import { Link, useHistory } from "react-router-dom";
 import { eventsContent } from "../../../assets/content";
-import d4sdMural from "../../../assets/img/designjam-mural.png";
+import d4sdMural from "../../../assets/img/designJamMural.png";
 import "./style.less";
+import designJamZoom from "../../../assets/img/design-jam-zoom.jpg";
 import { any } from "prop-types";
 
 const EventsLayout = (): JSX.Element => {
@@ -52,13 +53,12 @@ const EventsLayout = (): JSX.Element => {
       />
       <div className="events-summary">
         <div className="container">
-          <h2>{eventsContent.summary.title}</h2>
-          <p>{eventsContent.summary.info}</p>
-          <Row justify="center">
+          <Row justify="center" type="flex">
             {eventsContent.summary.events.map(event => {
               return (
                 <Col
                   xs={8}
+                  md={6}
                   className="events"
                   onClick={(): void => scrollTo(event.ref)}
                 >
@@ -86,26 +86,30 @@ const EventsLayout = (): JSX.Element => {
               var len = guest.content.length - 1;
               return (
                 <div className="guest-content">
-                  <p>
-                    • {guest.date.toUpperCase()} :{" "}
-                    <span>
-                      {guest.content.map((guest, index) => {
-                        var delimiter = "";
-                        if (index === len) {
-                          delimiter = ".";
-                        } else {
-                          delimiter = ", ";
-                        }
-                        return (
-                          <>
-                            <a href={guest.linkedin}>{guest.name}</a> {"from"}{" "}
-                            {guest.from}
-                            {delimiter}
-                          </>
-                        );
-                      })}
-                    </span>
-                  </p>
+                  <Row>
+                    <Col xs={6} md={4}>
+                      <p>• {guest.date.toUpperCase()} </p>
+                    </Col>
+                    <Col xs={18} md={20}>
+                      <p>
+                        {guest.content.map((guest, index) => {
+                          var delimiter = "";
+                          if (index === len) {
+                            delimiter = ".";
+                          } else {
+                            delimiter = ", ";
+                          }
+                          return (
+                            <>
+                              <a href={guest.linkedin}>{guest.name}</a>
+                              {guest.from && <> ({guest.from})</>}
+                              {delimiter}{" "}
+                            </>
+                          );
+                        })}
+                      </p>
+                    </Col>
+                  </Row>
                 </div>
               );
             })}

@@ -49,30 +49,26 @@ const HomeLayout = (): JSX.Element => {
 
   const SummitBanner = (): JSX.Element => (
     <div className="summit-banner">
-      <div className="information">
-        <div className="summit-event">
-          <div className="date">
+      {/* <div className="information">
+        <div className="summit-event"> */}
+      {/* <div className="date">
             <p>
               {homeContent.summit_banner.date.toDateString().substring(4, 7)}
             </p>
             <h1>{homeContent.summit_banner.date.getDate()}</h1>
-          </div>
-          <div className="title">
+          </div> */}
+      {/* <div className="title">
             <h1>{homeContent.summit_banner.title}</h1>
             <h5>{homeContent.summit_banner.location}</h5>
-          </div>
-        </div>
-      </div>
+          </div> */}
+      {/* </div>
+      </div> */}
       <div className="action-buttons">
-        <a
-          href="https://www.eventbrite.com/e/design-for-san-diego-d4sd-online-summit-tickets-103272954186"
-          className="button-container"
-          target="_blank"
-        >
+        <div className="button-container" onClick={(): void => scrollToRef()}>
           <Button type="primary" size="medium" className="button learn-more">
-            REGISTER
+            LEARN MORE
           </Button>
-        </a>
+        </div>
         <a
           href="http://eepurl.com/c2kFon"
           target="_blank"
