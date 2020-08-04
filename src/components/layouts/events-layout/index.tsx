@@ -58,7 +58,7 @@ const EventsLayout = (): JSX.Element => {
               return (
                 <Col
                   xs={8}
-                  md={6}
+                  md={7}
                   className="events"
                   onClick={(): void => scrollTo(event.ref)}
                 >
@@ -87,10 +87,10 @@ const EventsLayout = (): JSX.Element => {
               return (
                 <div className="guest-content">
                   <Row>
-                    <Col xs={6} md={4}>
+                    <Col xs={6} md={3}>
                       <p>• {guest.date.toUpperCase()} </p>
                     </Col>
-                    <Col xs={18} md={20}>
+                    <Col xs={18} md={21}>
                       <p>
                         {guest.content.map((guest, index) => {
                           var delimiter = "";
@@ -125,16 +125,27 @@ const EventsLayout = (): JSX.Element => {
         <div className="container">
           <h2>{eventsContent.design_jam.title}</h2>
           <p>{eventsContent.design_jam.info}</p>
+
           {eventsContent.design_jam.dates.map(event => {
             return (
-              <p>
-                •{" "}
-                <a href={event.link} target="_blank">
-                  {event.date.toUpperCase()}
-                </a>{" "}
-                {" : "}
-                {event.description}
-              </p>
+              <Row>
+                <Col xs={6} md={3}>
+                  <p>• {event.date.toUpperCase()} </p>
+                </Col>
+                <Col xs={18} md={21}>
+                  <p>
+                    <a href={event.link} target="_blank">
+                      {event.description.substr(
+                        0,
+                        event.description.indexOf(":")
+                      )}
+                    </a>
+                    {event.description.substr(
+                      event.description.indexOf(":") + 1
+                    )}
+                  </p>
+                </Col>
+              </Row>
             );
           })}
         </div>
