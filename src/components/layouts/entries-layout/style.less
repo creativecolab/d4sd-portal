@@ -6,19 +6,26 @@
   h2 {
     color: @d4sd-color-two;
   }
+  margin-bottom: @margin-base-1;
 }
 
-.entryCards {
-  margin-top: @margin-base-1;
+.entryCards,
+.entryMeta {
+  margin-top: @margin-base-1 / 2;
   text-align: left;
   margin-bottom: @margin-base-1;
+  display: inline-block;
+  vertical-align: middle;
 
   .entryDiv {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     h4 {
-      padding-top: @margin-base-1;
+      color: black;
+    }
+
+    h4:hover{
       color: @d4sd-color;
     }
     h5 {
@@ -41,5 +48,13 @@
     .featuredImage:hover {
       transform: scale(0.95);
     }
+  }
+}
+.entryMeta {
+  .entryDiv {
+    width: 100%;
+  }
+  .projectDescription {
+    font-size: 1.8rem;
   }
 }

@@ -69,6 +69,9 @@ const Menubar = (): JSX.Element => {
       case "/workspace":
         setTab(["workspace"]);
         break;
+      case "/proposals":
+        setTab(["proposals"]);
+        break;
       default:
         setTab([""]);
     }

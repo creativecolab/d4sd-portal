@@ -113,6 +113,7 @@ import boreas_solution from "./img/entries/boreas-solution.png";
 import revolutionary_shores from "./img/entries/revolutionary-shores.png";
 import shaping_canyon from "./img/entries/sage-canyon.png";
 import carbon_capture from "./img/entries/carbon-capture.png";
+import aegis from './img/entries/aegis.png';
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -1678,7 +1679,7 @@ export const entriesContent = {
   title: "Entries",
   image: "attend_header",
   subInfo:
-    "Congratulations to the 2020 D4SD Finalists! This year, we had 36 entries. We selected finalists that represent a mix of our 4 challenge briefs, namely, Creating safe and sustainable mobility options, promoting wellness amid COVID-19, fostering connecting and community support and imagining pathways towards re-entry.",
+    "Congratulations to all 2020 D4SD participants! Out of 33 proposals, the D4SD team selected 6 finalists that exemplify great storytelling, potential for impact, and human-centered processes. An additional three proposals were selected by the D4SD community as the “people’s choice” awards. Congratulations on advancing ideas that could make San Diego a more sustainable region.",
   compelling_storytelling: [
     {
       projectName: "Helpr",
@@ -1722,7 +1723,7 @@ export const entriesContent = {
   human_centered_design_process: [
     {
       projectName: "Idle Reminder",
-      members: "Stephen Cerruti, Nancy R, Alberto P, Symphony J, Uriel H",
+      members: "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
       featuredImage: idle_reminder,
@@ -1761,7 +1762,7 @@ export const entriesContent = {
     {
       projectName: "THRIVE : San Diego",
       members:
-        "Ben Brin, Bryan (Sage) Rill, PhD,  Lisa Grega, Gurucharan Khalsa, PhD, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
+        "Ben Brin, Bryan (Sage) Rill,  Lisa Grega, Gurucharan Khalsa, Kanupriya Yakhmi, Tofer Merritt, Mara Bosnak, Lingye (Juliet) Zhuang",
       projectDescription:
         "How might we help San Diego businesses and citizens survive & thrive during COVID?",
       featuredImage: thrive,
@@ -1791,7 +1792,7 @@ export const entriesContent = {
     },
     {
       projectName: "FLM Commuter Service CABR",
-      members: "Connor Burkesmith; Alex Rusu",
+      members: "Connor Burkesmith, Alex Rusu",
       projectDescription:
         "How might we increase use of current transportation infrastructure while meeting individuals needs for convenience and varying wants and needs?",
       featuredImage: flm_commuter,
@@ -1830,7 +1831,7 @@ export const entriesContent = {
       members: "Marlow Perdomo",
       projectDescription:
         "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
-      featuredImage: assyt,
+      featuredImage: aegis,
       projectLink:
         "https://drive.google.com/open?id=15IGSZol9CrKSyn4BtI3u02kHxbC1pxmy"
     },
@@ -1856,7 +1857,7 @@ export const entriesContent = {
     },
     {
       projectName: "Saving Shellfish",
-      members: " Hidali Lomeli; Alana Hao; Lillian CJ; Leilanie Quezada",
+      members: " Hidali Lomeli, Alana Hao, Lillian CJ, Leilanie Quezada",
       projectDescription:
         "How might we help shellfish farmers harvest and prevent diseases and toxins from entering into sea life in San Diego?",
       featuredImage: saving_shellfish,
@@ -1956,7 +1957,7 @@ export const entriesContent = {
     },
     {
       projectName: "Boreas Solution Inc",
-      members: "Dalila, Andrew, Alejandro, Johny, Robin",
+      members: "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
       projectDescription:
         "How might we make breathing and everyday life easier when wildfires pollue the air?",
       featuredImage: boreas_solution,
