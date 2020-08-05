@@ -1536,11 +1536,6 @@ export const eventsContent = {
             name: 'Bryan "Sage" Rill',
             linkedin: "",
             from: ""
-          },
-          {
-            name: "Jennifer Taylor",
-            linkedin: "https://www.linkedin.com/in/jennifer-constance-taylor/",
-            from: "UCSD Design Lab"
           }
         ]
       },
