@@ -1,13 +1,11 @@
-import React from 'react';
-import {
-  Row, Col, Card, Avatar
-} from '@d4sd/components';
-import Header from '../../Header/index';
-import Footer from '../../Footer/index';
-import '../../../styles/containers.less';
-import './style.less';
-import { aboutContent } from '../../../assets/content';
-import AboutDiagram from '../../../assets/img/about_diagram.png';
+import React from "react";
+import { Row, Col, Card, Avatar } from "@d4sd/components";
+import Header from "../../Header/index";
+import Footer from "../../Footer/index";
+import "../../../styles/containers.less";
+import "./style.less";
+import { aboutContent } from "../../../assets/content";
+import AboutDiagram from "../../../assets/img/about_diagram.png";
 
 const { Meta } = Card;
 const AboutLayout = (): JSX.Element => (
@@ -23,39 +21,22 @@ const AboutLayout = (): JSX.Element => (
         {/* eslint-disable-next-line */}
         <p dangerouslySetInnerHTML={{ __html: aboutContent.content2 }} />
       </div>
-      <img
-        src={AboutDiagram}
-        style={{ width: '100%' }}
-        alt="about-diagram"
-      />
+      <img src={AboutDiagram} style={{ width: "100%" }} alt="about-diagram" />
     </div>
     <br />
     <br />
     <br />
     <br />
-    <div style={{ backgroundColor: '#F0F8FF' }}>
+    <div style={{ backgroundColor: "#F0F8FF" }}>
       <div className="container">
         <div className="paragraph">
           <h2>{aboutContent.title3}</h2>
         </div>
-        <Row
-          type="flex"
-          gutter={[16, 16]}
-          justify="center"
-        >
-          {aboutContent.content3.map((content) => (
-            <Col
-              xs={{ span: 20 }}
-              lg={{ span: 11 }}
-              key={`${content.key}_Col`}
-            >
+        <Row type="flex" gutter={[16, 16]} justify="center">
+          {aboutContent.content3.map(content => (
+            <Col xs={{ span: 20 }} lg={{ span: 11 }} key={`${content.key}_Col`}>
               <Meta
-                avatar={(
-                  <Avatar
-                    src={content.img}
-                    className="aboutavatar"
-                  />
-                )}
+                avatar={<Avatar src={content.img} className="aboutavatar" />}
                 description={content.txt}
               />
             </Col>
@@ -66,6 +47,10 @@ const AboutLayout = (): JSX.Element => (
       <br />
       <br />
       <br />
+    </div>
+
+    <div className="container">
+      <h2>Meet The Team</h2>
     </div>
 
     <Footer />

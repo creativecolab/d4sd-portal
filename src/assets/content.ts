@@ -113,7 +113,7 @@ import boreas_solution from "./img/entries/boreas-solution.png";
 import revolutionary_shores from "./img/entries/revolutionary-shores.png";
 import shaping_canyon from "./img/entries/sage-canyon.png";
 import carbon_capture from "./img/entries/carbon-capture.png";
-import aegis from './img/entries/aegis.png';
+import aegis from "./img/entries/aegis.png";
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -288,6 +288,77 @@ export const aboutContent = {
         "To collaboratively explore a range of civic problems that the San Diego region faces.",
       img: find,
       key: "find"
+    }
+  ],
+  team: [
+    {
+      heading: "D4SD Organisers",
+      members: [
+        "Steven Dow",
+        "Steven McNeil",
+        "Michèle Morris",
+        "Jennifer Taylor",
+        "Eric Hekler",
+        "Brain McInnis"
+      ]
+    },
+    {
+      heading: "D4SD Team",
+      members: [
+        "Brendan Jew",
+        "Kylee Peng",
+        "Ben Gibbs",
+        "Christal Vo",
+        "Chenyang (Dawn) Ye",
+        "Boya Ren",
+        "Hedy Wang",
+        "Lee Liang",
+        "Stone Tao",
+        "Paridhi Khaitan",
+        "Yuhan Wang",
+        "Stanley Lee",
+        "Lu Sun",
+        "Martin Magsombol",
+        "Natalie Duprey",
+        "Eric Richards",
+        "Bryce Grubbs",
+        "Enrique Arcilla",
+        "Jason Ding",
+        "Julie Fung",
+        "Jonathan Funes"
+      ]
+    },
+    {
+      heading: "D4SD Facilitators",
+      team: [
+        "Ken Soto",
+        "Brian McInnis",
+        "Kevin Popovic",
+        "Steve McNeil",
+        "Erik Hekler",
+        "Jennifer Taylor",
+        "Bryan Rill",
+        "Ben Gibbs",
+        "Laura Spencer",
+        "Paula Intravaia"
+      ]
+    },
+    {
+      heading: "D4SD Invited Speakers",
+      team: [
+        "Srini Srinivasan",
+        "Antoinette Meier",
+        "David Malmuth",
+        "Pete Garcia",
+        "Daniel Obodovski",
+        "Bennett Peiji",
+        "Damon Deaner",
+        "Bahija Humphrey",
+        "Daniel Suh",
+        "MaeLine Levine",
+        "Stacy Kelley",
+        "Gabe Miller"
+      ]
     }
   ]
 };
@@ -1723,7 +1794,8 @@ export const entriesContent = {
   human_centered_design_process: [
     {
       projectName: "Idle Reminder",
-      members: "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
+      members:
+        "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
       featuredImage: idle_reminder,
@@ -1957,7 +2029,8 @@ export const entriesContent = {
     },
     {
       projectName: "Boreas Solution Inc",
-      members: "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
+      members:
+        "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
       projectDescription:
         "How might we make breathing and everyday life easier when wildfires pollue the air?",
       featuredImage: boreas_solution,
