@@ -46,10 +46,9 @@ const EntriesLayout = (): JSX.Element => (
       <div className="project_section">
         <h2>D4SD Summit Award for Compelling Storytelling</h2>
         <p className="award-description">
-          The D4SD team rewarded these two projects for crafting compelling
-          stories about how the proposed solutions can impact everyday people,
-          especially transportation workers and small businesses affected by
-          COVID-19.
+          The D4SD team recognized these two projects for their ability to craft
+          compelling design stories about how their proposed solutions address
+          the problem and support real people.
         </p>
         <Row align="center">
           {entriesContent.compelling_storytelling.map(project => (
