@@ -44,6 +44,18 @@ import innovator from "./img/involve_innovate.svg";
 import mail from "./img/involve_mail.svg";
 import feedback from "./img/involve_feedback.svg";
 
+import educator1 from "./img/educators/ucsd.png";
+import educator2 from "./img/educators/engage.png";
+import educator3 from "./img/educators/alt.png";
+import educator4 from "./img/educators/baton.png";
+import educator5 from "./img/educators/dc.png";
+import educator6 from "./img/educators/id8.png";
+import educator7 from "./img/educators/sdcc.png";
+import educator8 from "./img/educators/sdsu.jpg";
+import educator9 from "./img/educators/urban.png";
+import educator10 from "./img/educators/usd.png";
+import educator11 from "./img/educators/country.png";
+
 import summitImage from "./img/d4sd-summit.png";
 import donNorman from "./img/don-norman.png";
 import srini from "./img/srini.png";
@@ -113,7 +125,7 @@ import boreas_solution from "./img/entries/boreas-solution.png";
 import revolutionary_shores from "./img/entries/revolutionary-shores.png";
 import shaping_canyon from "./img/entries/sage-canyon.png";
 import carbon_capture from "./img/entries/carbon-capture.png";
-import aegis from './img/entries/aegis.png';
+import aegis from "./img/entries/aegis.png";
 
 /** ***********************************Home content************************************** */
 export const homeContent = {
@@ -289,6 +301,90 @@ export const aboutContent = {
       img: find,
       key: "find"
     }
+  ],
+  team: [
+    {
+      heading: "D4SD Organisers",
+      members: [
+        "Steven Dow",
+        "Steven McNeil",
+        "Michèle Morris",
+        "Jennifer Taylor",
+        "Eric Hekler",
+        "Brain McInnis"
+      ]
+    },
+    {
+      heading: "D4SD Team",
+      members: [
+        "Brendan Jew",
+        "Kylee Peng",
+        "Ben Gibbs",
+        "Christal Vo",
+        "Chenyang (Dawn) Ye",
+        "Boya Ren",
+        "Hedy Wang",
+        "Lee Liang",
+        "Stone Tao",
+        "Paridhi Khaitan",
+        "Yuhan Wang",
+        "Stanley Lee",
+        "Lu Sun",
+        "Martin Magsombol",
+        "Natalie Duprey",
+        "Eric Richards",
+        "Bryce Grubbs",
+        "Enrique Arcilla",
+        "Jason Ding",
+        "Julie Fung",
+        "Jonathan Funes"
+      ]
+    },
+    {
+      heading: "D4SD Facilitators",
+      members: [
+        "Ken Soto",
+        "Brian McInnis",
+        "Kevin Popovic",
+        "Steve McNeil",
+        "Erik Hekler",
+        "Jennifer Taylor",
+        "Bryan Rill",
+        "Ben Gibbs",
+        "Laura Spencer",
+        "Paula Intravaia"
+      ]
+    },
+    {
+      heading: "D4SD Invited Speakers",
+      members: [
+        "Srini Srinivasan",
+        "Antoinette Meier",
+        "David Malmuth",
+        "Pete Garcia",
+        "Daniel Obodovski",
+        "Bennett Peiji",
+        "Damon Deaner",
+        "Bahija Humphrey",
+        "Daniel Suh",
+        "MaeLine Levine",
+        "Stacy Kelley",
+        "Gabe Miller"
+      ]
+    }
+  ],
+  educators: [
+    educator1,
+    educator2,
+    educator3,
+    educator4,
+    educator5,
+    educator6,
+    educator7,
+    educator8,
+    educator9,
+    educator10,
+    educator11
   ]
 };
 
@@ -1676,7 +1772,7 @@ export const eventsContent = {
 };
 
 export const entriesContent = {
-  title: "Proposals",
+  title: "Entries",
   image: "proposal_header",
   subInfo:
     "Congratulations to all 2020 D4SD participants! Out of 33 proposals, the D4SD team selected 6 finalists that exemplify great storytelling, potential for impact, and human-centered processes. An additional three proposals were selected by the D4SD community as the “people’s choice” awards. Congratulations on advancing ideas that could make San Diego a more sustainable region.",
@@ -1723,7 +1819,8 @@ export const entriesContent = {
   human_centered_design_process: [
     {
       projectName: "Idle Reminder",
-      members: "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
+      members:
+        "Stephen Cerruti, Nancy Reyes, Alberto Bermudez Pineda, Symphony Jackson, Uriel Hermosillo",
       projectDescription:
         "How might we decrease gas emissions in MTS buses while allowing the bus drivers to sustain his/her job?",
       featuredImage: idle_reminder,
@@ -1957,7 +2054,8 @@ export const entriesContent = {
     },
     {
       projectName: "Boreas Solution Inc",
-      members: "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
+      members:
+        "Dalila Martinez, Andrew Ledezma, Alejandro Melendez Burgueno, Johny Briones, Robin Norton-Westbrook",
       projectDescription:
         "How might we make breathing and everyday life easier when wildfires pollue the air?",
       featuredImage: boreas_solution,

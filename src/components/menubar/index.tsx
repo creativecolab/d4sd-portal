@@ -33,8 +33,8 @@ const Menubar = (): JSX.Element => {
 
   useEffect(() => {
     switch (`/${rootPath(history.location.pathname)}`) {
-      case "/proposals":
-        setTab(["proposals"]);
+      case "/entries":
+        setTab(["entries"]);
         break;
       case "/events":
         setTab(["events"]);
@@ -69,8 +69,8 @@ const Menubar = (): JSX.Element => {
       case "/workspace":
         setTab(["workspace"]);
         break;
-      case "/proposals":
-        setTab(["proposals"]);
+      case "/entries":
+        setTab(["entries"]);
         break;
       default:
         setTab([""]);
@@ -110,9 +110,9 @@ const Menubar = (): JSX.Element => {
             >
               <Menu.Item
                 className="mobile-menu-item"
-                onClick={(): void => history.push("/proposals")}
+                onClick={(): void => history.push("/entries")}
               >
-                <span>Proposals</span>
+                <span>Entries</span>
               </Menu.Item>
               <Menu.Item
                 className="mobile-menu-item"
@@ -196,10 +196,10 @@ const Menubar = (): JSX.Element => {
             <div className="emptybar" />
             <Menu.Item
               className="menu-item"
-              key="proposals"
-              onClick={(): void => history.push("/proposals")}
+              key="entries"
+              onClick={(): void => history.push("/entries")}
             >
-              <span>Proposals</span>
+              <span>Entries</span>
             </Menu.Item>
             <Menu.Item
               className="menu-item"
