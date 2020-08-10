@@ -44,6 +44,18 @@ import innovator from "./img/involve_innovate.svg";
 import mail from "./img/involve_mail.svg";
 import feedback from "./img/involve_feedback.svg";
 
+import educator1 from "./img/educators/ucsd.png";
+import educator2 from "./img/educators/engage.png";
+import educator3 from "./img/educators/alt.png";
+import educator4 from "./img/educators/baton.png";
+import educator5 from "./img/educators/dc.png";
+import educator6 from "./img/educators/id8.png";
+import educator7 from "./img/educators/sdcc.png";
+import educator8 from "./img/educators/sdsu.jpg";
+import educator9 from "./img/educators/urban.png";
+import educator10 from "./img/educators/usd.png";
+import educator11 from "./img/educators/country.png";
+
 import summitImage from "./img/d4sd-summit.png";
 import donNorman from "./img/don-norman.png";
 import srini from "./img/srini.png";
@@ -360,6 +372,19 @@ export const aboutContent = {
         "Gabe Miller"
       ]
     }
+  ],
+  educators: [
+    educator1,
+    educator2,
+    educator3,
+    educator4,
+    educator5,
+    educator6,
+    educator7,
+    educator8,
+    educator9,
+    educator10,
+    educator11
   ]
 };
 
