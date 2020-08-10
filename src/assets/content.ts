@@ -330,7 +330,7 @@ export const aboutContent = {
     },
     {
       heading: "D4SD Facilitators",
-      team: [
+      members: [
         "Ken Soto",
         "Brian McInnis",
         "Kevin Popovic",
@@ -345,7 +345,7 @@ export const aboutContent = {
     },
     {
       heading: "D4SD Invited Speakers",
-      team: [
+      members: [
         "Srini Srinivasan",
         "Antoinette Meier",
         "David Malmuth",

@@ -49,8 +49,24 @@ const AboutLayout = (): JSX.Element => (
       <br />
     </div>
 
-    <div className="container">
+    <div className="container team">
       <h2>Meet The Team</h2>
+      {aboutContent.team.map((team, i) => {
+        return (
+          <>
+            <h2 className="heading">{team.heading}</h2>
+            <Row justify="center" type="flex">
+              {team.members.map(member => {
+                return (
+                  <Col md={8} xs={24} sm={12}>
+                    <p style={{ textAlign: "center" }}>{member}</p>
+                  </Col>
+                );
+              })}
+            </Row>
+          </>
+        );
+      })}
     </div>
 
     <Footer />
