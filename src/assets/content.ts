@@ -307,10 +307,10 @@ export const aboutContent = {
       heading: "D4SD Organisers",
       members: [
         "Steven Dow",
-        "Steven McNeil",
-        "Michèle Morris",
-        "Jennifer Taylor",
         "Eric Hekler",
+        "Michèle Morris",
+        "Steven McNeil",
+        "Jennifer Taylor",
         "Brain McInnis"
       ]
     },
@@ -344,11 +344,8 @@ export const aboutContent = {
       heading: "D4SD Facilitators",
       members: [
         "Ken Soto",
-        "Brian McInnis",
         "Kevin Popovic",
-        "Steve McNeil",
         "Erik Hekler",
-        "Jennifer Taylor",
         "Bryan Rill",
         "Ben Gibbs",
         "Laura Spencer",
