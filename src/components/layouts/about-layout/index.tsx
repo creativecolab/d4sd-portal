@@ -9,18 +9,27 @@ import AboutDiagram from "../../../assets/img/about_diagram.png";
 import { any } from "prop-types";
 
 const { Meta } = Card;
-// var allSpeakers:string = [];
-// allSpeakers.concat(
-//   eventsContent.speaker.series.map(event => {
-//     let currentSpeakers = event.content.map(member => {
-//       return member.name;
-//     });
-//     console.log([...currentSpeakers]);
-//     return currentSpeakers[0] + ["nameIsParidhi"];
-//   })
-// );
 
-console.log(allSpeakers);
+let allSpeakers: Array<String> = [
+  "Srini Srinivasan",
+  "David Malmuth",
+  "Pete Garcia",
+  "Daniel Obodovski",
+  "Bennett Peiji",
+  "Damon Deaner",
+  "Bahija Humphrey",
+  "Daniel Suh",
+  "MaeLine Levine",
+  "Stacy Kelley",
+  "Gabe Miller"
+];
+
+eventsContent.speaker.series.forEach(event => {
+  event.content.forEach(member => {
+    allSpeakers.push(member.name);
+    return member.name;
+  });
+});
 
 const AboutLayout = (): JSX.Element => (
   <div className="AboutLayout">
@@ -90,6 +99,18 @@ const AboutLayout = (): JSX.Element => (
           </>
         );
       })}
+      <div>
+        <h2 className="heading">D4SD Invited Speakers</h2>
+        <Row type="flex" justify="center" align="middle">
+          {allSpeakers.sort().map(member => {
+            return (
+              <Col md={8} xs={24} sm={12}>
+                <p style={{ textAlign: "center" }}>{member}</p>
+              </Col>
+            );
+          })}
+        </Row>
+      </div>
       <div>
         <h2 className="heading">D4SD Educators</h2>
         <Row type="flex" justify="center" align="middle">
