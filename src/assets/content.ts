@@ -304,14 +304,14 @@ export const aboutContent = {
   ],
   team: [
     {
-      heading: "D4SD Organisers",
+      heading: "D4SD Organizers",
       members: [
         "Steven Dow",
-        "Steven McNeil",
-        "Michèle Morris",
-        "Jennifer Taylor",
         "Eric Hekler",
-        "Brain McInnis"
+        "Michèle Morris",
+        "Steven McNeil",
+        "Jennifer Taylor",
+        "Brian McInnis"
       ]
     },
     {
@@ -344,32 +344,12 @@ export const aboutContent = {
       heading: "D4SD Facilitators",
       members: [
         "Ken Soto",
-        "Brian McInnis",
         "Kevin Popovic",
-        "Steve McNeil",
         "Erik Hekler",
-        "Jennifer Taylor",
         "Bryan Rill",
         "Ben Gibbs",
         "Laura Spencer",
         "Paula Intravaia"
-      ]
-    },
-    {
-      heading: "D4SD Invited Speakers",
-      members: [
-        "Srini Srinivasan",
-        "Antoinette Meier",
-        "David Malmuth",
-        "Pete Garcia",
-        "Daniel Obodovski",
-        "Bennett Peiji",
-        "Damon Deaner",
-        "Bahija Humphrey",
-        "Daniel Suh",
-        "MaeLine Levine",
-        "Stacy Kelley",
-        "Gabe Miller"
       ]
     }
   ],

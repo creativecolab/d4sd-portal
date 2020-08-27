@@ -4,10 +4,33 @@ import Header from "../../Header/index";
 import Footer from "../../Footer/index";
 import "../../../styles/containers.less";
 import "./style.less";
-import { aboutContent } from "../../../assets/content";
+import { aboutContent, eventsContent } from "../../../assets/content";
 import AboutDiagram from "../../../assets/img/about_diagram.png";
+import { any } from "prop-types";
 
 const { Meta } = Card;
+
+let allSpeakers: Array<String> = [
+  "Srini Srinivasan",
+  "David Malmuth",
+  "Pete Garcia",
+  "Daniel Obodovski",
+  "Bennett Peiji",
+  "Damon Deaner",
+  "Bahija Humphrey",
+  "Daniel Suh",
+  "MaeLine Levine",
+  "Stacy Kelley",
+  "Gabe Miller"
+];
+
+eventsContent.speaker.series.forEach(event => {
+  event.content.forEach(member => {
+    allSpeakers.push(member.name);
+    return member.name;
+  });
+});
+
 const AboutLayout = (): JSX.Element => (
   <div className="AboutLayout">
     <Header
@@ -56,19 +79,40 @@ const AboutLayout = (): JSX.Element => (
           <>
             <h2 className="heading">{team.heading}</h2>
             <Row justify="center" type="flex">
-              {team.members.map(member => {
-                return (
-                  <Col md={8} xs={24} sm={12} key={member}>
-                    <p style={{ textAlign: "center" }}>{member}</p>
-                  </Col>
-                );
-              })}
+              {i === 0 &&
+                team.members.map(member => {
+                  return (
+                    <Col md={8} xs={24} sm={12} key={member}>
+                      <p style={{ textAlign: "center" }}>{member}</p>
+                    </Col>
+                  );
+                })}
+              {i > 0 &&
+                team.members.sort().map(member => {
+                  return (
+                    <Col md={8} xs={24} sm={12} key={member}>
+                      <p style={{ textAlign: "center" }}>{member}</p>
+                    </Col>
+                  );
+                })}
             </Row>
           </>
         );
       })}
       <div>
-      <h2 className="heading">D4SD Educators</h2>
+        <h2 className="heading">D4SD Invited Speakers</h2>
+        <Row type="flex" justify="center" align="middle">
+          {allSpeakers.sort().map(member => {
+            return (
+              <Col md={8} xs={24} sm={12}>
+                <p style={{ textAlign: "center" }}>{member}</p>
+              </Col>
+            );
+          })}
+        </Row>
+      </div>
+      <div>
+        <h2 className="heading">D4SD Educators</h2>
         <Row type="flex" justify="center" align="middle">
           {aboutContent.educators.map(educator => {
             return (
