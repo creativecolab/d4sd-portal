@@ -31,6 +31,26 @@ eventsContent.speaker.series.forEach(event => {
   });
 });
 
+const lastNameSort = (a: String, b: String): any => {
+  //split the names as strings into arrays
+  var aName = a.split(" ");
+  var bName = b.split(" ");
+
+  // get the last names by selecting
+  // the last element in the name arrays
+  // using array.length - 1 since full names
+  // may also have a middle name or initial
+  var aLastName = aName[aName.length - 1];
+  var bLastName = bName[bName.length - 1];
+
+  // compare the names and return either
+  // a negative number, positive number
+  // or zero.
+  if (aLastName < bLastName) return -1;
+  if (aLastName > bLastName) return 1;
+  return 0;
+};
+
 const AboutLayout = (): JSX.Element => (
   <div className="AboutLayout">
     <Header
@@ -73,7 +93,7 @@ const AboutLayout = (): JSX.Element => (
     </div>
 
     <div className="container team">
-      <h2>Meet The Team</h2>
+      <h2>Who are the people behind D4SD?</h2>
       {aboutContent.team.map((team, i) => {
         return (
           <>
@@ -88,7 +108,7 @@ const AboutLayout = (): JSX.Element => (
                   );
                 })}
               {i > 0 &&
-                team.members.sort().map(member => {
+                team.members.sort(lastNameSort).map(member => {
                   return (
                     <Col md={8} xs={24} sm={12} key={member}>
                       <p style={{ textAlign: "center" }}>{member}</p>
@@ -102,7 +122,7 @@ const AboutLayout = (): JSX.Element => (
       <div>
         <h2 className="heading">D4SD Invited Speakers</h2>
         <Row type="flex" justify="center" align="middle">
-          {allSpeakers.sort().map(member => {
+          {allSpeakers.sort(lastNameSort).map(member => {
             return (
               <Col md={8} xs={24} sm={12}>
                 <p style={{ textAlign: "center" }}>{member}</p>
