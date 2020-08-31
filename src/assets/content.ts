@@ -345,7 +345,6 @@ export const aboutContent = {
       members: [
         "Ken Soto",
         "Kevin Popovic",
-        "Erik Hekler",
         "Bryan Rill",
         "Ben Gibbs",
         "Laura Spencer",
@@ -1600,7 +1599,7 @@ export const eventsContent = {
         date: "Feb 4",
         content: [
           {
-            name: 'Kevin "The Idea Guy" Popovic',
+            name: 'Kevin Popovic',
             linkedin: "https://www.linkedin.com/in/kevinpopovic/",
             from: ""
           },
@@ -1610,7 +1609,7 @@ export const eventsContent = {
             from: "Elite Academic Academy"
           },
           {
-            name: 'Bryan "Sage" Rill',
+            name: 'Bryan Rill',
             linkedin: "",
             from: ""
           }
