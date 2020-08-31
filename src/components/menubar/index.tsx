@@ -200,23 +200,23 @@ const Menubar = (): JSX.Element => {
               key="challenges"
               onClick={(): void => history.push("/challenges")}
             >
-              <Menu.Item
-                className="menu-item"
-                key="entries"
-                onClick={(): void => history.push("/entries")}
-              >
-                <span>Entries</span>
-              </Menu.Item>
-              <Menu.Item
-                className="menu-item"
-                key="events"
-                onClick={(): void => history.push("/events")}
-              >
-                <span>Events</span>
-              </Menu.Item>
-
               <span>Challenges</span>
             </Menu.Item>
+            <Menu.Item
+              className="menu-item"
+              key="entries"
+              onClick={(): void => history.push("/entries")}
+            >
+              <span>Entries</span>
+            </Menu.Item>
+            <Menu.Item
+              className="menu-item"
+              key="events"
+              onClick={(): void => history.push("/events")}
+            >
+              <span>Events</span>
+            </Menu.Item>
+
             <Menu.Item
               className="menu-item"
               key="resources"
