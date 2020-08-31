@@ -345,7 +345,6 @@ export const aboutContent = {
       members: [
         "Ken Soto",
         "Kevin Popovic",
-        "Erik Hekler",
         "Bryan Rill",
         "Ben Gibbs",
         "Laura Spencer",
