@@ -309,7 +309,7 @@ export const aboutContent = {
         "Steven Dow",
         "Michèle Morris",
         "Eric Hekler",
-        "Steven McNeil",
+        "Steven MacNeil",
         "Jennifer Taylor",
         "Brian McInnis"
       ]
