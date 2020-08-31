@@ -110,6 +110,12 @@ const Menubar = (): JSX.Element => {
             >
               <Menu.Item
                 className="mobile-menu-item"
+                onClick={(): void => history.push("/challenges")}
+              >
+                <span>Challenges</span>
+              </Menu.Item>
+              <Menu.Item
+                className="mobile-menu-item"
                 onClick={(): void => history.push("/entries")}
               >
                 <span>Entries</span>
@@ -120,12 +126,7 @@ const Menubar = (): JSX.Element => {
               >
                 <span>Events</span>
               </Menu.Item>
-              <Menu.Item
-                className="mobile-menu-item"
-                onClick={(): void => history.push("/challenges")}
-              >
-                <span>Challenges</span>
-              </Menu.Item>
+
               <Menu.Item
                 className="mobile-menu-item"
                 onClick={(): void => history.push("/resources")}
@@ -196,23 +197,24 @@ const Menubar = (): JSX.Element => {
             <div className="emptybar" />
             <Menu.Item
               className="menu-item"
-              key="entries"
-              onClick={(): void => history.push("/entries")}
-            >
-              <span>Entries</span>
-            </Menu.Item>
-            <Menu.Item
-              className="menu-item"
-              key="events"
-              onClick={(): void => history.push("/events")}
-            >
-              <span>Events</span>
-            </Menu.Item>
-            <Menu.Item
-              className="menu-item"
               key="challenges"
               onClick={(): void => history.push("/challenges")}
             >
+              <Menu.Item
+                className="menu-item"
+                key="entries"
+                onClick={(): void => history.push("/entries")}
+              >
+                <span>Entries</span>
+              </Menu.Item>
+              <Menu.Item
+                className="menu-item"
+                key="events"
+                onClick={(): void => history.push("/events")}
+              >
+                <span>Events</span>
+              </Menu.Item>
+
               <span>Challenges</span>
             </Menu.Item>
             <Menu.Item

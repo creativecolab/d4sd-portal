@@ -307,8 +307,8 @@ export const aboutContent = {
       heading: "D4SD Organizers",
       members: [
         "Steven Dow",
-        "Eric Hekler",
         "Michèle Morris",
+        "Eric Hekler",
         "Steven McNeil",
         "Jennifer Taylor",
         "Brian McInnis"
