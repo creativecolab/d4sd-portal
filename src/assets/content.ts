@@ -311,7 +311,9 @@ export const aboutContent = {
         "Eric Hekler",
         "Steven MacNeil",
         "Jennifer Taylor",
-        "Brian McInnis"
+        "Brian McInnis",
+        "Laura Spencer",
+        "Damon Deaner"
       ]
     },
     {
@@ -340,17 +342,6 @@ export const aboutContent = {
         "Jonathan Funes"
       ]
     },
-    {
-      heading: "D4SD Facilitators",
-      members: [
-        "Ken Soto",
-        "Kevin Popovic",
-        "Bryan Rill",
-        "Ben Gibbs",
-        "Laura Spencer",
-        "Paula Intravaia"
-      ]
-    }
   ],
   educators: [
     educator1,

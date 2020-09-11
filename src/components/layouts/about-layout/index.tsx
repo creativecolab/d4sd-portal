@@ -21,7 +21,12 @@ let allSpeakers: Array<String> = [
   "Daniel Suh",
   "MaeLine Levine",
   "Stacy Kelley",
-  "Gabe Miller"
+  "Gabe Miller",
+  "Ken Soto",
+  "Kevin Popovic",
+  "Bryan Rill",
+  "Ben Gibbs",
+  "Paula Intravaia"
 ];
 
 eventsContent.speaker.series.forEach(event => {
@@ -120,7 +125,7 @@ const AboutLayout = (): JSX.Element => (
         );
       })}
       <div>
-        <h2 className="heading">D4SD Invited Speakers</h2>
+        <h2 className="heading">D4SD Speakers and Facilitators</h2>
         <Row type="flex" justify="center" align="middle">
           {allSpeakers.sort(lastNameSort).map(member => {
             return (
