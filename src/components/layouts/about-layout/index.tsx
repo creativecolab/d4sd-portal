@@ -25,14 +25,15 @@ let allSpeakers: Array<String> = [
   "Ken Soto",
   "Kevin Popovic",
   "Bryan Rill",
-  "Ben Gibbs",
   "Paula Intravaia"
 ];
 
 eventsContent.speaker.series.forEach(event => {
   event.content.forEach(member => {
-    allSpeakers.push(member.name);
-    return member.name;
+    if (member.name != "Laura Spencer"){
+      allSpeakers.push(member.name);
+      return member.name;
+    }
   });
 });
 
