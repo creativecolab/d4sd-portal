@@ -1,6 +1,6 @@
-@import '../../../styles/vars.less';
-@import '../../../styles/mixins.less';
-@import '../../../styles/fonts.less';
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+@import "../../../styles/fonts.less";
 .AboutLayout {
   .aboutavatar {
     @media screen and (max-width: @sm) {
@@ -22,12 +22,30 @@
   }
 
   .ant-card-meta-description {
-    color: #333!important;
-    font-family: 'Open Sans', sans-serif;
+    color: #333 !important;
+    font-family: "Open Sans", sans-serif;
     font-size: 2.2rem;
     line-height: 3.3rem;
     letter-spacing: 0.02rem;
     text-align: left;
   }
 
+  .team {
+    margin-top: @margin-base-2;
+    margin-bottom: @margin-base-2;
+
+    .heading {
+      font-size: 3rem;
+      margin-top: @margin-base-1;
+      color: @d4sd-color-two;
+    }
+
+    .educator {
+      margin-top: @margin-base-1;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
 }

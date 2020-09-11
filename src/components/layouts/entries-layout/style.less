@@ -1,0 +1,60 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+
+.project_section {
+  margin-top: @margin-base-1;
+  h2 {
+    color: @d4sd-color-two;
+  }
+  margin-bottom: @margin-base-1;
+}
+
+.entryCards,
+.entryMeta {
+  margin-top: @margin-base-1 / 2;
+  text-align: left;
+  margin-bottom: @margin-base-1;
+  display: inline-block;
+  vertical-align: middle;
+
+  .entryDiv {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    h4 {
+      color: black;
+    }
+
+    h4:hover{
+      color: @d4sd-color;
+    }
+    h5 {
+      line-height: 3rem;
+      font-size: 2rem;
+    }
+    p {
+      color: @primary-txt;
+    }
+
+    .featuredImage {
+      height: 100%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .featuredImage:hover {
+      transform: scale(0.95);
+    }
+  }
+}
+.entryMeta {
+  .entryDiv {
+    width: 100%;
+  }
+  .projectDescription {
+    font-size: 1.8rem;
+  }
+}

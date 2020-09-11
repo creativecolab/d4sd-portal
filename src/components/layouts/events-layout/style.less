@@ -1,0 +1,64 @@
+@import "../../../styles/vars.less";
+@import "../../../styles/mixins.less";
+
+.events-content {
+  .events-summary {
+    margin: @margin-base-2/1.5 0;
+  }
+
+  .events {
+    &:hover {
+      cursor: pointer;
+      h4,
+      h5 {
+        color: @d4sd-color;
+      }
+    }
+
+    img {
+      width: 70%;
+    }
+
+    h4 {
+      margin-top: @margin-base-1 / 2;
+      color: black;
+    }
+
+    h5 {
+      color: @primary-txt;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  .event-dates {
+    color: @primary-txt;
+  }
+
+  .summit-img {
+    margin-top: @margin-base-1;
+    width: 100%;
+  }
+
+  .mural-img {
+    padding: @margin-base-2 @margin-base-1 / 4 0 @margin-base-1 / 4;
+    width: 100%;
+  }
+  .speakers {
+    background: @d4sd-color-bg;
+    padding: @margin-base-2 0;
+    .imageDiv {
+      margin-top: @margin-base-2;
+      width: 100%;
+      display: flex;
+      img {
+        width: 24%;
+        margin-right: 1.3%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

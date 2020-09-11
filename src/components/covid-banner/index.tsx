@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './style.less';
 
 const CovidBanner = (): JSX.Element => {
-  const [visible, setVisible] = useState<boolean>(true);
+  const [visible, setVisible] = useState<boolean>(false);
   const history = useHistory();
 
   const handleClose = (): void => {
