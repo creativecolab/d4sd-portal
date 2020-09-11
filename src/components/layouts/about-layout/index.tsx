@@ -103,7 +103,7 @@ const AboutLayout = (): JSX.Element => (
         return (
           <>
             <h2 className="heading">{team.heading}</h2>
-            <Row justify="center" type="flex">
+            <Row>
               {i === 0 &&
                 team.members.map(member => {
                   return (
@@ -126,7 +126,7 @@ const AboutLayout = (): JSX.Element => (
       })}
       <div>
         <h2 className="heading">D4SD Speakers and Facilitators</h2>
-        <Row type="flex" justify="center" align="middle">
+        <Row>
           {allSpeakers.sort(lastNameSort).map(member => {
             return (
               <Col md={8} xs={24} sm={12}>
