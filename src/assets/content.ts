@@ -1835,7 +1835,16 @@ export const entriesContent = {
       featuredImage: thrive,
       projectLink:
         "https://drive.google.com/open?id=1QdqCHg3nKEpU4AUG9GjWcmLEAomZsiiS"
-    }
+    },
+    {
+      projectName: "Project Aegis",
+      members: "Marlow Perdomo",
+      projectDescription:
+        "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
+      featuredImage: aegis,
+      projectLink:
+        "https://drive.google.com/file/d/1q4bb6dDidaVpcPVVEVO34WixhHwE53yd/view?usp=sharing"
+    },
   ],
   all_projects: [
     {
@@ -1892,15 +1901,6 @@ export const entriesContent = {
         "How might we help match students and moderators anonymously to provide help on problems?",
       featuredImage: assyt,
       projectLink: ""
-    },
-    {
-      projectName: "Project Aegis",
-      members: "Marlow Perdomo",
-      projectDescription:
-        "How might we create a safer way to connect with those in need to those that can donate to them during a critical situation?",
-      featuredImage: aegis,
-      projectLink:
-        "https://drive.google.com/open?id=15IGSZol9CrKSyn4BtI3u02kHxbC1pxmy"
     },
     {
       projectName: "LightOn",
