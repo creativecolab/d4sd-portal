@@ -106,8 +106,9 @@ const HomeLayout = (): JSX.Element => {
             <p dangerouslySetInnerHTML={contentHTML(homeContent.content1_1)} />
           </p>
           <br />
-          <SummitBanner />
           <iframe className="d4sd-video" src="https://youtube.com/embed/JG1Y4IcE9fw"></iframe>
+          <SummitBanner />
+          
         </div>
       </div>
       <div className="container">
