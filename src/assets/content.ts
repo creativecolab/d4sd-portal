@@ -133,7 +133,7 @@ export const homeContent = {
   subtitle1_2: "2020 CIVIC DESIGN CHALLENGE",
   title1_1: "How can design help San Diego address ",
   title1_2: "COVID-19 and become more sustainable?",
-  content1_1: `D4SD advances the use of design and design thinking to address difficult civic challenges in San Diego. This year our community came together to address human-centered issues related to COVID-19 and to make our city more sustainable. The 2020 challenge has closed, but you can learn more about our <a href="/events"> 2020 events </a> and check out <a href="/entries"> design proposals </a> submitted by local innovators.  `,
+  content1_1: `D4SD advances the use of design and design thinking to address difficult civic challenges in San Diego. The 2020 challenge has closed, but you can learn more about our <a href="/events"> 2020 events </a> and check out <a href="/entries"> design proposals </a> submitted by local innovators.  `,
   content1_2: "design jams",
   content1_3:
     "”, to support community-driven design related to COVID-19 and sustainability efforts. ",
