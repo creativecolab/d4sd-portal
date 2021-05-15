@@ -3,9 +3,16 @@
 @import "../../../styles/fonts.less";
 @import "../../../styles/containers.less";
 
+.Home {
+  .d4sd-video {
+    width: 100%;
+    height: 40rem;
+    max-width: 80rem;
+  }
+}
 .landing {
-  padding-top: 125px;
-  min-height: 100vh;
+  padding-top: 90px;
+  min-height: calc(100vh + 30rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -173,8 +180,9 @@
   }
 
   @media screen and (max-width: 1180px) {
-    height: 180px;
-
+    .landing {
+      min-height: 100vh;
+    }
     .information {
       .summit-event {
         .date {

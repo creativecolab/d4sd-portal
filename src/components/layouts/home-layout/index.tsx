@@ -101,12 +101,14 @@ const HomeLayout = (): JSX.Element => {
             <br className="title-break" />
             {homeContent.title1_2}
           </h1>
+          
           <p className="d4sd-content">
             <p dangerouslySetInnerHTML={contentHTML(homeContent.content1_1)} />
           </p>
           <br />
-          <br />
+          <iframe className="d4sd-video" src="https://youtube.com/embed/JG1Y4IcE9fw"></iframe>
           <SummitBanner />
+          
         </div>
       </div>
       <div className="container">
